@@ -149,33 +149,33 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule#forSecuritiesFinancingConfirmationV01
- * ConstraintCoexistenceAmountRule.forSecuritiesFinancingConfirmationV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule#for_sese_SecuritiesFinancingConfirmationV01
+ * ConstraintCoexistenceAmountRule.for_sese_SecuritiesFinancingConfirmationV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#forSecuritiesFinancingConfirmationV01
- * ConstraintCoexistenceCharacterSetXRule.forSecuritiesFinancingConfirmationV01}
- * </li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#for_sese_SecuritiesFinancingConfirmationV01
+ * ConstraintCoexistenceCharacterSetXRule.
+ * for_sese_SecuritiesFinancingConfirmationV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forSecuritiesFinancingConfirmationV01
- * ConstraintCoexistenceIdentificationRule.forSecuritiesFinancingConfirmationV01
- * }</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#for_sese_SecuritiesFinancingConfirmationV01
+ * ConstraintCoexistenceIdentificationRule.
+ * for_sese_SecuritiesFinancingConfirmationV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintBuyerSSIRule#forSecuritiesFinancingConfirmationV01
- * ConstraintBuyerSSIRule.forSecuritiesFinancingConfirmationV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintBuyerSSIRule#for_sese_SecuritiesFinancingConfirmationV01
+ * ConstraintBuyerSSIRule.for_sese_SecuritiesFinancingConfirmationV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintSellerSSIRule#forSecuritiesFinancingConfirmationV01
- * ConstraintSellerSSIRule.forSecuritiesFinancingConfirmationV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSellerSSIRule#for_sese_SecuritiesFinancingConfirmationV01
+ * ConstraintSellerSSIRule.for_sese_SecuritiesFinancingConfirmationV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintDeliveringDepositoryAndParty1Rule#forSecuritiesFinancingConfirmationV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDeliveringDepositoryAndParty1Rule#for_sese_SecuritiesFinancingConfirmationV01
  * ConstraintDeliveringDepositoryAndParty1Rule.
- * forSecuritiesFinancingConfirmationV01}</li>
+ * for_sese_SecuritiesFinancingConfirmationV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintReceivingDepositoryAndParty1Rule#forSecuritiesFinancingConfirmationV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintReceivingDepositoryAndParty1Rule#for_sese_SecuritiesFinancingConfirmationV01
  * ConstraintReceivingDepositoryAndParty1Rule.
- * forSecuritiesFinancingConfirmationV01}</li>
+ * for_sese_SecuritiesFinancingConfirmationV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintSettledAmountRule#forSecuritiesFinancingConfirmationV01
- * ConstraintSettledAmountRule.forSecuritiesFinancingConfirmationV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSettledAmountRule#for_sese_SecuritiesFinancingConfirmationV01
+ * ConstraintSettledAmountRule.for_sese_SecuritiesFinancingConfirmationV01}</li>
  * </ul>
  * </li>
  * <li>
@@ -1103,13 +1103,13 @@ public class SecuritiesFinancingConfirmationV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forSecuritiesFinancingConfirmationV01,
-						com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesFinancingConfirmationV01,
-						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesFinancingConfirmationV01,
-						com.tools20022.repository.constraints.ConstraintBuyerSSIRule.forSecuritiesFinancingConfirmationV01, com.tools20022.repository.constraints.ConstraintSellerSSIRule.forSecuritiesFinancingConfirmationV01,
-						com.tools20022.repository.constraints.ConstraintDeliveringDepositoryAndParty1Rule.forSecuritiesFinancingConfirmationV01,
-						com.tools20022.repository.constraints.ConstraintReceivingDepositoryAndParty1Rule.forSecuritiesFinancingConfirmationV01,
-						com.tools20022.repository.constraints.ConstraintSettledAmountRule.forSecuritiesFinancingConfirmationV01);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.for_sese_SecuritiesFinancingConfirmationV01,
+						com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.for_sese_SecuritiesFinancingConfirmationV01,
+						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.for_sese_SecuritiesFinancingConfirmationV01,
+						com.tools20022.repository.constraints.ConstraintBuyerSSIRule.for_sese_SecuritiesFinancingConfirmationV01, com.tools20022.repository.constraints.ConstraintSellerSSIRule.for_sese_SecuritiesFinancingConfirmationV01,
+						com.tools20022.repository.constraints.ConstraintDeliveringDepositoryAndParty1Rule.for_sese_SecuritiesFinancingConfirmationV01,
+						com.tools20022.repository.constraints.ConstraintReceivingDepositoryAndParty1Rule.for_sese_SecuritiesFinancingConfirmationV01,
+						com.tools20022.repository.constraints.ConstraintSettledAmountRule.for_sese_SecuritiesFinancingConfirmationV01);
 				semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, "MT 544-7, Seq A :23G:NEWM, Seq D present"));
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesFinancingConfirmationV01";

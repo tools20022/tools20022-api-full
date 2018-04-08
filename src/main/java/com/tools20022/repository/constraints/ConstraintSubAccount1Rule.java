@@ -35,122 +35,6 @@ public class ConstraintSubAccount1Rule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.DetailedInstructionStatus1
-	 * DetailedInstructionStatus1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SubAccount1Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If SubAccountIdentification is present, then AccountIdentification must be present."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<DetailedInstructionStatus1> forDetailedInstructionStatus1 = new MMConstraint<DetailedInstructionStatus1>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SubAccount1Rule";
-			definition = "If SubAccountIdentification is present, then AccountIdentification must be present.";
-			owner_lazy = () -> DetailedInstructionStatus1.mmObject();
-		}
-
-		@Override
-		public void executeValidator(DetailedInstructionStatus1 obj) throws Exception {
-			checkDetailedInstructionStatus1(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.DetailedInstructionStatus8
-	 * DetailedInstructionStatus8}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
-	 * expression} =
-	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/AccountIdentification&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/SubAccountIdentification&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SubAccount1Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If SubAccountIdentification is present, then AccountIdentification must be present."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSubAccount1Rule#forDetailedInstructionStatus11
-	 * ConstraintSubAccount1Rule.forDetailedInstructionStatus11}</li>
-	 * </ul>
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<DetailedInstructionStatus8> forDetailedInstructionStatus8 = new MMConstraint<DetailedInstructionStatus8>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SubAccount1Rule";
-			definition = "If SubAccountIdentification is present, then AccountIdentification must be present.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSubAccount1Rule.forDetailedInstructionStatus11);
-			owner_lazy = () -> DetailedInstructionStatus8.mmObject();
-			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AccountIdentification</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SubAccountIdentification</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
-		}
-
-		@Override
-		public void executeValidator(DetailedInstructionStatus8 obj) throws Exception {
-			checkDetailedInstructionStatus8(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.DetailedInstructionStatus2
-	 * DetailedInstructionStatus2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SubAccount1Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If SubAccountIdentification is present, then AccountIdentification is mandatory."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<DetailedInstructionStatus2> forDetailedInstructionStatus2 = new MMConstraint<DetailedInstructionStatus2>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SubAccount1Rule";
-			definition = "If SubAccountIdentification is present, then AccountIdentification is mandatory.";
-			owner_lazy = () -> DetailedInstructionStatus2.mmObject();
-		}
-
-		@Override
-		public void executeValidator(DetailedInstructionStatus2 obj) throws Exception {
-			checkDetailedInstructionStatus2(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DetailedInstructionStatus9
 	 * DetailedInstructionStatus9}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
@@ -244,6 +128,40 @@ public class ConstraintSubAccount1Rule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.DetailedInstructionStatus1
+	 * DetailedInstructionStatus1}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SubAccount1Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SubAccountIdentification is present, then AccountIdentification must be present."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<DetailedInstructionStatus1> forDetailedInstructionStatus1 = new MMConstraint<DetailedInstructionStatus1>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SubAccount1Rule";
+			definition = "If SubAccountIdentification is present, then AccountIdentification must be present.";
+			owner_lazy = () -> DetailedInstructionStatus1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DetailedInstructionStatus1 obj) throws Exception {
+			checkDetailedInstructionStatus1(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DetailedInstructionStatus11
 	 * DetailedInstructionStatus11}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
@@ -283,30 +201,88 @@ public class ConstraintSubAccount1Rule {
 			checkDetailedInstructionStatus11(obj);
 		}
 	};
-
 	/**
-	 * If SubAccountIdentification is present, then AccountIdentification must
-	 * be present.
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.DetailedInstructionStatus2
+	 * DetailedInstructionStatus2}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SubAccount1Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SubAccountIdentification is present, then AccountIdentification is mandatory."
+	 * </li>
+	 * </ul>
 	 */
-	public static void checkDetailedInstructionStatus1(DetailedInstructionStatus1 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
+	public static final MMConstraint<DetailedInstructionStatus2> forDetailedInstructionStatus2 = new MMConstraint<DetailedInstructionStatus2>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SubAccount1Rule";
+			definition = "If SubAccountIdentification is present, then AccountIdentification is mandatory.";
+			owner_lazy = () -> DetailedInstructionStatus2.mmObject();
+		}
 
+		@Override
+		public void executeValidator(DetailedInstructionStatus2 obj) throws Exception {
+			checkDetailedInstructionStatus2(obj);
+		}
+	};
 	/**
-	 * If SubAccountIdentification is present, then AccountIdentification must
-	 * be present.
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.DetailedInstructionStatus8
+	 * DetailedInstructionStatus8}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/AccountIdentification&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/SubAccountIdentification&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SubAccount1Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SubAccountIdentification is present, then AccountIdentification must be present."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSubAccount1Rule#forDetailedInstructionStatus11
+	 * ConstraintSubAccount1Rule.forDetailedInstructionStatus11}</li>
+	 * </ul>
+	 * </li>
+	 * </ul>
 	 */
-	public static void checkDetailedInstructionStatus8(DetailedInstructionStatus8 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
+	public static final MMConstraint<DetailedInstructionStatus8> forDetailedInstructionStatus8 = new MMConstraint<DetailedInstructionStatus8>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SubAccount1Rule";
+			definition = "If SubAccountIdentification is present, then AccountIdentification must be present.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSubAccount1Rule.forDetailedInstructionStatus11);
+			owner_lazy = () -> DetailedInstructionStatus8.mmObject();
+			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AccountIdentification</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SubAccountIdentification</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
 
-	/**
-	 * If SubAccountIdentification is present, then AccountIdentification is
-	 * mandatory.
-	 */
-	public static void checkDetailedInstructionStatus2(DetailedInstructionStatus2 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
+		@Override
+		public void executeValidator(DetailedInstructionStatus8 obj) throws Exception {
+			checkDetailedInstructionStatus8(obj);
+		}
+	};
 
 	/**
 	 * If SubAccountIdentification is present, then AccountIdentification must
@@ -328,7 +304,31 @@ public class ConstraintSubAccount1Rule {
 	 * If SubAccountIdentification is present, then AccountIdentification must
 	 * be present.
 	 */
+	public static void checkDetailedInstructionStatus1(DetailedInstructionStatus1 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SubAccountIdentification is present, then AccountIdentification must
+	 * be present.
+	 */
 	public static void checkDetailedInstructionStatus11(DetailedInstructionStatus11 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SubAccountIdentification is present, then AccountIdentification is
+	 * mandatory.
+	 */
+	public static void checkDetailedInstructionStatus2(DetailedInstructionStatus2 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SubAccountIdentification is present, then AccountIdentification must
+	 * be present.
+	 */
+	public static void checkDetailedInstructionStatus8(DetailedInstructionStatus8 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

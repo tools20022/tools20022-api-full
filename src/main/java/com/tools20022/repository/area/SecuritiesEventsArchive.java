@@ -329,6 +329,7 @@ public class SecuritiesEventsArchive {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Securities Events - Archive - master";
 				definition = "Messages that support asset servicing, including proxy voting, income and corporate actions.";
+				code = "seev";
 				messageDefinition_lazy = () -> Arrays.asList(CorporateActionCancellationAdviceV01.mmObject(), CorporateActionCancellationAdviceV02.mmObject(), CorporateActionCancellationAdviceV03.mmObject(),
 						CorporateActionCancellationAdviceV04.mmObject(), CorporateActionEventProcessingStatusAdviceV01.mmObject(), CorporateActionEventProcessingStatusAdviceV02.mmObject(),
 						CorporateActionEventProcessingStatusAdviceV03.mmObject(), CorporateActionEventProcessingStatusAdviceV04.mmObject(), CorporateActionInstructionV01.mmObject(), CorporateActionInstructionV02.mmObject(),
@@ -355,7 +356,6 @@ public class SecuritiesEventsArchive {
 						CorporateActionInstructionCancellationRequestStatusAdviceV06.mmObject(), CorporateActionInstructionV06.mmObject(), CorporateActionMovementPreliminaryAdviceV07.mmObject(),
 						CorporateActionInstructionStatementReportV05.mmObject(), CorporateActionMovementConfirmationV07.mmObject(), CorporateActionNotificationV06.mmObject(), CorporateActionInstructionStatusAdviceV07.mmObject(),
 						CorporateActionMovementReversalAdviceV07.mmObject(), CorporateActionCancellationAdviceV06.mmObject());
-				code = "seev";
 			}
 		});
 		return mmObject_lazy.get();

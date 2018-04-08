@@ -37,6 +37,40 @@ public class ConstraintGrouping1Rule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.pain.CreditorPaymentActivationRequestV02
+	 * CreditorPaymentActivationRequestV02}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Grouping1Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If GroupHeader/Grouping is present and equals GRPD, then one and only one occurrence of PaymentInformation must be present."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CreditorPaymentActivationRequestV02> for_pain_CreditorPaymentActivationRequestV02 = new MMConstraint<CreditorPaymentActivationRequestV02>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "Grouping1Rule";
+			definition = "If GroupHeader/Grouping is present and equals GRPD, then one and only one occurrence of PaymentInformation must be present.";
+			owner_lazy = () -> CreditorPaymentActivationRequestV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CreditorPaymentActivationRequestV02 obj) throws Exception {
+			check_pain_CreditorPaymentActivationRequestV02(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.pain.CustomerCreditTransferInitiationV02
 	 * CustomerCreditTransferInitiationV02}</li>
 	 * <li>
@@ -52,7 +86,7 @@ public class ConstraintGrouping1Rule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<CustomerCreditTransferInitiationV02> forCustomerCreditTransferInitiationV02 = new MMConstraint<CustomerCreditTransferInitiationV02>() {
+	public static final MMConstraint<CustomerCreditTransferInitiationV02> for_pain_CustomerCreditTransferInitiationV02 = new MMConstraint<CustomerCreditTransferInitiationV02>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Grouping1Rule";
@@ -62,7 +96,7 @@ public class ConstraintGrouping1Rule {
 
 		@Override
 		public void executeValidator(CustomerCreditTransferInitiationV02 obj) throws Exception {
-			checkCustomerCreditTransferInitiationV02(obj);
+			check_pain_CustomerCreditTransferInitiationV02(obj);
 		}
 	};
 	/**
@@ -86,7 +120,7 @@ public class ConstraintGrouping1Rule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<CustomerDirectDebitInitiationV01> forCustomerDirectDebitInitiationV01 = new MMConstraint<CustomerDirectDebitInitiationV01>() {
+	public static final MMConstraint<CustomerDirectDebitInitiationV01> for_pain_CustomerDirectDebitInitiationV01 = new MMConstraint<CustomerDirectDebitInitiationV01>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Grouping1Rule";
@@ -96,7 +130,7 @@ public class ConstraintGrouping1Rule {
 
 		@Override
 		public void executeValidator(CustomerDirectDebitInitiationV01 obj) throws Exception {
-			checkCustomerDirectDebitInitiationV01(obj);
+			check_pain_CustomerDirectDebitInitiationV01(obj);
 		}
 	};
 	/**
@@ -120,7 +154,7 @@ public class ConstraintGrouping1Rule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<CreditorPaymentActivationRequestV01> forCreditorPaymentActivationRequestV01 = new MMConstraint<CreditorPaymentActivationRequestV01>() {
+	public static final MMConstraint<CreditorPaymentActivationRequestV01> for_pain_CreditorPaymentActivationRequestV01 = new MMConstraint<CreditorPaymentActivationRequestV01>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Grouping1Rule";
@@ -130,41 +164,7 @@ public class ConstraintGrouping1Rule {
 
 		@Override
 		public void executeValidator(CreditorPaymentActivationRequestV01 obj) throws Exception {
-			checkCreditorPaymentActivationRequestV01(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.pain.CreditorPaymentActivationRequestV02
-	 * CreditorPaymentActivationRequestV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Grouping1Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If GroupHeader/Grouping is present and equals GRPD, then one and only one occurrence of PaymentInformation must be present."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CreditorPaymentActivationRequestV02> forCreditorPaymentActivationRequestV02 = new MMConstraint<CreditorPaymentActivationRequestV02>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "Grouping1Rule";
-			definition = "If GroupHeader/Grouping is present and equals GRPD, then one and only one occurrence of PaymentInformation must be present.";
-			owner_lazy = () -> CreditorPaymentActivationRequestV02.mmObject();
-		}
-
-		@Override
-		public void executeValidator(CreditorPaymentActivationRequestV02 obj) throws Exception {
-			checkCreditorPaymentActivationRequestV02(obj);
+			check_pain_CreditorPaymentActivationRequestV01(obj);
 		}
 	};
 
@@ -172,7 +172,7 @@ public class ConstraintGrouping1Rule {
 	 * If GroupHeader/Grouping is present and equals GRPD, then one and only one
 	 * occurrence of PaymentInformation must be present.
 	 */
-	public static void checkCustomerCreditTransferInitiationV02(CustomerCreditTransferInitiationV02 obj) throws Exception {
+	public static void check_pain_CreditorPaymentActivationRequestV02(CreditorPaymentActivationRequestV02 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -180,7 +180,7 @@ public class ConstraintGrouping1Rule {
 	 * If GroupHeader/Grouping is present and equals GRPD, then one and only one
 	 * occurrence of PaymentInformation must be present.
 	 */
-	public static void checkCustomerDirectDebitInitiationV01(CustomerDirectDebitInitiationV01 obj) throws Exception {
+	public static void check_pain_CustomerCreditTransferInitiationV02(CustomerCreditTransferInitiationV02 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -188,7 +188,7 @@ public class ConstraintGrouping1Rule {
 	 * If GroupHeader/Grouping is present and equals GRPD, then one and only one
 	 * occurrence of PaymentInformation must be present.
 	 */
-	public static void checkCreditorPaymentActivationRequestV01(CreditorPaymentActivationRequestV01 obj) throws Exception {
+	public static void check_pain_CustomerDirectDebitInitiationV01(CustomerDirectDebitInitiationV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -196,7 +196,7 @@ public class ConstraintGrouping1Rule {
 	 * If GroupHeader/Grouping is present and equals GRPD, then one and only one
 	 * occurrence of PaymentInformation must be present.
 	 */
-	public static void checkCreditorPaymentActivationRequestV02(CreditorPaymentActivationRequestV02 obj) throws Exception {
+	public static void check_pain_CreditorPaymentActivationRequestV01(CreditorPaymentActivationRequestV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

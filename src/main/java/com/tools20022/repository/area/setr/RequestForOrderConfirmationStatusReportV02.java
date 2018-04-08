@@ -99,13 +99,13 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintOtherReferenceGuideline#forRequestForOrderConfirmationStatusReportV02
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOtherReferenceGuideline#for_setr_RequestForOrderConfirmationStatusReportV02
  * ConstraintOtherReferenceGuideline.
- * forRequestForOrderConfirmationStatusReportV02}</li>
+ * for_setr_RequestForOrderConfirmationStatusReportV02}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintPreviousReferenceGuideline#forRequestForOrderConfirmationStatusReportV02
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPreviousReferenceGuideline#for_setr_RequestForOrderConfirmationStatusReportV02
  * ConstraintPreviousReferenceGuideline.
- * forRequestForOrderConfirmationStatusReportV02}</li>
+ * for_setr_RequestForOrderConfirmationStatusReportV02}</li>
  * </ul>
  * </li>
  * <li>
@@ -292,8 +292,8 @@ public class RequestForOrderConfirmationStatusReportV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOtherReferenceGuideline.forRequestForOrderConfirmationStatusReportV02,
-						com.tools20022.repository.constraints.ConstraintPreviousReferenceGuideline.forRequestForOrderConfirmationStatusReportV02);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOtherReferenceGuideline.for_setr_RequestForOrderConfirmationStatusReportV02,
+						com.tools20022.repository.constraints.ConstraintPreviousReferenceGuideline.for_setr_RequestForOrderConfirmationStatusReportV02);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RequestForOrderConfirmationStatusReportV02";
 				definition = "Scope\r\nThe RequestForOrderConfirmationStatusReport message is ent by an executing party, for example, a transfer agent, to the instructing party, for example, an investment manager or its authorised representative, to request the status of one or more order confirmations.\r\nUsage\r\nThe RequestForOrderConfirmationStatusReport message is used to request the status of either:\r\n- one or several individual order confirmations, or,\r\n- one or several order confirmation messages.\r\nThe response to a RequestForOrderConfirmationStatusReport message is the OrderConfirmationStatusReport message.\r\nWhen the RequestForOrderConfirmationStatusReport message is used to request the status of several individual order confirmations or one or more order confirmation messages, the executing party may receive several OrderConfirmationStatusReport messages from the instructing party.\r\nWhen the RequestForOrderConfirmationStatusReport is used to request the status of one or more individual order confirmations, each individual order confirmation is identified with its order reference. The message identification of the message in which the individual order confirmation was conveyed may also be quoted in PreviousReference.\r\nWhen the RequestForOrderConfirmationStatusReport is used to request the status of an order confirmation message, then the message identification of the order confirmation message is identified in PreviousReference.";

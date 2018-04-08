@@ -20,15 +20,14 @@ package com.tools20022.repository.constraints;
 import com.tools20022.core.repo.NotImplementedConstraintException;
 import com.tools20022.metamodel.MMConstraint;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.datatype.NonNegativeDecimalNumber;
 import com.tools20022.repository.msg.DerivativeInstrument5;
-import com.tools20022.repository.msg.DerivativeInstrument5.PriceMultiplier;
 import com.tools20022.repository.msg.DerivativeInstrument6;
-import com.tools20022.repository.msg.DerivativeInstrument6.PriceMultiplier;
 import com.tools20022.repository.msg.SecurityInstrumentDescription1;
 import com.tools20022.repository.msg.SecurityInstrumentDescription2;
 
 /**
- * Multiplier cannot be equal to zero.
+ * Price Multiplier must not be zero.
  */
 public class ConstraintMultiplierRule {
 
@@ -38,8 +37,8 @@ public class ConstraintMultiplierRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription1
-	 * SecurityInstrumentDescription1}</li>
+	 * {@linkplain com.tools20022.repository.msg.DerivativeInstrument6#mmPriceMultiplier
+	 * DerivativeInstrument6.mmPriceMultiplier}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -48,20 +47,20 @@ public class ConstraintMultiplierRule {
 	 * name} = "MultiplierRule"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Multiplier cannot be equal to zero."</li>
+	 * definition} = "Price Multiplier must not be zero."</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<SecurityInstrumentDescription1> forSecurityInstrumentDescription1 = new MMConstraint<SecurityInstrumentDescription1>() {
+	public static final MMConstraint<NonNegativeDecimalNumber> forDerivativeInstrument6_PriceMultiplier = new MMConstraint<NonNegativeDecimalNumber>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultiplierRule";
-			definition = "Multiplier cannot be equal to zero.";
-			owner_lazy = () -> SecurityInstrumentDescription1.mmObject();
+			definition = "Price Multiplier must not be zero.";
+			owner_lazy = () -> DerivativeInstrument6.mmPriceMultiplier;
 		}
 
 		@Override
-		public void executeValidator(SecurityInstrumentDescription1 obj) throws Exception {
-			checkSecurityInstrumentDescription1(obj);
+		public void executeValidator(NonNegativeDecimalNumber obj) throws Exception {
+			checkDerivativeInstrument6_PriceMultiplier(obj);
 		}
 	};
 	/**
@@ -115,7 +114,7 @@ public class ConstraintMultiplierRule {
 	 * definition} = "Price Multiplier must not be zero."</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<DerivativeInstrument5.PriceMultiplier> forPriceMultiplier = new MMConstraint<DerivativeInstrument5.PriceMultiplier>() {
+	public static final MMConstraint<NonNegativeDecimalNumber> forDerivativeInstrument5_PriceMultiplier = new MMConstraint<NonNegativeDecimalNumber>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultiplierRule";
@@ -124,8 +123,8 @@ public class ConstraintMultiplierRule {
 		}
 
 		@Override
-		public void executeValidator(DerivativeInstrument5.PriceMultiplier obj) throws Exception {
-			checkDerivativeInstrument5(obj);
+		public void executeValidator(NonNegativeDecimalNumber obj) throws Exception {
+			checkDerivativeInstrument5_PriceMultiplier(obj);
 		}
 	};
 	/**
@@ -134,8 +133,8 @@ public class ConstraintMultiplierRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.DerivativeInstrument6#mmPriceMultiplier
-	 * DerivativeInstrument6.mmPriceMultiplier}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription1
+	 * SecurityInstrumentDescription1}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -144,27 +143,27 @@ public class ConstraintMultiplierRule {
 	 * name} = "MultiplierRule"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Price Multiplier must not be zero."</li>
+	 * definition} = "Multiplier cannot be equal to zero."</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<DerivativeInstrument6.PriceMultiplier> forPriceMultiplier = new MMConstraint<DerivativeInstrument6.PriceMultiplier>() {
+	public static final MMConstraint<SecurityInstrumentDescription1> forSecurityInstrumentDescription1 = new MMConstraint<SecurityInstrumentDescription1>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultiplierRule";
-			definition = "Price Multiplier must not be zero.";
-			owner_lazy = () -> DerivativeInstrument6.mmPriceMultiplier;
+			definition = "Multiplier cannot be equal to zero.";
+			owner_lazy = () -> SecurityInstrumentDescription1.mmObject();
 		}
 
 		@Override
-		public void executeValidator(DerivativeInstrument6.PriceMultiplier obj) throws Exception {
-			checkDerivativeInstrument6(obj);
+		public void executeValidator(SecurityInstrumentDescription1 obj) throws Exception {
+			checkSecurityInstrumentDescription1(obj);
 		}
 	};
 
 	/**
-	 * Multiplier cannot be equal to zero.
+	 * Price Multiplier must not be zero.
 	 */
-	public static void checkSecurityInstrumentDescription1(SecurityInstrumentDescription1 obj) throws Exception {
+	public static void checkDerivativeInstrument6_PriceMultiplier(NonNegativeDecimalNumber obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -178,14 +177,14 @@ public class ConstraintMultiplierRule {
 	/**
 	 * Price Multiplier must not be zero.
 	 */
-	public static void checkDerivativeInstrument5(DerivativeInstrument5.PriceMultiplier obj) throws Exception {
+	public static void checkDerivativeInstrument5_PriceMultiplier(NonNegativeDecimalNumber obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
 	/**
-	 * Price Multiplier must not be zero.
+	 * Multiplier cannot be equal to zero.
 	 */
-	public static void checkDerivativeInstrument6(DerivativeInstrument6.PriceMultiplier obj) throws Exception {
+	public static void checkSecurityInstrumentDescription1(SecurityInstrumentDescription1 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

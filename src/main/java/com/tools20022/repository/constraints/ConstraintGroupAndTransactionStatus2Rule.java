@@ -20,7 +20,6 @@ package com.tools20022.repository.constraints;
 import com.tools20022.core.repo.NotImplementedConstraintException;
 import com.tools20022.metamodel.MMConstraint;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.pacs.PaymentStatusReportV02;
 import com.tools20022.repository.area.pain.*;
 import java.util.Arrays;
 
@@ -31,98 +30,6 @@ import java.util.Arrays;
  */
 public class ConstraintGroupAndTransactionStatus2Rule {
 
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV05
-	 * CreditorPaymentActivationRequestStatusReportV05}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "GroupAndTransactionStatus2Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to PDNG, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus2Rule#forCreditorPaymentActivationRequestStatusReportV06
-	 * ConstraintGroupAndTransactionStatus2Rule.
-	 * forCreditorPaymentActivationRequestStatusReportV06}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus2Rule#forCreditorPaymentActivationRequestStatusReportV04
-	 * ConstraintGroupAndTransactionStatus2Rule.
-	 * forCreditorPaymentActivationRequestStatusReportV04}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CreditorPaymentActivationRequestStatusReportV05> forCreditorPaymentActivationRequestStatusReportV05 = new MMConstraint<CreditorPaymentActivationRequestStatusReportV05>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "GroupAndTransactionStatus2Rule";
-			definition = "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to PDNG, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus2Rule.forCreditorPaymentActivationRequestStatusReportV06);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus2Rule.forCreditorPaymentActivationRequestStatusReportV04;
-			owner_lazy = () -> CreditorPaymentActivationRequestStatusReportV05.mmObject();
-		}
-
-		@Override
-		public void executeValidator(CreditorPaymentActivationRequestStatusReportV05 obj) throws Exception {
-			checkCreditorPaymentActivationRequestStatusReportV05(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV06
-	 * CreditorPaymentActivationRequestStatusReportV06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "GroupAndTransactionStatus2Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to PDNG, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT."
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus2Rule#forCreditorPaymentActivationRequestStatusReportV05
-	 * ConstraintGroupAndTransactionStatus2Rule.
-	 * forCreditorPaymentActivationRequestStatusReportV05}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CreditorPaymentActivationRequestStatusReportV06> forCreditorPaymentActivationRequestStatusReportV06 = new MMConstraint<CreditorPaymentActivationRequestStatusReportV06>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "GroupAndTransactionStatus2Rule";
-			definition = "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to PDNG, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus2Rule.forCreditorPaymentActivationRequestStatusReportV05;
-			owner_lazy = () -> CreditorPaymentActivationRequestStatusReportV06.mmObject();
-		}
-
-		@Override
-		public void executeValidator(CreditorPaymentActivationRequestStatusReportV06 obj) throws Exception {
-			checkCreditorPaymentActivationRequestStatusReportV06(obj);
-		}
-	};
 	/**
 	 * 
 	 <p>
@@ -144,7 +51,7 @@ public class ConstraintGroupAndTransactionStatus2Rule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<com.tools20022.repository.area.pain.PaymentStatusReportV02> forPaymentStatusReportV02 = new MMConstraint<com.tools20022.repository.area.pain.PaymentStatusReportV02>() {
+	public static final MMConstraint<com.tools20022.repository.area.pain.PaymentStatusReportV02> for_pain_PaymentStatusReportV02 = new MMConstraint<com.tools20022.repository.area.pain.PaymentStatusReportV02>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupAndTransactionStatus2Rule";
@@ -154,119 +61,7 @@ public class ConstraintGroupAndTransactionStatus2Rule {
 
 		@Override
 		public void executeValidator(com.tools20022.repository.area.pain.PaymentStatusReportV02 obj) throws Exception {
-			checkPaymentStatusReportV02(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV01
-	 * CreditorPaymentActivationRequestStatusReportV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "GroupAndTransactionStatus2Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to PDNG, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CreditorPaymentActivationRequestStatusReportV01> forCreditorPaymentActivationRequestStatusReportV01 = new MMConstraint<CreditorPaymentActivationRequestStatusReportV01>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "GroupAndTransactionStatus2Rule";
-			definition = "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to PDNG, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT.";
-			owner_lazy = () -> CreditorPaymentActivationRequestStatusReportV01.mmObject();
-		}
-
-		@Override
-		public void executeValidator(CreditorPaymentActivationRequestStatusReportV01 obj) throws Exception {
-			checkCreditorPaymentActivationRequestStatusReportV01(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV02
-	 * CreditorPaymentActivationRequestStatusReportV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "GroupAndTransactionStatus2Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to PDNG, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CreditorPaymentActivationRequestStatusReportV02> forCreditorPaymentActivationRequestStatusReportV02 = new MMConstraint<CreditorPaymentActivationRequestStatusReportV02>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "GroupAndTransactionStatus2Rule";
-			definition = "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to PDNG, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT.";
-			owner_lazy = () -> CreditorPaymentActivationRequestStatusReportV02.mmObject();
-		}
-
-		@Override
-		public void executeValidator(CreditorPaymentActivationRequestStatusReportV02 obj) throws Exception {
-			checkCreditorPaymentActivationRequestStatusReportV02(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV03
-	 * CreditorPaymentActivationRequestStatusReportV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "GroupAndTransactionStatus2Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to PDNG, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus2Rule#forCreditorPaymentActivationRequestStatusReportV04
-	 * ConstraintGroupAndTransactionStatus2Rule.
-	 * forCreditorPaymentActivationRequestStatusReportV04}</li>
-	 * </ul>
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CreditorPaymentActivationRequestStatusReportV03> forCreditorPaymentActivationRequestStatusReportV03 = new MMConstraint<CreditorPaymentActivationRequestStatusReportV03>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "GroupAndTransactionStatus2Rule";
-			definition = "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to PDNG, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus2Rule.forCreditorPaymentActivationRequestStatusReportV04);
-			owner_lazy = () -> CreditorPaymentActivationRequestStatusReportV03.mmObject();
-		}
-
-		@Override
-		public void executeValidator(CreditorPaymentActivationRequestStatusReportV03 obj) throws Exception {
-			checkCreditorPaymentActivationRequestStatusReportV03(obj);
+			check_pain_PaymentStatusReportV02(obj);
 		}
 	};
 	/**
@@ -292,32 +87,202 @@ public class ConstraintGroupAndTransactionStatus2Rule {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus2Rule#forCreditorPaymentActivationRequestStatusReportV05
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus2Rule#for_pain_CreditorPaymentActivationRequestStatusReportV05
 	 * ConstraintGroupAndTransactionStatus2Rule.
-	 * forCreditorPaymentActivationRequestStatusReportV05}</li>
+	 * for_pain_CreditorPaymentActivationRequestStatusReportV05}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus2Rule#forCreditorPaymentActivationRequestStatusReportV03
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus2Rule#for_pain_CreditorPaymentActivationRequestStatusReportV03
 	 * ConstraintGroupAndTransactionStatus2Rule.
-	 * forCreditorPaymentActivationRequestStatusReportV03}</li>
+	 * for_pain_CreditorPaymentActivationRequestStatusReportV03}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<CreditorPaymentActivationRequestStatusReportV04> forCreditorPaymentActivationRequestStatusReportV04 = new MMConstraint<CreditorPaymentActivationRequestStatusReportV04>() {
+	public static final MMConstraint<CreditorPaymentActivationRequestStatusReportV04> for_pain_CreditorPaymentActivationRequestStatusReportV04 = new MMConstraint<CreditorPaymentActivationRequestStatusReportV04>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupAndTransactionStatus2Rule";
 			definition = "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to PDNG, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus2Rule.forCreditorPaymentActivationRequestStatusReportV05);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus2Rule.forCreditorPaymentActivationRequestStatusReportV03;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus2Rule.for_pain_CreditorPaymentActivationRequestStatusReportV05);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus2Rule.for_pain_CreditorPaymentActivationRequestStatusReportV03;
 			owner_lazy = () -> CreditorPaymentActivationRequestStatusReportV04.mmObject();
 		}
 
 		@Override
 		public void executeValidator(CreditorPaymentActivationRequestStatusReportV04 obj) throws Exception {
-			checkCreditorPaymentActivationRequestStatusReportV04(obj);
+			check_pain_CreditorPaymentActivationRequestStatusReportV04(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV06
+	 * CreditorPaymentActivationRequestStatusReportV06}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "GroupAndTransactionStatus2Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to PDNG, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus2Rule#for_pain_CreditorPaymentActivationRequestStatusReportV05
+	 * ConstraintGroupAndTransactionStatus2Rule.
+	 * for_pain_CreditorPaymentActivationRequestStatusReportV05}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CreditorPaymentActivationRequestStatusReportV06> for_pain_CreditorPaymentActivationRequestStatusReportV06 = new MMConstraint<CreditorPaymentActivationRequestStatusReportV06>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "GroupAndTransactionStatus2Rule";
+			definition = "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to PDNG, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus2Rule.for_pain_CreditorPaymentActivationRequestStatusReportV05;
+			owner_lazy = () -> CreditorPaymentActivationRequestStatusReportV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CreditorPaymentActivationRequestStatusReportV06 obj) throws Exception {
+			check_pain_CreditorPaymentActivationRequestStatusReportV06(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV03
+	 * CreditorPaymentActivationRequestStatusReportV03}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "GroupAndTransactionStatus2Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to PDNG, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus2Rule#for_pain_CreditorPaymentActivationRequestStatusReportV04
+	 * ConstraintGroupAndTransactionStatus2Rule.
+	 * for_pain_CreditorPaymentActivationRequestStatusReportV04}</li>
+	 * </ul>
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CreditorPaymentActivationRequestStatusReportV03> for_pain_CreditorPaymentActivationRequestStatusReportV03 = new MMConstraint<CreditorPaymentActivationRequestStatusReportV03>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "GroupAndTransactionStatus2Rule";
+			definition = "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to PDNG, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus2Rule.for_pain_CreditorPaymentActivationRequestStatusReportV04);
+			owner_lazy = () -> CreditorPaymentActivationRequestStatusReportV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CreditorPaymentActivationRequestStatusReportV03 obj) throws Exception {
+			check_pain_CreditorPaymentActivationRequestStatusReportV03(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV02
+	 * CreditorPaymentActivationRequestStatusReportV02}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "GroupAndTransactionStatus2Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to PDNG, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CreditorPaymentActivationRequestStatusReportV02> for_pain_CreditorPaymentActivationRequestStatusReportV02 = new MMConstraint<CreditorPaymentActivationRequestStatusReportV02>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "GroupAndTransactionStatus2Rule";
+			definition = "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to PDNG, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT.";
+			owner_lazy = () -> CreditorPaymentActivationRequestStatusReportV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CreditorPaymentActivationRequestStatusReportV02 obj) throws Exception {
+			check_pain_CreditorPaymentActivationRequestStatusReportV02(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV05
+	 * CreditorPaymentActivationRequestStatusReportV05}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "GroupAndTransactionStatus2Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to PDNG, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus2Rule#for_pain_CreditorPaymentActivationRequestStatusReportV06
+	 * ConstraintGroupAndTransactionStatus2Rule.
+	 * for_pain_CreditorPaymentActivationRequestStatusReportV06}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus2Rule#for_pain_CreditorPaymentActivationRequestStatusReportV04
+	 * ConstraintGroupAndTransactionStatus2Rule.
+	 * for_pain_CreditorPaymentActivationRequestStatusReportV04}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CreditorPaymentActivationRequestStatusReportV05> for_pain_CreditorPaymentActivationRequestStatusReportV05 = new MMConstraint<CreditorPaymentActivationRequestStatusReportV05>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "GroupAndTransactionStatus2Rule";
+			definition = "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to PDNG, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus2Rule.for_pain_CreditorPaymentActivationRequestStatusReportV06);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus2Rule.for_pain_CreditorPaymentActivationRequestStatusReportV04;
+			owner_lazy = () -> CreditorPaymentActivationRequestStatusReportV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CreditorPaymentActivationRequestStatusReportV05 obj) throws Exception {
+			check_pain_CreditorPaymentActivationRequestStatusReportV05(obj);
 		}
 	};
 	/**
@@ -341,7 +306,7 @@ public class ConstraintGroupAndTransactionStatus2Rule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<com.tools20022.repository.area.pacs.PaymentStatusReportV02> forPaymentStatusReportV02 = new MMConstraint<com.tools20022.repository.area.pacs.PaymentStatusReportV02>() {
+	public static final MMConstraint<com.tools20022.repository.area.pacs.PaymentStatusReportV02> for_pacs_PaymentStatusReportV02 = new MMConstraint<com.tools20022.repository.area.pacs.PaymentStatusReportV02>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupAndTransactionStatus2Rule";
@@ -351,7 +316,41 @@ public class ConstraintGroupAndTransactionStatus2Rule {
 
 		@Override
 		public void executeValidator(com.tools20022.repository.area.pacs.PaymentStatusReportV02 obj) throws Exception {
-			checkPaymentStatusReportV02(obj);
+			check_pacs_PaymentStatusReportV02(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV01
+	 * CreditorPaymentActivationRequestStatusReportV01}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "GroupAndTransactionStatus2Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to PDNG, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CreditorPaymentActivationRequestStatusReportV01> for_pain_CreditorPaymentActivationRequestStatusReportV01 = new MMConstraint<CreditorPaymentActivationRequestStatusReportV01>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "GroupAndTransactionStatus2Rule";
+			definition = "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to PDNG, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT.";
+			owner_lazy = () -> CreditorPaymentActivationRequestStatusReportV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CreditorPaymentActivationRequestStatusReportV01 obj) throws Exception {
+			check_pain_CreditorPaymentActivationRequestStatusReportV01(obj);
 		}
 	};
 
@@ -360,7 +359,7 @@ public class ConstraintGroupAndTransactionStatus2Rule {
 	 * to PDNG, then TransactionInformationAndStatus/TransactionStatus must be
 	 * different from RJCT.
 	 */
-	public static void checkCreditorPaymentActivationRequestStatusReportV05(CreditorPaymentActivationRequestStatusReportV05 obj) throws Exception {
+	public static void check_pain_PaymentStatusReportV02(com.tools20022.repository.area.pain.PaymentStatusReportV02 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -369,7 +368,7 @@ public class ConstraintGroupAndTransactionStatus2Rule {
 	 * to PDNG, then TransactionInformationAndStatus/TransactionStatus must be
 	 * different from RJCT.
 	 */
-	public static void checkCreditorPaymentActivationRequestStatusReportV06(CreditorPaymentActivationRequestStatusReportV06 obj) throws Exception {
+	public static void check_pain_CreditorPaymentActivationRequestStatusReportV04(CreditorPaymentActivationRequestStatusReportV04 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -378,7 +377,7 @@ public class ConstraintGroupAndTransactionStatus2Rule {
 	 * to PDNG, then TransactionInformationAndStatus/TransactionStatus must be
 	 * different from RJCT.
 	 */
-	public static void checkPaymentStatusReportV02(com.tools20022.repository.area.pain.PaymentStatusReportV02 obj) throws Exception {
+	public static void check_pain_CreditorPaymentActivationRequestStatusReportV06(CreditorPaymentActivationRequestStatusReportV06 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -387,7 +386,7 @@ public class ConstraintGroupAndTransactionStatus2Rule {
 	 * to PDNG, then TransactionInformationAndStatus/TransactionStatus must be
 	 * different from RJCT.
 	 */
-	public static void checkCreditorPaymentActivationRequestStatusReportV01(CreditorPaymentActivationRequestStatusReportV01 obj) throws Exception {
+	public static void check_pain_CreditorPaymentActivationRequestStatusReportV03(CreditorPaymentActivationRequestStatusReportV03 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -396,7 +395,7 @@ public class ConstraintGroupAndTransactionStatus2Rule {
 	 * to PDNG, then TransactionInformationAndStatus/TransactionStatus must be
 	 * different from RJCT.
 	 */
-	public static void checkCreditorPaymentActivationRequestStatusReportV02(CreditorPaymentActivationRequestStatusReportV02 obj) throws Exception {
+	public static void check_pain_CreditorPaymentActivationRequestStatusReportV02(CreditorPaymentActivationRequestStatusReportV02 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -405,16 +404,7 @@ public class ConstraintGroupAndTransactionStatus2Rule {
 	 * to PDNG, then TransactionInformationAndStatus/TransactionStatus must be
 	 * different from RJCT.
 	 */
-	public static void checkCreditorPaymentActivationRequestStatusReportV03(CreditorPaymentActivationRequestStatusReportV03 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If OriginalGroupInformationAndStatus/GroupStatus is present and is equal
-	 * to PDNG, then TransactionInformationAndStatus/TransactionStatus must be
-	 * different from RJCT.
-	 */
-	public static void checkCreditorPaymentActivationRequestStatusReportV04(CreditorPaymentActivationRequestStatusReportV04 obj) throws Exception {
+	public static void check_pain_CreditorPaymentActivationRequestStatusReportV05(CreditorPaymentActivationRequestStatusReportV05 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -423,7 +413,16 @@ public class ConstraintGroupAndTransactionStatus2Rule {
 	 * to PDNG, then TransactionInformationAndStatus/TransactionStatus must be
 	 * different from RJCT. .
 	 */
-	public static void checkPaymentStatusReportV02(com.tools20022.repository.area.pacs.PaymentStatusReportV02 obj) throws Exception {
+	public static void check_pacs_PaymentStatusReportV02(com.tools20022.repository.area.pacs.PaymentStatusReportV02 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If OriginalGroupInformationAndStatus/GroupStatus is present and is equal
+	 * to PDNG, then TransactionInformationAndStatus/TransactionStatus must be
+	 * different from RJCT.
+	 */
+	public static void check_pain_CreditorPaymentActivationRequestStatusReportV01(CreditorPaymentActivationRequestStatusReportV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

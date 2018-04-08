@@ -34,38 +34,6 @@ public class ConstraintAvailabilityAndTypeRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.CashBalance1 CashBalance1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AvailabilityAndTypeRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If Type is equal to ForwardAvailable, Availability is not allowed."</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CashBalance1> forCashBalance1 = new MMConstraint<CashBalance1>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "AvailabilityAndTypeRule";
-			definition = "If Type is equal to ForwardAvailable, Availability is not allowed.";
-			owner_lazy = () -> CashBalance1.mmObject();
-		}
-
-		@Override
-		public void executeValidator(CashBalance1 obj) throws Exception {
-			checkCashBalance1(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CashBalance2 CashBalance2}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -92,18 +60,50 @@ public class ConstraintAvailabilityAndTypeRule {
 			checkCashBalance2(obj);
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CashBalance1 CashBalance1}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AvailabilityAndTypeRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If Type is equal to ForwardAvailable, Availability is not allowed."</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CashBalance1> forCashBalance1 = new MMConstraint<CashBalance1>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AvailabilityAndTypeRule";
+			definition = "If Type is equal to ForwardAvailable, Availability is not allowed.";
+			owner_lazy = () -> CashBalance1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashBalance1 obj) throws Exception {
+			checkCashBalance1(obj);
+		}
+	};
 
 	/**
 	 * If Type is equal to ForwardAvailable, Availability is not allowed.
 	 */
-	public static void checkCashBalance1(CashBalance1 obj) throws Exception {
+	public static void checkCashBalance2(CashBalance2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
 	/**
 	 * If Type is equal to ForwardAvailable, Availability is not allowed.
 	 */
-	public static void checkCashBalance2(CashBalance2 obj) throws Exception {
+	public static void checkCashBalance1(CashBalance1 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

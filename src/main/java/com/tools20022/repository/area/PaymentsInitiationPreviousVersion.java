@@ -96,10 +96,10 @@ public class PaymentsInitiationPreviousVersion {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Payments Initiation - Previous version - master";
 				definition = "Messages that support the initiation of a payment from the ordering customer to a financial institution that services a cash account and reporting its status.";
+				code = "pain";
 				messageDefinition_lazy = () -> Arrays.asList(MandateAmendmentRequestV04.mmObject(), MandateCancellationRequestV04.mmObject(), MandateAcceptanceReportV04.mmObject(), MandateInitiationRequestV04.mmObject(),
 						CustomerCreditTransferInitiationV07.mmObject(), CreditorPaymentActivationRequestV05.mmObject(), CustomerDirectDebitInitiationV06.mmObject(), CreditorPaymentActivationRequestStatusReportV05.mmObject(),
 						CustomerPaymentStatusReportV08.mmObject(), CustomerPaymentReversalV07.mmObject());
-				code = "pain";
 			}
 		});
 		return mmObject_lazy.get();

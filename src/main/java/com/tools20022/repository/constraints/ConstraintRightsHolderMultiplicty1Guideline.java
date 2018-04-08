@@ -69,8 +69,8 @@ public class ConstraintRightsHolderMultiplicty1Guideline {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.EligiblePosition3
-	 * EligiblePosition3}</li>
+	 * {@linkplain com.tools20022.repository.msg.DetailedInstructionStatus9
+	 * DetailedInstructionStatus9}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -86,24 +86,140 @@ public class ConstraintRightsHolderMultiplicty1Guideline {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintRightsHolderMultiplicty1Guideline#forEligiblePosition5
-	 * ConstraintRightsHolderMultiplicty1Guideline.forEligiblePosition5}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintRightsHolderMultiplicty1Guideline#forDetailedInstructionStatus10
+	 * ConstraintRightsHolderMultiplicty1Guideline.
+	 * forDetailedInstructionStatus10}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<EligiblePosition3> forEligiblePosition3 = new MMConstraint<EligiblePosition3>() {
+	public static final MMConstraint<DetailedInstructionStatus9> forDetailedInstructionStatus9 = new MMConstraint<DetailedInstructionStatus9>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RightsHolderMultiplicty1Guideline";
 			definition = "It is recommended that RightsHolder can only be repetitive in case of joint ownership.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRightsHolderMultiplicty1Guideline.forEligiblePosition5);
-			owner_lazy = () -> EligiblePosition3.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRightsHolderMultiplicty1Guideline.forDetailedInstructionStatus10);
+			owner_lazy = () -> DetailedInstructionStatus9.mmObject();
 		}
 
 		@Override
-		public void executeValidator(EligiblePosition3 obj) throws Exception {
-			checkEligiblePosition3(obj);
+		public void executeValidator(DetailedInstructionStatus9 obj) throws Exception {
+			checkDetailedInstructionStatus9(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.EligiblePosition6
+	 * EligiblePosition6}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RightsHolderMultiplicty1Guideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "It is recommended that RightsHolder can only be repetitive in the case of joint ownership."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintRightsHolderMultiplicty1Guideline#forEligiblePosition4
+	 * ConstraintRightsHolderMultiplicty1Guideline.forEligiblePosition4}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<EligiblePosition6> forEligiblePosition6 = new MMConstraint<EligiblePosition6>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "RightsHolderMultiplicty1Guideline";
+			definition = "It is recommended that RightsHolder can only be repetitive in the case of joint ownership.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintRightsHolderMultiplicty1Guideline.forEligiblePosition4;
+			owner_lazy = () -> EligiblePosition6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(EligiblePosition6 obj) throws Exception {
+			checkEligiblePosition6(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.DetailedInstructionStatus10
+	 * DetailedInstructionStatus10}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RightsHolderMultiplicty1Guideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "It is recommended that RightsHolder can only be repetitive in the case of joint ownership."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintRightsHolderMultiplicty1Guideline#forDetailedInstructionStatus9
+	 * ConstraintRightsHolderMultiplicty1Guideline.forDetailedInstructionStatus9
+	 * }</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<DetailedInstructionStatus10> forDetailedInstructionStatus10 = new MMConstraint<DetailedInstructionStatus10>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "RightsHolderMultiplicty1Guideline";
+			definition = "It is recommended that RightsHolder can only be repetitive in the case of joint ownership.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintRightsHolderMultiplicty1Guideline.forDetailedInstructionStatus9;
+			owner_lazy = () -> DetailedInstructionStatus10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DetailedInstructionStatus10 obj) throws Exception {
+			checkDetailedInstructionStatus10(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SafekeepingAccount3
+	 * SafekeepingAccount3}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RightsHolderMultiplicty1Guideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "It is recommended that RightsHolder can only be repetitive in case of joint ownership."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SafekeepingAccount3> forSafekeepingAccount3 = new MMConstraint<SafekeepingAccount3>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "RightsHolderMultiplicty1Guideline";
+			definition = "It is recommended that RightsHolder can only be repetitive in case of joint ownership.";
+			owner_lazy = () -> SafekeepingAccount3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SafekeepingAccount3 obj) throws Exception {
+			checkSafekeepingAccount3(obj);
 		}
 	};
 	/**
@@ -147,40 +263,6 @@ public class ConstraintRightsHolderMultiplicty1Guideline {
 		@Override
 		public void executeValidator(EligiblePosition4 obj) throws Exception {
 			checkEligiblePosition4(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SafekeepingAccount3
-	 * SafekeepingAccount3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "RightsHolderMultiplicty1Guideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "It is recommended that RightsHolder can only be repetitive in case of joint ownership."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SafekeepingAccount3> forSafekeepingAccount3 = new MMConstraint<SafekeepingAccount3>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "RightsHolderMultiplicty1Guideline";
-			definition = "It is recommended that RightsHolder can only be repetitive in case of joint ownership.";
-			owner_lazy = () -> SafekeepingAccount3.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SafekeepingAccount3 obj) throws Exception {
-			checkSafekeepingAccount3(obj);
 		}
 	};
 	/**
@@ -258,91 +340,6 @@ public class ConstraintRightsHolderMultiplicty1Guideline {
 		@Override
 		public void executeValidator(DetailedInstructionStatus2 obj) throws Exception {
 			checkDetailedInstructionStatus2(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.DetailedInstructionStatus9
-	 * DetailedInstructionStatus9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "RightsHolderMultiplicty1Guideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "It is recommended that RightsHolder can only be repetitive in case of joint ownership."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintRightsHolderMultiplicty1Guideline#forDetailedInstructionStatus10
-	 * ConstraintRightsHolderMultiplicty1Guideline.
-	 * forDetailedInstructionStatus10}</li>
-	 * </ul>
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<DetailedInstructionStatus9> forDetailedInstructionStatus9 = new MMConstraint<DetailedInstructionStatus9>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "RightsHolderMultiplicty1Guideline";
-			definition = "It is recommended that RightsHolder can only be repetitive in case of joint ownership.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRightsHolderMultiplicty1Guideline.forDetailedInstructionStatus10);
-			owner_lazy = () -> DetailedInstructionStatus9.mmObject();
-		}
-
-		@Override
-		public void executeValidator(DetailedInstructionStatus9 obj) throws Exception {
-			checkDetailedInstructionStatus9(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.DetailedInstructionStatus10
-	 * DetailedInstructionStatus10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "RightsHolderMultiplicty1Guideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "It is recommended that RightsHolder can only be repetitive in the case of joint ownership."
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintRightsHolderMultiplicty1Guideline#forDetailedInstructionStatus9
-	 * ConstraintRightsHolderMultiplicty1Guideline.forDetailedInstructionStatus9
-	 * }</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<DetailedInstructionStatus10> forDetailedInstructionStatus10 = new MMConstraint<DetailedInstructionStatus10>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "RightsHolderMultiplicty1Guideline";
-			definition = "It is recommended that RightsHolder can only be repetitive in the case of joint ownership.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintRightsHolderMultiplicty1Guideline.forDetailedInstructionStatus9;
-			owner_lazy = () -> DetailedInstructionStatus10.mmObject();
-		}
-
-		@Override
-		public void executeValidator(DetailedInstructionStatus10 obj) throws Exception {
-			checkDetailedInstructionStatus10(obj);
 		}
 	};
 	/**
@@ -431,8 +428,8 @@ public class ConstraintRightsHolderMultiplicty1Guideline {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.EligiblePosition6
-	 * EligiblePosition6}</li>
+	 * {@linkplain com.tools20022.repository.msg.EligiblePosition3
+	 * EligiblePosition3}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -442,27 +439,30 @@ public class ConstraintRightsHolderMultiplicty1Guideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "It is recommended that RightsHolder can only be repetitive in the case of joint ownership."
+	 * "It is recommended that RightsHolder can only be repetitive in case of joint ownership."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintRightsHolderMultiplicty1Guideline#forEligiblePosition4
-	 * ConstraintRightsHolderMultiplicty1Guideline.forEligiblePosition4}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintRightsHolderMultiplicty1Guideline#forEligiblePosition5
+	 * ConstraintRightsHolderMultiplicty1Guideline.forEligiblePosition5}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<EligiblePosition6> forEligiblePosition6 = new MMConstraint<EligiblePosition6>() {
+	public static final MMConstraint<EligiblePosition3> forEligiblePosition3 = new MMConstraint<EligiblePosition3>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RightsHolderMultiplicty1Guideline";
-			definition = "It is recommended that RightsHolder can only be repetitive in the case of joint ownership.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintRightsHolderMultiplicty1Guideline.forEligiblePosition4;
-			owner_lazy = () -> EligiblePosition6.mmObject();
+			definition = "It is recommended that RightsHolder can only be repetitive in case of joint ownership.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRightsHolderMultiplicty1Guideline.forEligiblePosition5);
+			owner_lazy = () -> EligiblePosition3.mmObject();
 		}
 
 		@Override
-		public void executeValidator(EligiblePosition6 obj) throws Exception {
-			checkEligiblePosition6(obj);
+		public void executeValidator(EligiblePosition3 obj) throws Exception {
+			checkEligiblePosition3(obj);
 		}
 	};
 
@@ -478,15 +478,23 @@ public class ConstraintRightsHolderMultiplicty1Guideline {
 	 * It is recommended that RightsHolder can only be repetitive in case of
 	 * joint ownership.
 	 */
-	public static void checkEligiblePosition3(EligiblePosition3 obj) throws Exception {
+	public static void checkDetailedInstructionStatus9(DetailedInstructionStatus9 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
 	/**
-	 * It is recommended that RightsHolder can only be repetitive in case of
+	 * It is recommended that RightsHolder can only be repetitive in the case of
 	 * joint ownership.
 	 */
-	public static void checkEligiblePosition4(EligiblePosition4 obj) throws Exception {
+	public static void checkEligiblePosition6(EligiblePosition6 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * It is recommended that RightsHolder can only be repetitive in the case of
+	 * joint ownership.
+	 */
+	public static void checkDetailedInstructionStatus10(DetailedInstructionStatus10 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -495,6 +503,14 @@ public class ConstraintRightsHolderMultiplicty1Guideline {
 	 * joint ownership.
 	 */
 	public static void checkSafekeepingAccount3(SafekeepingAccount3 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * It is recommended that RightsHolder can only be repetitive in case of
+	 * joint ownership.
+	 */
+	public static void checkEligiblePosition4(EligiblePosition4 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -518,22 +534,6 @@ public class ConstraintRightsHolderMultiplicty1Guideline {
 	 * It is recommended that RightsHolder can only be repetitive in case of
 	 * joint ownership.
 	 */
-	public static void checkDetailedInstructionStatus9(DetailedInstructionStatus9 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * It is recommended that RightsHolder can only be repetitive in the case of
-	 * joint ownership.
-	 */
-	public static void checkDetailedInstructionStatus10(DetailedInstructionStatus10 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * It is recommended that RightsHolder can only be repetitive in case of
-	 * joint ownership.
-	 */
 	public static void checkSafekeepingAccount6(SafekeepingAccount6 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
@@ -547,10 +547,10 @@ public class ConstraintRightsHolderMultiplicty1Guideline {
 	}
 
 	/**
-	 * It is recommended that RightsHolder can only be repetitive in the case of
+	 * It is recommended that RightsHolder can only be repetitive in case of
 	 * joint ownership.
 	 */
-	public static void checkEligiblePosition6(EligiblePosition6 obj) throws Exception {
+	public static void checkEligiblePosition3(EligiblePosition3 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

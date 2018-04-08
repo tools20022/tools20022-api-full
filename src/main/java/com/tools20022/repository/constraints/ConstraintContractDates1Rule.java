@@ -71,6 +71,46 @@ public class ConstraintContractDates1Rule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.AccountReport20
+	 * AccountReport20}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ContractDates1Rule "</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "ContractDates/TargetGoLiveDate and ContractDates/GoLiveDate should not be used as part of an account closing process."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintContractDates1Rule#forAccountReport14
+	 * ConstraintContractDates1Rule.forAccountReport14}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AccountReport20> forAccountReport20 = new MMConstraint<AccountReport20>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ContractDates1Rule ";
+			definition = "ContractDates/TargetGoLiveDate and ContractDates/GoLiveDate should not be used as part of an account closing process.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintContractDates1Rule.forAccountReport14;
+			owner_lazy = () -> AccountReport20.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountReport20 obj) throws Exception {
+			checkAccountReport20(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountReport15
 	 * AccountReport15}</li>
 	 * <li>
@@ -142,52 +182,20 @@ public class ConstraintContractDates1Rule {
 			checkAccountReport14(obj);
 		}
 	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.AccountReport20
-	 * AccountReport20}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ContractDates1Rule "</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "ContractDates/TargetGoLiveDate and ContractDates/GoLiveDate should not be used as part of an account closing process."
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintContractDates1Rule#forAccountReport14
-	 * ConstraintContractDates1Rule.forAccountReport14}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<AccountReport20> forAccountReport20 = new MMConstraint<AccountReport20>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ContractDates1Rule ";
-			definition = "ContractDates/TargetGoLiveDate and ContractDates/GoLiveDate should not be used as part of an account closing process.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintContractDates1Rule.forAccountReport14;
-			owner_lazy = () -> AccountReport20.mmObject();
-		}
-
-		@Override
-		public void executeValidator(AccountReport20 obj) throws Exception {
-			checkAccountReport20(obj);
-		}
-	};
 
 	/**
 	 * ContractDates/TargetGoLiveDate and ContractDates/GoLiveDate should not be
 	 * used as part of an account closing process.
 	 */
 	public static void checkAccountReport1(AccountReport1 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * ContractDates/TargetGoLiveDate and ContractDates/GoLiveDate should not be
+	 * used as part of an account closing process.
+	 */
+	public static void checkAccountReport20(AccountReport20 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -204,14 +212,6 @@ public class ConstraintContractDates1Rule {
 	 * used as part of an account closing process.
 	 */
 	public static void checkAccountReport14(AccountReport14 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * ContractDates/TargetGoLiveDate and ContractDates/GoLiveDate should not be
-	 * used as part of an account closing process.
-	 */
-	public static void checkAccountReport20(AccountReport20 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

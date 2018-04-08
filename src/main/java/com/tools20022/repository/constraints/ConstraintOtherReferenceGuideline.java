@@ -26,190 +26,13 @@ import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 
 /**
- * RequestDetails/Reference/OtherReference should be used to reference an order
- * instruction or cancellation 'message' sent in a proprietary way or used for a
- * system reference. If RequestDetails/Reference/OtherReference is present,
- * RequestDetails/Reference/OtherReference/MessageName must contain 'fax' or
- * 'phone' or 'email', etc.
+ * OtherReference should be used to reference an order cancellation 'message'
+ * sent in a proprietary way or used for a system reference. If OtherReference
+ * is present, OtherReference/MessageName must contain 'fax' or 'phone' or
+ * 'email', etc.
  */
 public class ConstraintOtherReferenceGuideline {
 
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.setr.RequestForOrderStatusReportV04
-	 * RequestForOrderStatusReportV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "OtherReferenceGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "RequestDetails/Reference/OtherReference should be used to reference an order instruction or cancellation 'message' sent in a proprietary way or used for a system reference. If RequestDetails/Reference/OtherReference is present, RequestDetails/Reference/OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<RequestForOrderStatusReportV04> forRequestForOrderStatusReportV04 = new MMConstraint<RequestForOrderStatusReportV04>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "OtherReferenceGuideline";
-			definition = "RequestDetails/Reference/OtherReference should be used to reference an order instruction or cancellation 'message' sent in a proprietary way or used for a system reference. If RequestDetails/Reference/OtherReference is present, RequestDetails/Reference/OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
-			owner_lazy = () -> RequestForOrderStatusReportV04.mmObject();
-		}
-
-		@Override
-		public void executeValidator(RequestForOrderStatusReportV04 obj) throws Exception {
-			checkRequestForOrderStatusReportV04(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.setr.OrderCancellationStatusReportV04
-	 * OrderCancellationStatusReportV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "OtherReferenceGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "OtherReference should be used to reference an order cancellation 'message' sent in a proprietary way or used for a system reference. If OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<OrderCancellationStatusReportV04> forOrderCancellationStatusReportV04 = new MMConstraint<OrderCancellationStatusReportV04>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "OtherReferenceGuideline";
-			definition = "OtherReference should be used to reference an order cancellation 'message' sent in a proprietary way or used for a system reference. If OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
-			owner_lazy = () -> OrderCancellationStatusReportV04.mmObject();
-		}
-
-		@Override
-		public void executeValidator(OrderCancellationStatusReportV04 obj) throws Exception {
-			checkOrderCancellationStatusReportV04(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV04
-	 * OrderInstructionStatusReportV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "OtherReferenceGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Reference/OtherReference should be used to reference an order instruction sent in a proprietary way or used for a system reference. If Reference/OtherReference is present, Reference/OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc."
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintOtherReferenceGuideline#forOrderInstructionStatusReportV03
-	 * ConstraintOtherReferenceGuideline.forOrderInstructionStatusReportV03}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<OrderInstructionStatusReportV04> forOrderInstructionStatusReportV04 = new MMConstraint<OrderInstructionStatusReportV04>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "OtherReferenceGuideline";
-			definition = "Reference/OtherReference should be used to reference an order instruction sent in a proprietary way or used for a system reference. If Reference/OtherReference is present, Reference/OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOtherReferenceGuideline.forOrderInstructionStatusReportV03;
-			owner_lazy = () -> OrderInstructionStatusReportV04.mmObject();
-		}
-
-		@Override
-		public void executeValidator(OrderInstructionStatusReportV04 obj) throws Exception {
-			checkOrderInstructionStatusReportV04(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.setr.RequestForOrderConfirmationStatusReportV02
-	 * RequestForOrderConfirmationStatusReportV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "OtherReferenceGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "RequestDetails/Reference/OtherReference should be used to reference an order instruction or cancellation 'message' sent in a proprietary way or used for a system reference. If RequestDetails/Reference/OtherReference is present, RequestDetails/Reference/OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<RequestForOrderConfirmationStatusReportV02> forRequestForOrderConfirmationStatusReportV02 = new MMConstraint<RequestForOrderConfirmationStatusReportV02>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "OtherReferenceGuideline";
-			definition = "RequestDetails/Reference/OtherReference should be used to reference an order instruction or cancellation 'message' sent in a proprietary way or used for a system reference. If RequestDetails/Reference/OtherReference is present, RequestDetails/Reference/OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
-			owner_lazy = () -> RequestForOrderConfirmationStatusReportV02.mmObject();
-		}
-
-		@Override
-		public void executeValidator(RequestForOrderConfirmationStatusReportV02 obj) throws Exception {
-			checkRequestForOrderConfirmationStatusReportV02(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.setr.OrderConfirmationStatusReportV02
-	 * OrderConfirmationStatusReportV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "OtherReferenceGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "OtherReference should be used to reference an order confirmation cancellation 'message' sent in a proprietary way or used for a system reference. If OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<OrderConfirmationStatusReportV02> forOrderConfirmationStatusReportV02 = new MMConstraint<OrderConfirmationStatusReportV02>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "OtherReferenceGuideline";
-			definition = "OtherReference should be used to reference an order confirmation cancellation 'message' sent in a proprietary way or used for a system reference. If OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
-			owner_lazy = () -> OrderConfirmationStatusReportV02.mmObject();
-		}
-
-		@Override
-		public void executeValidator(OrderConfirmationStatusReportV02 obj) throws Exception {
-			checkOrderConfirmationStatusReportV02(obj);
-		}
-	};
 	/**
 	 * 
 	 <p>
@@ -231,7 +54,7 @@ public class ConstraintOtherReferenceGuideline {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<OrderCancellationStatusReportV03> forOrderCancellationStatusReportV03 = new MMConstraint<OrderCancellationStatusReportV03>() {
+	public static final MMConstraint<OrderCancellationStatusReportV03> for_setr_OrderCancellationStatusReportV03 = new MMConstraint<OrderCancellationStatusReportV03>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReferenceGuideline";
@@ -241,7 +64,7 @@ public class ConstraintOtherReferenceGuideline {
 
 		@Override
 		public void executeValidator(OrderCancellationStatusReportV03 obj) throws Exception {
-			checkOrderCancellationStatusReportV03(obj);
+			check_setr_OrderCancellationStatusReportV03(obj);
 		}
 	};
 	/**
@@ -265,7 +88,7 @@ public class ConstraintOtherReferenceGuideline {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<OrderConfirmationStatusReportV01> forOrderConfirmationStatusReportV01 = new MMConstraint<OrderConfirmationStatusReportV01>() {
+	public static final MMConstraint<OrderConfirmationStatusReportV01> for_setr_OrderConfirmationStatusReportV01 = new MMConstraint<OrderConfirmationStatusReportV01>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReferenceGuideline";
@@ -275,7 +98,7 @@ public class ConstraintOtherReferenceGuideline {
 
 		@Override
 		public void executeValidator(OrderConfirmationStatusReportV01 obj) throws Exception {
-			checkOrderConfirmationStatusReportV01(obj);
+			check_setr_OrderConfirmationStatusReportV01(obj);
 		}
 	};
 	/**
@@ -284,8 +107,8 @@ public class ConstraintOtherReferenceGuideline {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV03
-	 * OrderInstructionStatusReportV03}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.RequestForOrderConfirmationStatusReportV02
+	 * RequestForOrderConfirmationStatusReportV02}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -295,209 +118,21 @@ public class ConstraintOtherReferenceGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "OtherReference should be used to reference an order instruction or cancellation 'message' sent in a proprietary way or used for a system reference. If OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintOtherReferenceGuideline#forOrderInstructionStatusReportV04
-	 * ConstraintOtherReferenceGuideline.forOrderInstructionStatusReportV04}</li>
-	 * </ul>
+	 * "RequestDetails/Reference/OtherReference should be used to reference an order instruction or cancellation 'message' sent in a proprietary way or used for a system reference. If RequestDetails/Reference/OtherReference is present, RequestDetails/Reference/OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc."
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<OrderInstructionStatusReportV03> forOrderInstructionStatusReportV03 = new MMConstraint<OrderInstructionStatusReportV03>() {
+	public static final MMConstraint<RequestForOrderConfirmationStatusReportV02> for_setr_RequestForOrderConfirmationStatusReportV02 = new MMConstraint<RequestForOrderConfirmationStatusReportV02>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReferenceGuideline";
-			definition = "OtherReference should be used to reference an order instruction or cancellation 'message' sent in a proprietary way or used for a system reference. If OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOtherReferenceGuideline.forOrderInstructionStatusReportV04);
-			owner_lazy = () -> OrderInstructionStatusReportV03.mmObject();
+			definition = "RequestDetails/Reference/OtherReference should be used to reference an order instruction or cancellation 'message' sent in a proprietary way or used for a system reference. If RequestDetails/Reference/OtherReference is present, RequestDetails/Reference/OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
+			owner_lazy = () -> RequestForOrderConfirmationStatusReportV02.mmObject();
 		}
 
 		@Override
-		public void executeValidator(OrderInstructionStatusReportV03 obj) throws Exception {
-			checkOrderInstructionStatusReportV03(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV02
-	 * OrderInstructionStatusReportV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "OtherReferenceGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "OtherReference should be used for orders sent by proprietary way or for system references. \nIf OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email'."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<OrderInstructionStatusReportV02> forOrderInstructionStatusReportV02 = new MMConstraint<OrderInstructionStatusReportV02>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "OtherReferenceGuideline";
-			definition = "OtherReference should be used for orders sent by proprietary way or for system references. \nIf OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email'.";
-			owner_lazy = () -> OrderInstructionStatusReportV02.mmObject();
-		}
-
-		@Override
-		public void executeValidator(OrderInstructionStatusReportV02 obj) throws Exception {
-			checkOrderInstructionStatusReportV02(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.AccountManagementMessageReference
-	 * AccountManagementMessageReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "OtherReferenceGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "OtherReference should be used for an account opening or an account modification instruction sent by proprietary way or for system references. \nIf OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<AccountManagementMessageReference> forAccountManagementMessageReference = new MMConstraint<AccountManagementMessageReference>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "OtherReferenceGuideline";
-			definition = "OtherReference should be used for an account opening or an account modification instruction sent by proprietary way or for system references. \nIf OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
-			owner_lazy = () -> AccountManagementMessageReference.mmObject();
-		}
-
-		@Override
-		public void executeValidator(AccountManagementMessageReference obj) throws Exception {
-			checkAccountManagementMessageReference(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.AccountManagementMessageReference1
-	 * AccountManagementMessageReference1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "OtherReferenceGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "OtherReference should be used for an account opening or an account modification instruction sent by proprietary way or for system references. \nIf OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintOtherReferenceGuideline#forAccountManagementMessageReference2
-	 * ConstraintOtherReferenceGuideline.forAccountManagementMessageReference2}</li>
-	 * </ul>
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<AccountManagementMessageReference1> forAccountManagementMessageReference1 = new MMConstraint<AccountManagementMessageReference1>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "OtherReferenceGuideline";
-			definition = "OtherReference should be used for an account opening or an account modification instruction sent by proprietary way or for system references. \nIf OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOtherReferenceGuideline.forAccountManagementMessageReference2);
-			owner_lazy = () -> AccountManagementMessageReference1.mmObject();
-		}
-
-		@Override
-		public void executeValidator(AccountManagementMessageReference1 obj) throws Exception {
-			checkAccountManagementMessageReference1(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference5
-	 * MessageAndBusinessReference5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "OtherReferenceGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "OtherReference should be used to reference an order confirmation, order confirmation cancellation or order confirmation amendment 'message' sent in a proprietary way or used for a system reference. If OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<MessageAndBusinessReference5> forMessageAndBusinessReference5 = new MMConstraint<MessageAndBusinessReference5>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "OtherReferenceGuideline";
-			definition = "OtherReference should be used to reference an order confirmation, order confirmation cancellation or order confirmation amendment 'message' sent in a proprietary way or used for a system reference. If OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
-			owner_lazy = () -> MessageAndBusinessReference5.mmObject();
-		}
-
-		@Override
-		public void executeValidator(MessageAndBusinessReference5 obj) throws Exception {
-			checkMessageAndBusinessReference5(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference2
-	 * MessageAndBusinessReference2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "OtherReferenceGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "OtherReference should be used for orders sent by proprietary way or for system references. \nIf OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<MessageAndBusinessReference2> forMessageAndBusinessReference2 = new MMConstraint<MessageAndBusinessReference2>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "OtherReferenceGuideline";
-			definition = "OtherReference should be used for orders sent by proprietary way or for system references. \nIf OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
-			owner_lazy = () -> MessageAndBusinessReference2.mmObject();
-		}
-
-		@Override
-		public void executeValidator(MessageAndBusinessReference2 obj) throws Exception {
-			checkMessageAndBusinessReference2(obj);
+		public void executeValidator(RequestForOrderConfirmationStatusReportV02 obj) throws Exception {
+			check_setr_RequestForOrderConfirmationStatusReportV02(obj);
 		}
 	};
 	/**
@@ -589,6 +224,219 @@ public class ConstraintOtherReferenceGuideline {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV02
+	 * OrderInstructionStatusReportV02}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OtherReferenceGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "OtherReference should be used for orders sent by proprietary way or for system references. \nIf OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email'."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<OrderInstructionStatusReportV02> for_setr_OrderInstructionStatusReportV02 = new MMConstraint<OrderInstructionStatusReportV02>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OtherReferenceGuideline";
+			definition = "OtherReference should be used for orders sent by proprietary way or for system references. \nIf OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email'.";
+			owner_lazy = () -> OrderInstructionStatusReportV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OrderInstructionStatusReportV02 obj) throws Exception {
+			check_setr_OrderInstructionStatusReportV02(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.AccountManagementMessageReference1
+	 * AccountManagementMessageReference1}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OtherReferenceGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "OtherReference should be used for an account opening or an account modification instruction sent by proprietary way or for system references. \nIf OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintOtherReferenceGuideline#forAccountManagementMessageReference2
+	 * ConstraintOtherReferenceGuideline.forAccountManagementMessageReference2}</li>
+	 * </ul>
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AccountManagementMessageReference1> forAccountManagementMessageReference1 = new MMConstraint<AccountManagementMessageReference1>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OtherReferenceGuideline";
+			definition = "OtherReference should be used for an account opening or an account modification instruction sent by proprietary way or for system references. \nIf OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOtherReferenceGuideline.forAccountManagementMessageReference2);
+			owner_lazy = () -> AccountManagementMessageReference1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountManagementMessageReference1 obj) throws Exception {
+			checkAccountManagementMessageReference1(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference5
+	 * MessageAndBusinessReference5}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OtherReferenceGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "OtherReference should be used to reference an order confirmation, order confirmation cancellation or order confirmation amendment 'message' sent in a proprietary way or used for a system reference. If OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<MessageAndBusinessReference5> forMessageAndBusinessReference5 = new MMConstraint<MessageAndBusinessReference5>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OtherReferenceGuideline";
+			definition = "OtherReference should be used to reference an order confirmation, order confirmation cancellation or order confirmation amendment 'message' sent in a proprietary way or used for a system reference. If OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
+			owner_lazy = () -> MessageAndBusinessReference5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MessageAndBusinessReference5 obj) throws Exception {
+			checkMessageAndBusinessReference5(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.choice.LinkedMessage4Choice
+	 * LinkedMessage4Choice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OtherReferenceGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "OtherReference should be used for an account opening or an account modification instruction sent in a proprietary way or for system references. \r\nIf OtherReference is present, OtherReference/MessageName must contain, for example, 'fax' or 'phone' or 'email'."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<LinkedMessage4Choice> forLinkedMessage4Choice = new MMConstraint<LinkedMessage4Choice>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OtherReferenceGuideline";
+			definition = "OtherReference should be used for an account opening or an account modification instruction sent in a proprietary way or for system references. \r\nIf OtherReference is present, OtherReference/MessageName must contain, for example, 'fax' or 'phone' or 'email'.";
+			owner_lazy = () -> LinkedMessage4Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(LinkedMessage4Choice obj) throws Exception {
+			checkLinkedMessage4Choice(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.setr.OrderConfirmationStatusReportV02
+	 * OrderConfirmationStatusReportV02}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OtherReferenceGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "OtherReference should be used to reference an order confirmation cancellation 'message' sent in a proprietary way or used for a system reference. If OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<OrderConfirmationStatusReportV02> for_setr_OrderConfirmationStatusReportV02 = new MMConstraint<OrderConfirmationStatusReportV02>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OtherReferenceGuideline";
+			definition = "OtherReference should be used to reference an order confirmation cancellation 'message' sent in a proprietary way or used for a system reference. If OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
+			owner_lazy = () -> OrderConfirmationStatusReportV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OrderConfirmationStatusReportV02 obj) throws Exception {
+			check_setr_OrderConfirmationStatusReportV02(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.setr.RequestForOrderStatusReportV04
+	 * RequestForOrderStatusReportV04}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OtherReferenceGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "RequestDetails/Reference/OtherReference should be used to reference an order instruction or cancellation 'message' sent in a proprietary way or used for a system reference. If RequestDetails/Reference/OtherReference is present, RequestDetails/Reference/OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<RequestForOrderStatusReportV04> for_setr_RequestForOrderStatusReportV04 = new MMConstraint<RequestForOrderStatusReportV04>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OtherReferenceGuideline";
+			definition = "RequestDetails/Reference/OtherReference should be used to reference an order instruction or cancellation 'message' sent in a proprietary way or used for a system reference. If RequestDetails/Reference/OtherReference is present, RequestDetails/Reference/OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
+			owner_lazy = () -> RequestForOrderStatusReportV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RequestForOrderStatusReportV04 obj) throws Exception {
+			check_setr_RequestForOrderStatusReportV04(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountManagementMessageReference3
 	 * AccountManagementMessageReference3}</li>
 	 * <li>
@@ -629,8 +477,8 @@ public class ConstraintOtherReferenceGuideline {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.choice.LinkedMessage4Choice
-	 * LinkedMessage4Choice}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountManagementMessageReference
+	 * AccountManagementMessageReference}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -640,83 +488,184 @@ public class ConstraintOtherReferenceGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "OtherReference should be used for an account opening or an account modification instruction sent in a proprietary way or for system references. \r\nIf OtherReference is present, OtherReference/MessageName must contain, for example, 'fax' or 'phone' or 'email'."
+	 * "OtherReference should be used for an account opening or an account modification instruction sent by proprietary way or for system references. \nIf OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc."
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<LinkedMessage4Choice> forLinkedMessage4Choice = new MMConstraint<LinkedMessage4Choice>() {
+	public static final MMConstraint<AccountManagementMessageReference> forAccountManagementMessageReference = new MMConstraint<AccountManagementMessageReference>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReferenceGuideline";
-			definition = "OtherReference should be used for an account opening or an account modification instruction sent in a proprietary way or for system references. \r\nIf OtherReference is present, OtherReference/MessageName must contain, for example, 'fax' or 'phone' or 'email'.";
-			owner_lazy = () -> LinkedMessage4Choice.mmObject();
+			definition = "OtherReference should be used for an account opening or an account modification instruction sent by proprietary way or for system references. \nIf OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
+			owner_lazy = () -> AccountManagementMessageReference.mmObject();
 		}
 
 		@Override
-		public void executeValidator(LinkedMessage4Choice obj) throws Exception {
-			checkLinkedMessage4Choice(obj);
+		public void executeValidator(AccountManagementMessageReference obj) throws Exception {
+			checkAccountManagementMessageReference(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.setr.OrderCancellationStatusReportV04
+	 * OrderCancellationStatusReportV04}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OtherReferenceGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "OtherReference should be used to reference an order cancellation 'message' sent in a proprietary way or used for a system reference. If OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<OrderCancellationStatusReportV04> for_setr_OrderCancellationStatusReportV04 = new MMConstraint<OrderCancellationStatusReportV04>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OtherReferenceGuideline";
+			definition = "OtherReference should be used to reference an order cancellation 'message' sent in a proprietary way or used for a system reference. If OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
+			owner_lazy = () -> OrderCancellationStatusReportV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OrderCancellationStatusReportV04 obj) throws Exception {
+			check_setr_OrderCancellationStatusReportV04(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference2
+	 * MessageAndBusinessReference2}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OtherReferenceGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "OtherReference should be used for orders sent by proprietary way or for system references. \nIf OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<MessageAndBusinessReference2> forMessageAndBusinessReference2 = new MMConstraint<MessageAndBusinessReference2>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OtherReferenceGuideline";
+			definition = "OtherReference should be used for orders sent by proprietary way or for system references. \nIf OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
+			owner_lazy = () -> MessageAndBusinessReference2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MessageAndBusinessReference2 obj) throws Exception {
+			checkMessageAndBusinessReference2(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV03
+	 * OrderInstructionStatusReportV03}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OtherReferenceGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "OtherReference should be used to reference an order instruction or cancellation 'message' sent in a proprietary way or used for a system reference. If OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintOtherReferenceGuideline#for_setr_OrderInstructionStatusReportV04
+	 * ConstraintOtherReferenceGuideline.
+	 * for_setr_OrderInstructionStatusReportV04}</li>
+	 * </ul>
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<OrderInstructionStatusReportV03> for_setr_OrderInstructionStatusReportV03 = new MMConstraint<OrderInstructionStatusReportV03>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OtherReferenceGuideline";
+			definition = "OtherReference should be used to reference an order instruction or cancellation 'message' sent in a proprietary way or used for a system reference. If OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOtherReferenceGuideline.for_setr_OrderInstructionStatusReportV04);
+			owner_lazy = () -> OrderInstructionStatusReportV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OrderInstructionStatusReportV03 obj) throws Exception {
+			check_setr_OrderInstructionStatusReportV03(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV04
+	 * OrderInstructionStatusReportV04}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OtherReferenceGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Reference/OtherReference should be used to reference an order instruction sent in a proprietary way or used for a system reference. If Reference/OtherReference is present, Reference/OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintOtherReferenceGuideline#for_setr_OrderInstructionStatusReportV03
+	 * ConstraintOtherReferenceGuideline.
+	 * for_setr_OrderInstructionStatusReportV03}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<OrderInstructionStatusReportV04> for_setr_OrderInstructionStatusReportV04 = new MMConstraint<OrderInstructionStatusReportV04>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OtherReferenceGuideline";
+			definition = "Reference/OtherReference should be used to reference an order instruction sent in a proprietary way or used for a system reference. If Reference/OtherReference is present, Reference/OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOtherReferenceGuideline.for_setr_OrderInstructionStatusReportV03;
+			owner_lazy = () -> OrderInstructionStatusReportV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OrderInstructionStatusReportV04 obj) throws Exception {
+			check_setr_OrderInstructionStatusReportV04(obj);
 		}
 	};
 
 	/**
-	 * RequestDetails/Reference/OtherReference should be used to reference an
-	 * order instruction or cancellation 'message' sent in a proprietary way or
-	 * used for a system reference. If RequestDetails/Reference/OtherReference
-	 * is present, RequestDetails/Reference/OtherReference/MessageName must
-	 * contain 'fax' or 'phone' or 'email', etc.
-	 */
-	public static void checkRequestForOrderStatusReportV04(RequestForOrderStatusReportV04 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
 	 * OtherReference should be used to reference an order cancellation
 	 * 'message' sent in a proprietary way or used for a system reference. If
 	 * OtherReference is present, OtherReference/MessageName must contain 'fax'
 	 * or 'phone' or 'email', etc.
 	 */
-	public static void checkOrderCancellationStatusReportV04(OrderCancellationStatusReportV04 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Reference/OtherReference should be used to reference an order instruction
-	 * sent in a proprietary way or used for a system reference. If
-	 * Reference/OtherReference is present, Reference/OtherReference/MessageName
-	 * must contain 'fax' or 'phone' or 'email', etc.
-	 */
-	public static void checkOrderInstructionStatusReportV04(OrderInstructionStatusReportV04 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * RequestDetails/Reference/OtherReference should be used to reference an
-	 * order instruction or cancellation 'message' sent in a proprietary way or
-	 * used for a system reference. If RequestDetails/Reference/OtherReference
-	 * is present, RequestDetails/Reference/OtherReference/MessageName must
-	 * contain 'fax' or 'phone' or 'email', etc.
-	 */
-	public static void checkRequestForOrderConfirmationStatusReportV02(RequestForOrderConfirmationStatusReportV02 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * OtherReference should be used to reference an order confirmation
-	 * cancellation 'message' sent in a proprietary way or used for a system
-	 * reference. If OtherReference is present, OtherReference/MessageName must
-	 * contain 'fax' or 'phone' or 'email', etc.
-	 */
-	public static void checkOrderConfirmationStatusReportV02(OrderConfirmationStatusReportV02 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * OtherReference should be used to reference an order cancellation
-	 * 'message' sent in a proprietary way or used for a system reference. If
-	 * OtherReference is present, OtherReference/MessageName must contain 'fax'
-	 * or 'phone' or 'email', etc.
-	 */
-	public static void checkOrderCancellationStatusReportV03(OrderCancellationStatusReportV03 obj) throws Exception {
+	public static void check_setr_OrderCancellationStatusReportV03(OrderCancellationStatusReportV03 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -727,66 +676,18 @@ public class ConstraintOtherReferenceGuideline {
 	 * present, OtherReference/MessageName must contain 'fax' or 'phone' or
 	 * 'email', etc.
 	 */
-	public static void checkOrderConfirmationStatusReportV01(OrderConfirmationStatusReportV01 obj) throws Exception {
+	public static void check_setr_OrderConfirmationStatusReportV01(OrderConfirmationStatusReportV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
 	/**
-	 * OtherReference should be used to reference an order instruction or
-	 * cancellation 'message' sent in a proprietary way or used for a system
-	 * reference. If OtherReference is present, OtherReference/MessageName must
+	 * RequestDetails/Reference/OtherReference should be used to reference an
+	 * order instruction or cancellation 'message' sent in a proprietary way or
+	 * used for a system reference. If RequestDetails/Reference/OtherReference
+	 * is present, RequestDetails/Reference/OtherReference/MessageName must
 	 * contain 'fax' or 'phone' or 'email', etc.
 	 */
-	public static void checkOrderInstructionStatusReportV03(OrderInstructionStatusReportV03 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * OtherReference should be used for orders sent by proprietary way or for
-	 * system references. If OtherReference is present,
-	 * OtherReference/MessageName must contain 'fax' or 'phone' or 'email'.
-	 */
-	public static void checkOrderInstructionStatusReportV02(OrderInstructionStatusReportV02 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * OtherReference should be used for an account opening or an account
-	 * modification instruction sent by proprietary way or for system
-	 * references. If OtherReference is present, OtherReference/MessageName must
-	 * contain 'fax' or 'phone' or 'email', etc.
-	 */
-	public static void checkAccountManagementMessageReference(AccountManagementMessageReference obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * OtherReference should be used for an account opening or an account
-	 * modification instruction sent by proprietary way or for system
-	 * references. If OtherReference is present, OtherReference/MessageName must
-	 * contain 'fax' or 'phone' or 'email', etc.
-	 */
-	public static void checkAccountManagementMessageReference1(AccountManagementMessageReference1 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * OtherReference should be used to reference an order confirmation, order
-	 * confirmation cancellation or order confirmation amendment 'message' sent
-	 * in a proprietary way or used for a system reference. If OtherReference is
-	 * present, OtherReference/MessageName must contain 'fax' or 'phone' or
-	 * 'email', etc.
-	 */
-	public static void checkMessageAndBusinessReference5(MessageAndBusinessReference5 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * OtherReference should be used for orders sent by proprietary way or for
-	 * system references. If OtherReference is present,
-	 * OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.
-	 */
-	public static void checkMessageAndBusinessReference2(MessageAndBusinessReference2 obj) throws Exception {
+	public static void check_setr_RequestForOrderConfirmationStatusReportV02(RequestForOrderConfirmationStatusReportV02 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -813,6 +714,68 @@ public class ConstraintOtherReferenceGuideline {
 	}
 
 	/**
+	 * OtherReference should be used for orders sent by proprietary way or for
+	 * system references. If OtherReference is present,
+	 * OtherReference/MessageName must contain 'fax' or 'phone' or 'email'.
+	 */
+	public static void check_setr_OrderInstructionStatusReportV02(OrderInstructionStatusReportV02 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * OtherReference should be used for an account opening or an account
+	 * modification instruction sent by proprietary way or for system
+	 * references. If OtherReference is present, OtherReference/MessageName must
+	 * contain 'fax' or 'phone' or 'email', etc.
+	 */
+	public static void checkAccountManagementMessageReference1(AccountManagementMessageReference1 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * OtherReference should be used to reference an order confirmation, order
+	 * confirmation cancellation or order confirmation amendment 'message' sent
+	 * in a proprietary way or used for a system reference. If OtherReference is
+	 * present, OtherReference/MessageName must contain 'fax' or 'phone' or
+	 * 'email', etc.
+	 */
+	public static void checkMessageAndBusinessReference5(MessageAndBusinessReference5 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * OtherReference should be used for an account opening or an account
+	 * modification instruction sent in a proprietary way or for system
+	 * references. <br>
+	 * If OtherReference is present, OtherReference/MessageName must contain,
+	 * for example, 'fax' or 'phone' or 'email'.
+	 */
+	public static void checkLinkedMessage4Choice(LinkedMessage4Choice obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * OtherReference should be used to reference an order confirmation
+	 * cancellation 'message' sent in a proprietary way or used for a system
+	 * reference. If OtherReference is present, OtherReference/MessageName must
+	 * contain 'fax' or 'phone' or 'email', etc.
+	 */
+	public static void check_setr_OrderConfirmationStatusReportV02(OrderConfirmationStatusReportV02 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * RequestDetails/Reference/OtherReference should be used to reference an
+	 * order instruction or cancellation 'message' sent in a proprietary way or
+	 * used for a system reference. If RequestDetails/Reference/OtherReference
+	 * is present, RequestDetails/Reference/OtherReference/MessageName must
+	 * contain 'fax' or 'phone' or 'email', etc.
+	 */
+	public static void check_setr_RequestForOrderStatusReportV04(RequestForOrderStatusReportV04 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
 	 * LinkedReference/OtherReference should be used for an account opening or
 	 * an account modification instruction sent by proprietary way or for system
 	 * references. <br>
@@ -826,12 +789,50 @@ public class ConstraintOtherReferenceGuideline {
 
 	/**
 	 * OtherReference should be used for an account opening or an account
-	 * modification instruction sent in a proprietary way or for system
-	 * references. <br>
-	 * If OtherReference is present, OtherReference/MessageName must contain,
-	 * for example, 'fax' or 'phone' or 'email'.
+	 * modification instruction sent by proprietary way or for system
+	 * references. If OtherReference is present, OtherReference/MessageName must
+	 * contain 'fax' or 'phone' or 'email', etc.
 	 */
-	public static void checkLinkedMessage4Choice(LinkedMessage4Choice obj) throws Exception {
+	public static void checkAccountManagementMessageReference(AccountManagementMessageReference obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * OtherReference should be used to reference an order cancellation
+	 * 'message' sent in a proprietary way or used for a system reference. If
+	 * OtherReference is present, OtherReference/MessageName must contain 'fax'
+	 * or 'phone' or 'email', etc.
+	 */
+	public static void check_setr_OrderCancellationStatusReportV04(OrderCancellationStatusReportV04 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * OtherReference should be used for orders sent by proprietary way or for
+	 * system references. If OtherReference is present,
+	 * OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.
+	 */
+	public static void checkMessageAndBusinessReference2(MessageAndBusinessReference2 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * OtherReference should be used to reference an order instruction or
+	 * cancellation 'message' sent in a proprietary way or used for a system
+	 * reference. If OtherReference is present, OtherReference/MessageName must
+	 * contain 'fax' or 'phone' or 'email', etc.
+	 */
+	public static void check_setr_OrderInstructionStatusReportV03(OrderInstructionStatusReportV03 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Reference/OtherReference should be used to reference an order instruction
+	 * sent in a proprietary way or used for a system reference. If
+	 * Reference/OtherReference is present, Reference/OtherReference/MessageName
+	 * must contain 'fax' or 'phone' or 'email', etc.
+	 */
+	public static void check_setr_OrderInstructionStatusReportV04(OrderInstructionStatusReportV04 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

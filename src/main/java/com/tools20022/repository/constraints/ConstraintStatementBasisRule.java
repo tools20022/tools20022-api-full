@@ -38,48 +38,6 @@ public class ConstraintStatementBasisRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.Statement16 Statement16}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "StatementBasisRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If StatementBasis is used, then the statement requested must be a SecuritiesBalanceAccountingReport or a SecuritiesBalanceCustodyReport."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintStatementBasisRule#forStatement42
-	 * ConstraintStatementBasisRule.forStatement42}</li>
-	 * </ul>
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<Statement16> forStatement16 = new MMConstraint<Statement16>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "StatementBasisRule";
-			definition = "If StatementBasis is used, then the statement requested must be a SecuritiesBalanceAccountingReport or a SecuritiesBalanceCustodyReport.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintStatementBasisRule.forStatement42);
-			owner_lazy = () -> Statement16.mmObject();
-		}
-
-		@Override
-		public void executeValidator(Statement16 obj) throws Exception {
-			checkStatement16(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Statement29 Statement29}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -179,14 +137,48 @@ public class ConstraintStatementBasisRule {
 			checkStatement54(obj);
 		}
 	};
-
 	/**
-	 * If StatementBasis is used, then the statement requested must be a
-	 * SecuritiesBalanceAccountingReport or a SecuritiesBalanceCustodyReport.
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.Statement16 Statement16}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "StatementBasisRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If StatementBasis is used, then the statement requested must be a SecuritiesBalanceAccountingReport or a SecuritiesBalanceCustodyReport."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintStatementBasisRule#forStatement42
+	 * ConstraintStatementBasisRule.forStatement42}</li>
+	 * </ul>
+	 * </li>
+	 * </ul>
 	 */
-	public static void checkStatement16(Statement16 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
+	public static final MMConstraint<Statement16> forStatement16 = new MMConstraint<Statement16>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "StatementBasisRule";
+			definition = "If StatementBasis is used, then the statement requested must be a SecuritiesBalanceAccountingReport or a SecuritiesBalanceCustodyReport.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintStatementBasisRule.forStatement42);
+			owner_lazy = () -> Statement16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Statement16 obj) throws Exception {
+			checkStatement16(obj);
+		}
+	};
 
 	/**
 	 * If StatementBasis is used, then the statement requested must be a
@@ -209,6 +201,14 @@ public class ConstraintStatementBasisRule {
 	 * SecuritiesBalanceAccountingReport or a SecuritiesBalanceCustodyReport.
 	 */
 	public static void checkStatement54(Statement54 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If StatementBasis is used, then the statement requested must be a
+	 * SecuritiesBalanceAccountingReport or a SecuritiesBalanceCustodyReport.
+	 */
+	public static void checkStatement16(Statement16 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

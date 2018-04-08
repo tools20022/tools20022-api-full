@@ -95,11 +95,11 @@ public class SecuritiesEventsArchivesubsetvariant {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Securities Events - Archive - subset / variant";
 				definition = "Messages that support asset servicing, including proxy voting, income and corporate actions.";
+				code = "seev";
 				messageDefinition_lazy = () -> Arrays.asList(CorporateActionMovementPreliminaryAdviceCancellationAdvice002V06.mmObject(), CorporateActionNotification002V06.mmObject(),
 						CorporateActionInstructionStatusAdvice002V07.mmObject(), CorporateActionMovementPreliminaryAdvice002V07.mmObject(), CorporateActionMovementReversalAdvice002V07.mmObject(),
 						CorporateActionMovementConfirmation002V07.mmObject(), CorporateActionInstructionCancellationRequestStatusAdvice002V06.mmObject(), CorporateActionInstruction002V06.mmObject(),
 						CorporateActionCancellationAdvice002V06.mmObject(), CorporateActionInstructionStatementReport002V05.mmObject());
-				code = "seev";
 			}
 		});
 		return mmObject_lazy.get();

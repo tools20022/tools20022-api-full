@@ -106,11 +106,11 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintOptionRule1#forAgentCAMovementInstructionV01
- * ConstraintOptionRule1.forAgentCAMovementInstructionV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOptionRule1#for_seev_AgentCAMovementInstructionV01
+ * ConstraintOptionRule1.for_seev_AgentCAMovementInstructionV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintOptionRule2#forAgentCAMovementInstructionV01
- * ConstraintOptionRule2.forAgentCAMovementInstructionV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOptionRule2#for_seev_AgentCAMovementInstructionV01
+ * ConstraintOptionRule2.for_seev_AgentCAMovementInstructionV01}</li>
  * </ul>
  * </li>
  * <li>
@@ -460,8 +460,8 @@ public class AgentCAMovementInstructionV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionRule1.forAgentCAMovementInstructionV01,
-						com.tools20022.repository.constraints.ConstraintOptionRule2.forAgentCAMovementInstructionV01);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionRule1.for_seev_AgentCAMovementInstructionV01,
+						com.tools20022.repository.constraints.ConstraintOptionRule2.for_seev_AgentCAMovementInstructionV01);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AgentCAMovementInstructionV01";
 				definition = "Scope\r\nThis message is sent by an issuer (or its agent) to a CSD to order:\r\n- the global or individual debit of exercised resources (cash and/or securities), per event and optionally per option and per resource for all or individual CSD client's accounts;\r\n- and/or the individual credits of the outturn resources per event and optionally per option and per resource for a given CSD client's account.\r\nUsage\r\nThis message is used to instruct:\r\n- the global debit of the exercised resources from the CSD client's available or sequestered balance, in which case, the order type must be 'global debit order';\r\n- the individual debits and credits:\r\n- the individual debit of the exercised resources from the CSD client's available or sequestered balance and/or\r\n- the individual credit of the outturn resources to the CSD client's account.\r\nThe order type must be 'individual order';\r\n- a return order, in the case of a scaleback, i.e. the return of the exercised resources to the CSD client's account. The order type must be either 'global return order' or 'individual return order'; and\r\nchange of option, e.g. in the case of the closure of an option, by moving the exercised resources from one option to another option within the sequestered balances in accordance to the new option conditions. The order type must be 'option change order'.";

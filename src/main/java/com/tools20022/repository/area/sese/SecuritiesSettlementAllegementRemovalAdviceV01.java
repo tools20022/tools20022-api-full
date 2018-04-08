@@ -105,13 +105,13 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#forSecuritiesSettlementAllegementRemovalAdviceV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#for_sese_SecuritiesSettlementAllegementRemovalAdviceV01
  * ConstraintCoexistenceCharacterSetXRule.
- * forSecuritiesSettlementAllegementRemovalAdviceV01}</li>
+ * for_sese_SecuritiesSettlementAllegementRemovalAdviceV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forSecuritiesSettlementAllegementRemovalAdviceV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#for_sese_SecuritiesSettlementAllegementRemovalAdviceV01
  * ConstraintCoexistenceIdentificationRule.
- * forSecuritiesSettlementAllegementRemovalAdviceV01}</li>
+ * for_sese_SecuritiesSettlementAllegementRemovalAdviceV01}</li>
  * </ul>
  * </li>
  * <li>
@@ -381,8 +381,8 @@ public class SecuritiesSettlementAllegementRemovalAdviceV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesSettlementAllegementRemovalAdviceV01,
-						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesSettlementAllegementRemovalAdviceV01);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.for_sese_SecuritiesSettlementAllegementRemovalAdviceV01,
+						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.for_sese_SecuritiesSettlementAllegementRemovalAdviceV01);
 				semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, "MT 578, Seq A :23G:REMO"));
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesSettlementAllegementRemovalAdviceV01";

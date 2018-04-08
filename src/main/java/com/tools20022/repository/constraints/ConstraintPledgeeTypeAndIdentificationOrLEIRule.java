@@ -35,6 +35,49 @@ public class ConstraintPledgeeTypeAndIdentificationOrLEIRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.Pledgee2 Pledgee2}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition&gt;&lt;SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;OR&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/PledgeeTypeAndIdentification&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/LEI&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;/SimpleRule&gt;&lt;/RuleDefinition&gt;"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PledgeeTypeAndIdentificationOrLEIRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "PledgeeTypeAndIdentification must be present or LEI must be present."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPledgeeTypeAndIdentificationOrLEIRule#forPledgee1
+	 * ConstraintPledgeeTypeAndIdentificationOrLEIRule.forPledgee1}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<Pledgee2> forPledgee2 = new MMConstraint<Pledgee2>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PledgeeTypeAndIdentificationOrLEIRule";
+			definition = "PledgeeTypeAndIdentification must be present or LEI must be present.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPledgeeTypeAndIdentificationOrLEIRule.forPledgee1;
+			owner_lazy = () -> Pledgee2.mmObject();
+			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PledgeeTypeAndIdentification</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/LEI</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(Pledgee2 obj) throws Exception {
+			checkPledgee2(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Pledgee1 Pledgee1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
 	 * expression} =
@@ -75,61 +118,18 @@ public class ConstraintPledgeeTypeAndIdentificationOrLEIRule {
 			checkPledgee1(obj);
 		}
 	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.Pledgee2 Pledgee2}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
-	 * expression} =
-	 * "&lt;RuleDefinition&gt;&lt;SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;OR&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/PledgeeTypeAndIdentification&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/LEI&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;/SimpleRule&gt;&lt;/RuleDefinition&gt;"
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PledgeeTypeAndIdentificationOrLEIRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "PledgeeTypeAndIdentification must be present or LEI must be present."</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintPledgeeTypeAndIdentificationOrLEIRule#forPledgee1
-	 * ConstraintPledgeeTypeAndIdentificationOrLEIRule.forPledgee1}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<Pledgee2> forPledgee2 = new MMConstraint<Pledgee2>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "PledgeeTypeAndIdentificationOrLEIRule";
-			definition = "PledgeeTypeAndIdentification must be present or LEI must be present.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPledgeeTypeAndIdentificationOrLEIRule.forPledgee1;
-			owner_lazy = () -> Pledgee2.mmObject();
-			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PledgeeTypeAndIdentification</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/LEI</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
-		}
-
-		@Override
-		public void executeValidator(Pledgee2 obj) throws Exception {
-			checkPledgee2(obj);
-		}
-	};
 
 	/**
 	 * PledgeeTypeAndIdentification must be present or LEI must be present.
 	 */
-	public static void checkPledgee1(Pledgee1 obj) throws Exception {
+	public static void checkPledgee2(Pledgee2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
 	/**
 	 * PledgeeTypeAndIdentification must be present or LEI must be present.
 	 */
-	public static void checkPledgee2(Pledgee2 obj) throws Exception {
+	public static void checkPledgee1(Pledgee1 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

@@ -36,7 +36,8 @@ public class ConstraintSecondLevelTax2Rule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.RateDetails31 RateDetails31}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate97
+	 * CorporateActionRate97}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -50,186 +51,17 @@ public class ConstraintSecondLevelTax2Rule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<RateDetails31> forRateDetails31 = new MMConstraint<RateDetails31>() {
+	public static final MMConstraint<CorporateActionRate97> forCorporateActionRate97 = new MMConstraint<CorporateActionRate97>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondLevelTax2Rule";
 			definition = "Only a single occurrence of either SecondLevelTax/Amount or SecondLevelTax/Rate or SecondLevelTax/NotSpecifiedRate may be present, only one of these elements may be present. \r\n(MT 564 NVR C7).";
-			owner_lazy = () -> RateDetails31.mmObject();
+			owner_lazy = () -> CorporateActionRate97.mmObject();
 		}
 
 		@Override
-		public void executeValidator(RateDetails31 obj) throws Exception {
-			checkRateDetails31(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate86
-	 * CorporateActionRate86}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SecondLevelTax2Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Only a single occurrence of either SecondLevelTax/Amount or SecondLevelTax/Rate or SecondLevelTax/NotSpecifiedRate may be present, only one of these elements may be present. \r\n(MT 564 NVR C7)."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CorporateActionRate86> forCorporateActionRate86 = new MMConstraint<CorporateActionRate86>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SecondLevelTax2Rule";
-			definition = "Only a single occurrence of either SecondLevelTax/Amount or SecondLevelTax/Rate or SecondLevelTax/NotSpecifiedRate may be present, only one of these elements may be present. \r\n(MT 564 NVR C7).";
-			owner_lazy = () -> CorporateActionRate86.mmObject();
-		}
-
-		@Override
-		public void executeValidator(CorporateActionRate86 obj) throws Exception {
-			checkCorporateActionRate86(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.RateDetails32 RateDetails32}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SecondLevelTax2Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Only a single occurrence of either SecondLevelTax/Amount or SecondLevelTax/Rate or SecondLevelTax/NotSpecifiedRate may be present, only one of these elements may be present. \r\n(MT 566 NVR C3)."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<RateDetails32> forRateDetails32 = new MMConstraint<RateDetails32>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SecondLevelTax2Rule";
-			definition = "Only a single occurrence of either SecondLevelTax/Amount or SecondLevelTax/Rate or SecondLevelTax/NotSpecifiedRate may be present, only one of these elements may be present. \r\n(MT 566 NVR C3).";
-			owner_lazy = () -> RateDetails32.mmObject();
-		}
-
-		@Override
-		public void executeValidator(RateDetails32 obj) throws Exception {
-			checkRateDetails32(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate87
-	 * CorporateActionRate87}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SecondLevelTax2Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Only a single occurrence of either SecondLevelTax/Amount or SecondLevelTax/Rate or SecondLevelTax/NotSpecifiedRate may be present, only one of these elements may be present. \r\n(MT 564 NVR C7)."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CorporateActionRate87> forCorporateActionRate87 = new MMConstraint<CorporateActionRate87>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SecondLevelTax2Rule";
-			definition = "Only a single occurrence of either SecondLevelTax/Amount or SecondLevelTax/Rate or SecondLevelTax/NotSpecifiedRate may be present, only one of these elements may be present. \r\n(MT 564 NVR C7).";
-			owner_lazy = () -> CorporateActionRate87.mmObject();
-		}
-
-		@Override
-		public void executeValidator(CorporateActionRate87 obj) throws Exception {
-			checkCorporateActionRate87(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate88
-	 * CorporateActionRate88}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SecondLevelTax2Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Only a single occurrence of either SecondLevelTax/Amount or SecondLevelTax/Rate or SecondLevelTax/NotSpecifiedRate may be present, only one of these elements may be present. \r\n(MT 564 NVR C7)."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CorporateActionRate88> forCorporateActionRate88 = new MMConstraint<CorporateActionRate88>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SecondLevelTax2Rule";
-			definition = "Only a single occurrence of either SecondLevelTax/Amount or SecondLevelTax/Rate or SecondLevelTax/NotSpecifiedRate may be present, only one of these elements may be present. \r\n(MT 564 NVR C7).";
-			owner_lazy = () -> CorporateActionRate88.mmObject();
-		}
-
-		@Override
-		public void executeValidator(CorporateActionRate88 obj) throws Exception {
-			checkCorporateActionRate88(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate92
-	 * CorporateActionRate92}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SecondLevelTax2Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Only a single occurrence of either SecondLevelTax/Amount or SecondLevelTax/Rate or SecondLevelTax/NotSpecifiedRate may be present, only one of these elements may be present. \r\n(MT 564 NVR C7)."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CorporateActionRate92> forCorporateActionRate92 = new MMConstraint<CorporateActionRate92>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SecondLevelTax2Rule";
-			definition = "Only a single occurrence of either SecondLevelTax/Amount or SecondLevelTax/Rate or SecondLevelTax/NotSpecifiedRate may be present, only one of these elements may be present. \r\n(MT 564 NVR C7).";
-			owner_lazy = () -> CorporateActionRate92.mmObject();
-		}
-
-		@Override
-		public void executeValidator(CorporateActionRate92 obj) throws Exception {
-			checkCorporateActionRate92(obj);
+		public void executeValidator(CorporateActionRate97 obj) throws Exception {
+			checkCorporateActionRate97(obj);
 		}
 	};
 	/**
@@ -263,6 +95,39 @@ public class ConstraintSecondLevelTax2Rule {
 		@Override
 		public void executeValidator(RateDetails33 obj) throws Exception {
 			checkRateDetails33(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.RateDetails32 RateDetails32}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecondLevelTax2Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Only a single occurrence of either SecondLevelTax/Amount or SecondLevelTax/Rate or SecondLevelTax/NotSpecifiedRate may be present, only one of these elements may be present. \r\n(MT 566 NVR C3)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<RateDetails32> forRateDetails32 = new MMConstraint<RateDetails32>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecondLevelTax2Rule";
+			definition = "Only a single occurrence of either SecondLevelTax/Amount or SecondLevelTax/Rate or SecondLevelTax/NotSpecifiedRate may be present, only one of these elements may be present. \r\n(MT 566 NVR C3).";
+			owner_lazy = () -> RateDetails32.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateDetails32 obj) throws Exception {
+			checkRateDetails32(obj);
 		}
 	};
 	/**
@@ -305,6 +170,40 @@ public class ConstraintSecondLevelTax2Rule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate88
+	 * CorporateActionRate88}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecondLevelTax2Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Only a single occurrence of either SecondLevelTax/Amount or SecondLevelTax/Rate or SecondLevelTax/NotSpecifiedRate may be present, only one of these elements may be present. \r\n(MT 564 NVR C7)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionRate88> forCorporateActionRate88 = new MMConstraint<CorporateActionRate88>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecondLevelTax2Rule";
+			definition = "Only a single occurrence of either SecondLevelTax/Amount or SecondLevelTax/Rate or SecondLevelTax/NotSpecifiedRate may be present, only one of these elements may be present. \r\n(MT 564 NVR C7).";
+			owner_lazy = () -> CorporateActionRate88.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate88 obj) throws Exception {
+			checkCorporateActionRate88(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RateDetails34 RateDetails34}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -338,8 +237,8 @@ public class ConstraintSecondLevelTax2Rule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate97
-	 * CorporateActionRate97}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate87
+	 * CorporateActionRate87}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -353,17 +252,118 @@ public class ConstraintSecondLevelTax2Rule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<CorporateActionRate97> forCorporateActionRate97 = new MMConstraint<CorporateActionRate97>() {
+	public static final MMConstraint<CorporateActionRate87> forCorporateActionRate87 = new MMConstraint<CorporateActionRate87>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondLevelTax2Rule";
 			definition = "Only a single occurrence of either SecondLevelTax/Amount or SecondLevelTax/Rate or SecondLevelTax/NotSpecifiedRate may be present, only one of these elements may be present. \r\n(MT 564 NVR C7).";
-			owner_lazy = () -> CorporateActionRate97.mmObject();
+			owner_lazy = () -> CorporateActionRate87.mmObject();
 		}
 
 		@Override
-		public void executeValidator(CorporateActionRate97 obj) throws Exception {
-			checkCorporateActionRate97(obj);
+		public void executeValidator(CorporateActionRate87 obj) throws Exception {
+			checkCorporateActionRate87(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate86
+	 * CorporateActionRate86}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecondLevelTax2Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Only a single occurrence of either SecondLevelTax/Amount or SecondLevelTax/Rate or SecondLevelTax/NotSpecifiedRate may be present, only one of these elements may be present. \r\n(MT 564 NVR C7)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionRate86> forCorporateActionRate86 = new MMConstraint<CorporateActionRate86>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecondLevelTax2Rule";
+			definition = "Only a single occurrence of either SecondLevelTax/Amount or SecondLevelTax/Rate or SecondLevelTax/NotSpecifiedRate may be present, only one of these elements may be present. \r\n(MT 564 NVR C7).";
+			owner_lazy = () -> CorporateActionRate86.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate86 obj) throws Exception {
+			checkCorporateActionRate86(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.RateDetails31 RateDetails31}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecondLevelTax2Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Only a single occurrence of either SecondLevelTax/Amount or SecondLevelTax/Rate or SecondLevelTax/NotSpecifiedRate may be present, only one of these elements may be present. \r\n(MT 564 NVR C7)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<RateDetails31> forRateDetails31 = new MMConstraint<RateDetails31>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecondLevelTax2Rule";
+			definition = "Only a single occurrence of either SecondLevelTax/Amount or SecondLevelTax/Rate or SecondLevelTax/NotSpecifiedRate may be present, only one of these elements may be present. \r\n(MT 564 NVR C7).";
+			owner_lazy = () -> RateDetails31.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateDetails31 obj) throws Exception {
+			checkRateDetails31(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate92
+	 * CorporateActionRate92}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecondLevelTax2Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Only a single occurrence of either SecondLevelTax/Amount or SecondLevelTax/Rate or SecondLevelTax/NotSpecifiedRate may be present, only one of these elements may be present. \r\n(MT 564 NVR C7)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionRate92> forCorporateActionRate92 = new MMConstraint<CorporateActionRate92>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecondLevelTax2Rule";
+			definition = "Only a single occurrence of either SecondLevelTax/Amount or SecondLevelTax/Rate or SecondLevelTax/NotSpecifiedRate may be present, only one of these elements may be present. \r\n(MT 564 NVR C7).";
+			owner_lazy = () -> CorporateActionRate92.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate92 obj) throws Exception {
+			checkCorporateActionRate92(obj);
 		}
 	};
 
@@ -373,7 +373,7 @@ public class ConstraintSecondLevelTax2Rule {
 	 * only one of these elements may be present. <br>
 	 * (MT 564 NVR C7).
 	 */
-	public static void checkRateDetails31(RateDetails31 obj) throws Exception {
+	public static void checkCorporateActionRate97(CorporateActionRate97 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -381,9 +381,9 @@ public class ConstraintSecondLevelTax2Rule {
 	 * Only a single occurrence of either SecondLevelTax/Amount or
 	 * SecondLevelTax/Rate or SecondLevelTax/NotSpecifiedRate may be present,
 	 * only one of these elements may be present. <br>
-	 * (MT 564 NVR C7).
+	 * (MT 566 NVR C3).
 	 */
-	public static void checkCorporateActionRate86(CorporateActionRate86 obj) throws Exception {
+	public static void checkRateDetails33(RateDetails33 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -403,7 +403,7 @@ public class ConstraintSecondLevelTax2Rule {
 	 * only one of these elements may be present. <br>
 	 * (MT 564 NVR C7).
 	 */
-	public static void checkCorporateActionRate87(CorporateActionRate87 obj) throws Exception {
+	public static void checkCorporateActionRate94(CorporateActionRate94 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -423,36 +423,6 @@ public class ConstraintSecondLevelTax2Rule {
 	 * only one of these elements may be present. <br>
 	 * (MT 564 NVR C7).
 	 */
-	public static void checkCorporateActionRate92(CorporateActionRate92 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Only a single occurrence of either SecondLevelTax/Amount or
-	 * SecondLevelTax/Rate or SecondLevelTax/NotSpecifiedRate may be present,
-	 * only one of these elements may be present. <br>
-	 * (MT 566 NVR C3).
-	 */
-	public static void checkRateDetails33(RateDetails33 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Only a single occurrence of either SecondLevelTax/Amount or
-	 * SecondLevelTax/Rate or SecondLevelTax/NotSpecifiedRate may be present,
-	 * only one of these elements may be present. <br>
-	 * (MT 564 NVR C7).
-	 */
-	public static void checkCorporateActionRate94(CorporateActionRate94 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Only a single occurrence of either SecondLevelTax/Amount or
-	 * SecondLevelTax/Rate or SecondLevelTax/NotSpecifiedRate may be present,
-	 * only one of these elements may be present. <br>
-	 * (MT 564 NVR C7).
-	 */
 	public static void checkRateDetails34(RateDetails34 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
@@ -463,7 +433,37 @@ public class ConstraintSecondLevelTax2Rule {
 	 * only one of these elements may be present. <br>
 	 * (MT 564 NVR C7).
 	 */
-	public static void checkCorporateActionRate97(CorporateActionRate97 obj) throws Exception {
+	public static void checkCorporateActionRate87(CorporateActionRate87 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Only a single occurrence of either SecondLevelTax/Amount or
+	 * SecondLevelTax/Rate or SecondLevelTax/NotSpecifiedRate may be present,
+	 * only one of these elements may be present. <br>
+	 * (MT 564 NVR C7).
+	 */
+	public static void checkCorporateActionRate86(CorporateActionRate86 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Only a single occurrence of either SecondLevelTax/Amount or
+	 * SecondLevelTax/Rate or SecondLevelTax/NotSpecifiedRate may be present,
+	 * only one of these elements may be present. <br>
+	 * (MT 564 NVR C7).
+	 */
+	public static void checkRateDetails31(RateDetails31 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Only a single occurrence of either SecondLevelTax/Amount or
+	 * SecondLevelTax/Rate or SecondLevelTax/NotSpecifiedRate may be present,
+	 * only one of these elements may be present. <br>
+	 * (MT 564 NVR C7).
+	 */
+	public static void checkCorporateActionRate92(CorporateActionRate92 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

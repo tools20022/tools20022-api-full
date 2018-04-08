@@ -110,9 +110,9 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationRule#forSwitchOrderConfirmationCancellationInstructionV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationRule#for_setr_SwitchOrderConfirmationCancellationInstructionV01
  * ConstraintAccountIdentificationRule.
- * forSwitchOrderConfirmationCancellationInstructionV01}</li>
+ * for_setr_SwitchOrderConfirmationCancellationInstructionV01}</li>
  * </ul>
  * </li>
  * <li>
@@ -183,9 +183,9 @@ public class SwitchOrderConfirmationCancellationInstructionV01 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationByReferenceOrByOrderConfirmationDetailsRule";
 			definition = "Either CancellationByOrderConfirmationDetails or CancellationByReference may be present, but not both.";
-			messageDefinition_lazy = () -> com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01.mmObject();
 			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01.mmCancellationByReference,
 					com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01.mmCancellationByOrderConfirmationDetails);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01.mmObject();
 		}
 	};
 	@XmlElement(name = "MsgId", required = true)
@@ -565,7 +565,7 @@ public class SwitchOrderConfirmationCancellationInstructionV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forSwitchOrderConfirmationCancellationInstructionV01);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.for_setr_SwitchOrderConfirmationCancellationInstructionV01);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SwitchOrderConfirmationCancellationInstructionV01";
 				definition = "Scope\r\nAn executing party, for example, a transfer agent, sends the SwitchOrderConfirmationCancellationInstruction message to the instructing party, for example, an investment manager or its authorised representative to amend a previously sent SwitchOrderConfirmation message.\r\nUsage\r\nThe SwitchOrderConfirmationCancellationInstruction message is used to cancel a previously sent SwitchOrderConfirmation.\r\nThe amendment indicator element is used to specify whether the switch order confirmation cancellation is to be followed by a switch order confirmation amendment.\r\nThere are two ways to specify the switch order confirmation cancellation. Either:\r\n- the business references, for example, OrderReference, DealReference, of the switch order confirmation are quoted, or,\r\n- all the details of the switch order confirmation (this includes the OrderReference and DealReference) are quoted, but this is not recommended.\r\nThe message identification of the SwitchOrderConfirmation message may also be quoted in PreviousReference.\r\nIt is also possible to instruct the cancellation of the confirmation message by quoting its message identification in PreviousReference, but this is not recommended.";

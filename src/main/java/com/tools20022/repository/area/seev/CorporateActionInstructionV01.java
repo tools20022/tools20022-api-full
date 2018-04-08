@@ -125,29 +125,31 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintInstructionCancellationRequestIdentificationRule#forCorporateActionInstructionV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInstructionCancellationRequestIdentificationRule#for_seev_CorporateActionInstructionV01
  * ConstraintInstructionCancellationRequestIdentificationRule.
- * forCorporateActionInstructionV01}</li>
+ * for_seev_CorporateActionInstructionV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCorporateActionEventIdentificationRule#forCorporateActionInstructionV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCorporateActionEventIdentificationRule#for_seev_CorporateActionInstructionV01
  * ConstraintCorporateActionEventIdentificationRule.
- * forCorporateActionInstructionV01}</li>
+ * for_seev_CorporateActionInstructionV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintChangeInstructionIndicatorGuideline#forCorporateActionInstructionV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintChangeInstructionIndicatorGuideline#for_seev_CorporateActionInstructionV01
  * ConstraintChangeInstructionIndicatorGuideline.
- * forCorporateActionInstructionV01}</li>
+ * for_seev_CorporateActionInstructionV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintOptionTypeRule#forCorporateActionInstructionV01
- * ConstraintOptionTypeRule.forCorporateActionInstructionV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOptionTypeRule#for_seev_CorporateActionInstructionV01
+ * ConstraintOptionTypeRule.for_seev_CorporateActionInstructionV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalInformationRule#forCorporateActionInstructionV01
- * ConstraintAdditionalInformationRule.forCorporateActionInstructionV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalInformationRule#for_seev_CorporateActionInstructionV01
+ * ConstraintAdditionalInformationRule.for_seev_CorporateActionInstructionV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#forCorporateActionInstructionV01
- * ConstraintCoexistenceCharacterSetXRule.forCorporateActionInstructionV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#for_seev_CorporateActionInstructionV01
+ * ConstraintCoexistenceCharacterSetXRule.for_seev_CorporateActionInstructionV01
+ * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forCorporateActionInstructionV01
- * ConstraintCoexistenceIdentificationRule.forCorporateActionInstructionV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#for_seev_CorporateActionInstructionV01
+ * ConstraintCoexistenceIdentificationRule.
+ * for_seev_CorporateActionInstructionV01}</li>
  * </ul>
  * </li>
  * <li>
@@ -808,12 +810,13 @@ public class CorporateActionInstructionV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInstructionCancellationRequestIdentificationRule.forCorporateActionInstructionV01,
-						com.tools20022.repository.constraints.ConstraintCorporateActionEventIdentificationRule.forCorporateActionInstructionV01,
-						com.tools20022.repository.constraints.ConstraintChangeInstructionIndicatorGuideline.forCorporateActionInstructionV01, com.tools20022.repository.constraints.ConstraintOptionTypeRule.forCorporateActionInstructionV01,
-						com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionInstructionV01,
-						com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forCorporateActionInstructionV01,
-						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionInstructionV01);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInstructionCancellationRequestIdentificationRule.for_seev_CorporateActionInstructionV01,
+						com.tools20022.repository.constraints.ConstraintCorporateActionEventIdentificationRule.for_seev_CorporateActionInstructionV01,
+						com.tools20022.repository.constraints.ConstraintChangeInstructionIndicatorGuideline.for_seev_CorporateActionInstructionV01,
+						com.tools20022.repository.constraints.ConstraintOptionTypeRule.for_seev_CorporateActionInstructionV01,
+						com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.for_seev_CorporateActionInstructionV01,
+						com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.for_seev_CorporateActionInstructionV01,
+						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.for_seev_CorporateActionInstructionV01);
 				semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, "MT 565, Seq A :23G:NEWM"));
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionInstructionV01";

@@ -37,6 +37,37 @@ public class ConstraintSpecificPreviousYearsGuideline {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.PreviousYear2 PreviousYear2}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SpecificPreviousYearsGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "SpecificPreviousYears must not contain the current year."</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<PreviousYear2> forPreviousYear2 = new MMConstraint<PreviousYear2>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SpecificPreviousYearsGuideline";
+			definition = "SpecificPreviousYears must not contain the current year.";
+			owner_lazy = () -> PreviousYear2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PreviousYear2 obj) throws Exception {
+			checkPreviousYear2(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PreviousYearChoice
 	 * PreviousYearChoice}</li>
 	 * <li>
@@ -78,68 +109,6 @@ public class ConstraintSpecificPreviousYearsGuideline {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.PreviousYear1 PreviousYear1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SpecificPreviousYearsGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "SpecificPreviousYears must not contain the current year."</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<PreviousYear1> forPreviousYear1 = new MMConstraint<PreviousYear1>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SpecificPreviousYearsGuideline";
-			definition = "SpecificPreviousYears must not contain the current year.";
-			owner_lazy = () -> PreviousYear1.mmObject();
-		}
-
-		@Override
-		public void executeValidator(PreviousYear1 obj) throws Exception {
-			checkPreviousYear1(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.PreviousYear2 PreviousYear2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SpecificPreviousYearsGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "SpecificPreviousYears must not contain the current year."</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<PreviousYear2> forPreviousYear2 = new MMConstraint<PreviousYear2>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SpecificPreviousYearsGuideline";
-			definition = "SpecificPreviousYears must not contain the current year.";
-			owner_lazy = () -> PreviousYear2.mmObject();
-		}
-
-		@Override
-		public void executeValidator(PreviousYear2 obj) throws Exception {
-			checkPreviousYear2(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PreviousYear2Choice
 	 * PreviousYear2Choice}</li>
 	 * <li>
@@ -172,20 +141,37 @@ public class ConstraintSpecificPreviousYearsGuideline {
 			checkPreviousYear2Choice(obj);
 		}
 	};
-
 	/**
-	 * SpecificPreviousYears must not contain the current year.
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.PreviousYear1 PreviousYear1}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SpecificPreviousYearsGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "SpecificPreviousYears must not contain the current year."</li>
+	 * </ul>
 	 */
-	public static void checkPreviousYearChoice(PreviousYearChoice obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
+	public static final MMConstraint<PreviousYear1> forPreviousYear1 = new MMConstraint<PreviousYear1>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SpecificPreviousYearsGuideline";
+			definition = "SpecificPreviousYears must not contain the current year.";
+			owner_lazy = () -> PreviousYear1.mmObject();
+		}
 
-	/**
-	 * SpecificPreviousYears must not contain the current year.
-	 */
-	public static void checkPreviousYear1(PreviousYear1 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
+		@Override
+		public void executeValidator(PreviousYear1 obj) throws Exception {
+			checkPreviousYear1(obj);
+		}
+	};
 
 	/**
 	 * SpecificPreviousYears must not contain the current year.
@@ -197,7 +183,21 @@ public class ConstraintSpecificPreviousYearsGuideline {
 	/**
 	 * SpecificPreviousYears must not contain the current year.
 	 */
+	public static void checkPreviousYearChoice(PreviousYearChoice obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * SpecificPreviousYears must not contain the current year.
+	 */
 	public static void checkPreviousYear2Choice(PreviousYear2Choice obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * SpecificPreviousYears must not contain the current year.
+	 */
+	public static void checkPreviousYear1(PreviousYear1 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

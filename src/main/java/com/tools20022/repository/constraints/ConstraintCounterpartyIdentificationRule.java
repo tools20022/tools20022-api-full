@@ -50,7 +50,7 @@ public class ConstraintCounterpartyIdentificationRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<NetReportV01> forNetReportV01 = new MMConstraint<NetReportV01>() {
+	public static final MMConstraint<NetReportV01> for_camt_NetReportV01 = new MMConstraint<NetReportV01>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyIdentificationRule";
@@ -60,7 +60,7 @@ public class ConstraintCounterpartyIdentificationRule {
 
 		@Override
 		public void executeValidator(NetReportV01 obj) throws Exception {
-			checkNetReportV01(obj);
+			check_camt_NetReportV01(obj);
 		}
 	};
 	/**
@@ -101,7 +101,7 @@ public class ConstraintCounterpartyIdentificationRule {
 	 * NetServiceCounterpartyIdentification must only be used at this level if
 	 * all of the underlying obligations are with a single counterparty.
 	 */
-	public static void checkNetReportV01(NetReportV01 obj) throws Exception {
+	public static void check_camt_NetReportV01(NetReportV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 

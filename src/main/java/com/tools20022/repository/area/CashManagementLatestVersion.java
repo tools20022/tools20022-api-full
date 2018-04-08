@@ -228,6 +228,7 @@ public class CashManagementLatestVersion {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Cash Management - Latest version - master";
 				definition = "Messages that support the reporting and advicing of the cash side of any financial transactions, including cash movements, transactions and balances, plus any exceptions and investigations related to cash transactions.";
+				code = "camt";
 				messageDefinition_lazy = () -> Arrays.asList(PayInCallV02.mmObject(), PayInEventAcknowledgementV02.mmObject(), PayInScheduleV03.mmObject(), NotificationOfCaseAssignmentV04.mmObject(), CancelCaseAssignmentV03.mmObject(),
 						CaseStatusReportRequestV03.mmObject(), CaseStatusReportV04.mmObject(), FundDetailedEstimatedCashForecastReportV04.mmObject(), FundConfirmedCashForecastReportV04.mmObject(),
 						FundDetailedConfirmedCashForecastReportCancellationV03.mmObject(), FundEstimatedCashForecastReportV04.mmObject(), FundConfirmedCashForecastReportCancellationV03.mmObject(),
@@ -241,7 +242,6 @@ public class CashManagementLatestVersion {
 						LiquidityCreditTransferV04.mmObject(), GetCurrencyExchangeRateV03.mmObject(), ReturnLimitV07.mmObject(), GetReservationV04.mmObject(), ReturnMemberV03.mmObject(), ReturnBusinessDayInformationV06.mmObject(),
 						ReturnGeneralBusinessInformationV05.mmObject(), ReturnReservationV05.mmObject(), GetBusinessDayInformationV04.mmObject(), ModifyTransactionV07.mmObject(), GetTransactionV07.mmObject(), ReceiptV04.mmObject(),
 						ModifyStandingOrderV05.mmObject(), GetAccountV06.mmObject(), DeleteStandingOrderV02.mmObject(), CustomerPaymentCancellationRequestV07.mmObject());
-				code = "camt";
 			}
 		});
 		return mmObject_lazy.get();

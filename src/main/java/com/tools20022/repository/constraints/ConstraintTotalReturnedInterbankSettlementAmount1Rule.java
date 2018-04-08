@@ -51,7 +51,7 @@ public class ConstraintTotalReturnedInterbankSettlementAmount1Rule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<PaymentReturnV01> forPaymentReturnV01 = new MMConstraint<PaymentReturnV01>() {
+	public static final MMConstraint<PaymentReturnV01> for_pacs_PaymentReturnV01 = new MMConstraint<PaymentReturnV01>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalReturnedInterbankSettlementAmount1Rule";
@@ -61,7 +61,7 @@ public class ConstraintTotalReturnedInterbankSettlementAmount1Rule {
 
 		@Override
 		public void executeValidator(PaymentReturnV01 obj) throws Exception {
-			checkPaymentReturnV01(obj);
+			check_pacs_PaymentReturnV01(obj);
 		}
 	};
 
@@ -72,7 +72,7 @@ public class ConstraintTotalReturnedInterbankSettlementAmount1Rule {
 	 * same currency as the currency of
 	 * GroupHeader/TotalReturnedInterbankSettlementAmount. .
 	 */
-	public static void checkPaymentReturnV01(PaymentReturnV01 obj) throws Exception {
+	public static void check_pacs_PaymentReturnV01(PaymentReturnV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

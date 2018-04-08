@@ -109,8 +109,8 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintModifyStandingOrderRules#forModifyStandingOrderV05
- * ConstraintModifyStandingOrderRules.forModifyStandingOrderV05}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintModifyStandingOrderRules#for_camt_ModifyStandingOrderV05
+ * ConstraintModifyStandingOrderRules.for_camt_ModifyStandingOrderV05}</li>
  * </ul>
  * </li>
  * <li>
@@ -317,7 +317,7 @@ public class ModifyStandingOrderV05 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintModifyStandingOrderRules.forModifyStandingOrderV05);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintModifyStandingOrderRules.for_camt_ModifyStandingOrderV05);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ModifyStandingOrderV05";
 				definition = "Scope\r\nThe ModifyStandingOrder message is sent by a member to the transaction administrator.\r\nIt is used to request a change in the features of a permanent order for the transfer of funds between two accounts belonging to the same member and being held at the transaction administrator.\r\nUsage\r\nThere should be one standing order per (direct) member and per business day. The ModifyStandingOrder message must not be used to request a transfer of funds between accounts during the working day. The liquidity transfer messages must be used for this purpose. There is no need to have a standing order to empty the settlement account at the end of the day and transfer the funds to the current account. For liquidity savings purposes, systems will effect the necessary transfers automatically when and where relevant.\r\nThe ModifyStandingOrder message first identifies the standing order to be modified and then provide the details of the new standing order. The elements that can be modified are:\r\n- amount\r\n- account to be credited\r\n- account to be debited\r\n- account owner (for on behalf scenario)\r\n- frequency of payment\r\n- daytime or overnight processing\r\n- dates when the standing order begins and ceases to be effective\r\nBased on the criteria received within the ModifyStandingOrder message, the transaction administrator will execute or reject the requested modifications.\r\nThe transaction administrator may send a Receipt message as a reply to the Modify Standing Order request. To verify the outcome of the request, the member may submit a GetStandingOrder message with the appropriate search criteria.";

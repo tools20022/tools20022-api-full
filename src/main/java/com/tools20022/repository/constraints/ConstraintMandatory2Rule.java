@@ -49,7 +49,7 @@ public class ConstraintMandatory2Rule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<InvoiceFinancingRequestV01> forInvoiceFinancingRequestV01 = new MMConstraint<InvoiceFinancingRequestV01>() {
+	public static final MMConstraint<InvoiceFinancingRequestV01> for_tsin_InvoiceFinancingRequestV01 = new MMConstraint<InvoiceFinancingRequestV01>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mandatory2Rule";
@@ -59,7 +59,7 @@ public class ConstraintMandatory2Rule {
 
 		@Override
 		public void executeValidator(InvoiceFinancingRequestV01 obj) throws Exception {
-			checkInvoiceFinancingRequestV01(obj);
+			check_tsin_InvoiceFinancingRequestV01(obj);
 		}
 	};
 
@@ -67,7 +67,7 @@ public class ConstraintMandatory2Rule {
 	 * If RequestGroupInformation/FinancingRequester/IBAN is not present, then
 	 * InvoiceRequestInformation/Supplier/IBAN must be present. .
 	 */
-	public static void checkInvoiceFinancingRequestV01(InvoiceFinancingRequestV01 obj) throws Exception {
+	public static void check_tsin_InvoiceFinancingRequestV01(InvoiceFinancingRequestV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

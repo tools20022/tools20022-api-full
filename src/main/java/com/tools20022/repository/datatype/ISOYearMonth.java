@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMYearMonth;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Date;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlType;
@@ -60,7 +61,7 @@ public class ISOYearMonth {
 
 	final static private AtomicReference<MMYearMonth> mmObject_lazy = new AtomicReference<>();
 	@XmlValue
-	protected String value;
+	protected Date value;
 
 	final static public MMYearMonth mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMYearMonth() {
@@ -78,15 +79,15 @@ public class ISOYearMonth {
 	public ISOYearMonth() {
 	}
 
-	public ISOYearMonth(String value) {
+	public ISOYearMonth(Date value) {
 		this.value = value;
 	}
 
-	public String getValue() {
+	public Date getValue() {
 		return value;
 	}
 
-	public void setValue(String value) {
+	public void setValue(Date value) {
 		this.value = value;
 	}
 

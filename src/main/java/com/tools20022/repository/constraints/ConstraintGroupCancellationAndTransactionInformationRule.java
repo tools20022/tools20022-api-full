@@ -50,7 +50,7 @@ public class ConstraintGroupCancellationAndTransactionInformationRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<PaymentCancellationRequestV01> forPaymentCancellationRequestV01 = new MMConstraint<PaymentCancellationRequestV01>() {
+	public static final MMConstraint<PaymentCancellationRequestV01> for_pacs_PaymentCancellationRequestV01 = new MMConstraint<PaymentCancellationRequestV01>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupCancellationAndTransactionInformationRule";
@@ -60,7 +60,7 @@ public class ConstraintGroupCancellationAndTransactionInformationRule {
 
 		@Override
 		public void executeValidator(PaymentCancellationRequestV01 obj) throws Exception {
-			checkPaymentCancellationRequestV01(obj);
+			check_pacs_PaymentCancellationRequestV01(obj);
 		}
 	};
 
@@ -69,7 +69,7 @@ public class ConstraintGroupCancellationAndTransactionInformationRule {
 	 * not allowed. If GroupHeader/GroupCancellation is false, then at least one
 	 * occurrence of TransactionInformation must be present.
 	 */
-	public static void checkPaymentCancellationRequestV01(PaymentCancellationRequestV01 obj) throws Exception {
+	public static void check_pacs_PaymentCancellationRequestV01(PaymentCancellationRequestV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

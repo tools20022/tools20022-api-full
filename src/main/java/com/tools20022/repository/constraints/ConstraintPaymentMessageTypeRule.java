@@ -38,7 +38,7 @@ public class ConstraintPaymentMessageTypeRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.Transactions2 Transactions2}</li>
+	 * {@linkplain com.tools20022.repository.msg.Transactions4 Transactions4}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -52,17 +52,17 @@ public class ConstraintPaymentMessageTypeRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<Transactions2> forTransactions2 = new MMConstraint<Transactions2>() {
+	public static final MMConstraint<Transactions4> forTransactions4 = new MMConstraint<Transactions4>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentMessageTypeRule";
 			definition = "If PaymentCommonInformation/PaymentMessageType is present, then TransactionReport/Transaction/Payment/PaymentMessageType is not allowed.\nIf PaymentCommonInformation/PaymentMessageType is not present, then TransactionReport/Transaction/Payment/PaymentMessageType is optional.";
-			owner_lazy = () -> Transactions2.mmObject();
+			owner_lazy = () -> Transactions4.mmObject();
 		}
 
 		@Override
-		public void executeValidator(Transactions2 obj) throws Exception {
-			checkTransactions2(obj);
+		public void executeValidator(Transactions4 obj) throws Exception {
+			checkTransactions4(obj);
 		}
 	};
 	/**
@@ -104,7 +104,7 @@ public class ConstraintPaymentMessageTypeRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.Transactions4 Transactions4}</li>
+	 * {@linkplain com.tools20022.repository.msg.Transactions2 Transactions2}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -118,17 +118,17 @@ public class ConstraintPaymentMessageTypeRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<Transactions4> forTransactions4 = new MMConstraint<Transactions4>() {
+	public static final MMConstraint<Transactions2> forTransactions2 = new MMConstraint<Transactions2>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentMessageTypeRule";
 			definition = "If PaymentCommonInformation/PaymentMessageType is present, then TransactionReport/Transaction/Payment/PaymentMessageType is not allowed.\nIf PaymentCommonInformation/PaymentMessageType is not present, then TransactionReport/Transaction/Payment/PaymentMessageType is optional.";
-			owner_lazy = () -> Transactions4.mmObject();
+			owner_lazy = () -> Transactions2.mmObject();
 		}
 
 		@Override
-		public void executeValidator(Transactions4 obj) throws Exception {
-			checkTransactions4(obj);
+		public void executeValidator(Transactions2 obj) throws Exception {
+			checkTransactions2(obj);
 		}
 	};
 
@@ -138,7 +138,7 @@ public class ConstraintPaymentMessageTypeRule {
 	 * If PaymentCommonInformation/PaymentMessageType is not present, then
 	 * TransactionReport/Transaction/Payment/PaymentMessageType is optional.
 	 */
-	public static void checkTransactions2(Transactions2 obj) throws Exception {
+	public static void checkTransactions4(Transactions4 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -158,7 +158,7 @@ public class ConstraintPaymentMessageTypeRule {
 	 * If PaymentCommonInformation/PaymentMessageType is not present, then
 	 * TransactionReport/Transaction/Payment/PaymentMessageType is optional.
 	 */
-	public static void checkTransactions4(Transactions4 obj) throws Exception {
+	public static void checkTransactions2(Transactions2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

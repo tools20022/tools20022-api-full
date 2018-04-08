@@ -35,40 +35,6 @@ public class ConstraintAccountOwnerOrServicerIdentificationRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.GenericIdentificationSD1
-	 * GenericIdentificationSD1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AccountOwnerOrServicerIdentificationRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "At least one of the elements amongst AccountOwnerIdentification and AccountServicerIdentification must be present, both may be present."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<GenericIdentificationSD1> forGenericIdentificationSD1 = new MMConstraint<GenericIdentificationSD1>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "AccountOwnerOrServicerIdentificationRule";
-			definition = "At least one of the elements amongst AccountOwnerIdentification and AccountServicerIdentification must be present, both may be present.";
-			owner_lazy = () -> GenericIdentificationSD1.mmObject();
-		}
-
-		@Override
-		public void executeValidator(GenericIdentificationSD1 obj) throws Exception {
-			checkGenericIdentificationSD1(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.MarketClaimDetailsSD1
 	 * MarketClaimDetailsSD1}</li>
 	 * <li>
@@ -97,12 +63,46 @@ public class ConstraintAccountOwnerOrServicerIdentificationRule {
 			checkMarketClaimDetailsSD1(obj);
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.GenericIdentificationSD1
+	 * GenericIdentificationSD1}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AccountOwnerOrServicerIdentificationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "At least one of the elements amongst AccountOwnerIdentification and AccountServicerIdentification must be present, both may be present."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<GenericIdentificationSD1> forGenericIdentificationSD1 = new MMConstraint<GenericIdentificationSD1>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AccountOwnerOrServicerIdentificationRule";
+			definition = "At least one of the elements amongst AccountOwnerIdentification and AccountServicerIdentification must be present, both may be present.";
+			owner_lazy = () -> GenericIdentificationSD1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GenericIdentificationSD1 obj) throws Exception {
+			checkGenericIdentificationSD1(obj);
+		}
+	};
 
 	/**
 	 * At least one of the elements amongst AccountOwnerIdentification and
 	 * AccountServicerIdentification must be present, both may be present.
 	 */
-	public static void checkGenericIdentificationSD1(GenericIdentificationSD1 obj) throws Exception {
+	public static void checkMarketClaimDetailsSD1(MarketClaimDetailsSD1 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -110,7 +110,7 @@ public class ConstraintAccountOwnerOrServicerIdentificationRule {
 	 * At least one of the elements amongst AccountOwnerIdentification and
 	 * AccountServicerIdentification must be present, both may be present.
 	 */
-	public static void checkMarketClaimDetailsSD1(MarketClaimDetailsSD1 obj) throws Exception {
+	public static void checkGenericIdentificationSD1(GenericIdentificationSD1 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

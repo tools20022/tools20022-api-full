@@ -152,8 +152,8 @@ public class EarlyPaymentsVAT1 {
 	 * constraint} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintR8#forDiscountTaxType
-	 * ConstraintR8.forDiscountTaxType}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintR8#forEarlyPaymentsVAT1_DiscountTaxType
+	 * ConstraintR8.forEarlyPaymentsVAT1_DiscountTaxType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -172,7 +172,7 @@ public class EarlyPaymentsVAT1 {
 			componentContext_lazy = () -> com.tools20022.repository.msg.EarlyPaymentsVAT1.mmObject();
 			isDerived = false;
 			xmlTag = "DscntTaxTp";
-			constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintR8.forDiscountTaxType);
+			constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintR8.forEarlyPaymentsVAT1_DiscountTaxType);
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DiscountTaxType";
 			definition = "Type of tax applied.";

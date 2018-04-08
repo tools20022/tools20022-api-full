@@ -37,39 +37,6 @@ public class ConstraintTotalInterbankSettlementAmountAndInterbankSettlementDateR
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.GroupHeader2 GroupHeader2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "TotalInterbankSettlementAmountAndInterbankSettlementDateRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If TotalInterbankSettlementAmount is present, then InterbankSettlementDate must be present."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<GroupHeader2> forGroupHeader2 = new MMConstraint<GroupHeader2>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "TotalInterbankSettlementAmountAndInterbankSettlementDateRule";
-			definition = "If TotalInterbankSettlementAmount is present, then InterbankSettlementDate must be present.";
-			owner_lazy = () -> GroupHeader2.mmObject();
-		}
-
-		@Override
-		public void executeValidator(GroupHeader2 obj) throws Exception {
-			checkGroupHeader2(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.GroupHeader3 GroupHeader3}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -136,6 +103,39 @@ public class ConstraintTotalInterbankSettlementAmountAndInterbankSettlementDateR
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.GroupHeader2 GroupHeader2}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TotalInterbankSettlementAmountAndInterbankSettlementDateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If TotalInterbankSettlementAmount is present, then InterbankSettlementDate must be present."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<GroupHeader2> forGroupHeader2 = new MMConstraint<GroupHeader2>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "TotalInterbankSettlementAmountAndInterbankSettlementDateRule";
+			definition = "If TotalInterbankSettlementAmount is present, then InterbankSettlementDate must be present.";
+			owner_lazy = () -> GroupHeader2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GroupHeader2 obj) throws Exception {
+			checkGroupHeader2(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.GroupHeader15 GroupHeader15}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
 	 * expression} =
@@ -173,14 +173,6 @@ public class ConstraintTotalInterbankSettlementAmountAndInterbankSettlementDateR
 	 * If TotalInterbankSettlementAmount is present, then
 	 * InterbankSettlementDate must be present.
 	 */
-	public static void checkGroupHeader2(GroupHeader2 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If TotalInterbankSettlementAmount is present, then
-	 * InterbankSettlementDate must be present.
-	 */
 	public static void checkGroupHeader3(GroupHeader3 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
@@ -190,6 +182,14 @@ public class ConstraintTotalInterbankSettlementAmountAndInterbankSettlementDateR
 	 * InterbankSettlementDate must be present.
 	 */
 	public static void checkGroupHeader4(GroupHeader4 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If TotalInterbankSettlementAmount is present, then
+	 * InterbankSettlementDate must be present.
+	 */
+	public static void checkGroupHeader2(GroupHeader2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 

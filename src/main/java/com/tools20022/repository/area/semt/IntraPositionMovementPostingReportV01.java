@@ -115,13 +115,13 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#forIntraPositionMovementPostingReportV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#for_semt_IntraPositionMovementPostingReportV01
  * ConstraintCoexistenceCharacterSetXRule.
- * forIntraPositionMovementPostingReportV01}</li>
+ * for_semt_IntraPositionMovementPostingReportV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forIntraPositionMovementPostingReportV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#for_semt_IntraPositionMovementPostingReportV01
  * ConstraintCoexistenceIdentificationRule.
- * forIntraPositionMovementPostingReportV01}</li>
+ * for_semt_IntraPositionMovementPostingReportV01}</li>
  * </ul>
  * </li>
  * <li>
@@ -528,8 +528,8 @@ public class IntraPositionMovementPostingReportV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forIntraPositionMovementPostingReportV01,
-						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forIntraPositionMovementPostingReportV01);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.for_semt_IntraPositionMovementPostingReportV01,
+						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.for_semt_IntraPositionMovementPostingReportV01);
 				semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, "MT 538, Seq A :23G:NEWM"));
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IntraPositionMovementPostingReportV01";

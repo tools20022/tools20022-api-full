@@ -91,13 +91,13 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintMultipleAccountAndStatementDetailsRule#forCorporateActionInstructionStatementReportV05
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMultipleAccountAndStatementDetailsRule#for_seev_CorporateActionInstructionStatementReportV05
  * ConstraintMultipleAccountAndStatementDetailsRule.
- * forCorporateActionInstructionStatementReportV05}</li>
+ * for_seev_CorporateActionInstructionStatementReportV05}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCorporateActionEventAndBalanceRule#forCorporateActionInstructionStatementReportV05
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCorporateActionEventAndBalanceRule#for_seev_CorporateActionInstructionStatementReportV05
  * ConstraintCorporateActionEventAndBalanceRule.
- * forCorporateActionInstructionStatementReportV05}</li>
+ * for_seev_CorporateActionInstructionStatementReportV05}</li>
  * </ul>
  * </li>
  * <li>
@@ -383,8 +383,8 @@ public class CorporateActionInstructionStatementReportV05 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMultipleAccountAndStatementDetailsRule.forCorporateActionInstructionStatementReportV05,
-						com.tools20022.repository.constraints.ConstraintCorporateActionEventAndBalanceRule.forCorporateActionInstructionStatementReportV05);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMultipleAccountAndStatementDetailsRule.for_seev_CorporateActionInstructionStatementReportV05,
+						com.tools20022.repository.constraints.ConstraintCorporateActionEventAndBalanceRule.for_seev_CorporateActionInstructionStatementReportV05);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionInstructionStatementReportV05";
 				definition = "Scope\r\nAn account servicer sends the CorporateActionInstructionStatementReport message to an account owner or its designated agent to report balances at the safekeeping account level for one or more corporate action events or at the corporate action event level for one or more safekeeping accounts.\r\nUsage\r\nThe message may also be used to:\r\n- re-send a message previously sent (the sub-function of the message is Duplicate),\r\n- provide a third party with a copy of a message for information (the sub-function of the message is Copy),\r\n- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate),\r\nusing the relevant elements in the business application header (BAH).";

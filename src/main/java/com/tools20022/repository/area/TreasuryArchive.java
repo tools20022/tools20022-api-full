@@ -104,11 +104,11 @@ public class TreasuryArchive {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Treasury - Archive - master";
 				definition = "Messages that support treasury operations (obsolete business area, to be progressively replaced by business areas of the Foreign Exchange and Bank Loan/Deposit business domains).\r\n";
+				code = "trea";
 				messageDefinition_lazy = () -> Arrays.asList(StatusNotificationV02.mmObject(), WithdrawalNotificationV01.mmObject(), CreateNonDeliverableForwardOpeningV02.mmObject(), AmendNonDeliverableForwardOpeningV02.mmObject(),
 						CancelNonDeliverableForwardOpeningV02.mmObject(), CreateNonDeliverableForwardValuationV02.mmObject(), AmendNonDeliverableForwardValuationV02.mmObject(), CancelNonDeliverableForwardValuationV02.mmObject(),
 						NonDeliverableForwardNotificationV02.mmObject(), CreateForeignExchangeOptionV02.mmObject(), AmendForeignExchangeOptionV02.mmObject(), CancelForeignExchangeOptionV02.mmObject(),
 						ForeignExchangeOptionNotificationV02.mmObject());
-				code = "trea";
 			}
 		});
 		return mmObject_lazy.get();

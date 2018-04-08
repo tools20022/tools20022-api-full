@@ -93,11 +93,12 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrStatementPaginationRule#forBankToCustomerStatementV04
- * ConstraintMessageOrStatementPaginationRule.forBankToCustomerStatementV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrStatementPaginationRule#for_camt_BankToCustomerStatementV04
+ * ConstraintMessageOrStatementPaginationRule.
+ * for_camt_BankToCustomerStatementV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintSupplementaryDataRule#forBankToCustomerStatementV04
- * ConstraintSupplementaryDataRule.forBankToCustomerStatementV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSupplementaryDataRule#for_camt_BankToCustomerStatementV04
+ * ConstraintSupplementaryDataRule.for_camt_BankToCustomerStatementV04}</li>
  * </ul>
  * </li>
  * <li>
@@ -298,8 +299,8 @@ public class BankToCustomerStatementV04 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMessageOrStatementPaginationRule.forBankToCustomerStatementV04,
-						com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forBankToCustomerStatementV04);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMessageOrStatementPaginationRule.for_camt_BankToCustomerStatementV04,
+						com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.for_camt_BankToCustomerStatementV04);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BankToCustomerStatementV04";
 				definition = "Scope\r\nThe BankToCustomerStatement message is sent by the account servicer to an account owner or to a party authorised by the account owner to receive the message. It is used to inform the account owner, or authorised party, of the entries booked to the account, and to provide the owner with balance information on the account at a given point in time.\r\nUsage\r\nThe BankToCustomerStatement message can contain reports for more than one account. It provides information for cash management and/or reconciliation.\r\nIt contains information on booked entries only.\r\nIt can include underlying details of transactions that have been included in the entry.\r\nThe message is exchanged as defined between the account servicer and the account owner. It provides information on items that have been booked to the account and also balance information. Depending on services and schedule agreed between banks and their customers, statements may be generated and exchanged accordingly, for example for intraday or prior day periods.\r\nIt is possible that the receiver of the message is not the account owner, but a party entitled through arrangement with the account owner to receive the account information (also known as recipient).";

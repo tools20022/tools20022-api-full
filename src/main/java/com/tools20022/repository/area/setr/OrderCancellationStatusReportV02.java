@@ -95,9 +95,9 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintMessageNameAndReferenceGuideline#forOrderCancellationStatusReportV02
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMessageNameAndReferenceGuideline#for_setr_OrderCancellationStatusReportV02
  * ConstraintMessageNameAndReferenceGuideline.
- * forOrderCancellationStatusReportV02}</li>
+ * for_setr_OrderCancellationStatusReportV02}</li>
  * </ul>
  * </li>
  * <li>
@@ -165,9 +165,9 @@ public class OrderCancellationStatusReportV02 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReferenceOrOtherReferenceRule";
 			definition = "If OtherReference is not present, then RelatedReference is mandatory. If OtherReference is present, then RelatedReference is not allowed.";
-			messageDefinition_lazy = () -> com.tools20022.repository.area.setr.OrderCancellationStatusReportV02.mmObject();
 			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderCancellationStatusReportV02.mmRelatedReference,
 					com.tools20022.repository.area.setr.OrderCancellationStatusReportV02.mmOtherReference);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.setr.OrderCancellationStatusReportV02.mmObject();
 		}
 	};
 	@XmlElement(name = "RltdRef", required = true)
@@ -317,7 +317,7 @@ public class OrderCancellationStatusReportV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMessageNameAndReferenceGuideline.forOrderCancellationStatusReportV02);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMessageNameAndReferenceGuideline.for_setr_OrderCancellationStatusReportV02);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OrderCancellationStatusReportV02";
 				definition = "Scope\r\nThe OrderCancellationStatusReport is sent by an executing party, eg, a transfer agent, to the instructing party, eg, an investment manager or its authorised representative. There may be one or more intermediary parties between the executing party and the instructing party. The intermediary party is, for example, an intermediary or a concentrator.\r\nThe message gives the status of an order cancellation instruction message that was previously sent by the instructing party.\r\nUsage\r\nThe OrderCancellationStatusReport message is used to report the status of an order cancellation instruction message that was previously sent by the instructing party. The message can be used to report one of the following:\r\n- the cancellation is accepted for further processing, or\r\n- the cancellation is rejected, or\r\n- the order has been cancelled.\r\nWhen the cancellation is rejected, the reason for the rejection must be specified.";

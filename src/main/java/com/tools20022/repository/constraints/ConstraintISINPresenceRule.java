@@ -35,6 +35,51 @@ public class ConstraintISINPresenceRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification19
+	 * SecurityIdentification19}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;OR&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/OtherIdentification[*]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/Description&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/ISIN&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ISINPresenceRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If ISIN is not present then either Description or at least one occurrence of OtherIdentification must be present."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintISINPresenceRule#forSecurityIdentification14
+	 * ConstraintISINPresenceRule.forSecurityIdentification14}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecurityIdentification19> forSecurityIdentification19 = new MMConstraint<SecurityIdentification19>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ISINPresenceRule";
+			definition = "If ISIN is not present then either Description or at least one occurrence of OtherIdentification must be present.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintISINPresenceRule.forSecurityIdentification14;
+			owner_lazy = () -> SecurityIdentification19.mmObject();
+			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OtherIdentification[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Description</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ISIN</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecurityIdentification19 obj) throws Exception {
+			checkSecurityIdentification19(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification14
 	 * SecurityIdentification14}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
@@ -83,8 +128,8 @@ public class ConstraintISINPresenceRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification15
-	 * SecurityIdentification15}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification32
+	 * SecurityIdentification32}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
 	 * expression} =
 	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;OR&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/OtherIdentification[*]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/Description&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/ISIN&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
@@ -102,102 +147,18 @@ public class ConstraintISINPresenceRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<SecurityIdentification15> forSecurityIdentification15 = new MMConstraint<SecurityIdentification15>() {
+	public static final MMConstraint<SecurityIdentification32> forSecurityIdentification32 = new MMConstraint<SecurityIdentification32>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISINPresenceRule";
 			definition = "If ISIN is not present then either Description or at least one occurrence of OtherIdentification must be present.";
-			owner_lazy = () -> SecurityIdentification15.mmObject();
+			owner_lazy = () -> SecurityIdentification32.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OtherIdentification[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Description</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ISIN</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
 		}
 
 		@Override
-		public void executeValidator(SecurityIdentification15 obj) throws Exception {
-			checkSecurityIdentification15(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification16
-	 * SecurityIdentification16}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
-	 * expression} =
-	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;OR&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/OtherIdentification[*]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/Description&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/ISIN&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ISINPresenceRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If ISIN is not present then either Description or at least one occurrence of OtherIdentification must be present."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecurityIdentification16> forSecurityIdentification16 = new MMConstraint<SecurityIdentification16>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ISINPresenceRule";
-			definition = "If ISIN is not present then either Description or at least one occurrence of OtherIdentification must be present.";
-			owner_lazy = () -> SecurityIdentification16.mmObject();
-			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OtherIdentification[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Description</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ISIN</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
-		}
-
-		@Override
-		public void executeValidator(SecurityIdentification16 obj) throws Exception {
-			checkSecurityIdentification16(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification19
-	 * SecurityIdentification19}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
-	 * expression} =
-	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;OR&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/OtherIdentification[*]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/Description&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/ISIN&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ISINPresenceRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If ISIN is not present then either Description or at least one occurrence of OtherIdentification must be present."
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintISINPresenceRule#forSecurityIdentification14
-	 * ConstraintISINPresenceRule.forSecurityIdentification14}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecurityIdentification19> forSecurityIdentification19 = new MMConstraint<SecurityIdentification19>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ISINPresenceRule";
-			definition = "If ISIN is not present then either Description or at least one occurrence of OtherIdentification must be present.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintISINPresenceRule.forSecurityIdentification14;
-			owner_lazy = () -> SecurityIdentification19.mmObject();
-			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OtherIdentification[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Description</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ISIN</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
-		}
-
-		@Override
-		public void executeValidator(SecurityIdentification19 obj) throws Exception {
-			checkSecurityIdentification19(obj);
+		public void executeValidator(SecurityIdentification32 obj) throws Exception {
+			checkSecurityIdentification32(obj);
 		}
 	};
 	/**
@@ -245,45 +206,6 @@ public class ConstraintISINPresenceRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification32
-	 * SecurityIdentification32}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
-	 * expression} =
-	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;OR&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/OtherIdentification[*]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/Description&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/ISIN&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ISINPresenceRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If ISIN is not present then either Description or at least one occurrence of OtherIdentification must be present."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecurityIdentification32> forSecurityIdentification32 = new MMConstraint<SecurityIdentification32>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ISINPresenceRule";
-			definition = "If ISIN is not present then either Description or at least one occurrence of OtherIdentification must be present.";
-			owner_lazy = () -> SecurityIdentification32.mmObject();
-			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OtherIdentification[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Description</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ISIN</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
-		}
-
-		@Override
-		public void executeValidator(SecurityIdentification32 obj) throws Exception {
-			checkSecurityIdentification32(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification21
 	 * SecurityIdentification21}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
@@ -317,30 +239,84 @@ public class ConstraintISINPresenceRule {
 			checkSecurityIdentification21(obj);
 		}
 	};
-
 	/**
-	 * If ISIN is not present then either Description or at least one occurrence
-	 * of OtherIdentification must be present.
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification16
+	 * SecurityIdentification16}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;OR&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/OtherIdentification[*]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/Description&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/ISIN&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ISINPresenceRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If ISIN is not present then either Description or at least one occurrence of OtherIdentification must be present."
+	 * </li>
+	 * </ul>
 	 */
-	public static void checkSecurityIdentification14(SecurityIdentification14 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
+	public static final MMConstraint<SecurityIdentification16> forSecurityIdentification16 = new MMConstraint<SecurityIdentification16>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ISINPresenceRule";
+			definition = "If ISIN is not present then either Description or at least one occurrence of OtherIdentification must be present.";
+			owner_lazy = () -> SecurityIdentification16.mmObject();
+			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OtherIdentification[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Description</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ISIN</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
 
+		@Override
+		public void executeValidator(SecurityIdentification16 obj) throws Exception {
+			checkSecurityIdentification16(obj);
+		}
+	};
 	/**
-	 * If ISIN is not present then either Description or at least one occurrence
-	 * of OtherIdentification must be present.
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification15
+	 * SecurityIdentification15}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;OR&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/OtherIdentification[*]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/Description&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/ISIN&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ISINPresenceRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If ISIN is not present then either Description or at least one occurrence of OtherIdentification must be present."
+	 * </li>
+	 * </ul>
 	 */
-	public static void checkSecurityIdentification15(SecurityIdentification15 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
+	public static final MMConstraint<SecurityIdentification15> forSecurityIdentification15 = new MMConstraint<SecurityIdentification15>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ISINPresenceRule";
+			definition = "If ISIN is not present then either Description or at least one occurrence of OtherIdentification must be present.";
+			owner_lazy = () -> SecurityIdentification15.mmObject();
+			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OtherIdentification[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Description</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ISIN</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
 
-	/**
-	 * If ISIN is not present then either Description or at least one occurrence
-	 * of OtherIdentification must be present.
-	 */
-	public static void checkSecurityIdentification16(SecurityIdentification16 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
+		@Override
+		public void executeValidator(SecurityIdentification15 obj) throws Exception {
+			checkSecurityIdentification15(obj);
+		}
+	};
 
 	/**
 	 * If ISIN is not present then either Description or at least one occurrence
@@ -354,7 +330,7 @@ public class ConstraintISINPresenceRule {
 	 * If ISIN is not present then either Description or at least one occurrence
 	 * of OtherIdentification must be present.
 	 */
-	public static void checkSecurityIdentification20(SecurityIdentification20 obj) throws Exception {
+	public static void checkSecurityIdentification14(SecurityIdentification14 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -370,7 +346,31 @@ public class ConstraintISINPresenceRule {
 	 * If ISIN is not present then either Description or at least one occurrence
 	 * of OtherIdentification must be present.
 	 */
+	public static void checkSecurityIdentification20(SecurityIdentification20 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If ISIN is not present then either Description or at least one occurrence
+	 * of OtherIdentification must be present.
+	 */
 	public static void checkSecurityIdentification21(SecurityIdentification21 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If ISIN is not present then either Description or at least one occurrence
+	 * of OtherIdentification must be present.
+	 */
+	public static void checkSecurityIdentification16(SecurityIdentification16 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If ISIN is not present then either Description or at least one occurrence
+	 * of OtherIdentification must be present.
+	 */
+	public static void checkSecurityIdentification15(SecurityIdentification15 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

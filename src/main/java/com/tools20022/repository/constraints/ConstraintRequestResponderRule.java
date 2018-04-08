@@ -51,7 +51,7 @@ public class ConstraintRequestResponderRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<ForeignExchangeTradeCaptureReportV01> forForeignExchangeTradeCaptureReportV01 = new MMConstraint<ForeignExchangeTradeCaptureReportV01>() {
+	public static final MMConstraint<ForeignExchangeTradeCaptureReportV01> for_fxtr_ForeignExchangeTradeCaptureReportV01 = new MMConstraint<ForeignExchangeTradeCaptureReportV01>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestResponderRule";
@@ -61,7 +61,7 @@ public class ConstraintRequestResponderRule {
 
 		@Override
 		public void executeValidator(ForeignExchangeTradeCaptureReportV01 obj) throws Exception {
-			checkForeignExchangeTradeCaptureReportV01(obj);
+			check_fxtr_ForeignExchangeTradeCaptureReportV01(obj);
 		}
 	};
 
@@ -72,7 +72,7 @@ public class ConstraintRequestResponderRule {
 	 * TradingSideIdentification and CounterpartySideIdentification must be
 	 * present.
 	 */
-	public static void checkForeignExchangeTradeCaptureReportV01(ForeignExchangeTradeCaptureReportV01 obj) throws Exception {
+	public static void check_fxtr_ForeignExchangeTradeCaptureReportV01(ForeignExchangeTradeCaptureReportV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

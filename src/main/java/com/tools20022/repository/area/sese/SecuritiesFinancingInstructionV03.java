@@ -149,50 +149,51 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule#forSecuritiesFinancingInstructionV03
- * ConstraintCoexistenceAmountRule.forSecuritiesFinancingInstructionV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule#for_sese_SecuritiesFinancingInstructionV03
+ * ConstraintCoexistenceAmountRule.for_sese_SecuritiesFinancingInstructionV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#forSecuritiesFinancingInstructionV03
- * ConstraintCoexistenceCharacterSetXRule.forSecuritiesFinancingInstructionV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#for_sese_SecuritiesFinancingInstructionV03
+ * ConstraintCoexistenceCharacterSetXRule.
+ * for_sese_SecuritiesFinancingInstructionV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forSecuritiesFinancingInstructionV03
- * ConstraintCoexistenceIdentificationRule.forSecuritiesFinancingInstructionV03}
- * </li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#for_sese_SecuritiesFinancingInstructionV03
+ * ConstraintCoexistenceIdentificationRule.
+ * for_sese_SecuritiesFinancingInstructionV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementAmountRule#forSecuritiesFinancingInstructionV03
- * ConstraintSettlementAmountRule.forSecuritiesFinancingInstructionV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementAmountRule#for_sese_SecuritiesFinancingInstructionV03
+ * ConstraintSettlementAmountRule.for_sese_SecuritiesFinancingInstructionV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintSellerSSI2Rule#forSecuritiesFinancingInstructionV03
- * ConstraintSellerSSI2Rule.forSecuritiesFinancingInstructionV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSellerSSI2Rule#for_sese_SecuritiesFinancingInstructionV03
+ * ConstraintSellerSSI2Rule.for_sese_SecuritiesFinancingInstructionV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintBuyerSSI2Rule#forSecuritiesFinancingInstructionV03
- * ConstraintBuyerSSI2Rule.forSecuritiesFinancingInstructionV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintBuyerSSI2Rule#for_sese_SecuritiesFinancingInstructionV03
+ * ConstraintBuyerSSI2Rule.for_sese_SecuritiesFinancingInstructionV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintDeliveringDepositoryAndParty1Part1Rule#forSecuritiesFinancingInstructionV03
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDeliveringDepositoryAndParty1Part1Rule#for_sese_SecuritiesFinancingInstructionV03
  * ConstraintDeliveringDepositoryAndParty1Part1Rule.
- * forSecuritiesFinancingInstructionV03}</li>
+ * for_sese_SecuritiesFinancingInstructionV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintReceivingDepositoryAndParty1Part1Rule#forSecuritiesFinancingInstructionV03
+ * {@linkplain com.tools20022.repository.constraints.ConstraintReceivingDepositoryAndParty1Part1Rule#for_sese_SecuritiesFinancingInstructionV03
  * ConstraintReceivingDepositoryAndParty1Part1Rule.
- * forSecuritiesFinancingInstructionV03}</li>
+ * for_sese_SecuritiesFinancingInstructionV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintDeliveringDepositoryAndParty1Part2Rule#forSecuritiesFinancingInstructionV03
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDeliveringDepositoryAndParty1Part2Rule#for_sese_SecuritiesFinancingInstructionV03
  * ConstraintDeliveringDepositoryAndParty1Part2Rule.
- * forSecuritiesFinancingInstructionV03}</li>
+ * for_sese_SecuritiesFinancingInstructionV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintReceivingDepositoryAndParty1Part2Rule#forSecuritiesFinancingInstructionV03
+ * {@linkplain com.tools20022.repository.constraints.ConstraintReceivingDepositoryAndParty1Part2Rule#for_sese_SecuritiesFinancingInstructionV03
  * ConstraintReceivingDepositoryAndParty1Part2Rule.
- * forSecuritiesFinancingInstructionV03}</li>
+ * for_sese_SecuritiesFinancingInstructionV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesFinancingInstructionV03
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#for_sese_SecuritiesFinancingInstructionV03
  * ConstraintSecuritiesMarketPracticeGroupGuideline.
- * forSecuritiesFinancingInstructionV03}</li>
+ * for_sese_SecuritiesFinancingInstructionV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintSellerSSI1Rule#forSecuritiesFinancingInstructionV03
- * ConstraintSellerSSI1Rule.forSecuritiesFinancingInstructionV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSellerSSI1Rule#for_sese_SecuritiesFinancingInstructionV03
+ * ConstraintSellerSSI1Rule.for_sese_SecuritiesFinancingInstructionV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintBuyerSSI1Rule#forSecuritiesFinancingInstructionV03
- * ConstraintBuyerSSI1Rule.forSecuritiesFinancingInstructionV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintBuyerSSI1Rule#for_sese_SecuritiesFinancingInstructionV03
+ * ConstraintBuyerSSI1Rule.for_sese_SecuritiesFinancingInstructionV03}</li>
  * </ul>
  * </li>
  * <li>
@@ -1072,17 +1073,17 @@ public class SecuritiesFinancingInstructionV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forSecuritiesFinancingInstructionV03,
-						com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesFinancingInstructionV03,
-						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesFinancingInstructionV03,
-						com.tools20022.repository.constraints.ConstraintSettlementAmountRule.forSecuritiesFinancingInstructionV03, com.tools20022.repository.constraints.ConstraintSellerSSI2Rule.forSecuritiesFinancingInstructionV03,
-						com.tools20022.repository.constraints.ConstraintBuyerSSI2Rule.forSecuritiesFinancingInstructionV03,
-						com.tools20022.repository.constraints.ConstraintDeliveringDepositoryAndParty1Part1Rule.forSecuritiesFinancingInstructionV03,
-						com.tools20022.repository.constraints.ConstraintReceivingDepositoryAndParty1Part1Rule.forSecuritiesFinancingInstructionV03,
-						com.tools20022.repository.constraints.ConstraintDeliveringDepositoryAndParty1Part2Rule.forSecuritiesFinancingInstructionV03,
-						com.tools20022.repository.constraints.ConstraintReceivingDepositoryAndParty1Part2Rule.forSecuritiesFinancingInstructionV03,
-						com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesFinancingInstructionV03,
-						com.tools20022.repository.constraints.ConstraintSellerSSI1Rule.forSecuritiesFinancingInstructionV03, com.tools20022.repository.constraints.ConstraintBuyerSSI1Rule.forSecuritiesFinancingInstructionV03);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.for_sese_SecuritiesFinancingInstructionV03,
+						com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.for_sese_SecuritiesFinancingInstructionV03,
+						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.for_sese_SecuritiesFinancingInstructionV03,
+						com.tools20022.repository.constraints.ConstraintSettlementAmountRule.for_sese_SecuritiesFinancingInstructionV03,
+						com.tools20022.repository.constraints.ConstraintSellerSSI2Rule.for_sese_SecuritiesFinancingInstructionV03, com.tools20022.repository.constraints.ConstraintBuyerSSI2Rule.for_sese_SecuritiesFinancingInstructionV03,
+						com.tools20022.repository.constraints.ConstraintDeliveringDepositoryAndParty1Part1Rule.for_sese_SecuritiesFinancingInstructionV03,
+						com.tools20022.repository.constraints.ConstraintReceivingDepositoryAndParty1Part1Rule.for_sese_SecuritiesFinancingInstructionV03,
+						com.tools20022.repository.constraints.ConstraintDeliveringDepositoryAndParty1Part2Rule.for_sese_SecuritiesFinancingInstructionV03,
+						com.tools20022.repository.constraints.ConstraintReceivingDepositoryAndParty1Part2Rule.for_sese_SecuritiesFinancingInstructionV03,
+						com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.for_sese_SecuritiesFinancingInstructionV03,
+						com.tools20022.repository.constraints.ConstraintSellerSSI1Rule.for_sese_SecuritiesFinancingInstructionV03, com.tools20022.repository.constraints.ConstraintBuyerSSI1Rule.for_sese_SecuritiesFinancingInstructionV03);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesFinancingInstructionV03";
 				definition = "Scope\r\nAn account owner sends a SecuritiesFinancingInstruction to a securities financing transaction account servicer to notify the securities financing transaction account servicer of the details of a repurchase agreement, reverse repurchase agreement, securities lending or securities borrowing transaction to allow the account servicer to manage the settlement and follow-up of the opening and closing leg of the transaction.\r\nThe account owner/servicer relationship may be:\r\n- a global custodian which has an account with a local custodian, or\r\n- an investment management institution which manage a fund account opened at a custodian, or\r\n- a broker which has an account with a custodian, or\r\n- a central securities depository participant which has an account with a central securities depository, or\r\n- a central securities depository which has an account with a custodian, another central securities depository or another settlement market infrastructure, or\r\n- a central counterparty or a stock exchange or a trade matching utility which need to instruct the settlement of securities financing transactions to a central securities depository or another settlement market infrastructure.\r\nUsage\r\nThe message may also be used to:\r\n- re-send a message previously sent,\r\n- provide a third party with a copy of a message for information,\r\n- re-send to a third party a copy of a message for information.\r\nusing the relevant elements in the Business Application Header.\nISO 15022 - 20022 Coexistence\nThis ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment. The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows: “CoexistenceXxxxRule”.";

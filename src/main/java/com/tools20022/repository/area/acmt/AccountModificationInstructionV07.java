@@ -134,8 +134,8 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintUnitRule#forAccountModificationInstructionV07
- * ConstraintUnitRule.forAccountModificationInstructionV07}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintUnitRule#for_acmt_AccountModificationInstructionV07
+ * ConstraintUnitRule.for_acmt_AccountModificationInstructionV07}</li>
  * </ul>
  * </li>
  * <li>
@@ -1017,7 +1017,7 @@ public class AccountModificationInstructionV07 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintUnitRule.forAccountModificationInstructionV07);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintUnitRule.for_acmt_AccountModificationInstructionV07);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountModificationInstructionV07";
 				definition = "Scope\r\nThe AccountModificationInstruction message is sent by an account owner, for example, an investor or its designated agent to the account servicer, for example, a registrar, transfer agent, custodian bank or securities depository to modify, that is, create, update or delete specific details of an existing account.\r\nUsage\r\nThe AccountModificationInstruction message is used to modify the details of an existing account.\r\nThe AccountModificationInstruction message can be used to:\r\n- maintain/update any of the existing account details, for example, to update the address of the beneficiary or modify the preference to income from distribution to capitalisation, or,\r\n- add/create specific details to the existing account when these details were not yet recorded at the time of account creation, for example, to add a second address or to establish new cash settlement standing instructions, or,\r\n- delete specific account details, for example, delete cash standing instructions, or,\r\n- instruct a change to the status of the account, for example, instruct the closure of the account.\r\nThe usage of this message may be subject to service level agreement (SLA) between the counterparties.\r\nExecution of the AccountModificationInstruction is confirmed via an AccountDetailsConfirmation message.";

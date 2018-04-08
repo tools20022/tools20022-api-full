@@ -69,8 +69,8 @@ public class ForeignExchangeTradePreviousVersion {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Foreign Exchange Trade - Previous version - master";
 				definition = "Messages that support management processes for foreign exchange contracts, including reporting on trades and balances, plus any exceptions and investigations related to foreign exchange contracts.";
-				messageDefinition_lazy = () -> Arrays.asList(ForeignExchangeTradeWithdrawalNotificationV03.mmObject());
 				code = "fxtr";
+				messageDefinition_lazy = () -> Arrays.asList(ForeignExchangeTradeWithdrawalNotificationV03.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

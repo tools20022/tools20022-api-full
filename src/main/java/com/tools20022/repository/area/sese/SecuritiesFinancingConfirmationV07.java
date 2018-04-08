@@ -134,22 +134,22 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintBuyerSSIRule#forSecuritiesFinancingConfirmationV07
- * ConstraintBuyerSSIRule.forSecuritiesFinancingConfirmationV07}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintBuyerSSIRule#for_sese_SecuritiesFinancingConfirmationV07
+ * ConstraintBuyerSSIRule.for_sese_SecuritiesFinancingConfirmationV07}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintSellerSSIRule#forSecuritiesFinancingConfirmationV07
- * ConstraintSellerSSIRule.forSecuritiesFinancingConfirmationV07}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSellerSSIRule#for_sese_SecuritiesFinancingConfirmationV07
+ * ConstraintSellerSSIRule.for_sese_SecuritiesFinancingConfirmationV07}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintDeliveringDepositoryAndParty1Rule#forSecuritiesFinancingConfirmationV07
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDeliveringDepositoryAndParty1Rule#for_sese_SecuritiesFinancingConfirmationV07
  * ConstraintDeliveringDepositoryAndParty1Rule.
- * forSecuritiesFinancingConfirmationV07}</li>
+ * for_sese_SecuritiesFinancingConfirmationV07}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintReceivingDepositoryAndParty1Rule#forSecuritiesFinancingConfirmationV07
+ * {@linkplain com.tools20022.repository.constraints.ConstraintReceivingDepositoryAndParty1Rule#for_sese_SecuritiesFinancingConfirmationV07
  * ConstraintReceivingDepositoryAndParty1Rule.
- * forSecuritiesFinancingConfirmationV07}</li>
+ * for_sese_SecuritiesFinancingConfirmationV07}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintSettledAmountRule#forSecuritiesFinancingConfirmationV07
- * ConstraintSettledAmountRule.forSecuritiesFinancingConfirmationV07}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSettledAmountRule#for_sese_SecuritiesFinancingConfirmationV07
+ * ConstraintSettledAmountRule.for_sese_SecuritiesFinancingConfirmationV07}</li>
  * </ul>
  * </li>
  * <li>
@@ -1178,11 +1178,11 @@ public class SecuritiesFinancingConfirmationV07 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBuyerSSIRule.forSecuritiesFinancingConfirmationV07,
-						com.tools20022.repository.constraints.ConstraintSellerSSIRule.forSecuritiesFinancingConfirmationV07,
-						com.tools20022.repository.constraints.ConstraintDeliveringDepositoryAndParty1Rule.forSecuritiesFinancingConfirmationV07,
-						com.tools20022.repository.constraints.ConstraintReceivingDepositoryAndParty1Rule.forSecuritiesFinancingConfirmationV07,
-						com.tools20022.repository.constraints.ConstraintSettledAmountRule.forSecuritiesFinancingConfirmationV07);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBuyerSSIRule.for_sese_SecuritiesFinancingConfirmationV07,
+						com.tools20022.repository.constraints.ConstraintSellerSSIRule.for_sese_SecuritiesFinancingConfirmationV07,
+						com.tools20022.repository.constraints.ConstraintDeliveringDepositoryAndParty1Rule.for_sese_SecuritiesFinancingConfirmationV07,
+						com.tools20022.repository.constraints.ConstraintReceivingDepositoryAndParty1Rule.for_sese_SecuritiesFinancingConfirmationV07,
+						com.tools20022.repository.constraints.ConstraintSettledAmountRule.for_sese_SecuritiesFinancingConfirmationV07);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesFinancingConfirmationV07";
 				definition = "Scope\r\nA securities financing transaction account servicer sends a SecuritiesFinancingConfirmation to an account owner to confirm or advise of the partial or full settlement of the opening or closing leg of a securities financing transaction. \r\n\r\nThe account servicer/owner relationship may be:\r\n- a central securities depository or another settlement market infrastructure managing securities financing transactions on behalf of their participants\r\n- an agent (sub-custodian) managing securities financing transactions on behalf of their global custodian customer, or \r\n- a custodian managing securities financing transactions on behalf of an investment management institution or a broker/dealer.\r\n\r\n\r\nUsage\r\nThe message may also be used to:\r\n- re-send a message previously sent,\r\n- provide a third party with a copy of a message for information,\r\n- re-send to a third party a copy of a message for information\r\nusing the relevant elements in the Business Application Header.";

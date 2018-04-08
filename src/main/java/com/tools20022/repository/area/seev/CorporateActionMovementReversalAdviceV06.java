@@ -119,39 +119,41 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintOptionNumberRule#forCorporateActionMovementReversalAdviceV06
- * ConstraintOptionNumberRule.forCorporateActionMovementReversalAdviceV06}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOptionNumberRule#for_seev_CorporateActionMovementReversalAdviceV06
+ * ConstraintOptionNumberRule.for_seev_CorporateActionMovementReversalAdviceV06}
+ * </li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintOtherDocumentIdentificationRule#forCorporateActionMovementReversalAdviceV06
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOtherDocumentIdentificationRule#for_seev_CorporateActionMovementReversalAdviceV06
  * ConstraintOtherDocumentIdentificationRule.
- * forCorporateActionMovementReversalAdviceV06}</li>
+ * for_seev_CorporateActionMovementReversalAdviceV06}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalInformationRule#forCorporateActionMovementReversalAdviceV06
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalInformationRule#for_seev_CorporateActionMovementReversalAdviceV06
  * ConstraintAdditionalInformationRule.
- * forCorporateActionMovementReversalAdviceV06}</li>
+ * for_seev_CorporateActionMovementReversalAdviceV06}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline#forCorporateActionMovementReversalAdviceV06
- * ConstraintIssuerAgentGuideline.forCorporateActionMovementReversalAdviceV06}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline#for_seev_CorporateActionMovementReversalAdviceV06
+ * ConstraintIssuerAgentGuideline.
+ * for_seev_CorporateActionMovementReversalAdviceV06}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintScripOrDividendReinvestment1Rule#forCorporateActionMovementReversalAdviceV06
+ * {@linkplain com.tools20022.repository.constraints.ConstraintScripOrDividendReinvestment1Rule#for_seev_CorporateActionMovementReversalAdviceV06
  * ConstraintScripOrDividendReinvestment1Rule.
- * forCorporateActionMovementReversalAdviceV06}</li>
+ * for_seev_CorporateActionMovementReversalAdviceV06}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintScripOrDividendReinvestment2Rule#forCorporateActionMovementReversalAdviceV06
+ * {@linkplain com.tools20022.repository.constraints.ConstraintScripOrDividendReinvestment2Rule#for_seev_CorporateActionMovementReversalAdviceV06
  * ConstraintScripOrDividendReinvestment2Rule.
- * forCorporateActionMovementReversalAdviceV06}</li>
+ * for_seev_CorporateActionMovementReversalAdviceV06}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintScripOrDividendReinvestment3Rule#forCorporateActionMovementReversalAdviceV06
+ * {@linkplain com.tools20022.repository.constraints.ConstraintScripOrDividendReinvestment3Rule#for_seev_CorporateActionMovementReversalAdviceV06
  * ConstraintScripOrDividendReinvestment3Rule.
- * forCorporateActionMovementReversalAdviceV06}</li>
+ * for_seev_CorporateActionMovementReversalAdviceV06}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#forCorporateActionMovementReversalAdviceV06
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#for_seev_CorporateActionMovementReversalAdviceV06
  * ConstraintCoexistenceCharacterSetXRule.
- * forCorporateActionMovementReversalAdviceV06}</li>
+ * for_seev_CorporateActionMovementReversalAdviceV06}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forCorporateActionMovementReversalAdviceV06
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#for_seev_CorporateActionMovementReversalAdviceV06
  * ConstraintCoexistenceIdentificationRule.
- * forCorporateActionMovementReversalAdviceV06}</li>
+ * for_seev_CorporateActionMovementReversalAdviceV06}</li>
  * </ul>
  * </li>
  * <li>
@@ -995,15 +997,15 @@ public class CorporateActionMovementReversalAdviceV06 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionNumberRule.forCorporateActionMovementReversalAdviceV06,
-						com.tools20022.repository.constraints.ConstraintOtherDocumentIdentificationRule.forCorporateActionMovementReversalAdviceV06,
-						com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionMovementReversalAdviceV06,
-						com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline.forCorporateActionMovementReversalAdviceV06,
-						com.tools20022.repository.constraints.ConstraintScripOrDividendReinvestment1Rule.forCorporateActionMovementReversalAdviceV06,
-						com.tools20022.repository.constraints.ConstraintScripOrDividendReinvestment2Rule.forCorporateActionMovementReversalAdviceV06,
-						com.tools20022.repository.constraints.ConstraintScripOrDividendReinvestment3Rule.forCorporateActionMovementReversalAdviceV06,
-						com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forCorporateActionMovementReversalAdviceV06,
-						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionMovementReversalAdviceV06);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionNumberRule.for_seev_CorporateActionMovementReversalAdviceV06,
+						com.tools20022.repository.constraints.ConstraintOtherDocumentIdentificationRule.for_seev_CorporateActionMovementReversalAdviceV06,
+						com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.for_seev_CorporateActionMovementReversalAdviceV06,
+						com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline.for_seev_CorporateActionMovementReversalAdviceV06,
+						com.tools20022.repository.constraints.ConstraintScripOrDividendReinvestment1Rule.for_seev_CorporateActionMovementReversalAdviceV06,
+						com.tools20022.repository.constraints.ConstraintScripOrDividendReinvestment2Rule.for_seev_CorporateActionMovementReversalAdviceV06,
+						com.tools20022.repository.constraints.ConstraintScripOrDividendReinvestment3Rule.for_seev_CorporateActionMovementReversalAdviceV06,
+						com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.for_seev_CorporateActionMovementReversalAdviceV06,
+						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.for_seev_CorporateActionMovementReversalAdviceV06);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionMovementReversalAdviceV06";
 				definition = "Scope\nAn account servicer sends the CorporateActionMovementReversalAdvice message to an account owner or its designated agent to reverse previously confirmed posting of securities or cash.\nUsage\nThe message may also be used to:\n- re-send a message previously sent (the sub-function of the message is Duplicate),\n- provide a third party with a copy of a message for information (the sub-function of the message is Copy),\n- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate),\nusing the relevant elements in the business application header (BAH).\nISO 15022 - 20022 COEXISTENCE\r\nThis ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment. The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows: “CoexistenceXxxxRule”.";

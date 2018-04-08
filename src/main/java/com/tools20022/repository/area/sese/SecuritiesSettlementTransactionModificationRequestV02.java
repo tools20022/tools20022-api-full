@@ -100,17 +100,17 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintPhysicalInstructionDetailsUsageRule#forSecuritiesSettlementTransactionModificationRequestV02
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPhysicalInstructionDetailsUsageRule#for_sese_SecuritiesSettlementTransactionModificationRequestV02
  * ConstraintPhysicalInstructionDetailsUsageRule.
- * forSecuritiesSettlementTransactionModificationRequestV02}</li>
+ * for_sese_SecuritiesSettlementTransactionModificationRequestV02}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesFinancingSettlementUsageRule#forSecuritiesSettlementTransactionModificationRequestV02
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesFinancingSettlementUsageRule#for_sese_SecuritiesSettlementTransactionModificationRequestV02
  * ConstraintSecuritiesFinancingSettlementUsageRule.
- * forSecuritiesSettlementTransactionModificationRequestV02}</li>
+ * for_sese_SecuritiesSettlementTransactionModificationRequestV02}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintLinkagesUsageRule#forSecuritiesSettlementTransactionModificationRequestV02
+ * {@linkplain com.tools20022.repository.constraints.ConstraintLinkagesUsageRule#for_sese_SecuritiesSettlementTransactionModificationRequestV02
  * ConstraintLinkagesUsageRule.
- * forSecuritiesSettlementTransactionModificationRequestV02}</li>
+ * for_sese_SecuritiesSettlementTransactionModificationRequestV02}</li>
  * </ul>
  * </li>
  * <li>
@@ -258,9 +258,9 @@ public class SecuritiesSettlementTransactionModificationRequestV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPhysicalInstructionDetailsUsageRule.forSecuritiesSettlementTransactionModificationRequestV02,
-						com.tools20022.repository.constraints.ConstraintSecuritiesFinancingSettlementUsageRule.forSecuritiesSettlementTransactionModificationRequestV02,
-						com.tools20022.repository.constraints.ConstraintLinkagesUsageRule.forSecuritiesSettlementTransactionModificationRequestV02);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPhysicalInstructionDetailsUsageRule.for_sese_SecuritiesSettlementTransactionModificationRequestV02,
+						com.tools20022.repository.constraints.ConstraintSecuritiesFinancingSettlementUsageRule.for_sese_SecuritiesSettlementTransactionModificationRequestV02,
+						com.tools20022.repository.constraints.ConstraintLinkagesUsageRule.for_sese_SecuritiesSettlementTransactionModificationRequestV02);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesSettlementTransactionModificationRequestV02";
 				definition = "Scope\nThis message is sent by an account owner to an account servicer. \n\nThe account owner will generally be:\n\n- a central securities depository participant which has an account with a central securities depository or a market infrastructure\n\n- an investment manager which has an account with a custodian acting as accounting and/or settlement agent.\n\nIt is used to request the modification of non core business data (matching or non-matching) information in a pending or settled instruction. It can also be used for the enrichment of an incomplete transaction.\n\n\nUsage\nThe modification must only contain the data to be modified.\nThe message may also be used to:\n- re-send a message sent by the account owner to the account servicer,\n- provide a third party with a copy of a message being sent by the account owner for information,\n- re-send to a third party a copy of a message being sent by the account owner for information\nusing the relevant elements in the Business Application Header.\n\nISO 15022 - 20022 Coexistence\nThis ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment. The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows: “CoexistenceXxxxRule”.";

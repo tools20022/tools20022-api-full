@@ -20,8 +20,8 @@ package com.tools20022.repository.constraints;
 import com.tools20022.core.repo.NotImplementedConstraintException;
 import com.tools20022.metamodel.MMConstraint;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.datatype.Max4Text;
 import com.tools20022.repository.msg.SettlementSubTotalCalculatedTax2;
-import com.tools20022.repository.msg.SettlementSubTotalCalculatedTax2.ExemptionReasonCode;
 
 /**
  * Value according to external codelist.
@@ -47,7 +47,7 @@ public class ConstraintR7 {
 	 * definition} = "Value according to external codelist."</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<ExemptionReasonCode> forExemptionReasonCode = new MMConstraint<ExemptionReasonCode>() {
+	public static final MMConstraint<Max4Text> forSettlementSubTotalCalculatedTax2_ExemptionReasonCode = new MMConstraint<Max4Text>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "R7";
@@ -56,15 +56,15 @@ public class ConstraintR7 {
 		}
 
 		@Override
-		public void executeValidator(ExemptionReasonCode obj) throws Exception {
-			checkSettlementSubTotalCalculatedTax2(obj);
+		public void executeValidator(Max4Text obj) throws Exception {
+			checkSettlementSubTotalCalculatedTax2_ExemptionReasonCode(obj);
 		}
 	};
 
 	/**
 	 * Value according to external codelist.
 	 */
-	public static void checkSettlementSubTotalCalculatedTax2(ExemptionReasonCode obj) throws Exception {
+	public static void checkSettlementSubTotalCalculatedTax2_ExemptionReasonCode(Max4Text obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

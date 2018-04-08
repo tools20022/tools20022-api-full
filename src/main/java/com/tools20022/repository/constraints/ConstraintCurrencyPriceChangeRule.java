@@ -34,39 +34,6 @@ public class ConstraintCurrencyPriceChangeRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.ValuationStatistics2
-	 * ValuationStatistics2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CurrencyPriceChangeRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Currency in PriceChange/Amount must be the same as Currency."</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<ValuationStatistics2> forValuationStatistics2 = new MMConstraint<ValuationStatistics2>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "CurrencyPriceChangeRule";
-			definition = "Currency in PriceChange/Amount must be the same as Currency.";
-			owner_lazy = () -> ValuationStatistics2.mmObject();
-		}
-
-		@Override
-		public void executeValidator(ValuationStatistics2 obj) throws Exception {
-			checkValuationStatistics2(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ValuationStatistics3
 	 * ValuationStatistics3}</li>
 	 * <li>
@@ -94,18 +61,51 @@ public class ConstraintCurrencyPriceChangeRule {
 			checkValuationStatistics3(obj);
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.ValuationStatistics2
+	 * ValuationStatistics2}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CurrencyPriceChangeRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Currency in PriceChange/Amount must be the same as Currency."</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<ValuationStatistics2> forValuationStatistics2 = new MMConstraint<ValuationStatistics2>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CurrencyPriceChangeRule";
+			definition = "Currency in PriceChange/Amount must be the same as Currency.";
+			owner_lazy = () -> ValuationStatistics2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ValuationStatistics2 obj) throws Exception {
+			checkValuationStatistics2(obj);
+		}
+	};
 
 	/**
 	 * Currency in PriceChange/Amount must be the same as Currency.
 	 */
-	public static void checkValuationStatistics2(ValuationStatistics2 obj) throws Exception {
+	public static void checkValuationStatistics3(ValuationStatistics3 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
 	/**
 	 * Currency in PriceChange/Amount must be the same as Currency.
 	 */
-	public static void checkValuationStatistics3(ValuationStatistics3 obj) throws Exception {
+	public static void checkValuationStatistics2(ValuationStatistics2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

@@ -48,7 +48,7 @@ public class ConstraintOriginalInterbankSettlementAmountRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<PaymentCancellationRequestV01> forPaymentCancellationRequestV01 = new MMConstraint<PaymentCancellationRequestV01>() {
+	public static final MMConstraint<PaymentCancellationRequestV01> for_pain_PaymentCancellationRequestV01 = new MMConstraint<PaymentCancellationRequestV01>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalInterbankSettlementAmountRule";
@@ -58,14 +58,14 @@ public class ConstraintOriginalInterbankSettlementAmountRule {
 
 		@Override
 		public void executeValidator(PaymentCancellationRequestV01 obj) throws Exception {
-			checkPaymentCancellationRequestV01(obj);
+			check_pain_PaymentCancellationRequestV01(obj);
 		}
 	};
 
 	/**
 	 * TransactionInformation/OriginalInterbankSettlementAmount is not allowed.
 	 */
-	public static void checkPaymentCancellationRequestV01(PaymentCancellationRequestV01 obj) throws Exception {
+	public static void check_pain_PaymentCancellationRequestV01(PaymentCancellationRequestV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

@@ -158,9 +158,9 @@ public class AgentCAGlobalDistributionStatusAdviceV01 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GlobalMovementStatusOrIndividualMovementStatusRule";
 			definition = "Either GlobalMovementStatus or IndividualMovementStatus must be present.";
-			messageDefinition_lazy = () -> com.tools20022.repository.area.seev.AgentCAGlobalDistributionStatusAdviceV01.mmObject();
 			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAGlobalDistributionStatusAdviceV01.mmGlobalMovementStatus,
 					com.tools20022.repository.area.seev.AgentCAGlobalDistributionStatusAdviceV01.mmIndividualMovementStatus);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.seev.AgentCAGlobalDistributionStatusAdviceV01.mmObject();
 		}
 	};
 	@XmlElement(name = "Id", required = true)

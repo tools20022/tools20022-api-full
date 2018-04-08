@@ -88,25 +88,25 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintInstructedAgentRule#forFIToFICustomerDirectDebitV01
- * ConstraintInstructedAgentRule.forFIToFICustomerDirectDebitV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInstructedAgentRule#for_pacs_FIToFICustomerDirectDebitV01
+ * ConstraintInstructedAgentRule.for_pacs_FIToFICustomerDirectDebitV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintInstructingAgentRule#forFIToFICustomerDirectDebitV01
- * ConstraintInstructingAgentRule.forFIToFICustomerDirectDebitV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInstructingAgentRule#for_pacs_FIToFICustomerDirectDebitV01
+ * ConstraintInstructingAgentRule.for_pacs_FIToFICustomerDirectDebitV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmount1Rule#forFIToFICustomerDirectDebitV01
- * ConstraintTotalInterbankSettlementAmount1Rule.forFIToFICustomerDirectDebitV01
- * }</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmount1Rule#for_pacs_FIToFICustomerDirectDebitV01
+ * ConstraintTotalInterbankSettlementAmount1Rule.
+ * for_pacs_FIToFICustomerDirectDebitV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmount2Rule#forFIToFICustomerDirectDebitV01
- * ConstraintTotalInterbankSettlementAmount2Rule.forFIToFICustomerDirectDebitV01
- * }</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmount2Rule#for_pacs_FIToFICustomerDirectDebitV01
+ * ConstraintTotalInterbankSettlementAmount2Rule.
+ * for_pacs_FIToFICustomerDirectDebitV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintInterbankSettlementDateRule#forFIToFICustomerDirectDebitV01
- * ConstraintInterbankSettlementDateRule.forFIToFICustomerDirectDebitV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInterbankSettlementDateRule#for_pacs_FIToFICustomerDirectDebitV01
+ * ConstraintInterbankSettlementDateRule.for_pacs_FIToFICustomerDirectDebitV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintPaymentTypeInformationRule#forFIToFICustomerDirectDebitV01
- * ConstraintPaymentTypeInformationRule.forFIToFICustomerDirectDebitV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPaymentTypeInformationRule#for_pacs_FIToFICustomerDirectDebitV01
+ * ConstraintPaymentTypeInformationRule.for_pacs_FIToFICustomerDirectDebitV01}</li>
  * </ul>
  * </li>
  * <li>
@@ -232,12 +232,12 @@ public class FIToFICustomerDirectDebitV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays
-						.asList(com.tools20022.repository.constraints.ConstraintInstructedAgentRule.forFIToFICustomerDirectDebitV01, com.tools20022.repository.constraints.ConstraintInstructingAgentRule.forFIToFICustomerDirectDebitV01,
-								com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmount1Rule.forFIToFICustomerDirectDebitV01,
-								com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmount2Rule.forFIToFICustomerDirectDebitV01,
-								com.tools20022.repository.constraints.ConstraintInterbankSettlementDateRule.forFIToFICustomerDirectDebitV01,
-								com.tools20022.repository.constraints.ConstraintPaymentTypeInformationRule.forFIToFICustomerDirectDebitV01);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInstructedAgentRule.for_pacs_FIToFICustomerDirectDebitV01,
+						com.tools20022.repository.constraints.ConstraintInstructingAgentRule.for_pacs_FIToFICustomerDirectDebitV01,
+						com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmount1Rule.for_pacs_FIToFICustomerDirectDebitV01,
+						com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmount2Rule.for_pacs_FIToFICustomerDirectDebitV01,
+						com.tools20022.repository.constraints.ConstraintInterbankSettlementDateRule.for_pacs_FIToFICustomerDirectDebitV01,
+						com.tools20022.repository.constraints.ConstraintPaymentTypeInformationRule.for_pacs_FIToFICustomerDirectDebitV01);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FIToFICustomerDirectDebitV01";
 				definition = "Scope\r\nThe FinancialInstitutionToFinancialInstitutionCustomerDirectDebit message is sent by the creditor agent to the debtor agent, directly or through other agents and/or a payment clearing and settlement system.\r\nIt is used to collect funds from a debtor account for a creditor.\r\nUsage\r\nThe FItoFICustomerDirectDebit message can contain one or more customer direct debit instructions.\r\nThe FIToFICustomerDirectDebit message does not allow for grouping: the PaymentInformation block must be present once per occurrence of a DirectDebitTransactionInformation block.\r\nThe FItoFICustomerDirectDebit message may or may not contain mandate related information, i.e. extracts from a mandate, such as the MandateIdentification or DateOfSignature. The FIToFICustomerDirectDebit message must not be considered as a mandate.\r\nThe FItoFICustomerDirectDebit message can be used in domestic and cross-border scenarios.\r\n";

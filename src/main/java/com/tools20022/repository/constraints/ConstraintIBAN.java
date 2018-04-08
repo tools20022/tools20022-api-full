@@ -35,40 +35,6 @@ public class ConstraintIBAN {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.datatype.IBAN2007Identifier
-	 * IBAN2007Identifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "IBAN"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "A valid IBAN consists of all three of the following components: Country Code, check digits and BBAN."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<IBAN2007Identifier> forIBAN2007Identifier = new MMConstraint<IBAN2007Identifier>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "IBAN";
-			definition = "A valid IBAN consists of all three of the following components: Country Code, check digits and BBAN.";
-			owner_lazy = () -> IBAN2007Identifier.mmObject();
-		}
-
-		@Override
-		public void executeValidator(IBAN2007Identifier obj) throws Exception {
-			checkIBAN2007Identifier(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.datatype.IBANIdentifier
 	 * IBANIdentifier}</li>
 	 * <li>
@@ -97,12 +63,46 @@ public class ConstraintIBAN {
 			checkIBANIdentifier(obj);
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.datatype.IBAN2007Identifier
+	 * IBAN2007Identifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "IBAN"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "A valid IBAN consists of all three of the following components: Country Code, check digits and BBAN."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<IBAN2007Identifier> forIBAN2007Identifier = new MMConstraint<IBAN2007Identifier>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "IBAN";
+			definition = "A valid IBAN consists of all three of the following components: Country Code, check digits and BBAN.";
+			owner_lazy = () -> IBAN2007Identifier.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IBAN2007Identifier obj) throws Exception {
+			checkIBAN2007Identifier(obj);
+		}
+	};
 
 	/**
 	 * A valid IBAN consists of all three of the following components: Country
 	 * Code, check digits and BBAN.
 	 */
-	public static void checkIBAN2007Identifier(IBAN2007Identifier obj) throws Exception {
+	public static void checkIBANIdentifier(IBANIdentifier obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -110,7 +110,7 @@ public class ConstraintIBAN {
 	 * A valid IBAN consists of all three of the following components: Country
 	 * Code, check digits and BBAN.
 	 */
-	public static void checkIBANIdentifier(IBANIdentifier obj) throws Exception {
+	public static void checkIBAN2007Identifier(IBAN2007Identifier obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

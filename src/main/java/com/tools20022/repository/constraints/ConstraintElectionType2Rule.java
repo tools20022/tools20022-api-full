@@ -53,7 +53,7 @@ public class ConstraintElectionType2Rule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<AgentCAElectionAdviceV01> forAgentCAElectionAdviceV01 = new MMConstraint<AgentCAElectionAdviceV01>() {
+	public static final MMConstraint<AgentCAElectionAdviceV01> for_seev_AgentCAElectionAdviceV01 = new MMConstraint<AgentCAElectionAdviceV01>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectionType2Rule";
@@ -63,7 +63,7 @@ public class ConstraintElectionType2Rule {
 
 		@Override
 		public void executeValidator(AgentCAElectionAdviceV01 obj) throws Exception {
-			checkAgentCAElectionAdviceV01(obj);
+			check_seev_AgentCAElectionAdviceV01(obj);
 		}
 	};
 
@@ -78,7 +78,7 @@ public class ConstraintElectionType2Rule {
 	 * ElectionDetails/SecuritiesMovementDetails/DebitAccountDetails/OptionType
 	 * must be present.
 	 */
-	public static void checkAgentCAElectionAdviceV01(AgentCAElectionAdviceV01 obj) throws Exception {
+	public static void check_seev_AgentCAElectionAdviceV01(AgentCAElectionAdviceV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

@@ -85,9 +85,9 @@ public class ATMManagementPreviousVersion {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ATM Management - Previous version - master";
 				definition = "Messages that support card related terminal management services between an Automated Teller Machine (ATM) and an\r\nAcquirer.";
+				code = "caam";
 				messageDefinition_lazy = () -> Arrays.asList(ATMReconciliationAdviceV01.mmObject(), ATMReconciliationAcknowledgementV01.mmObject(), ATMDiagnosticResponseV01.mmObject(), ATMDiagnosticRequestV01.mmObject(),
 						ATMDeviceControlV02.mmObject(), ATMDeviceReportV02.mmObject(), ATMKeyDownloadRequestV02.mmObject(), ATMKeyDownloadResponseV02.mmObject());
-				code = "caam";
 			}
 		});
 		return mmObject_lazy.get();

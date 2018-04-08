@@ -124,27 +124,29 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintBalanceForAccountOrSubAccountDetailsRule#forSecuritiesBalanceCustodyReportV04
+ * {@linkplain com.tools20022.repository.constraints.ConstraintBalanceForAccountOrSubAccountDetailsRule#for_semt_SecuritiesBalanceCustodyReportV04
  * ConstraintBalanceForAccountOrSubAccountDetailsRule.
- * forSecuritiesBalanceCustodyReportV04}</li>
+ * for_semt_SecuritiesBalanceCustodyReportV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintSubAccountReportingRule#forSecuritiesBalanceCustodyReportV04
- * ConstraintSubAccountReportingRule.forSecuritiesBalanceCustodyReportV04}</li>
- * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintBalanceForAccountReportingRule#forSecuritiesBalanceCustodyReportV04
- * ConstraintBalanceForAccountReportingRule.forSecuritiesBalanceCustodyReportV04
- * }</li>
- * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#forSecuritiesBalanceCustodyReportV04
- * ConstraintCoexistenceCharacterSetXRule.forSecuritiesBalanceCustodyReportV04}</li>
- * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forSecuritiesBalanceCustodyReportV04
- * ConstraintCoexistenceIdentificationRule.forSecuritiesBalanceCustodyReportV04}
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSubAccountReportingRule#for_semt_SecuritiesBalanceCustodyReportV04
+ * ConstraintSubAccountReportingRule.for_semt_SecuritiesBalanceCustodyReportV04}
  * </li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesBalanceCustodyReportV04
+ * {@linkplain com.tools20022.repository.constraints.ConstraintBalanceForAccountReportingRule#for_semt_SecuritiesBalanceCustodyReportV04
+ * ConstraintBalanceForAccountReportingRule.
+ * for_semt_SecuritiesBalanceCustodyReportV04}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#for_semt_SecuritiesBalanceCustodyReportV04
+ * ConstraintCoexistenceCharacterSetXRule.
+ * for_semt_SecuritiesBalanceCustodyReportV04}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#for_semt_SecuritiesBalanceCustodyReportV04
+ * ConstraintCoexistenceIdentificationRule.
+ * for_semt_SecuritiesBalanceCustodyReportV04}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#for_semt_SecuritiesBalanceCustodyReportV04
  * ConstraintSecuritiesMarketPracticeGroupGuideline.
- * forSecuritiesBalanceCustodyReportV04}</li>
+ * for_semt_SecuritiesBalanceCustodyReportV04}</li>
  * </ul>
  * </li>
  * <li>
@@ -599,12 +601,12 @@ public class SecuritiesBalanceCustodyReportV04 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBalanceForAccountOrSubAccountDetailsRule.forSecuritiesBalanceCustodyReportV04,
-						com.tools20022.repository.constraints.ConstraintSubAccountReportingRule.forSecuritiesBalanceCustodyReportV04,
-						com.tools20022.repository.constraints.ConstraintBalanceForAccountReportingRule.forSecuritiesBalanceCustodyReportV04,
-						com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesBalanceCustodyReportV04,
-						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesBalanceCustodyReportV04,
-						com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesBalanceCustodyReportV04);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBalanceForAccountOrSubAccountDetailsRule.for_semt_SecuritiesBalanceCustodyReportV04,
+						com.tools20022.repository.constraints.ConstraintSubAccountReportingRule.for_semt_SecuritiesBalanceCustodyReportV04,
+						com.tools20022.repository.constraints.ConstraintBalanceForAccountReportingRule.for_semt_SecuritiesBalanceCustodyReportV04,
+						com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.for_semt_SecuritiesBalanceCustodyReportV04,
+						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.for_semt_SecuritiesBalanceCustodyReportV04,
+						com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.for_semt_SecuritiesBalanceCustodyReportV04);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesBalanceCustodyReportV04";
 				definition = "Scope\r\nAn account servicer sends a SecuritiesBalanceCustodyReport to an account owner to provide, at a moment in time, the quantity and identification of the financial instruments that the account servicer holds for the account owner\r\nThe account servicer/owner relationship may be:\r\n- a central securities depository or another settlement market infrastructure acting on behalf of their participants, or\r\n- an agent (sub-custodian) acting on behalf of their global custodian customer, or\r\n- a custodian acting on behalf of an investment management institution or a broker/dealer, or\r\n- a transfer agent acting on behalf of a fund manager or an account owner's designated agent.\r\nUsage\r\nThe message can also include availability and the location of holdings to facilitate trading and minimise settlement issues. The message reports all information per financial instrument, that is, when a financial instrument is held at multiple places of safekeeping, the total holdings for all locations can be provided.\r\nThe message should be sent at a frequency agreed bi-laterally between the account servicer and the account owner. The message may be provided on a trade date, contractual or settlement date basis.\r\nThere may be one or more intermediary parties, for example, an intermediary or a concentrator between the account owner and account servicer.\r\nThe message may also be used to:\n- re-send a message previously sent,\n- provide a third party with a copy of a message for information,\n- re-send to a third party a copy of a message for information.\nusing the relevant elements in the Business Application Header.\nISO 15022 - 20022 Coexistence\nThis ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment. The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows: “CoexistenceXxxxRule”.";

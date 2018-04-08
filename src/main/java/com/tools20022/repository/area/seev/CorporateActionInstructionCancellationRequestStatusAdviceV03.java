@@ -113,17 +113,17 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalInformationRule#forCorporateActionInstructionCancellationRequestStatusAdviceV03
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalInformationRule#for_seev_CorporateActionInstructionCancellationRequestStatusAdviceV03
  * ConstraintAdditionalInformationRule.
- * forCorporateActionInstructionCancellationRequestStatusAdviceV03}</li>
+ * for_seev_CorporateActionInstructionCancellationRequestStatusAdviceV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#forCorporateActionInstructionCancellationRequestStatusAdviceV03
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#for_seev_CorporateActionInstructionCancellationRequestStatusAdviceV03
  * ConstraintCoexistenceCharacterSetXRule.
- * forCorporateActionInstructionCancellationRequestStatusAdviceV03}</li>
+ * for_seev_CorporateActionInstructionCancellationRequestStatusAdviceV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forCorporateActionInstructionCancellationRequestStatusAdviceV03
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#for_seev_CorporateActionInstructionCancellationRequestStatusAdviceV03
  * ConstraintCoexistenceIdentificationRule.
- * forCorporateActionInstructionCancellationRequestStatusAdviceV03}</li>
+ * for_seev_CorporateActionInstructionCancellationRequestStatusAdviceV03}</li>
  * </ul>
  * </li>
  * <li>
@@ -485,9 +485,9 @@ public class CorporateActionInstructionCancellationRequestStatusAdviceV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionInstructionCancellationRequestStatusAdviceV03,
-						com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forCorporateActionInstructionCancellationRequestStatusAdviceV03,
-						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionInstructionCancellationRequestStatusAdviceV03);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.for_seev_CorporateActionInstructionCancellationRequestStatusAdviceV03,
+						com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.for_seev_CorporateActionInstructionCancellationRequestStatusAdviceV03,
+						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.for_seev_CorporateActionInstructionCancellationRequestStatusAdviceV03);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionInstructionCancellationRequestStatusAdviceV03";
 				definition = "Scope\r\nAn account servicer sends the CorporateActionInstructionCancellationRequestStatusAdvice message to an account owner or its designated agent to report status of a previously received CorporateActionInstructionCancellationRequest message sent by the account owner.\r\nThis will include the acknowledgement/rejection of a request to cancel an outstanding instruction.\r\nUsage\r\nThe message may also be used to:\r\n- re-send a message previously sent (the sub-function of the message is Duplicate),\r\n- provide a third party with a copy of a message for information (the sub-function of the message is Copy),\r\n- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate),\r\nusing the relevant elements in the business application header (BAH).\nISO 15022 - 20022 COEXISTENCE\nThis ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment. The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows: “CoexistenceXxxxRule”.";

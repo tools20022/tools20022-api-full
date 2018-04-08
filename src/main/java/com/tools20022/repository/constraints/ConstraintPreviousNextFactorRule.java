@@ -36,8 +36,8 @@ public class ConstraintPreviousNextFactorRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes6
-	 * FinancialInstrumentAttributes6}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes84
+	 * FinancialInstrumentAttributes84}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -51,119 +51,17 @@ public class ConstraintPreviousNextFactorRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<FinancialInstrumentAttributes6> forFinancialInstrumentAttributes6 = new MMConstraint<FinancialInstrumentAttributes6>() {
+	public static final MMConstraint<FinancialInstrumentAttributes84> forFinancialInstrumentAttributes84 = new MMConstraint<FinancialInstrumentAttributes84>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousNextFactorRule";
 			definition = "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption.";
-			owner_lazy = () -> FinancialInstrumentAttributes6.mmObject();
+			owner_lazy = () -> FinancialInstrumentAttributes84.mmObject();
 		}
 
 		@Override
-		public void executeValidator(FinancialInstrumentAttributes6 obj) throws Exception {
-			checkFinancialInstrumentAttributes6(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes9
-	 * FinancialInstrumentAttributes9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PreviousNextFactorRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<FinancialInstrumentAttributes9> forFinancialInstrumentAttributes9 = new MMConstraint<FinancialInstrumentAttributes9>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "PreviousNextFactorRule";
-			definition = "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption.";
-			owner_lazy = () -> FinancialInstrumentAttributes9.mmObject();
-		}
-
-		@Override
-		public void executeValidator(FinancialInstrumentAttributes9 obj) throws Exception {
-			checkFinancialInstrumentAttributes9(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes18
-	 * FinancialInstrumentAttributes18}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PreviousNextFactorRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<FinancialInstrumentAttributes18> forFinancialInstrumentAttributes18 = new MMConstraint<FinancialInstrumentAttributes18>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "PreviousNextFactorRule";
-			definition = "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption.";
-			owner_lazy = () -> FinancialInstrumentAttributes18.mmObject();
-		}
-
-		@Override
-		public void executeValidator(FinancialInstrumentAttributes18 obj) throws Exception {
-			checkFinancialInstrumentAttributes18(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes22
-	 * FinancialInstrumentAttributes22}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PreviousNextFactorRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<FinancialInstrumentAttributes22> forFinancialInstrumentAttributes22 = new MMConstraint<FinancialInstrumentAttributes22>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "PreviousNextFactorRule";
-			definition = "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption.";
-			owner_lazy = () -> FinancialInstrumentAttributes22.mmObject();
-		}
-
-		@Override
-		public void executeValidator(FinancialInstrumentAttributes22 obj) throws Exception {
-			checkFinancialInstrumentAttributes22(obj);
+		public void executeValidator(FinancialInstrumentAttributes84 obj) throws Exception {
+			checkFinancialInstrumentAttributes84(obj);
 		}
 	};
 	/**
@@ -215,8 +113,8 @@ public class ConstraintPreviousNextFactorRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes38
-	 * FinancialInstrumentAttributes38}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes85
+	 * FinancialInstrumentAttributes85}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -230,17 +128,17 @@ public class ConstraintPreviousNextFactorRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<FinancialInstrumentAttributes38> forFinancialInstrumentAttributes38 = new MMConstraint<FinancialInstrumentAttributes38>() {
+	public static final MMConstraint<FinancialInstrumentAttributes85> forFinancialInstrumentAttributes85 = new MMConstraint<FinancialInstrumentAttributes85>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousNextFactorRule";
 			definition = "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption.";
-			owner_lazy = () -> FinancialInstrumentAttributes38.mmObject();
+			owner_lazy = () -> FinancialInstrumentAttributes85.mmObject();
 		}
 
 		@Override
-		public void executeValidator(FinancialInstrumentAttributes38 obj) throws Exception {
-			checkFinancialInstrumentAttributes38(obj);
+		public void executeValidator(FinancialInstrumentAttributes85 obj) throws Exception {
+			checkFinancialInstrumentAttributes85(obj);
 		}
 	};
 	/**
@@ -249,8 +147,8 @@ public class ConstraintPreviousNextFactorRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes7
-	 * FinancialInstrumentAttributes7}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes67
+	 * FinancialInstrumentAttributes67}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -262,121 +160,34 @@ public class ConstraintPreviousNextFactorRule {
 	 * definition} =
 	 * "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption."
 	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<FinancialInstrumentAttributes7> forFinancialInstrumentAttributes7 = new MMConstraint<FinancialInstrumentAttributes7>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "PreviousNextFactorRule";
-			definition = "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption.";
-			owner_lazy = () -> FinancialInstrumentAttributes7.mmObject();
-		}
-
-		@Override
-		public void executeValidator(FinancialInstrumentAttributes7 obj) throws Exception {
-			checkFinancialInstrumentAttributes7(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes5
-	 * FinancialInstrumentAttributes5}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PreviousNextFactorRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption."
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPreviousNextFactorRule#forFinancialInstrumentAttributes80
+	 * ConstraintPreviousNextFactorRule.forFinancialInstrumentAttributes80}</li>
+	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPreviousNextFactorRule#forFinancialInstrumentAttributes49
+	 * ConstraintPreviousNextFactorRule.forFinancialInstrumentAttributes49}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<FinancialInstrumentAttributes5> forFinancialInstrumentAttributes5 = new MMConstraint<FinancialInstrumentAttributes5>() {
+	public static final MMConstraint<FinancialInstrumentAttributes67> forFinancialInstrumentAttributes67 = new MMConstraint<FinancialInstrumentAttributes67>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousNextFactorRule";
 			definition = "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption.";
-			owner_lazy = () -> FinancialInstrumentAttributes5.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPreviousNextFactorRule.forFinancialInstrumentAttributes80);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPreviousNextFactorRule.forFinancialInstrumentAttributes49;
+			owner_lazy = () -> FinancialInstrumentAttributes67.mmObject();
 		}
 
 		@Override
-		public void executeValidator(FinancialInstrumentAttributes5 obj) throws Exception {
-			checkFinancialInstrumentAttributes5(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes11
-	 * FinancialInstrumentAttributes11}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PreviousNextFactorRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<FinancialInstrumentAttributes11> forFinancialInstrumentAttributes11 = new MMConstraint<FinancialInstrumentAttributes11>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "PreviousNextFactorRule";
-			definition = "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption.";
-			owner_lazy = () -> FinancialInstrumentAttributes11.mmObject();
-		}
-
-		@Override
-		public void executeValidator(FinancialInstrumentAttributes11 obj) throws Exception {
-			checkFinancialInstrumentAttributes11(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes10
-	 * FinancialInstrumentAttributes10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PreviousNextFactorRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<FinancialInstrumentAttributes10> forFinancialInstrumentAttributes10 = new MMConstraint<FinancialInstrumentAttributes10>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "PreviousNextFactorRule";
-			definition = "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption.";
-			owner_lazy = () -> FinancialInstrumentAttributes10.mmObject();
-		}
-
-		@Override
-		public void executeValidator(FinancialInstrumentAttributes10 obj) throws Exception {
-			checkFinancialInstrumentAttributes10(obj);
+		public void executeValidator(FinancialInstrumentAttributes67 obj) throws Exception {
+			checkFinancialInstrumentAttributes67(obj);
 		}
 	};
 	/**
@@ -419,8 +230,8 @@ public class ConstraintPreviousNextFactorRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes16
-	 * FinancialInstrumentAttributes16}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes5
+	 * FinancialInstrumentAttributes5}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -434,17 +245,17 @@ public class ConstraintPreviousNextFactorRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<FinancialInstrumentAttributes16> forFinancialInstrumentAttributes16 = new MMConstraint<FinancialInstrumentAttributes16>() {
+	public static final MMConstraint<FinancialInstrumentAttributes5> forFinancialInstrumentAttributes5 = new MMConstraint<FinancialInstrumentAttributes5>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousNextFactorRule";
 			definition = "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption.";
-			owner_lazy = () -> FinancialInstrumentAttributes16.mmObject();
+			owner_lazy = () -> FinancialInstrumentAttributes5.mmObject();
 		}
 
 		@Override
-		public void executeValidator(FinancialInstrumentAttributes16 obj) throws Exception {
-			checkFinancialInstrumentAttributes16(obj);
+		public void executeValidator(FinancialInstrumentAttributes5 obj) throws Exception {
+			checkFinancialInstrumentAttributes5(obj);
 		}
 	};
 	/**
@@ -453,8 +264,8 @@ public class ConstraintPreviousNextFactorRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes23
-	 * FinancialInstrumentAttributes23}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes38
+	 * FinancialInstrumentAttributes38}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -468,17 +279,17 @@ public class ConstraintPreviousNextFactorRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<FinancialInstrumentAttributes23> forFinancialInstrumentAttributes23 = new MMConstraint<FinancialInstrumentAttributes23>() {
+	public static final MMConstraint<FinancialInstrumentAttributes38> forFinancialInstrumentAttributes38 = new MMConstraint<FinancialInstrumentAttributes38>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousNextFactorRule";
 			definition = "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption.";
-			owner_lazy = () -> FinancialInstrumentAttributes23.mmObject();
+			owner_lazy = () -> FinancialInstrumentAttributes38.mmObject();
 		}
 
 		@Override
-		public void executeValidator(FinancialInstrumentAttributes23 obj) throws Exception {
-			checkFinancialInstrumentAttributes23(obj);
+		public void executeValidator(FinancialInstrumentAttributes38 obj) throws Exception {
+			checkFinancialInstrumentAttributes38(obj);
 		}
 	};
 	/**
@@ -487,8 +298,8 @@ public class ConstraintPreviousNextFactorRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes24
-	 * FinancialInstrumentAttributes24}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes83
+	 * FinancialInstrumentAttributes83}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -502,17 +313,17 @@ public class ConstraintPreviousNextFactorRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<FinancialInstrumentAttributes24> forFinancialInstrumentAttributes24 = new MMConstraint<FinancialInstrumentAttributes24>() {
+	public static final MMConstraint<FinancialInstrumentAttributes83> forFinancialInstrumentAttributes83 = new MMConstraint<FinancialInstrumentAttributes83>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousNextFactorRule";
 			definition = "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption.";
-			owner_lazy = () -> FinancialInstrumentAttributes24.mmObject();
+			owner_lazy = () -> FinancialInstrumentAttributes83.mmObject();
 		}
 
 		@Override
-		public void executeValidator(FinancialInstrumentAttributes24 obj) throws Exception {
-			checkFinancialInstrumentAttributes24(obj);
+		public void executeValidator(FinancialInstrumentAttributes83 obj) throws Exception {
+			checkFinancialInstrumentAttributes83(obj);
 		}
 	};
 	/**
@@ -521,8 +332,8 @@ public class ConstraintPreviousNextFactorRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes33
-	 * FinancialInstrumentAttributes33}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes49
+	 * FinancialInstrumentAttributes49}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -534,19 +345,34 @@ public class ConstraintPreviousNextFactorRule {
 	 * definition} =
 	 * "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPreviousNextFactorRule#forFinancialInstrumentAttributes67
+	 * ConstraintPreviousNextFactorRule.forFinancialInstrumentAttributes67}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPreviousNextFactorRule#forFinancialInstrumentAttributes34
+	 * ConstraintPreviousNextFactorRule.forFinancialInstrumentAttributes34}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<FinancialInstrumentAttributes33> forFinancialInstrumentAttributes33 = new MMConstraint<FinancialInstrumentAttributes33>() {
+	public static final MMConstraint<FinancialInstrumentAttributes49> forFinancialInstrumentAttributes49 = new MMConstraint<FinancialInstrumentAttributes49>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousNextFactorRule";
 			definition = "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption.";
-			owner_lazy = () -> FinancialInstrumentAttributes33.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPreviousNextFactorRule.forFinancialInstrumentAttributes67);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPreviousNextFactorRule.forFinancialInstrumentAttributes34;
+			owner_lazy = () -> FinancialInstrumentAttributes49.mmObject();
 		}
 
 		@Override
-		public void executeValidator(FinancialInstrumentAttributes33 obj) throws Exception {
-			checkFinancialInstrumentAttributes33(obj);
+		public void executeValidator(FinancialInstrumentAttributes49 obj) throws Exception {
+			checkFinancialInstrumentAttributes49(obj);
 		}
 	};
 	/**
@@ -632,8 +458,8 @@ public class ConstraintPreviousNextFactorRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes40
-	 * FinancialInstrumentAttributes40}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes18
+	 * FinancialInstrumentAttributes18}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -647,17 +473,17 @@ public class ConstraintPreviousNextFactorRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<FinancialInstrumentAttributes40> forFinancialInstrumentAttributes40 = new MMConstraint<FinancialInstrumentAttributes40>() {
+	public static final MMConstraint<FinancialInstrumentAttributes18> forFinancialInstrumentAttributes18 = new MMConstraint<FinancialInstrumentAttributes18>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousNextFactorRule";
 			definition = "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption.";
-			owner_lazy = () -> FinancialInstrumentAttributes40.mmObject();
+			owner_lazy = () -> FinancialInstrumentAttributes18.mmObject();
 		}
 
 		@Override
-		public void executeValidator(FinancialInstrumentAttributes40 obj) throws Exception {
-			checkFinancialInstrumentAttributes40(obj);
+		public void executeValidator(FinancialInstrumentAttributes18 obj) throws Exception {
+			checkFinancialInstrumentAttributes18(obj);
 		}
 	};
 	/**
@@ -666,8 +492,8 @@ public class ConstraintPreviousNextFactorRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes43
-	 * FinancialInstrumentAttributes43}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes22
+	 * FinancialInstrumentAttributes22}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -679,28 +505,19 @@ public class ConstraintPreviousNextFactorRule {
 	 * definition} =
 	 * "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption."
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintPreviousNextFactorRule#forFinancialInstrumentAttributes48
-	 * ConstraintPreviousNextFactorRule.forFinancialInstrumentAttributes48}</li>
-	 * </ul>
-	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<FinancialInstrumentAttributes43> forFinancialInstrumentAttributes43 = new MMConstraint<FinancialInstrumentAttributes43>() {
+	public static final MMConstraint<FinancialInstrumentAttributes22> forFinancialInstrumentAttributes22 = new MMConstraint<FinancialInstrumentAttributes22>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousNextFactorRule";
 			definition = "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPreviousNextFactorRule.forFinancialInstrumentAttributes48);
-			owner_lazy = () -> FinancialInstrumentAttributes43.mmObject();
+			owner_lazy = () -> FinancialInstrumentAttributes22.mmObject();
 		}
 
 		@Override
-		public void executeValidator(FinancialInstrumentAttributes43 obj) throws Exception {
-			checkFinancialInstrumentAttributes43(obj);
+		public void executeValidator(FinancialInstrumentAttributes22 obj) throws Exception {
+			checkFinancialInstrumentAttributes22(obj);
 		}
 	};
 	/**
@@ -709,8 +526,48 @@ public class ConstraintPreviousNextFactorRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes45
-	 * FinancialInstrumentAttributes45}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes79
+	 * FinancialInstrumentAttributes79}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PreviousNextFactorRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPreviousNextFactorRule#forFinancialInstrumentAttributes66
+	 * ConstraintPreviousNextFactorRule.forFinancialInstrumentAttributes66}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<FinancialInstrumentAttributes79> forFinancialInstrumentAttributes79 = new MMConstraint<FinancialInstrumentAttributes79>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PreviousNextFactorRule";
+			definition = "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPreviousNextFactorRule.forFinancialInstrumentAttributes66;
+			owner_lazy = () -> FinancialInstrumentAttributes79.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes79 obj) throws Exception {
+			checkFinancialInstrumentAttributes79(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes7
+	 * FinancialInstrumentAttributes7}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -724,17 +581,85 @@ public class ConstraintPreviousNextFactorRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<FinancialInstrumentAttributes45> forFinancialInstrumentAttributes45 = new MMConstraint<FinancialInstrumentAttributes45>() {
+	public static final MMConstraint<FinancialInstrumentAttributes7> forFinancialInstrumentAttributes7 = new MMConstraint<FinancialInstrumentAttributes7>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousNextFactorRule";
 			definition = "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption.";
-			owner_lazy = () -> FinancialInstrumentAttributes45.mmObject();
+			owner_lazy = () -> FinancialInstrumentAttributes7.mmObject();
 		}
 
 		@Override
-		public void executeValidator(FinancialInstrumentAttributes45 obj) throws Exception {
-			checkFinancialInstrumentAttributes45(obj);
+		public void executeValidator(FinancialInstrumentAttributes7 obj) throws Exception {
+			checkFinancialInstrumentAttributes7(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes71
+	 * FinancialInstrumentAttributes71}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PreviousNextFactorRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<FinancialInstrumentAttributes71> forFinancialInstrumentAttributes71 = new MMConstraint<FinancialInstrumentAttributes71>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PreviousNextFactorRule";
+			definition = "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption.";
+			owner_lazy = () -> FinancialInstrumentAttributes71.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes71 obj) throws Exception {
+			checkFinancialInstrumentAttributes71(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes6
+	 * FinancialInstrumentAttributes6}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PreviousNextFactorRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<FinancialInstrumentAttributes6> forFinancialInstrumentAttributes6 = new MMConstraint<FinancialInstrumentAttributes6>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PreviousNextFactorRule";
+			definition = "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption.";
+			owner_lazy = () -> FinancialInstrumentAttributes6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes6 obj) throws Exception {
+			checkFinancialInstrumentAttributes6(obj);
 		}
 	};
 	/**
@@ -792,8 +717,8 @@ public class ConstraintPreviousNextFactorRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes50
-	 * FinancialInstrumentAttributes50}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes65
+	 * FinancialInstrumentAttributes65}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -809,181 +734,30 @@ public class ConstraintPreviousNextFactorRule {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintPreviousNextFactorRule#forFinancialInstrumentAttributes65
-	 * ConstraintPreviousNextFactorRule.forFinancialInstrumentAttributes65}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPreviousNextFactorRule#forFinancialInstrumentAttributes81
+	 * ConstraintPreviousNextFactorRule.forFinancialInstrumentAttributes81}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintPreviousNextFactorRule#forFinancialInstrumentAttributes32
-	 * ConstraintPreviousNextFactorRule.forFinancialInstrumentAttributes32}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPreviousNextFactorRule#forFinancialInstrumentAttributes50
+	 * ConstraintPreviousNextFactorRule.forFinancialInstrumentAttributes50}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<FinancialInstrumentAttributes50> forFinancialInstrumentAttributes50 = new MMConstraint<FinancialInstrumentAttributes50>() {
+	public static final MMConstraint<FinancialInstrumentAttributes65> forFinancialInstrumentAttributes65 = new MMConstraint<FinancialInstrumentAttributes65>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousNextFactorRule";
 			definition = "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPreviousNextFactorRule.forFinancialInstrumentAttributes65);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPreviousNextFactorRule.forFinancialInstrumentAttributes32;
-			owner_lazy = () -> FinancialInstrumentAttributes50.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPreviousNextFactorRule.forFinancialInstrumentAttributes81);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPreviousNextFactorRule.forFinancialInstrumentAttributes50;
+			owner_lazy = () -> FinancialInstrumentAttributes65.mmObject();
 		}
 
 		@Override
-		public void executeValidator(FinancialInstrumentAttributes50 obj) throws Exception {
-			checkFinancialInstrumentAttributes50(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes49
-	 * FinancialInstrumentAttributes49}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PreviousNextFactorRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintPreviousNextFactorRule#forFinancialInstrumentAttributes67
-	 * ConstraintPreviousNextFactorRule.forFinancialInstrumentAttributes67}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintPreviousNextFactorRule#forFinancialInstrumentAttributes34
-	 * ConstraintPreviousNextFactorRule.forFinancialInstrumentAttributes34}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<FinancialInstrumentAttributes49> forFinancialInstrumentAttributes49 = new MMConstraint<FinancialInstrumentAttributes49>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "PreviousNextFactorRule";
-			definition = "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPreviousNextFactorRule.forFinancialInstrumentAttributes67);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPreviousNextFactorRule.forFinancialInstrumentAttributes34;
-			owner_lazy = () -> FinancialInstrumentAttributes49.mmObject();
-		}
-
-		@Override
-		public void executeValidator(FinancialInstrumentAttributes49 obj) throws Exception {
-			checkFinancialInstrumentAttributes49(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes55
-	 * FinancialInstrumentAttributes55}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PreviousNextFactorRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<FinancialInstrumentAttributes55> forFinancialInstrumentAttributes55 = new MMConstraint<FinancialInstrumentAttributes55>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "PreviousNextFactorRule";
-			definition = "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption.";
-			owner_lazy = () -> FinancialInstrumentAttributes55.mmObject();
-		}
-
-		@Override
-		public void executeValidator(FinancialInstrumentAttributes55 obj) throws Exception {
-			checkFinancialInstrumentAttributes55(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes57
-	 * FinancialInstrumentAttributes57}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PreviousNextFactorRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<FinancialInstrumentAttributes57> forFinancialInstrumentAttributes57 = new MMConstraint<FinancialInstrumentAttributes57>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "PreviousNextFactorRule";
-			definition = "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption.";
-			owner_lazy = () -> FinancialInstrumentAttributes57.mmObject();
-		}
-
-		@Override
-		public void executeValidator(FinancialInstrumentAttributes57 obj) throws Exception {
-			checkFinancialInstrumentAttributes57(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes56
-	 * FinancialInstrumentAttributes56}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PreviousNextFactorRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<FinancialInstrumentAttributes56> forFinancialInstrumentAttributes56 = new MMConstraint<FinancialInstrumentAttributes56>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "PreviousNextFactorRule";
-			definition = "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption.";
-			owner_lazy = () -> FinancialInstrumentAttributes56.mmObject();
-		}
-
-		@Override
-		public void executeValidator(FinancialInstrumentAttributes56 obj) throws Exception {
-			checkFinancialInstrumentAttributes56(obj);
+		public void executeValidator(FinancialInstrumentAttributes65 obj) throws Exception {
+			checkFinancialInstrumentAttributes65(obj);
 		}
 	};
 	/**
@@ -1041,8 +815,8 @@ public class ConstraintPreviousNextFactorRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes65
-	 * FinancialInstrumentAttributes65}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes33
+	 * FinancialInstrumentAttributes33}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1054,34 +828,19 @@ public class ConstraintPreviousNextFactorRule {
 	 * definition} =
 	 * "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption."
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintPreviousNextFactorRule#forFinancialInstrumentAttributes81
-	 * ConstraintPreviousNextFactorRule.forFinancialInstrumentAttributes81}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintPreviousNextFactorRule#forFinancialInstrumentAttributes50
-	 * ConstraintPreviousNextFactorRule.forFinancialInstrumentAttributes50}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<FinancialInstrumentAttributes65> forFinancialInstrumentAttributes65 = new MMConstraint<FinancialInstrumentAttributes65>() {
+	public static final MMConstraint<FinancialInstrumentAttributes33> forFinancialInstrumentAttributes33 = new MMConstraint<FinancialInstrumentAttributes33>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousNextFactorRule";
 			definition = "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPreviousNextFactorRule.forFinancialInstrumentAttributes81);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPreviousNextFactorRule.forFinancialInstrumentAttributes50;
-			owner_lazy = () -> FinancialInstrumentAttributes65.mmObject();
+			owner_lazy = () -> FinancialInstrumentAttributes33.mmObject();
 		}
 
 		@Override
-		public void executeValidator(FinancialInstrumentAttributes65 obj) throws Exception {
-			checkFinancialInstrumentAttributes65(obj);
+		public void executeValidator(FinancialInstrumentAttributes33 obj) throws Exception {
+			checkFinancialInstrumentAttributes33(obj);
 		}
 	};
 	/**
@@ -1090,8 +849,8 @@ public class ConstraintPreviousNextFactorRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes67
-	 * FinancialInstrumentAttributes67}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes40
+	 * FinancialInstrumentAttributes40}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1103,34 +862,19 @@ public class ConstraintPreviousNextFactorRule {
 	 * definition} =
 	 * "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption."
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintPreviousNextFactorRule#forFinancialInstrumentAttributes80
-	 * ConstraintPreviousNextFactorRule.forFinancialInstrumentAttributes80}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintPreviousNextFactorRule#forFinancialInstrumentAttributes49
-	 * ConstraintPreviousNextFactorRule.forFinancialInstrumentAttributes49}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<FinancialInstrumentAttributes67> forFinancialInstrumentAttributes67 = new MMConstraint<FinancialInstrumentAttributes67>() {
+	public static final MMConstraint<FinancialInstrumentAttributes40> forFinancialInstrumentAttributes40 = new MMConstraint<FinancialInstrumentAttributes40>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousNextFactorRule";
 			definition = "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPreviousNextFactorRule.forFinancialInstrumentAttributes80);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPreviousNextFactorRule.forFinancialInstrumentAttributes49;
-			owner_lazy = () -> FinancialInstrumentAttributes67.mmObject();
+			owner_lazy = () -> FinancialInstrumentAttributes40.mmObject();
 		}
 
 		@Override
-		public void executeValidator(FinancialInstrumentAttributes67 obj) throws Exception {
-			checkFinancialInstrumentAttributes67(obj);
+		public void executeValidator(FinancialInstrumentAttributes40 obj) throws Exception {
+			checkFinancialInstrumentAttributes40(obj);
 		}
 	};
 	/**
@@ -1139,8 +883,8 @@ public class ConstraintPreviousNextFactorRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes70
-	 * FinancialInstrumentAttributes70}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes55
+	 * FinancialInstrumentAttributes55}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1154,17 +898,17 @@ public class ConstraintPreviousNextFactorRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<FinancialInstrumentAttributes70> forFinancialInstrumentAttributes70 = new MMConstraint<FinancialInstrumentAttributes70>() {
+	public static final MMConstraint<FinancialInstrumentAttributes55> forFinancialInstrumentAttributes55 = new MMConstraint<FinancialInstrumentAttributes55>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousNextFactorRule";
 			definition = "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption.";
-			owner_lazy = () -> FinancialInstrumentAttributes70.mmObject();
+			owner_lazy = () -> FinancialInstrumentAttributes55.mmObject();
 		}
 
 		@Override
-		public void executeValidator(FinancialInstrumentAttributes70 obj) throws Exception {
-			checkFinancialInstrumentAttributes70(obj);
+		public void executeValidator(FinancialInstrumentAttributes55 obj) throws Exception {
+			checkFinancialInstrumentAttributes55(obj);
 		}
 	};
 	/**
@@ -1173,8 +917,8 @@ public class ConstraintPreviousNextFactorRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes69
-	 * FinancialInstrumentAttributes69}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes23
+	 * FinancialInstrumentAttributes23}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1188,91 +932,17 @@ public class ConstraintPreviousNextFactorRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<FinancialInstrumentAttributes69> forFinancialInstrumentAttributes69 = new MMConstraint<FinancialInstrumentAttributes69>() {
+	public static final MMConstraint<FinancialInstrumentAttributes23> forFinancialInstrumentAttributes23 = new MMConstraint<FinancialInstrumentAttributes23>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousNextFactorRule";
 			definition = "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption.";
-			owner_lazy = () -> FinancialInstrumentAttributes69.mmObject();
+			owner_lazy = () -> FinancialInstrumentAttributes23.mmObject();
 		}
 
 		@Override
-		public void executeValidator(FinancialInstrumentAttributes69 obj) throws Exception {
-			checkFinancialInstrumentAttributes69(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes71
-	 * FinancialInstrumentAttributes71}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PreviousNextFactorRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<FinancialInstrumentAttributes71> forFinancialInstrumentAttributes71 = new MMConstraint<FinancialInstrumentAttributes71>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "PreviousNextFactorRule";
-			definition = "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption.";
-			owner_lazy = () -> FinancialInstrumentAttributes71.mmObject();
-		}
-
-		@Override
-		public void executeValidator(FinancialInstrumentAttributes71 obj) throws Exception {
-			checkFinancialInstrumentAttributes71(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes79
-	 * FinancialInstrumentAttributes79}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PreviousNextFactorRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption."
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintPreviousNextFactorRule#forFinancialInstrumentAttributes66
-	 * ConstraintPreviousNextFactorRule.forFinancialInstrumentAttributes66}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<FinancialInstrumentAttributes79> forFinancialInstrumentAttributes79 = new MMConstraint<FinancialInstrumentAttributes79>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "PreviousNextFactorRule";
-			definition = "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPreviousNextFactorRule.forFinancialInstrumentAttributes66;
-			owner_lazy = () -> FinancialInstrumentAttributes79.mmObject();
-		}
-
-		@Override
-		public void executeValidator(FinancialInstrumentAttributes79 obj) throws Exception {
-			checkFinancialInstrumentAttributes79(obj);
+		public void executeValidator(FinancialInstrumentAttributes23 obj) throws Exception {
+			checkFinancialInstrumentAttributes23(obj);
 		}
 	};
 	/**
@@ -1361,8 +1031,8 @@ public class ConstraintPreviousNextFactorRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes85
-	 * FinancialInstrumentAttributes85}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes57
+	 * FinancialInstrumentAttributes57}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1376,17 +1046,17 @@ public class ConstraintPreviousNextFactorRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<FinancialInstrumentAttributes85> forFinancialInstrumentAttributes85 = new MMConstraint<FinancialInstrumentAttributes85>() {
+	public static final MMConstraint<FinancialInstrumentAttributes57> forFinancialInstrumentAttributes57 = new MMConstraint<FinancialInstrumentAttributes57>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousNextFactorRule";
 			definition = "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption.";
-			owner_lazy = () -> FinancialInstrumentAttributes85.mmObject();
+			owner_lazy = () -> FinancialInstrumentAttributes57.mmObject();
 		}
 
 		@Override
-		public void executeValidator(FinancialInstrumentAttributes85 obj) throws Exception {
-			checkFinancialInstrumentAttributes85(obj);
+		public void executeValidator(FinancialInstrumentAttributes57 obj) throws Exception {
+			checkFinancialInstrumentAttributes57(obj);
 		}
 	};
 	/**
@@ -1395,8 +1065,8 @@ public class ConstraintPreviousNextFactorRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes84
-	 * FinancialInstrumentAttributes84}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes24
+	 * FinancialInstrumentAttributes24}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1410,17 +1080,17 @@ public class ConstraintPreviousNextFactorRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<FinancialInstrumentAttributes84> forFinancialInstrumentAttributes84 = new MMConstraint<FinancialInstrumentAttributes84>() {
+	public static final MMConstraint<FinancialInstrumentAttributes24> forFinancialInstrumentAttributes24 = new MMConstraint<FinancialInstrumentAttributes24>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousNextFactorRule";
 			definition = "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption.";
-			owner_lazy = () -> FinancialInstrumentAttributes84.mmObject();
+			owner_lazy = () -> FinancialInstrumentAttributes24.mmObject();
 		}
 
 		@Override
-		public void executeValidator(FinancialInstrumentAttributes84 obj) throws Exception {
-			checkFinancialInstrumentAttributes84(obj);
+		public void executeValidator(FinancialInstrumentAttributes24 obj) throws Exception {
+			checkFinancialInstrumentAttributes24(obj);
 		}
 	};
 	/**
@@ -1429,8 +1099,8 @@ public class ConstraintPreviousNextFactorRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes83
-	 * FinancialInstrumentAttributes83}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes45
+	 * FinancialInstrumentAttributes45}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1444,17 +1114,347 @@ public class ConstraintPreviousNextFactorRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<FinancialInstrumentAttributes83> forFinancialInstrumentAttributes83 = new MMConstraint<FinancialInstrumentAttributes83>() {
+	public static final MMConstraint<FinancialInstrumentAttributes45> forFinancialInstrumentAttributes45 = new MMConstraint<FinancialInstrumentAttributes45>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousNextFactorRule";
 			definition = "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption.";
-			owner_lazy = () -> FinancialInstrumentAttributes83.mmObject();
+			owner_lazy = () -> FinancialInstrumentAttributes45.mmObject();
 		}
 
 		@Override
-		public void executeValidator(FinancialInstrumentAttributes83 obj) throws Exception {
-			checkFinancialInstrumentAttributes83(obj);
+		public void executeValidator(FinancialInstrumentAttributes45 obj) throws Exception {
+			checkFinancialInstrumentAttributes45(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes50
+	 * FinancialInstrumentAttributes50}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PreviousNextFactorRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPreviousNextFactorRule#forFinancialInstrumentAttributes65
+	 * ConstraintPreviousNextFactorRule.forFinancialInstrumentAttributes65}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPreviousNextFactorRule#forFinancialInstrumentAttributes32
+	 * ConstraintPreviousNextFactorRule.forFinancialInstrumentAttributes32}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<FinancialInstrumentAttributes50> forFinancialInstrumentAttributes50 = new MMConstraint<FinancialInstrumentAttributes50>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PreviousNextFactorRule";
+			definition = "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPreviousNextFactorRule.forFinancialInstrumentAttributes65);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPreviousNextFactorRule.forFinancialInstrumentAttributes32;
+			owner_lazy = () -> FinancialInstrumentAttributes50.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes50 obj) throws Exception {
+			checkFinancialInstrumentAttributes50(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes10
+	 * FinancialInstrumentAttributes10}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PreviousNextFactorRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<FinancialInstrumentAttributes10> forFinancialInstrumentAttributes10 = new MMConstraint<FinancialInstrumentAttributes10>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PreviousNextFactorRule";
+			definition = "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption.";
+			owner_lazy = () -> FinancialInstrumentAttributes10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes10 obj) throws Exception {
+			checkFinancialInstrumentAttributes10(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes43
+	 * FinancialInstrumentAttributes43}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PreviousNextFactorRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPreviousNextFactorRule#forFinancialInstrumentAttributes48
+	 * ConstraintPreviousNextFactorRule.forFinancialInstrumentAttributes48}</li>
+	 * </ul>
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<FinancialInstrumentAttributes43> forFinancialInstrumentAttributes43 = new MMConstraint<FinancialInstrumentAttributes43>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PreviousNextFactorRule";
+			definition = "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPreviousNextFactorRule.forFinancialInstrumentAttributes48);
+			owner_lazy = () -> FinancialInstrumentAttributes43.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes43 obj) throws Exception {
+			checkFinancialInstrumentAttributes43(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes70
+	 * FinancialInstrumentAttributes70}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PreviousNextFactorRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<FinancialInstrumentAttributes70> forFinancialInstrumentAttributes70 = new MMConstraint<FinancialInstrumentAttributes70>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PreviousNextFactorRule";
+			definition = "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption.";
+			owner_lazy = () -> FinancialInstrumentAttributes70.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes70 obj) throws Exception {
+			checkFinancialInstrumentAttributes70(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes56
+	 * FinancialInstrumentAttributes56}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PreviousNextFactorRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<FinancialInstrumentAttributes56> forFinancialInstrumentAttributes56 = new MMConstraint<FinancialInstrumentAttributes56>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PreviousNextFactorRule";
+			definition = "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption.";
+			owner_lazy = () -> FinancialInstrumentAttributes56.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes56 obj) throws Exception {
+			checkFinancialInstrumentAttributes56(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes69
+	 * FinancialInstrumentAttributes69}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PreviousNextFactorRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<FinancialInstrumentAttributes69> forFinancialInstrumentAttributes69 = new MMConstraint<FinancialInstrumentAttributes69>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PreviousNextFactorRule";
+			definition = "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption.";
+			owner_lazy = () -> FinancialInstrumentAttributes69.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes69 obj) throws Exception {
+			checkFinancialInstrumentAttributes69(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes11
+	 * FinancialInstrumentAttributes11}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PreviousNextFactorRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<FinancialInstrumentAttributes11> forFinancialInstrumentAttributes11 = new MMConstraint<FinancialInstrumentAttributes11>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PreviousNextFactorRule";
+			definition = "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption.";
+			owner_lazy = () -> FinancialInstrumentAttributes11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes11 obj) throws Exception {
+			checkFinancialInstrumentAttributes11(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes9
+	 * FinancialInstrumentAttributes9}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PreviousNextFactorRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<FinancialInstrumentAttributes9> forFinancialInstrumentAttributes9 = new MMConstraint<FinancialInstrumentAttributes9>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PreviousNextFactorRule";
+			definition = "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption.";
+			owner_lazy = () -> FinancialInstrumentAttributes9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes9 obj) throws Exception {
+			checkFinancialInstrumentAttributes9(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes16
+	 * FinancialInstrumentAttributes16}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PreviousNextFactorRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<FinancialInstrumentAttributes16> forFinancialInstrumentAttributes16 = new MMConstraint<FinancialInstrumentAttributes16>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PreviousNextFactorRule";
+			definition = "In case of partial redemption by pool factor, PreviousFactor provides the factor applicable before redemption and NextFactor provides the factor applicable after redemption.";
+			owner_lazy = () -> FinancialInstrumentAttributes16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes16 obj) throws Exception {
+			checkFinancialInstrumentAttributes16(obj);
 		}
 	};
 
@@ -1463,34 +1463,7 @@ public class ConstraintPreviousNextFactorRule {
 	 * factor applicable before redemption and NextFactor provides the factor
 	 * applicable after redemption.
 	 */
-	public static void checkFinancialInstrumentAttributes6(FinancialInstrumentAttributes6 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * In case of partial redemption by pool factor, PreviousFactor provides the
-	 * factor applicable before redemption and NextFactor provides the factor
-	 * applicable after redemption.
-	 */
-	public static void checkFinancialInstrumentAttributes9(FinancialInstrumentAttributes9 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * In case of partial redemption by pool factor, PreviousFactor provides the
-	 * factor applicable before redemption and NextFactor provides the factor
-	 * applicable after redemption.
-	 */
-	public static void checkFinancialInstrumentAttributes18(FinancialInstrumentAttributes18 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * In case of partial redemption by pool factor, PreviousFactor provides the
-	 * factor applicable before redemption and NextFactor provides the factor
-	 * applicable after redemption.
-	 */
-	public static void checkFinancialInstrumentAttributes22(FinancialInstrumentAttributes22 obj) throws Exception {
+	public static void checkFinancialInstrumentAttributes84(FinancialInstrumentAttributes84 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1508,7 +1481,7 @@ public class ConstraintPreviousNextFactorRule {
 	 * factor applicable before redemption and NextFactor provides the factor
 	 * applicable after redemption.
 	 */
-	public static void checkFinancialInstrumentAttributes38(FinancialInstrumentAttributes38 obj) throws Exception {
+	public static void checkFinancialInstrumentAttributes85(FinancialInstrumentAttributes85 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1517,34 +1490,7 @@ public class ConstraintPreviousNextFactorRule {
 	 * factor applicable before redemption and NextFactor provides the factor
 	 * applicable after redemption.
 	 */
-	public static void checkFinancialInstrumentAttributes7(FinancialInstrumentAttributes7 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * In case of partial redemption by pool factor, PreviousFactor provides the
-	 * factor applicable before redemption and NextFactor provides the factor
-	 * applicable after redemption.
-	 */
-	public static void checkFinancialInstrumentAttributes5(FinancialInstrumentAttributes5 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * In case of partial redemption by pool factor, PreviousFactor provides the
-	 * factor applicable before redemption and NextFactor provides the factor
-	 * applicable after redemption.
-	 */
-	public static void checkFinancialInstrumentAttributes11(FinancialInstrumentAttributes11 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * In case of partial redemption by pool factor, PreviousFactor provides the
-	 * factor applicable before redemption and NextFactor provides the factor
-	 * applicable after redemption.
-	 */
-	public static void checkFinancialInstrumentAttributes10(FinancialInstrumentAttributes10 obj) throws Exception {
+	public static void checkFinancialInstrumentAttributes67(FinancialInstrumentAttributes67 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1562,7 +1508,7 @@ public class ConstraintPreviousNextFactorRule {
 	 * factor applicable before redemption and NextFactor provides the factor
 	 * applicable after redemption.
 	 */
-	public static void checkFinancialInstrumentAttributes16(FinancialInstrumentAttributes16 obj) throws Exception {
+	public static void checkFinancialInstrumentAttributes5(FinancialInstrumentAttributes5 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1571,7 +1517,7 @@ public class ConstraintPreviousNextFactorRule {
 	 * factor applicable before redemption and NextFactor provides the factor
 	 * applicable after redemption.
 	 */
-	public static void checkFinancialInstrumentAttributes23(FinancialInstrumentAttributes23 obj) throws Exception {
+	public static void checkFinancialInstrumentAttributes38(FinancialInstrumentAttributes38 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1580,7 +1526,7 @@ public class ConstraintPreviousNextFactorRule {
 	 * factor applicable before redemption and NextFactor provides the factor
 	 * applicable after redemption.
 	 */
-	public static void checkFinancialInstrumentAttributes24(FinancialInstrumentAttributes24 obj) throws Exception {
+	public static void checkFinancialInstrumentAttributes83(FinancialInstrumentAttributes83 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1589,7 +1535,7 @@ public class ConstraintPreviousNextFactorRule {
 	 * factor applicable before redemption and NextFactor provides the factor
 	 * applicable after redemption.
 	 */
-	public static void checkFinancialInstrumentAttributes33(FinancialInstrumentAttributes33 obj) throws Exception {
+	public static void checkFinancialInstrumentAttributes49(FinancialInstrumentAttributes49 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1616,7 +1562,7 @@ public class ConstraintPreviousNextFactorRule {
 	 * factor applicable before redemption and NextFactor provides the factor
 	 * applicable after redemption.
 	 */
-	public static void checkFinancialInstrumentAttributes40(FinancialInstrumentAttributes40 obj) throws Exception {
+	public static void checkFinancialInstrumentAttributes18(FinancialInstrumentAttributes18 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1625,7 +1571,7 @@ public class ConstraintPreviousNextFactorRule {
 	 * factor applicable before redemption and NextFactor provides the factor
 	 * applicable after redemption.
 	 */
-	public static void checkFinancialInstrumentAttributes43(FinancialInstrumentAttributes43 obj) throws Exception {
+	public static void checkFinancialInstrumentAttributes22(FinancialInstrumentAttributes22 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1634,7 +1580,7 @@ public class ConstraintPreviousNextFactorRule {
 	 * factor applicable before redemption and NextFactor provides the factor
 	 * applicable after redemption.
 	 */
-	public static void checkFinancialInstrumentAttributes45(FinancialInstrumentAttributes45 obj) throws Exception {
+	public static void checkFinancialInstrumentAttributes79(FinancialInstrumentAttributes79 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1643,97 +1589,7 @@ public class ConstraintPreviousNextFactorRule {
 	 * factor applicable before redemption and NextFactor provides the factor
 	 * applicable after redemption.
 	 */
-	public static void checkFinancialInstrumentAttributes48(FinancialInstrumentAttributes48 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * In case of partial redemption by pool factor, PreviousFactor provides the
-	 * factor applicable before redemption and NextFactor provides the factor
-	 * applicable after redemption.
-	 */
-	public static void checkFinancialInstrumentAttributes50(FinancialInstrumentAttributes50 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * In case of partial redemption by pool factor, PreviousFactor provides the
-	 * factor applicable before redemption and NextFactor provides the factor
-	 * applicable after redemption.
-	 */
-	public static void checkFinancialInstrumentAttributes49(FinancialInstrumentAttributes49 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * In case of partial redemption by pool factor, PreviousFactor provides the
-	 * factor applicable before redemption and NextFactor provides the factor
-	 * applicable after redemption.
-	 */
-	public static void checkFinancialInstrumentAttributes55(FinancialInstrumentAttributes55 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * In case of partial redemption by pool factor, PreviousFactor provides the
-	 * factor applicable before redemption and NextFactor provides the factor
-	 * applicable after redemption.
-	 */
-	public static void checkFinancialInstrumentAttributes57(FinancialInstrumentAttributes57 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * In case of partial redemption by pool factor, PreviousFactor provides the
-	 * factor applicable before redemption and NextFactor provides the factor
-	 * applicable after redemption.
-	 */
-	public static void checkFinancialInstrumentAttributes56(FinancialInstrumentAttributes56 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * In case of partial redemption by pool factor, PreviousFactor provides the
-	 * factor applicable before redemption and NextFactor provides the factor
-	 * applicable after redemption.
-	 */
-	public static void checkFinancialInstrumentAttributes66(FinancialInstrumentAttributes66 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * In case of partial redemption by pool factor, PreviousFactor provides the
-	 * factor applicable before redemption and NextFactor provides the factor
-	 * applicable after redemption.
-	 */
-	public static void checkFinancialInstrumentAttributes65(FinancialInstrumentAttributes65 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * In case of partial redemption by pool factor, PreviousFactor provides the
-	 * factor applicable before redemption and NextFactor provides the factor
-	 * applicable after redemption.
-	 */
-	public static void checkFinancialInstrumentAttributes67(FinancialInstrumentAttributes67 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * In case of partial redemption by pool factor, PreviousFactor provides the
-	 * factor applicable before redemption and NextFactor provides the factor
-	 * applicable after redemption.
-	 */
-	public static void checkFinancialInstrumentAttributes70(FinancialInstrumentAttributes70 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * In case of partial redemption by pool factor, PreviousFactor provides the
-	 * factor applicable before redemption and NextFactor provides the factor
-	 * applicable after redemption.
-	 */
-	public static void checkFinancialInstrumentAttributes69(FinancialInstrumentAttributes69 obj) throws Exception {
+	public static void checkFinancialInstrumentAttributes7(FinancialInstrumentAttributes7 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1751,7 +1607,70 @@ public class ConstraintPreviousNextFactorRule {
 	 * factor applicable before redemption and NextFactor provides the factor
 	 * applicable after redemption.
 	 */
-	public static void checkFinancialInstrumentAttributes79(FinancialInstrumentAttributes79 obj) throws Exception {
+	public static void checkFinancialInstrumentAttributes6(FinancialInstrumentAttributes6 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * In case of partial redemption by pool factor, PreviousFactor provides the
+	 * factor applicable before redemption and NextFactor provides the factor
+	 * applicable after redemption.
+	 */
+	public static void checkFinancialInstrumentAttributes48(FinancialInstrumentAttributes48 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * In case of partial redemption by pool factor, PreviousFactor provides the
+	 * factor applicable before redemption and NextFactor provides the factor
+	 * applicable after redemption.
+	 */
+	public static void checkFinancialInstrumentAttributes65(FinancialInstrumentAttributes65 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * In case of partial redemption by pool factor, PreviousFactor provides the
+	 * factor applicable before redemption and NextFactor provides the factor
+	 * applicable after redemption.
+	 */
+	public static void checkFinancialInstrumentAttributes66(FinancialInstrumentAttributes66 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * In case of partial redemption by pool factor, PreviousFactor provides the
+	 * factor applicable before redemption and NextFactor provides the factor
+	 * applicable after redemption.
+	 */
+	public static void checkFinancialInstrumentAttributes33(FinancialInstrumentAttributes33 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * In case of partial redemption by pool factor, PreviousFactor provides the
+	 * factor applicable before redemption and NextFactor provides the factor
+	 * applicable after redemption.
+	 */
+	public static void checkFinancialInstrumentAttributes40(FinancialInstrumentAttributes40 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * In case of partial redemption by pool factor, PreviousFactor provides the
+	 * factor applicable before redemption and NextFactor provides the factor
+	 * applicable after redemption.
+	 */
+	public static void checkFinancialInstrumentAttributes55(FinancialInstrumentAttributes55 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * In case of partial redemption by pool factor, PreviousFactor provides the
+	 * factor applicable before redemption and NextFactor provides the factor
+	 * applicable after redemption.
+	 */
+	public static void checkFinancialInstrumentAttributes23(FinancialInstrumentAttributes23 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1778,7 +1697,7 @@ public class ConstraintPreviousNextFactorRule {
 	 * factor applicable before redemption and NextFactor provides the factor
 	 * applicable after redemption.
 	 */
-	public static void checkFinancialInstrumentAttributes85(FinancialInstrumentAttributes85 obj) throws Exception {
+	public static void checkFinancialInstrumentAttributes57(FinancialInstrumentAttributes57 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1787,7 +1706,7 @@ public class ConstraintPreviousNextFactorRule {
 	 * factor applicable before redemption and NextFactor provides the factor
 	 * applicable after redemption.
 	 */
-	public static void checkFinancialInstrumentAttributes84(FinancialInstrumentAttributes84 obj) throws Exception {
+	public static void checkFinancialInstrumentAttributes24(FinancialInstrumentAttributes24 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1796,7 +1715,88 @@ public class ConstraintPreviousNextFactorRule {
 	 * factor applicable before redemption and NextFactor provides the factor
 	 * applicable after redemption.
 	 */
-	public static void checkFinancialInstrumentAttributes83(FinancialInstrumentAttributes83 obj) throws Exception {
+	public static void checkFinancialInstrumentAttributes45(FinancialInstrumentAttributes45 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * In case of partial redemption by pool factor, PreviousFactor provides the
+	 * factor applicable before redemption and NextFactor provides the factor
+	 * applicable after redemption.
+	 */
+	public static void checkFinancialInstrumentAttributes50(FinancialInstrumentAttributes50 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * In case of partial redemption by pool factor, PreviousFactor provides the
+	 * factor applicable before redemption and NextFactor provides the factor
+	 * applicable after redemption.
+	 */
+	public static void checkFinancialInstrumentAttributes10(FinancialInstrumentAttributes10 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * In case of partial redemption by pool factor, PreviousFactor provides the
+	 * factor applicable before redemption and NextFactor provides the factor
+	 * applicable after redemption.
+	 */
+	public static void checkFinancialInstrumentAttributes43(FinancialInstrumentAttributes43 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * In case of partial redemption by pool factor, PreviousFactor provides the
+	 * factor applicable before redemption and NextFactor provides the factor
+	 * applicable after redemption.
+	 */
+	public static void checkFinancialInstrumentAttributes70(FinancialInstrumentAttributes70 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * In case of partial redemption by pool factor, PreviousFactor provides the
+	 * factor applicable before redemption and NextFactor provides the factor
+	 * applicable after redemption.
+	 */
+	public static void checkFinancialInstrumentAttributes56(FinancialInstrumentAttributes56 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * In case of partial redemption by pool factor, PreviousFactor provides the
+	 * factor applicable before redemption and NextFactor provides the factor
+	 * applicable after redemption.
+	 */
+	public static void checkFinancialInstrumentAttributes69(FinancialInstrumentAttributes69 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * In case of partial redemption by pool factor, PreviousFactor provides the
+	 * factor applicable before redemption and NextFactor provides the factor
+	 * applicable after redemption.
+	 */
+	public static void checkFinancialInstrumentAttributes11(FinancialInstrumentAttributes11 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * In case of partial redemption by pool factor, PreviousFactor provides the
+	 * factor applicable before redemption and NextFactor provides the factor
+	 * applicable after redemption.
+	 */
+	public static void checkFinancialInstrumentAttributes9(FinancialInstrumentAttributes9 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * In case of partial redemption by pool factor, PreviousFactor provides the
+	 * factor applicable before redemption and NextFactor provides the factor
+	 * applicable after redemption.
+	 */
+	public static void checkFinancialInstrumentAttributes16(FinancialInstrumentAttributes16 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

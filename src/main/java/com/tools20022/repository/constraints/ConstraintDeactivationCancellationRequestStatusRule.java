@@ -49,7 +49,7 @@ public class ConstraintDeactivationCancellationRequestStatusRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<AgentCADeactivationStatusAdviceV01> forAgentCADeactivationStatusAdviceV01 = new MMConstraint<AgentCADeactivationStatusAdviceV01>() {
+	public static final MMConstraint<AgentCADeactivationStatusAdviceV01> for_seev_AgentCADeactivationStatusAdviceV01 = new MMConstraint<AgentCADeactivationStatusAdviceV01>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeactivationCancellationRequestStatusRule";
@@ -59,7 +59,7 @@ public class ConstraintDeactivationCancellationRequestStatusRule {
 
 		@Override
 		public void executeValidator(AgentCADeactivationStatusAdviceV01 obj) throws Exception {
-			checkAgentCADeactivationStatusAdviceV01(obj);
+			check_seev_AgentCADeactivationStatusAdviceV01(obj);
 		}
 	};
 
@@ -67,7 +67,7 @@ public class ConstraintDeactivationCancellationRequestStatusRule {
 	 * If AgentCADeactivationCancellationRequestIdentification is present, then
 	 * DeactivationCancellationRequestStatus must be present.
 	 */
-	public static void checkAgentCADeactivationStatusAdviceV01(AgentCADeactivationStatusAdviceV01 obj) throws Exception {
+	public static void check_seev_AgentCADeactivationStatusAdviceV01(AgentCADeactivationStatusAdviceV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

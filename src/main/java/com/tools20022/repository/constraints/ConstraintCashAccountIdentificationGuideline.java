@@ -36,108 +36,6 @@ public class ConstraintCashAccountIdentificationGuideline {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.CashAccountSearchCriteria2
-	 * CashAccountSearchCriteria2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CashAccountIdentificationGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If the account identification identifies a group of accounts with different types or in different currencies, the currency and/or the account type can be used as additional search criteria."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CashAccountSearchCriteria2> forCashAccountSearchCriteria2 = new MMConstraint<CashAccountSearchCriteria2>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "CashAccountIdentificationGuideline";
-			definition = "If the account identification identifies a group of accounts with different types or in different currencies, the currency and/or the account type can be used as additional search criteria.";
-			owner_lazy = () -> CashAccountSearchCriteria2.mmObject();
-		}
-
-		@Override
-		public void executeValidator(CashAccountSearchCriteria2 obj) throws Exception {
-			checkCashAccountSearchCriteria2(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.CashAccountSearchCriteria3
-	 * CashAccountSearchCriteria3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CashAccountIdentificationGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If the account identification identifies a group of accounts with different types or in different currencies, the currency and/or the account type can be used as additional search criteria."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CashAccountSearchCriteria3> forCashAccountSearchCriteria3 = new MMConstraint<CashAccountSearchCriteria3>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "CashAccountIdentificationGuideline";
-			definition = "If the account identification identifies a group of accounts with different types or in different currencies, the currency and/or the account type can be used as additional search criteria.";
-			owner_lazy = () -> CashAccountSearchCriteria3.mmObject();
-		}
-
-		@Override
-		public void executeValidator(CashAccountSearchCriteria3 obj) throws Exception {
-			checkCashAccountSearchCriteria3(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.CashAccountSearchCriteria4
-	 * CashAccountSearchCriteria4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CashAccountIdentificationGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If the account identification identifies a group of accounts with different types or in different currencies, the currency and/or the account type can be used as additional search criteria."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CashAccountSearchCriteria4> forCashAccountSearchCriteria4 = new MMConstraint<CashAccountSearchCriteria4>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "CashAccountIdentificationGuideline";
-			definition = "If the account identification identifies a group of accounts with different types or in different currencies, the currency and/or the account type can be used as additional search criteria.";
-			owner_lazy = () -> CashAccountSearchCriteria4.mmObject();
-		}
-
-		@Override
-		public void executeValidator(CashAccountSearchCriteria4 obj) throws Exception {
-			checkCashAccountSearchCriteria4(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CashAccountSearchCriteria5
 	 * CashAccountSearchCriteria5}</li>
 	 * <li>
@@ -174,6 +72,40 @@ public class ConstraintCashAccountIdentificationGuideline {
 		@Override
 		public void executeValidator(CashAccountSearchCriteria5 obj) throws Exception {
 			checkCashAccountSearchCriteria5(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CashAccountSearchCriteria2
+	 * CashAccountSearchCriteria2}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CashAccountIdentificationGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If the account identification identifies a group of accounts with different types or in different currencies, the currency and/or the account type can be used as additional search criteria."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CashAccountSearchCriteria2> forCashAccountSearchCriteria2 = new MMConstraint<CashAccountSearchCriteria2>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CashAccountIdentificationGuideline";
+			definition = "If the account identification identifies a group of accounts with different types or in different currencies, the currency and/or the account type can be used as additional search criteria.";
+			owner_lazy = () -> CashAccountSearchCriteria2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashAccountSearchCriteria2 obj) throws Exception {
+			checkCashAccountSearchCriteria2(obj);
 		}
 	};
 	/**
@@ -267,6 +199,40 @@ public class ConstraintCashAccountIdentificationGuideline {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CashAccountSearchCriteria4
+	 * CashAccountSearchCriteria4}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CashAccountIdentificationGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If the account identification identifies a group of accounts with different types or in different currencies, the currency and/or the account type can be used as additional search criteria."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CashAccountSearchCriteria4> forCashAccountSearchCriteria4 = new MMConstraint<CashAccountSearchCriteria4>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CashAccountIdentificationGuideline";
+			definition = "If the account identification identifies a group of accounts with different types or in different currencies, the currency and/or the account type can be used as additional search criteria.";
+			owner_lazy = () -> CashAccountSearchCriteria4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashAccountSearchCriteria4 obj) throws Exception {
+			checkCashAccountSearchCriteria4(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CashAccountSearchCriteria6
 	 * CashAccountSearchCriteria6}</li>
 	 * <li>
@@ -302,33 +268,40 @@ public class ConstraintCashAccountIdentificationGuideline {
 			checkCashAccountSearchCriteria6(obj);
 		}
 	};
-
 	/**
-	 * If the account identification identifies a group of accounts with
-	 * different types or in different currencies, the currency and/or the
-	 * account type can be used as additional search criteria.
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CashAccountSearchCriteria3
+	 * CashAccountSearchCriteria3}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CashAccountIdentificationGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If the account identification identifies a group of accounts with different types or in different currencies, the currency and/or the account type can be used as additional search criteria."
+	 * </li>
+	 * </ul>
 	 */
-	public static void checkCashAccountSearchCriteria2(CashAccountSearchCriteria2 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
+	public static final MMConstraint<CashAccountSearchCriteria3> forCashAccountSearchCriteria3 = new MMConstraint<CashAccountSearchCriteria3>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CashAccountIdentificationGuideline";
+			definition = "If the account identification identifies a group of accounts with different types or in different currencies, the currency and/or the account type can be used as additional search criteria.";
+			owner_lazy = () -> CashAccountSearchCriteria3.mmObject();
+		}
 
-	/**
-	 * If the account identification identifies a group of accounts with
-	 * different types or in different currencies, the currency and/or the
-	 * account type can be used as additional search criteria.
-	 */
-	public static void checkCashAccountSearchCriteria3(CashAccountSearchCriteria3 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If the account identification identifies a group of accounts with
-	 * different types or in different currencies, the currency and/or the
-	 * account type can be used as additional search criteria.
-	 */
-	public static void checkCashAccountSearchCriteria4(CashAccountSearchCriteria4 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
+		@Override
+		public void executeValidator(CashAccountSearchCriteria3 obj) throws Exception {
+			checkCashAccountSearchCriteria3(obj);
+		}
+	};
 
 	/**
 	 * If the account identification identifies a group of accounts with
@@ -336,6 +309,15 @@ public class ConstraintCashAccountIdentificationGuideline {
 	 * account type can be used as additional search criteria.
 	 */
 	public static void checkCashAccountSearchCriteria5(CashAccountSearchCriteria5 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If the account identification identifies a group of accounts with
+	 * different types or in different currencies, the currency and/or the
+	 * account type can be used as additional search criteria.
+	 */
+	public static void checkCashAccountSearchCriteria2(CashAccountSearchCriteria2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -362,7 +344,25 @@ public class ConstraintCashAccountIdentificationGuideline {
 	 * different types or in different currencies, the currency and/or the
 	 * account type can be used as additional search criteria.
 	 */
+	public static void checkCashAccountSearchCriteria4(CashAccountSearchCriteria4 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If the account identification identifies a group of accounts with
+	 * different types or in different currencies, the currency and/or the
+	 * account type can be used as additional search criteria.
+	 */
 	public static void checkCashAccountSearchCriteria6(CashAccountSearchCriteria6 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If the account identification identifies a group of accounts with
+	 * different types or in different currencies, the currency and/or the
+	 * account type can be used as additional search criteria.
+	 */
+	public static void checkCashAccountSearchCriteria3(CashAccountSearchCriteria3 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

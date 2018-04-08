@@ -28,11 +28,52 @@ import java.util.Arrays;
 /**
  * When the reported transaction is not an interbank transaction and the
  * counterparty is not a supranational authority and the transaction is not
- * conducted via a central clearing counterparty, the counterparty must not be
- * identified with the LEI.
+ * conducted via a central clearing counterparty, please refer to the relevant
+ * reporting instructions. <br>
  */
 public class ConstraintNonInterbankReportingRule {
 
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.choice.CounterpartyIdentification3Choice
+	 * CounterpartyIdentification3Choice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NonInterbankReportingRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "When the reported transaction is not an interbank transaction and the counterparty is not a supranational authority and the transaction is not conducted via a central clearing counterparty, please refer to the relevant reporting instructions. \r\n"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNonInterbankReportingRule#forCounterpartyIdentification2Choice
+	 * ConstraintNonInterbankReportingRule.forCounterpartyIdentification2Choice}
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CounterpartyIdentification3Choice> forCounterpartyIdentification3Choice = new MMConstraint<CounterpartyIdentification3Choice>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NonInterbankReportingRule";
+			definition = "When the reported transaction is not an interbank transaction and the counterparty is not a supranational authority and the transaction is not conducted via a central clearing counterparty, please refer to the relevant reporting instructions. \r\n";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNonInterbankReportingRule.forCounterpartyIdentification2Choice;
+			owner_lazy = () -> CounterpartyIdentification3Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CounterpartyIdentification3Choice obj) throws Exception {
+			checkCounterpartyIdentification3Choice(obj);
+		}
+	};
 	/**
 	 * 
 	 <p>
@@ -128,47 +169,16 @@ public class ConstraintNonInterbankReportingRule {
 			checkCounterpartyIdentification2Choice(obj);
 		}
 	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.choice.CounterpartyIdentification3Choice
-	 * CounterpartyIdentification3Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "NonInterbankReportingRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "When the reported transaction is not an interbank transaction and the counterparty is not a supranational authority and the transaction is not conducted via a central clearing counterparty, please refer to the relevant reporting instructions. \r\n"
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintNonInterbankReportingRule#forCounterpartyIdentification2Choice
-	 * ConstraintNonInterbankReportingRule.forCounterpartyIdentification2Choice}
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CounterpartyIdentification3Choice> forCounterpartyIdentification3Choice = new MMConstraint<CounterpartyIdentification3Choice>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "NonInterbankReportingRule";
-			definition = "When the reported transaction is not an interbank transaction and the counterparty is not a supranational authority and the transaction is not conducted via a central clearing counterparty, please refer to the relevant reporting instructions. \r\n";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNonInterbankReportingRule.forCounterpartyIdentification2Choice;
-			owner_lazy = () -> CounterpartyIdentification3Choice.mmObject();
-		}
 
-		@Override
-		public void executeValidator(CounterpartyIdentification3Choice obj) throws Exception {
-			checkCounterpartyIdentification3Choice(obj);
-		}
-	};
+	/**
+	 * When the reported transaction is not an interbank transaction and the
+	 * counterparty is not a supranational authority and the transaction is not
+	 * conducted via a central clearing counterparty, please refer to the
+	 * relevant reporting instructions. <br>
+	 */
+	public static void checkCounterpartyIdentification3Choice(CounterpartyIdentification3Choice obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
 
 	/**
 	 * When the reported transaction is not an interbank transaction and the
@@ -187,16 +197,6 @@ public class ConstraintNonInterbankReportingRule {
 	 * relevant reporting instructions. <br>
 	 */
 	public static void checkCounterpartyIdentification2Choice(CounterpartyIdentification2Choice obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * When the reported transaction is not an interbank transaction and the
-	 * counterparty is not a supranational authority and the transaction is not
-	 * conducted via a central clearing counterparty, please refer to the
-	 * relevant reporting instructions. <br>
-	 */
-	public static void checkCounterpartyIdentification3Choice(CounterpartyIdentification3Choice obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

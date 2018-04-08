@@ -134,23 +134,24 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintPorfolioRule#forPortfolioTransferConfirmationV08
- * ConstraintPorfolioRule.forPortfolioTransferConfirmationV08}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPorfolioRule#for_sese_PortfolioTransferConfirmationV08
+ * ConstraintPorfolioRule.for_sese_PortfolioTransferConfirmationV08}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorRule#forPortfolioTransferConfirmationV08
- * ConstraintInvestorRule.forPortfolioTransferConfirmationV08}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorRule#for_sese_PortfolioTransferConfirmationV08
+ * ConstraintInvestorRule.for_sese_PortfolioTransferConfirmationV08}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCorporateRule#forPortfolioTransferConfirmationV08
- * ConstraintCorporateRule.forPortfolioTransferConfirmationV08}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCorporateRule#for_sese_PortfolioTransferConfirmationV08
+ * ConstraintCorporateRule.for_sese_PortfolioTransferConfirmationV08}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule#forPortfolioTransferConfirmationV08
- * ConstraintNomineeAccountServicerRule.forPortfolioTransferConfirmationV08}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule#for_sese_PortfolioTransferConfirmationV08
+ * ConstraintNomineeAccountServicerRule.
+ * for_sese_PortfolioTransferConfirmationV08}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintISARule#forPortfolioTransferConfirmationV08
- * ConstraintISARule.forPortfolioTransferConfirmationV08}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintISARule#for_sese_PortfolioTransferConfirmationV08
+ * ConstraintISARule.for_sese_PortfolioTransferConfirmationV08}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintDesignationRule#forPortfolioTransferConfirmationV08
- * ConstraintDesignationRule.forPortfolioTransferConfirmationV08}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDesignationRule#for_sese_PortfolioTransferConfirmationV08
+ * ConstraintDesignationRule.for_sese_PortfolioTransferConfirmationV08}</li>
  * </ul>
  * </li>
  * <li>
@@ -1129,10 +1130,10 @@ public class PortfolioTransferConfirmationV08 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPorfolioRule.forPortfolioTransferConfirmationV08,
-						com.tools20022.repository.constraints.ConstraintInvestorRule.forPortfolioTransferConfirmationV08, com.tools20022.repository.constraints.ConstraintCorporateRule.forPortfolioTransferConfirmationV08,
-						com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule.forPortfolioTransferConfirmationV08, com.tools20022.repository.constraints.ConstraintISARule.forPortfolioTransferConfirmationV08,
-						com.tools20022.repository.constraints.ConstraintDesignationRule.forPortfolioTransferConfirmationV08);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPorfolioRule.for_sese_PortfolioTransferConfirmationV08,
+						com.tools20022.repository.constraints.ConstraintInvestorRule.for_sese_PortfolioTransferConfirmationV08, com.tools20022.repository.constraints.ConstraintCorporateRule.for_sese_PortfolioTransferConfirmationV08,
+						com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule.for_sese_PortfolioTransferConfirmationV08,
+						com.tools20022.repository.constraints.ConstraintISARule.for_sese_PortfolioTransferConfirmationV08, com.tools20022.repository.constraints.ConstraintDesignationRule.for_sese_PortfolioTransferConfirmationV08);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PortfolioTransferConfirmationV08";
 				definition = "The PortfolioTransferConfirmation message is sent by an executing party, for example, a (old) plan manager (transferor), to the instructing party for example, a (new) plan manager (transferee), to confirm the transfer of one or more ISA or portfolio products from the client's account at the old plan manager (transferor) to the client's account at the new plan manager (transferee) through a nominee account.\r\nUsage\r\nThe PortfolioTransferConfirmation message is used to confirm the transfer of one or more ISA or portfolio products.\r\nThe reference of each product transfer confirmation is identified in TransferConfirmationIdentification. The reference of the original product transfer is specified in TransferInstructionReference. The message identification of the PortfolioTransferInstruction message in which the product transfers were conveyed may also be quoted in RelatedReferencebut this is not recommended.";

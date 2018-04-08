@@ -157,27 +157,29 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintRateAndCorporateActionEventRule#forCorporateActionMovementPreliminaryAdviceV08
+ * {@linkplain com.tools20022.repository.constraints.ConstraintRateAndCorporateActionEventRule#for_seev_CorporateActionMovementPreliminaryAdviceV08
  * ConstraintRateAndCorporateActionEventRule.
- * forCorporateActionMovementPreliminaryAdviceV08}</li>
+ * for_seev_CorporateActionMovementPreliminaryAdviceV08}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintSafekeepingAccount1Rule#forCorporateActionMovementPreliminaryAdviceV08
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSafekeepingAccount1Rule#for_seev_CorporateActionMovementPreliminaryAdviceV08
  * ConstraintSafekeepingAccount1Rule.
- * forCorporateActionMovementPreliminaryAdviceV08}</li>
+ * for_seev_CorporateActionMovementPreliminaryAdviceV08}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintSafekeepingAccount2Rule#forCorporateActionMovementPreliminaryAdviceV08
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSafekeepingAccount2Rule#for_seev_CorporateActionMovementPreliminaryAdviceV08
  * ConstraintSafekeepingAccount2Rule.
- * forCorporateActionMovementPreliminaryAdviceV08}</li>
+ * for_seev_CorporateActionMovementPreliminaryAdviceV08}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintOtherEventRule#forCorporateActionMovementPreliminaryAdviceV08
- * ConstraintOtherEventRule.forCorporateActionMovementPreliminaryAdviceV08}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOtherEventRule#for_seev_CorporateActionMovementPreliminaryAdviceV08
+ * ConstraintOtherEventRule.for_seev_CorporateActionMovementPreliminaryAdviceV08
+ * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintIntermediateSecuritiesDistributionRule#forCorporateActionMovementPreliminaryAdviceV08
+ * {@linkplain com.tools20022.repository.constraints.ConstraintIntermediateSecuritiesDistributionRule#for_seev_CorporateActionMovementPreliminaryAdviceV08
  * ConstraintIntermediateSecuritiesDistributionRule.
- * forCorporateActionMovementPreliminaryAdviceV08}</li>
+ * for_seev_CorporateActionMovementPreliminaryAdviceV08}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintAppliedOptionRule#forCorporateActionMovementPreliminaryAdviceV08
- * ConstraintAppliedOptionRule.forCorporateActionMovementPreliminaryAdviceV08}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAppliedOptionRule#for_seev_CorporateActionMovementPreliminaryAdviceV08
+ * ConstraintAppliedOptionRule.
+ * for_seev_CorporateActionMovementPreliminaryAdviceV08}</li>
  * </ul>
  * </li>
  * <li>
@@ -1715,12 +1717,12 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRateAndCorporateActionEventRule.forCorporateActionMovementPreliminaryAdviceV08,
-						com.tools20022.repository.constraints.ConstraintSafekeepingAccount1Rule.forCorporateActionMovementPreliminaryAdviceV08,
-						com.tools20022.repository.constraints.ConstraintSafekeepingAccount2Rule.forCorporateActionMovementPreliminaryAdviceV08,
-						com.tools20022.repository.constraints.ConstraintOtherEventRule.forCorporateActionMovementPreliminaryAdviceV08,
-						com.tools20022.repository.constraints.ConstraintIntermediateSecuritiesDistributionRule.forCorporateActionMovementPreliminaryAdviceV08,
-						com.tools20022.repository.constraints.ConstraintAppliedOptionRule.forCorporateActionMovementPreliminaryAdviceV08);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRateAndCorporateActionEventRule.for_seev_CorporateActionMovementPreliminaryAdviceV08,
+						com.tools20022.repository.constraints.ConstraintSafekeepingAccount1Rule.for_seev_CorporateActionMovementPreliminaryAdviceV08,
+						com.tools20022.repository.constraints.ConstraintSafekeepingAccount2Rule.for_seev_CorporateActionMovementPreliminaryAdviceV08,
+						com.tools20022.repository.constraints.ConstraintOtherEventRule.for_seev_CorporateActionMovementPreliminaryAdviceV08,
+						com.tools20022.repository.constraints.ConstraintIntermediateSecuritiesDistributionRule.for_seev_CorporateActionMovementPreliminaryAdviceV08,
+						com.tools20022.repository.constraints.ConstraintAppliedOptionRule.for_seev_CorporateActionMovementPreliminaryAdviceV08);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionMovementPreliminaryAdviceV08";
 				definition = "Scope\r\nAn account servicer sends the CorporateActionMovementPreliminaryAdvice message to an account owner or its designated agent to pre-advise upcoming posting or reversal of securities and/or cash postings.\r\nUsage\r\nThe message may also be used to:\r\n- re-send a message previously sent (the sub-function of the message is Duplicate),\r\n- provide a third party with a copy of a message for information (the sub-function of the message is Copy),\r\n- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate),\r\nusing the relevant elements in the business application header (BAH).";

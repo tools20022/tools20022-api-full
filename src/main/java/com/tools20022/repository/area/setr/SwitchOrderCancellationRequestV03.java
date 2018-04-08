@@ -109,11 +109,12 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintSwitchRule#forSwitchOrderCancellationRequestV03
- * ConstraintSwitchRule.forSwitchOrderCancellationRequestV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSwitchRule#for_setr_SwitchOrderCancellationRequestV03
+ * ConstraintSwitchRule.for_setr_SwitchOrderCancellationRequestV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationRule#forSwitchOrderCancellationRequestV03
- * ConstraintAccountIdentificationRule.forSwitchOrderCancellationRequestV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationRule#for_setr_SwitchOrderCancellationRequestV03
+ * ConstraintAccountIdentificationRule.
+ * for_setr_SwitchOrderCancellationRequestV03}</li>
  * </ul>
  * </li>
  * <li>
@@ -185,9 +186,9 @@ public class SwitchOrderCancellationRequestV03 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationByReferenceOrByOrderDetailsRule";
 			definition = "Either CancellationByOrderDetails or CancellationByReference may be present, but not both.";
-			messageDefinition_lazy = () -> com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV03.mmObject();
 			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV03.mmCancellationByReference,
 					com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV03.mmCancellationByOrderDetails);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV03.mmObject();
 		}
 	};
 	@XmlElement(name = "MsgId", required = true)
@@ -510,8 +511,8 @@ public class SwitchOrderCancellationRequestV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSwitchRule.forSwitchOrderCancellationRequestV03,
-						com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forSwitchOrderCancellationRequestV03);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSwitchRule.for_setr_SwitchOrderCancellationRequestV03,
+						com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.for_setr_SwitchOrderCancellationRequestV03);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SwitchOrderCancellationRequestV03";
 				definition = "Scope\r\nAn instructing party, for example, an investment manager or its authorised representative, sends the SwitchOrderCancellationRequest message to the executing party, for example, a transfer agent, to request the cancellation of a previously sent SwitchOrder instruction.\r\nUsage\r\nThe SwitchOrderCancellationRequest is used to cancel the entire previously sent SwitchOrder instruction and all the individual legs that it contains. There is no amendment, but a cancellation and re-instruct policy.\r\nThere are two ways to specify the switch cancellation. Either:\r\n- the order reference of the original switch order is quoted, or,\r\n- all the details of the original switch order (this includes the OrderReference) are quoted, but this is not recommended.\r\nThe message identification of the SwitchOrder message may also be quoted in PreviousReference.\r\nIt is also possible to request the cancellation of a SwitchOrder message by quoting its message identification in PreviousReference, but this is not recommended.\r\nThe deadline and acceptance of a cancellation request is subject to a service level agreement (SLA). This cancellation message is a cancellation request. There is no automatic acceptance of the cancellation request.\r\nThe rejection or acceptance of a SwitchOrderCancellationRequest is made using an OrderCancellationStatusReport message.";

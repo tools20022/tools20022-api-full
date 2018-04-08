@@ -26,45 +26,11 @@ import java.util.Arrays;
 
 /**
  * If BulkCashSettlementDetails is present, then Currency in
- * IndividualExecutionDetails/NetAmount and GrossAmount must be the same in all
- * occurrences of IndividualExecutionDetails.
+ * IndividualExecutionDetails/SettlementAmount must be the same in all
+ * occurrences of IndividualOrderDetails.
  */
 public class ConstraintSettlementCurrency1Rule {
 
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.RedemptionBulkExecution2
-	 * RedemptionBulkExecution2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementCurrency1Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If BulkCashSettlementDetails is present, then Currency in IndividualExecutionDetails/NetAmount and GrossAmount must be the same in all occurrences of IndividualExecutionDetails."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<RedemptionBulkExecution2> forRedemptionBulkExecution2 = new MMConstraint<RedemptionBulkExecution2>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementCurrency1Rule";
-			definition = "If BulkCashSettlementDetails is present, then Currency in IndividualExecutionDetails/NetAmount and GrossAmount must be the same in all occurrences of IndividualExecutionDetails.";
-			owner_lazy = () -> RedemptionBulkExecution2.mmObject();
-		}
-
-		@Override
-		public void executeValidator(RedemptionBulkExecution2 obj) throws Exception {
-			checkRedemptionBulkExecution2(obj);
-		}
-	};
 	/**
 	 * 
 	 <p>
@@ -108,15 +74,40 @@ public class ConstraintSettlementCurrency1Rule {
 			checkRedemptionBulkExecution3(obj);
 		}
 	};
-
 	/**
-	 * If BulkCashSettlementDetails is present, then Currency in
-	 * IndividualExecutionDetails/NetAmount and GrossAmount must be the same in
-	 * all occurrences of IndividualExecutionDetails.
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.RedemptionBulkExecution2
+	 * RedemptionBulkExecution2}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementCurrency1Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If BulkCashSettlementDetails is present, then Currency in IndividualExecutionDetails/NetAmount and GrossAmount must be the same in all occurrences of IndividualExecutionDetails."
+	 * </li>
+	 * </ul>
 	 */
-	public static void checkRedemptionBulkExecution2(RedemptionBulkExecution2 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
+	public static final MMConstraint<RedemptionBulkExecution2> forRedemptionBulkExecution2 = new MMConstraint<RedemptionBulkExecution2>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementCurrency1Rule";
+			definition = "If BulkCashSettlementDetails is present, then Currency in IndividualExecutionDetails/NetAmount and GrossAmount must be the same in all occurrences of IndividualExecutionDetails.";
+			owner_lazy = () -> RedemptionBulkExecution2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionBulkExecution2 obj) throws Exception {
+			checkRedemptionBulkExecution2(obj);
+		}
+	};
 
 	/**
 	 * If BulkCashSettlementDetails is present, then Currency in
@@ -124,6 +115,15 @@ public class ConstraintSettlementCurrency1Rule {
 	 * occurrences of IndividualOrderDetails.
 	 */
 	public static void checkRedemptionBulkExecution3(RedemptionBulkExecution3 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If BulkCashSettlementDetails is present, then Currency in
+	 * IndividualExecutionDetails/NetAmount and GrossAmount must be the same in
+	 * all occurrences of IndividualExecutionDetails.
+	 */
+	public static void checkRedemptionBulkExecution2(RedemptionBulkExecution2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

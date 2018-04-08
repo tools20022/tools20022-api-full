@@ -56,24 +56,24 @@ public class ConstraintStatusPresenceRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintStatusPresenceRule#forSecuritiesTradeConfirmationStatusAdviceV01
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintStatusPresenceRule#for_setr_SecuritiesTradeConfirmationStatusAdviceV01
 	 * ConstraintStatusPresenceRule.
-	 * forSecuritiesTradeConfirmationStatusAdviceV01}</li>
+	 * for_setr_SecuritiesTradeConfirmationStatusAdviceV01}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<SecuritiesTradeConfirmationStatusAdviceV02> forSecuritiesTradeConfirmationStatusAdviceV02 = new MMConstraint<SecuritiesTradeConfirmationStatusAdviceV02>() {
+	public static final MMConstraint<SecuritiesTradeConfirmationStatusAdviceV02> for_setr_SecuritiesTradeConfirmationStatusAdviceV02 = new MMConstraint<SecuritiesTradeConfirmationStatusAdviceV02>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusPresenceRule";
 			definition = "AffirmationStatus or ProcessingStatus or MatchingStatus or ReplacementProcessingStatus or CancellationProcessingStatus must be present.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintStatusPresenceRule.forSecuritiesTradeConfirmationStatusAdviceV01;
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintStatusPresenceRule.for_setr_SecuritiesTradeConfirmationStatusAdviceV01;
 			owner_lazy = () -> SecuritiesTradeConfirmationStatusAdviceV02.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AffirmationStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/ProcessingStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/MatchingStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/ReplacementProcessingStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationProcessingStatus</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
 		}
 
 		@Override
 		public void executeValidator(SecuritiesTradeConfirmationStatusAdviceV02 obj) throws Exception {
-			checkSecuritiesTradeConfirmationStatusAdviceV02(obj);
+			check_setr_SecuritiesTradeConfirmationStatusAdviceV02(obj);
 		}
 	};
 	/**
@@ -103,26 +103,26 @@ public class ConstraintStatusPresenceRule {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintStatusPresenceRule#forSecuritiesTradeConfirmationStatusAdviceV02
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintStatusPresenceRule#for_setr_SecuritiesTradeConfirmationStatusAdviceV02
 	 * ConstraintStatusPresenceRule.
-	 * forSecuritiesTradeConfirmationStatusAdviceV02}</li>
+	 * for_setr_SecuritiesTradeConfirmationStatusAdviceV02}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<SecuritiesTradeConfirmationStatusAdviceV01> forSecuritiesTradeConfirmationStatusAdviceV01 = new MMConstraint<SecuritiesTradeConfirmationStatusAdviceV01>() {
+	public static final MMConstraint<SecuritiesTradeConfirmationStatusAdviceV01> for_setr_SecuritiesTradeConfirmationStatusAdviceV01 = new MMConstraint<SecuritiesTradeConfirmationStatusAdviceV01>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusPresenceRule";
 			definition = "AffirmationStatus or ProcessingStatus or MatchingStatus or ReplacementProcessingStatus or CancellationProcessingStatus must be present.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintStatusPresenceRule.forSecuritiesTradeConfirmationStatusAdviceV02);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintStatusPresenceRule.for_setr_SecuritiesTradeConfirmationStatusAdviceV02);
 			owner_lazy = () -> SecuritiesTradeConfirmationStatusAdviceV01.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AffirmationStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/ProcessingStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/MatchingStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/ReplacementProcessingStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationProcessingStatus</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
 		}
 
 		@Override
 		public void executeValidator(SecuritiesTradeConfirmationStatusAdviceV01 obj) throws Exception {
-			checkSecuritiesTradeConfirmationStatusAdviceV01(obj);
+			check_setr_SecuritiesTradeConfirmationStatusAdviceV01(obj);
 		}
 	};
 
@@ -131,7 +131,7 @@ public class ConstraintStatusPresenceRule {
 	 * ReplacementProcessingStatus or CancellationProcessingStatus must be
 	 * present.
 	 */
-	public static void checkSecuritiesTradeConfirmationStatusAdviceV02(SecuritiesTradeConfirmationStatusAdviceV02 obj) throws Exception {
+	public static void check_setr_SecuritiesTradeConfirmationStatusAdviceV02(SecuritiesTradeConfirmationStatusAdviceV02 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -140,7 +140,7 @@ public class ConstraintStatusPresenceRule {
 	 * ReplacementProcessingStatus or CancellationProcessingStatus must be
 	 * present.
 	 */
-	public static void checkSecuritiesTradeConfirmationStatusAdviceV01(SecuritiesTradeConfirmationStatusAdviceV01 obj) throws Exception {
+	public static void check_setr_SecuritiesTradeConfirmationStatusAdviceV01(SecuritiesTradeConfirmationStatusAdviceV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

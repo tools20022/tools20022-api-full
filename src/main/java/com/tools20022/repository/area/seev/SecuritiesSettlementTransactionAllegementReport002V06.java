@@ -102,13 +102,13 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintAllegementDetailsActivityRule1#forSecuritiesSettlementTransactionAllegementReport002V06
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAllegementDetailsActivityRule1#for_seev_SecuritiesSettlementTransactionAllegementReport002V06
  * ConstraintAllegementDetailsActivityRule1.
- * forSecuritiesSettlementTransactionAllegementReport002V06}</li>
+ * for_seev_SecuritiesSettlementTransactionAllegementReport002V06}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintAllegementDetailsActivityRule2#forSecuritiesSettlementTransactionAllegementReport002V06
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAllegementDetailsActivityRule2#for_seev_SecuritiesSettlementTransactionAllegementReport002V06
  * ConstraintAllegementDetailsActivityRule2.
- * forSecuritiesSettlementTransactionAllegementReport002V06}</li>
+ * for_seev_SecuritiesSettlementTransactionAllegementReport002V06}</li>
  * </ul>
  * </li>
  * <li>
@@ -373,8 +373,8 @@ public class SecuritiesSettlementTransactionAllegementReport002V06 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAllegementDetailsActivityRule1.forSecuritiesSettlementTransactionAllegementReport002V06,
-						com.tools20022.repository.constraints.ConstraintAllegementDetailsActivityRule2.forSecuritiesSettlementTransactionAllegementReport002V06);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAllegementDetailsActivityRule1.for_seev_SecuritiesSettlementTransactionAllegementReport002V06,
+						com.tools20022.repository.constraints.ConstraintAllegementDetailsActivityRule2.for_seev_SecuritiesSettlementTransactionAllegementReport002V06);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesSettlementTransactionAllegementReport002V06";
 				definition = "Scope\r\nAn account servicer sends a SecuritiesSettlementTransactionAllegementReport to an account owner to provide, at a specified time, the status and details of pending settlement allegements, for all or selected securities in a specified safekeeping account.\r\nThe account servicer/owner relationship may be:\r\n- a central securities depository or another settlement market infrastructure acting on behalf of their participants\r\n- an agent (sub-custodian) acting on behalf of their global custodian customer, or\r\n- a custodian acting on behalf of an investment management institution or a broker/dealer.\r\n\r\nUsage\r\nThe message may also be used to:\r\n- re-send a message previously sent,\r\n- provide a third party with a copy of a message for information,\r\n- re-send to a third party a copy of a message for information\r\nusing the relevant elements in the Business Application Header.";

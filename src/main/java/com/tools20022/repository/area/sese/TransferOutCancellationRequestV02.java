@@ -168,9 +168,9 @@ public class TransferOutCancellationRequestV02 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationByReferenceOrByTransferOutDetailsRule";
 			definition = "Either CancellationByReference or CancellationByTransferOutDetails may be present, but not both.";
-			messageDefinition_lazy = () -> com.tools20022.repository.area.sese.TransferOutCancellationRequestV02.mmObject();
 			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutCancellationRequestV02.mmCancellationByReference,
 					com.tools20022.repository.area.sese.TransferOutCancellationRequestV02.mmCancellationByTransferOutDetails);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.sese.TransferOutCancellationRequestV02.mmObject();
 		}
 	};
 	@XmlElement(name = "MsgId", required = true)

@@ -110,9 +110,9 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintTransactionOnAccountOrSubAccountDetailsRule#forStatementOfInvestmentFundTransactions
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTransactionOnAccountOrSubAccountDetailsRule#for_semt_StatementOfInvestmentFundTransactions
  * ConstraintTransactionOnAccountOrSubAccountDetailsRule.
- * forStatementOfInvestmentFundTransactions}</li>
+ * for_semt_StatementOfInvestmentFundTransactions}</li>
  * </ul>
  * </li>
  * <li>
@@ -512,7 +512,7 @@ public class StatementOfInvestmentFundTransactions {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTransactionOnAccountOrSubAccountDetailsRule.forStatementOfInvestmentFundTransactions);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTransactionOnAccountOrSubAccountDetailsRule.for_semt_StatementOfInvestmentFundTransactions);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatementOfInvestmentFundTransactions";
 				definition = "Scope\r\nThe StatementOfInvestmentFundTransactions is sent by an account servicer to the account owner or the account owner's designated agent. The account servicer may be a fund administrator or fund intermediary, trustee or registrar.\r\nThis message provides the details of increases and decreases of holdings which occurred during a specified period.\r\nThis message can also be used for information purposes, eg, tax information.\r\nUsage\r\nThe StatementOfInvestmentFundTransactions message can be sent:\r\n- At a frequency agreed bi-laterally between the Sender and the Receiver and/or\r\n- As a response to a request for statement sent by the account owner.\r\nThe StatementOfInvestmentFundTransactions message can only be used to list the transactions of a single (master) account. However, it is possible to break down these transactions into one or several sub-accounts. Therefore, the message can be used to either specify transactions at\r\n- the main account level, or\r\n- the sub-account level.\r\nThis message must not be used in place of confirmation messages.\r\nSince a SWIFT message as sent is restricted to the maximum input message length, several messages may be needed to accommodate all the information.";

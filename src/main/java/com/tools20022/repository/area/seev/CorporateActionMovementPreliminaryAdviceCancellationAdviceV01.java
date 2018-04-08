@@ -150,13 +150,13 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#forCorporateActionMovementPreliminaryAdviceCancellationAdviceV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#for_seev_CorporateActionMovementPreliminaryAdviceCancellationAdviceV01
  * ConstraintCoexistenceCharacterSetXRule.
- * forCorporateActionMovementPreliminaryAdviceCancellationAdviceV01}</li>
+ * for_seev_CorporateActionMovementPreliminaryAdviceCancellationAdviceV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forCorporateActionMovementPreliminaryAdviceCancellationAdviceV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#for_seev_CorporateActionMovementPreliminaryAdviceCancellationAdviceV01
  * ConstraintCoexistenceIdentificationRule.
- * forCorporateActionMovementPreliminaryAdviceCancellationAdviceV01}</li>
+ * for_seev_CorporateActionMovementPreliminaryAdviceCancellationAdviceV01}</li>
  * </ul>
  * </li>
  * <li>
@@ -1044,8 +1044,8 @@ public class CorporateActionMovementPreliminaryAdviceCancellationAdviceV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forCorporateActionMovementPreliminaryAdviceCancellationAdviceV01,
-						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionMovementPreliminaryAdviceCancellationAdviceV01);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.for_seev_CorporateActionMovementPreliminaryAdviceCancellationAdviceV01,
+						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.for_seev_CorporateActionMovementPreliminaryAdviceCancellationAdviceV01);
 				semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, "MT 564, Seq A :23G:CANC and Seq A1 :20C::PREV"));
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionMovementPreliminaryAdviceCancellationAdviceV01";

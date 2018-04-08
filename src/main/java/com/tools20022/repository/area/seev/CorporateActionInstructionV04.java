@@ -115,29 +115,31 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintInstructionCancellationRequestIdentificationRule#forCorporateActionInstructionV04
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInstructionCancellationRequestIdentificationRule#for_seev_CorporateActionInstructionV04
  * ConstraintInstructionCancellationRequestIdentificationRule.
- * forCorporateActionInstructionV04}</li>
+ * for_seev_CorporateActionInstructionV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCorporateActionEventIdentificationRule#forCorporateActionInstructionV04
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCorporateActionEventIdentificationRule#for_seev_CorporateActionInstructionV04
  * ConstraintCorporateActionEventIdentificationRule.
- * forCorporateActionInstructionV04}</li>
+ * for_seev_CorporateActionInstructionV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintChangeInstructionIndicatorGuideline#forCorporateActionInstructionV04
+ * {@linkplain com.tools20022.repository.constraints.ConstraintChangeInstructionIndicatorGuideline#for_seev_CorporateActionInstructionV04
  * ConstraintChangeInstructionIndicatorGuideline.
- * forCorporateActionInstructionV04}</li>
+ * for_seev_CorporateActionInstructionV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalInformationRule#forCorporateActionInstructionV04
- * ConstraintAdditionalInformationRule.forCorporateActionInstructionV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalInformationRule#for_seev_CorporateActionInstructionV04
+ * ConstraintAdditionalInformationRule.for_seev_CorporateActionInstructionV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#forCorporateActionInstructionV04
- * ConstraintCoexistenceCharacterSetXRule.forCorporateActionInstructionV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#for_seev_CorporateActionInstructionV04
+ * ConstraintCoexistenceCharacterSetXRule.for_seev_CorporateActionInstructionV04
+ * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forCorporateActionInstructionV04
- * ConstraintCoexistenceIdentificationRule.forCorporateActionInstructionV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#for_seev_CorporateActionInstructionV04
+ * ConstraintCoexistenceIdentificationRule.
+ * for_seev_CorporateActionInstructionV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintOptionTypeRule#forCorporateActionInstructionV04
- * ConstraintOptionTypeRule.forCorporateActionInstructionV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOptionTypeRule#for_seev_CorporateActionInstructionV04
+ * ConstraintOptionTypeRule.for_seev_CorporateActionInstructionV04}</li>
  * </ul>
  * </li>
  * <li>
@@ -789,12 +791,13 @@ public class CorporateActionInstructionV04 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInstructionCancellationRequestIdentificationRule.forCorporateActionInstructionV04,
-						com.tools20022.repository.constraints.ConstraintCorporateActionEventIdentificationRule.forCorporateActionInstructionV04,
-						com.tools20022.repository.constraints.ConstraintChangeInstructionIndicatorGuideline.forCorporateActionInstructionV04,
-						com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionInstructionV04,
-						com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forCorporateActionInstructionV04,
-						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionInstructionV04, com.tools20022.repository.constraints.ConstraintOptionTypeRule.forCorporateActionInstructionV04);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInstructionCancellationRequestIdentificationRule.for_seev_CorporateActionInstructionV04,
+						com.tools20022.repository.constraints.ConstraintCorporateActionEventIdentificationRule.for_seev_CorporateActionInstructionV04,
+						com.tools20022.repository.constraints.ConstraintChangeInstructionIndicatorGuideline.for_seev_CorporateActionInstructionV04,
+						com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.for_seev_CorporateActionInstructionV04,
+						com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.for_seev_CorporateActionInstructionV04,
+						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.for_seev_CorporateActionInstructionV04,
+						com.tools20022.repository.constraints.ConstraintOptionTypeRule.for_seev_CorporateActionInstructionV04);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionInstructionV04";
 				definition = "Scope\nAn account owner sends the CorporateActionInstruction message to an account servicer to instruct election on a corporate action event.\r\nThis message is used to provide the custodian with instructions on how the account owner wishes to proceed with a corporate action event. Instructions include investment decisions regarding the exercise of rights issues, the election of stock or cash when the option is available, and decisions on the conversion or tendering of securities.\nUsage\nThe message may also be used to:\n- re-send a message previously sent (the sub-function of the message is Duplicate),\n- provide a third party with a copy of a message for information (the sub-function of the message is Copy),\n- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate),\nusing the relevant elements in the business application header (BAH).\nISO 15022 - 20022 COEXISTENCE\r\nThis ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment. The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows: “CoexistenceXxxxRule”.";

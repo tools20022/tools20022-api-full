@@ -101,8 +101,8 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationRule#forSubscriptionBulkOrderV02
- * ConstraintAccountIdentificationRule.forSubscriptionBulkOrderV02}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationRule#for_setr_SubscriptionBulkOrderV02
+ * ConstraintAccountIdentificationRule.for_setr_SubscriptionBulkOrderV02}</li>
  * </ul>
  * </li>
  * <li>
@@ -456,7 +456,7 @@ public class SubscriptionBulkOrderV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forSubscriptionBulkOrderV02);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.for_setr_SubscriptionBulkOrderV02);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SubscriptionBulkOrderV02";
 				definition = "Scope\r\nThe SubscriptionBulkOrder message is sent by an instructing party, eg, an investment manager or its authorised representative, to an executing party, eg, a transfer agent. There may be one or more intermediary parties between the instructing party and the executing party. The intermediary party is, for example, an intermediary or a concentrator.\r\nThis message is used to instruct the executing party to subscribe to a financial instrument, for two or more accounts.\r\nUsage\r\nThe SubscriptionBulkOrder message is used to bulk several individual orders into one bulk order. The individual orders come from different instructing parties, ie, account owners, but are related to the same financial instrument. This message will be typically be used by a party collecting orders and bulking these individual orders into one bulk order before sending it to another party.\r\nFor a single subscription order, the SubscriptionMultipleOrder message, not the SubscriptionBulkOrder message, must be used.\r\nIf there are subscription orders for different financial instruments but for the same account, then the SubscriptionMultipleOrder must be used.";

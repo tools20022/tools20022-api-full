@@ -181,9 +181,9 @@ public class InitialBaselineSubmissionV03 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerBankOrSellerBankContactPersonRule";
 			definition = "If BuyerBankContactPerson is present, then SellerBankContactPerson may not be present. If BuyerBankContactPerson is absent, then SellerBankContactPerson must be present.";
-			messageDefinition_lazy = () -> com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV03.mmObject();
 			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV03.mmBuyerBankContactPerson,
 					com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV03.mmSellerBankContactPerson);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV03.mmObject();
 		}
 	};
 	@XmlElement(name = "SubmissnId", required = true)

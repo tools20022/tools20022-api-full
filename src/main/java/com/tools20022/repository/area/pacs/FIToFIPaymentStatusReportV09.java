@@ -105,32 +105,32 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintGroupStatusAcceptedRule#forFIToFIPaymentStatusReportV09
- * ConstraintGroupStatusAcceptedRule.forFIToFIPaymentStatusReportV09}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupStatusAcceptedRule#for_pacs_FIToFIPaymentStatusReportV09
+ * ConstraintGroupStatusAcceptedRule.for_pacs_FIToFIPaymentStatusReportV09}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintGroupStatusPendingRule#forFIToFIPaymentStatusReportV09
- * ConstraintGroupStatusPendingRule.forFIToFIPaymentStatusReportV09}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupStatusPendingRule#for_pacs_FIToFIPaymentStatusReportV09
+ * ConstraintGroupStatusPendingRule.for_pacs_FIToFIPaymentStatusReportV09}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintGroupStatusRejectedRule#forFIToFIPaymentStatusReportV09
- * ConstraintGroupStatusRejectedRule.forFIToFIPaymentStatusReportV09}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupStatusRejectedRule#for_pacs_FIToFIPaymentStatusReportV09
+ * ConstraintGroupStatusRejectedRule.for_pacs_FIToFIPaymentStatusReportV09}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintGroupStatusReceivedRule#forFIToFIPaymentStatusReportV09
- * ConstraintGroupStatusReceivedRule.forFIToFIPaymentStatusReportV09}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupStatusReceivedRule#for_pacs_FIToFIPaymentStatusReportV09
+ * ConstraintGroupStatusReceivedRule.for_pacs_FIToFIPaymentStatusReportV09}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintSupplementaryDataRule#forFIToFIPaymentStatusReportV09
- * ConstraintSupplementaryDataRule.forFIToFIPaymentStatusReportV09}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSupplementaryDataRule#for_pacs_FIToFIPaymentStatusReportV09
+ * ConstraintSupplementaryDataRule.for_pacs_FIToFIPaymentStatusReportV09}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintOriginalGroupInformationAbsenceRule#forFIToFIPaymentStatusReportV09
- * ConstraintOriginalGroupInformationAbsenceRule.forFIToFIPaymentStatusReportV09
- * }</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOriginalGroupInformationAbsenceRule#for_pacs_FIToFIPaymentStatusReportV09
+ * ConstraintOriginalGroupInformationAbsenceRule.
+ * for_pacs_FIToFIPaymentStatusReportV09}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintOriginalGroupInformationSinglePresenceRule#forFIToFIPaymentStatusReportV09
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOriginalGroupInformationSinglePresenceRule#for_pacs_FIToFIPaymentStatusReportV09
  * ConstraintOriginalGroupInformationSinglePresenceRule.
- * forFIToFIPaymentStatusReportV09}</li>
+ * for_pacs_FIToFIPaymentStatusReportV09}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintOriginalGroupInformationMultiplePresenceRule#forFIToFIPaymentStatusReportV09
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOriginalGroupInformationMultiplePresenceRule#for_pacs_FIToFIPaymentStatusReportV09
  * ConstraintOriginalGroupInformationMultiplePresenceRule.
- * forFIToFIPaymentStatusReportV09}</li>
+ * for_pacs_FIToFIPaymentStatusReportV09}</li>
  * </ul>
  * </li>
  * <li>
@@ -370,12 +370,14 @@ public class FIToFIPaymentStatusReportV09 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupStatusAcceptedRule.forFIToFIPaymentStatusReportV09,
-						com.tools20022.repository.constraints.ConstraintGroupStatusPendingRule.forFIToFIPaymentStatusReportV09, com.tools20022.repository.constraints.ConstraintGroupStatusRejectedRule.forFIToFIPaymentStatusReportV09,
-						com.tools20022.repository.constraints.ConstraintGroupStatusReceivedRule.forFIToFIPaymentStatusReportV09, com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFIToFIPaymentStatusReportV09,
-						com.tools20022.repository.constraints.ConstraintOriginalGroupInformationAbsenceRule.forFIToFIPaymentStatusReportV09,
-						com.tools20022.repository.constraints.ConstraintOriginalGroupInformationSinglePresenceRule.forFIToFIPaymentStatusReportV09,
-						com.tools20022.repository.constraints.ConstraintOriginalGroupInformationMultiplePresenceRule.forFIToFIPaymentStatusReportV09);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupStatusAcceptedRule.for_pacs_FIToFIPaymentStatusReportV09,
+						com.tools20022.repository.constraints.ConstraintGroupStatusPendingRule.for_pacs_FIToFIPaymentStatusReportV09,
+						com.tools20022.repository.constraints.ConstraintGroupStatusRejectedRule.for_pacs_FIToFIPaymentStatusReportV09,
+						com.tools20022.repository.constraints.ConstraintGroupStatusReceivedRule.for_pacs_FIToFIPaymentStatusReportV09,
+						com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.for_pacs_FIToFIPaymentStatusReportV09,
+						com.tools20022.repository.constraints.ConstraintOriginalGroupInformationAbsenceRule.for_pacs_FIToFIPaymentStatusReportV09,
+						com.tools20022.repository.constraints.ConstraintOriginalGroupInformationSinglePresenceRule.for_pacs_FIToFIPaymentStatusReportV09,
+						com.tools20022.repository.constraints.ConstraintOriginalGroupInformationMultiplePresenceRule.for_pacs_FIToFIPaymentStatusReportV09);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FIToFIPaymentStatusReportV09";
 				definition = "Scope\r\nThe FIToFIPaymentStatusReport message is sent by an instructed agent to the previous party in the payment chain. It is used to inform this party about the positive or negative status of an instruction (either single or file). It is also used to report on a pending instruction.\r\nUsage\r\nThe FIToFIPaymentStatusReport message is exchanged between agents to provide status information about instructions previously sent. Its usage will always be governed by a bilateral agreement between the agents.\r\nThe FIToFIPaymentStatusReport message can be used to provide information about the status (e.g. rejection, acceptance) of a credit transfer instruction, a direct debit instruction, as well as other intra-agent instructions (for example FIToFIPaymentCancellationRequest).\r\nThe FIToFIPaymentStatusReport message refers to the original instruction(s) by means of references only or by means of references and a set of elements from the original instruction.\r\nThe FIToFIPaymentStatusReport message can be used in domestic and cross-border scenarios.\r\nThe FIToFIPaymentStatusReport may also be sent to the receiver of the payment in a real time payment scenario, as both sides of the transactions must be informed of the status of the transaction (e.g. either the beneficiary is credited, or the transaction is rejected).";

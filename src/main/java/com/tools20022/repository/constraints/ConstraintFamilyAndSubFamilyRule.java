@@ -24,45 +24,11 @@ import com.tools20022.repository.msg.BankTransactionCodeStructure1;
 import com.tools20022.repository.msg.BankTransactionCodeStructure4;
 
 /**
- * A specific (non-generic) SubFamily code may only be provided if a specific
- * (non-generic) Family code is present.
+ * If a specific (non-generic) Family code is not present, then a specific
+ * (non-generic) SubFamily code is not allowed.
  */
 public class ConstraintFamilyAndSubFamilyRule {
 
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.BankTransactionCodeStructure1
-	 * BankTransactionCodeStructure1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "FamilyAndSubFamilyRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "A specific (non-generic) SubFamily code may only be provided if a specific (non-generic) Family code is present."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<BankTransactionCodeStructure1> forBankTransactionCodeStructure1 = new MMConstraint<BankTransactionCodeStructure1>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "FamilyAndSubFamilyRule";
-			definition = "A specific (non-generic) SubFamily code may only be provided if a specific (non-generic) Family code is present.";
-			owner_lazy = () -> BankTransactionCodeStructure1.mmObject();
-		}
-
-		@Override
-		public void executeValidator(BankTransactionCodeStructure1 obj) throws Exception {
-			checkBankTransactionCodeStructure1(obj);
-		}
-	};
 	/**
 	 * 
 	 <p>
@@ -97,20 +63,54 @@ public class ConstraintFamilyAndSubFamilyRule {
 			checkBankTransactionCodeStructure4(obj);
 		}
 	};
-
 	/**
-	 * A specific (non-generic) SubFamily code may only be provided if a
-	 * specific (non-generic) Family code is present.
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.BankTransactionCodeStructure1
+	 * BankTransactionCodeStructure1}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "FamilyAndSubFamilyRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "A specific (non-generic) SubFamily code may only be provided if a specific (non-generic) Family code is present."
+	 * </li>
+	 * </ul>
 	 */
-	public static void checkBankTransactionCodeStructure1(BankTransactionCodeStructure1 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
+	public static final MMConstraint<BankTransactionCodeStructure1> forBankTransactionCodeStructure1 = new MMConstraint<BankTransactionCodeStructure1>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "FamilyAndSubFamilyRule";
+			definition = "A specific (non-generic) SubFamily code may only be provided if a specific (non-generic) Family code is present.";
+			owner_lazy = () -> BankTransactionCodeStructure1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(BankTransactionCodeStructure1 obj) throws Exception {
+			checkBankTransactionCodeStructure1(obj);
+		}
+	};
 
 	/**
 	 * If a specific (non-generic) Family code is not present, then a specific
 	 * (non-generic) SubFamily code is not allowed.
 	 */
 	public static void checkBankTransactionCodeStructure4(BankTransactionCodeStructure4 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * A specific (non-generic) SubFamily code may only be provided if a
+	 * specific (non-generic) Family code is present.
+	 */
+	public static void checkBankTransactionCodeStructure1(BankTransactionCodeStructure1 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

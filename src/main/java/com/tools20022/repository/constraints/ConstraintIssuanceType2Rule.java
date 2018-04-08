@@ -53,7 +53,7 @@ public class ConstraintIssuanceType2Rule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<UndertakingIssuanceV01> forUndertakingIssuanceV01 = new MMConstraint<UndertakingIssuanceV01>() {
+	public static final MMConstraint<UndertakingIssuanceV01> for_tsrv_UndertakingIssuanceV01 = new MMConstraint<UndertakingIssuanceV01>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuanceType2Rule";
@@ -64,7 +64,7 @@ public class ConstraintIssuanceType2Rule {
 
 		@Override
 		public void executeValidator(UndertakingIssuanceV01 obj) throws Exception {
-			checkUndertakingIssuanceV01(obj);
+			check_tsrv_UndertakingIssuanceV01(obj);
 		}
 	};
 	/**
@@ -110,7 +110,7 @@ public class ConstraintIssuanceType2Rule {
 	/**
 	 * If IssuanceType is "QRQC" then LocalUndertakingDetails must be present.
 	 */
-	public static void checkUndertakingIssuanceV01(UndertakingIssuanceV01 obj) throws Exception {
+	public static void check_tsrv_UndertakingIssuanceV01(UndertakingIssuanceV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 

@@ -103,11 +103,11 @@ public class TradeServicesInitiationLatestVersion {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Trade Services Initiation - Latest version - master";
 				definition = "Messages that support the request for a trade service, including any related application, instruction, request, acknowledgement or advice.";
+				code = "tsin";
 				messageDefinition_lazy = () -> Arrays.asList(UndertakingApplicationV01.mmObject(), InvoiceFinancingRequestV01.mmObject(), InvoiceFinancingRequestStatusV01.mmObject(), InvoiceFinancingCancellationRequestV01.mmObject(),
 						FinancialInvoiceV01.mmObject(), InvoiceAssignmentRequestV01.mmObject(), PartyRegistrationAndGuaranteeAcknowledgementV01.mmObject(), PartyRegistrationAndGuaranteeStatusV01.mmObject(),
 						PartyRegistrationAndGuaranteeNotificationV01.mmObject(), InvoiceAssignmentNotificationV01.mmObject(), InvoiceAssignmentAcknowledgementV01.mmObject(), InvoiceAssignmentStatusV01.mmObject(),
 						PartyRegistrationAndGuaranteeRequestV01.mmObject());
-				code = "tsin";
 			}
 		});
 		return mmObject_lazy.get();

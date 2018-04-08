@@ -34,40 +34,6 @@ public class ConstraintDebitCreditIndicatorGuideline {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.NumberAndSumOfTransactions2
-	 * NumberAndSumOfTransactions2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DebitCreditIndicatorGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "DebitCreditIndicator should be present when TotalNetEntryAmount is present."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<NumberAndSumOfTransactions2> forNumberAndSumOfTransactions2 = new MMConstraint<NumberAndSumOfTransactions2>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "DebitCreditIndicatorGuideline";
-			definition = "DebitCreditIndicator should be present when TotalNetEntryAmount is present.";
-			owner_lazy = () -> NumberAndSumOfTransactions2.mmObject();
-		}
-
-		@Override
-		public void executeValidator(NumberAndSumOfTransactions2 obj) throws Exception {
-			checkNumberAndSumOfTransactions2(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.NumberAndSumOfTransactionsPerBankTransactionCode1
 	 * NumberAndSumOfTransactionsPerBankTransactionCode1}</li>
 	 * <li>
@@ -96,12 +62,46 @@ public class ConstraintDebitCreditIndicatorGuideline {
 			checkNumberAndSumOfTransactionsPerBankTransactionCode1(obj);
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.NumberAndSumOfTransactions2
+	 * NumberAndSumOfTransactions2}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DebitCreditIndicatorGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "DebitCreditIndicator should be present when TotalNetEntryAmount is present."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<NumberAndSumOfTransactions2> forNumberAndSumOfTransactions2 = new MMConstraint<NumberAndSumOfTransactions2>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DebitCreditIndicatorGuideline";
+			definition = "DebitCreditIndicator should be present when TotalNetEntryAmount is present.";
+			owner_lazy = () -> NumberAndSumOfTransactions2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(NumberAndSumOfTransactions2 obj) throws Exception {
+			checkNumberAndSumOfTransactions2(obj);
+		}
+	};
 
 	/**
 	 * DebitCreditIndicator should be present when TotalNetEntryAmount is
 	 * present.
 	 */
-	public static void checkNumberAndSumOfTransactions2(NumberAndSumOfTransactions2 obj) throws Exception {
+	public static void checkNumberAndSumOfTransactionsPerBankTransactionCode1(NumberAndSumOfTransactionsPerBankTransactionCode1 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -109,7 +109,7 @@ public class ConstraintDebitCreditIndicatorGuideline {
 	 * DebitCreditIndicator should be present when TotalNetEntryAmount is
 	 * present.
 	 */
-	public static void checkNumberAndSumOfTransactionsPerBankTransactionCode1(NumberAndSumOfTransactionsPerBankTransactionCode1 obj) throws Exception {
+	public static void checkNumberAndSumOfTransactions2(NumberAndSumOfTransactions2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

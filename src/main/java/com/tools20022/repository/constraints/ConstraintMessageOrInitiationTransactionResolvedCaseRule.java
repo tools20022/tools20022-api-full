@@ -36,6 +36,45 @@ public class ConstraintMessageOrInitiationTransactionResolvedCaseRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV03
+	 * ResolutionOfInvestigationV03}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/CancellationDetails[*]/OriginalPaymentInformationAndStatus[*]/TransactionInformationAndStatus[*]/ResolvedCase&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/ResolvedCase&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/CancellationDetails[1]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/CancellationDetails[1]/OriginalPaymentInformationAndStatus[*]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/CancellationDetails[1]/OriginalPaymentInformationAndStatus[*]/TransactionInformationAndStatus[*]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "MessageOrInitiationTransactionResolvedCaseRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "ResolvedCase may be present at either ResolvedCase, OriginalGroupInformationAndStatus, OriginalPaymentInformationAndStatus or TransactionInformationAndStatus level."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<ResolutionOfInvestigationV03> for_camt_ResolutionOfInvestigationV03 = new MMConstraint<ResolutionOfInvestigationV03>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "MessageOrInitiationTransactionResolvedCaseRule";
+			definition = "ResolvedCase may be present at either ResolvedCase, OriginalGroupInformationAndStatus, OriginalPaymentInformationAndStatus or TransactionInformationAndStatus level.";
+			owner_lazy = () -> ResolutionOfInvestigationV03.mmObject();
+			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CancellationDetails[*]/OriginalPaymentInformationAndStatus[*]/TransactionInformationAndStatus[*]/ResolvedCase</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ResolvedCase</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationDetails[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationDetails[1]/OriginalPaymentInformationAndStatus[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationDetails[1]/OriginalPaymentInformationAndStatus[*]/TransactionInformationAndStatus[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(ResolutionOfInvestigationV03 obj) throws Exception {
+			check_camt_ResolutionOfInvestigationV03(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV08
 	 * ResolutionOfInvestigationV08}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
@@ -56,24 +95,24 @@ public class ConstraintMessageOrInitiationTransactionResolvedCaseRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrInitiationTransactionResolvedCaseRule#forResolutionOfInvestigationV07
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrInitiationTransactionResolvedCaseRule#for_camt_ResolutionOfInvestigationV07
 	 * ConstraintMessageOrInitiationTransactionResolvedCaseRule.
-	 * forResolutionOfInvestigationV07}</li>
+	 * for_camt_ResolutionOfInvestigationV07}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<ResolutionOfInvestigationV08> forResolutionOfInvestigationV08 = new MMConstraint<ResolutionOfInvestigationV08>() {
+	public static final MMConstraint<ResolutionOfInvestigationV08> for_camt_ResolutionOfInvestigationV08 = new MMConstraint<ResolutionOfInvestigationV08>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageOrInitiationTransactionResolvedCaseRule";
 			definition = "ResolvedCase may be present at either ResolvedCase, OriginalGroupInformationAndStatus, OriginalPaymentInformationAndStatus or TransactionInformationAndStatus level.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMessageOrInitiationTransactionResolvedCaseRule.forResolutionOfInvestigationV07;
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMessageOrInitiationTransactionResolvedCaseRule.for_camt_ResolutionOfInvestigationV07;
 			owner_lazy = () -> ResolutionOfInvestigationV08.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CancellationDetails[*]/OriginalPaymentInformationAndStatus[*]/TransactionInformationAndStatus[*]/ResolvedCase</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ResolvedCase</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationDetails[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationDetails[1]/OriginalPaymentInformationAndStatus[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationDetails[1]/OriginalPaymentInformationAndStatus[*]/TransactionInformationAndStatus[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
 
 		@Override
 		public void executeValidator(ResolutionOfInvestigationV08 obj) throws Exception {
-			checkResolutionOfInvestigationV08(obj);
+			check_camt_ResolutionOfInvestigationV08(obj);
 		}
 	};
 	/**
@@ -103,121 +142,33 @@ public class ConstraintMessageOrInitiationTransactionResolvedCaseRule {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrInitiationTransactionResolvedCaseRule#forResolutionOfInvestigationV08
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrInitiationTransactionResolvedCaseRule#for_camt_ResolutionOfInvestigationV08
 	 * ConstraintMessageOrInitiationTransactionResolvedCaseRule.
-	 * forResolutionOfInvestigationV08}</li>
+	 * for_camt_ResolutionOfInvestigationV08}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrInitiationTransactionResolvedCaseRule#forResolutionOfInvestigationV06
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrInitiationTransactionResolvedCaseRule#for_camt_ResolutionOfInvestigationV06
 	 * ConstraintMessageOrInitiationTransactionResolvedCaseRule.
-	 * forResolutionOfInvestigationV06}</li>
+	 * for_camt_ResolutionOfInvestigationV06}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<ResolutionOfInvestigationV07> forResolutionOfInvestigationV07 = new MMConstraint<ResolutionOfInvestigationV07>() {
+	public static final MMConstraint<ResolutionOfInvestigationV07> for_camt_ResolutionOfInvestigationV07 = new MMConstraint<ResolutionOfInvestigationV07>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageOrInitiationTransactionResolvedCaseRule";
 			definition = "ResolvedCase may be present at either ResolvedCase, OriginalGroupInformationAndStatus, OriginalPaymentInformationAndStatus or TransactionInformationAndStatus level.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMessageOrInitiationTransactionResolvedCaseRule.forResolutionOfInvestigationV08);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMessageOrInitiationTransactionResolvedCaseRule.forResolutionOfInvestigationV06;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMessageOrInitiationTransactionResolvedCaseRule.for_camt_ResolutionOfInvestigationV08);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMessageOrInitiationTransactionResolvedCaseRule.for_camt_ResolutionOfInvestigationV06;
 			owner_lazy = () -> ResolutionOfInvestigationV07.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CancellationDetails[*]/OriginalPaymentInformationAndStatus[*]/TransactionInformationAndStatus[*]/ResolvedCase</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ResolvedCase</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationDetails[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationDetails[1]/OriginalPaymentInformationAndStatus[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationDetails[1]/OriginalPaymentInformationAndStatus[*]/TransactionInformationAndStatus[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
 
 		@Override
 		public void executeValidator(ResolutionOfInvestigationV07 obj) throws Exception {
-			checkResolutionOfInvestigationV07(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV03
-	 * ResolutionOfInvestigationV03}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
-	 * expression} =
-	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/CancellationDetails[*]/OriginalPaymentInformationAndStatus[*]/TransactionInformationAndStatus[*]/ResolvedCase&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/ResolvedCase&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/CancellationDetails[1]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/CancellationDetails[1]/OriginalPaymentInformationAndStatus[*]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/CancellationDetails[1]/OriginalPaymentInformationAndStatus[*]/TransactionInformationAndStatus[*]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "MessageOrInitiationTransactionResolvedCaseRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "ResolvedCase may be present at either ResolvedCase, OriginalGroupInformationAndStatus, OriginalPaymentInformationAndStatus or TransactionInformationAndStatus level."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<ResolutionOfInvestigationV03> forResolutionOfInvestigationV03 = new MMConstraint<ResolutionOfInvestigationV03>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "MessageOrInitiationTransactionResolvedCaseRule";
-			definition = "ResolvedCase may be present at either ResolvedCase, OriginalGroupInformationAndStatus, OriginalPaymentInformationAndStatus or TransactionInformationAndStatus level.";
-			owner_lazy = () -> ResolutionOfInvestigationV03.mmObject();
-			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CancellationDetails[*]/OriginalPaymentInformationAndStatus[*]/TransactionInformationAndStatus[*]/ResolvedCase</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ResolvedCase</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationDetails[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationDetails[1]/OriginalPaymentInformationAndStatus[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationDetails[1]/OriginalPaymentInformationAndStatus[*]/TransactionInformationAndStatus[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
-		}
-
-		@Override
-		public void executeValidator(ResolutionOfInvestigationV03 obj) throws Exception {
-			checkResolutionOfInvestigationV03(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV04
-	 * ResolutionOfInvestigationV04}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
-	 * expression} =
-	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/CancellationDetails[*]/OriginalPaymentInformationAndStatus[*]/TransactionInformationAndStatus[*]/ResolvedCase&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/ResolvedCase&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/CancellationDetails[1]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/CancellationDetails[1]/OriginalPaymentInformationAndStatus[*]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/CancellationDetails[1]/OriginalPaymentInformationAndStatus[*]/TransactionInformationAndStatus[*]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "MessageOrInitiationTransactionResolvedCaseRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "ResolvedCase may be present at either ResolvedCase, OriginalGroupInformationAndStatus, OriginalPaymentInformationAndStatus or TransactionInformationAndStatus level."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrInitiationTransactionResolvedCaseRule#forResolutionOfInvestigationV05
-	 * ConstraintMessageOrInitiationTransactionResolvedCaseRule.
-	 * forResolutionOfInvestigationV05}</li>
-	 * </ul>
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<ResolutionOfInvestigationV04> forResolutionOfInvestigationV04 = new MMConstraint<ResolutionOfInvestigationV04>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "MessageOrInitiationTransactionResolvedCaseRule";
-			definition = "ResolvedCase may be present at either ResolvedCase, OriginalGroupInformationAndStatus, OriginalPaymentInformationAndStatus or TransactionInformationAndStatus level.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMessageOrInitiationTransactionResolvedCaseRule.forResolutionOfInvestigationV05);
-			owner_lazy = () -> ResolutionOfInvestigationV04.mmObject();
-			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CancellationDetails[*]/OriginalPaymentInformationAndStatus[*]/TransactionInformationAndStatus[*]/ResolvedCase</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ResolvedCase</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationDetails[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationDetails[1]/OriginalPaymentInformationAndStatus[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationDetails[1]/OriginalPaymentInformationAndStatus[*]/TransactionInformationAndStatus[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
-		}
-
-		@Override
-		public void executeValidator(ResolutionOfInvestigationV04 obj) throws Exception {
-			checkResolutionOfInvestigationV04(obj);
+			check_camt_ResolutionOfInvestigationV07(obj);
 		}
 	};
 	/**
@@ -247,33 +198,33 @@ public class ConstraintMessageOrInitiationTransactionResolvedCaseRule {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrInitiationTransactionResolvedCaseRule#forResolutionOfInvestigationV06
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrInitiationTransactionResolvedCaseRule#for_camt_ResolutionOfInvestigationV06
 	 * ConstraintMessageOrInitiationTransactionResolvedCaseRule.
-	 * forResolutionOfInvestigationV06}</li>
+	 * for_camt_ResolutionOfInvestigationV06}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrInitiationTransactionResolvedCaseRule#forResolutionOfInvestigationV04
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrInitiationTransactionResolvedCaseRule#for_camt_ResolutionOfInvestigationV04
 	 * ConstraintMessageOrInitiationTransactionResolvedCaseRule.
-	 * forResolutionOfInvestigationV04}</li>
+	 * for_camt_ResolutionOfInvestigationV04}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<ResolutionOfInvestigationV05> forResolutionOfInvestigationV05 = new MMConstraint<ResolutionOfInvestigationV05>() {
+	public static final MMConstraint<ResolutionOfInvestigationV05> for_camt_ResolutionOfInvestigationV05 = new MMConstraint<ResolutionOfInvestigationV05>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageOrInitiationTransactionResolvedCaseRule";
 			definition = "ResolvedCase may be present at either ResolvedCase, OriginalGroupInformationAndStatus, OriginalPaymentInformationAndStatus or TransactionInformationAndStatus level.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMessageOrInitiationTransactionResolvedCaseRule.forResolutionOfInvestigationV06);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMessageOrInitiationTransactionResolvedCaseRule.forResolutionOfInvestigationV04;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMessageOrInitiationTransactionResolvedCaseRule.for_camt_ResolutionOfInvestigationV06);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMessageOrInitiationTransactionResolvedCaseRule.for_camt_ResolutionOfInvestigationV04;
 			owner_lazy = () -> ResolutionOfInvestigationV05.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CancellationDetails[*]/OriginalPaymentInformationAndStatus[*]/TransactionInformationAndStatus[*]/ResolvedCase</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ResolvedCase</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationDetails[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationDetails[1]/OriginalPaymentInformationAndStatus[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationDetails[1]/OriginalPaymentInformationAndStatus[*]/TransactionInformationAndStatus[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
 
 		@Override
 		public void executeValidator(ResolutionOfInvestigationV05 obj) throws Exception {
-			checkResolutionOfInvestigationV05(obj);
+			check_camt_ResolutionOfInvestigationV05(obj);
 		}
 	};
 	/**
@@ -303,33 +254,82 @@ public class ConstraintMessageOrInitiationTransactionResolvedCaseRule {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrInitiationTransactionResolvedCaseRule#forResolutionOfInvestigationV07
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrInitiationTransactionResolvedCaseRule#for_camt_ResolutionOfInvestigationV07
 	 * ConstraintMessageOrInitiationTransactionResolvedCaseRule.
-	 * forResolutionOfInvestigationV07}</li>
+	 * for_camt_ResolutionOfInvestigationV07}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrInitiationTransactionResolvedCaseRule#forResolutionOfInvestigationV05
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrInitiationTransactionResolvedCaseRule#for_camt_ResolutionOfInvestigationV05
 	 * ConstraintMessageOrInitiationTransactionResolvedCaseRule.
-	 * forResolutionOfInvestigationV05}</li>
+	 * for_camt_ResolutionOfInvestigationV05}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<ResolutionOfInvestigationV06> forResolutionOfInvestigationV06 = new MMConstraint<ResolutionOfInvestigationV06>() {
+	public static final MMConstraint<ResolutionOfInvestigationV06> for_camt_ResolutionOfInvestigationV06 = new MMConstraint<ResolutionOfInvestigationV06>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageOrInitiationTransactionResolvedCaseRule";
 			definition = "ResolvedCase may be present at either ResolvedCase, OriginalGroupInformationAndStatus, OriginalPaymentInformationAndStatus or TransactionInformationAndStatus level.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMessageOrInitiationTransactionResolvedCaseRule.forResolutionOfInvestigationV07);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMessageOrInitiationTransactionResolvedCaseRule.forResolutionOfInvestigationV05;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMessageOrInitiationTransactionResolvedCaseRule.for_camt_ResolutionOfInvestigationV07);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMessageOrInitiationTransactionResolvedCaseRule.for_camt_ResolutionOfInvestigationV05;
 			owner_lazy = () -> ResolutionOfInvestigationV06.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CancellationDetails[*]/OriginalPaymentInformationAndStatus[*]/TransactionInformationAndStatus[*]/ResolvedCase</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ResolvedCase</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationDetails[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationDetails[1]/OriginalPaymentInformationAndStatus[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationDetails[1]/OriginalPaymentInformationAndStatus[*]/TransactionInformationAndStatus[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
 
 		@Override
 		public void executeValidator(ResolutionOfInvestigationV06 obj) throws Exception {
-			checkResolutionOfInvestigationV06(obj);
+			check_camt_ResolutionOfInvestigationV06(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV04
+	 * ResolutionOfInvestigationV04}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/CancellationDetails[*]/OriginalPaymentInformationAndStatus[*]/TransactionInformationAndStatus[*]/ResolvedCase&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/ResolvedCase&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/CancellationDetails[1]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/CancellationDetails[1]/OriginalPaymentInformationAndStatus[*]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/CancellationDetails[1]/OriginalPaymentInformationAndStatus[*]/TransactionInformationAndStatus[*]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "MessageOrInitiationTransactionResolvedCaseRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "ResolvedCase may be present at either ResolvedCase, OriginalGroupInformationAndStatus, OriginalPaymentInformationAndStatus or TransactionInformationAndStatus level."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrInitiationTransactionResolvedCaseRule#for_camt_ResolutionOfInvestigationV05
+	 * ConstraintMessageOrInitiationTransactionResolvedCaseRule.
+	 * for_camt_ResolutionOfInvestigationV05}</li>
+	 * </ul>
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<ResolutionOfInvestigationV04> for_camt_ResolutionOfInvestigationV04 = new MMConstraint<ResolutionOfInvestigationV04>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "MessageOrInitiationTransactionResolvedCaseRule";
+			definition = "ResolvedCase may be present at either ResolvedCase, OriginalGroupInformationAndStatus, OriginalPaymentInformationAndStatus or TransactionInformationAndStatus level.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMessageOrInitiationTransactionResolvedCaseRule.for_camt_ResolutionOfInvestigationV05);
+			owner_lazy = () -> ResolutionOfInvestigationV04.mmObject();
+			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CancellationDetails[*]/OriginalPaymentInformationAndStatus[*]/TransactionInformationAndStatus[*]/ResolvedCase</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ResolvedCase</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationDetails[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationDetails[1]/OriginalPaymentInformationAndStatus[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationDetails[1]/OriginalPaymentInformationAndStatus[*]/TransactionInformationAndStatus[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(ResolutionOfInvestigationV04 obj) throws Exception {
+			check_camt_ResolutionOfInvestigationV04(obj);
 		}
 	};
 
@@ -338,7 +338,7 @@ public class ConstraintMessageOrInitiationTransactionResolvedCaseRule {
 	 * OriginalGroupInformationAndStatus, OriginalPaymentInformationAndStatus or
 	 * TransactionInformationAndStatus level.
 	 */
-	public static void checkResolutionOfInvestigationV08(ResolutionOfInvestigationV08 obj) throws Exception {
+	public static void check_camt_ResolutionOfInvestigationV03(ResolutionOfInvestigationV03 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -347,7 +347,7 @@ public class ConstraintMessageOrInitiationTransactionResolvedCaseRule {
 	 * OriginalGroupInformationAndStatus, OriginalPaymentInformationAndStatus or
 	 * TransactionInformationAndStatus level.
 	 */
-	public static void checkResolutionOfInvestigationV07(ResolutionOfInvestigationV07 obj) throws Exception {
+	public static void check_camt_ResolutionOfInvestigationV08(ResolutionOfInvestigationV08 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -356,7 +356,7 @@ public class ConstraintMessageOrInitiationTransactionResolvedCaseRule {
 	 * OriginalGroupInformationAndStatus, OriginalPaymentInformationAndStatus or
 	 * TransactionInformationAndStatus level.
 	 */
-	public static void checkResolutionOfInvestigationV03(ResolutionOfInvestigationV03 obj) throws Exception {
+	public static void check_camt_ResolutionOfInvestigationV07(ResolutionOfInvestigationV07 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -365,7 +365,7 @@ public class ConstraintMessageOrInitiationTransactionResolvedCaseRule {
 	 * OriginalGroupInformationAndStatus, OriginalPaymentInformationAndStatus or
 	 * TransactionInformationAndStatus level.
 	 */
-	public static void checkResolutionOfInvestigationV04(ResolutionOfInvestigationV04 obj) throws Exception {
+	public static void check_camt_ResolutionOfInvestigationV05(ResolutionOfInvestigationV05 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -374,7 +374,7 @@ public class ConstraintMessageOrInitiationTransactionResolvedCaseRule {
 	 * OriginalGroupInformationAndStatus, OriginalPaymentInformationAndStatus or
 	 * TransactionInformationAndStatus level.
 	 */
-	public static void checkResolutionOfInvestigationV05(ResolutionOfInvestigationV05 obj) throws Exception {
+	public static void check_camt_ResolutionOfInvestigationV06(ResolutionOfInvestigationV06 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -383,7 +383,7 @@ public class ConstraintMessageOrInitiationTransactionResolvedCaseRule {
 	 * OriginalGroupInformationAndStatus, OriginalPaymentInformationAndStatus or
 	 * TransactionInformationAndStatus level.
 	 */
-	public static void checkResolutionOfInvestigationV06(ResolutionOfInvestigationV06 obj) throws Exception {
+	public static void check_camt_ResolutionOfInvestigationV04(ResolutionOfInvestigationV04 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

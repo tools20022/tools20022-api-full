@@ -26,10 +26,9 @@ import com.tools20022.repository.msg.SubAccountIdentification6;
 import java.util.Arrays;
 
 /**
- * If StatementGeneralDetails/ActivityIndicator is "true" or "1" (Yes), then
- * either TransactionOnAccount or SubAccountDetails must be present. If
- * StatementGeneralDetails/ActivityIndicator is "false" or "0" (No), then
- * TransactionOnAccount and SubAccountDetails are not allowed.
+ * If ActivityIndicator is "true" or "1" (Yes), then TransactionOnSubAccount
+ * must be present. If ActivityIndicator is "false" or "0" (No), then
+ * TransactionOnSubAccount is not allowed.
  */
 public class ConstraintTransactionOnSubAccountRule {
 
@@ -39,8 +38,8 @@ public class ConstraintTransactionOnSubAccountRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification4
-	 * SubAccountIdentification4}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification36
+	 * SubAccountIdentification36}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -50,21 +49,27 @@ public class ConstraintTransactionOnSubAccountRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If StatementGeneralDetails/ActivityIndicator is \"true\" or \"1\" (Yes), then either TransactionOnAccount or SubAccountDetails must be present. If StatementGeneralDetails/ActivityIndicator is \"false\" or \"0\" (No), then TransactionOnAccount and SubAccountDetails are not allowed."
+	 * "If ActivityIndicator is \"true\" or \"1\" (Yes), then TransactionOnSubAccount must be present. If ActivityIndicator is \"false\" or \"0\" (No), then TransactionOnSubAccount is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintTransactionOnSubAccountRule#forSubAccountIdentification6
+	 * ConstraintTransactionOnSubAccountRule.forSubAccountIdentification6}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<SubAccountIdentification4> forSubAccountIdentification4 = new MMConstraint<SubAccountIdentification4>() {
+	public static final MMConstraint<SubAccountIdentification36> forSubAccountIdentification36 = new MMConstraint<SubAccountIdentification36>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionOnSubAccountRule";
-			definition = "If StatementGeneralDetails/ActivityIndicator is \"true\" or \"1\" (Yes), then either TransactionOnAccount or SubAccountDetails must be present. If StatementGeneralDetails/ActivityIndicator is \"false\" or \"0\" (No), then TransactionOnAccount and SubAccountDetails are not allowed.";
-			owner_lazy = () -> SubAccountIdentification4.mmObject();
+			definition = "If ActivityIndicator is \"true\" or \"1\" (Yes), then TransactionOnSubAccount must be present. If ActivityIndicator is \"false\" or \"0\" (No), then TransactionOnSubAccount is not allowed.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTransactionOnSubAccountRule.forSubAccountIdentification6;
+			owner_lazy = () -> SubAccountIdentification36.mmObject();
 		}
 
 		@Override
-		public void executeValidator(SubAccountIdentification4 obj) throws Exception {
-			checkSubAccountIdentification4(obj);
+		public void executeValidator(SubAccountIdentification36 obj) throws Exception {
+			checkSubAccountIdentification36(obj);
 		}
 	};
 	/**
@@ -116,8 +121,8 @@ public class ConstraintTransactionOnSubAccountRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification36
-	 * SubAccountIdentification36}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification4
+	 * SubAccountIdentification4}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -127,37 +132,30 @@ public class ConstraintTransactionOnSubAccountRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If ActivityIndicator is \"true\" or \"1\" (Yes), then TransactionOnSubAccount must be present. If ActivityIndicator is \"false\" or \"0\" (No), then TransactionOnSubAccount is not allowed."
+	 * "If StatementGeneralDetails/ActivityIndicator is \"true\" or \"1\" (Yes), then either TransactionOnAccount or SubAccountDetails must be present. If StatementGeneralDetails/ActivityIndicator is \"false\" or \"0\" (No), then TransactionOnAccount and SubAccountDetails are not allowed."
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintTransactionOnSubAccountRule#forSubAccountIdentification6
-	 * ConstraintTransactionOnSubAccountRule.forSubAccountIdentification6}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<SubAccountIdentification36> forSubAccountIdentification36 = new MMConstraint<SubAccountIdentification36>() {
+	public static final MMConstraint<SubAccountIdentification4> forSubAccountIdentification4 = new MMConstraint<SubAccountIdentification4>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionOnSubAccountRule";
-			definition = "If ActivityIndicator is \"true\" or \"1\" (Yes), then TransactionOnSubAccount must be present. If ActivityIndicator is \"false\" or \"0\" (No), then TransactionOnSubAccount is not allowed.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTransactionOnSubAccountRule.forSubAccountIdentification6;
-			owner_lazy = () -> SubAccountIdentification36.mmObject();
+			definition = "If StatementGeneralDetails/ActivityIndicator is \"true\" or \"1\" (Yes), then either TransactionOnAccount or SubAccountDetails must be present. If StatementGeneralDetails/ActivityIndicator is \"false\" or \"0\" (No), then TransactionOnAccount and SubAccountDetails are not allowed.";
+			owner_lazy = () -> SubAccountIdentification4.mmObject();
 		}
 
 		@Override
-		public void executeValidator(SubAccountIdentification36 obj) throws Exception {
-			checkSubAccountIdentification36(obj);
+		public void executeValidator(SubAccountIdentification4 obj) throws Exception {
+			checkSubAccountIdentification4(obj);
 		}
 	};
 
 	/**
-	 * If StatementGeneralDetails/ActivityIndicator is "true" or "1" (Yes), then
-	 * either TransactionOnAccount or SubAccountDetails must be present. If
-	 * StatementGeneralDetails/ActivityIndicator is "false" or "0" (No), then
-	 * TransactionOnAccount and SubAccountDetails are not allowed.
+	 * If ActivityIndicator is "true" or "1" (Yes), then TransactionOnSubAccount
+	 * must be present. If ActivityIndicator is "false" or "0" (No), then
+	 * TransactionOnSubAccount is not allowed.
 	 */
-	public static void checkSubAccountIdentification4(SubAccountIdentification4 obj) throws Exception {
+	public static void checkSubAccountIdentification36(SubAccountIdentification36 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -171,11 +169,12 @@ public class ConstraintTransactionOnSubAccountRule {
 	}
 
 	/**
-	 * If ActivityIndicator is "true" or "1" (Yes), then TransactionOnSubAccount
-	 * must be present. If ActivityIndicator is "false" or "0" (No), then
-	 * TransactionOnSubAccount is not allowed.
+	 * If StatementGeneralDetails/ActivityIndicator is "true" or "1" (Yes), then
+	 * either TransactionOnAccount or SubAccountDetails must be present. If
+	 * StatementGeneralDetails/ActivityIndicator is "false" or "0" (No), then
+	 * TransactionOnAccount and SubAccountDetails are not allowed.
 	 */
-	public static void checkSubAccountIdentification36(SubAccountIdentification36 obj) throws Exception {
+	public static void checkSubAccountIdentification4(SubAccountIdentification4 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

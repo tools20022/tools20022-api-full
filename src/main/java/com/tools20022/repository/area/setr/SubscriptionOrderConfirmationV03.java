@@ -110,14 +110,16 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationRule#forSubscriptionOrderConfirmationV03
- * ConstraintAccountIdentificationRule.forSubscriptionOrderConfirmationV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationRule#for_setr_SubscriptionOrderConfirmationV03
+ * ConstraintAccountIdentificationRule.for_setr_SubscriptionOrderConfirmationV03
+ * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintOrderReferenceRule#forSubscriptionOrderConfirmationV03
- * ConstraintOrderReferenceRule.forSubscriptionOrderConfirmationV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOrderReferenceRule#for_setr_SubscriptionOrderConfirmationV03
+ * ConstraintOrderReferenceRule.for_setr_SubscriptionOrderConfirmationV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintRelatedPartiesDetailsRule#forSubscriptionOrderConfirmationV03
- * ConstraintRelatedPartiesDetailsRule.forSubscriptionOrderConfirmationV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintRelatedPartiesDetailsRule#for_setr_SubscriptionOrderConfirmationV03
+ * ConstraintRelatedPartiesDetailsRule.for_setr_SubscriptionOrderConfirmationV03
+ * }</li>
  * </ul>
  * </li>
  * <li>
@@ -587,8 +589,9 @@ public class SubscriptionOrderConfirmationV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forSubscriptionOrderConfirmationV03,
-						com.tools20022.repository.constraints.ConstraintOrderReferenceRule.forSubscriptionOrderConfirmationV03, com.tools20022.repository.constraints.ConstraintRelatedPartiesDetailsRule.forSubscriptionOrderConfirmationV03);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.for_setr_SubscriptionOrderConfirmationV03,
+						com.tools20022.repository.constraints.ConstraintOrderReferenceRule.for_setr_SubscriptionOrderConfirmationV03,
+						com.tools20022.repository.constraints.ConstraintRelatedPartiesDetailsRule.for_setr_SubscriptionOrderConfirmationV03);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SubscriptionOrderConfirmationV03";
 				definition = "Scope\r\nAn executing party, for example, a transfer agent, sends the SubscriptionOrderConfirmation message to the instructing party, for example, an investment manager or its authorised representative to confirm the details of the execution of a SubscriptionOrder instruction.\r\nUsage\r\nThe SubscriptionOrderConfirmation message is used to confirm the execution of one or more individual orders.\r\nA SubscriptionOrder message containing more than one individual order may be responded to by more than one SubscriptionOrderConfirmation message, as the valuation cycle of the financial instruments in each individual order may be different.\r\nEach individual order confirmation specified is identified in DealReference. The reference of the original individual order is specified in OrderReference. The message identification of the SubscriptionOrder message in which the individual orders was conveyed may also be quoted in RelatedReference.\r\nWhen the executing party sends several confirmations, there is no specific indication in the message that it is an incomplete confirmation. Reconciliation must be based on the references.\r\nA SubscriptionOrder must in all cases be responded to by a SubscriptionOrderConfirmation message and in no circumstances by a SubscriptionBulkOrderConfirmation message.\r\nIf the executing party needs to confirm a SubscriptionBulkOrder message, then a SubscriptionBulkOrderConfirmation message must be used.";

@@ -164,9 +164,9 @@ public class PortfolioTransferCancellationRequestV03 {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Operation1";
-			messageDefinition_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV03.mmObject();
 			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV03.mmCancellationByTransferInstructionDetails,
 					com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV03.mmCancellationByReference);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV03.mmObject();
 		}
 	};
 	@XmlElement(name = "MsgRef", required = true)

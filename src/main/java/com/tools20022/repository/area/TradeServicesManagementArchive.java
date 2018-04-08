@@ -81,9 +81,9 @@ public class TradeServicesManagementArchive {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Trade Services Management - Archive - master";
 				definition = "Messages that support ancillary commercial trade services functions, including checking, matching and reporting, plus any exceptions and investigations related to trade services transactions.";
+				code = "tsmt";
 				messageDefinition_lazy = () -> Arrays.asList(BaselineAmendmentRequestV03.mmObject(), BaselineReSubmissionV03.mmObject(), DataSetSubmissionV03.mmObject(), ForwardDataSetSubmissionReportV03.mmObject(),
 						FullPushThroughReportV03.mmObject(), InitialBaselineSubmissionV03.mmObject());
-				code = "tsmt";
 			}
 		});
 		return mmObject_lazy.get();

@@ -24,46 +24,11 @@ import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 
 /**
- * If ChargesAccountAgent is present, it must contain a branch of the
- * DebtorAgent. It must not contain a completely different financial
- * institution.
+ * If ChargesAccountAgent is present, then it must contain a branch of the
+ * DebtorAgent. It must not contain a completely different agent.
  */
 public class ConstraintChargesAccountAgentRule {
 
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionInformation1
-	 * PaymentInstructionInformation1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ChargesAccountAgentRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If ChargesAccountAgent is present, it must contain a branch of the DebtorAgent. It must not contain a completely different financial institution."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<PaymentInstructionInformation1> forPaymentInstructionInformation1 = new MMConstraint<PaymentInstructionInformation1>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ChargesAccountAgentRule";
-			definition = "If ChargesAccountAgent is present, it must contain a branch of the DebtorAgent. It must not contain a completely different financial institution.";
-			owner_lazy = () -> PaymentInstructionInformation1.mmObject();
-		}
-
-		@Override
-		public void executeValidator(PaymentInstructionInformation1 obj) throws Exception {
-			checkPaymentInstructionInformation1(obj);
-		}
-	};
 	/**
 	 * 
 	 <p>
@@ -148,8 +113,96 @@ public class ConstraintChargesAccountAgentRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction9
-	 * PaymentInstruction9}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionInformation1
+	 * PaymentInstructionInformation1}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ChargesAccountAgentRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If ChargesAccountAgent is present, it must contain a branch of the DebtorAgent. It must not contain a completely different financial institution."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<PaymentInstructionInformation1> forPaymentInstructionInformation1 = new MMConstraint<PaymentInstructionInformation1>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ChargesAccountAgentRule";
+			definition = "If ChargesAccountAgent is present, it must contain a branch of the DebtorAgent. It must not contain a completely different financial institution.";
+			owner_lazy = () -> PaymentInstructionInformation1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstructionInformation1 obj) throws Exception {
+			checkPaymentInstructionInformation1(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction18
+	 * PaymentInstruction18}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/ChargesAccountAgent/FinancialInstitutionIdentification/Name&lt;/leftOperand&gt;&lt;rightOperand&gt;Branch of DebtorAgent&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/ChargesAccountAgent&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ChargesAccountAgentRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If ChargesAccountAgent is present, then it must contain a branch of the CreditorAgent. It must not contain a completely different agent."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintChargesAccountAgentRule#forPaymentInstruction21
+	 * ConstraintChargesAccountAgentRule.forPaymentInstruction21}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintChargesAccountAgentRule#forPaymentInstruction15
+	 * ConstraintChargesAccountAgentRule.forPaymentInstruction15}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<PaymentInstruction18> forPaymentInstruction18 = new MMConstraint<PaymentInstruction18>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ChargesAccountAgentRule";
+			definition = "If ChargesAccountAgent is present, then it must contain a branch of the CreditorAgent. It must not contain a completely different agent.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChargesAccountAgentRule.forPaymentInstruction21);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChargesAccountAgentRule.forPaymentInstruction15;
+			owner_lazy = () -> PaymentInstruction18.mmObject();
+			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/ChargesAccountAgent/FinancialInstitutionIdentification/Name</leftOperand><rightOperand>Branch of DebtorAgent</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesAccountAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction18 obj) throws Exception {
+			checkPaymentInstruction18(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction22
+	 * PaymentInstruction22}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
 	 * expression} =
 	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/ChargesAccountAgent/FinancialInstitutionIdentification/Name&lt;/leftOperand&gt;&lt;rightOperand&gt;Branch of DebtorAgent&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/ChargesAccountAgent&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
@@ -165,141 +218,26 @@ public class ConstraintChargesAccountAgentRule {
 	 * definition} =
 	 * "If ChargesAccountAgent is present, then it must contain a branch of the DebtorAgent. It must not contain a completely different agent."
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintChargesAccountAgentRule#forPaymentInstruction16
-	 * ConstraintChargesAccountAgentRule.forPaymentInstruction16}</li>
-	 * </ul>
-	 * </li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintChargesAccountAgentRule#forPaymentInstruction20
+	 * ConstraintChargesAccountAgentRule.forPaymentInstruction20}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<PaymentInstruction9> forPaymentInstruction9 = new MMConstraint<PaymentInstruction9>() {
+	public static final MMConstraint<PaymentInstruction22> forPaymentInstruction22 = new MMConstraint<PaymentInstruction22>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesAccountAgentRule";
 			definition = "If ChargesAccountAgent is present, then it must contain a branch of the DebtorAgent. It must not contain a completely different agent.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChargesAccountAgentRule.forPaymentInstruction16);
-			owner_lazy = () -> PaymentInstruction9.mmObject();
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChargesAccountAgentRule.forPaymentInstruction20;
+			owner_lazy = () -> PaymentInstruction22.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/ChargesAccountAgent/FinancialInstitutionIdentification/Name</leftOperand><rightOperand>Branch of DebtorAgent</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesAccountAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
 
 		@Override
-		public void executeValidator(PaymentInstruction9 obj) throws Exception {
-			checkPaymentInstruction9(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionInformation2
-	 * PaymentInstructionInformation2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ChargesAccountAgentRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If ChargesAccountAgent is present, it must contain a branch of the CreditorAgent. It must not contain a completely different financial institution."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<PaymentInstructionInformation2> forPaymentInstructionInformation2 = new MMConstraint<PaymentInstructionInformation2>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ChargesAccountAgentRule";
-			definition = "If ChargesAccountAgent is present, it must contain a branch of the CreditorAgent. It must not contain a completely different financial institution.";
-			owner_lazy = () -> PaymentInstructionInformation2.mmObject();
-		}
-
-		@Override
-		public void executeValidator(PaymentInstructionInformation2 obj) throws Exception {
-			checkPaymentInstructionInformation2(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionInformation4
-	 * PaymentInstructionInformation4}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
-	 * expression} =
-	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/ChargesAccountAgent/FinancialInstitutionIdentification/Name&lt;/leftOperand&gt;&lt;rightOperand&gt;Branch of DebtorAgent&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/ChargesAccountAgent&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ChargesAccountAgentRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If ChargesAccountAgent is present, then it must contain a branch of the CreditorAgent. It must not contain a completely different agent."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<PaymentInstructionInformation4> forPaymentInstructionInformation4 = new MMConstraint<PaymentInstructionInformation4>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ChargesAccountAgentRule";
-			definition = "If ChargesAccountAgent is present, then it must contain a branch of the CreditorAgent. It must not contain a completely different agent.";
-			owner_lazy = () -> PaymentInstructionInformation4.mmObject();
-			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/ChargesAccountAgent/FinancialInstitutionIdentification/Name</leftOperand><rightOperand>Branch of DebtorAgent</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesAccountAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
-		}
-
-		@Override
-		public void executeValidator(PaymentInstructionInformation4 obj) throws Exception {
-			checkPaymentInstructionInformation4(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction7
-	 * PaymentInstruction7}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
-	 * expression} =
-	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/ChargesAccountAgent/FinancialInstitutionIdentification/Name&lt;/leftOperand&gt;&lt;rightOperand&gt;Branch of DebtorAgent&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/ChargesAccountAgent&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ChargesAccountAgentRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If ChargesAccountAgent is present, then it must contain a branch of the CreditorAgent. It must not contain a completely different agent."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<PaymentInstruction7> forPaymentInstruction7 = new MMConstraint<PaymentInstruction7>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ChargesAccountAgentRule";
-			definition = "If ChargesAccountAgent is present, then it must contain a branch of the CreditorAgent. It must not contain a completely different agent.";
-			owner_lazy = () -> PaymentInstruction7.mmObject();
-			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/ChargesAccountAgent/FinancialInstitutionIdentification/Name</leftOperand><rightOperand>Branch of DebtorAgent</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesAccountAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
-		}
-
-		@Override
-		public void executeValidator(PaymentInstruction7 obj) throws Exception {
-			checkPaymentInstruction7(obj);
+		public void executeValidator(PaymentInstruction22 obj) throws Exception {
+			checkPaymentInstruction22(obj);
 		}
 	};
 	/**
@@ -410,12 +348,8 @@ public class ConstraintChargesAccountAgentRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction15
-	 * PaymentInstruction15}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
-	 * expression} =
-	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/ChargesAccountAgent/FinancialInstitutionIdentification/Name&lt;/leftOperand&gt;&lt;rightOperand&gt;Branch of DebtorAgent&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/ChargesAccountAgent&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
-	 * </li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionInformation2
+	 * PaymentInstructionInformation2}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -425,37 +359,21 @@ public class ConstraintChargesAccountAgentRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If ChargesAccountAgent is present, then it must contain a branch of the CreditorAgent. It must not contain a completely different agent."
+	 * "If ChargesAccountAgent is present, it must contain a branch of the CreditorAgent. It must not contain a completely different financial institution."
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintChargesAccountAgentRule#forPaymentInstruction18
-	 * ConstraintChargesAccountAgentRule.forPaymentInstruction18}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintChargesAccountAgentRule#forPaymentInstruction10
-	 * ConstraintChargesAccountAgentRule.forPaymentInstruction10}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<PaymentInstruction15> forPaymentInstruction15 = new MMConstraint<PaymentInstruction15>() {
+	public static final MMConstraint<PaymentInstructionInformation2> forPaymentInstructionInformation2 = new MMConstraint<PaymentInstructionInformation2>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesAccountAgentRule";
-			definition = "If ChargesAccountAgent is present, then it must contain a branch of the CreditorAgent. It must not contain a completely different agent.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChargesAccountAgentRule.forPaymentInstruction18);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChargesAccountAgentRule.forPaymentInstruction10;
-			owner_lazy = () -> PaymentInstruction15.mmObject();
-			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/ChargesAccountAgent/FinancialInstitutionIdentification/Name</leftOperand><rightOperand>Branch of DebtorAgent</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesAccountAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+			definition = "If ChargesAccountAgent is present, it must contain a branch of the CreditorAgent. It must not contain a completely different financial institution.";
+			owner_lazy = () -> PaymentInstructionInformation2.mmObject();
 		}
 
 		@Override
-		public void executeValidator(PaymentInstruction15 obj) throws Exception {
-			checkPaymentInstruction15(obj);
+		public void executeValidator(PaymentInstructionInformation2 obj) throws Exception {
+			checkPaymentInstructionInformation2(obj);
 		}
 	};
 	/**
@@ -464,8 +382,8 @@ public class ConstraintChargesAccountAgentRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction18
-	 * PaymentInstruction18}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionInformation4
+	 * PaymentInstructionInformation4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
 	 * expression} =
 	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/ChargesAccountAgent/FinancialInstitutionIdentification/Name&lt;/leftOperand&gt;&lt;rightOperand&gt;Branch of DebtorAgent&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/ChargesAccountAgent&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
@@ -481,35 +399,20 @@ public class ConstraintChargesAccountAgentRule {
 	 * definition} =
 	 * "If ChargesAccountAgent is present, then it must contain a branch of the CreditorAgent. It must not contain a completely different agent."
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintChargesAccountAgentRule#forPaymentInstruction21
-	 * ConstraintChargesAccountAgentRule.forPaymentInstruction21}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintChargesAccountAgentRule#forPaymentInstruction15
-	 * ConstraintChargesAccountAgentRule.forPaymentInstruction15}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<PaymentInstruction18> forPaymentInstruction18 = new MMConstraint<PaymentInstruction18>() {
+	public static final MMConstraint<PaymentInstructionInformation4> forPaymentInstructionInformation4 = new MMConstraint<PaymentInstructionInformation4>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesAccountAgentRule";
 			definition = "If ChargesAccountAgent is present, then it must contain a branch of the CreditorAgent. It must not contain a completely different agent.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChargesAccountAgentRule.forPaymentInstruction21);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChargesAccountAgentRule.forPaymentInstruction15;
-			owner_lazy = () -> PaymentInstruction18.mmObject();
+			owner_lazy = () -> PaymentInstructionInformation4.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/ChargesAccountAgent/FinancialInstitutionIdentification/Name</leftOperand><rightOperand>Branch of DebtorAgent</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesAccountAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
 
 		@Override
-		public void executeValidator(PaymentInstruction18 obj) throws Exception {
-			checkPaymentInstruction18(obj);
+		public void executeValidator(PaymentInstructionInformation4 obj) throws Exception {
+			checkPaymentInstructionInformation4(obj);
 		}
 	};
 	/**
@@ -621,8 +524,8 @@ public class ConstraintChargesAccountAgentRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction22
-	 * PaymentInstruction22}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction9
+	 * PaymentInstruction9}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
 	 * expression} =
 	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/ChargesAccountAgent/FinancialInstitutionIdentification/Name&lt;/leftOperand&gt;&lt;rightOperand&gt;Branch of DebtorAgent&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/ChargesAccountAgent&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
@@ -638,26 +541,122 @@ public class ConstraintChargesAccountAgentRule {
 	 * definition} =
 	 * "If ChargesAccountAgent is present, then it must contain a branch of the DebtorAgent. It must not contain a completely different agent."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintChargesAccountAgentRule#forPaymentInstruction20
-	 * ConstraintChargesAccountAgentRule.forPaymentInstruction20}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintChargesAccountAgentRule#forPaymentInstruction16
+	 * ConstraintChargesAccountAgentRule.forPaymentInstruction16}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<PaymentInstruction22> forPaymentInstruction22 = new MMConstraint<PaymentInstruction22>() {
+	public static final MMConstraint<PaymentInstruction9> forPaymentInstruction9 = new MMConstraint<PaymentInstruction9>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesAccountAgentRule";
 			definition = "If ChargesAccountAgent is present, then it must contain a branch of the DebtorAgent. It must not contain a completely different agent.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChargesAccountAgentRule.forPaymentInstruction20;
-			owner_lazy = () -> PaymentInstruction22.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChargesAccountAgentRule.forPaymentInstruction16);
+			owner_lazy = () -> PaymentInstruction9.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/ChargesAccountAgent/FinancialInstitutionIdentification/Name</leftOperand><rightOperand>Branch of DebtorAgent</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesAccountAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
 
 		@Override
-		public void executeValidator(PaymentInstruction22 obj) throws Exception {
-			checkPaymentInstruction22(obj);
+		public void executeValidator(PaymentInstruction9 obj) throws Exception {
+			checkPaymentInstruction9(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction7
+	 * PaymentInstruction7}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/ChargesAccountAgent/FinancialInstitutionIdentification/Name&lt;/leftOperand&gt;&lt;rightOperand&gt;Branch of DebtorAgent&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/ChargesAccountAgent&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ChargesAccountAgentRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If ChargesAccountAgent is present, then it must contain a branch of the CreditorAgent. It must not contain a completely different agent."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<PaymentInstruction7> forPaymentInstruction7 = new MMConstraint<PaymentInstruction7>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ChargesAccountAgentRule";
+			definition = "If ChargesAccountAgent is present, then it must contain a branch of the CreditorAgent. It must not contain a completely different agent.";
+			owner_lazy = () -> PaymentInstruction7.mmObject();
+			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/ChargesAccountAgent/FinancialInstitutionIdentification/Name</leftOperand><rightOperand>Branch of DebtorAgent</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesAccountAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction7 obj) throws Exception {
+			checkPaymentInstruction7(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction15
+	 * PaymentInstruction15}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/ChargesAccountAgent/FinancialInstitutionIdentification/Name&lt;/leftOperand&gt;&lt;rightOperand&gt;Branch of DebtorAgent&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/ChargesAccountAgent&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ChargesAccountAgentRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If ChargesAccountAgent is present, then it must contain a branch of the CreditorAgent. It must not contain a completely different agent."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintChargesAccountAgentRule#forPaymentInstruction18
+	 * ConstraintChargesAccountAgentRule.forPaymentInstruction18}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintChargesAccountAgentRule#forPaymentInstruction10
+	 * ConstraintChargesAccountAgentRule.forPaymentInstruction10}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<PaymentInstruction15> forPaymentInstruction15 = new MMConstraint<PaymentInstruction15>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ChargesAccountAgentRule";
+			definition = "If ChargesAccountAgent is present, then it must contain a branch of the CreditorAgent. It must not contain a completely different agent.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChargesAccountAgentRule.forPaymentInstruction18);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChargesAccountAgentRule.forPaymentInstruction10;
+			owner_lazy = () -> PaymentInstruction15.mmObject();
+			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/ChargesAccountAgent/FinancialInstitutionIdentification/Name</leftOperand><rightOperand>Branch of DebtorAgent</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesAccountAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction15 obj) throws Exception {
+			checkPaymentInstruction15(obj);
 		}
 	};
 	/**
@@ -707,15 +706,6 @@ public class ConstraintChargesAccountAgentRule {
 	};
 
 	/**
-	 * If ChargesAccountAgent is present, it must contain a branch of the
-	 * DebtorAgent. It must not contain a completely different financial
-	 * institution.
-	 */
-	public static void checkPaymentInstructionInformation1(PaymentInstructionInformation1 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
 	 * If ChargesAccountAgent is present, then it must contain a branch of the
 	 * DebtorAgent. It must not contain a completely different agent.
 	 */
@@ -732,35 +722,27 @@ public class ConstraintChargesAccountAgentRule {
 	}
 
 	/**
+	 * If ChargesAccountAgent is present, it must contain a branch of the
+	 * DebtorAgent. It must not contain a completely different financial
+	 * institution.
+	 */
+	public static void checkPaymentInstructionInformation1(PaymentInstructionInformation1 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If ChargesAccountAgent is present, then it must contain a branch of the
+	 * CreditorAgent. It must not contain a completely different agent.
+	 */
+	public static void checkPaymentInstruction18(PaymentInstruction18 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
 	 * If ChargesAccountAgent is present, then it must contain a branch of the
 	 * DebtorAgent. It must not contain a completely different agent.
 	 */
-	public static void checkPaymentInstruction9(PaymentInstruction9 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If ChargesAccountAgent is present, it must contain a branch of the
-	 * CreditorAgent. It must not contain a completely different financial
-	 * institution.
-	 */
-	public static void checkPaymentInstructionInformation2(PaymentInstructionInformation2 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If ChargesAccountAgent is present, then it must contain a branch of the
-	 * CreditorAgent. It must not contain a completely different agent.
-	 */
-	public static void checkPaymentInstructionInformation4(PaymentInstructionInformation4 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If ChargesAccountAgent is present, then it must contain a branch of the
-	 * CreditorAgent. It must not contain a completely different agent.
-	 */
-	public static void checkPaymentInstruction7(PaymentInstruction7 obj) throws Exception {
+	public static void checkPaymentInstruction22(PaymentInstruction22 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -781,10 +763,11 @@ public class ConstraintChargesAccountAgentRule {
 	}
 
 	/**
-	 * If ChargesAccountAgent is present, then it must contain a branch of the
-	 * CreditorAgent. It must not contain a completely different agent.
+	 * If ChargesAccountAgent is present, it must contain a branch of the
+	 * CreditorAgent. It must not contain a completely different financial
+	 * institution.
 	 */
-	public static void checkPaymentInstruction15(PaymentInstruction15 obj) throws Exception {
+	public static void checkPaymentInstructionInformation2(PaymentInstructionInformation2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -792,7 +775,7 @@ public class ConstraintChargesAccountAgentRule {
 	 * If ChargesAccountAgent is present, then it must contain a branch of the
 	 * CreditorAgent. It must not contain a completely different agent.
 	 */
-	public static void checkPaymentInstruction18(PaymentInstruction18 obj) throws Exception {
+	public static void checkPaymentInstructionInformation4(PaymentInstructionInformation4 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -816,7 +799,23 @@ public class ConstraintChargesAccountAgentRule {
 	 * If ChargesAccountAgent is present, then it must contain a branch of the
 	 * DebtorAgent. It must not contain a completely different agent.
 	 */
-	public static void checkPaymentInstruction22(PaymentInstruction22 obj) throws Exception {
+	public static void checkPaymentInstruction9(PaymentInstruction9 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If ChargesAccountAgent is present, then it must contain a branch of the
+	 * CreditorAgent. It must not contain a completely different agent.
+	 */
+	public static void checkPaymentInstruction7(PaymentInstruction7 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If ChargesAccountAgent is present, then it must contain a branch of the
+	 * CreditorAgent. It must not contain a completely different agent.
+	 */
+	public static void checkPaymentInstruction15(PaymentInstruction15 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 

@@ -89,9 +89,9 @@ public class SecuritiesClearingLatestVersion {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Securities Clearing - Latest version - master";
 				definition = "Messages that support the clearing process for securities, including management of post-trading, pre-settlement credit exposure, netting, margining, borrowing, conformance with market settlement rules.";
+				code = "secl";
 				messageDefinition_lazy = () -> Arrays.asList(MarginReportV02.mmObject(), DefaultFundContributionReportV02.mmObject(), TradeLegNotificationV03.mmObject(), BuyInNotificationV03.mmObject(), NetPositionV03.mmObject(),
 						BuyInConfirmationV03.mmObject(), TradeLegStatementV03.mmObject(), BuyInResponseV03.mmObject(), TradeLegNotificationCancellationV03.mmObject(), SettlementObligationReportV03.mmObject());
-				code = "secl";
 			}
 		});
 		return mmObject_lazy.get();

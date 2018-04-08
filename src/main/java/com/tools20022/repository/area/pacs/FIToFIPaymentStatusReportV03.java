@@ -92,17 +92,17 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintGroupStatusAcceptedRule#forFIToFIPaymentStatusReportV03
- * ConstraintGroupStatusAcceptedRule.forFIToFIPaymentStatusReportV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupStatusAcceptedRule#for_pacs_FIToFIPaymentStatusReportV03
+ * ConstraintGroupStatusAcceptedRule.for_pacs_FIToFIPaymentStatusReportV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintGroupStatusPendingRule#forFIToFIPaymentStatusReportV03
- * ConstraintGroupStatusPendingRule.forFIToFIPaymentStatusReportV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupStatusPendingRule#for_pacs_FIToFIPaymentStatusReportV03
+ * ConstraintGroupStatusPendingRule.for_pacs_FIToFIPaymentStatusReportV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintGroupStatusRejectedRule#forFIToFIPaymentStatusReportV03
- * ConstraintGroupStatusRejectedRule.forFIToFIPaymentStatusReportV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupStatusRejectedRule#for_pacs_FIToFIPaymentStatusReportV03
+ * ConstraintGroupStatusRejectedRule.for_pacs_FIToFIPaymentStatusReportV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintGroupStatusReceivedRule#forFIToFIPaymentStatusReportV03
- * ConstraintGroupStatusReceivedRule.forFIToFIPaymentStatusReportV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupStatusReceivedRule#for_pacs_FIToFIPaymentStatusReportV03
+ * ConstraintGroupStatusReceivedRule.for_pacs_FIToFIPaymentStatusReportV03}</li>
  * </ul>
  * </li>
  * <li>
@@ -280,9 +280,10 @@ public class FIToFIPaymentStatusReportV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupStatusAcceptedRule.forFIToFIPaymentStatusReportV03,
-						com.tools20022.repository.constraints.ConstraintGroupStatusPendingRule.forFIToFIPaymentStatusReportV03, com.tools20022.repository.constraints.ConstraintGroupStatusRejectedRule.forFIToFIPaymentStatusReportV03,
-						com.tools20022.repository.constraints.ConstraintGroupStatusReceivedRule.forFIToFIPaymentStatusReportV03);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupStatusAcceptedRule.for_pacs_FIToFIPaymentStatusReportV03,
+						com.tools20022.repository.constraints.ConstraintGroupStatusPendingRule.for_pacs_FIToFIPaymentStatusReportV03,
+						com.tools20022.repository.constraints.ConstraintGroupStatusRejectedRule.for_pacs_FIToFIPaymentStatusReportV03,
+						com.tools20022.repository.constraints.ConstraintGroupStatusReceivedRule.for_pacs_FIToFIPaymentStatusReportV03);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FIToFIPaymentStatusReportV03";
 				definition = "Scope\r\nThe FinancialInstitutionToFinancialInstitutionPaymentStatusReport message is sent by an instructed agent to the previous party in the payment chain. It is used to inform this party about the positive or negative status of an instruction (either single or file). It is also used to report on a pending instruction.\r\nUsage\r\nThe FIToFIPaymentStatusReport message is exchanged between agents to provide status information about instructions previously sent. Its usage will always be governed by a bilateral agreement between the agents.\r\nThe FIToFIPaymentStatusReport message can be used to provide information about the status (e.g. rejection, acceptance) of a credit transfer instruction, a direct debit instruction, as well as other intra-agent instructions (for example FIToFIPaymentCancellationRequest).\r\nThe FIToFIPaymentStatusReport message refers to the original instruction(s) by means of references only or by means of references and a set of elements from the original instruction.\r\nThe FIToFIPaymentStatusReport message can be used in domestic and cross-border scenarios.";

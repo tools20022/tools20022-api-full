@@ -86,8 +86,8 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCounterpartyIdentificationRule#forNetReportV01
- * ConstraintCounterpartyIdentificationRule.forNetReportV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCounterpartyIdentificationRule#for_camt_NetReportV01
+ * ConstraintCounterpartyIdentificationRule.for_camt_NetReportV01}</li>
  * </ul>
  * </li>
  * <li>
@@ -343,7 +343,7 @@ public class NetReportV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCounterpartyIdentificationRule.forNetReportV01);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCounterpartyIdentificationRule.for_camt_NetReportV01);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NetReportV01";
 				definition = "The Net Report message is sent to a participant by a central system to provide details of the of the bi-lateral payment obligations, calculated by the central system per currency.";

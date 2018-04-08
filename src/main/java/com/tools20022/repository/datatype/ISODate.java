@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMDate;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Date;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlType;
@@ -57,7 +58,7 @@ public class ISODate {
 
 	final static private AtomicReference<MMDate> mmObject_lazy = new AtomicReference<>();
 	@XmlValue
-	protected String value;
+	protected Date value;
 
 	final static public MMDate mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMDate() {
@@ -74,15 +75,15 @@ public class ISODate {
 	public ISODate() {
 	}
 
-	public ISODate(String value) {
+	public ISODate(Date value) {
 		this.value = value;
 	}
 
-	public String getValue() {
+	public Date getValue() {
 		return value;
 	}
 
-	public void setValue(String value) {
+	public void setValue(Date value) {
 		this.value = value;
 	}
 

@@ -84,9 +84,9 @@ public class AdministrationLatestVersion {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Administration - Latest version - master";
 				definition = "Generic messages, ie, system event notifications, generic rejections, etc.";
+				code = "admi";
 				messageDefinition_lazy = () -> Arrays.asList(StaticDataReportV02.mmObject(), StaticDataRequestV02.mmObject(), SystemEventAcknowledgementV01.mmObject(), MessageRejectV01.mmObject(), SystemEventNotificationV02.mmObject(),
 						ProcessingRequestV01.mmObject(), ReportQueryRequestV01.mmObject(), ResendRequestV01.mmObject(), ReceiptAcknowledgementV01.mmObject());
-				code = "admi";
 			}
 		});
 		return mmObject_lazy.get();

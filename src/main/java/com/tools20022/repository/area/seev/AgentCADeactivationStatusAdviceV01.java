@@ -103,13 +103,13 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintDeactivationInstructionStatusRule#forAgentCADeactivationStatusAdviceV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDeactivationInstructionStatusRule#for_seev_AgentCADeactivationStatusAdviceV01
  * ConstraintDeactivationInstructionStatusRule.
- * forAgentCADeactivationStatusAdviceV01}</li>
+ * for_seev_AgentCADeactivationStatusAdviceV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintDeactivationCancellationRequestStatusRule#forAgentCADeactivationStatusAdviceV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDeactivationCancellationRequestStatusRule#for_seev_AgentCADeactivationStatusAdviceV01
  * ConstraintDeactivationCancellationRequestStatusRule.
- * forAgentCADeactivationStatusAdviceV01}</li>
+ * for_seev_AgentCADeactivationStatusAdviceV01}</li>
  * </ul>
  * </li>
  * <li>
@@ -173,9 +173,9 @@ public class AgentCADeactivationStatusAdviceV01 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeactivationInstructionIDOrDeactivationCancellationRequestIDRule";
 			definition = "Either AgentCADeactivationInstructionIdentification or AgentCADeactivationCancellationRequestIdentification must be present.";
-			messageDefinition_lazy = () -> com.tools20022.repository.area.seev.AgentCADeactivationStatusAdviceV01.mmObject();
 			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCADeactivationStatusAdviceV01.mmAgentCADeactivationInstructionIdentification,
 					com.tools20022.repository.area.seev.AgentCADeactivationStatusAdviceV01.mmAgentCADeactivationCancellationRequestIdentification);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.seev.AgentCADeactivationStatusAdviceV01.mmObject();
 		}
 	};
 	/**
@@ -221,9 +221,9 @@ public class AgentCADeactivationStatusAdviceV01 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeactivationInstructionStatusOrDeactivationCancellationRequestStatusRule";
 			definition = "Either DeactivationInstructionStatus or DeactivationCancellationRequestStatus must be present.";
-			messageDefinition_lazy = () -> com.tools20022.repository.area.seev.AgentCADeactivationStatusAdviceV01.mmObject();
 			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCADeactivationStatusAdviceV01.mmDeactivationInstructionStatus,
 					com.tools20022.repository.area.seev.AgentCADeactivationStatusAdviceV01.mmDeactivationCancellationRequestStatus);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.seev.AgentCADeactivationStatusAdviceV01.mmObject();
 		}
 	};
 	@XmlElement(name = "Id", required = true)
@@ -514,8 +514,8 @@ public class AgentCADeactivationStatusAdviceV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDeactivationInstructionStatusRule.forAgentCADeactivationStatusAdviceV01,
-						com.tools20022.repository.constraints.ConstraintDeactivationCancellationRequestStatusRule.forAgentCADeactivationStatusAdviceV01);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDeactivationInstructionStatusRule.for_seev_AgentCADeactivationStatusAdviceV01,
+						com.tools20022.repository.constraints.ConstraintDeactivationCancellationRequestStatusRule.for_seev_AgentCADeactivationStatusAdviceV01);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AgentCADeactivationStatusAdviceV01";
 				definition = "Scope\r\nThis message is sent by a CSD to an issuer (or its agent) to report the status, or a change in status, of a corporate action deactivation instruction or the status of a deactivation cancellation request.\r\nUsage\r\nThis message is used to provide a status on the deactivation instruction, especially to confirm the deactivation of a Corporate Action event or option.";

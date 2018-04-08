@@ -52,7 +52,7 @@ public class ConstraintApplicant4Rule {
 	 * "If IssuanceType is \"CRQL\" then Applicant must not be present."</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<UndertakingIssuanceV01> forUndertakingIssuanceV01 = new MMConstraint<UndertakingIssuanceV01>() {
+	public static final MMConstraint<UndertakingIssuanceV01> for_tsrv_UndertakingIssuanceV01 = new MMConstraint<UndertakingIssuanceV01>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Applicant4Rule";
@@ -63,7 +63,7 @@ public class ConstraintApplicant4Rule {
 
 		@Override
 		public void executeValidator(UndertakingIssuanceV01 obj) throws Exception {
-			checkUndertakingIssuanceV01(obj);
+			check_tsrv_UndertakingIssuanceV01(obj);
 		}
 	};
 	/**
@@ -108,7 +108,7 @@ public class ConstraintApplicant4Rule {
 	/**
 	 * If IssuanceType is "CRQL" then Applicant must not be present.
 	 */
-	public static void checkUndertakingIssuanceV01(UndertakingIssuanceV01 obj) throws Exception {
+	public static void check_tsrv_UndertakingIssuanceV01(UndertakingIssuanceV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 

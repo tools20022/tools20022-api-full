@@ -115,24 +115,26 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintPEPISARule#forRequestForPEPOrISAOrPortfolioInformationV01
- * ConstraintPEPISARule.forRequestForPEPOrISAOrPortfolioInformationV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPEPISARule#for_sese_RequestForPEPOrISAOrPortfolioInformationV01
+ * ConstraintPEPISARule.for_sese_RequestForPEPOrISAOrPortfolioInformationV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintPorfolioRule#forRequestForPEPOrISAOrPortfolioInformationV01
- * ConstraintPorfolioRule.forRequestForPEPOrISAOrPortfolioInformationV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPorfolioRule#for_sese_RequestForPEPOrISAOrPortfolioInformationV01
+ * ConstraintPorfolioRule.for_sese_RequestForPEPOrISAOrPortfolioInformationV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorRule#forRequestForPEPOrISAOrPortfolioInformationV01
- * ConstraintInvestorRule.forRequestForPEPOrISAOrPortfolioInformationV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorRule#for_sese_RequestForPEPOrISAOrPortfolioInformationV01
+ * ConstraintInvestorRule.for_sese_RequestForPEPOrISAOrPortfolioInformationV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCorporateRule#forRequestForPEPOrISAOrPortfolioInformationV01
- * ConstraintCorporateRule.forRequestForPEPOrISAOrPortfolioInformationV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCorporateRule#for_sese_RequestForPEPOrISAOrPortfolioInformationV01
+ * ConstraintCorporateRule.for_sese_RequestForPEPOrISAOrPortfolioInformationV01}
+ * </li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintDesignationRule#forRequestForPEPOrISAOrPortfolioInformationV01
- * ConstraintDesignationRule.forRequestForPEPOrISAOrPortfolioInformationV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDesignationRule#for_sese_RequestForPEPOrISAOrPortfolioInformationV01
+ * ConstraintDesignationRule.
+ * for_sese_RequestForPEPOrISAOrPortfolioInformationV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule#forRequestForPEPOrISAOrPortfolioInformationV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule#for_sese_RequestForPEPOrISAOrPortfolioInformationV01
  * ConstraintNomineeAccountServicerRule.
- * forRequestForPEPOrISAOrPortfolioInformationV01}</li>
+ * for_sese_RequestForPEPOrISAOrPortfolioInformationV01}</li>
  * </ul>
  * </li>
  * <li>
@@ -866,12 +868,12 @@ public class RequestForPEPOrISAOrPortfolioInformationV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPEPISARule.forRequestForPEPOrISAOrPortfolioInformationV01,
-						com.tools20022.repository.constraints.ConstraintPorfolioRule.forRequestForPEPOrISAOrPortfolioInformationV01,
-						com.tools20022.repository.constraints.ConstraintInvestorRule.forRequestForPEPOrISAOrPortfolioInformationV01,
-						com.tools20022.repository.constraints.ConstraintCorporateRule.forRequestForPEPOrISAOrPortfolioInformationV01,
-						com.tools20022.repository.constraints.ConstraintDesignationRule.forRequestForPEPOrISAOrPortfolioInformationV01,
-						com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule.forRequestForPEPOrISAOrPortfolioInformationV01);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPEPISARule.for_sese_RequestForPEPOrISAOrPortfolioInformationV01,
+						com.tools20022.repository.constraints.ConstraintPorfolioRule.for_sese_RequestForPEPOrISAOrPortfolioInformationV01,
+						com.tools20022.repository.constraints.ConstraintInvestorRule.for_sese_RequestForPEPOrISAOrPortfolioInformationV01,
+						com.tools20022.repository.constraints.ConstraintCorporateRule.for_sese_RequestForPEPOrISAOrPortfolioInformationV01,
+						com.tools20022.repository.constraints.ConstraintDesignationRule.for_sese_RequestForPEPOrISAOrPortfolioInformationV01,
+						com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule.for_sese_RequestForPEPOrISAOrPortfolioInformationV01);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RequestForPEPOrISAOrPortfolioInformationV01";
 				definition = "Scope\r\nAn instructing party, eg, a (new) plan manager sends the RequestForPEPorISAOrPortfolioInformation message to the executing party, eg, a (old) plan manager, on behalf of the initiating party, eg, an investor (client), to request information about financial instruments held on behalf of the client.\r\nUsage\r\nThe RequestForPEPOrISAOrPortfolioInformation message is used to request information about one or more PEP or ISA or portfolio products held in a client's account for which it intends to instruct a transfer at a later time.";

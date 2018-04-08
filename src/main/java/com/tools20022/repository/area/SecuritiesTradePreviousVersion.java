@@ -142,6 +142,7 @@ public class SecuritiesTradePreviousVersion {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Securities Trade - Previous version - master";
 				definition = "Messages that support trade and post-trade processes for securities, including order to buy or sell, trade execution, affirmation, confirmation, allocation and notification.";
+				code = "setr";
 				messageDefinition_lazy = () -> Arrays.asList(SecuritiesTradeConfirmationStatusAdviceV01.mmObject(), SecuritiesTradeConfirmationV02.mmObject(), OrderCancellationStatusReportV03.mmObject(),
 						OrderConfirmationStatusReportV01.mmObject(), OrderInstructionStatusReportV03.mmObject(), RedemptionBulkOrderCancellationRequestV03.mmObject(), RedemptionBulkOrderConfirmationCancellationInstructionV01.mmObject(),
 						RedemptionBulkOrderConfirmationV03.mmObject(), RedemptionBulkOrderV03.mmObject(), RedemptionOrderCancellationRequestV03.mmObject(), RedemptionOrderConfirmationCancellationInstructionV01.mmObject(),
@@ -149,7 +150,6 @@ public class SecuritiesTradePreviousVersion {
 						SubscriptionBulkOrderCancellationRequestV03.mmObject(), SubscriptionBulkOrderConfirmationCancellationInstructionV01.mmObject(), SubscriptionBulkOrderConfirmationV03.mmObject(), SubscriptionBulkOrderV03.mmObject(),
 						SubscriptionOrderCancellationRequestV03.mmObject(), SubscriptionOrderConfirmationCancellationInstructionV01.mmObject(), SubscriptionOrderConfirmationV03.mmObject(), SubscriptionOrderV03.mmObject(),
 						SwitchOrderCancellationRequestV03.mmObject(), SwitchOrderConfirmationCancellationInstructionV01.mmObject(), SwitchOrderConfirmationV03.mmObject(), SwitchOrderV03.mmObject());
-				code = "setr";
 			}
 		});
 		return mmObject_lazy.get();

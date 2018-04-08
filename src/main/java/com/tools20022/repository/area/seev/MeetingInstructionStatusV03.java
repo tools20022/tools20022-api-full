@@ -108,14 +108,14 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintStatus1Rule#forMeetingInstructionStatusV03
- * ConstraintStatus1Rule.forMeetingInstructionStatusV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintStatus1Rule#for_seev_MeetingInstructionStatusV03
+ * ConstraintStatus1Rule.for_seev_MeetingInstructionStatusV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintStatus2Rule#forMeetingInstructionStatusV03
- * ConstraintStatus2Rule.forMeetingInstructionStatusV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintStatus2Rule#for_seev_MeetingInstructionStatusV03
+ * ConstraintStatus2Rule.for_seev_MeetingInstructionStatusV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintReminder1Rule#forMeetingInstructionStatusV03
- * ConstraintReminder1Rule.forMeetingInstructionStatusV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintReminder1Rule#for_seev_MeetingInstructionStatusV03
+ * ConstraintReminder1Rule.for_seev_MeetingInstructionStatusV03}</li>
  * </ul>
  * </li>
  * <li>
@@ -428,8 +428,8 @@ public class MeetingInstructionStatusV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintStatus1Rule.forMeetingInstructionStatusV03, com.tools20022.repository.constraints.ConstraintStatus2Rule.forMeetingInstructionStatusV03,
-						com.tools20022.repository.constraints.ConstraintReminder1Rule.forMeetingInstructionStatusV03);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintStatus1Rule.for_seev_MeetingInstructionStatusV03,
+						com.tools20022.repository.constraints.ConstraintStatus2Rule.for_seev_MeetingInstructionStatusV03, com.tools20022.repository.constraints.ConstraintReminder1Rule.for_seev_MeetingInstructionStatusV03);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MeetingInstructionStatusV03";
 				definition = "Scope\r\nThe Receiver of the MeetingInstruction or MeetingInstructionCancellationRequest sends the MeetingInstructionStatus message to the Sender of these messages.\r\nThe message gives the status of a complete message or of one or more specific instructions within the message.\r\nUsage\r\nThe MeetingInstructionStatus message is used for four purposes.\r\nFirst, it provides the status on the processing of a MeetingInstructionCancellationRequest message, for example, whether the request message is rejected or accepted.\r\nSecond, it is used to provide a global processing or rejection status of a MeetingInstruction message.\r\nThird, it is used to provide a detailed processing or rejection status of a MeetingInstruction message, for example, for each instruction in the MeetingInstruction message the processing or rejection status is individually reported by using the InstructionIdentification element. This identification allows the receiver of the status message to link the status confirmation to its original instruction.\r\nThe blocking of securities should be confirmed via an MT 508 (Intra-Position Advice).\r\nFourth, it is used as a reminder to request voting instructions. This is done by indicating NONREF in the Identification element of the InstructionIdentification component and by using the status code NotReceived in the ProcessingStatus.";

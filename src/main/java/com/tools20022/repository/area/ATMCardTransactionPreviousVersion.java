@@ -94,10 +94,10 @@ public class ATMCardTransactionPreviousVersion {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ATM Card Transaction - Previous version - master";
 				definition = "Messages that support any card related Automated Teller Machine (ATM) transactions and services between an ATM equipment and an ATM acquirer. These services include cash withdrawals, kiosk functions and card account management transactions.";
+				code = "catp";
 				messageDefinition_lazy = () -> Arrays.asList(ATMInquiryResponseV01.mmObject(), ATMInquiryRequestV01.mmObject(), ATMCompletionAdviceV01.mmObject(), ATMWithdrawalResponseV01.mmObject(), ATMRejectV01.mmObject(),
 						ATMCompletionAcknowledgementV01.mmObject(), ATMWithdrawalCompletionAdviceV01.mmObject(), ATMWithdrawalCompletionAcknowledgementV01.mmObject(), ATMWithdrawalRequestV01.mmObject(),
 						ATMPINManagementRequestV01.mmObject(), ATMPINManagementResponseV01.mmObject());
-				code = "catp";
 			}
 		});
 		return mmObject_lazy.get();

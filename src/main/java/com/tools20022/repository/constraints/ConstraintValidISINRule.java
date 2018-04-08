@@ -67,8 +67,8 @@ public class ConstraintValidISINRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription9
-	 * SecurityInstrumentDescription9}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransparencyDataReport15
+	 * TransparencyDataReport15}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -80,17 +80,49 @@ public class ConstraintValidISINRule {
 	 * definition} = "ISIN code must pass checksum validation."</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<SecurityInstrumentDescription9> forSecurityInstrumentDescription9 = new MMConstraint<SecurityInstrumentDescription9>() {
+	public static final MMConstraint<TransparencyDataReport15> forTransparencyDataReport15 = new MMConstraint<TransparencyDataReport15>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidISINRule";
 			definition = "ISIN code must pass checksum validation.";
-			owner_lazy = () -> SecurityInstrumentDescription9.mmObject();
+			owner_lazy = () -> TransparencyDataReport15.mmObject();
 		}
 
 		@Override
-		public void executeValidator(SecurityInstrumentDescription9 obj) throws Exception {
-			checkSecurityInstrumentDescription9(obj);
+		public void executeValidator(TransparencyDataReport15 obj) throws Exception {
+			checkTransparencyDataReport15(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.TransparencyDataReport11
+	 * TransparencyDataReport11}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ValidISINRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "ISIN code must pass checksum validation."</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<TransparencyDataReport11> forTransparencyDataReport11 = new MMConstraint<TransparencyDataReport11>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ValidISINRule";
+			definition = "ISIN code must pass checksum validation.";
+			owner_lazy = () -> TransparencyDataReport11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransparencyDataReport11 obj) throws Exception {
+			checkTransparencyDataReport11(obj);
 		}
 	};
 	/**
@@ -163,8 +195,8 @@ public class ConstraintValidISINRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.TransparencyDataReport11
-	 * TransparencyDataReport11}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription9
+	 * SecurityInstrumentDescription9}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -176,17 +208,81 @@ public class ConstraintValidISINRule {
 	 * definition} = "ISIN code must pass checksum validation."</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<TransparencyDataReport11> forTransparencyDataReport11 = new MMConstraint<TransparencyDataReport11>() {
+	public static final MMConstraint<SecurityInstrumentDescription9> forSecurityInstrumentDescription9 = new MMConstraint<SecurityInstrumentDescription9>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidISINRule";
 			definition = "ISIN code must pass checksum validation.";
-			owner_lazy = () -> TransparencyDataReport11.mmObject();
+			owner_lazy = () -> SecurityInstrumentDescription9.mmObject();
 		}
 
 		@Override
-		public void executeValidator(TransparencyDataReport11 obj) throws Exception {
-			checkTransparencyDataReport11(obj);
+		public void executeValidator(SecurityInstrumentDescription9 obj) throws Exception {
+			checkSecurityInstrumentDescription9(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CreditDefaultSwapDerivative4
+	 * CreditDefaultSwapDerivative4}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ValidISINRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "ISIN code must pass checksum validation."</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CreditDefaultSwapDerivative4> forCreditDefaultSwapDerivative4 = new MMConstraint<CreditDefaultSwapDerivative4>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ValidISINRule";
+			definition = "ISIN code must pass checksum validation.";
+			owner_lazy = () -> CreditDefaultSwapDerivative4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CreditDefaultSwapDerivative4 obj) throws Exception {
+			checkCreditDefaultSwapDerivative4(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.TransparencyDataReport10
+	 * TransparencyDataReport10}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ValidISINRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "ISIN code must pass checksum validation."</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<TransparencyDataReport10> forTransparencyDataReport10 = new MMConstraint<TransparencyDataReport10>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ValidISINRule";
+			definition = "ISIN code must pass checksum validation.";
+			owner_lazy = () -> TransparencyDataReport10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransparencyDataReport10 obj) throws Exception {
+			checkTransparencyDataReport10(obj);
 		}
 	};
 	/**
@@ -259,70 +355,6 @@ public class ConstraintValidISINRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.TransparencyDataReport15
-	 * TransparencyDataReport15}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ValidISINRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "ISIN code must pass checksum validation."</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<TransparencyDataReport15> forTransparencyDataReport15 = new MMConstraint<TransparencyDataReport15>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ValidISINRule";
-			definition = "ISIN code must pass checksum validation.";
-			owner_lazy = () -> TransparencyDataReport15.mmObject();
-		}
-
-		@Override
-		public void executeValidator(TransparencyDataReport15 obj) throws Exception {
-			checkTransparencyDataReport15(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.TransparencyDataReport10
-	 * TransparencyDataReport10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ValidISINRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "ISIN code must pass checksum validation."</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<TransparencyDataReport10> forTransparencyDataReport10 = new MMConstraint<TransparencyDataReport10>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ValidISINRule";
-			definition = "ISIN code must pass checksum validation.";
-			owner_lazy = () -> TransparencyDataReport10.mmObject();
-		}
-
-		@Override
-		public void executeValidator(TransparencyDataReport10 obj) throws Exception {
-			checkTransparencyDataReport10(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransparencyDataReport14
 	 * TransparencyDataReport14}</li>
 	 * <li>
@@ -349,38 +381,6 @@ public class ConstraintValidISINRule {
 			checkTransparencyDataReport14(obj);
 		}
 	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.CreditDefaultSwapDerivative4
-	 * CreditDefaultSwapDerivative4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ValidISINRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "ISIN code must pass checksum validation."</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CreditDefaultSwapDerivative4> forCreditDefaultSwapDerivative4 = new MMConstraint<CreditDefaultSwapDerivative4>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ValidISINRule";
-			definition = "ISIN code must pass checksum validation.";
-			owner_lazy = () -> CreditDefaultSwapDerivative4.mmObject();
-		}
-
-		@Override
-		public void executeValidator(CreditDefaultSwapDerivative4 obj) throws Exception {
-			checkCreditDefaultSwapDerivative4(obj);
-		}
-	};
 
 	/**
 	 * ISIN code must pass checksum validation.
@@ -392,7 +392,14 @@ public class ConstraintValidISINRule {
 	/**
 	 * ISIN code must pass checksum validation.
 	 */
-	public static void checkSecurityInstrumentDescription9(SecurityInstrumentDescription9 obj) throws Exception {
+	public static void checkTransparencyDataReport15(TransparencyDataReport15 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * ISIN code must pass checksum validation.
+	 */
+	public static void checkTransparencyDataReport11(TransparencyDataReport11 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -413,7 +420,21 @@ public class ConstraintValidISINRule {
 	/**
 	 * ISIN code must pass checksum validation.
 	 */
-	public static void checkTransparencyDataReport11(TransparencyDataReport11 obj) throws Exception {
+	public static void checkSecurityInstrumentDescription9(SecurityInstrumentDescription9 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * ISIN code must pass checksum validation.
+	 */
+	public static void checkCreditDefaultSwapDerivative4(CreditDefaultSwapDerivative4 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * ISIN code must pass checksum validation.
+	 */
+	public static void checkTransparencyDataReport10(TransparencyDataReport10 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -434,28 +455,7 @@ public class ConstraintValidISINRule {
 	/**
 	 * ISIN code must pass checksum validation.
 	 */
-	public static void checkTransparencyDataReport15(TransparencyDataReport15 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * ISIN code must pass checksum validation.
-	 */
-	public static void checkTransparencyDataReport10(TransparencyDataReport10 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * ISIN code must pass checksum validation.
-	 */
 	public static void checkTransparencyDataReport14(TransparencyDataReport14 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * ISIN code must pass checksum validation.
-	 */
-	public static void checkCreditDefaultSwapDerivative4(CreditDefaultSwapDerivative4 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

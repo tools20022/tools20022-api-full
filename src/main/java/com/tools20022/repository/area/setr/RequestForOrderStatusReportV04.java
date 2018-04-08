@@ -109,11 +109,12 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintOtherReferenceGuideline#forRequestForOrderStatusReportV04
- * ConstraintOtherReferenceGuideline.forRequestForOrderStatusReportV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOtherReferenceGuideline#for_setr_RequestForOrderStatusReportV04
+ * ConstraintOtherReferenceGuideline.for_setr_RequestForOrderStatusReportV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintPreviousReferenceGuideline#forRequestForOrderStatusReportV04
- * ConstraintPreviousReferenceGuideline.forRequestForOrderStatusReportV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPreviousReferenceGuideline#for_setr_RequestForOrderStatusReportV04
+ * ConstraintPreviousReferenceGuideline.for_setr_RequestForOrderStatusReportV04}
+ * </li>
  * </ul>
  * </li>
  * <li>
@@ -300,8 +301,8 @@ public class RequestForOrderStatusReportV04 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOtherReferenceGuideline.forRequestForOrderStatusReportV04,
-						com.tools20022.repository.constraints.ConstraintPreviousReferenceGuideline.forRequestForOrderStatusReportV04);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOtherReferenceGuideline.for_setr_RequestForOrderStatusReportV04,
+						com.tools20022.repository.constraints.ConstraintPreviousReferenceGuideline.for_setr_RequestForOrderStatusReportV04);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RequestForOrderStatusReportV04";
 				definition = "Scope\r\nThe RequestForOrderStatusReport message is sent by an instructing party, for example, an investment manager or its authorised representative, to the executing party, for example, a transfer agent, to request the status of one or more order instructions or order cancellation requests.\r\nUsage\r\nThe RequestForOrderStatusReport message is used to request the status of:\r\n- one or several individual order instructions, or,\r\n- one or several order messages, or\r\n- one or several individual order cancellation requests, or,\r\n- one or several order cancellation request messages.\r\nThe response to a RequestForOrderStatusReport message is the OrderInstructionStatusReport message or OrderCancellationStatusReport message.\r\nIf the RequestForOrderStatusReport message is used to request the status of several individual order instructions or one or more order instruction messages, then the instructing party may receive several OrderInstructionStatusReport messages from the executing party.\r\nIf the RequestForOrderStatusReport message is used to request the status of several individual order cancellation requests or one or more order cancellation messages, then the instructing party may receive several OrderCancellationStatusReport messages from the executing party.\r\nWhen the RequestForOrderStatusReport is used to request the status of one or more individual orders or order cancellations, each individual order is identified with its order reference. The investment account and/or financial instrument related to the order can also be identified. The message identification of the message in which the individual order was conveyed may also be quoted in PreviousReference.\r\nWhen the RequestForOrderStatusReport is used to request the status of an order message or an order cancellations request message, then the message identification of the order or cancellation message is identified in PreviousReference.\r\nThe RequestForOrderStatusReport message may not be used to request the status of an investment account, a transfer or the status of a financial instrument.";

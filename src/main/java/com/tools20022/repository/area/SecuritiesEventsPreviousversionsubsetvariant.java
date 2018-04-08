@@ -80,9 +80,9 @@ public class SecuritiesEventsPreviousversionsubsetvariant {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Securities Events - Previous version - subset / variant";
 				definition = "Messages that support asset servicing, including proxy voting, income and corporate actions.";
+				code = "seev";
 				messageDefinition_lazy = () -> Arrays.asList(SecuritiesTransactionPendingReport002V08.mmObject(), IntraPositionMovementConfirmation002V06.mmObject(), IntraPositionMovementPostingReport002V06.mmObject(),
 						SecuritiesSettlementTransactionAllegementReport002V06.mmObject(), SecuritiesTransactionPostingReport002V07.mmObject());
-				code = "seev";
 			}
 		});
 		return mmObject_lazy.get();

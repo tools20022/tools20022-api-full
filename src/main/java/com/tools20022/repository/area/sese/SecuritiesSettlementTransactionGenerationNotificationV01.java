@@ -166,41 +166,41 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementAmountRule#forSecuritiesSettlementTransactionGenerationNotificationV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementAmountRule#for_sese_SecuritiesSettlementTransactionGenerationNotificationV01
  * ConstraintSettlementAmountRule.
- * forSecuritiesSettlementTransactionGenerationNotificationV01}</li>
+ * for_sese_SecuritiesSettlementTransactionGenerationNotificationV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintReceivingDepositoryAndParty1Rule#forSecuritiesSettlementTransactionGenerationNotificationV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintReceivingDepositoryAndParty1Rule#for_sese_SecuritiesSettlementTransactionGenerationNotificationV01
  * ConstraintReceivingDepositoryAndParty1Rule.
- * forSecuritiesSettlementTransactionGenerationNotificationV01}</li>
+ * for_sese_SecuritiesSettlementTransactionGenerationNotificationV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalPhysicalOrRegistrationDetailsRule#forSecuritiesSettlementTransactionGenerationNotificationV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalPhysicalOrRegistrationDetailsRule#for_sese_SecuritiesSettlementTransactionGenerationNotificationV01
  * ConstraintAdditionalPhysicalOrRegistrationDetailsRule.
- * forSecuritiesSettlementTransactionGenerationNotificationV01}</li>
+ * for_sese_SecuritiesSettlementTransactionGenerationNotificationV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintDeliveringDepositoryAndParty1Rule#forSecuritiesSettlementTransactionGenerationNotificationV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDeliveringDepositoryAndParty1Rule#for_sese_SecuritiesSettlementTransactionGenerationNotificationV01
  * ConstraintDeliveringDepositoryAndParty1Rule.
- * forSecuritiesSettlementTransactionGenerationNotificationV01}</li>
+ * for_sese_SecuritiesSettlementTransactionGenerationNotificationV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCurrencyToSellRule#forSecuritiesSettlementTransactionGenerationNotificationV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCurrencyToSellRule#for_sese_SecuritiesSettlementTransactionGenerationNotificationV01
  * ConstraintCurrencyToSellRule.
- * forSecuritiesSettlementTransactionGenerationNotificationV01}</li>
+ * for_sese_SecuritiesSettlementTransactionGenerationNotificationV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCurrencyToBuyRule#forSecuritiesSettlementTransactionGenerationNotificationV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCurrencyToBuyRule#for_sese_SecuritiesSettlementTransactionGenerationNotificationV01
  * ConstraintCurrencyToBuyRule.
- * forSecuritiesSettlementTransactionGenerationNotificationV01}</li>
+ * for_sese_SecuritiesSettlementTransactionGenerationNotificationV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule#forSecuritiesSettlementTransactionGenerationNotificationV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule#for_sese_SecuritiesSettlementTransactionGenerationNotificationV01
  * ConstraintCoexistenceAmountRule.
- * forSecuritiesSettlementTransactionGenerationNotificationV01}</li>
+ * for_sese_SecuritiesSettlementTransactionGenerationNotificationV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#forSecuritiesSettlementTransactionGenerationNotificationV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#for_sese_SecuritiesSettlementTransactionGenerationNotificationV01
  * ConstraintCoexistenceCharacterSetXRule.
- * forSecuritiesSettlementTransactionGenerationNotificationV01}</li>
+ * for_sese_SecuritiesSettlementTransactionGenerationNotificationV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forSecuritiesSettlementTransactionGenerationNotificationV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#for_sese_SecuritiesSettlementTransactionGenerationNotificationV01
  * ConstraintCoexistenceIdentificationRule.
- * forSecuritiesSettlementTransactionGenerationNotificationV01}</li>
+ * for_sese_SecuritiesSettlementTransactionGenerationNotificationV01}</li>
  * </ul>
  * </li>
  * <li>
@@ -1217,15 +1217,15 @@ public class SecuritiesSettlementTransactionGenerationNotificationV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementAmountRule.forSecuritiesSettlementTransactionGenerationNotificationV01,
-						com.tools20022.repository.constraints.ConstraintReceivingDepositoryAndParty1Rule.forSecuritiesSettlementTransactionGenerationNotificationV01,
-						com.tools20022.repository.constraints.ConstraintAdditionalPhysicalOrRegistrationDetailsRule.forSecuritiesSettlementTransactionGenerationNotificationV01,
-						com.tools20022.repository.constraints.ConstraintDeliveringDepositoryAndParty1Rule.forSecuritiesSettlementTransactionGenerationNotificationV01,
-						com.tools20022.repository.constraints.ConstraintCurrencyToSellRule.forSecuritiesSettlementTransactionGenerationNotificationV01,
-						com.tools20022.repository.constraints.ConstraintCurrencyToBuyRule.forSecuritiesSettlementTransactionGenerationNotificationV01,
-						com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forSecuritiesSettlementTransactionGenerationNotificationV01,
-						com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesSettlementTransactionGenerationNotificationV01,
-						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesSettlementTransactionGenerationNotificationV01);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementAmountRule.for_sese_SecuritiesSettlementTransactionGenerationNotificationV01,
+						com.tools20022.repository.constraints.ConstraintReceivingDepositoryAndParty1Rule.for_sese_SecuritiesSettlementTransactionGenerationNotificationV01,
+						com.tools20022.repository.constraints.ConstraintAdditionalPhysicalOrRegistrationDetailsRule.for_sese_SecuritiesSettlementTransactionGenerationNotificationV01,
+						com.tools20022.repository.constraints.ConstraintDeliveringDepositoryAndParty1Rule.for_sese_SecuritiesSettlementTransactionGenerationNotificationV01,
+						com.tools20022.repository.constraints.ConstraintCurrencyToSellRule.for_sese_SecuritiesSettlementTransactionGenerationNotificationV01,
+						com.tools20022.repository.constraints.ConstraintCurrencyToBuyRule.for_sese_SecuritiesSettlementTransactionGenerationNotificationV01,
+						com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.for_sese_SecuritiesSettlementTransactionGenerationNotificationV01,
+						com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.for_sese_SecuritiesSettlementTransactionGenerationNotificationV01,
+						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.for_sese_SecuritiesSettlementTransactionGenerationNotificationV01);
 				semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, "MT 548, Seq A :23G:INST, Seq A2 :25D::IPRC//CGEN"));
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesSettlementTransactionGenerationNotificationV01";

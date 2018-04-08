@@ -116,11 +116,11 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintRequestedSettlementDateRule#forTransferOutConfirmationV08
- * ConstraintRequestedSettlementDateRule.forTransferOutConfirmationV08}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintRequestedSettlementDateRule#for_sese_TransferOutConfirmationV08
+ * ConstraintRequestedSettlementDateRule.for_sese_TransferOutConfirmationV08}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#forTransferOutConfirmationV08
- * ConstraintEffectiveSettlementDateRule.forTransferOutConfirmationV08}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#for_sese_TransferOutConfirmationV08
+ * ConstraintEffectiveSettlementDateRule.for_sese_TransferOutConfirmationV08}</li>
  * </ul>
  * </li>
  * <li>
@@ -730,8 +730,8 @@ public class TransferOutConfirmationV08 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRequestedSettlementDateRule.forTransferOutConfirmationV08,
-						com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferOutConfirmationV08);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRequestedSettlementDateRule.for_sese_TransferOutConfirmationV08,
+						com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.for_sese_TransferOutConfirmationV08);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransferOutConfirmationV08";
 				definition = "The TransferOutConfirmation message is sent by an executing party, for example, a transfer agent, to the instructing party, for example, an investment manager or its authorised representative, to confirm the delivery of a financial instrument, free of payment, on a given date, to a specified party.\r\nThis message may also be used to confirm the delivery of a financial instrument, free of payment, to another of the instructing parties own accounts or to a third party.\r\nUsage\r\nThe TransferOutConfirmation message is used to confirm the withdrawal of a financial instrument from the owner's account and its delivery to another own account, or to a third party, has taken place.\r\nThe reference of the transfer confirmation is identified in TransferConfirmationReference. The reference of the original transfer instruction is specified in TransferReference. The message identification of the TransferOutInstruction message in which the transfer instruction was conveyed may also be quoted in RelatedReference but this is not recommended.";

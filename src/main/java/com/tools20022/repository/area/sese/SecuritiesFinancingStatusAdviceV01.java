@@ -126,17 +126,17 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#forSecuritiesFinancingStatusAdviceV01
- * ConstraintCoexistenceCharacterSetXRule.forSecuritiesFinancingStatusAdviceV01}
- * </li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#for_sese_SecuritiesFinancingStatusAdviceV01
+ * ConstraintCoexistenceCharacterSetXRule.
+ * for_sese_SecuritiesFinancingStatusAdviceV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forSecuritiesFinancingStatusAdviceV01
- * ConstraintCoexistenceIdentificationRule.forSecuritiesFinancingStatusAdviceV01
- * }</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#for_sese_SecuritiesFinancingStatusAdviceV01
+ * ConstraintCoexistenceIdentificationRule.
+ * for_sese_SecuritiesFinancingStatusAdviceV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#forSecuritiesFinancingStatusAdviceV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#for_sese_SecuritiesFinancingStatusAdviceV01
  * ConstraintSettlementStatusAndMatchedRule.
- * forSecuritiesFinancingStatusAdviceV01}</li>
+ * for_sese_SecuritiesFinancingStatusAdviceV01}</li>
  * </ul>
  * </li>
  * <li>
@@ -687,9 +687,9 @@ public class SecuritiesFinancingStatusAdviceV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesFinancingStatusAdviceV01,
-						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesFinancingStatusAdviceV01,
-						com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.forSecuritiesFinancingStatusAdviceV01);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.for_sese_SecuritiesFinancingStatusAdviceV01,
+						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.for_sese_SecuritiesFinancingStatusAdviceV01,
+						com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.for_sese_SecuritiesFinancingStatusAdviceV01);
 				semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, "MT 548, Seq A :23G:INST"));
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesFinancingStatusAdviceV01";

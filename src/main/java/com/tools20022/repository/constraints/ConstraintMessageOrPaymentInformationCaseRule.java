@@ -35,54 +35,8 @@ public class ConstraintMessageOrPaymentInformationCaseRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV07
-	 * CustomerPaymentCancellationRequestV07}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
-	 * expression} =
-	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/Underlying[*]/OriginalPaymentInformationAndCancellation[*]/Case&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/Case&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/Underlying[1]/OriginalPaymentInformationAndCancellation[1]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "MessageOrPaymentInformationCaseRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Case may be present at either Case, OriginalGroupInformationAndCancellation, OriginalPaymentInformationAndCancellation or TransactionInformation level."
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrPaymentInformationCaseRule#forCustomerPaymentCancellationRequestV06
-	 * ConstraintMessageOrPaymentInformationCaseRule.
-	 * forCustomerPaymentCancellationRequestV06}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CustomerPaymentCancellationRequestV07> forCustomerPaymentCancellationRequestV07 = new MMConstraint<CustomerPaymentCancellationRequestV07>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "MessageOrPaymentInformationCaseRule";
-			definition = "Case may be present at either Case, OriginalGroupInformationAndCancellation, OriginalPaymentInformationAndCancellation or TransactionInformation level.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMessageOrPaymentInformationCaseRule.forCustomerPaymentCancellationRequestV06;
-			owner_lazy = () -> CustomerPaymentCancellationRequestV07.mmObject();
-			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/Underlying[*]/OriginalPaymentInformationAndCancellation[*]/Case</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Case</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Underlying[1]/OriginalPaymentInformationAndCancellation[1]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
-		}
-
-		@Override
-		public void executeValidator(CustomerPaymentCancellationRequestV07 obj) throws Exception {
-			checkCustomerPaymentCancellationRequestV07(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV06
-	 * CustomerPaymentCancellationRequestV06}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV04
+	 * CustomerPaymentCancellationRequestV04}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
 	 * expression} =
 	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/Underlying[*]/OriginalPaymentInformationAndCancellation[*]/Case&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/Case&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/Underlying[1]/OriginalPaymentInformationAndCancellation[1]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
@@ -102,72 +56,33 @@ public class ConstraintMessageOrPaymentInformationCaseRule {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrPaymentInformationCaseRule#forCustomerPaymentCancellationRequestV07
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrPaymentInformationCaseRule#for_camt_CustomerPaymentCancellationRequestV05
 	 * ConstraintMessageOrPaymentInformationCaseRule.
-	 * forCustomerPaymentCancellationRequestV07}</li>
+	 * for_camt_CustomerPaymentCancellationRequestV05}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrPaymentInformationCaseRule#forCustomerPaymentCancellationRequestV05
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrPaymentInformationCaseRule#for_camt_CustomerPaymentCancellationRequestV03
 	 * ConstraintMessageOrPaymentInformationCaseRule.
-	 * forCustomerPaymentCancellationRequestV05}</li>
+	 * for_camt_CustomerPaymentCancellationRequestV03}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<CustomerPaymentCancellationRequestV06> forCustomerPaymentCancellationRequestV06 = new MMConstraint<CustomerPaymentCancellationRequestV06>() {
+	public static final MMConstraint<CustomerPaymentCancellationRequestV04> for_camt_CustomerPaymentCancellationRequestV04 = new MMConstraint<CustomerPaymentCancellationRequestV04>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageOrPaymentInformationCaseRule";
 			definition = "Case may be present at either Case, OriginalGroupInformationAndCancellation, OriginalPaymentInformationAndCancellation or TransactionInformation level.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMessageOrPaymentInformationCaseRule.forCustomerPaymentCancellationRequestV07);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMessageOrPaymentInformationCaseRule.forCustomerPaymentCancellationRequestV05;
-			owner_lazy = () -> CustomerPaymentCancellationRequestV06.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMessageOrPaymentInformationCaseRule.for_camt_CustomerPaymentCancellationRequestV05);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMessageOrPaymentInformationCaseRule.for_camt_CustomerPaymentCancellationRequestV03;
+			owner_lazy = () -> CustomerPaymentCancellationRequestV04.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/Underlying[*]/OriginalPaymentInformationAndCancellation[*]/Case</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Case</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Underlying[1]/OriginalPaymentInformationAndCancellation[1]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
 
 		@Override
-		public void executeValidator(CustomerPaymentCancellationRequestV06 obj) throws Exception {
-			checkCustomerPaymentCancellationRequestV06(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV01
-	 * CustomerPaymentCancellationRequestV01}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
-	 * expression} =
-	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/Underlying[*]/OriginalPaymentInformationAndCancellation[*]/Case&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/Case&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/Underlying[1]/OriginalPaymentInformationAndCancellation[1]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "MessageOrPaymentInformationCaseRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Case may be present at either Case, OriginalGroupInformationAndCancellation, OriginalPaymentInformationAndCancellation or TransactionInformation level."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CustomerPaymentCancellationRequestV01> forCustomerPaymentCancellationRequestV01 = new MMConstraint<CustomerPaymentCancellationRequestV01>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "MessageOrPaymentInformationCaseRule";
-			definition = "Case may be present at either Case, OriginalGroupInformationAndCancellation, OriginalPaymentInformationAndCancellation or TransactionInformation level.";
-			owner_lazy = () -> CustomerPaymentCancellationRequestV01.mmObject();
-			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/Underlying[*]/OriginalPaymentInformationAndCancellation[*]/Case</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Case</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Underlying[1]/OriginalPaymentInformationAndCancellation[1]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
-		}
-
-		@Override
-		public void executeValidator(CustomerPaymentCancellationRequestV01 obj) throws Exception {
-			checkCustomerPaymentCancellationRequestV01(obj);
+		public void executeValidator(CustomerPaymentCancellationRequestV04 obj) throws Exception {
+			check_camt_CustomerPaymentCancellationRequestV04(obj);
 		}
 	};
 	/**
@@ -195,7 +110,7 @@ public class ConstraintMessageOrPaymentInformationCaseRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<CustomerPaymentCancellationRequestV02> forCustomerPaymentCancellationRequestV02 = new MMConstraint<CustomerPaymentCancellationRequestV02>() {
+	public static final MMConstraint<CustomerPaymentCancellationRequestV02> for_camt_CustomerPaymentCancellationRequestV02 = new MMConstraint<CustomerPaymentCancellationRequestV02>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageOrPaymentInformationCaseRule";
@@ -206,7 +121,7 @@ public class ConstraintMessageOrPaymentInformationCaseRule {
 
 		@Override
 		public void executeValidator(CustomerPaymentCancellationRequestV02 obj) throws Exception {
-			checkCustomerPaymentCancellationRequestV02(obj);
+			check_camt_CustomerPaymentCancellationRequestV02(obj);
 		}
 	};
 	/**
@@ -236,26 +151,26 @@ public class ConstraintMessageOrPaymentInformationCaseRule {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrPaymentInformationCaseRule#forCustomerPaymentCancellationRequestV04
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrPaymentInformationCaseRule#for_camt_CustomerPaymentCancellationRequestV04
 	 * ConstraintMessageOrPaymentInformationCaseRule.
-	 * forCustomerPaymentCancellationRequestV04}</li>
+	 * for_camt_CustomerPaymentCancellationRequestV04}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<CustomerPaymentCancellationRequestV03> forCustomerPaymentCancellationRequestV03 = new MMConstraint<CustomerPaymentCancellationRequestV03>() {
+	public static final MMConstraint<CustomerPaymentCancellationRequestV03> for_camt_CustomerPaymentCancellationRequestV03 = new MMConstraint<CustomerPaymentCancellationRequestV03>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageOrPaymentInformationCaseRule";
 			definition = "Case may be present at either Case, OriginalGroupInformationAndCancellation, OriginalPaymentInformationAndCancellation or TransactionInformation level.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMessageOrPaymentInformationCaseRule.forCustomerPaymentCancellationRequestV04);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMessageOrPaymentInformationCaseRule.for_camt_CustomerPaymentCancellationRequestV04);
 			owner_lazy = () -> CustomerPaymentCancellationRequestV03.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/Underlying[*]/OriginalPaymentInformationAndCancellation[*]/Case</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Case</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Underlying[1]/OriginalPaymentInformationAndCancellation[1]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
 
 		@Override
 		public void executeValidator(CustomerPaymentCancellationRequestV03 obj) throws Exception {
-			checkCustomerPaymentCancellationRequestV03(obj);
+			check_camt_CustomerPaymentCancellationRequestV03(obj);
 		}
 	};
 	/**
@@ -264,8 +179,8 @@ public class ConstraintMessageOrPaymentInformationCaseRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV04
-	 * CustomerPaymentCancellationRequestV04}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV06
+	 * CustomerPaymentCancellationRequestV06}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
 	 * expression} =
 	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/Underlying[*]/OriginalPaymentInformationAndCancellation[*]/Case&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/Case&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/Underlying[1]/OriginalPaymentInformationAndCancellation[1]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
@@ -285,33 +200,118 @@ public class ConstraintMessageOrPaymentInformationCaseRule {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrPaymentInformationCaseRule#forCustomerPaymentCancellationRequestV05
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrPaymentInformationCaseRule#for_camt_CustomerPaymentCancellationRequestV07
 	 * ConstraintMessageOrPaymentInformationCaseRule.
-	 * forCustomerPaymentCancellationRequestV05}</li>
+	 * for_camt_CustomerPaymentCancellationRequestV07}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrPaymentInformationCaseRule#forCustomerPaymentCancellationRequestV03
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrPaymentInformationCaseRule#for_camt_CustomerPaymentCancellationRequestV05
 	 * ConstraintMessageOrPaymentInformationCaseRule.
-	 * forCustomerPaymentCancellationRequestV03}</li>
+	 * for_camt_CustomerPaymentCancellationRequestV05}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<CustomerPaymentCancellationRequestV04> forCustomerPaymentCancellationRequestV04 = new MMConstraint<CustomerPaymentCancellationRequestV04>() {
+	public static final MMConstraint<CustomerPaymentCancellationRequestV06> for_camt_CustomerPaymentCancellationRequestV06 = new MMConstraint<CustomerPaymentCancellationRequestV06>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageOrPaymentInformationCaseRule";
 			definition = "Case may be present at either Case, OriginalGroupInformationAndCancellation, OriginalPaymentInformationAndCancellation or TransactionInformation level.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMessageOrPaymentInformationCaseRule.forCustomerPaymentCancellationRequestV05);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMessageOrPaymentInformationCaseRule.forCustomerPaymentCancellationRequestV03;
-			owner_lazy = () -> CustomerPaymentCancellationRequestV04.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMessageOrPaymentInformationCaseRule.for_camt_CustomerPaymentCancellationRequestV07);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMessageOrPaymentInformationCaseRule.for_camt_CustomerPaymentCancellationRequestV05;
+			owner_lazy = () -> CustomerPaymentCancellationRequestV06.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/Underlying[*]/OriginalPaymentInformationAndCancellation[*]/Case</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Case</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Underlying[1]/OriginalPaymentInformationAndCancellation[1]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
 
 		@Override
-		public void executeValidator(CustomerPaymentCancellationRequestV04 obj) throws Exception {
-			checkCustomerPaymentCancellationRequestV04(obj);
+		public void executeValidator(CustomerPaymentCancellationRequestV06 obj) throws Exception {
+			check_camt_CustomerPaymentCancellationRequestV06(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV07
+	 * CustomerPaymentCancellationRequestV07}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/Underlying[*]/OriginalPaymentInformationAndCancellation[*]/Case&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/Case&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/Underlying[1]/OriginalPaymentInformationAndCancellation[1]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "MessageOrPaymentInformationCaseRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Case may be present at either Case, OriginalGroupInformationAndCancellation, OriginalPaymentInformationAndCancellation or TransactionInformation level."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrPaymentInformationCaseRule#for_camt_CustomerPaymentCancellationRequestV06
+	 * ConstraintMessageOrPaymentInformationCaseRule.
+	 * for_camt_CustomerPaymentCancellationRequestV06}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CustomerPaymentCancellationRequestV07> for_camt_CustomerPaymentCancellationRequestV07 = new MMConstraint<CustomerPaymentCancellationRequestV07>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "MessageOrPaymentInformationCaseRule";
+			definition = "Case may be present at either Case, OriginalGroupInformationAndCancellation, OriginalPaymentInformationAndCancellation or TransactionInformation level.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMessageOrPaymentInformationCaseRule.for_camt_CustomerPaymentCancellationRequestV06;
+			owner_lazy = () -> CustomerPaymentCancellationRequestV07.mmObject();
+			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/Underlying[*]/OriginalPaymentInformationAndCancellation[*]/Case</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Case</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Underlying[1]/OriginalPaymentInformationAndCancellation[1]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(CustomerPaymentCancellationRequestV07 obj) throws Exception {
+			check_camt_CustomerPaymentCancellationRequestV07(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV01
+	 * CustomerPaymentCancellationRequestV01}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/Underlying[*]/OriginalPaymentInformationAndCancellation[*]/Case&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/Case&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/Underlying[1]/OriginalPaymentInformationAndCancellation[1]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "MessageOrPaymentInformationCaseRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Case may be present at either Case, OriginalGroupInformationAndCancellation, OriginalPaymentInformationAndCancellation or TransactionInformation level."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CustomerPaymentCancellationRequestV01> for_camt_CustomerPaymentCancellationRequestV01 = new MMConstraint<CustomerPaymentCancellationRequestV01>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "MessageOrPaymentInformationCaseRule";
+			definition = "Case may be present at either Case, OriginalGroupInformationAndCancellation, OriginalPaymentInformationAndCancellation or TransactionInformation level.";
+			owner_lazy = () -> CustomerPaymentCancellationRequestV01.mmObject();
+			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/Underlying[*]/OriginalPaymentInformationAndCancellation[*]/Case</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Case</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Underlying[1]/OriginalPaymentInformationAndCancellation[1]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(CustomerPaymentCancellationRequestV01 obj) throws Exception {
+			check_camt_CustomerPaymentCancellationRequestV01(obj);
 		}
 	};
 	/**
@@ -341,33 +341,33 @@ public class ConstraintMessageOrPaymentInformationCaseRule {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrPaymentInformationCaseRule#forCustomerPaymentCancellationRequestV06
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrPaymentInformationCaseRule#for_camt_CustomerPaymentCancellationRequestV06
 	 * ConstraintMessageOrPaymentInformationCaseRule.
-	 * forCustomerPaymentCancellationRequestV06}</li>
+	 * for_camt_CustomerPaymentCancellationRequestV06}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrPaymentInformationCaseRule#forCustomerPaymentCancellationRequestV04
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrPaymentInformationCaseRule#for_camt_CustomerPaymentCancellationRequestV04
 	 * ConstraintMessageOrPaymentInformationCaseRule.
-	 * forCustomerPaymentCancellationRequestV04}</li>
+	 * for_camt_CustomerPaymentCancellationRequestV04}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<CustomerPaymentCancellationRequestV05> forCustomerPaymentCancellationRequestV05 = new MMConstraint<CustomerPaymentCancellationRequestV05>() {
+	public static final MMConstraint<CustomerPaymentCancellationRequestV05> for_camt_CustomerPaymentCancellationRequestV05 = new MMConstraint<CustomerPaymentCancellationRequestV05>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageOrPaymentInformationCaseRule";
 			definition = "Case may be present at either Case, OriginalGroupInformationAndCancellation, OriginalPaymentInformationAndCancellation or TransactionInformation level.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMessageOrPaymentInformationCaseRule.forCustomerPaymentCancellationRequestV06);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMessageOrPaymentInformationCaseRule.forCustomerPaymentCancellationRequestV04;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMessageOrPaymentInformationCaseRule.for_camt_CustomerPaymentCancellationRequestV06);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMessageOrPaymentInformationCaseRule.for_camt_CustomerPaymentCancellationRequestV04;
 			owner_lazy = () -> CustomerPaymentCancellationRequestV05.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/Underlying[*]/OriginalPaymentInformationAndCancellation[*]/Case</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Case</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Underlying[1]/OriginalPaymentInformationAndCancellation[1]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
 
 		@Override
 		public void executeValidator(CustomerPaymentCancellationRequestV05 obj) throws Exception {
-			checkCustomerPaymentCancellationRequestV05(obj);
+			check_camt_CustomerPaymentCancellationRequestV05(obj);
 		}
 	};
 
@@ -377,7 +377,7 @@ public class ConstraintMessageOrPaymentInformationCaseRule {
 	 * OriginalPaymentInformationAndCancellation or TransactionInformation
 	 * level.
 	 */
-	public static void checkCustomerPaymentCancellationRequestV07(CustomerPaymentCancellationRequestV07 obj) throws Exception {
+	public static void check_camt_CustomerPaymentCancellationRequestV04(CustomerPaymentCancellationRequestV04 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -387,7 +387,7 @@ public class ConstraintMessageOrPaymentInformationCaseRule {
 	 * OriginalPaymentInformationAndCancellation or TransactionInformation
 	 * level.
 	 */
-	public static void checkCustomerPaymentCancellationRequestV06(CustomerPaymentCancellationRequestV06 obj) throws Exception {
+	public static void check_camt_CustomerPaymentCancellationRequestV02(CustomerPaymentCancellationRequestV02 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -397,7 +397,7 @@ public class ConstraintMessageOrPaymentInformationCaseRule {
 	 * OriginalPaymentInformationAndCancellation or TransactionInformation
 	 * level.
 	 */
-	public static void checkCustomerPaymentCancellationRequestV01(CustomerPaymentCancellationRequestV01 obj) throws Exception {
+	public static void check_camt_CustomerPaymentCancellationRequestV03(CustomerPaymentCancellationRequestV03 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -407,7 +407,7 @@ public class ConstraintMessageOrPaymentInformationCaseRule {
 	 * OriginalPaymentInformationAndCancellation or TransactionInformation
 	 * level.
 	 */
-	public static void checkCustomerPaymentCancellationRequestV02(CustomerPaymentCancellationRequestV02 obj) throws Exception {
+	public static void check_camt_CustomerPaymentCancellationRequestV06(CustomerPaymentCancellationRequestV06 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -417,7 +417,7 @@ public class ConstraintMessageOrPaymentInformationCaseRule {
 	 * OriginalPaymentInformationAndCancellation or TransactionInformation
 	 * level.
 	 */
-	public static void checkCustomerPaymentCancellationRequestV03(CustomerPaymentCancellationRequestV03 obj) throws Exception {
+	public static void check_camt_CustomerPaymentCancellationRequestV07(CustomerPaymentCancellationRequestV07 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -427,7 +427,7 @@ public class ConstraintMessageOrPaymentInformationCaseRule {
 	 * OriginalPaymentInformationAndCancellation or TransactionInformation
 	 * level.
 	 */
-	public static void checkCustomerPaymentCancellationRequestV04(CustomerPaymentCancellationRequestV04 obj) throws Exception {
+	public static void check_camt_CustomerPaymentCancellationRequestV01(CustomerPaymentCancellationRequestV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -437,7 +437,7 @@ public class ConstraintMessageOrPaymentInformationCaseRule {
 	 * OriginalPaymentInformationAndCancellation or TransactionInformation
 	 * level.
 	 */
-	public static void checkCustomerPaymentCancellationRequestV05(CustomerPaymentCancellationRequestV05 obj) throws Exception {
+	public static void check_camt_CustomerPaymentCancellationRequestV05(CustomerPaymentCancellationRequestV05 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

@@ -50,7 +50,7 @@ public class ConstraintEffectiveTradeDateRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<ReversalOfTransferInConfirmationV07> forReversalOfTransferInConfirmationV07 = new MMConstraint<ReversalOfTransferInConfirmationV07>() {
+	public static final MMConstraint<ReversalOfTransferInConfirmationV07> for_sese_ReversalOfTransferInConfirmationV07 = new MMConstraint<ReversalOfTransferInConfirmationV07>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveTradeDateRule";
@@ -60,7 +60,7 @@ public class ConstraintEffectiveTradeDateRule {
 
 		@Override
 		public void executeValidator(ReversalOfTransferInConfirmationV07 obj) throws Exception {
-			checkReversalOfTransferInConfirmationV07(obj);
+			check_sese_ReversalOfTransferInConfirmationV07(obj);
 		}
 	};
 
@@ -69,7 +69,7 @@ public class ConstraintEffectiveTradeDateRule {
 	 * Reversal/TransferInConfirmationDetails is present, then
 	 * EffectiveTransferDate must be present.
 	 */
-	public static void checkReversalOfTransferInConfirmationV07(ReversalOfTransferInConfirmationV07 obj) throws Exception {
+	public static void check_sese_ReversalOfTransferInConfirmationV07(ReversalOfTransferInConfirmationV07 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

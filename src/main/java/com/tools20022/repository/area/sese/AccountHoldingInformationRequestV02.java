@@ -119,17 +119,18 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintPorfolioRule#forAccountHoldingInformationRequestV02
- * ConstraintPorfolioRule.forAccountHoldingInformationRequestV02}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPorfolioRule#for_sese_AccountHoldingInformationRequestV02
+ * ConstraintPorfolioRule.for_sese_AccountHoldingInformationRequestV02}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorRule#forAccountHoldingInformationRequestV02
- * ConstraintInvestorRule.forAccountHoldingInformationRequestV02}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorRule#for_sese_AccountHoldingInformationRequestV02
+ * ConstraintInvestorRule.for_sese_AccountHoldingInformationRequestV02}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCorporateRule#forAccountHoldingInformationRequestV02
- * ConstraintCorporateRule.forAccountHoldingInformationRequestV02}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCorporateRule#for_sese_AccountHoldingInformationRequestV02
+ * ConstraintCorporateRule.for_sese_AccountHoldingInformationRequestV02}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule#forAccountHoldingInformationRequestV02
- * ConstraintNomineeAccountServicerRule.forAccountHoldingInformationRequestV02}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule#for_sese_AccountHoldingInformationRequestV02
+ * ConstraintNomineeAccountServicerRule.
+ * for_sese_AccountHoldingInformationRequestV02}</li>
  * </ul>
  * </li>
  * <li>
@@ -1059,9 +1060,9 @@ public class AccountHoldingInformationRequestV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPorfolioRule.forAccountHoldingInformationRequestV02,
-						com.tools20022.repository.constraints.ConstraintInvestorRule.forAccountHoldingInformationRequestV02, com.tools20022.repository.constraints.ConstraintCorporateRule.forAccountHoldingInformationRequestV02,
-						com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule.forAccountHoldingInformationRequestV02);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPorfolioRule.for_sese_AccountHoldingInformationRequestV02,
+						com.tools20022.repository.constraints.ConstraintInvestorRule.for_sese_AccountHoldingInformationRequestV02, com.tools20022.repository.constraints.ConstraintCorporateRule.for_sese_AccountHoldingInformationRequestV02,
+						com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule.for_sese_AccountHoldingInformationRequestV02);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountHoldingInformationRequestV02";
 				definition = "Scope\r\nAn instructing party, for example, a (new) plan manager (Transferee) sends the AccountHoldingInformationRequest message to the executing party, for example, a (old) plan manager (Transferor), on behalf of the initiating party, for example, an investor (client), to request information about financial instruments held on behalf of the client.\r\nUsage\r\nThe AccountHoldingInformationRequest message is used to request information about one or more ISA or portfolio products held in a client's account for which it intends to instruct a transfer at a later time.";

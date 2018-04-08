@@ -79,8 +79,8 @@ public class ConstraintInstructionForDebtorAgentRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction9
-	 * PaymentInstruction9}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction22
+	 * PaymentInstruction22}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
 	 * expression} =
 	 * "&lt;RuleDefinition&gt;&lt;SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;OR&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/InstructionForDebtorAgent&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/CreditTransferTransactionInformation[*]/InstructionForDebtorAgent&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;/SimpleRule&gt;&lt;/RuleDefinition&gt;"
@@ -96,29 +96,26 @@ public class ConstraintInstructionForDebtorAgentRule {
 	 * definition} =
 	 * "If InstructionForDebtorAgent is present, then CreditTransferTransactionInformation/InstructionForDebtorAgent is not allowed.\r\nIf CreditTransferTransactionInformation/InstructionForDebtorAgent is present, then InstructionForDebtorAgent is not allowed.\r\nCreditTransferTransactionInformation/InstructionForDebtorAgent and InstructionForDebtorAgent may both be absent."
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintInstructionForDebtorAgentRule#forPaymentInstruction16
-	 * ConstraintInstructionForDebtorAgentRule.forPaymentInstruction16}</li>
-	 * </ul>
-	 * </li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintInstructionForDebtorAgentRule#forPaymentInstruction20
+	 * ConstraintInstructionForDebtorAgentRule.forPaymentInstruction20}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<PaymentInstruction9> forPaymentInstruction9 = new MMConstraint<PaymentInstruction9>() {
+	public static final MMConstraint<PaymentInstruction22> forPaymentInstruction22 = new MMConstraint<PaymentInstruction22>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionForDebtorAgentRule";
 			definition = "If InstructionForDebtorAgent is present, then CreditTransferTransactionInformation/InstructionForDebtorAgent is not allowed.\r\nIf CreditTransferTransactionInformation/InstructionForDebtorAgent is present, then InstructionForDebtorAgent is not allowed.\r\nCreditTransferTransactionInformation/InstructionForDebtorAgent and InstructionForDebtorAgent may both be absent.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInstructionForDebtorAgentRule.forPaymentInstruction16);
-			owner_lazy = () -> PaymentInstruction9.mmObject();
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInstructionForDebtorAgentRule.forPaymentInstruction20;
+			owner_lazy = () -> PaymentInstruction22.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructionForDebtorAgent</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditTransferTransactionInformation[*]/InstructionForDebtorAgent</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
 		}
 
 		@Override
-		public void executeValidator(PaymentInstruction9 obj) throws Exception {
-			checkPaymentInstruction9(obj);
+		public void executeValidator(PaymentInstruction22 obj) throws Exception {
+			checkPaymentInstruction22(obj);
 		}
 	};
 	/**
@@ -235,8 +232,8 @@ public class ConstraintInstructionForDebtorAgentRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction22
-	 * PaymentInstruction22}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction9
+	 * PaymentInstruction9}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
 	 * expression} =
 	 * "&lt;RuleDefinition&gt;&lt;SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;OR&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/InstructionForDebtorAgent&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/CreditTransferTransactionInformation[*]/InstructionForDebtorAgent&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;/SimpleRule&gt;&lt;/RuleDefinition&gt;"
@@ -252,26 +249,29 @@ public class ConstraintInstructionForDebtorAgentRule {
 	 * definition} =
 	 * "If InstructionForDebtorAgent is present, then CreditTransferTransactionInformation/InstructionForDebtorAgent is not allowed.\r\nIf CreditTransferTransactionInformation/InstructionForDebtorAgent is present, then InstructionForDebtorAgent is not allowed.\r\nCreditTransferTransactionInformation/InstructionForDebtorAgent and InstructionForDebtorAgent may both be absent."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintInstructionForDebtorAgentRule#forPaymentInstruction20
-	 * ConstraintInstructionForDebtorAgentRule.forPaymentInstruction20}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintInstructionForDebtorAgentRule#forPaymentInstruction16
+	 * ConstraintInstructionForDebtorAgentRule.forPaymentInstruction16}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<PaymentInstruction22> forPaymentInstruction22 = new MMConstraint<PaymentInstruction22>() {
+	public static final MMConstraint<PaymentInstruction9> forPaymentInstruction9 = new MMConstraint<PaymentInstruction9>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionForDebtorAgentRule";
 			definition = "If InstructionForDebtorAgent is present, then CreditTransferTransactionInformation/InstructionForDebtorAgent is not allowed.\r\nIf CreditTransferTransactionInformation/InstructionForDebtorAgent is present, then InstructionForDebtorAgent is not allowed.\r\nCreditTransferTransactionInformation/InstructionForDebtorAgent and InstructionForDebtorAgent may both be absent.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInstructionForDebtorAgentRule.forPaymentInstruction20;
-			owner_lazy = () -> PaymentInstruction22.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInstructionForDebtorAgentRule.forPaymentInstruction16);
+			owner_lazy = () -> PaymentInstruction9.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructionForDebtorAgent</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditTransferTransactionInformation[*]/InstructionForDebtorAgent</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
 		}
 
 		@Override
-		public void executeValidator(PaymentInstruction22 obj) throws Exception {
-			checkPaymentInstruction22(obj);
+		public void executeValidator(PaymentInstruction9 obj) throws Exception {
+			checkPaymentInstruction9(obj);
 		}
 	};
 
@@ -297,7 +297,7 @@ public class ConstraintInstructionForDebtorAgentRule {
 	 * CreditTransferTransactionInformation/InstructionForDebtorAgent and
 	 * InstructionForDebtorAgent may both be absent.
 	 */
-	public static void checkPaymentInstruction9(PaymentInstruction9 obj) throws Exception {
+	public static void checkPaymentInstruction22(PaymentInstruction22 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -336,7 +336,7 @@ public class ConstraintInstructionForDebtorAgentRule {
 	 * CreditTransferTransactionInformation/InstructionForDebtorAgent and
 	 * InstructionForDebtorAgent may both be absent.
 	 */
-	public static void checkPaymentInstruction22(PaymentInstruction22 obj) throws Exception {
+	public static void checkPaymentInstruction9(PaymentInstruction9 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

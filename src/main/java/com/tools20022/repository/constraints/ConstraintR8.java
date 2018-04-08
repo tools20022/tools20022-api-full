@@ -20,8 +20,8 @@ package com.tools20022.repository.constraints;
 import com.tools20022.core.repo.NotImplementedConstraintException;
 import com.tools20022.metamodel.MMConstraint;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.datatype.Max4Text;
 import com.tools20022.repository.msg.EarlyPaymentsVAT1;
-import com.tools20022.repository.msg.EarlyPaymentsVAT1.DiscountTaxType;
 
 /**
  * Value according to external codelist.
@@ -47,7 +47,7 @@ public class ConstraintR8 {
 	 * definition} = "Value according to external codelist."</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<DiscountTaxType> forDiscountTaxType = new MMConstraint<DiscountTaxType>() {
+	public static final MMConstraint<Max4Text> forEarlyPaymentsVAT1_DiscountTaxType = new MMConstraint<Max4Text>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "R8";
@@ -56,15 +56,15 @@ public class ConstraintR8 {
 		}
 
 		@Override
-		public void executeValidator(DiscountTaxType obj) throws Exception {
-			checkEarlyPaymentsVAT1(obj);
+		public void executeValidator(Max4Text obj) throws Exception {
+			checkEarlyPaymentsVAT1_DiscountTaxType(obj);
 		}
 	};
 
 	/**
 	 * Value according to external codelist.
 	 */
-	public static void checkEarlyPaymentsVAT1(DiscountTaxType obj) throws Exception {
+	public static void checkEarlyPaymentsVAT1_DiscountTaxType(Max4Text obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

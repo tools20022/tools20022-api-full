@@ -105,8 +105,9 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveTradeDateRule#forReversalOfTransferInConfirmationV07
- * ConstraintEffectiveTradeDateRule.forReversalOfTransferInConfirmationV07}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveTradeDateRule#for_sese_ReversalOfTransferInConfirmationV07
+ * ConstraintEffectiveTradeDateRule.for_sese_ReversalOfTransferInConfirmationV07
+ * }</li>
  * </ul>
  * </li>
  * <li>
@@ -491,7 +492,7 @@ public class ReversalOfTransferInConfirmationV07 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEffectiveTradeDateRule.forReversalOfTransferInConfirmationV07);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEffectiveTradeDateRule.for_sese_ReversalOfTransferInConfirmationV07);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReversalOfTransferInConfirmationV07";
 				definition = "Scope\r\nAn executing party, for example, a transfer agent, sends the ReversalOfTransferInConfirmation message to the instructing party, for example, an investment manager or its authorised representative, to cancel a previously sent TransferInConfirmation message.\r\nUsage\r\nThe ReversalOfTransferInConfirmation message is used to reverse a previously sent TransferInConfirmation.\r\nThere are two ways to specify the reversal of the transfer in confirmation. Either:\r\n- the business references, for example, TransferReference, TransferConfirmationIdentification, of the transfer confirmation are quoted, or,\r\n- all the details of the transfer confirmation (this includes TransferReference and TransferConfirmationIdentification) are quoted but this is not recommended.\r\nThe message identification of the TransferInConfirmation message in which the transfer confirmation was conveyed may also be quoted in PreviousReference.\r\nThe message reference (MessageIdentification) of the TransferInInstruction message in which the transfer instruction was conveyed may also be quoted in RelatedReference.\r\n";

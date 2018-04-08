@@ -161,9 +161,9 @@ public class ReversalOfTransferInConfirmationV03 {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Operation1";
-			messageDefinition_lazy = () -> com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV03.mmObject();
 			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV03.mmReversalByReference,
 					com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV03.mmReversalByTransferInConfirmationDetails);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV03.mmObject();
 		}
 	};
 	@XmlElement(name = "MsgId", required = true)

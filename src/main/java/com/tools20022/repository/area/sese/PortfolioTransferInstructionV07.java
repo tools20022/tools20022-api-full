@@ -136,23 +136,24 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule#forPortfolioTransferInstructionV07
- * ConstraintNomineeAccountServicerRule.forPortfolioTransferInstructionV07}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule#for_sese_PortfolioTransferInstructionV07
+ * ConstraintNomineeAccountServicerRule.for_sese_PortfolioTransferInstructionV07
+ * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintPortfolioRule#forPortfolioTransferInstructionV07
- * ConstraintPortfolioRule.forPortfolioTransferInstructionV07}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPortfolioRule#for_sese_PortfolioTransferInstructionV07
+ * ConstraintPortfolioRule.for_sese_PortfolioTransferInstructionV07}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorRule#forPortfolioTransferInstructionV07
- * ConstraintInvestorRule.forPortfolioTransferInstructionV07}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorRule#for_sese_PortfolioTransferInstructionV07
+ * ConstraintInvestorRule.for_sese_PortfolioTransferInstructionV07}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCorporateRule#forPortfolioTransferInstructionV07
- * ConstraintCorporateRule.forPortfolioTransferInstructionV07}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCorporateRule#for_sese_PortfolioTransferInstructionV07
+ * ConstraintCorporateRule.for_sese_PortfolioTransferInstructionV07}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintDesignationRule#forPortfolioTransferInstructionV07
- * ConstraintDesignationRule.forPortfolioTransferInstructionV07}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDesignationRule#for_sese_PortfolioTransferInstructionV07
+ * ConstraintDesignationRule.for_sese_PortfolioTransferInstructionV07}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintISARule#forPortfolioTransferInstructionV07
- * ConstraintISARule.forPortfolioTransferInstructionV07}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintISARule#for_sese_PortfolioTransferInstructionV07
+ * ConstraintISARule.for_sese_PortfolioTransferInstructionV07}</li>
  * </ul>
  * </li>
  * <li>
@@ -1293,10 +1294,10 @@ public class PortfolioTransferInstructionV07 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule.forPortfolioTransferInstructionV07,
-						com.tools20022.repository.constraints.ConstraintPortfolioRule.forPortfolioTransferInstructionV07, com.tools20022.repository.constraints.ConstraintInvestorRule.forPortfolioTransferInstructionV07,
-						com.tools20022.repository.constraints.ConstraintCorporateRule.forPortfolioTransferInstructionV07, com.tools20022.repository.constraints.ConstraintDesignationRule.forPortfolioTransferInstructionV07,
-						com.tools20022.repository.constraints.ConstraintISARule.forPortfolioTransferInstructionV07);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule.for_sese_PortfolioTransferInstructionV07,
+						com.tools20022.repository.constraints.ConstraintPortfolioRule.for_sese_PortfolioTransferInstructionV07, com.tools20022.repository.constraints.ConstraintInvestorRule.for_sese_PortfolioTransferInstructionV07,
+						com.tools20022.repository.constraints.ConstraintCorporateRule.for_sese_PortfolioTransferInstructionV07, com.tools20022.repository.constraints.ConstraintDesignationRule.for_sese_PortfolioTransferInstructionV07,
+						com.tools20022.repository.constraints.ConstraintISARule.for_sese_PortfolioTransferInstructionV07);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PortfolioTransferInstructionV07";
 				definition = "Scope\r\nAn instructing party, for example, a (new) plan manager (Transferee), sends the PortfolioTransferInstruction message to the executing party, for example, a (old) plan manager (Transferor), on behalf of the initiating party, for example, an investor (client), to instruct the transfer of financial instruments from the clients account at the old plan manager (Transferor) to the clients account at the new plan manager (Transferee) through a nominee account.\r\nUsage\r\nThe PortfolioTransferInstruction message is used to instruct the withdrawal of one or more ISA or portfolio products from one account and deliver them to another account.\r\nThe PortfolioTransferInstruction message is used to instruct one or more transfers for one client. Each transfer is for delivery to the same account. The account may be owned by one or more individual investors or one or more corporate investors. Each transfer is identified in TransferIdentification.\r\nIf the instructing party does not have enough information to instruct the transfer, then it must first send a AccountHoldingInformationRequest message to the executing party in order to receive a AccountHoldingInformation message.";

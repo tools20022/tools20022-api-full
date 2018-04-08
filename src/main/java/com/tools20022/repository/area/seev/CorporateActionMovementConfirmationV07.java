@@ -116,31 +116,32 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintOptionNumberRule#forCorporateActionMovementConfirmationV07
- * ConstraintOptionNumberRule.forCorporateActionMovementConfirmationV07}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOptionNumberRule#for_seev_CorporateActionMovementConfirmationV07
+ * ConstraintOptionNumberRule.for_seev_CorporateActionMovementConfirmationV07}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintOtherDocumentIdentificationRule#forCorporateActionMovementConfirmationV07
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOtherDocumentIdentificationRule#for_seev_CorporateActionMovementConfirmationV07
  * ConstraintOtherDocumentIdentificationRule.
- * forCorporateActionMovementConfirmationV07}</li>
+ * for_seev_CorporateActionMovementConfirmationV07}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintScripOrDividendReinvestment1Rule#forCorporateActionMovementConfirmationV07
+ * {@linkplain com.tools20022.repository.constraints.ConstraintScripOrDividendReinvestment1Rule#for_seev_CorporateActionMovementConfirmationV07
  * ConstraintScripOrDividendReinvestment1Rule.
- * forCorporateActionMovementConfirmationV07}</li>
+ * for_seev_CorporateActionMovementConfirmationV07}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintScripOrDividendReinvestment2Rule#forCorporateActionMovementConfirmationV07
+ * {@linkplain com.tools20022.repository.constraints.ConstraintScripOrDividendReinvestment2Rule#for_seev_CorporateActionMovementConfirmationV07
  * ConstraintScripOrDividendReinvestment2Rule.
- * forCorporateActionMovementConfirmationV07}</li>
+ * for_seev_CorporateActionMovementConfirmationV07}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintScripOrDividendReinvestment3Rule#forCorporateActionMovementConfirmationV07
+ * {@linkplain com.tools20022.repository.constraints.ConstraintScripOrDividendReinvestment3Rule#for_seev_CorporateActionMovementConfirmationV07
  * ConstraintScripOrDividendReinvestment3Rule.
- * forCorporateActionMovementConfirmationV07}</li>
+ * for_seev_CorporateActionMovementConfirmationV07}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalInformationRule#forCorporateActionMovementConfirmationV07
- * ConstraintAdditionalInformationRule.forCorporateActionMovementConfirmationV07
- * }</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalInformationRule#for_seev_CorporateActionMovementConfirmationV07
+ * ConstraintAdditionalInformationRule.
+ * for_seev_CorporateActionMovementConfirmationV07}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline#forCorporateActionMovementConfirmationV07
- * ConstraintIssuerAgentGuideline.forCorporateActionMovementConfirmationV07}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline#for_seev_CorporateActionMovementConfirmationV07
+ * ConstraintIssuerAgentGuideline.
+ * for_seev_CorporateActionMovementConfirmationV07}</li>
  * </ul>
  * </li>
  * <li>
@@ -1047,13 +1048,13 @@ public class CorporateActionMovementConfirmationV07 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionNumberRule.forCorporateActionMovementConfirmationV07,
-						com.tools20022.repository.constraints.ConstraintOtherDocumentIdentificationRule.forCorporateActionMovementConfirmationV07,
-						com.tools20022.repository.constraints.ConstraintScripOrDividendReinvestment1Rule.forCorporateActionMovementConfirmationV07,
-						com.tools20022.repository.constraints.ConstraintScripOrDividendReinvestment2Rule.forCorporateActionMovementConfirmationV07,
-						com.tools20022.repository.constraints.ConstraintScripOrDividendReinvestment3Rule.forCorporateActionMovementConfirmationV07,
-						com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionMovementConfirmationV07,
-						com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline.forCorporateActionMovementConfirmationV07);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionNumberRule.for_seev_CorporateActionMovementConfirmationV07,
+						com.tools20022.repository.constraints.ConstraintOtherDocumentIdentificationRule.for_seev_CorporateActionMovementConfirmationV07,
+						com.tools20022.repository.constraints.ConstraintScripOrDividendReinvestment1Rule.for_seev_CorporateActionMovementConfirmationV07,
+						com.tools20022.repository.constraints.ConstraintScripOrDividendReinvestment2Rule.for_seev_CorporateActionMovementConfirmationV07,
+						com.tools20022.repository.constraints.ConstraintScripOrDividendReinvestment3Rule.for_seev_CorporateActionMovementConfirmationV07,
+						com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.for_seev_CorporateActionMovementConfirmationV07,
+						com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline.for_seev_CorporateActionMovementConfirmationV07);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionMovementConfirmationV07";
 				definition = "Scope\r\nAn account servicer sends the CorporateActionMovementConfirmation message to an account owner or its designated agent to confirm posting of securities or cash as a result of a corporate action event.\r\nUsage\r\nThe message may also be used to:\r\n- re-send a message previously sent (the sub-function of the message is Duplicate),\r\n- provide a third party with a copy of a message for information (the sub-function of the message is Copy),\r\n- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate),\r\nusing the relevant elements in the business application header (BAH).";

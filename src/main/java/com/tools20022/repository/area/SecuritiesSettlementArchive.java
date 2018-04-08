@@ -563,6 +563,7 @@ public class SecuritiesSettlementArchive {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Securities Settlement - Archive - master";
 				definition = "Messages that support the settlement process for securities and report its status and confirmation.";
+				code = "sese";
 				messageDefinition_lazy = () -> Arrays.asList(PEPOrISAOrPortfolioInformationV01.mmObject(), AccountHoldingInformationV02.mmObject(), AccountHoldingInformationV03.mmObject(),
 						PEPOrISAOrPortfolioTransferCancellationRequestV02.mmObject(), PortfolioTransferCancellationRequestV03.mmObject(), PortfolioTransferCancellationRequestV04.mmObject(),
 						PEPOrISAOrPortfolioTransferConfirmationV02.mmObject(), PortfolioTransferConfirmationV03.mmObject(), PortfolioTransferConfirmationV04.mmObject(), PEPOrISAOrPortfolioTransferInstructionV02.mmObject(),
@@ -610,7 +611,6 @@ public class SecuritiesSettlementArchive {
 						SecuritiesSettlementTransactionConfirmationV06.mmObject(), SecuritiesFinancingInstructionV06.mmObject(), SecuritiesSettlementTransactionStatusAdviceV07.mmObject(),
 						SecuritiesSettlementTransactionGenerationNotificationV06.mmObject(), SecuritiesSettlementTransactionReversalAdviceV05.mmObject(), SecuritiesFinancingConfirmationV06.mmObject(),
 						SecuritiesSettlementTransactionModificationRequestV04.mmObject(), SecuritiesSettlementTransactionAllegementNotificationV05.mmObject());
-				code = "sese";
 			}
 		});
 		return mmObject_lazy.get();

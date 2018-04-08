@@ -37,8 +37,8 @@ public class ConstraintAllegementStatusRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails4
-	 * SecuritiesTradeDetails4}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails71
+	 * SecuritiesTradeDetails71}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -49,248 +49,26 @@ public class ConstraintAllegementStatusRule {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Unless bilaterally agreed between the Sender and Receiver, if AllegementStatus is present, then the statement must be a delta statement (UpdateType: Delta). In a complete statement (UpdateType: Complete), a removed or cancelled allegement must not be reported."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesTradeDetails4> forSecuritiesTradeDetails4 = new MMConstraint<SecuritiesTradeDetails4>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "AllegementStatusRule";
-			definition = "Unless bilaterally agreed between the Sender and Receiver, if AllegementStatus is present, then the statement must be a delta statement (UpdateType: Delta). In a complete statement (UpdateType: Complete), a removed or cancelled allegement must not be reported.";
-			owner_lazy = () -> SecuritiesTradeDetails4.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SecuritiesTradeDetails4 obj) throws Exception {
-			checkSecuritiesTradeDetails4(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails17
-	 * SecuritiesTradeDetails17}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AllegementStatusRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Unless bilaterally agreed between the Sender and Receiver, if AllegementStatus is present, then the statement must be a delta statement (UpdateType: Delta). In a complete statement (UpdateType: Complete), a removed or cancelled allegement must not be reported."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesTradeDetails17> forSecuritiesTradeDetails17 = new MMConstraint<SecuritiesTradeDetails17>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "AllegementStatusRule";
-			definition = "Unless bilaterally agreed between the Sender and Receiver, if AllegementStatus is present, then the statement must be a delta statement (UpdateType: Delta). In a complete statement (UpdateType: Complete), a removed or cancelled allegement must not be reported.";
-			owner_lazy = () -> SecuritiesTradeDetails17.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SecuritiesTradeDetails17 obj) throws Exception {
-			checkSecuritiesTradeDetails17(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails10
-	 * SecuritiesTradeDetails10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AllegementStatusRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Unless bilaterally agreed between the Sender and Receiver, if AllegementStatus is present, then the statement must be a delta statement (UpdateType: Delta). In a complete statement (UpdateType: Complete), a removed or cancelled allegement must not be reported."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesTradeDetails10> forSecuritiesTradeDetails10 = new MMConstraint<SecuritiesTradeDetails10>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "AllegementStatusRule";
-			definition = "Unless bilaterally agreed between the Sender and Receiver, if AllegementStatus is present, then the statement must be a delta statement (UpdateType: Delta). In a complete statement (UpdateType: Complete), a removed or cancelled allegement must not be reported.";
-			owner_lazy = () -> SecuritiesTradeDetails10.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SecuritiesTradeDetails10 obj) throws Exception {
-			checkSecuritiesTradeDetails10(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails22
-	 * SecuritiesTradeDetails22}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AllegementStatusRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Unless bilaterally agreed between the Sender and Receiver, if AllegementStatus is present, then the statement must be a delta statement (UpdateType: Delta). In a complete statement (UpdateType: Complete), a removed or cancelled allegement must not be reported."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesTradeDetails22> forSecuritiesTradeDetails22 = new MMConstraint<SecuritiesTradeDetails22>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "AllegementStatusRule";
-			definition = "Unless bilaterally agreed between the Sender and Receiver, if AllegementStatus is present, then the statement must be a delta statement (UpdateType: Delta). In a complete statement (UpdateType: Complete), a removed or cancelled allegement must not be reported.";
-			owner_lazy = () -> SecuritiesTradeDetails22.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SecuritiesTradeDetails22 obj) throws Exception {
-			checkSecuritiesTradeDetails22(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails23
-	 * SecuritiesTradeDetails23}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AllegementStatusRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Unless bilaterally agreed between the Sender and Receiver, if AllegementStatus is present, then the statement must be a delta statement (UpdateType: Delta). In a complete statement (UpdateType: Complete), a removed or cancelled allegement must not be reported."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintAllegementStatusRule#forSecuritiesTradeDetails35
-	 * ConstraintAllegementStatusRule.forSecuritiesTradeDetails35}</li>
-	 * </ul>
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesTradeDetails23> forSecuritiesTradeDetails23 = new MMConstraint<SecuritiesTradeDetails23>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "AllegementStatusRule";
-			definition = "Unless bilaterally agreed between the Sender and Receiver, if AllegementStatus is present, then the statement must be a delta statement (UpdateType: Delta). In a complete statement (UpdateType: Complete), a removed or cancelled allegement must not be reported.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAllegementStatusRule.forSecuritiesTradeDetails35);
-			owner_lazy = () -> SecuritiesTradeDetails23.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SecuritiesTradeDetails23 obj) throws Exception {
-			checkSecuritiesTradeDetails23(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails29
-	 * SecuritiesTradeDetails29}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AllegementStatusRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Unless bilaterally agreed between the Sender and Receiver, if AllegementStatus is present, then the statement must be a delta statement (UpdateType: Delta). In a complete statement (UpdateType: Complete), a removed or cancelled allegement must not be reported."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesTradeDetails29> forSecuritiesTradeDetails29 = new MMConstraint<SecuritiesTradeDetails29>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "AllegementStatusRule";
-			definition = "Unless bilaterally agreed between the Sender and Receiver, if AllegementStatus is present, then the statement must be a delta statement (UpdateType: Delta). In a complete statement (UpdateType: Complete), a removed or cancelled allegement must not be reported.";
-			owner_lazy = () -> SecuritiesTradeDetails29.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SecuritiesTradeDetails29 obj) throws Exception {
-			checkSecuritiesTradeDetails29(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails35
-	 * SecuritiesTradeDetails35}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AllegementStatusRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Unless bilaterally agreed between the Sender and Receiver, if AllegementStatus is present, then the statement must be a delta statement (UpdateType: Delta). In a complete statement (UpdateType: Complete), a removed or cancelled allegement must not be reported."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintAllegementStatusRule#forSecuritiesTradeDetails49
-	 * ConstraintAllegementStatusRule.forSecuritiesTradeDetails49}</li>
-	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintAllegementStatusRule#forSecuritiesTradeDetails23
-	 * ConstraintAllegementStatusRule.forSecuritiesTradeDetails23}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAllegementStatusRule#forSecuritiesTradeDetails68
+	 * ConstraintAllegementStatusRule.forSecuritiesTradeDetails68}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<SecuritiesTradeDetails35> forSecuritiesTradeDetails35 = new MMConstraint<SecuritiesTradeDetails35>() {
+	public static final MMConstraint<SecuritiesTradeDetails71> forSecuritiesTradeDetails71 = new MMConstraint<SecuritiesTradeDetails71>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllegementStatusRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if AllegementStatus is present, then the statement must be a delta statement (UpdateType: Delta). In a complete statement (UpdateType: Complete), a removed or cancelled allegement must not be reported.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAllegementStatusRule.forSecuritiesTradeDetails49);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAllegementStatusRule.forSecuritiesTradeDetails23;
-			owner_lazy = () -> SecuritiesTradeDetails35.mmObject();
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAllegementStatusRule.forSecuritiesTradeDetails68;
+			owner_lazy = () -> SecuritiesTradeDetails71.mmObject();
 		}
 
 		@Override
-		public void executeValidator(SecuritiesTradeDetails35 obj) throws Exception {
-			checkSecuritiesTradeDetails35(obj);
+		public void executeValidator(SecuritiesTradeDetails71 obj) throws Exception {
+			checkSecuritiesTradeDetails71(obj);
 		}
 	};
 	/**
@@ -333,57 +111,8 @@ public class ConstraintAllegementStatusRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails49
-	 * SecuritiesTradeDetails49}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AllegementStatusRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Unless bilaterally agreed between the Sender and Receiver, if AllegementStatus is present, then the statement must be a delta statement (UpdateType: Delta). In a complete statement (UpdateType: Complete), a removed or cancelled allegement must not be reported."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintAllegementStatusRule#forSecuritiesTradeDetails68
-	 * ConstraintAllegementStatusRule.forSecuritiesTradeDetails68}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintAllegementStatusRule#forSecuritiesTradeDetails35
-	 * ConstraintAllegementStatusRule.forSecuritiesTradeDetails35}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesTradeDetails49> forSecuritiesTradeDetails49 = new MMConstraint<SecuritiesTradeDetails49>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "AllegementStatusRule";
-			definition = "Unless bilaterally agreed between the Sender and Receiver, if AllegementStatus is present, then the statement must be a delta statement (UpdateType: Delta). In a complete statement (UpdateType: Complete), a removed or cancelled allegement must not be reported.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAllegementStatusRule.forSecuritiesTradeDetails68);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAllegementStatusRule.forSecuritiesTradeDetails35;
-			owner_lazy = () -> SecuritiesTradeDetails49.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SecuritiesTradeDetails49 obj) throws Exception {
-			checkSecuritiesTradeDetails49(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails61
-	 * SecuritiesTradeDetails61}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails22
+	 * SecuritiesTradeDetails22}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -397,17 +126,17 @@ public class ConstraintAllegementStatusRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<SecuritiesTradeDetails61> forSecuritiesTradeDetails61 = new MMConstraint<SecuritiesTradeDetails61>() {
+	public static final MMConstraint<SecuritiesTradeDetails22> forSecuritiesTradeDetails22 = new MMConstraint<SecuritiesTradeDetails22>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllegementStatusRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if AllegementStatus is present, then the statement must be a delta statement (UpdateType: Delta). In a complete statement (UpdateType: Complete), a removed or cancelled allegement must not be reported.";
-			owner_lazy = () -> SecuritiesTradeDetails61.mmObject();
+			owner_lazy = () -> SecuritiesTradeDetails22.mmObject();
 		}
 
 		@Override
-		public void executeValidator(SecuritiesTradeDetails61 obj) throws Exception {
-			checkSecuritiesTradeDetails61(obj);
+		public void executeValidator(SecuritiesTradeDetails22 obj) throws Exception {
+			checkSecuritiesTradeDetails22(obj);
 		}
 	};
 	/**
@@ -465,6 +194,40 @@ public class ConstraintAllegementStatusRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails85
+	 * SecuritiesTradeDetails85}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AllegementStatusRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Unless bilaterally agreed between the Sender and Receiver, if AllegementStatus is present, then the statement must be a delta statement (UpdateType: Delta). In a complete statement (UpdateType: Complete), a removed or cancelled allegement must not be reported."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTradeDetails85> forSecuritiesTradeDetails85 = new MMConstraint<SecuritiesTradeDetails85>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AllegementStatusRule";
+			definition = "Unless bilaterally agreed between the Sender and Receiver, if AllegementStatus is present, then the statement must be a delta statement (UpdateType: Delta). In a complete statement (UpdateType: Complete), a removed or cancelled allegement must not be reported.";
+			owner_lazy = () -> SecuritiesTradeDetails85.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails85 obj) throws Exception {
+			checkSecuritiesTradeDetails85(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails69
 	 * SecuritiesTradeDetails69}</li>
 	 * <li>
@@ -499,8 +262,8 @@ public class ConstraintAllegementStatusRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails71
-	 * SecuritiesTradeDetails71}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails4
+	 * SecuritiesTradeDetails4}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -512,25 +275,19 @@ public class ConstraintAllegementStatusRule {
 	 * definition} =
 	 * "Unless bilaterally agreed between the Sender and Receiver, if AllegementStatus is present, then the statement must be a delta statement (UpdateType: Delta). In a complete statement (UpdateType: Complete), a removed or cancelled allegement must not be reported."
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintAllegementStatusRule#forSecuritiesTradeDetails68
-	 * ConstraintAllegementStatusRule.forSecuritiesTradeDetails68}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<SecuritiesTradeDetails71> forSecuritiesTradeDetails71 = new MMConstraint<SecuritiesTradeDetails71>() {
+	public static final MMConstraint<SecuritiesTradeDetails4> forSecuritiesTradeDetails4 = new MMConstraint<SecuritiesTradeDetails4>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllegementStatusRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if AllegementStatus is present, then the statement must be a delta statement (UpdateType: Delta). In a complete statement (UpdateType: Complete), a removed or cancelled allegement must not be reported.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAllegementStatusRule.forSecuritiesTradeDetails68;
-			owner_lazy = () -> SecuritiesTradeDetails71.mmObject();
+			owner_lazy = () -> SecuritiesTradeDetails4.mmObject();
 		}
 
 		@Override
-		public void executeValidator(SecuritiesTradeDetails71 obj) throws Exception {
-			checkSecuritiesTradeDetails71(obj);
+		public void executeValidator(SecuritiesTradeDetails4 obj) throws Exception {
+			checkSecuritiesTradeDetails4(obj);
 		}
 	};
 	/**
@@ -539,8 +296,100 @@ public class ConstraintAllegementStatusRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails85
-	 * SecuritiesTradeDetails85}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails23
+	 * SecuritiesTradeDetails23}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AllegementStatusRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Unless bilaterally agreed between the Sender and Receiver, if AllegementStatus is present, then the statement must be a delta statement (UpdateType: Delta). In a complete statement (UpdateType: Complete), a removed or cancelled allegement must not be reported."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAllegementStatusRule#forSecuritiesTradeDetails35
+	 * ConstraintAllegementStatusRule.forSecuritiesTradeDetails35}</li>
+	 * </ul>
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTradeDetails23> forSecuritiesTradeDetails23 = new MMConstraint<SecuritiesTradeDetails23>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AllegementStatusRule";
+			definition = "Unless bilaterally agreed between the Sender and Receiver, if AllegementStatus is present, then the statement must be a delta statement (UpdateType: Delta). In a complete statement (UpdateType: Complete), a removed or cancelled allegement must not be reported.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAllegementStatusRule.forSecuritiesTradeDetails35);
+			owner_lazy = () -> SecuritiesTradeDetails23.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails23 obj) throws Exception {
+			checkSecuritiesTradeDetails23(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails49
+	 * SecuritiesTradeDetails49}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AllegementStatusRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Unless bilaterally agreed between the Sender and Receiver, if AllegementStatus is present, then the statement must be a delta statement (UpdateType: Delta). In a complete statement (UpdateType: Complete), a removed or cancelled allegement must not be reported."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAllegementStatusRule#forSecuritiesTradeDetails68
+	 * ConstraintAllegementStatusRule.forSecuritiesTradeDetails68}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAllegementStatusRule#forSecuritiesTradeDetails35
+	 * ConstraintAllegementStatusRule.forSecuritiesTradeDetails35}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTradeDetails49> forSecuritiesTradeDetails49 = new MMConstraint<SecuritiesTradeDetails49>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AllegementStatusRule";
+			definition = "Unless bilaterally agreed between the Sender and Receiver, if AllegementStatus is present, then the statement must be a delta statement (UpdateType: Delta). In a complete statement (UpdateType: Complete), a removed or cancelled allegement must not be reported.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAllegementStatusRule.forSecuritiesTradeDetails68);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAllegementStatusRule.forSecuritiesTradeDetails35;
+			owner_lazy = () -> SecuritiesTradeDetails49.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails49 obj) throws Exception {
+			checkSecuritiesTradeDetails49(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails29
+	 * SecuritiesTradeDetails29}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -554,17 +403,168 @@ public class ConstraintAllegementStatusRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<SecuritiesTradeDetails85> forSecuritiesTradeDetails85 = new MMConstraint<SecuritiesTradeDetails85>() {
+	public static final MMConstraint<SecuritiesTradeDetails29> forSecuritiesTradeDetails29 = new MMConstraint<SecuritiesTradeDetails29>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllegementStatusRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if AllegementStatus is present, then the statement must be a delta statement (UpdateType: Delta). In a complete statement (UpdateType: Complete), a removed or cancelled allegement must not be reported.";
-			owner_lazy = () -> SecuritiesTradeDetails85.mmObject();
+			owner_lazy = () -> SecuritiesTradeDetails29.mmObject();
 		}
 
 		@Override
-		public void executeValidator(SecuritiesTradeDetails85 obj) throws Exception {
-			checkSecuritiesTradeDetails85(obj);
+		public void executeValidator(SecuritiesTradeDetails29 obj) throws Exception {
+			checkSecuritiesTradeDetails29(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails10
+	 * SecuritiesTradeDetails10}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AllegementStatusRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Unless bilaterally agreed between the Sender and Receiver, if AllegementStatus is present, then the statement must be a delta statement (UpdateType: Delta). In a complete statement (UpdateType: Complete), a removed or cancelled allegement must not be reported."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTradeDetails10> forSecuritiesTradeDetails10 = new MMConstraint<SecuritiesTradeDetails10>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AllegementStatusRule";
+			definition = "Unless bilaterally agreed between the Sender and Receiver, if AllegementStatus is present, then the statement must be a delta statement (UpdateType: Delta). In a complete statement (UpdateType: Complete), a removed or cancelled allegement must not be reported.";
+			owner_lazy = () -> SecuritiesTradeDetails10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails10 obj) throws Exception {
+			checkSecuritiesTradeDetails10(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails61
+	 * SecuritiesTradeDetails61}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AllegementStatusRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Unless bilaterally agreed between the Sender and Receiver, if AllegementStatus is present, then the statement must be a delta statement (UpdateType: Delta). In a complete statement (UpdateType: Complete), a removed or cancelled allegement must not be reported."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTradeDetails61> forSecuritiesTradeDetails61 = new MMConstraint<SecuritiesTradeDetails61>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AllegementStatusRule";
+			definition = "Unless bilaterally agreed between the Sender and Receiver, if AllegementStatus is present, then the statement must be a delta statement (UpdateType: Delta). In a complete statement (UpdateType: Complete), a removed or cancelled allegement must not be reported.";
+			owner_lazy = () -> SecuritiesTradeDetails61.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails61 obj) throws Exception {
+			checkSecuritiesTradeDetails61(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails17
+	 * SecuritiesTradeDetails17}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AllegementStatusRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Unless bilaterally agreed between the Sender and Receiver, if AllegementStatus is present, then the statement must be a delta statement (UpdateType: Delta). In a complete statement (UpdateType: Complete), a removed or cancelled allegement must not be reported."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTradeDetails17> forSecuritiesTradeDetails17 = new MMConstraint<SecuritiesTradeDetails17>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AllegementStatusRule";
+			definition = "Unless bilaterally agreed between the Sender and Receiver, if AllegementStatus is present, then the statement must be a delta statement (UpdateType: Delta). In a complete statement (UpdateType: Complete), a removed or cancelled allegement must not be reported.";
+			owner_lazy = () -> SecuritiesTradeDetails17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails17 obj) throws Exception {
+			checkSecuritiesTradeDetails17(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails35
+	 * SecuritiesTradeDetails35}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AllegementStatusRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Unless bilaterally agreed between the Sender and Receiver, if AllegementStatus is present, then the statement must be a delta statement (UpdateType: Delta). In a complete statement (UpdateType: Complete), a removed or cancelled allegement must not be reported."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAllegementStatusRule#forSecuritiesTradeDetails49
+	 * ConstraintAllegementStatusRule.forSecuritiesTradeDetails49}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAllegementStatusRule#forSecuritiesTradeDetails23
+	 * ConstraintAllegementStatusRule.forSecuritiesTradeDetails23}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTradeDetails35> forSecuritiesTradeDetails35 = new MMConstraint<SecuritiesTradeDetails35>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AllegementStatusRule";
+			definition = "Unless bilaterally agreed between the Sender and Receiver, if AllegementStatus is present, then the statement must be a delta statement (UpdateType: Delta). In a complete statement (UpdateType: Complete), a removed or cancelled allegement must not be reported.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAllegementStatusRule.forSecuritiesTradeDetails49);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAllegementStatusRule.forSecuritiesTradeDetails23;
+			owner_lazy = () -> SecuritiesTradeDetails35.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails35 obj) throws Exception {
+			checkSecuritiesTradeDetails35(obj);
 		}
 	};
 
@@ -574,67 +574,7 @@ public class ConstraintAllegementStatusRule {
 	 * (UpdateType: Delta). In a complete statement (UpdateType: Complete), a
 	 * removed or cancelled allegement must not be reported.
 	 */
-	public static void checkSecuritiesTradeDetails4(SecuritiesTradeDetails4 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Unless bilaterally agreed between the Sender and Receiver, if
-	 * AllegementStatus is present, then the statement must be a delta statement
-	 * (UpdateType: Delta). In a complete statement (UpdateType: Complete), a
-	 * removed or cancelled allegement must not be reported.
-	 */
-	public static void checkSecuritiesTradeDetails17(SecuritiesTradeDetails17 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Unless bilaterally agreed between the Sender and Receiver, if
-	 * AllegementStatus is present, then the statement must be a delta statement
-	 * (UpdateType: Delta). In a complete statement (UpdateType: Complete), a
-	 * removed or cancelled allegement must not be reported.
-	 */
-	public static void checkSecuritiesTradeDetails10(SecuritiesTradeDetails10 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Unless bilaterally agreed between the Sender and Receiver, if
-	 * AllegementStatus is present, then the statement must be a delta statement
-	 * (UpdateType: Delta). In a complete statement (UpdateType: Complete), a
-	 * removed or cancelled allegement must not be reported.
-	 */
-	public static void checkSecuritiesTradeDetails22(SecuritiesTradeDetails22 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Unless bilaterally agreed between the Sender and Receiver, if
-	 * AllegementStatus is present, then the statement must be a delta statement
-	 * (UpdateType: Delta). In a complete statement (UpdateType: Complete), a
-	 * removed or cancelled allegement must not be reported.
-	 */
-	public static void checkSecuritiesTradeDetails23(SecuritiesTradeDetails23 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Unless bilaterally agreed between the Sender and Receiver, if
-	 * AllegementStatus is present, then the statement must be a delta statement
-	 * (UpdateType: Delta). In a complete statement (UpdateType: Complete), a
-	 * removed or cancelled allegement must not be reported.
-	 */
-	public static void checkSecuritiesTradeDetails29(SecuritiesTradeDetails29 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Unless bilaterally agreed between the Sender and Receiver, if
-	 * AllegementStatus is present, then the statement must be a delta statement
-	 * (UpdateType: Delta). In a complete statement (UpdateType: Complete), a
-	 * removed or cancelled allegement must not be reported.
-	 */
-	public static void checkSecuritiesTradeDetails35(SecuritiesTradeDetails35 obj) throws Exception {
+	public static void checkSecuritiesTradeDetails71(SecuritiesTradeDetails71 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -654,17 +594,7 @@ public class ConstraintAllegementStatusRule {
 	 * (UpdateType: Delta). In a complete statement (UpdateType: Complete), a
 	 * removed or cancelled allegement must not be reported.
 	 */
-	public static void checkSecuritiesTradeDetails49(SecuritiesTradeDetails49 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Unless bilaterally agreed between the Sender and Receiver, if
-	 * AllegementStatus is present, then the statement must be a delta statement
-	 * (UpdateType: Delta). In a complete statement (UpdateType: Complete), a
-	 * removed or cancelled allegement must not be reported.
-	 */
-	public static void checkSecuritiesTradeDetails61(SecuritiesTradeDetails61 obj) throws Exception {
+	public static void checkSecuritiesTradeDetails22(SecuritiesTradeDetails22 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -684,6 +614,16 @@ public class ConstraintAllegementStatusRule {
 	 * (UpdateType: Delta). In a complete statement (UpdateType: Complete), a
 	 * removed or cancelled allegement must not be reported.
 	 */
+	public static void checkSecuritiesTradeDetails85(SecuritiesTradeDetails85 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Unless bilaterally agreed between the Sender and Receiver, if
+	 * AllegementStatus is present, then the statement must be a delta statement
+	 * (UpdateType: Delta). In a complete statement (UpdateType: Complete), a
+	 * removed or cancelled allegement must not be reported.
+	 */
 	public static void checkSecuritiesTradeDetails69(SecuritiesTradeDetails69 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
@@ -694,7 +634,7 @@ public class ConstraintAllegementStatusRule {
 	 * (UpdateType: Delta). In a complete statement (UpdateType: Complete), a
 	 * removed or cancelled allegement must not be reported.
 	 */
-	public static void checkSecuritiesTradeDetails71(SecuritiesTradeDetails71 obj) throws Exception {
+	public static void checkSecuritiesTradeDetails4(SecuritiesTradeDetails4 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -704,7 +644,67 @@ public class ConstraintAllegementStatusRule {
 	 * (UpdateType: Delta). In a complete statement (UpdateType: Complete), a
 	 * removed or cancelled allegement must not be reported.
 	 */
-	public static void checkSecuritiesTradeDetails85(SecuritiesTradeDetails85 obj) throws Exception {
+	public static void checkSecuritiesTradeDetails23(SecuritiesTradeDetails23 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Unless bilaterally agreed between the Sender and Receiver, if
+	 * AllegementStatus is present, then the statement must be a delta statement
+	 * (UpdateType: Delta). In a complete statement (UpdateType: Complete), a
+	 * removed or cancelled allegement must not be reported.
+	 */
+	public static void checkSecuritiesTradeDetails49(SecuritiesTradeDetails49 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Unless bilaterally agreed between the Sender and Receiver, if
+	 * AllegementStatus is present, then the statement must be a delta statement
+	 * (UpdateType: Delta). In a complete statement (UpdateType: Complete), a
+	 * removed or cancelled allegement must not be reported.
+	 */
+	public static void checkSecuritiesTradeDetails29(SecuritiesTradeDetails29 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Unless bilaterally agreed between the Sender and Receiver, if
+	 * AllegementStatus is present, then the statement must be a delta statement
+	 * (UpdateType: Delta). In a complete statement (UpdateType: Complete), a
+	 * removed or cancelled allegement must not be reported.
+	 */
+	public static void checkSecuritiesTradeDetails10(SecuritiesTradeDetails10 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Unless bilaterally agreed between the Sender and Receiver, if
+	 * AllegementStatus is present, then the statement must be a delta statement
+	 * (UpdateType: Delta). In a complete statement (UpdateType: Complete), a
+	 * removed or cancelled allegement must not be reported.
+	 */
+	public static void checkSecuritiesTradeDetails61(SecuritiesTradeDetails61 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Unless bilaterally agreed between the Sender and Receiver, if
+	 * AllegementStatus is present, then the statement must be a delta statement
+	 * (UpdateType: Delta). In a complete statement (UpdateType: Complete), a
+	 * removed or cancelled allegement must not be reported.
+	 */
+	public static void checkSecuritiesTradeDetails17(SecuritiesTradeDetails17 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Unless bilaterally agreed between the Sender and Receiver, if
+	 * AllegementStatus is present, then the statement must be a delta statement
+	 * (UpdateType: Delta). In a complete statement (UpdateType: Complete), a
+	 * removed or cancelled allegement must not be reported.
+	 */
+	public static void checkSecuritiesTradeDetails35(SecuritiesTradeDetails35 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

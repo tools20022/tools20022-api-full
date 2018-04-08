@@ -123,24 +123,25 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintPEPISARule#forPEPOrISAOrPortfolioTransferConfirmationV02
- * ConstraintPEPISARule.forPEPOrISAOrPortfolioTransferConfirmationV02}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPEPISARule#for_sese_PEPOrISAOrPortfolioTransferConfirmationV02
+ * ConstraintPEPISARule.for_sese_PEPOrISAOrPortfolioTransferConfirmationV02}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintPorfolioRule#forPEPOrISAOrPortfolioTransferConfirmationV02
- * ConstraintPorfolioRule.forPEPOrISAOrPortfolioTransferConfirmationV02}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPorfolioRule#for_sese_PEPOrISAOrPortfolioTransferConfirmationV02
+ * ConstraintPorfolioRule.for_sese_PEPOrISAOrPortfolioTransferConfirmationV02}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorRule#forPEPOrISAOrPortfolioTransferConfirmationV02
- * ConstraintInvestorRule.forPEPOrISAOrPortfolioTransferConfirmationV02}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorRule#for_sese_PEPOrISAOrPortfolioTransferConfirmationV02
+ * ConstraintInvestorRule.for_sese_PEPOrISAOrPortfolioTransferConfirmationV02}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCorporateRule#forPEPOrISAOrPortfolioTransferConfirmationV02
- * ConstraintCorporateRule.forPEPOrISAOrPortfolioTransferConfirmationV02}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCorporateRule#for_sese_PEPOrISAOrPortfolioTransferConfirmationV02
+ * ConstraintCorporateRule.for_sese_PEPOrISAOrPortfolioTransferConfirmationV02}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintDesignationRule#forPEPOrISAOrPortfolioTransferConfirmationV02
- * ConstraintDesignationRule.forPEPOrISAOrPortfolioTransferConfirmationV02}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDesignationRule#for_sese_PEPOrISAOrPortfolioTransferConfirmationV02
+ * ConstraintDesignationRule.for_sese_PEPOrISAOrPortfolioTransferConfirmationV02
+ * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule#forPEPOrISAOrPortfolioTransferConfirmationV02
+ * {@linkplain com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule#for_sese_PEPOrISAOrPortfolioTransferConfirmationV02
  * ConstraintNomineeAccountServicerRule.
- * forPEPOrISAOrPortfolioTransferConfirmationV02}</li>
+ * for_sese_PEPOrISAOrPortfolioTransferConfirmationV02}</li>
  * </ul>
  * </li>
  * <li>
@@ -921,11 +922,12 @@ public class PEPOrISAOrPortfolioTransferConfirmationV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPEPISARule.forPEPOrISAOrPortfolioTransferConfirmationV02,
-						com.tools20022.repository.constraints.ConstraintPorfolioRule.forPEPOrISAOrPortfolioTransferConfirmationV02, com.tools20022.repository.constraints.ConstraintInvestorRule.forPEPOrISAOrPortfolioTransferConfirmationV02,
-						com.tools20022.repository.constraints.ConstraintCorporateRule.forPEPOrISAOrPortfolioTransferConfirmationV02,
-						com.tools20022.repository.constraints.ConstraintDesignationRule.forPEPOrISAOrPortfolioTransferConfirmationV02,
-						com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule.forPEPOrISAOrPortfolioTransferConfirmationV02);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPEPISARule.for_sese_PEPOrISAOrPortfolioTransferConfirmationV02,
+						com.tools20022.repository.constraints.ConstraintPorfolioRule.for_sese_PEPOrISAOrPortfolioTransferConfirmationV02,
+						com.tools20022.repository.constraints.ConstraintInvestorRule.for_sese_PEPOrISAOrPortfolioTransferConfirmationV02,
+						com.tools20022.repository.constraints.ConstraintCorporateRule.for_sese_PEPOrISAOrPortfolioTransferConfirmationV02,
+						com.tools20022.repository.constraints.ConstraintDesignationRule.for_sese_PEPOrISAOrPortfolioTransferConfirmationV02,
+						com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule.for_sese_PEPOrISAOrPortfolioTransferConfirmationV02);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PEPOrISAOrPortfolioTransferConfirmationV02";
 				definition = "Scope\r\nAn executing party, eg, a (old) plan manager, sends the PEPOrISAOrPortfolioTransferConfirmation message to the instructing party, eg, a (new) plan manager, to confirm the transfer of one or more PEP or ISA or portfolio products from the client's account at the old plan manager to the client's account at the new plan manager through a nominee account.\r\nUsage\r\nThe PEPOrISAOrPortfolioTransferConfirmation message is used to confirm the transfer of one or more PEP or ISA or portfolio products.\r\nThe reference of each product transfer confirmation is identified in TransferConfirmationIdentification. The reference of the original product transfer is specified in TransferInstructionReference. The message identification of the PEPOrISAPOrPortfolioTransferInstruction message in which the product transfers were conveyed may also be quoted in RelatedReference.";

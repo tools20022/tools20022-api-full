@@ -147,64 +147,69 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalPhysicalOrRegistrationDetailsRule#forSecuritiesSettlementTransactionInstructionV06
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalPhysicalOrRegistrationDetailsRule#for_sese_SecuritiesSettlementTransactionInstructionV06
  * ConstraintAdditionalPhysicalOrRegistrationDetailsRule.
- * forSecuritiesSettlementTransactionInstructionV06}</li>
+ * for_sese_SecuritiesSettlementTransactionInstructionV06}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCurrencyToBuyRule#forSecuritiesSettlementTransactionInstructionV06
- * ConstraintCurrencyToBuyRule.forSecuritiesSettlementTransactionInstructionV06}
- * </li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCurrencyToBuyRule#for_sese_SecuritiesSettlementTransactionInstructionV06
+ * ConstraintCurrencyToBuyRule.
+ * for_sese_SecuritiesSettlementTransactionInstructionV06}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCurrencyToSellRule#forSecuritiesSettlementTransactionInstructionV06
- * ConstraintCurrencyToSellRule.forSecuritiesSettlementTransactionInstructionV06
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCurrencyToSellRule#for_sese_SecuritiesSettlementTransactionInstructionV06
+ * ConstraintCurrencyToSellRule.
+ * for_sese_SecuritiesSettlementTransactionInstructionV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementAmountRule#for_sese_SecuritiesSettlementTransactionInstructionV06
+ * ConstraintSettlementAmountRule.
+ * for_sese_SecuritiesSettlementTransactionInstructionV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPairOffTurnRule#for_sese_SecuritiesSettlementTransactionInstructionV06
+ * ConstraintPairOffTurnRule.
+ * for_sese_SecuritiesSettlementTransactionInstructionV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintReceivingDepositoryAndParty1Rule#for_sese_SecuritiesSettlementTransactionInstructionV06
+ * ConstraintReceivingDepositoryAndParty1Rule.
+ * for_sese_SecuritiesSettlementTransactionInstructionV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDeliveringDepositoryAndParty1Rule#for_sese_SecuritiesSettlementTransactionInstructionV06
+ * ConstraintDeliveringDepositoryAndParty1Rule.
+ * for_sese_SecuritiesSettlementTransactionInstructionV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSellerSSIRule#for_sese_SecuritiesSettlementTransactionInstructionV06
+ * ConstraintSellerSSIRule.
+ * for_sese_SecuritiesSettlementTransactionInstructionV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintBuyerSSIRule#for_sese_SecuritiesSettlementTransactionInstructionV06
+ * ConstraintBuyerSSIRule.for_sese_SecuritiesSettlementTransactionInstructionV06
  * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementAmountRule#forSecuritiesSettlementTransactionInstructionV06
- * ConstraintSettlementAmountRule.
- * forSecuritiesSettlementTransactionInstructionV06}</li>
- * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintPairOffTurnRule#forSecuritiesSettlementTransactionInstructionV06
- * ConstraintPairOffTurnRule.forSecuritiesSettlementTransactionInstructionV06}</li>
- * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintReceivingDepositoryAndParty1Rule#forSecuritiesSettlementTransactionInstructionV06
- * ConstraintReceivingDepositoryAndParty1Rule.
- * forSecuritiesSettlementTransactionInstructionV06}</li>
- * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintDeliveringDepositoryAndParty1Rule#forSecuritiesSettlementTransactionInstructionV06
- * ConstraintDeliveringDepositoryAndParty1Rule.
- * forSecuritiesSettlementTransactionInstructionV06}</li>
- * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintSellerSSIRule#forSecuritiesSettlementTransactionInstructionV06
- * ConstraintSellerSSIRule.forSecuritiesSettlementTransactionInstructionV06}</li>
- * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintBuyerSSIRule#forSecuritiesSettlementTransactionInstructionV06
- * ConstraintBuyerSSIRule.forSecuritiesSettlementTransactionInstructionV06}</li>
- * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesFinancingSettlementRule#forSecuritiesSettlementTransactionInstructionV06
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesFinancingSettlementRule#for_sese_SecuritiesSettlementTransactionInstructionV06
  * ConstraintSecuritiesFinancingSettlementRule.
- * forSecuritiesSettlementTransactionInstructionV06}</li>
+ * for_sese_SecuritiesSettlementTransactionInstructionV06}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintBuyToCoverRule#forSecuritiesSettlementTransactionInstructionV06
- * ConstraintBuyToCoverRule.forSecuritiesSettlementTransactionInstructionV06}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintBuyToCoverRule#for_sese_SecuritiesSettlementTransactionInstructionV06
+ * ConstraintBuyToCoverRule.
+ * for_sese_SecuritiesSettlementTransactionInstructionV06}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintRegistrationDetailsRule#forSecuritiesSettlementTransactionInstructionV06
+ * {@linkplain com.tools20022.repository.constraints.ConstraintRegistrationDetailsRule#for_sese_SecuritiesSettlementTransactionInstructionV06
  * ConstraintRegistrationDetailsRule.
- * forSecuritiesSettlementTransactionInstructionV06}</li>
+ * for_sese_SecuritiesSettlementTransactionInstructionV06}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintLinkageGuideline#forSecuritiesSettlementTransactionInstructionV06
- * ConstraintLinkageGuideline.forSecuritiesSettlementTransactionInstructionV06}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintLinkageGuideline#for_sese_SecuritiesSettlementTransactionInstructionV06
+ * ConstraintLinkageGuideline.
+ * for_sese_SecuritiesSettlementTransactionInstructionV06}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesSettlementTransactionInstructionV06
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#for_sese_SecuritiesSettlementTransactionInstructionV06
  * ConstraintSecuritiesMarketPracticeGroupGuideline.
- * forSecuritiesSettlementTransactionInstructionV06}</li>
+ * for_sese_SecuritiesSettlementTransactionInstructionV06}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule#forSecuritiesSettlementTransactionInstructionV06
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule#for_sese_SecuritiesSettlementTransactionInstructionV06
  * ConstraintTwoLegTransactionOpeningClosing2Rule.
- * forSecuritiesSettlementTransactionInstructionV06}</li>
+ * for_sese_SecuritiesSettlementTransactionInstructionV06}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing1Rule#forSecuritiesSettlementTransactionInstructionV06
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing1Rule#for_sese_SecuritiesSettlementTransactionInstructionV06
  * ConstraintTwoLegTransactionOpeningClosing1Rule.
- * forSecuritiesSettlementTransactionInstructionV06}</li>
+ * for_sese_SecuritiesSettlementTransactionInstructionV06}</li>
  * </ul>
  * </li>
  * <li>
@@ -1371,22 +1376,22 @@ public class SecuritiesSettlementTransactionInstructionV06 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalPhysicalOrRegistrationDetailsRule.forSecuritiesSettlementTransactionInstructionV06,
-						com.tools20022.repository.constraints.ConstraintCurrencyToBuyRule.forSecuritiesSettlementTransactionInstructionV06,
-						com.tools20022.repository.constraints.ConstraintCurrencyToSellRule.forSecuritiesSettlementTransactionInstructionV06,
-						com.tools20022.repository.constraints.ConstraintSettlementAmountRule.forSecuritiesSettlementTransactionInstructionV06,
-						com.tools20022.repository.constraints.ConstraintPairOffTurnRule.forSecuritiesSettlementTransactionInstructionV06,
-						com.tools20022.repository.constraints.ConstraintReceivingDepositoryAndParty1Rule.forSecuritiesSettlementTransactionInstructionV06,
-						com.tools20022.repository.constraints.ConstraintDeliveringDepositoryAndParty1Rule.forSecuritiesSettlementTransactionInstructionV06,
-						com.tools20022.repository.constraints.ConstraintSellerSSIRule.forSecuritiesSettlementTransactionInstructionV06,
-						com.tools20022.repository.constraints.ConstraintBuyerSSIRule.forSecuritiesSettlementTransactionInstructionV06,
-						com.tools20022.repository.constraints.ConstraintSecuritiesFinancingSettlementRule.forSecuritiesSettlementTransactionInstructionV06,
-						com.tools20022.repository.constraints.ConstraintBuyToCoverRule.forSecuritiesSettlementTransactionInstructionV06,
-						com.tools20022.repository.constraints.ConstraintRegistrationDetailsRule.forSecuritiesSettlementTransactionInstructionV06,
-						com.tools20022.repository.constraints.ConstraintLinkageGuideline.forSecuritiesSettlementTransactionInstructionV06,
-						com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionInstructionV06,
-						com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forSecuritiesSettlementTransactionInstructionV06,
-						com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing1Rule.forSecuritiesSettlementTransactionInstructionV06);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalPhysicalOrRegistrationDetailsRule.for_sese_SecuritiesSettlementTransactionInstructionV06,
+						com.tools20022.repository.constraints.ConstraintCurrencyToBuyRule.for_sese_SecuritiesSettlementTransactionInstructionV06,
+						com.tools20022.repository.constraints.ConstraintCurrencyToSellRule.for_sese_SecuritiesSettlementTransactionInstructionV06,
+						com.tools20022.repository.constraints.ConstraintSettlementAmountRule.for_sese_SecuritiesSettlementTransactionInstructionV06,
+						com.tools20022.repository.constraints.ConstraintPairOffTurnRule.for_sese_SecuritiesSettlementTransactionInstructionV06,
+						com.tools20022.repository.constraints.ConstraintReceivingDepositoryAndParty1Rule.for_sese_SecuritiesSettlementTransactionInstructionV06,
+						com.tools20022.repository.constraints.ConstraintDeliveringDepositoryAndParty1Rule.for_sese_SecuritiesSettlementTransactionInstructionV06,
+						com.tools20022.repository.constraints.ConstraintSellerSSIRule.for_sese_SecuritiesSettlementTransactionInstructionV06,
+						com.tools20022.repository.constraints.ConstraintBuyerSSIRule.for_sese_SecuritiesSettlementTransactionInstructionV06,
+						com.tools20022.repository.constraints.ConstraintSecuritiesFinancingSettlementRule.for_sese_SecuritiesSettlementTransactionInstructionV06,
+						com.tools20022.repository.constraints.ConstraintBuyToCoverRule.for_sese_SecuritiesSettlementTransactionInstructionV06,
+						com.tools20022.repository.constraints.ConstraintRegistrationDetailsRule.for_sese_SecuritiesSettlementTransactionInstructionV06,
+						com.tools20022.repository.constraints.ConstraintLinkageGuideline.for_sese_SecuritiesSettlementTransactionInstructionV06,
+						com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.for_sese_SecuritiesSettlementTransactionInstructionV06,
+						com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.for_sese_SecuritiesSettlementTransactionInstructionV06,
+						com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing1Rule.for_sese_SecuritiesSettlementTransactionInstructionV06);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesSettlementTransactionInstructionV06";
 				definition = "Scope\r\nAn account owner sends a SecuritiesSettlementTransactionInstruction to an account servicer to instruct the receipt or delivery of financial instruments with or without payment, physically or by book-entry.\r\nThe account owner/servicer relationship may be:\r\n- a global custodian which has an account with a local custodian, or\r\n- an investment management institution which manages a fund account opened at a custodian, or\r\n- a broker which has an account with a custodian, or\r\n- a central securities depository participant which has an account with a central securities depository, or\r\n- a central securities depository which has an account with a custodian, another central securities depository or another settlement market infrastructure, or\r\n- a central counterparty or a stock exchange or a trade matching utility which need to instruct the settlement of transactions to a central securities depository or another settlement market infrastructure.\r\n\r\nUsage\r\nThe instruction may be linked to other settlement instructions, for example, for a turnaround or back-to-back, or other transactions, for example, foreign exchange deal, using the linkage functionality.\r\nThe message may also be used to:\r\n- re-send a message previously sent,\r\n- provide a third party with a copy of a message for information,\r\n- re-send to a third party a copy of a message for information\r\nusing the relevant elements in the Business Application Header.";

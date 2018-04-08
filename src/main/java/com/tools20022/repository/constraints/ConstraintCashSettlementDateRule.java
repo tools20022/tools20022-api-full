@@ -24,10 +24,146 @@ import com.tools20022.repository.msg.*;
 
 /**
  * Either CashSettlementDate is present or all occurrences of
- * IndividualOrderDetails/CashSettlementDate are present, but not both.
+ * IndividualExecutionDetails/CashSettlementDate are present, but not both.
  */
 public class ConstraintCashSettlementDateRule {
 
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleExecution3
+	 * SubscriptionMultipleExecution3}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CashSettlementDateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Either CashSettlementDate is present or all occurrences of IndividualExecutionDetails/CashSettlementDate are present, but not both."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SubscriptionMultipleExecution3> forSubscriptionMultipleExecution3 = new MMConstraint<SubscriptionMultipleExecution3>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CashSettlementDateRule";
+			definition = "Either CashSettlementDate is present or all occurrences of IndividualExecutionDetails/CashSettlementDate are present, but not both.";
+			owner_lazy = () -> SubscriptionMultipleExecution3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionMultipleExecution3 obj) throws Exception {
+			checkSubscriptionMultipleExecution3(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleExecution3
+	 * RedemptionMultipleExecution3}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CashSettlementDateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Either CashSettlementDate is present or all occurrences of IndividualExecutionDetails/CashSettlementDate are present, but not both."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<RedemptionMultipleExecution3> forRedemptionMultipleExecution3 = new MMConstraint<RedemptionMultipleExecution3>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CashSettlementDateRule";
+			definition = "Either CashSettlementDate is present or all occurrences of IndividualExecutionDetails/CashSettlementDate are present, but not both.";
+			owner_lazy = () -> RedemptionMultipleExecution3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionMultipleExecution3 obj) throws Exception {
+			checkRedemptionMultipleExecution3(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder3
+	 * RedemptionMultipleOrder3}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CashSettlementDateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Either CashSettlementDate is present or all occurrences of IndividualOrderDetails/CashSettlementDate are present, but not both."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<RedemptionMultipleOrder3> forRedemptionMultipleOrder3 = new MMConstraint<RedemptionMultipleOrder3>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CashSettlementDateRule";
+			definition = "Either CashSettlementDate is present or all occurrences of IndividualOrderDetails/CashSettlementDate are present, but not both.";
+			owner_lazy = () -> RedemptionMultipleOrder3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionMultipleOrder3 obj) throws Exception {
+			checkRedemptionMultipleOrder3(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder4
+	 * SubscriptionBulkOrder4}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CashSettlementDateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Either CashSettlementDate is present or all occurrences of IndividualOrderDetails/CashSettlementDate are present, but not both."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SubscriptionBulkOrder4> forSubscriptionBulkOrder4 = new MMConstraint<SubscriptionBulkOrder4>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CashSettlementDateRule";
+			definition = "Either CashSettlementDate is present or all occurrences of IndividualOrderDetails/CashSettlementDate are present, but not both.";
+			owner_lazy = () -> SubscriptionBulkOrder4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionBulkOrder4 obj) throws Exception {
+			checkSubscriptionBulkOrder4(obj);
+		}
+	};
 	/**
 	 * 
 	 <p>
@@ -102,76 +238,8 @@ public class ConstraintCashSettlementDateRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.RedemptionBulkOrder4
-	 * RedemptionBulkOrder4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CashSettlementDateRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Either CashSettlementDate is present or all occurrences of IndividualOrderDetails/CashSettlementDate are present, but not both."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<RedemptionBulkOrder4> forRedemptionBulkOrder4 = new MMConstraint<RedemptionBulkOrder4>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "CashSettlementDateRule";
-			definition = "Either CashSettlementDate is present or all occurrences of IndividualOrderDetails/CashSettlementDate are present, but not both.";
-			owner_lazy = () -> RedemptionBulkOrder4.mmObject();
-		}
-
-		@Override
-		public void executeValidator(RedemptionBulkOrder4 obj) throws Exception {
-			checkRedemptionBulkOrder4(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder3
-	 * RedemptionMultipleOrder3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CashSettlementDateRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Either CashSettlementDate is present or all occurrences of IndividualOrderDetails/CashSettlementDate are present, but not both."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<RedemptionMultipleOrder3> forRedemptionMultipleOrder3 = new MMConstraint<RedemptionMultipleOrder3>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "CashSettlementDateRule";
-			definition = "Either CashSettlementDate is present or all occurrences of IndividualOrderDetails/CashSettlementDate are present, but not both.";
-			owner_lazy = () -> RedemptionMultipleOrder3.mmObject();
-		}
-
-		@Override
-		public void executeValidator(RedemptionMultipleOrder3 obj) throws Exception {
-			checkRedemptionMultipleOrder3(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleExecution3
-	 * RedemptionMultipleExecution3}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionBulkExecution3
+	 * SubscriptionBulkExecution3}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -185,51 +253,17 @@ public class ConstraintCashSettlementDateRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<RedemptionMultipleExecution3> forRedemptionMultipleExecution3 = new MMConstraint<RedemptionMultipleExecution3>() {
+	public static final MMConstraint<SubscriptionBulkExecution3> forSubscriptionBulkExecution3 = new MMConstraint<SubscriptionBulkExecution3>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSettlementDateRule";
 			definition = "Either CashSettlementDate is present or all occurrences of IndividualExecutionDetails/CashSettlementDate are present, but not both.";
-			owner_lazy = () -> RedemptionMultipleExecution3.mmObject();
+			owner_lazy = () -> SubscriptionBulkExecution3.mmObject();
 		}
 
 		@Override
-		public void executeValidator(RedemptionMultipleExecution3 obj) throws Exception {
-			checkRedemptionMultipleExecution3(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder4
-	 * RedemptionMultipleOrder4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CashSettlementDateRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Either CashSettlementDate is present or all occurrences of IndividualOrderDetails/CashSettlementDate are present, but not both."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<RedemptionMultipleOrder4> forRedemptionMultipleOrder4 = new MMConstraint<RedemptionMultipleOrder4>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "CashSettlementDateRule";
-			definition = "Either CashSettlementDate is present or all occurrences of IndividualOrderDetails/CashSettlementDate are present, but not both.";
-			owner_lazy = () -> RedemptionMultipleOrder4.mmObject();
-		}
-
-		@Override
-		public void executeValidator(RedemptionMultipleOrder4 obj) throws Exception {
-			checkRedemptionMultipleOrder4(obj);
+		public void executeValidator(SubscriptionBulkExecution3 obj) throws Exception {
+			checkSubscriptionBulkExecution3(obj);
 		}
 	};
 	/**
@@ -272,74 +306,6 @@ public class ConstraintCashSettlementDateRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionBulkExecution3
-	 * SubscriptionBulkExecution3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CashSettlementDateRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Either CashSettlementDate is present or all occurrences of IndividualExecutionDetails/CashSettlementDate are present, but not both."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SubscriptionBulkExecution3> forSubscriptionBulkExecution3 = new MMConstraint<SubscriptionBulkExecution3>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "CashSettlementDateRule";
-			definition = "Either CashSettlementDate is present or all occurrences of IndividualExecutionDetails/CashSettlementDate are present, but not both.";
-			owner_lazy = () -> SubscriptionBulkExecution3.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SubscriptionBulkExecution3 obj) throws Exception {
-			checkSubscriptionBulkExecution3(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder4
-	 * SubscriptionBulkOrder4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CashSettlementDateRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Either CashSettlementDate is present or all occurrences of IndividualOrderDetails/CashSettlementDate are present, but not both."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SubscriptionBulkOrder4> forSubscriptionBulkOrder4 = new MMConstraint<SubscriptionBulkOrder4>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "CashSettlementDateRule";
-			definition = "Either CashSettlementDate is present or all occurrences of IndividualOrderDetails/CashSettlementDate are present, but not both.";
-			owner_lazy = () -> SubscriptionBulkOrder4.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SubscriptionBulkOrder4 obj) throws Exception {
-			checkSubscriptionBulkOrder4(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder3
 	 * SubscriptionMultipleOrder3}</li>
 	 * <li>
@@ -374,8 +340,8 @@ public class ConstraintCashSettlementDateRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleExecution3
-	 * SubscriptionMultipleExecution3}</li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionBulkOrder4
+	 * RedemptionBulkOrder4}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -385,21 +351,21 @@ public class ConstraintCashSettlementDateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Either CashSettlementDate is present or all occurrences of IndividualExecutionDetails/CashSettlementDate are present, but not both."
+	 * "Either CashSettlementDate is present or all occurrences of IndividualOrderDetails/CashSettlementDate are present, but not both."
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<SubscriptionMultipleExecution3> forSubscriptionMultipleExecution3 = new MMConstraint<SubscriptionMultipleExecution3>() {
+	public static final MMConstraint<RedemptionBulkOrder4> forRedemptionBulkOrder4 = new MMConstraint<RedemptionBulkOrder4>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSettlementDateRule";
-			definition = "Either CashSettlementDate is present or all occurrences of IndividualExecutionDetails/CashSettlementDate are present, but not both.";
-			owner_lazy = () -> SubscriptionMultipleExecution3.mmObject();
+			definition = "Either CashSettlementDate is present or all occurrences of IndividualOrderDetails/CashSettlementDate are present, but not both.";
+			owner_lazy = () -> RedemptionBulkOrder4.mmObject();
 		}
 
 		@Override
-		public void executeValidator(SubscriptionMultipleExecution3 obj) throws Exception {
-			checkSubscriptionMultipleExecution3(obj);
+		public void executeValidator(RedemptionBulkOrder4 obj) throws Exception {
+			checkRedemptionBulkOrder4(obj);
 		}
 	};
 	/**
@@ -436,6 +402,72 @@ public class ConstraintCashSettlementDateRule {
 			checkSubscriptionMultipleOrder4(obj);
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder4
+	 * RedemptionMultipleOrder4}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CashSettlementDateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Either CashSettlementDate is present or all occurrences of IndividualOrderDetails/CashSettlementDate are present, but not both."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<RedemptionMultipleOrder4> forRedemptionMultipleOrder4 = new MMConstraint<RedemptionMultipleOrder4>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CashSettlementDateRule";
+			definition = "Either CashSettlementDate is present or all occurrences of IndividualOrderDetails/CashSettlementDate are present, but not both.";
+			owner_lazy = () -> RedemptionMultipleOrder4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionMultipleOrder4 obj) throws Exception {
+			checkRedemptionMultipleOrder4(obj);
+		}
+	};
+
+	/**
+	 * Either CashSettlementDate is present or all occurrences of
+	 * IndividualExecutionDetails/CashSettlementDate are present, but not both.
+	 */
+	public static void checkSubscriptionMultipleExecution3(SubscriptionMultipleExecution3 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Either CashSettlementDate is present or all occurrences of
+	 * IndividualExecutionDetails/CashSettlementDate are present, but not both.
+	 */
+	public static void checkRedemptionMultipleExecution3(RedemptionMultipleExecution3 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Either CashSettlementDate is present or all occurrences of
+	 * IndividualOrderDetails/CashSettlementDate are present, but not both.
+	 */
+	public static void checkRedemptionMultipleOrder3(RedemptionMultipleOrder3 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Either CashSettlementDate is present or all occurrences of
+	 * IndividualOrderDetails/CashSettlementDate are present, but not both.
+	 */
+	public static void checkSubscriptionBulkOrder4(SubscriptionBulkOrder4 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
 
 	/**
 	 * Either CashSettlementDate is present or all occurrences of
@@ -455,33 +487,9 @@ public class ConstraintCashSettlementDateRule {
 
 	/**
 	 * Either CashSettlementDate is present or all occurrences of
-	 * IndividualOrderDetails/CashSettlementDate are present, but not both.
-	 */
-	public static void checkRedemptionBulkOrder4(RedemptionBulkOrder4 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Either CashSettlementDate is present or all occurrences of
-	 * IndividualOrderDetails/CashSettlementDate are present, but not both.
-	 */
-	public static void checkRedemptionMultipleOrder3(RedemptionMultipleOrder3 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Either CashSettlementDate is present or all occurrences of
 	 * IndividualExecutionDetails/CashSettlementDate are present, but not both.
 	 */
-	public static void checkRedemptionMultipleExecution3(RedemptionMultipleExecution3 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Either CashSettlementDate is present or all occurrences of
-	 * IndividualOrderDetails/CashSettlementDate are present, but not both.
-	 */
-	public static void checkRedemptionMultipleOrder4(RedemptionMultipleOrder4 obj) throws Exception {
+	public static void checkSubscriptionBulkExecution3(SubscriptionBulkExecution3 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -495,22 +503,6 @@ public class ConstraintCashSettlementDateRule {
 
 	/**
 	 * Either CashSettlementDate is present or all occurrences of
-	 * IndividualExecutionDetails/CashSettlementDate are present, but not both.
-	 */
-	public static void checkSubscriptionBulkExecution3(SubscriptionBulkExecution3 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Either CashSettlementDate is present or all occurrences of
-	 * IndividualOrderDetails/CashSettlementDate are present, but not both.
-	 */
-	public static void checkSubscriptionBulkOrder4(SubscriptionBulkOrder4 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Either CashSettlementDate is present or all occurrences of
 	 * IndividualOrderDetails/CashSettlementDate are present, but not both.
 	 */
 	public static void checkSubscriptionMultipleOrder3(SubscriptionMultipleOrder3 obj) throws Exception {
@@ -519,9 +511,9 @@ public class ConstraintCashSettlementDateRule {
 
 	/**
 	 * Either CashSettlementDate is present or all occurrences of
-	 * IndividualExecutionDetails/CashSettlementDate are present, but not both.
+	 * IndividualOrderDetails/CashSettlementDate are present, but not both.
 	 */
-	public static void checkSubscriptionMultipleExecution3(SubscriptionMultipleExecution3 obj) throws Exception {
+	public static void checkRedemptionBulkOrder4(RedemptionBulkOrder4 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -530,6 +522,14 @@ public class ConstraintCashSettlementDateRule {
 	 * IndividualOrderDetails/CashSettlementDate are present, but not both.
 	 */
 	public static void checkSubscriptionMultipleOrder4(SubscriptionMultipleOrder4 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Either CashSettlementDate is present or all occurrences of
+	 * IndividualOrderDetails/CashSettlementDate are present, but not both.
+	 */
+	public static void checkRedemptionMultipleOrder4(RedemptionMultipleOrder4 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

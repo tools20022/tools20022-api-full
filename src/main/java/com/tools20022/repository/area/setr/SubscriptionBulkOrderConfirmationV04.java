@@ -105,11 +105,12 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationRule#forSubscriptionBulkOrderConfirmationV04
- * ConstraintAccountIdentificationRule.forSubscriptionBulkOrderConfirmationV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationRule#for_setr_SubscriptionBulkOrderConfirmationV04
+ * ConstraintAccountIdentificationRule.
+ * for_setr_SubscriptionBulkOrderConfirmationV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintOrderReferenceRule#forSubscriptionBulkOrderConfirmationV04
- * ConstraintOrderReferenceRule.forSubscriptionBulkOrderConfirmationV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOrderReferenceRule#for_setr_SubscriptionBulkOrderConfirmationV04
+ * ConstraintOrderReferenceRule.for_setr_SubscriptionBulkOrderConfirmationV04}</li>
  * </ul>
  * </li>
  * <li>
@@ -505,8 +506,8 @@ public class SubscriptionBulkOrderConfirmationV04 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forSubscriptionBulkOrderConfirmationV04,
-						com.tools20022.repository.constraints.ConstraintOrderReferenceRule.forSubscriptionBulkOrderConfirmationV04);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.for_setr_SubscriptionBulkOrderConfirmationV04,
+						com.tools20022.repository.constraints.ConstraintOrderReferenceRule.for_setr_SubscriptionBulkOrderConfirmationV04);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SubscriptionBulkOrderConfirmationV04";
 				definition = "Scope\r\nThe SubscriptionBulkOrderConfirmation message is sent by an executing party, for example, a transfer agent, to the instructing party, for example, an investment manager or its authorised representative, to confirm the details of the execution of a SubscriptionBulkOrder instruction.\r\nUsage\r\nThe SubscriptionBulkOrderConfirmation message is used to confirm the execution of all individual orders.\r\nThere is usually one bulk confirmation message for one bulk order message.\r\nEach individual order confirmation specified is identified in DealReference. The reference of the original individual order is specified in OrderReference. The message identification of the SubscriptionBulkOrder message in which the individual order was conveyed may also be quoted in RelatedReference.\r\nA SubscriptionBulkOrder must in all cases be responded to by a SubscriptionBulkOrderConfirmation and in no circumstances by a SubscriptionOrderConfirmation.\r\nIf the executing party needs to confirm a SubscriptionOrder instruction, then the SubscriptionOrderConfirmation must be used.\r\nWhen the message is used to convey a confirmation amendment/s, the AmendmentIndicator must be present with the value ‘true’ or ‘1’. When this is the case, the message must only contain a confirmation amendment/s and not contain both a confirmation amendment/s and a ‘new’ confirmation/s.";

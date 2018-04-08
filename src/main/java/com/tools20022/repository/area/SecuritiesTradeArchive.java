@@ -120,12 +120,12 @@ public class SecuritiesTradeArchive {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Securities Trade - Archive - master";
 				definition = "Messages that support trade and post-trade processes for securities, including order to buy or sell, trade execution, affirmation, confirmation, allocation and notification.";
+				code = "setr";
 				messageDefinition_lazy = () -> Arrays.asList(SecuritiesTradeConfirmationV01.mmObject(), OrderCancellationStatusReportV02.mmObject(), OrderInstructionStatusReportV02.mmObject(),
 						RedemptionBulkOrderCancellationInstructionV02.mmObject(), RedemptionBulkOrderConfirmationV02.mmObject(), RedemptionBulkOrderV02.mmObject(), RedemptionMultipleOrderCancellationInstructionV02.mmObject(),
 						RedemptionMultipleOrderConfirmationV02.mmObject(), RedemptionMultipleOrderV02.mmObject(), RequestForOrderStatusReportV02.mmObject(), SubscriptionBulkOrderCancellationInstructionV02.mmObject(),
 						SubscriptionBulkOrderConfirmationV02.mmObject(), SubscriptionBulkOrderV02.mmObject(), SubscriptionMultipleOrderCancellationInstructionV02.mmObject(), SubscriptionMultipleOrderConfirmationV02.mmObject(),
 						SubscriptionMultipleOrderV02.mmObject(), SwitchOrderCancellationInstructionV02.mmObject(), SwitchOrderConfirmationV02.mmObject(), SwitchOrderV02.mmObject());
-				code = "setr";
 			}
 		});
 		return mmObject_lazy.get();

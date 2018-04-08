@@ -152,71 +152,75 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintInterestPaymentRule#forCorporateActionNotificationV04
- * ConstraintInterestPaymentRule.forCorporateActionNotificationV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInterestPaymentRule#for_seev_CorporateActionNotificationV04
+ * ConstraintInterestPaymentRule.for_seev_CorporateActionNotificationV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintSafekeepingAccount1Rule#forCorporateActionNotificationV04
- * ConstraintSafekeepingAccount1Rule.forCorporateActionNotificationV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSafekeepingAccount1Rule#for_seev_CorporateActionNotificationV04
+ * ConstraintSafekeepingAccount1Rule.for_seev_CorporateActionNotificationV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintSafekeepingAccount2Rule#forCorporateActionNotificationV04
- * ConstraintSafekeepingAccount2Rule.forCorporateActionNotificationV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSafekeepingAccount2Rule#for_seev_CorporateActionNotificationV04
+ * ConstraintSafekeepingAccount2Rule.for_seev_CorporateActionNotificationV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintQuantityOfIntermediateSecuritiesRule#forCorporateActionNotificationV04
+ * {@linkplain com.tools20022.repository.constraints.ConstraintQuantityOfIntermediateSecuritiesRule#for_seev_CorporateActionNotificationV04
  * ConstraintQuantityOfIntermediateSecuritiesRule.
- * forCorporateActionNotificationV04}</li>
+ * for_seev_CorporateActionNotificationV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintOtherEventRule#forCorporateActionNotificationV04
- * ConstraintOtherEventRule.forCorporateActionNotificationV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOtherEventRule#for_seev_CorporateActionNotificationV04
+ * ConstraintOtherEventRule.for_seev_CorporateActionNotificationV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintIntermediateSecurity1Rule#forCorporateActionNotificationV04
- * ConstraintIntermediateSecurity1Rule.forCorporateActionNotificationV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintIntermediateSecurity1Rule#for_seev_CorporateActionNotificationV04
+ * ConstraintIntermediateSecurity1Rule.for_seev_CorporateActionNotificationV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintIntermediateSecurity2Rule#forCorporateActionNotificationV04
- * ConstraintIntermediateSecurity2Rule.forCorporateActionNotificationV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintIntermediateSecurity2Rule#for_seev_CorporateActionNotificationV04
+ * ConstraintIntermediateSecurity2Rule.for_seev_CorporateActionNotificationV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintNotificationIdentificationRule#forCorporateActionNotificationV04
- * ConstraintNotificationIdentificationRule.forCorporateActionNotificationV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintNotificationIdentificationRule#for_seev_CorporateActionNotificationV04
+ * ConstraintNotificationIdentificationRule.
+ * for_seev_CorporateActionNotificationV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintIntermediateSecuritiesDistribution1Rule#forCorporateActionNotificationV04
+ * {@linkplain com.tools20022.repository.constraints.ConstraintIntermediateSecuritiesDistribution1Rule#for_seev_CorporateActionNotificationV04
  * ConstraintIntermediateSecuritiesDistribution1Rule.
- * forCorporateActionNotificationV04}</li>
+ * for_seev_CorporateActionNotificationV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintPaymentDateRule#forCorporateActionNotificationV04
- * ConstraintPaymentDateRule.forCorporateActionNotificationV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPaymentDateRule#for_seev_CorporateActionNotificationV04
+ * ConstraintPaymentDateRule.for_seev_CorporateActionNotificationV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintNameChangeRule#forCorporateActionNotificationV04
- * ConstraintNameChangeRule.forCorporateActionNotificationV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintNameChangeRule#for_seev_CorporateActionNotificationV04
+ * ConstraintNameChangeRule.for_seev_CorporateActionNotificationV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintRateAndCorporateActionEventRule#forCorporateActionNotificationV04
- * ConstraintRateAndCorporateActionEventRule.forCorporateActionNotificationV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintRateAndCorporateActionEventRule#for_seev_CorporateActionNotificationV04
+ * ConstraintRateAndCorporateActionEventRule.
+ * for_seev_CorporateActionNotificationV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintTotalEligibleBalanceRule#forCorporateActionNotificationV04
- * ConstraintTotalEligibleBalanceRule.forCorporateActionNotificationV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTotalEligibleBalanceRule#for_seev_CorporateActionNotificationV04
+ * ConstraintTotalEligibleBalanceRule.for_seev_CorporateActionNotificationV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintMinimumExercisableQuantityGuideline#forCorporateActionNotificationV04
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMinimumExercisableQuantityGuideline#for_seev_CorporateActionNotificationV04
  * ConstraintMinimumExercisableQuantityGuideline.
- * forCorporateActionNotificationV04}</li>
+ * for_seev_CorporateActionNotificationV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline#forCorporateActionNotificationV04
- * ConstraintIssuerAgentGuideline.forCorporateActionNotificationV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline#for_seev_CorporateActionNotificationV04
+ * ConstraintIssuerAgentGuideline.for_seev_CorporateActionNotificationV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#forCorporateActionNotificationV04
- * ConstraintCoexistenceCharacterSetXRule.forCorporateActionNotificationV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#for_seev_CorporateActionNotificationV04
+ * ConstraintCoexistenceCharacterSetXRule.
+ * for_seev_CorporateActionNotificationV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forCorporateActionNotificationV04
- * ConstraintCoexistenceIdentificationRule.forCorporateActionNotificationV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#for_seev_CorporateActionNotificationV04
+ * ConstraintCoexistenceIdentificationRule.
+ * for_seev_CorporateActionNotificationV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintMaturityDateRule#forCorporateActionNotificationV04
- * ConstraintMaturityDateRule.forCorporateActionNotificationV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMaturityDateRule#for_seev_CorporateActionNotificationV04
+ * ConstraintMaturityDateRule.for_seev_CorporateActionNotificationV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintMiniOddLotOfferUsageRule#forCorporateActionNotificationV04
- * ConstraintMiniOddLotOfferUsageRule.forCorporateActionNotificationV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMiniOddLotOfferUsageRule#for_seev_CorporateActionNotificationV04
+ * ConstraintMiniOddLotOfferUsageRule.for_seev_CorporateActionNotificationV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintInformationEventRule#forCorporateActionNotificationV04
- * ConstraintInformationEventRule.forCorporateActionNotificationV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInformationEventRule#for_seev_CorporateActionNotificationV04
+ * ConstraintInformationEventRule.for_seev_CorporateActionNotificationV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintDeclaredRateRule#forCorporateActionNotificationV04
- * ConstraintDeclaredRateRule.forCorporateActionNotificationV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDeclaredRateRule#for_seev_CorporateActionNotificationV04
+ * ConstraintDeclaredRateRule.for_seev_CorporateActionNotificationV04}</li>
  * </ul>
  * </li>
  * <li>
@@ -1485,21 +1489,25 @@ public class CorporateActionNotificationV04 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInterestPaymentRule.forCorporateActionNotificationV04,
-						com.tools20022.repository.constraints.ConstraintSafekeepingAccount1Rule.forCorporateActionNotificationV04, com.tools20022.repository.constraints.ConstraintSafekeepingAccount2Rule.forCorporateActionNotificationV04,
-						com.tools20022.repository.constraints.ConstraintQuantityOfIntermediateSecuritiesRule.forCorporateActionNotificationV04,
-						com.tools20022.repository.constraints.ConstraintOtherEventRule.forCorporateActionNotificationV04, com.tools20022.repository.constraints.ConstraintIntermediateSecurity1Rule.forCorporateActionNotificationV04,
-						com.tools20022.repository.constraints.ConstraintIntermediateSecurity2Rule.forCorporateActionNotificationV04,
-						com.tools20022.repository.constraints.ConstraintNotificationIdentificationRule.forCorporateActionNotificationV04,
-						com.tools20022.repository.constraints.ConstraintIntermediateSecuritiesDistribution1Rule.forCorporateActionNotificationV04,
-						com.tools20022.repository.constraints.ConstraintPaymentDateRule.forCorporateActionNotificationV04, com.tools20022.repository.constraints.ConstraintNameChangeRule.forCorporateActionNotificationV04,
-						com.tools20022.repository.constraints.ConstraintRateAndCorporateActionEventRule.forCorporateActionNotificationV04,
-						com.tools20022.repository.constraints.ConstraintTotalEligibleBalanceRule.forCorporateActionNotificationV04,
-						com.tools20022.repository.constraints.ConstraintMinimumExercisableQuantityGuideline.forCorporateActionNotificationV04,
-						com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline.forCorporateActionNotificationV04, com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forCorporateActionNotificationV04,
-						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionNotificationV04, com.tools20022.repository.constraints.ConstraintMaturityDateRule.forCorporateActionNotificationV04,
-						com.tools20022.repository.constraints.ConstraintMiniOddLotOfferUsageRule.forCorporateActionNotificationV04, com.tools20022.repository.constraints.ConstraintInformationEventRule.forCorporateActionNotificationV04,
-						com.tools20022.repository.constraints.ConstraintDeclaredRateRule.forCorporateActionNotificationV04);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInterestPaymentRule.for_seev_CorporateActionNotificationV04,
+						com.tools20022.repository.constraints.ConstraintSafekeepingAccount1Rule.for_seev_CorporateActionNotificationV04,
+						com.tools20022.repository.constraints.ConstraintSafekeepingAccount2Rule.for_seev_CorporateActionNotificationV04,
+						com.tools20022.repository.constraints.ConstraintQuantityOfIntermediateSecuritiesRule.for_seev_CorporateActionNotificationV04,
+						com.tools20022.repository.constraints.ConstraintOtherEventRule.for_seev_CorporateActionNotificationV04,
+						com.tools20022.repository.constraints.ConstraintIntermediateSecurity1Rule.for_seev_CorporateActionNotificationV04,
+						com.tools20022.repository.constraints.ConstraintIntermediateSecurity2Rule.for_seev_CorporateActionNotificationV04,
+						com.tools20022.repository.constraints.ConstraintNotificationIdentificationRule.for_seev_CorporateActionNotificationV04,
+						com.tools20022.repository.constraints.ConstraintIntermediateSecuritiesDistribution1Rule.for_seev_CorporateActionNotificationV04,
+						com.tools20022.repository.constraints.ConstraintPaymentDateRule.for_seev_CorporateActionNotificationV04, com.tools20022.repository.constraints.ConstraintNameChangeRule.for_seev_CorporateActionNotificationV04,
+						com.tools20022.repository.constraints.ConstraintRateAndCorporateActionEventRule.for_seev_CorporateActionNotificationV04,
+						com.tools20022.repository.constraints.ConstraintTotalEligibleBalanceRule.for_seev_CorporateActionNotificationV04,
+						com.tools20022.repository.constraints.ConstraintMinimumExercisableQuantityGuideline.for_seev_CorporateActionNotificationV04,
+						com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline.for_seev_CorporateActionNotificationV04,
+						com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.for_seev_CorporateActionNotificationV04,
+						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.for_seev_CorporateActionNotificationV04,
+						com.tools20022.repository.constraints.ConstraintMaturityDateRule.for_seev_CorporateActionNotificationV04,
+						com.tools20022.repository.constraints.ConstraintMiniOddLotOfferUsageRule.for_seev_CorporateActionNotificationV04,
+						com.tools20022.repository.constraints.ConstraintInformationEventRule.for_seev_CorporateActionNotificationV04, com.tools20022.repository.constraints.ConstraintDeclaredRateRule.for_seev_CorporateActionNotificationV04);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionNotificationV04";
 				definition = "Scope\nAn account servicer sends the CorporateActionNotification message to an account owner or its designated agent to notify details of a corporate action event and optionally account information, eligible balance and entitlements.\r\nIt may also include possible elections or choices available to the account owner. The account servicer can initially send the CorporateActionNotification message as a preliminary advice, subsequently replaced by another CorporateActionNotification message with complete or confirmed information.\r\nIt may also be sent to an account owner or its designated agent, to remind of event details and/or of missing or incomplete instructions for a corporate action event.\nUsage\nThe message may also be used to:\n- re-send a message previously sent (the sub-function of the message is Duplicate),\n- provide a third party with a copy of a message for information (the sub-function of the message is Copy),\n- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate),\nusing the relevant elements in the business application header (BAH).\nISO 15022 - 20022 COEXISTENCE\r\nThis ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment. The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows: “CoexistenceXxxxRule”.";

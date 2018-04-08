@@ -36,8 +36,8 @@ public class ConstraintNotificationTypeGuideline {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionNotification2
-	 * CorporateActionNotification2}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNotification4
+	 * CorporateActionNotification4}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -49,19 +49,34 @@ public class ConstraintNotificationTypeGuideline {
 	 * definition} =
 	 * "NotificationType REPL is used to replace a previously sent CorporateActionNotification message that was reported with EventCompletenessStatus being incomplete or complete."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNotificationTypeGuideline#forCorporateActionNotification5
+	 * ConstraintNotificationTypeGuideline.forCorporateActionNotification5}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNotificationTypeGuideline#forCorporateActionNotification3
+	 * ConstraintNotificationTypeGuideline.forCorporateActionNotification3}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<CorporateActionNotification2> forCorporateActionNotification2 = new MMConstraint<CorporateActionNotification2>() {
+	public static final MMConstraint<CorporateActionNotification4> forCorporateActionNotification4 = new MMConstraint<CorporateActionNotification4>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationTypeGuideline";
 			definition = "NotificationType REPL is used to replace a previously sent CorporateActionNotification message that was reported with EventCompletenessStatus being incomplete or complete.";
-			owner_lazy = () -> CorporateActionNotification2.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNotificationTypeGuideline.forCorporateActionNotification5);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNotificationTypeGuideline.forCorporateActionNotification3;
+			owner_lazy = () -> CorporateActionNotification4.mmObject();
 		}
 
 		@Override
-		public void executeValidator(CorporateActionNotification2 obj) throws Exception {
-			checkCorporateActionNotification2(obj);
+		public void executeValidator(CorporateActionNotification4 obj) throws Exception {
+			checkCorporateActionNotification4(obj);
 		}
 	};
 	/**
@@ -105,55 +120,6 @@ public class ConstraintNotificationTypeGuideline {
 		@Override
 		public void executeValidator(CorporateActionNotification3 obj) throws Exception {
 			checkCorporateActionNotification3(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionNotification4
-	 * CorporateActionNotification4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "NotificationTypeGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "NotificationType REPL is used to replace a previously sent CorporateActionNotification message that was reported with EventCompletenessStatus being incomplete or complete."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintNotificationTypeGuideline#forCorporateActionNotification5
-	 * ConstraintNotificationTypeGuideline.forCorporateActionNotification5}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintNotificationTypeGuideline#forCorporateActionNotification3
-	 * ConstraintNotificationTypeGuideline.forCorporateActionNotification3}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CorporateActionNotification4> forCorporateActionNotification4 = new MMConstraint<CorporateActionNotification4>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "NotificationTypeGuideline";
-			definition = "NotificationType REPL is used to replace a previously sent CorporateActionNotification message that was reported with EventCompletenessStatus being incomplete or complete.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNotificationTypeGuideline.forCorporateActionNotification5);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNotificationTypeGuideline.forCorporateActionNotification3;
-			owner_lazy = () -> CorporateActionNotification4.mmObject();
-		}
-
-		@Override
-		public void executeValidator(CorporateActionNotification4 obj) throws Exception {
-			checkCorporateActionNotification4(obj);
 		}
 	};
 	/**
@@ -245,13 +211,47 @@ public class ConstraintNotificationTypeGuideline {
 			checkCorporateActionNotification6(obj);
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNotification2
+	 * CorporateActionNotification2}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NotificationTypeGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "NotificationType REPL is used to replace a previously sent CorporateActionNotification message that was reported with EventCompletenessStatus being incomplete or complete."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionNotification2> forCorporateActionNotification2 = new MMConstraint<CorporateActionNotification2>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NotificationTypeGuideline";
+			definition = "NotificationType REPL is used to replace a previously sent CorporateActionNotification message that was reported with EventCompletenessStatus being incomplete or complete.";
+			owner_lazy = () -> CorporateActionNotification2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNotification2 obj) throws Exception {
+			checkCorporateActionNotification2(obj);
+		}
+	};
 
 	/**
 	 * NotificationType REPL is used to replace a previously sent
 	 * CorporateActionNotification message that was reported with
 	 * EventCompletenessStatus being incomplete or complete.
 	 */
-	public static void checkCorporateActionNotification2(CorporateActionNotification2 obj) throws Exception {
+	public static void checkCorporateActionNotification4(CorporateActionNotification4 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -261,15 +261,6 @@ public class ConstraintNotificationTypeGuideline {
 	 * EventCompletenessStatus being incomplete or complete.
 	 */
 	public static void checkCorporateActionNotification3(CorporateActionNotification3 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * NotificationType REPL is used to replace a previously sent
-	 * CorporateActionNotification message that was reported with
-	 * EventCompletenessStatus being incomplete or complete.
-	 */
-	public static void checkCorporateActionNotification4(CorporateActionNotification4 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -288,6 +279,15 @@ public class ConstraintNotificationTypeGuideline {
 	 * EventCompletenessStatus being incomplete or complete.
 	 */
 	public static void checkCorporateActionNotification6(CorporateActionNotification6 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * NotificationType REPL is used to replace a previously sent
+	 * CorporateActionNotification message that was reported with
+	 * EventCompletenessStatus being incomplete or complete.
+	 */
+	public static void checkCorporateActionNotification2(CorporateActionNotification2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

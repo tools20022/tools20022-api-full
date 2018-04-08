@@ -42,74 +42,6 @@ public class ConstraintMinimumExercisableQuantityGuideline {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV01
-	 * CorporateActionNotificationV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "MinimumExercisableQuantityGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "MinimumExercisableQuantity and MinimumExercisableMultipleQuantity elements in CorporateActionOptionDetails/SecuritiesQuantity are different from MinimumExercisableQuantity and MinimumExercisableMultipleQuantity elements in CorporateActionGeneralInformation/UnderlyingSecurity as they give indication on quantity of financial instrument in the precise context of the described corporate actions for a given account servicer.\nIn CorporateActionGeneralInformation/UnderlyingSecurity, the quantity given are the quantity pertaining to the financial instrument in general, not specifics to the corporate action processing."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CorporateActionNotificationV01> forCorporateActionNotificationV01 = new MMConstraint<CorporateActionNotificationV01>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "MinimumExercisableQuantityGuideline";
-			definition = "MinimumExercisableQuantity and MinimumExercisableMultipleQuantity elements in CorporateActionOptionDetails/SecuritiesQuantity are different from MinimumExercisableQuantity and MinimumExercisableMultipleQuantity elements in CorporateActionGeneralInformation/UnderlyingSecurity as they give indication on quantity of financial instrument in the precise context of the described corporate actions for a given account servicer.\nIn CorporateActionGeneralInformation/UnderlyingSecurity, the quantity given are the quantity pertaining to the financial instrument in general, not specifics to the corporate action processing.";
-			owner_lazy = () -> CorporateActionNotificationV01.mmObject();
-		}
-
-		@Override
-		public void executeValidator(CorporateActionNotificationV01 obj) throws Exception {
-			checkCorporateActionNotificationV01(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV02
-	 * CorporateActionNotificationV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "MinimumExercisableQuantityGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "MinimumExercisableQuantity and MinimumExercisableMultipleQuantity elements in CorporateActionOptionDetails/SecuritiesQuantity are different from MinimumExercisableQuantity and MinimumExercisableMultipleQuantity elements in CorporateActionGeneralInformation/UnderlyingSecurity as they give indication on quantity of financial instrument in the precise context of the described corporate actions for a given account servicer.\nIn CorporateActionGeneralInformation/UnderlyingSecurity, the quantity given are the quantity pertaining to the financial instrument in general, not specifics to the corporate action processing."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CorporateActionNotificationV02> forCorporateActionNotificationV02 = new MMConstraint<CorporateActionNotificationV02>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "MinimumExercisableQuantityGuideline";
-			definition = "MinimumExercisableQuantity and MinimumExercisableMultipleQuantity elements in CorporateActionOptionDetails/SecuritiesQuantity are different from MinimumExercisableQuantity and MinimumExercisableMultipleQuantity elements in CorporateActionGeneralInformation/UnderlyingSecurity as they give indication on quantity of financial instrument in the precise context of the described corporate actions for a given account servicer.\nIn CorporateActionGeneralInformation/UnderlyingSecurity, the quantity given are the quantity pertaining to the financial instrument in general, not specifics to the corporate action processing.";
-			owner_lazy = () -> CorporateActionNotificationV02.mmObject();
-		}
-
-		@Override
-		public void executeValidator(CorporateActionNotificationV02 obj) throws Exception {
-			checkCorporateActionNotificationV02(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV03
 	 * CorporateActionNotificationV03}</li>
 	 * <li>
@@ -125,7 +57,7 @@ public class ConstraintMinimumExercisableQuantityGuideline {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<CorporateActionNotificationV03> forCorporateActionNotificationV03 = new MMConstraint<CorporateActionNotificationV03>() {
+	public static final MMConstraint<CorporateActionNotificationV03> for_seev_CorporateActionNotificationV03 = new MMConstraint<CorporateActionNotificationV03>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumExercisableQuantityGuideline";
@@ -135,7 +67,48 @@ public class ConstraintMinimumExercisableQuantityGuideline {
 
 		@Override
 		public void executeValidator(CorporateActionNotificationV03 obj) throws Exception {
-			checkCorporateActionNotificationV03(obj);
+			check_seev_CorporateActionNotificationV03(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV05
+	 * CorporateActionNotificationV05}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "MinimumExercisableQuantityGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "MinimumExercisableQuantity and MinimumExercisableMultipleQuantity elements in CorporateActionOptionDetails/SecuritiesQuantity are different from MinimumExercisableQuantity and MinimumExercisableMultipleQuantity elements in CorporateActionGeneralInformation/UnderlyingSecurity as they give indication on quantity of financial instrument in the precise context of the described corporate actions for a given account servicer.\nIn CorporateActionGeneralInformation/UnderlyingSecurity, the quantity given are the quantity pertaining to the financial instrument in general, not specifics to the corporate action processing."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintMinimumExercisableQuantityGuideline#for_seev_CorporateActionNotificationV04
+	 * ConstraintMinimumExercisableQuantityGuideline.
+	 * for_seev_CorporateActionNotificationV04}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionNotificationV05> for_seev_CorporateActionNotificationV05 = new MMConstraint<CorporateActionNotificationV05>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "MinimumExercisableQuantityGuideline";
+			definition = "MinimumExercisableQuantity and MinimumExercisableMultipleQuantity elements in CorporateActionOptionDetails/SecuritiesQuantity are different from MinimumExercisableQuantity and MinimumExercisableMultipleQuantity elements in CorporateActionGeneralInformation/UnderlyingSecurity as they give indication on quantity of financial instrument in the precise context of the described corporate actions for a given account servicer.\nIn CorporateActionGeneralInformation/UnderlyingSecurity, the quantity given are the quantity pertaining to the financial instrument in general, not specifics to the corporate action processing.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMinimumExercisableQuantityGuideline.for_seev_CorporateActionNotificationV04;
+			owner_lazy = () -> CorporateActionNotificationV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNotificationV05 obj) throws Exception {
+			check_seev_CorporateActionNotificationV05(obj);
 		}
 	};
 	/**
@@ -161,25 +134,25 @@ public class ConstraintMinimumExercisableQuantityGuideline {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintMinimumExercisableQuantityGuideline#forCorporateActionNotificationV05
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintMinimumExercisableQuantityGuideline#for_seev_CorporateActionNotificationV05
 	 * ConstraintMinimumExercisableQuantityGuideline.
-	 * forCorporateActionNotificationV05}</li>
+	 * for_seev_CorporateActionNotificationV05}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<CorporateActionNotificationV04> forCorporateActionNotificationV04 = new MMConstraint<CorporateActionNotificationV04>() {
+	public static final MMConstraint<CorporateActionNotificationV04> for_seev_CorporateActionNotificationV04 = new MMConstraint<CorporateActionNotificationV04>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumExercisableQuantityGuideline";
 			definition = "MinimumExercisableQuantity and MinimumExercisableMultipleQuantity elements in CorporateActionOptionDetails/SecuritiesQuantity are different from MinimumExercisableQuantity and MinimumExercisableMultipleQuantity elements in CorporateActionGeneralInformation/UnderlyingSecurity as they give indication on quantity of financial instrument in the precise context of the described corporate actions for a given account servicer.\nIn CorporateActionGeneralInformation/UnderlyingSecurity, the quantity given are the quantity pertaining to the financial instrument in general, not specifics to the corporate action processing.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMinimumExercisableQuantityGuideline.forCorporateActionNotificationV05);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMinimumExercisableQuantityGuideline.for_seev_CorporateActionNotificationV05);
 			owner_lazy = () -> CorporateActionNotificationV04.mmObject();
 		}
 
 		@Override
 		public void executeValidator(CorporateActionNotificationV04 obj) throws Exception {
-			checkCorporateActionNotificationV04(obj);
+			check_seev_CorporateActionNotificationV04(obj);
 		}
 	};
 	/**
@@ -188,8 +161,8 @@ public class ConstraintMinimumExercisableQuantityGuideline {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV05
-	 * CorporateActionNotificationV05}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV02
+	 * CorporateActionNotificationV02}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -201,26 +174,53 @@ public class ConstraintMinimumExercisableQuantityGuideline {
 	 * definition} =
 	 * "MinimumExercisableQuantity and MinimumExercisableMultipleQuantity elements in CorporateActionOptionDetails/SecuritiesQuantity are different from MinimumExercisableQuantity and MinimumExercisableMultipleQuantity elements in CorporateActionGeneralInformation/UnderlyingSecurity as they give indication on quantity of financial instrument in the precise context of the described corporate actions for a given account servicer.\nIn CorporateActionGeneralInformation/UnderlyingSecurity, the quantity given are the quantity pertaining to the financial instrument in general, not specifics to the corporate action processing."
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintMinimumExercisableQuantityGuideline#forCorporateActionNotificationV04
-	 * ConstraintMinimumExercisableQuantityGuideline.
-	 * forCorporateActionNotificationV04}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<CorporateActionNotificationV05> forCorporateActionNotificationV05 = new MMConstraint<CorporateActionNotificationV05>() {
+	public static final MMConstraint<CorporateActionNotificationV02> for_seev_CorporateActionNotificationV02 = new MMConstraint<CorporateActionNotificationV02>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumExercisableQuantityGuideline";
 			definition = "MinimumExercisableQuantity and MinimumExercisableMultipleQuantity elements in CorporateActionOptionDetails/SecuritiesQuantity are different from MinimumExercisableQuantity and MinimumExercisableMultipleQuantity elements in CorporateActionGeneralInformation/UnderlyingSecurity as they give indication on quantity of financial instrument in the precise context of the described corporate actions for a given account servicer.\nIn CorporateActionGeneralInformation/UnderlyingSecurity, the quantity given are the quantity pertaining to the financial instrument in general, not specifics to the corporate action processing.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMinimumExercisableQuantityGuideline.forCorporateActionNotificationV04;
-			owner_lazy = () -> CorporateActionNotificationV05.mmObject();
+			owner_lazy = () -> CorporateActionNotificationV02.mmObject();
 		}
 
 		@Override
-		public void executeValidator(CorporateActionNotificationV05 obj) throws Exception {
-			checkCorporateActionNotificationV05(obj);
+		public void executeValidator(CorporateActionNotificationV02 obj) throws Exception {
+			check_seev_CorporateActionNotificationV02(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV01
+	 * CorporateActionNotificationV01}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "MinimumExercisableQuantityGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "MinimumExercisableQuantity and MinimumExercisableMultipleQuantity elements in CorporateActionOptionDetails/SecuritiesQuantity are different from MinimumExercisableQuantity and MinimumExercisableMultipleQuantity elements in CorporateActionGeneralInformation/UnderlyingSecurity as they give indication on quantity of financial instrument in the precise context of the described corporate actions for a given account servicer.\nIn CorporateActionGeneralInformation/UnderlyingSecurity, the quantity given are the quantity pertaining to the financial instrument in general, not specifics to the corporate action processing."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionNotificationV01> for_seev_CorporateActionNotificationV01 = new MMConstraint<CorporateActionNotificationV01>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "MinimumExercisableQuantityGuideline";
+			definition = "MinimumExercisableQuantity and MinimumExercisableMultipleQuantity elements in CorporateActionOptionDetails/SecuritiesQuantity are different from MinimumExercisableQuantity and MinimumExercisableMultipleQuantity elements in CorporateActionGeneralInformation/UnderlyingSecurity as they give indication on quantity of financial instrument in the precise context of the described corporate actions for a given account servicer.\nIn CorporateActionGeneralInformation/UnderlyingSecurity, the quantity given are the quantity pertaining to the financial instrument in general, not specifics to the corporate action processing.";
+			owner_lazy = () -> CorporateActionNotificationV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNotificationV01 obj) throws Exception {
+			check_seev_CorporateActionNotificationV01(obj);
 		}
 	};
 
@@ -235,7 +235,7 @@ public class ConstraintMinimumExercisableQuantityGuideline {
 	 * given are the quantity pertaining to the financial instrument in general,
 	 * not specifics to the corporate action processing.
 	 */
-	public static void checkCorporateActionNotificationV01(CorporateActionNotificationV01 obj) throws Exception {
+	public static void check_seev_CorporateActionNotificationV03(CorporateActionNotificationV03 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -250,7 +250,7 @@ public class ConstraintMinimumExercisableQuantityGuideline {
 	 * given are the quantity pertaining to the financial instrument in general,
 	 * not specifics to the corporate action processing.
 	 */
-	public static void checkCorporateActionNotificationV02(CorporateActionNotificationV02 obj) throws Exception {
+	public static void check_seev_CorporateActionNotificationV05(CorporateActionNotificationV05 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -265,7 +265,7 @@ public class ConstraintMinimumExercisableQuantityGuideline {
 	 * given are the quantity pertaining to the financial instrument in general,
 	 * not specifics to the corporate action processing.
 	 */
-	public static void checkCorporateActionNotificationV03(CorporateActionNotificationV03 obj) throws Exception {
+	public static void check_seev_CorporateActionNotificationV04(CorporateActionNotificationV04 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -280,7 +280,7 @@ public class ConstraintMinimumExercisableQuantityGuideline {
 	 * given are the quantity pertaining to the financial instrument in general,
 	 * not specifics to the corporate action processing.
 	 */
-	public static void checkCorporateActionNotificationV04(CorporateActionNotificationV04 obj) throws Exception {
+	public static void check_seev_CorporateActionNotificationV02(CorporateActionNotificationV02 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -295,7 +295,7 @@ public class ConstraintMinimumExercisableQuantityGuideline {
 	 * given are the quantity pertaining to the financial instrument in general,
 	 * not specifics to the corporate action processing.
 	 */
-	public static void checkCorporateActionNotificationV05(CorporateActionNotificationV05 obj) throws Exception {
+	public static void check_seev_CorporateActionNotificationV01(CorporateActionNotificationV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

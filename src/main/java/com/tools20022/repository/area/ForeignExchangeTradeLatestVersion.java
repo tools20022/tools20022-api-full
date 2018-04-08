@@ -108,12 +108,12 @@ public class ForeignExchangeTradeLatestVersion {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Foreign Exchange Trade - Latest version - master";
 				definition = "Messages that support management processes for foreign exchange contracts, including reporting on trades and balances, plus any exceptions and investigations related to foreign exchange contracts.";
+				code = "fxtr";
 				messageDefinition_lazy = () -> Arrays.asList(ForeignExchangeTradeConfirmationStatusAdviceV01.mmObject(), ForeignExchangeTradeConfirmationRequestCancellationRequestV01.mmObject(),
 						ForeignExchangeTradeConfirmationRequestAmendmentRequestV01.mmObject(), ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01.mmObject(), ForeignExchangeTradeConfirmationRequestV01.mmObject(),
 						ForeignExchangeTradeCaptureReportRequestV01.mmObject(), ForeignExchangeTradeCaptureReportV01.mmObject(), ForeignExchangeTradeCaptureReportAcknowledgementV01.mmObject(), ForeignExchangeTradeInstructionV04.mmObject(),
 						ForeignExchangeTradeStatusNotificationV06.mmObject(), ForeignExchangeTradeInstructionCancellationV04.mmObject(), ForeignExchangeTradeInstructionAmendmentV04.mmObject(),
 						ForeignExchangeTradeStatusAndDetailsNotificationV04.mmObject(), ForeignExchangeTradeBulkStatusNotificationV04.mmObject());
-				code = "fxtr";
 			}
 		});
 		return mmObject_lazy.get();

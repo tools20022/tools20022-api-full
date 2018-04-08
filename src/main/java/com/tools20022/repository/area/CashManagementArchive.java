@@ -274,6 +274,7 @@ public class CashManagementArchive {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Cash Management - Archive - master";
 				definition = "Messages that support the reporting and advicing of the cash side of any financial transactions, including cash movements, transactions and balances, plus any exceptions and investigations related to cash transactions.";
+				code = "camt";
 				messageDefinition_lazy = () -> Arrays.asList(BankToCustomerAccountReportV01.mmObject(), BankToCustomerAccountReportV02.mmObject(), BankToCustomerAccountReportV03.mmObject(), BankToCustomerAccountReportV04.mmObject(),
 						BankToCustomerDebitCreditNotificationV01.mmObject(), BankToCustomerDebitCreditNotificationV02.mmObject(), BankToCustomerDebitCreditNotificationV03.mmObject(), BankToCustomerDebitCreditNotificationV04.mmObject(),
 						BankToCustomerStatementV01.mmObject(), BankToCustomerStatementV02.mmObject(), BankToCustomerStatementV03.mmObject(), BankToCustomerStatementV04.mmObject(), CustomerPaymentCancellationRequestV01.mmObject(),
@@ -291,7 +292,6 @@ public class CashManagementArchive {
 						BankToCustomerAccountReportV05.mmObject(), FIToFIPaymentCancellationRequestV04.mmObject(), CustomerPaymentCancellationRequestV04.mmObject(), AdditionalPaymentInformationV05.mmObject(),
 						BankToCustomerDebitCreditNotificationV05.mmObject(), RequestToModifyPaymentV02.mmObject(), AdditionalPaymentInformationV06.mmObject(), FIToFIPaymentCancellationRequestV05.mmObject(),
 						RequestToModifyPaymentV03.mmObject(), ResolutionOfInvestigationV06.mmObject(), CustomerPaymentCancellationRequestV05.mmObject());
-				code = "camt";
 			}
 		});
 		return mmObject_lazy.get();

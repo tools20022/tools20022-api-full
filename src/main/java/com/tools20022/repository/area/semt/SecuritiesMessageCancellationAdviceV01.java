@@ -117,13 +117,13 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#forSecuritiesMessageCancellationAdviceV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#for_semt_SecuritiesMessageCancellationAdviceV01
  * ConstraintCoexistenceCharacterSetXRule.
- * forSecuritiesMessageCancellationAdviceV01}</li>
+ * for_semt_SecuritiesMessageCancellationAdviceV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forSecuritiesMessageCancellationAdviceV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#for_semt_SecuritiesMessageCancellationAdviceV01
  * ConstraintCoexistenceIdentificationRule.
- * forSecuritiesMessageCancellationAdviceV01}</li>
+ * for_semt_SecuritiesMessageCancellationAdviceV01}</li>
  * </ul>
  * </li>
  * <li>
@@ -394,8 +394,8 @@ public class SecuritiesMessageCancellationAdviceV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesMessageCancellationAdviceV01,
-						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesMessageCancellationAdviceV01);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.for_semt_SecuritiesMessageCancellationAdviceV01,
+						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.for_semt_SecuritiesMessageCancellationAdviceV01);
 				semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, "MT 508, 544-7, 535-8, 578, 586, Seq A :23G:CANC"));
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesMessageCancellationAdviceV01";

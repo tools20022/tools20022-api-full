@@ -107,14 +107,15 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationRule#forSwitchOrderConfirmationV03
- * ConstraintAccountIdentificationRule.forSwitchOrderConfirmationV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationRule#for_setr_SwitchOrderConfirmationV03
+ * ConstraintAccountIdentificationRule.for_setr_SwitchOrderConfirmationV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintOrderOriginatorEligibility4Rule#forSwitchOrderConfirmationV03
- * ConstraintOrderOriginatorEligibility4Rule.forSwitchOrderConfirmationV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOrderOriginatorEligibility4Rule#for_setr_SwitchOrderConfirmationV03
+ * ConstraintOrderOriginatorEligibility4Rule.for_setr_SwitchOrderConfirmationV03
+ * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintMultipleSwitchExecutionRule#forSwitchOrderConfirmationV03
- * ConstraintMultipleSwitchExecutionRule.forSwitchOrderConfirmationV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMultipleSwitchExecutionRule#for_setr_SwitchOrderConfirmationV03
+ * ConstraintMultipleSwitchExecutionRule.for_setr_SwitchOrderConfirmationV03}</li>
  * </ul>
  * </li>
  * <li>
@@ -537,9 +538,9 @@ public class SwitchOrderConfirmationV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forSwitchOrderConfirmationV03,
-						com.tools20022.repository.constraints.ConstraintOrderOriginatorEligibility4Rule.forSwitchOrderConfirmationV03,
-						com.tools20022.repository.constraints.ConstraintMultipleSwitchExecutionRule.forSwitchOrderConfirmationV03);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.for_setr_SwitchOrderConfirmationV03,
+						com.tools20022.repository.constraints.ConstraintOrderOriginatorEligibility4Rule.for_setr_SwitchOrderConfirmationV03,
+						com.tools20022.repository.constraints.ConstraintMultipleSwitchExecutionRule.for_setr_SwitchOrderConfirmationV03);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SwitchOrderConfirmationV03";
 				definition = "Scope\r\nAn executing party, for example, a transfer agent, sends the SwitchOrderConfirmation message to the instructing party, for example, an investment manager or its authorised representative to confirm the details of the execution of a previously received SwitchOrder instruction.\r\nUsage\r\nThe SwitchOrderConfirmation message is used to confirm that all the legs of the previously instructed switch order have been executed. The reference of the switch order confirmation is identified in DealReference.\r\nThe reference of the original switch order is specified in OrderReference. The message identification of the SwitchOrder message in which the switch order was conveyed may also be quoted in RelatedReference.\r\nIf the SwitchOrderConfirmation Details sequence is present more than once, then the redemption leg details and subscription leg details sequences may only be present once.\r\nIf Switch Confirmation Order Details\\Investment Account is used, then the Investment Account Details sequences in Subscription Leg Details and Redemption Leg Details are not allowed.\nIf the SwitchOrderConfirmation Details sequence is present more than once, then the redemption leg details and subscription leg details sequences may only be present once.\nIf SwitchOrderConfirmationDetails\\InvestmentAccount is used, then the InvestmentAccountDetails sequences in SubscriptionLegDetails and RedemptionLegDetails are not allowed. This functionality is to be used by institutions that set up two accounts per investor, rather than one investment account.\n.";

@@ -75,6 +75,50 @@ public class ConstraintNonGuaranteedTradePresenceRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.Clearing4 Clearing4}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/NonGuaranteedTrade&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/GuaranteedTrade&lt;/leftOperand&gt;&lt;rightOperand&gt;false&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/GuaranteedTrade&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NonGuaranteedTradePresenceRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If GuaranteedTrade Indicator is No then NonGuaranteed trade details must be present."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNonGuaranteedTradePresenceRule#forClearing2
+	 * ConstraintNonGuaranteedTradePresenceRule.forClearing2}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<Clearing4> forClearing4 = new MMConstraint<Clearing4>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NonGuaranteedTradePresenceRule";
+			definition = "If GuaranteedTrade Indicator is No then NonGuaranteed trade details must be present.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNonGuaranteedTradePresenceRule.forClearing2;
+			owner_lazy = () -> Clearing4.mmObject();
+			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/NonGuaranteedTrade</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GuaranteedTrade</leftOperand><rightOperand>false</rightOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/GuaranteedTrade</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(Clearing4 obj) throws Exception {
+			checkClearing4(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Clearing2 Clearing2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
 	 * expression} =
@@ -116,50 +160,6 @@ public class ConstraintNonGuaranteedTradePresenceRule {
 			checkClearing2(obj);
 		}
 	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.Clearing4 Clearing4}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
-	 * expression} =
-	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/NonGuaranteedTrade&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/GuaranteedTrade&lt;/leftOperand&gt;&lt;rightOperand&gt;false&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/GuaranteedTrade&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "NonGuaranteedTradePresenceRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If GuaranteedTrade Indicator is No then NonGuaranteed trade details must be present."
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintNonGuaranteedTradePresenceRule#forClearing2
-	 * ConstraintNonGuaranteedTradePresenceRule.forClearing2}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<Clearing4> forClearing4 = new MMConstraint<Clearing4>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "NonGuaranteedTradePresenceRule";
-			definition = "If GuaranteedTrade Indicator is No then NonGuaranteed trade details must be present.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNonGuaranteedTradePresenceRule.forClearing2;
-			owner_lazy = () -> Clearing4.mmObject();
-			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/NonGuaranteedTrade</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GuaranteedTrade</leftOperand><rightOperand>false</rightOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/GuaranteedTrade</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
-		}
-
-		@Override
-		public void executeValidator(Clearing4 obj) throws Exception {
-			checkClearing4(obj);
-		}
-	};
 
 	/**
 	 * If GuaranteedTrade Indicator is No then NonGuaranteed trade details must
@@ -173,7 +173,7 @@ public class ConstraintNonGuaranteedTradePresenceRule {
 	 * If GuaranteedTrade Indicator is No then NonGuaranteed trade details must
 	 * be present.
 	 */
-	public static void checkClearing2(Clearing2 obj) throws Exception {
+	public static void checkClearing4(Clearing4 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -181,7 +181,7 @@ public class ConstraintNonGuaranteedTradePresenceRule {
 	 * If GuaranteedTrade Indicator is No then NonGuaranteed trade details must
 	 * be present.
 	 */
-	public static void checkClearing4(Clearing4 obj) throws Exception {
+	public static void checkClearing2(Clearing2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

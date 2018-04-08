@@ -133,13 +133,13 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintTransactionIdentificationPresence2Rule#forSecuritiesTransactionCancellationRequestV05
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTransactionIdentificationPresence2Rule#for_sese_SecuritiesTransactionCancellationRequestV05
  * ConstraintTransactionIdentificationPresence2Rule.
- * forSecuritiesTransactionCancellationRequestV05}</li>
+ * for_sese_SecuritiesTransactionCancellationRequestV05}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule#forSecuritiesTransactionCancellationRequestV05
+ * {@linkplain com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule#for_sese_SecuritiesTransactionCancellationRequestV05
  * ConstraintNoAccountOwnerTransactionIdentificationRule.
- * forSecuritiesTransactionCancellationRequestV05}</li>
+ * for_sese_SecuritiesTransactionCancellationRequestV05}</li>
  * </ul>
  * </li>
  * <li>
@@ -691,8 +691,8 @@ public class SecuritiesTransactionCancellationRequestV05 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTransactionIdentificationPresence2Rule.forSecuritiesTransactionCancellationRequestV05,
-						com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forSecuritiesTransactionCancellationRequestV05);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTransactionIdentificationPresence2Rule.for_sese_SecuritiesTransactionCancellationRequestV05,
+						com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.for_sese_SecuritiesTransactionCancellationRequestV05);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTransactionCancellationRequestV05";
 				definition = "Scope\r\nAn account owner sends a SecuritiesTransactionCancellationRequest to an account servicer to request the cancellation of a securities transaction.\r\nThe account owner/servicer relationship may be:\r\n- a global custodian which has an account with a local custodian, or\r\n- an investment management institution which manage a fund account opened at a custodian, or - a broker which has an account with a custodian, or\r\n- a central securities depository participant which has an account with a central securities depository, or\r\n- a central securities depository which has an account with a custodian, another central securities depository or another settlement market infrastructure, or\r\n- a central counterparty or a stock exchange or a trade matching utility which need to instruct to a central securities depository ot another settlement market infrastructure.\r\n\r\nUsage\r\nThe transaction may be:\r\n- a securities settlement transaction\r\n- an intra-position movement\r\n- a securities financing transaction\r\nThe instruction cannot be:\r\n- a securities settlement conditions modification (another transaction processing command should be sent to reverse a processing change previously requested).\r\n- a securities financing modification\r\nThe message may also be used to:\r\n- re-send a message previously sent,\r\n- provide a third party with a copy of a message for information,\r\n- re-send to a third party a copy of a message for information\r\nusing the relevant elements in the Business Application Header.";

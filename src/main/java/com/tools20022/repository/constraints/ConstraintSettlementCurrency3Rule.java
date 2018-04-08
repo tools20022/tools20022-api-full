@@ -26,45 +26,11 @@ import java.util.Arrays;
 
 /**
  * If BulkCashSettlementDetails is present, then Currency in
- * IndividualExecutionOrderDetails/NetAmount and GrossAmount must be the same in
- * all occurrences of IndividualExecutionDetails.
+ * IndividualExecutionDetails/SettlementAmount must be the same in all
+ * occurrences of IndividualOrderDetails.
  */
 public class ConstraintSettlementCurrency3Rule {
 
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionBulkExecution2
-	 * SubscriptionBulkExecution2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementCurrency3Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If BulkCashSettlementDetails is present, then Currency in IndividualExecutionOrderDetails/NetAmount and GrossAmount must be the same in all occurrences of IndividualExecutionDetails."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SubscriptionBulkExecution2> forSubscriptionBulkExecution2 = new MMConstraint<SubscriptionBulkExecution2>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementCurrency3Rule";
-			definition = "If BulkCashSettlementDetails is present, then Currency in IndividualExecutionOrderDetails/NetAmount and GrossAmount must be the same in all occurrences of IndividualExecutionDetails.";
-			owner_lazy = () -> SubscriptionBulkExecution2.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SubscriptionBulkExecution2 obj) throws Exception {
-			checkSubscriptionBulkExecution2(obj);
-		}
-	};
 	/**
 	 * 
 	 <p>
@@ -108,15 +74,40 @@ public class ConstraintSettlementCurrency3Rule {
 			checkSubscriptionBulkExecution3(obj);
 		}
 	};
-
 	/**
-	 * If BulkCashSettlementDetails is present, then Currency in
-	 * IndividualExecutionOrderDetails/NetAmount and GrossAmount must be the
-	 * same in all occurrences of IndividualExecutionDetails.
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionBulkExecution2
+	 * SubscriptionBulkExecution2}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementCurrency3Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If BulkCashSettlementDetails is present, then Currency in IndividualExecutionOrderDetails/NetAmount and GrossAmount must be the same in all occurrences of IndividualExecutionDetails."
+	 * </li>
+	 * </ul>
 	 */
-	public static void checkSubscriptionBulkExecution2(SubscriptionBulkExecution2 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
+	public static final MMConstraint<SubscriptionBulkExecution2> forSubscriptionBulkExecution2 = new MMConstraint<SubscriptionBulkExecution2>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementCurrency3Rule";
+			definition = "If BulkCashSettlementDetails is present, then Currency in IndividualExecutionOrderDetails/NetAmount and GrossAmount must be the same in all occurrences of IndividualExecutionDetails.";
+			owner_lazy = () -> SubscriptionBulkExecution2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionBulkExecution2 obj) throws Exception {
+			checkSubscriptionBulkExecution2(obj);
+		}
+	};
 
 	/**
 	 * If BulkCashSettlementDetails is present, then Currency in
@@ -124,6 +115,15 @@ public class ConstraintSettlementCurrency3Rule {
 	 * occurrences of IndividualOrderDetails.
 	 */
 	public static void checkSubscriptionBulkExecution3(SubscriptionBulkExecution3 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If BulkCashSettlementDetails is present, then Currency in
+	 * IndividualExecutionOrderDetails/NetAmount and GrossAmount must be the
+	 * same in all occurrences of IndividualExecutionDetails.
+	 */
+	public static void checkSubscriptionBulkExecution2(SubscriptionBulkExecution2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

@@ -154,6 +154,7 @@ public class PaymentsClearingandSettlementArchive {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Payments Clearing and Settlement - Archive - master";
 				definition = "Messages that support the clearing and settlement processes for payment transactions between financial institutions.";
+				code = "pacs";
 				messageDefinition_lazy = () -> Arrays.asList(FIToFICustomerCreditTransferV01.mmObject(), FIToFICustomerCreditTransferV02.mmObject(), FIToFICustomerCreditTransferV03.mmObject(), FIToFICustomerCreditTransferV04.mmObject(),
 						FIToFICustomerDirectDebitV01.mmObject(), FIToFICustomerDirectDebitV02.mmObject(), FIToFICustomerDirectDebitV03.mmObject(), FIToFICustomerDirectDebitV04.mmObject(), PaymentCancellationRequestV01.mmObject(),
 						FIToFIPaymentReversalV01.mmObject(), FIToFIPaymentReversalV02.mmObject(), FIToFIPaymentReversalV03.mmObject(), FIToFIPaymentReversalV04.mmObject(), PaymentStatusReportV02.mmObject(),
@@ -161,7 +162,6 @@ public class PaymentsClearingandSettlementArchive {
 						FinancialInstitutionCreditTransferV02.mmObject(), FinancialInstitutionCreditTransferV03.mmObject(), FinancialInstitutionCreditTransferV04.mmObject(), PaymentReturnV01.mmObject(), PaymentReturnV02.mmObject(),
 						PaymentReturnV03.mmObject(), PaymentReturnV04.mmObject(), FinancialInstitutionCreditTransferV05.mmObject(), FIToFIPaymentStatusReportV06.mmObject(), FIToFICustomerDirectDebitV05.mmObject(),
 						FIToFIPaymentReversalV05.mmObject(), PaymentReturnV05.mmObject(), FIToFICustomerCreditTransferV05.mmObject(), FIToFIPaymentStatusReportV07.mmObject(), FIToFIPaymentReversalV06.mmObject(), PaymentReturnV06.mmObject());
-				code = "pacs";
 			}
 		});
 		return mmObject_lazy.get();

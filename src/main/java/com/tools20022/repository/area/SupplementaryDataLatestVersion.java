@@ -73,8 +73,8 @@ public class SupplementaryDataLatestVersion {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Supplementary Data - Latest version - master";
 				definition = "Messages that add new components to existing message definitions in existing business areas. The messages are each a separate extension of an existing message and should always be linked to the supplementary data component in the (core) registered message.";
-				messageDefinition_lazy = () -> Arrays.asList(PaymentSD1V01.mmObject(), InformationResponseSD1V01.mmObject());
 				code = "supl";
+				messageDefinition_lazy = () -> Arrays.asList(PaymentSD1V01.mmObject(), InformationResponseSD1V01.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

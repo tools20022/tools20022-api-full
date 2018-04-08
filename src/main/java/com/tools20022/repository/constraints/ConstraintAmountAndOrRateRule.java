@@ -37,6 +37,39 @@ public class ConstraintAmountAndOrRateRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.Tax17 Tax17}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AmountAndOrRateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If Amount is not present, then Rate is mandatory. If Amount is present, then Rate is optional."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<Tax17> forTax17 = new MMConstraint<Tax17>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AmountAndOrRateRule";
+			definition = "If Amount is not present, then Rate is mandatory. If Amount is present, then Rate is optional.";
+			owner_lazy = () -> Tax17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Tax17 obj) throws Exception {
+			checkTax17(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Tax8 Tax8}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -103,39 +136,6 @@ public class ConstraintAmountAndOrRateRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.Tax17 Tax17}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AmountAndOrRateRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If Amount is not present, then Rate is mandatory. If Amount is present, then Rate is optional."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<Tax17> forTax17 = new MMConstraint<Tax17>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "AmountAndOrRateRule";
-			definition = "If Amount is not present, then Rate is mandatory. If Amount is present, then Rate is optional.";
-			owner_lazy = () -> Tax17.mmObject();
-		}
-
-		@Override
-		public void executeValidator(Tax17 obj) throws Exception {
-			checkTax17(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PriceValueChange1
 	 * PriceValueChange1}</li>
 	 * <li>
@@ -169,6 +169,14 @@ public class ConstraintAmountAndOrRateRule {
 	 * If Amount is not present, then Rate is mandatory. If Amount is present,
 	 * then Rate is optional.
 	 */
+	public static void checkTax17(Tax17 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If Amount is not present, then Rate is mandatory. If Amount is present,
+	 * then Rate is optional.
+	 */
 	public static void checkTax8(Tax8 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
@@ -178,14 +186,6 @@ public class ConstraintAmountAndOrRateRule {
 	 * then Rate is optional.
 	 */
 	public static void checkPriceValue2(PriceValue2 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If Amount is not present, then Rate is mandatory. If Amount is present,
-	 * then Rate is optional.
-	 */
-	public static void checkTax17(Tax17 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 

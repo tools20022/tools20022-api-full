@@ -108,11 +108,11 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintRequestedSettlementDateRule#forTransferInConfirmationV04
- * ConstraintRequestedSettlementDateRule.forTransferInConfirmationV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintRequestedSettlementDateRule#for_sese_TransferInConfirmationV04
+ * ConstraintRequestedSettlementDateRule.for_sese_TransferInConfirmationV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#forTransferInConfirmationV04
- * ConstraintEffectiveSettlementDateRule.forTransferInConfirmationV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#for_sese_TransferInConfirmationV04
+ * ConstraintEffectiveSettlementDateRule.for_sese_TransferInConfirmationV04}</li>
  * </ul>
  * </li>
  * <li>
@@ -707,8 +707,8 @@ public class TransferInConfirmationV04 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRequestedSettlementDateRule.forTransferInConfirmationV04,
-						com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferInConfirmationV04);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRequestedSettlementDateRule.for_sese_TransferInConfirmationV04,
+						com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.for_sese_TransferInConfirmationV04);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransferInConfirmationV04";
 				definition = "Scope\r\nAn executing party, for example, a transfer agent, sends the TransferInConfirmation message to the instructing party, for example, an investment manager or its authorised representative, to confirm the receipt of a financial instrument, free of payment, on a given date, from a specified party.\r\nThis message may also be used to confirm the receipt of a financial instrument, free of payment, from another of the instructing parties own accounts or from a third party.\r\nUsage\r\nThe TransferInConfirmation message is used to confirm receipt of a financial instrument, either from another account owned by the instructing party or from a third party. The reference of the transfer confirmation is identified in TransferConfirmationReference.\r\nThe reference of the original transfer instruction is specified in TransferReference. The message identification of the TransferInInstruction message in which the transfer instruction was conveyed may also be quoted in RelatedReference.";

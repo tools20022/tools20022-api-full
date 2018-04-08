@@ -24,8 +24,8 @@ import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 
 /**
- * If ReturnReason/Code is equal to 'NARR', then at least one occurrence of
- * AdditionalReturnReasonInformation must be present.
+ * If Reason/Code is equal to NARR, then AddititionalInformation must be
+ * present.
  */
 public class ConstraintReturnReasonRule {
 
@@ -35,8 +35,12 @@ public class ConstraintReturnReasonRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.ReturnReasonInformation5
-	 * ReturnReasonInformation5}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReturnReasonInformation9
+	 * ReturnReasonInformation9}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/AdditionalInformation[1]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/Reason/Code&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/Reason/Code&lt;/leftOperand&gt;&lt;rightOperand&gt;NARR&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/Reason&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -46,21 +50,22 @@ public class ConstraintReturnReasonRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If ReturnReason/Code is equal to 'NARR', then at least one occurrence of AdditionalReturnReasonInformation must be present."
+	 * "If Reason/Code is equal to NARR, then AddititionalInformation must be present."
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<ReturnReasonInformation5> forReturnReasonInformation5 = new MMConstraint<ReturnReasonInformation5>() {
+	public static final MMConstraint<ReturnReasonInformation9> forReturnReasonInformation9 = new MMConstraint<ReturnReasonInformation9>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnReasonRule";
-			definition = "If ReturnReason/Code is equal to 'NARR', then at least one occurrence of AdditionalReturnReasonInformation must be present.";
-			owner_lazy = () -> ReturnReasonInformation5.mmObject();
+			definition = "If Reason/Code is equal to NARR, then AddititionalInformation must be present.";
+			owner_lazy = () -> ReturnReasonInformation9.mmObject();
+			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalInformation[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Reason/Code</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/Reason/Code</leftOperand><rightOperand>NARR</rightOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Reason</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
 
 		@Override
-		public void executeValidator(ReturnReasonInformation5 obj) throws Exception {
-			checkReturnReasonInformation5(obj);
+		public void executeValidator(ReturnReasonInformation9 obj) throws Exception {
+			checkReturnReasonInformation9(obj);
 		}
 	};
 	/**
@@ -69,11 +74,45 @@ public class ConstraintReturnReasonRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.ReturnReasonInformation10
-	 * ReturnReasonInformation10}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReturnReasonInformation1
+	 * ReturnReasonInformation1}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ReturnReasonRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If ReturnReason/Code is equal to 'NARR', then at least one occurrence of AddititionalReturnReasonInformation must be present."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<ReturnReasonInformation1> forReturnReasonInformation1 = new MMConstraint<ReturnReasonInformation1>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ReturnReasonRule";
+			definition = "If ReturnReason/Code is equal to 'NARR', then at least one occurrence of AddititionalReturnReasonInformation must be present.";
+			owner_lazy = () -> ReturnReasonInformation1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ReturnReasonInformation1 obj) throws Exception {
+			checkReturnReasonInformation1(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.PaymentReturnReason4
+	 * PaymentReturnReason4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
 	 * expression} =
-	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/AdditionalInformation[*]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/Reason/Code&lt;/leftOperand&gt;&lt;rightOperand&gt;NARR&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/Reason&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/Reason/Code&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
+	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/AdditionalInformation[1]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/Reason/Code&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/Reason/Code&lt;/leftOperand&gt;&lt;rightOperand&gt;NARR&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/Reason&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -84,22 +123,28 @@ public class ConstraintReturnReasonRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If Reason/Code is equal to NARR, then AdditionalInformation must be present."
+	 * "If Reason/Code is equal to NARR, then AddititionalInformation must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintReturnReasonRule#forPaymentReturnReason1
+	 * ConstraintReturnReasonRule.forPaymentReturnReason1}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<ReturnReasonInformation10> forReturnReasonInformation10 = new MMConstraint<ReturnReasonInformation10>() {
+	public static final MMConstraint<PaymentReturnReason4> forPaymentReturnReason4 = new MMConstraint<PaymentReturnReason4>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnReasonRule";
-			definition = "If Reason/Code is equal to NARR, then AdditionalInformation must be present.";
-			owner_lazy = () -> ReturnReasonInformation10.mmObject();
-			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalInformation[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/Reason/Code</leftOperand><rightOperand>NARR</rightOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Reason</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Reason/Code</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+			definition = "If Reason/Code is equal to NARR, then AddititionalInformation must be present.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReturnReasonRule.forPaymentReturnReason1;
+			owner_lazy = () -> PaymentReturnReason4.mmObject();
+			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalInformation[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Reason/Code</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/Reason/Code</leftOperand><rightOperand>NARR</rightOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Reason</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
 
 		@Override
-		public void executeValidator(ReturnReasonInformation10 obj) throws Exception {
-			checkReturnReasonInformation10(obj);
+		public void executeValidator(PaymentReturnReason4 obj) throws Exception {
+			checkPaymentReturnReason4(obj);
 		}
 	};
 	/**
@@ -156,45 +201,11 @@ public class ConstraintReturnReasonRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.ReturnReasonInformation1
-	 * ReturnReasonInformation1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ReturnReasonRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If ReturnReason/Code is equal to 'NARR', then at least one occurrence of AddititionalReturnReasonInformation must be present."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<ReturnReasonInformation1> forReturnReasonInformation1 = new MMConstraint<ReturnReasonInformation1>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ReturnReasonRule";
-			definition = "If ReturnReason/Code is equal to 'NARR', then at least one occurrence of AddititionalReturnReasonInformation must be present.";
-			owner_lazy = () -> ReturnReasonInformation1.mmObject();
-		}
-
-		@Override
-		public void executeValidator(ReturnReasonInformation1 obj) throws Exception {
-			checkReturnReasonInformation1(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.ReturnReasonInformation9
-	 * ReturnReasonInformation9}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReturnReasonInformation10
+	 * ReturnReasonInformation10}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
 	 * expression} =
-	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/AdditionalInformation[1]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/Reason/Code&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/Reason/Code&lt;/leftOperand&gt;&lt;rightOperand&gt;NARR&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/Reason&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
+	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/AdditionalInformation[*]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/Reason/Code&lt;/leftOperand&gt;&lt;rightOperand&gt;NARR&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/Reason&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/Reason/Code&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -205,22 +216,22 @@ public class ConstraintReturnReasonRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If Reason/Code is equal to NARR, then AddititionalInformation must be present."
+	 * "If Reason/Code is equal to NARR, then AdditionalInformation must be present."
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<ReturnReasonInformation9> forReturnReasonInformation9 = new MMConstraint<ReturnReasonInformation9>() {
+	public static final MMConstraint<ReturnReasonInformation10> forReturnReasonInformation10 = new MMConstraint<ReturnReasonInformation10>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnReasonRule";
-			definition = "If Reason/Code is equal to NARR, then AddititionalInformation must be present.";
-			owner_lazy = () -> ReturnReasonInformation9.mmObject();
-			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalInformation[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Reason/Code</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/Reason/Code</leftOperand><rightOperand>NARR</rightOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Reason</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+			definition = "If Reason/Code is equal to NARR, then AdditionalInformation must be present.";
+			owner_lazy = () -> ReturnReasonInformation10.mmObject();
+			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalInformation[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/Reason/Code</leftOperand><rightOperand>NARR</rightOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Reason</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Reason/Code</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
 
 		@Override
-		public void executeValidator(ReturnReasonInformation9 obj) throws Exception {
-			checkReturnReasonInformation9(obj);
+		public void executeValidator(ReturnReasonInformation10 obj) throws Exception {
+			checkReturnReasonInformation10(obj);
 		}
 	};
 	/**
@@ -316,51 +327,6 @@ public class ConstraintReturnReasonRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentReturnReason4
-	 * PaymentReturnReason4}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
-	 * expression} =
-	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/AdditionalInformation[1]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/Reason/Code&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/Reason/Code&lt;/leftOperand&gt;&lt;rightOperand&gt;NARR&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/Reason&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ReturnReasonRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If Reason/Code is equal to NARR, then AddititionalInformation must be present."
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintReturnReasonRule#forPaymentReturnReason1
-	 * ConstraintReturnReasonRule.forPaymentReturnReason1}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<PaymentReturnReason4> forPaymentReturnReason4 = new MMConstraint<PaymentReturnReason4>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ReturnReasonRule";
-			definition = "If Reason/Code is equal to NARR, then AddititionalInformation must be present.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReturnReasonRule.forPaymentReturnReason1;
-			owner_lazy = () -> PaymentReturnReason4.mmObject();
-			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalInformation[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Reason/Code</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/Reason/Code</leftOperand><rightOperand>NARR</rightOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Reason</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
-		}
-
-		@Override
-		public void executeValidator(PaymentReturnReason4 obj) throws Exception {
-			checkPaymentReturnReason4(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PaymentReturnReason3
 	 * PaymentReturnReason3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
@@ -400,28 +366,46 @@ public class ConstraintReturnReasonRule {
 			checkPaymentReturnReason3(obj);
 		}
 	};
-
 	/**
-	 * If ReturnReason/Code is equal to 'NARR', then at least one occurrence of
-	 * AdditionalReturnReasonInformation must be present.
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.ReturnReasonInformation5
+	 * ReturnReasonInformation5}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ReturnReasonRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If ReturnReason/Code is equal to 'NARR', then at least one occurrence of AdditionalReturnReasonInformation must be present."
+	 * </li>
+	 * </ul>
 	 */
-	public static void checkReturnReasonInformation5(ReturnReasonInformation5 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
+	public static final MMConstraint<ReturnReasonInformation5> forReturnReasonInformation5 = new MMConstraint<ReturnReasonInformation5>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ReturnReasonRule";
+			definition = "If ReturnReason/Code is equal to 'NARR', then at least one occurrence of AdditionalReturnReasonInformation must be present.";
+			owner_lazy = () -> ReturnReasonInformation5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ReturnReasonInformation5 obj) throws Exception {
+			checkReturnReasonInformation5(obj);
+		}
+	};
 
 	/**
-	 * If Reason/Code is equal to NARR, then AdditionalInformation must be
+	 * If Reason/Code is equal to NARR, then AddititionalInformation must be
 	 * present.
 	 */
-	public static void checkReturnReasonInformation10(ReturnReasonInformation10 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If Reason/Code is equal to NARR, then AdditionalInformation must be
-	 * present.
-	 */
-	public static void checkPaymentReturnReason2(PaymentReturnReason2 obj) throws Exception {
+	public static void checkReturnReasonInformation9(ReturnReasonInformation9 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -437,7 +421,23 @@ public class ConstraintReturnReasonRule {
 	 * If Reason/Code is equal to NARR, then AddititionalInformation must be
 	 * present.
 	 */
-	public static void checkReturnReasonInformation9(ReturnReasonInformation9 obj) throws Exception {
+	public static void checkPaymentReturnReason4(PaymentReturnReason4 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If Reason/Code is equal to NARR, then AdditionalInformation must be
+	 * present.
+	 */
+	public static void checkPaymentReturnReason2(PaymentReturnReason2 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If Reason/Code is equal to NARR, then AdditionalInformation must be
+	 * present.
+	 */
+	public static void checkReturnReasonInformation10(ReturnReasonInformation10 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -458,18 +458,18 @@ public class ConstraintReturnReasonRule {
 	}
 
 	/**
-	 * If Reason/Code is equal to NARR, then AddititionalInformation must be
-	 * present.
-	 */
-	public static void checkPaymentReturnReason4(PaymentReturnReason4 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
 	 * If Reason/Code is equal to NARR, then AdditionalInformation must be
 	 * present.
 	 */
 	public static void checkPaymentReturnReason3(PaymentReturnReason3 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If ReturnReason/Code is equal to 'NARR', then at least one occurrence of
+	 * AdditionalReturnReasonInformation must be present.
+	 */
+	public static void checkReturnReasonInformation5(ReturnReasonInformation5 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

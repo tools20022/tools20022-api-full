@@ -154,9 +154,9 @@ public class RegulatoryTransactionReportCancellationStatusV01 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportCancellationStatusOrIndividualTransactionCancellationStatusRule";
 			definition = "Either ReportCancellationStatus or IndividualTransactionCancellationStatus must be present, but not both.";
-			messageDefinition_lazy = () -> com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationStatusV01.mmObject();
 			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationStatusV01.mmReportCancellationStatus,
 					com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationStatusV01.mmIndividualTransactionCancellationStatus);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationStatusV01.mmObject();
 		}
 	};
 	@XmlElement(name = "Id", required = true)

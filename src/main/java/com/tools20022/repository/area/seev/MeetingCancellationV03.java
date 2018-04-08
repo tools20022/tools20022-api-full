@@ -90,19 +90,19 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCancellation1Guideline#forMeetingCancellationV03
- * ConstraintCancellation1Guideline.forMeetingCancellationV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCancellation1Guideline#for_seev_MeetingCancellationV03
+ * ConstraintCancellation1Guideline.for_seev_MeetingCancellationV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCancellation2Guideline#forMeetingCancellationV03
- * ConstraintCancellation2Guideline.forMeetingCancellationV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCancellation2Guideline#for_seev_MeetingCancellationV03
+ * ConstraintCancellation2Guideline.for_seev_MeetingCancellationV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintMeetingIdentificationAndPreviousReference1Guideline#forMeetingCancellationV03
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMeetingIdentificationAndPreviousReference1Guideline#for_seev_MeetingCancellationV03
  * ConstraintMeetingIdentificationAndPreviousReference1Guideline.
- * forMeetingCancellationV03}</li>
+ * for_seev_MeetingCancellationV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintMeetingIdentificationAndPreviousReference2Guideline#forMeetingCancellationV03
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMeetingIdentificationAndPreviousReference2Guideline#for_seev_MeetingCancellationV03
  * ConstraintMeetingIdentificationAndPreviousReference2Guideline.
- * forMeetingCancellationV03}</li>
+ * for_seev_MeetingCancellationV03}</li>
  * </ul>
  * </li>
  * <li>
@@ -416,10 +416,10 @@ public class MeetingCancellationV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCancellation1Guideline.forMeetingCancellationV03,
-						com.tools20022.repository.constraints.ConstraintCancellation2Guideline.forMeetingCancellationV03,
-						com.tools20022.repository.constraints.ConstraintMeetingIdentificationAndPreviousReference1Guideline.forMeetingCancellationV03,
-						com.tools20022.repository.constraints.ConstraintMeetingIdentificationAndPreviousReference2Guideline.forMeetingCancellationV03);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCancellation1Guideline.for_seev_MeetingCancellationV03,
+						com.tools20022.repository.constraints.ConstraintCancellation2Guideline.for_seev_MeetingCancellationV03,
+						com.tools20022.repository.constraints.ConstraintMeetingIdentificationAndPreviousReference1Guideline.for_seev_MeetingCancellationV03,
+						com.tools20022.repository.constraints.ConstraintMeetingIdentificationAndPreviousReference2Guideline.for_seev_MeetingCancellationV03);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MeetingCancellationV03";
 				definition = "Scope\r\nThe MeetingCancellation message is sent by the party that sent the MeetingNotification message to the original receiver. It is sent to cancel the previous MeetingNotification message or to advise the cancellation of a meeting.\r\nUsage\r\nThe MeetingCancellation message is used in two different situations.\r\nFirst, it is used to cancel a previously sent MeetingNotification message. In this case, the MessageCancellation, the MeetingReference and the Reason building blocks need to be present.\r\nSecond, it is used to advise that the meeting is cancelled. In this case, only the MeetingReference and Reason building blocks need to be present.";

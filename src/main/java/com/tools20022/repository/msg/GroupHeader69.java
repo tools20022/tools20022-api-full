@@ -235,8 +235,8 @@ public class GroupHeader69 {
 	 * constraint} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintR3#forReportCategory
-	 * ConstraintR3.forReportCategory}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintR3#forGroupHeader69_ReportCategory
+	 * ConstraintR3.forGroupHeader69_ReportCategory}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -257,7 +257,7 @@ public class GroupHeader69 {
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader69.mmObject();
 			isDerived = false;
 			xmlTag = "RptCtgy";
-			constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintR3.forReportCategory);
+			constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintR3.forGroupHeader69_ReportCategory);
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportCategory";
 			definition = "Specifies if the report is based on debit invoice, credit invoice, card transaction or cash transaction.";
@@ -299,8 +299,8 @@ public class GroupHeader69 {
 	 * constraint} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintR4#forTaxReportPurpose
-	 * ConstraintR4.forTaxReportPurpose}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintR4#forGroupHeader69_TaxReportPurpose
+	 * ConstraintR4.forGroupHeader69_TaxReportPurpose}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -319,7 +319,7 @@ public class GroupHeader69 {
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader69.mmObject();
 			isDerived = false;
 			xmlTag = "TaxRptPurp";
-			constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintR4.forTaxReportPurpose);
+			constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintR4.forGroupHeader69_TaxReportPurpose);
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxReportPurpose";
 			definition = "Specifies if the TaxReport is new, correction or remove.";
@@ -519,8 +519,8 @@ public class GroupHeader69 {
 	 * constraint} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintR5#forLanguageCode
-	 * ConstraintR5.forLanguageCode}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintR5#forGroupHeader69_LanguageCode
+	 * ConstraintR5.forGroupHeader69_LanguageCode}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -539,7 +539,7 @@ public class GroupHeader69 {
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader69.mmObject();
 			isDerived = false;
 			xmlTag = "LangCd";
-			constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintR5.forLanguageCode);
+			constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintR5.forGroupHeader69_LanguageCode);
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LanguageCode";
 			definition = "Specifies the language used in the message.";

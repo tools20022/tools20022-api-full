@@ -24,85 +24,12 @@ import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 
 /**
- * If ChargesInformation/ChargesAmount is present, then the currency of
+ * If ChargesInformation is present, then the currency of
  * ChargesInformation/ChargesAmount must be the same as the currency of
  * InterbankSettlementAmount.
  */
 public class ConstraintChargesAmountRule {
 
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation2
-	 * CreditTransferTransactionInformation2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ChargesAmountRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If ChargesInformation/ChargesAmount is present, then the currency of ChargesInformation/ChargesAmount must be the same as the currency of InterbankSettlementAmount."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CreditTransferTransactionInformation2> forCreditTransferTransactionInformation2 = new MMConstraint<CreditTransferTransactionInformation2>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ChargesAmountRule";
-			definition = "If ChargesInformation/ChargesAmount is present, then the currency of ChargesInformation/ChargesAmount must be the same as the currency of InterbankSettlementAmount.";
-			owner_lazy = () -> CreditTransferTransactionInformation2.mmObject();
-		}
-
-		@Override
-		public void executeValidator(CreditTransferTransactionInformation2 obj) throws Exception {
-			checkCreditTransferTransactionInformation2(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation11
-	 * CreditTransferTransactionInformation11}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
-	 * expression} =
-	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToNode\"&gt;&lt;leftOperand&gt;/ChargesInformation[*]/Amount/@Currency&lt;/leftOperand&gt;&lt;rightOperand&gt;/InterbankSettlementAmount/@Currency&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/ChargesInformation[1]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/ChargesInformation[*]/Amount&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ChargesAmountRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If ChargesInformation is present, then the currency of ChargesInformation/ChargesAmount must be the same as the currency of InterbankSettlementAmount."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CreditTransferTransactionInformation11> forCreditTransferTransactionInformation11 = new MMConstraint<CreditTransferTransactionInformation11>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ChargesAmountRule";
-			definition = "If ChargesInformation is present, then the currency of ChargesInformation/ChargesAmount must be the same as the currency of InterbankSettlementAmount.";
-			owner_lazy = () -> CreditTransferTransactionInformation11.mmObject();
-			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/ChargesInformation[*]/Amount/@Currency</leftOperand><rightOperand>/InterbankSettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesInformation[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesInformation[*]/Amount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
-		}
-
-		@Override
-		public void executeValidator(CreditTransferTransactionInformation11 obj) throws Exception {
-			checkCreditTransferTransactionInformation11(obj);
-		}
-	};
 	/**
 	 * 
 	 <p>
@@ -140,6 +67,84 @@ public class ConstraintChargesAmountRule {
 		@Override
 		public void executeValidator(CreditTransferTransaction2 obj) throws Exception {
 			checkCreditTransferTransaction2(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation6
+	 * DirectDebitTransactionInformation6}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToNode\"&gt;&lt;leftOperand&gt;/ChargesInformation[*]/ChargesAmount/@Currency&lt;/leftOperand&gt;&lt;rightOperand&gt;/InterbankSettlementAmount/@Currency&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/ChargesInformation[*]/ChargesAmount&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ChargesAmountRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "ISO20022 Rule: (not injected)\nIf ChargesInformation/ChargesAmount is present, then the currency of ChargesInformation/ChargesAmount must be the same as the currency of InterbankSettlementAmount."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<DirectDebitTransactionInformation6> forDirectDebitTransactionInformation6 = new MMConstraint<DirectDebitTransactionInformation6>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ChargesAmountRule";
+			definition = "ISO20022 Rule: (not injected)\nIf ChargesInformation/ChargesAmount is present, then the currency of ChargesInformation/ChargesAmount must be the same as the currency of InterbankSettlementAmount.";
+			owner_lazy = () -> DirectDebitTransactionInformation6.mmObject();
+			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/ChargesInformation[*]/ChargesAmount/@Currency</leftOperand><rightOperand>/InterbankSettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesInformation[*]/ChargesAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(DirectDebitTransactionInformation6 obj) throws Exception {
+			checkDirectDebitTransactionInformation6(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation7
+	 * CreditTransferTransactionInformation7}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToNode\"&gt;&lt;leftOperand&gt;/ChargesInformation[*]/ChargesAmount/@Currency&lt;/leftOperand&gt;&lt;rightOperand&gt;/InterbankSettlementAmount/@Currency&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/ChargesInformation[*]/ChargesAmount&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ChargesAmountRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "ISO20022 Rule: (not injected)\nIf ChargesInformation/ChargesAmount is present, then the currency of ChargesInformation/ChargesAmount must be the same as the currency of InterbankSettlementAmount."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CreditTransferTransactionInformation7> forCreditTransferTransactionInformation7 = new MMConstraint<CreditTransferTransactionInformation7>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ChargesAmountRule";
+			definition = "ISO20022 Rule: (not injected)\nIf ChargesInformation/ChargesAmount is present, then the currency of ChargesInformation/ChargesAmount must be the same as the currency of InterbankSettlementAmount.";
+			owner_lazy = () -> CreditTransferTransactionInformation7.mmObject();
+			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/ChargesInformation[*]/ChargesAmount/@Currency</leftOperand><rightOperand>/InterbankSettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesInformation[*]/ChargesAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransactionInformation7 obj) throws Exception {
+			checkCreditTransferTransactionInformation7(obj);
 		}
 	};
 	/**
@@ -196,45 +201,11 @@ public class ConstraintChargesAmountRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation2
-	 * DirectDebitTransactionInformation2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ChargesAmountRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If ChargesInformation/ChargesAmount is present, then the currency of ChargesInformation/ChargesAmount must be the same as the currency of InterbankSettlementAmount."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<DirectDebitTransactionInformation2> forDirectDebitTransactionInformation2 = new MMConstraint<DirectDebitTransactionInformation2>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ChargesAmountRule";
-			definition = "If ChargesInformation/ChargesAmount is present, then the currency of ChargesInformation/ChargesAmount must be the same as the currency of InterbankSettlementAmount.";
-			owner_lazy = () -> DirectDebitTransactionInformation2.mmObject();
-		}
-
-		@Override
-		public void executeValidator(DirectDebitTransactionInformation2 obj) throws Exception {
-			checkDirectDebitTransactionInformation2(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation10
-	 * DirectDebitTransactionInformation10}</li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation8
+	 * DirectDebitTransactionInformation8}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
 	 * expression} =
-	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToNode\"&gt;&lt;leftOperand&gt;/ChargesInformation[*]/Amount/@Currency&lt;/leftOperand&gt;&lt;rightOperand&gt;/InterbankSettlementAmount/@Currency&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/ChargesInformation[*]/Amount&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
+	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToNode\"&gt;&lt;leftOperand&gt;/ChargesInformation[*]/ChargesAmount/@Currency&lt;/leftOperand&gt;&lt;rightOperand&gt;/InterbankSettlementAmount/@Currency&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/ChargesInformation[*]/ChargesAmount&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -245,61 +216,22 @@ public class ConstraintChargesAmountRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If ChargesInformation is present, then the currency of ChargesInformation/ChargesAmount must be the same as the currency of InterbankSettlementAmount."
+	 * "ISO20022 Rule: (not injected)\nIf ChargesInformation/ChargesAmount is present, then the currency of ChargesInformation/ChargesAmount must be the same as the currency of InterbankSettlementAmount."
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<DirectDebitTransactionInformation10> forDirectDebitTransactionInformation10 = new MMConstraint<DirectDebitTransactionInformation10>() {
+	public static final MMConstraint<DirectDebitTransactionInformation8> forDirectDebitTransactionInformation8 = new MMConstraint<DirectDebitTransactionInformation8>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesAmountRule";
-			definition = "If ChargesInformation is present, then the currency of ChargesInformation/ChargesAmount must be the same as the currency of InterbankSettlementAmount.";
-			owner_lazy = () -> DirectDebitTransactionInformation10.mmObject();
-			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/ChargesInformation[*]/Amount/@Currency</leftOperand><rightOperand>/InterbankSettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesInformation[*]/Amount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+			definition = "ISO20022 Rule: (not injected)\nIf ChargesInformation/ChargesAmount is present, then the currency of ChargesInformation/ChargesAmount must be the same as the currency of InterbankSettlementAmount.";
+			owner_lazy = () -> DirectDebitTransactionInformation8.mmObject();
+			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/ChargesInformation[*]/ChargesAmount/@Currency</leftOperand><rightOperand>/InterbankSettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesInformation[*]/ChargesAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
 
 		@Override
-		public void executeValidator(DirectDebitTransactionInformation10 obj) throws Exception {
-			checkDirectDebitTransactionInformation10(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation12
-	 * DirectDebitTransactionInformation12}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
-	 * expression} =
-	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToNode\"&gt;&lt;leftOperand&gt;/ChargesInformation[*]/Amount/@Currency&lt;/leftOperand&gt;&lt;rightOperand&gt;/InterbankSettlementAmount/@Currency&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/ChargesInformation[*]/Amount&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ChargesAmountRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If ChargesInformation is present, then the currency of ChargesInformation/ChargesAmount must be the same as the currency of InterbankSettlementAmount."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<DirectDebitTransactionInformation12> forDirectDebitTransactionInformation12 = new MMConstraint<DirectDebitTransactionInformation12>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ChargesAmountRule";
-			definition = "If ChargesInformation is present, then the currency of ChargesInformation/ChargesAmount must be the same as the currency of InterbankSettlementAmount.";
-			owner_lazy = () -> DirectDebitTransactionInformation12.mmObject();
-			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/ChargesInformation[*]/Amount/@Currency</leftOperand><rightOperand>/InterbankSettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesInformation[*]/Amount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
-		}
-
-		@Override
-		public void executeValidator(DirectDebitTransactionInformation12 obj) throws Exception {
-			checkDirectDebitTransactionInformation12(obj);
+		public void executeValidator(DirectDebitTransactionInformation8 obj) throws Exception {
+			checkDirectDebitTransactionInformation8(obj);
 		}
 	};
 	/**
@@ -356,45 +288,6 @@ public class ConstraintChargesAmountRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation7
-	 * CreditTransferTransactionInformation7}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
-	 * expression} =
-	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToNode\"&gt;&lt;leftOperand&gt;/ChargesInformation[*]/ChargesAmount/@Currency&lt;/leftOperand&gt;&lt;rightOperand&gt;/InterbankSettlementAmount/@Currency&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/ChargesInformation[*]/ChargesAmount&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ChargesAmountRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "ISO20022 Rule: (not injected)\nIf ChargesInformation/ChargesAmount is present, then the currency of ChargesInformation/ChargesAmount must be the same as the currency of InterbankSettlementAmount."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CreditTransferTransactionInformation7> forCreditTransferTransactionInformation7 = new MMConstraint<CreditTransferTransactionInformation7>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ChargesAmountRule";
-			definition = "ISO20022 Rule: (not injected)\nIf ChargesInformation/ChargesAmount is present, then the currency of ChargesInformation/ChargesAmount must be the same as the currency of InterbankSettlementAmount.";
-			owner_lazy = () -> CreditTransferTransactionInformation7.mmObject();
-			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/ChargesInformation[*]/ChargesAmount/@Currency</leftOperand><rightOperand>/InterbankSettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesInformation[*]/ChargesAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
-		}
-
-		@Override
-		public void executeValidator(CreditTransferTransactionInformation7 obj) throws Exception {
-			checkCreditTransferTransactionInformation7(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation9
 	 * CreditTransferTransactionInformation9}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
@@ -434,11 +327,11 @@ public class ConstraintChargesAmountRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation6
-	 * DirectDebitTransactionInformation6}</li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation12
+	 * DirectDebitTransactionInformation12}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
 	 * expression} =
-	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToNode\"&gt;&lt;leftOperand&gt;/ChargesInformation[*]/ChargesAmount/@Currency&lt;/leftOperand&gt;&lt;rightOperand&gt;/InterbankSettlementAmount/@Currency&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/ChargesInformation[*]/ChargesAmount&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
+	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToNode\"&gt;&lt;leftOperand&gt;/ChargesInformation[*]/Amount/@Currency&lt;/leftOperand&gt;&lt;rightOperand&gt;/InterbankSettlementAmount/@Currency&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/ChargesInformation[*]/Amount&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -449,22 +342,22 @@ public class ConstraintChargesAmountRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "ISO20022 Rule: (not injected)\nIf ChargesInformation/ChargesAmount is present, then the currency of ChargesInformation/ChargesAmount must be the same as the currency of InterbankSettlementAmount."
+	 * "If ChargesInformation is present, then the currency of ChargesInformation/ChargesAmount must be the same as the currency of InterbankSettlementAmount."
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<DirectDebitTransactionInformation6> forDirectDebitTransactionInformation6 = new MMConstraint<DirectDebitTransactionInformation6>() {
+	public static final MMConstraint<DirectDebitTransactionInformation12> forDirectDebitTransactionInformation12 = new MMConstraint<DirectDebitTransactionInformation12>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesAmountRule";
-			definition = "ISO20022 Rule: (not injected)\nIf ChargesInformation/ChargesAmount is present, then the currency of ChargesInformation/ChargesAmount must be the same as the currency of InterbankSettlementAmount.";
-			owner_lazy = () -> DirectDebitTransactionInformation6.mmObject();
-			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/ChargesInformation[*]/ChargesAmount/@Currency</leftOperand><rightOperand>/InterbankSettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesInformation[*]/ChargesAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+			definition = "If ChargesInformation is present, then the currency of ChargesInformation/ChargesAmount must be the same as the currency of InterbankSettlementAmount.";
+			owner_lazy = () -> DirectDebitTransactionInformation12.mmObject();
+			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/ChargesInformation[*]/Amount/@Currency</leftOperand><rightOperand>/InterbankSettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesInformation[*]/Amount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
 
 		@Override
-		public void executeValidator(DirectDebitTransactionInformation6 obj) throws Exception {
-			checkDirectDebitTransactionInformation6(obj);
+		public void executeValidator(DirectDebitTransactionInformation12 obj) throws Exception {
+			checkDirectDebitTransactionInformation12(obj);
 		}
 	};
 	/**
@@ -473,11 +366,45 @@ public class ConstraintChargesAmountRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation8
-	 * DirectDebitTransactionInformation8}</li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation2
+	 * CreditTransferTransactionInformation2}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ChargesAmountRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If ChargesInformation/ChargesAmount is present, then the currency of ChargesInformation/ChargesAmount must be the same as the currency of InterbankSettlementAmount."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CreditTransferTransactionInformation2> forCreditTransferTransactionInformation2 = new MMConstraint<CreditTransferTransactionInformation2>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ChargesAmountRule";
+			definition = "If ChargesInformation/ChargesAmount is present, then the currency of ChargesInformation/ChargesAmount must be the same as the currency of InterbankSettlementAmount.";
+			owner_lazy = () -> CreditTransferTransactionInformation2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransactionInformation2 obj) throws Exception {
+			checkCreditTransferTransactionInformation2(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation10
+	 * DirectDebitTransactionInformation10}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
 	 * expression} =
-	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToNode\"&gt;&lt;leftOperand&gt;/ChargesInformation[*]/ChargesAmount/@Currency&lt;/leftOperand&gt;&lt;rightOperand&gt;/InterbankSettlementAmount/@Currency&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/ChargesInformation[*]/ChargesAmount&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
+	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToNode\"&gt;&lt;leftOperand&gt;/ChargesInformation[*]/Amount/@Currency&lt;/leftOperand&gt;&lt;rightOperand&gt;/InterbankSettlementAmount/@Currency&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/ChargesInformation[*]/Amount&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -488,42 +415,97 @@ public class ConstraintChargesAmountRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "ISO20022 Rule: (not injected)\nIf ChargesInformation/ChargesAmount is present, then the currency of ChargesInformation/ChargesAmount must be the same as the currency of InterbankSettlementAmount."
+	 * "If ChargesInformation is present, then the currency of ChargesInformation/ChargesAmount must be the same as the currency of InterbankSettlementAmount."
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<DirectDebitTransactionInformation8> forDirectDebitTransactionInformation8 = new MMConstraint<DirectDebitTransactionInformation8>() {
+	public static final MMConstraint<DirectDebitTransactionInformation10> forDirectDebitTransactionInformation10 = new MMConstraint<DirectDebitTransactionInformation10>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesAmountRule";
-			definition = "ISO20022 Rule: (not injected)\nIf ChargesInformation/ChargesAmount is present, then the currency of ChargesInformation/ChargesAmount must be the same as the currency of InterbankSettlementAmount.";
-			owner_lazy = () -> DirectDebitTransactionInformation8.mmObject();
-			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/ChargesInformation[*]/ChargesAmount/@Currency</leftOperand><rightOperand>/InterbankSettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesInformation[*]/ChargesAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+			definition = "If ChargesInformation is present, then the currency of ChargesInformation/ChargesAmount must be the same as the currency of InterbankSettlementAmount.";
+			owner_lazy = () -> DirectDebitTransactionInformation10.mmObject();
+			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/ChargesInformation[*]/Amount/@Currency</leftOperand><rightOperand>/InterbankSettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesInformation[*]/Amount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
 
 		@Override
-		public void executeValidator(DirectDebitTransactionInformation8 obj) throws Exception {
-			checkDirectDebitTransactionInformation8(obj);
+		public void executeValidator(DirectDebitTransactionInformation10 obj) throws Exception {
+			checkDirectDebitTransactionInformation10(obj);
 		}
 	};
-
 	/**
-	 * If ChargesInformation/ChargesAmount is present, then the currency of
-	 * ChargesInformation/ChargesAmount must be the same as the currency of
-	 * InterbankSettlementAmount.
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation11
+	 * CreditTransferTransactionInformation11}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToNode\"&gt;&lt;leftOperand&gt;/ChargesInformation[*]/Amount/@Currency&lt;/leftOperand&gt;&lt;rightOperand&gt;/InterbankSettlementAmount/@Currency&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/ChargesInformation[1]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/ChargesInformation[*]/Amount&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ChargesAmountRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If ChargesInformation is present, then the currency of ChargesInformation/ChargesAmount must be the same as the currency of InterbankSettlementAmount."
+	 * </li>
+	 * </ul>
 	 */
-	public static void checkCreditTransferTransactionInformation2(CreditTransferTransactionInformation2 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
+	public static final MMConstraint<CreditTransferTransactionInformation11> forCreditTransferTransactionInformation11 = new MMConstraint<CreditTransferTransactionInformation11>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ChargesAmountRule";
+			definition = "If ChargesInformation is present, then the currency of ChargesInformation/ChargesAmount must be the same as the currency of InterbankSettlementAmount.";
+			owner_lazy = () -> CreditTransferTransactionInformation11.mmObject();
+			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/ChargesInformation[*]/Amount/@Currency</leftOperand><rightOperand>/InterbankSettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesInformation[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesInformation[*]/Amount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
 
+		@Override
+		public void executeValidator(CreditTransferTransactionInformation11 obj) throws Exception {
+			checkCreditTransferTransactionInformation11(obj);
+		}
+	};
 	/**
-	 * If ChargesInformation is present, then the currency of
-	 * ChargesInformation/ChargesAmount must be the same as the currency of
-	 * InterbankSettlementAmount.
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation2
+	 * DirectDebitTransactionInformation2}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ChargesAmountRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If ChargesInformation/ChargesAmount is present, then the currency of ChargesInformation/ChargesAmount must be the same as the currency of InterbankSettlementAmount."
+	 * </li>
+	 * </ul>
 	 */
-	public static void checkCreditTransferTransactionInformation11(CreditTransferTransactionInformation11 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
+	public static final MMConstraint<DirectDebitTransactionInformation2> forDirectDebitTransactionInformation2 = new MMConstraint<DirectDebitTransactionInformation2>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ChargesAmountRule";
+			definition = "If ChargesInformation/ChargesAmount is present, then the currency of ChargesInformation/ChargesAmount must be the same as the currency of InterbankSettlementAmount.";
+			owner_lazy = () -> DirectDebitTransactionInformation2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DirectDebitTransactionInformation2 obj) throws Exception {
+			checkDirectDebitTransactionInformation2(obj);
+		}
+	};
 
 	/**
 	 * If ChargesInformation is present, then the currency of
@@ -531,69 +513,6 @@ public class ConstraintChargesAmountRule {
 	 * InterbankSettlementAmount.
 	 */
 	public static void checkCreditTransferTransaction2(CreditTransferTransaction2 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If ChargesInformation is present, then the currency of
-	 * ChargesInformation/ChargesAmount must be the same as the currency of
-	 * InterbankSettlementAmount.
-	 */
-	public static void checkCreditTransferTransaction7(CreditTransferTransaction7 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If ChargesInformation/ChargesAmount is present, then the currency of
-	 * ChargesInformation/ChargesAmount must be the same as the currency of
-	 * InterbankSettlementAmount.
-	 */
-	public static void checkDirectDebitTransactionInformation2(DirectDebitTransactionInformation2 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If ChargesInformation is present, then the currency of
-	 * ChargesInformation/ChargesAmount must be the same as the currency of
-	 * InterbankSettlementAmount.
-	 */
-	public static void checkDirectDebitTransactionInformation10(DirectDebitTransactionInformation10 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If ChargesInformation is present, then the currency of
-	 * ChargesInformation/ChargesAmount must be the same as the currency of
-	 * InterbankSettlementAmount.
-	 */
-	public static void checkDirectDebitTransactionInformation12(DirectDebitTransactionInformation12 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If ChargesInformation is present, then the currency of
-	 * ChargesInformation/ChargesAmount must be the same as the currency of
-	 * InterbankSettlementAmount.
-	 */
-	public static void checkDirectDebitTransactionInformation14(DirectDebitTransactionInformation14 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * ISO20022 Rule: (not injected) If ChargesInformation/ChargesAmount is
-	 * present, then the currency of ChargesInformation/ChargesAmount must be
-	 * the same as the currency of InterbankSettlementAmount.
-	 */
-	public static void checkCreditTransferTransactionInformation7(CreditTransferTransactionInformation7 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * ISO20022 Rule: If ChargesInformation/ChargesAmount is present, then the
-	 * currency of ChargesInformation/ChargesAmount must be the same as the
-	 * currency of InterbankSettlementAmount.
-	 */
-	public static void checkCreditTransferTransactionInformation9(CreditTransferTransactionInformation9 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -611,7 +530,88 @@ public class ConstraintChargesAmountRule {
 	 * present, then the currency of ChargesInformation/ChargesAmount must be
 	 * the same as the currency of InterbankSettlementAmount.
 	 */
+	public static void checkCreditTransferTransactionInformation7(CreditTransferTransactionInformation7 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If ChargesInformation is present, then the currency of
+	 * ChargesInformation/ChargesAmount must be the same as the currency of
+	 * InterbankSettlementAmount.
+	 */
+	public static void checkCreditTransferTransaction7(CreditTransferTransaction7 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * ISO20022 Rule: (not injected) If ChargesInformation/ChargesAmount is
+	 * present, then the currency of ChargesInformation/ChargesAmount must be
+	 * the same as the currency of InterbankSettlementAmount.
+	 */
 	public static void checkDirectDebitTransactionInformation8(DirectDebitTransactionInformation8 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If ChargesInformation is present, then the currency of
+	 * ChargesInformation/ChargesAmount must be the same as the currency of
+	 * InterbankSettlementAmount.
+	 */
+	public static void checkDirectDebitTransactionInformation14(DirectDebitTransactionInformation14 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * ISO20022 Rule: If ChargesInformation/ChargesAmount is present, then the
+	 * currency of ChargesInformation/ChargesAmount must be the same as the
+	 * currency of InterbankSettlementAmount.
+	 */
+	public static void checkCreditTransferTransactionInformation9(CreditTransferTransactionInformation9 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If ChargesInformation is present, then the currency of
+	 * ChargesInformation/ChargesAmount must be the same as the currency of
+	 * InterbankSettlementAmount.
+	 */
+	public static void checkDirectDebitTransactionInformation12(DirectDebitTransactionInformation12 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If ChargesInformation/ChargesAmount is present, then the currency of
+	 * ChargesInformation/ChargesAmount must be the same as the currency of
+	 * InterbankSettlementAmount.
+	 */
+	public static void checkCreditTransferTransactionInformation2(CreditTransferTransactionInformation2 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If ChargesInformation is present, then the currency of
+	 * ChargesInformation/ChargesAmount must be the same as the currency of
+	 * InterbankSettlementAmount.
+	 */
+	public static void checkDirectDebitTransactionInformation10(DirectDebitTransactionInformation10 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If ChargesInformation is present, then the currency of
+	 * ChargesInformation/ChargesAmount must be the same as the currency of
+	 * InterbankSettlementAmount.
+	 */
+	public static void checkCreditTransferTransactionInformation11(CreditTransferTransactionInformation11 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If ChargesInformation/ChargesAmount is present, then the currency of
+	 * ChargesInformation/ChargesAmount must be the same as the currency of
+	 * InterbankSettlementAmount.
+	 */
+	public static void checkDirectDebitTransactionInformation2(DirectDebitTransactionInformation2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

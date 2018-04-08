@@ -36,40 +36,6 @@ public class ConstraintSecuritiesSettlementTransactionAllegementNotificationRule
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.choice.References3Choice
-	 * References3Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SecuritiesSettlementTransactionAllegementNotificationRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "The SecuritiesMessageCancellationAdvice can be used to cancel a SecuritiesSettlementTransactionAllegementNotification for two reasons: \n- The message was sent by mistake\n- The counterparty cancelled its instruction."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<References3Choice> forReferences3Choice = new MMConstraint<References3Choice>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SecuritiesSettlementTransactionAllegementNotificationRule";
-			definition = "The SecuritiesMessageCancellationAdvice can be used to cancel a SecuritiesSettlementTransactionAllegementNotification for two reasons: \n- The message was sent by mistake\n- The counterparty cancelled its instruction.";
-			owner_lazy = () -> References3Choice.mmObject();
-		}
-
-		@Override
-		public void executeValidator(References3Choice obj) throws Exception {
-			checkReferences3Choice(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.References9Choice
 	 * References9Choice}</li>
 	 * <li>
@@ -104,8 +70,8 @@ public class ConstraintSecuritiesSettlementTransactionAllegementNotificationRule
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.choice.References18Choice
-	 * References18Choice}</li>
+	 * {@linkplain com.tools20022.repository.choice.References53Choice
+	 * References53Choice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -119,51 +85,17 @@ public class ConstraintSecuritiesSettlementTransactionAllegementNotificationRule
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<References18Choice> forReferences18Choice = new MMConstraint<References18Choice>() {
+	public static final MMConstraint<References53Choice> forReferences53Choice = new MMConstraint<References53Choice>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesSettlementTransactionAllegementNotificationRule";
 			definition = "The SecuritiesMessageCancellationAdvice can be used to cancel a SecuritiesSettlementTransactionAllegementNotification for two reasons: \n- The message was sent by mistake\n- The counterparty cancelled its instruction.";
-			owner_lazy = () -> References18Choice.mmObject();
+			owner_lazy = () -> References53Choice.mmObject();
 		}
 
 		@Override
-		public void executeValidator(References18Choice obj) throws Exception {
-			checkReferences18Choice(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.choice.References20Choice
-	 * References20Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SecuritiesSettlementTransactionAllegementNotificationRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "The SecuritiesMessageCancellationAdvice can be used to cancel a SecuritiesSettlementTransactionAllegementNotification for two reasons: \n- The message was sent by mistake\n- The counterparty cancelled its instruction."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<References20Choice> forReferences20Choice = new MMConstraint<References20Choice>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SecuritiesSettlementTransactionAllegementNotificationRule";
-			definition = "The SecuritiesMessageCancellationAdvice can be used to cancel a SecuritiesSettlementTransactionAllegementNotification for two reasons: \n- The message was sent by mistake\n- The counterparty cancelled its instruction.";
-			owner_lazy = () -> References20Choice.mmObject();
-		}
-
-		@Override
-		public void executeValidator(References20Choice obj) throws Exception {
-			checkReferences20Choice(obj);
+		public void executeValidator(References53Choice obj) throws Exception {
+			checkReferences53Choice(obj);
 		}
 	};
 	/**
@@ -206,8 +138,8 @@ public class ConstraintSecuritiesSettlementTransactionAllegementNotificationRule
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.choice.References37Choice
-	 * References37Choice}</li>
+	 * {@linkplain com.tools20022.repository.choice.References20Choice
+	 * References20Choice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -219,29 +151,19 @@ public class ConstraintSecuritiesSettlementTransactionAllegementNotificationRule
 	 * definition} =
 	 * "The SecuritiesMessageCancellationAdvice can be used to cancel a SecuritiesSettlementTransactionAllegementNotification for two reasons: \n- The message was sent by mistake\n- The counterparty cancelled its instruction."
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesSettlementTransactionAllegementNotificationRule#forReferences43Choice
-	 * ConstraintSecuritiesSettlementTransactionAllegementNotificationRule.
-	 * forReferences43Choice}</li>
-	 * </ul>
-	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<References37Choice> forReferences37Choice = new MMConstraint<References37Choice>() {
+	public static final MMConstraint<References20Choice> forReferences20Choice = new MMConstraint<References20Choice>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesSettlementTransactionAllegementNotificationRule";
 			definition = "The SecuritiesMessageCancellationAdvice can be used to cancel a SecuritiesSettlementTransactionAllegementNotification for two reasons: \n- The message was sent by mistake\n- The counterparty cancelled its instruction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesSettlementTransactionAllegementNotificationRule.forReferences43Choice);
-			owner_lazy = () -> References37Choice.mmObject();
+			owner_lazy = () -> References20Choice.mmObject();
 		}
 
 		@Override
-		public void executeValidator(References37Choice obj) throws Exception {
-			checkReferences37Choice(obj);
+		public void executeValidator(References20Choice obj) throws Exception {
+			checkReferences20Choice(obj);
 		}
 	};
 	/**
@@ -325,8 +247,8 @@ public class ConstraintSecuritiesSettlementTransactionAllegementNotificationRule
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.choice.References53Choice
-	 * References53Choice}</li>
+	 * {@linkplain com.tools20022.repository.choice.References18Choice
+	 * References18Choice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -340,29 +262,97 @@ public class ConstraintSecuritiesSettlementTransactionAllegementNotificationRule
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<References53Choice> forReferences53Choice = new MMConstraint<References53Choice>() {
+	public static final MMConstraint<References18Choice> forReferences18Choice = new MMConstraint<References18Choice>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesSettlementTransactionAllegementNotificationRule";
 			definition = "The SecuritiesMessageCancellationAdvice can be used to cancel a SecuritiesSettlementTransactionAllegementNotification for two reasons: \n- The message was sent by mistake\n- The counterparty cancelled its instruction.";
-			owner_lazy = () -> References53Choice.mmObject();
+			owner_lazy = () -> References18Choice.mmObject();
 		}
 
 		@Override
-		public void executeValidator(References53Choice obj) throws Exception {
-			checkReferences53Choice(obj);
+		public void executeValidator(References18Choice obj) throws Exception {
+			checkReferences18Choice(obj);
 		}
 	};
-
 	/**
-	 * The SecuritiesMessageCancellationAdvice can be used to cancel a
-	 * SecuritiesSettlementTransactionAllegementNotification for two reasons: -
-	 * The message was sent by mistake - The counterparty cancelled its
-	 * instruction.
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.choice.References37Choice
+	 * References37Choice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecuritiesSettlementTransactionAllegementNotificationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The SecuritiesMessageCancellationAdvice can be used to cancel a SecuritiesSettlementTransactionAllegementNotification for two reasons: \n- The message was sent by mistake\n- The counterparty cancelled its instruction."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesSettlementTransactionAllegementNotificationRule#forReferences43Choice
+	 * ConstraintSecuritiesSettlementTransactionAllegementNotificationRule.
+	 * forReferences43Choice}</li>
+	 * </ul>
+	 * </li>
+	 * </ul>
 	 */
-	public static void checkReferences3Choice(References3Choice obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
+	public static final MMConstraint<References37Choice> forReferences37Choice = new MMConstraint<References37Choice>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecuritiesSettlementTransactionAllegementNotificationRule";
+			definition = "The SecuritiesMessageCancellationAdvice can be used to cancel a SecuritiesSettlementTransactionAllegementNotification for two reasons: \n- The message was sent by mistake\n- The counterparty cancelled its instruction.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesSettlementTransactionAllegementNotificationRule.forReferences43Choice);
+			owner_lazy = () -> References37Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(References37Choice obj) throws Exception {
+			checkReferences37Choice(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.choice.References3Choice
+	 * References3Choice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecuritiesSettlementTransactionAllegementNotificationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The SecuritiesMessageCancellationAdvice can be used to cancel a SecuritiesSettlementTransactionAllegementNotification for two reasons: \n- The message was sent by mistake\n- The counterparty cancelled its instruction."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<References3Choice> forReferences3Choice = new MMConstraint<References3Choice>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecuritiesSettlementTransactionAllegementNotificationRule";
+			definition = "The SecuritiesMessageCancellationAdvice can be used to cancel a SecuritiesSettlementTransactionAllegementNotification for two reasons: \n- The message was sent by mistake\n- The counterparty cancelled its instruction.";
+			owner_lazy = () -> References3Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(References3Choice obj) throws Exception {
+			checkReferences3Choice(obj);
+		}
+	};
 
 	/**
 	 * The SecuritiesMessageCancellationAdvice can be used to cancel a
@@ -380,17 +370,7 @@ public class ConstraintSecuritiesSettlementTransactionAllegementNotificationRule
 	 * The message was sent by mistake - The counterparty cancelled its
 	 * instruction.
 	 */
-	public static void checkReferences18Choice(References18Choice obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * The SecuritiesMessageCancellationAdvice can be used to cancel a
-	 * SecuritiesSettlementTransactionAllegementNotification for two reasons: -
-	 * The message was sent by mistake - The counterparty cancelled its
-	 * instruction.
-	 */
-	public static void checkReferences20Choice(References20Choice obj) throws Exception {
+	public static void checkReferences53Choice(References53Choice obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -410,7 +390,7 @@ public class ConstraintSecuritiesSettlementTransactionAllegementNotificationRule
 	 * The message was sent by mistake - The counterparty cancelled its
 	 * instruction.
 	 */
-	public static void checkReferences37Choice(References37Choice obj) throws Exception {
+	public static void checkReferences20Choice(References20Choice obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -440,7 +420,27 @@ public class ConstraintSecuritiesSettlementTransactionAllegementNotificationRule
 	 * The message was sent by mistake - The counterparty cancelled its
 	 * instruction.
 	 */
-	public static void checkReferences53Choice(References53Choice obj) throws Exception {
+	public static void checkReferences18Choice(References18Choice obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The SecuritiesMessageCancellationAdvice can be used to cancel a
+	 * SecuritiesSettlementTransactionAllegementNotification for two reasons: -
+	 * The message was sent by mistake - The counterparty cancelled its
+	 * instruction.
+	 */
+	public static void checkReferences37Choice(References37Choice obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The SecuritiesMessageCancellationAdvice can be used to cancel a
+	 * SecuritiesSettlementTransactionAllegementNotification for two reasons: -
+	 * The message was sent by mistake - The counterparty cancelled its
+	 * instruction.
+	 */
+	public static void checkReferences3Choice(References3Choice obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

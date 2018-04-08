@@ -28,45 +28,12 @@ import com.tools20022.repository.choice.IdentificationReference8Choice;
  * ExecutingPartyTransactionIdentification,
  * MarketInfrastructureTransactionIdentification, ClientOrderLinkIdentification,
  * PoolIdentification, BlockIdentification, AllocationIdentification,
- * IndexIdentification, CommonIdentification and ComplianceIdentification must
- * not appear more than once in the message.
+ * IndexIdentification, CommonIdentification, ComplianceIdentification and
+ * CancellationRequestIdentification must not appear more than once in the
+ * message.
  */
 public class ConstraintLinkedIdentificationGuideline {
 
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.choice.IdentificationReference8Choice
-	 * IdentificationReference8Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "LinkedIdentificationGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "InstructingPartyTransactionIdentification, ExecutingPartyTransactionIdentification, MarketInfrastructureTransactionIdentification, ClientOrderLinkIdentification, PoolIdentification, BlockIdentification, AllocationIdentification, IndexIdentification, CommonIdentification and ComplianceIdentification must not appear more than once in the message."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<IdentificationReference8Choice> forIdentificationReference8Choice = new MMConstraint<IdentificationReference8Choice>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "LinkedIdentificationGuideline";
-			definition = "InstructingPartyTransactionIdentification, ExecutingPartyTransactionIdentification, MarketInfrastructureTransactionIdentification, ClientOrderLinkIdentification, PoolIdentification, BlockIdentification, AllocationIdentification, IndexIdentification, CommonIdentification and ComplianceIdentification must not appear more than once in the message.";
-			owner_lazy = () -> IdentificationReference8Choice.mmObject();
-		}
-
-		@Override
-		public void executeValidator(IdentificationReference8Choice obj) throws Exception {
-			checkIdentificationReference8Choice(obj);
-		}
-	};
 	/**
 	 * 
 	 <p>
@@ -101,18 +68,40 @@ public class ConstraintLinkedIdentificationGuideline {
 			checkIdentificationReference11Choice(obj);
 		}
 	};
-
 	/**
-	 * InstructingPartyTransactionIdentification,
-	 * ExecutingPartyTransactionIdentification,
-	 * MarketInfrastructureTransactionIdentification,
-	 * ClientOrderLinkIdentification, PoolIdentification, BlockIdentification,
-	 * AllocationIdentification, IndexIdentification, CommonIdentification and
-	 * ComplianceIdentification must not appear more than once in the message.
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.choice.IdentificationReference8Choice
+	 * IdentificationReference8Choice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "LinkedIdentificationGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "InstructingPartyTransactionIdentification, ExecutingPartyTransactionIdentification, MarketInfrastructureTransactionIdentification, ClientOrderLinkIdentification, PoolIdentification, BlockIdentification, AllocationIdentification, IndexIdentification, CommonIdentification and ComplianceIdentification must not appear more than once in the message."
+	 * </li>
+	 * </ul>
 	 */
-	public static void checkIdentificationReference8Choice(IdentificationReference8Choice obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
+	public static final MMConstraint<IdentificationReference8Choice> forIdentificationReference8Choice = new MMConstraint<IdentificationReference8Choice>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "LinkedIdentificationGuideline";
+			definition = "InstructingPartyTransactionIdentification, ExecutingPartyTransactionIdentification, MarketInfrastructureTransactionIdentification, ClientOrderLinkIdentification, PoolIdentification, BlockIdentification, AllocationIdentification, IndexIdentification, CommonIdentification and ComplianceIdentification must not appear more than once in the message.";
+			owner_lazy = () -> IdentificationReference8Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IdentificationReference8Choice obj) throws Exception {
+			checkIdentificationReference8Choice(obj);
+		}
+	};
 
 	/**
 	 * InstructingPartyTransactionIdentification,
@@ -124,6 +113,18 @@ public class ConstraintLinkedIdentificationGuideline {
 	 * appear more than once in the message.
 	 */
 	public static void checkIdentificationReference11Choice(IdentificationReference11Choice obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * InstructingPartyTransactionIdentification,
+	 * ExecutingPartyTransactionIdentification,
+	 * MarketInfrastructureTransactionIdentification,
+	 * ClientOrderLinkIdentification, PoolIdentification, BlockIdentification,
+	 * AllocationIdentification, IndexIdentification, CommonIdentification and
+	 * ComplianceIdentification must not appear more than once in the message.
+	 */
+	public static void checkIdentificationReference8Choice(IdentificationReference8Choice obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

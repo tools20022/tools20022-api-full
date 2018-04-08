@@ -125,9 +125,9 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationRule#forSubscriptionBulkOrderCancellationRequestV03
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationRule#for_setr_SubscriptionBulkOrderCancellationRequestV03
  * ConstraintAccountIdentificationRule.
- * forSubscriptionBulkOrderCancellationRequestV03}</li>
+ * for_setr_SubscriptionBulkOrderCancellationRequestV03}</li>
  * </ul>
  * </li>
  * <li>
@@ -200,9 +200,9 @@ public class SubscriptionBulkOrderCancellationRequestV03 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationByReferenceOrByOrderDetailsRule";
 			definition = "Either CancellationByOrderDetails or CancellationByReference may be present, but not both.";
-			messageDefinition_lazy = () -> com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV03.mmObject();
 			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV03.mmCancellationByReference,
 					com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV03.mmCancellationByOrderDetails);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV03.mmObject();
 		}
 	};
 	@XmlElement(name = "MsgId", required = true)
@@ -524,7 +524,7 @@ public class SubscriptionBulkOrderCancellationRequestV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forSubscriptionBulkOrderCancellationRequestV03);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.for_setr_SubscriptionBulkOrderCancellationRequestV03);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SubscriptionBulkOrderCancellationRequestV03";
 				definition = "Scope\r\nAn instructing party, for example, an investment manager or its authorised representative, sends the SubscriptionBulkOrderCancellationRequest message to the executing party, for example, a transfer agent, to request the cancellation of a previously sent SubscriptionBulkOrder instruction.\r\nUsage\r\nThe SubscriptionBulkOrderCancellationRequest message is used to either:\r\n- request the cancellation of an entire SubscriptionBulkOrder message, that is, all the individual orders that it contained, or,\r\n- request the cancellation of one or more individual orders.\r\nThere is no amendment, but a cancellation and re-instruct policy.\r\nThere are two ways to use the message:\r\n(1) When the SubscriptionBulkOrderCancellationRequest message is used to request the cancellation of an entire SubscriptionBulkOrder message, this can be done by either:\r\n- quoting the order references of all the individual orders listed in the SubscriptionBulkOrder message, or,\r\n- quoting the details of all the individual orders (this includes the OrderReference) listed in SubscriptionBulkOrder message, but this is not recommended.\r\nThe message identification of the SubscriptionBulkOrder message may also be quoted in PreviousReference.\r\nIt is also possible to request the cancellation of an entire SubscriptionBulkOrder message by quoting its message identification in PreviousReference, but this is not recommended.\r\n(2) When the SubscriptionBulkOrderCancellationRequest message is used to request the cancellation of one or more individual orders, this can be done by either:\r\n- quoting the OrderReference of each individual order listed in the SubscriptionBulkOrder message, or,\r\n- quoting the details of each individual order (including the OrderReference) listed in SubscriptionBulkOrder message, but this is not recommended.\r\nThe message identification of the SubscriptionBulkOrder message in which the individual order was conveyed may also be quoted in PreviousReference.\r\nThe deadline and acceptance of a cancellation request is subject to a service level agreement (SLA). This cancellation message is a cancellation request. There is no automatic acceptance of the cancellation.\r\nThe rejection or acceptance of an SubscriptionBulkOrderCancellationRequest is made using an OrderCancellationStatusReport message.";

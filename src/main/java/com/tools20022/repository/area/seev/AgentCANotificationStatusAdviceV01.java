@@ -105,13 +105,13 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintNotificationAdviceStatusRule#forAgentCANotificationStatusAdviceV01
- * ConstraintNotificationAdviceStatusRule.forAgentCANotificationStatusAdviceV01}
- * </li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintNotificationAdviceStatusRule#for_seev_AgentCANotificationStatusAdviceV01
+ * ConstraintNotificationAdviceStatusRule.
+ * for_seev_AgentCANotificationStatusAdviceV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintNotificationCancellationRequestStatusRule#forAgentCANotificationStatusAdviceV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintNotificationCancellationRequestStatusRule#for_seev_AgentCANotificationStatusAdviceV01
  * ConstraintNotificationCancellationRequestStatusRule.
- * forAgentCANotificationStatusAdviceV01}</li>
+ * for_seev_AgentCANotificationStatusAdviceV01}</li>
  * </ul>
  * </li>
  * <li>
@@ -174,9 +174,9 @@ public class AgentCANotificationStatusAdviceV01 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationCancellationRequestStatusOrNotificationAdviceStatusRule";
 			definition = "Either NotificationCancellationRequestStatus or NotificationAdviceStatus must be present but not both.";
-			messageDefinition_lazy = () -> com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01.mmObject();
 			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01.mmNotificationCancellationRequestStatus,
 					com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01.mmNotificationAdviceStatus);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01.mmObject();
 		}
 	};
 	/**
@@ -224,9 +224,9 @@ public class AgentCANotificationStatusAdviceV01 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentCANotificationAdviceIDOrAgentCANotificationCancellationRequestIDRule";
 			definition = "Either AgentCANotificationAdviceIdentification or AgentCANotificationCancellationRequestIdentification must be present, but not both.";
-			messageDefinition_lazy = () -> com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01.mmObject();
 			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01.mmAgentCANotificationAdviceIdentification,
 					com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01.mmAgentCANotificationCancellationRequestIdentification);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01.mmObject();
 		}
 	};
 	@XmlElement(name = "Id", required = true)
@@ -518,8 +518,8 @@ public class AgentCANotificationStatusAdviceV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNotificationAdviceStatusRule.forAgentCANotificationStatusAdviceV01,
-						com.tools20022.repository.constraints.ConstraintNotificationCancellationRequestStatusRule.forAgentCANotificationStatusAdviceV01);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNotificationAdviceStatusRule.for_seev_AgentCANotificationStatusAdviceV01,
+						com.tools20022.repository.constraints.ConstraintNotificationCancellationRequestStatusRule.for_seev_AgentCANotificationStatusAdviceV01);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AgentCANotificationStatusAdviceV01";
 				definition = "Scope\r\nThis message is sent by a CSD to an issuer (or its agent) to report the status, or change in status, of a notification advice or notification cancellation request.\r\nUsage\r\nWhen this message is used to report the status of a notification advice then the building block Agent Corporate Action Notification Advice Identification must be present.\r\nWhen this message is used to provide the status of a notification cancellation request then the building block Notification Cancellation Request Identification must be present.";

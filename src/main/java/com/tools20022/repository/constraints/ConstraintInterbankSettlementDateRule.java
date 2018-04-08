@@ -25,148 +25,12 @@ import com.tools20022.repository.msg.CreditTransferTransaction9;
 
 /**
  * If GroupHeader/InterbankSettlementDate is present, then
- * CreditTransferTransactionInformation/InterbankSettlementDate is not allowed.
- * If GroupHeader/InterbankSettlementDate is not present, then
- * CreditTransferTransactionInformation/InterbankSettlementDate must be present.
+ * TransactionInformation/InterbankSettlementDate is not allowed. If
+ * GroupHeader/InterbankSettlementDate is not present, then
+ * TransactionInformation/InterbankSettlementDate must be present.
  */
 public class ConstraintInterbankSettlementDateRule {
 
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.pacs.FIToFICustomerCreditTransferV01
-	 * FIToFICustomerCreditTransferV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "InterbankSettlementDateRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If GroupHeader/InterbankSettlementDate is present, then CreditTransferTransactionInformation/InterbankSettlementDate is not allowed. \nIf GroupHeader/InterbankSettlementDate is not present, then CreditTransferTransactionInformation/InterbankSettlementDate must be present."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<FIToFICustomerCreditTransferV01> forFIToFICustomerCreditTransferV01 = new MMConstraint<FIToFICustomerCreditTransferV01>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "InterbankSettlementDateRule";
-			definition = "If GroupHeader/InterbankSettlementDate is present, then CreditTransferTransactionInformation/InterbankSettlementDate is not allowed. \nIf GroupHeader/InterbankSettlementDate is not present, then CreditTransferTransactionInformation/InterbankSettlementDate must be present.";
-			owner_lazy = () -> FIToFICustomerCreditTransferV01.mmObject();
-		}
-
-		@Override
-		public void executeValidator(FIToFICustomerCreditTransferV01 obj) throws Exception {
-			checkFIToFICustomerCreditTransferV01(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.pacs.FIToFICustomerDirectDebitV01
-	 * FIToFICustomerDirectDebitV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "InterbankSettlementDateRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If GroupHeader/InterbankSettlementDate is present, then DirectDebitTransactionInformation/InterbankSettlementDate is not allowed. \nIf GroupHeader/InterbankSettlementDate is not present, then DirectDebitTransactionInformation/InterbankSettlementDate must be present."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<FIToFICustomerDirectDebitV01> forFIToFICustomerDirectDebitV01 = new MMConstraint<FIToFICustomerDirectDebitV01>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "InterbankSettlementDateRule";
-			definition = "If GroupHeader/InterbankSettlementDate is present, then DirectDebitTransactionInformation/InterbankSettlementDate is not allowed. \nIf GroupHeader/InterbankSettlementDate is not present, then DirectDebitTransactionInformation/InterbankSettlementDate must be present.";
-			owner_lazy = () -> FIToFICustomerDirectDebitV01.mmObject();
-		}
-
-		@Override
-		public void executeValidator(FIToFICustomerDirectDebitV01 obj) throws Exception {
-			checkFIToFICustomerDirectDebitV01(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentReversalV01
-	 * FIToFIPaymentReversalV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "InterbankSettlementDateRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If GroupHeader/InterbankSettlementDate is present, then TransactionInformation/InterbankSettlementDate is not allowed. \nIf GroupHeader/InterbankSettlementDate is not present, then TransactionInformation/InterbankSettlementDate must be present."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<FIToFIPaymentReversalV01> forFIToFIPaymentReversalV01 = new MMConstraint<FIToFIPaymentReversalV01>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "InterbankSettlementDateRule";
-			definition = "If GroupHeader/InterbankSettlementDate is present, then TransactionInformation/InterbankSettlementDate is not allowed. \nIf GroupHeader/InterbankSettlementDate is not present, then TransactionInformation/InterbankSettlementDate must be present.";
-			owner_lazy = () -> FIToFIPaymentReversalV01.mmObject();
-		}
-
-		@Override
-		public void executeValidator(FIToFIPaymentReversalV01 obj) throws Exception {
-			checkFIToFIPaymentReversalV01(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV01
-	 * FinancialInstitutionCreditTransferV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "InterbankSettlementDateRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If GroupHeader/InterbankSettlementDate is present, then CreditTransferTransactionInformation/InterbankSettlementDate is not allowed. \nIf GroupHeader/InterbankSettlementDate is not present, then CreditTransferTransactionInformation/InterbankSettlementDate must be present."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<FinancialInstitutionCreditTransferV01> forFinancialInstitutionCreditTransferV01 = new MMConstraint<FinancialInstitutionCreditTransferV01>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "InterbankSettlementDateRule";
-			definition = "If GroupHeader/InterbankSettlementDate is present, then CreditTransferTransactionInformation/InterbankSettlementDate is not allowed. \nIf GroupHeader/InterbankSettlementDate is not present, then CreditTransferTransactionInformation/InterbankSettlementDate must be present.";
-			owner_lazy = () -> FinancialInstitutionCreditTransferV01.mmObject();
-		}
-
-		@Override
-		public void executeValidator(FinancialInstitutionCreditTransferV01 obj) throws Exception {
-			checkFinancialInstitutionCreditTransferV01(obj);
-		}
-	};
 	/**
 	 * 
 	 <p>
@@ -188,7 +52,7 @@ public class ConstraintInterbankSettlementDateRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<PaymentReturnV01> forPaymentReturnV01 = new MMConstraint<PaymentReturnV01>() {
+	public static final MMConstraint<PaymentReturnV01> for_pacs_PaymentReturnV01 = new MMConstraint<PaymentReturnV01>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterbankSettlementDateRule";
@@ -198,7 +62,41 @@ public class ConstraintInterbankSettlementDateRule {
 
 		@Override
 		public void executeValidator(PaymentReturnV01 obj) throws Exception {
-			checkPaymentReturnV01(obj);
+			check_pacs_PaymentReturnV01(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.pacs.FIToFICustomerCreditTransferV01
+	 * FIToFICustomerCreditTransferV01}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InterbankSettlementDateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If GroupHeader/InterbankSettlementDate is present, then CreditTransferTransactionInformation/InterbankSettlementDate is not allowed. \nIf GroupHeader/InterbankSettlementDate is not present, then CreditTransferTransactionInformation/InterbankSettlementDate must be present."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<FIToFICustomerCreditTransferV01> for_pacs_FIToFICustomerCreditTransferV01 = new MMConstraint<FIToFICustomerCreditTransferV01>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "InterbankSettlementDateRule";
+			definition = "If GroupHeader/InterbankSettlementDate is present, then CreditTransferTransactionInformation/InterbankSettlementDate is not allowed. \nIf GroupHeader/InterbankSettlementDate is not present, then CreditTransferTransactionInformation/InterbankSettlementDate must be present.";
+			owner_lazy = () -> FIToFICustomerCreditTransferV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerCreditTransferV01 obj) throws Exception {
+			check_pacs_FIToFICustomerCreditTransferV01(obj);
 		}
 	};
 	/**
@@ -240,6 +138,118 @@ public class ConstraintInterbankSettlementDateRule {
 			checkCreditTransferTransaction9(obj);
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV01
+	 * FinancialInstitutionCreditTransferV01}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InterbankSettlementDateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If GroupHeader/InterbankSettlementDate is present, then CreditTransferTransactionInformation/InterbankSettlementDate is not allowed. \nIf GroupHeader/InterbankSettlementDate is not present, then CreditTransferTransactionInformation/InterbankSettlementDate must be present."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<FinancialInstitutionCreditTransferV01> for_pacs_FinancialInstitutionCreditTransferV01 = new MMConstraint<FinancialInstitutionCreditTransferV01>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "InterbankSettlementDateRule";
+			definition = "If GroupHeader/InterbankSettlementDate is present, then CreditTransferTransactionInformation/InterbankSettlementDate is not allowed. \nIf GroupHeader/InterbankSettlementDate is not present, then CreditTransferTransactionInformation/InterbankSettlementDate must be present.";
+			owner_lazy = () -> FinancialInstitutionCreditTransferV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstitutionCreditTransferV01 obj) throws Exception {
+			check_pacs_FinancialInstitutionCreditTransferV01(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentReversalV01
+	 * FIToFIPaymentReversalV01}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InterbankSettlementDateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If GroupHeader/InterbankSettlementDate is present, then TransactionInformation/InterbankSettlementDate is not allowed. \nIf GroupHeader/InterbankSettlementDate is not present, then TransactionInformation/InterbankSettlementDate must be present."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<FIToFIPaymentReversalV01> for_pacs_FIToFIPaymentReversalV01 = new MMConstraint<FIToFIPaymentReversalV01>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "InterbankSettlementDateRule";
+			definition = "If GroupHeader/InterbankSettlementDate is present, then TransactionInformation/InterbankSettlementDate is not allowed. \nIf GroupHeader/InterbankSettlementDate is not present, then TransactionInformation/InterbankSettlementDate must be present.";
+			owner_lazy = () -> FIToFIPaymentReversalV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FIToFIPaymentReversalV01 obj) throws Exception {
+			check_pacs_FIToFIPaymentReversalV01(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.pacs.FIToFICustomerDirectDebitV01
+	 * FIToFICustomerDirectDebitV01}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InterbankSettlementDateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If GroupHeader/InterbankSettlementDate is present, then DirectDebitTransactionInformation/InterbankSettlementDate is not allowed. \nIf GroupHeader/InterbankSettlementDate is not present, then DirectDebitTransactionInformation/InterbankSettlementDate must be present."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<FIToFICustomerDirectDebitV01> for_pacs_FIToFICustomerDirectDebitV01 = new MMConstraint<FIToFICustomerDirectDebitV01>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "InterbankSettlementDateRule";
+			definition = "If GroupHeader/InterbankSettlementDate is present, then DirectDebitTransactionInformation/InterbankSettlementDate is not allowed. \nIf GroupHeader/InterbankSettlementDate is not present, then DirectDebitTransactionInformation/InterbankSettlementDate must be present.";
+			owner_lazy = () -> FIToFICustomerDirectDebitV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerDirectDebitV01 obj) throws Exception {
+			check_pacs_FIToFICustomerDirectDebitV01(obj);
+		}
+	};
+
+	/**
+	 * If GroupHeader/InterbankSettlementDate is present, then
+	 * TransactionInformation/InterbankSettlementDate is not allowed. If
+	 * GroupHeader/InterbankSettlementDate is not present, then
+	 * TransactionInformation/InterbankSettlementDate must be present.
+	 */
+	public static void check_pacs_PaymentReturnV01(PaymentReturnV01 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
 
 	/**
 	 * If GroupHeader/InterbankSettlementDate is present, then
@@ -248,7 +258,36 @@ public class ConstraintInterbankSettlementDateRule {
 	 * CreditTransferTransactionInformation/InterbankSettlementDate must be
 	 * present.
 	 */
-	public static void checkFIToFICustomerCreditTransferV01(FIToFICustomerCreditTransferV01 obj) throws Exception {
+	public static void check_pacs_FIToFICustomerCreditTransferV01(FIToFICustomerCreditTransferV01 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If InterbankSettlementDate is present, then
+	 * DirectDebitTransactionInformation/InterbankSettlementDate is not allowed.
+	 */
+	public static void checkCreditTransferTransaction9(CreditTransferTransaction9 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If GroupHeader/InterbankSettlementDate is present, then
+	 * CreditTransferTransactionInformation/InterbankSettlementDate is not
+	 * allowed. If GroupHeader/InterbankSettlementDate is not present, then
+	 * CreditTransferTransactionInformation/InterbankSettlementDate must be
+	 * present.
+	 */
+	public static void check_pacs_FinancialInstitutionCreditTransferV01(FinancialInstitutionCreditTransferV01 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If GroupHeader/InterbankSettlementDate is present, then
+	 * TransactionInformation/InterbankSettlementDate is not allowed. If
+	 * GroupHeader/InterbankSettlementDate is not present, then
+	 * TransactionInformation/InterbankSettlementDate must be present.
+	 */
+	public static void check_pacs_FIToFIPaymentReversalV01(FIToFIPaymentReversalV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -259,46 +298,7 @@ public class ConstraintInterbankSettlementDateRule {
 	 * DirectDebitTransactionInformation/InterbankSettlementDate must be
 	 * present.
 	 */
-	public static void checkFIToFICustomerDirectDebitV01(FIToFICustomerDirectDebitV01 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If GroupHeader/InterbankSettlementDate is present, then
-	 * TransactionInformation/InterbankSettlementDate is not allowed. If
-	 * GroupHeader/InterbankSettlementDate is not present, then
-	 * TransactionInformation/InterbankSettlementDate must be present.
-	 */
-	public static void checkFIToFIPaymentReversalV01(FIToFIPaymentReversalV01 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If GroupHeader/InterbankSettlementDate is present, then
-	 * CreditTransferTransactionInformation/InterbankSettlementDate is not
-	 * allowed. If GroupHeader/InterbankSettlementDate is not present, then
-	 * CreditTransferTransactionInformation/InterbankSettlementDate must be
-	 * present.
-	 */
-	public static void checkFinancialInstitutionCreditTransferV01(FinancialInstitutionCreditTransferV01 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If GroupHeader/InterbankSettlementDate is present, then
-	 * TransactionInformation/InterbankSettlementDate is not allowed. If
-	 * GroupHeader/InterbankSettlementDate is not present, then
-	 * TransactionInformation/InterbankSettlementDate must be present.
-	 */
-	public static void checkPaymentReturnV01(PaymentReturnV01 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If InterbankSettlementDate is present, then
-	 * DirectDebitTransactionInformation/InterbankSettlementDate is not allowed.
-	 */
-	public static void checkCreditTransferTransaction9(CreditTransferTransaction9 obj) throws Exception {
+	public static void check_pacs_FIToFICustomerDirectDebitV01(FIToFICustomerDirectDebitV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

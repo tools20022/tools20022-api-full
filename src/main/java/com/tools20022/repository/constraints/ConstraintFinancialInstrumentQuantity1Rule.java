@@ -73,7 +73,7 @@ public class ConstraintFinancialInstrumentQuantity1Rule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SwitchOrder3 SwitchOrder3}</li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchOrder7 SwitchOrder7}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -83,21 +83,27 @@ public class ConstraintFinancialInstrumentQuantity1Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If SubscriptionLegDetails/FinancialInstrumentQuantityChoice is not present, then RedemptionLegDetails/FinancialInstrumentQuantityChoice is mandatory in each occurrence of RedemptionLegDetails.\nIf SubscriptionLegDetails/FinancialInstrumentQuantityChoice is present, then it must be present in each occurrence of SubscriptionLegDetails."
+	 * "If SubscriptionLegDetails/FinancialInstrumentQuantityChoice is not present, then RedemptionLegDetails/FinancialInstrumentQuantityChoice is mandatory in each occurrence of RedemptionLegDetails.\r\nIf SubscriptionLegDetails/FinancialInstrumentQuantityChoice is present, then it must be present in each occurrence of SubscriptionLegDetails."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintFinancialInstrumentQuantity1Rule#forSwitchOrder4
+	 * ConstraintFinancialInstrumentQuantity1Rule.forSwitchOrder4}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<SwitchOrder3> forSwitchOrder3 = new MMConstraint<SwitchOrder3>() {
+	public static final MMConstraint<SwitchOrder7> forSwitchOrder7 = new MMConstraint<SwitchOrder7>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentQuantity1Rule";
-			definition = "If SubscriptionLegDetails/FinancialInstrumentQuantityChoice is not present, then RedemptionLegDetails/FinancialInstrumentQuantityChoice is mandatory in each occurrence of RedemptionLegDetails.\nIf SubscriptionLegDetails/FinancialInstrumentQuantityChoice is present, then it must be present in each occurrence of SubscriptionLegDetails.";
-			owner_lazy = () -> SwitchOrder3.mmObject();
+			definition = "If SubscriptionLegDetails/FinancialInstrumentQuantityChoice is not present, then RedemptionLegDetails/FinancialInstrumentQuantityChoice is mandatory in each occurrence of RedemptionLegDetails.\r\nIf SubscriptionLegDetails/FinancialInstrumentQuantityChoice is present, then it must be present in each occurrence of SubscriptionLegDetails.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintFinancialInstrumentQuantity1Rule.forSwitchOrder4;
+			owner_lazy = () -> SwitchOrder7.mmObject();
 		}
 
 		@Override
-		public void executeValidator(SwitchOrder3 obj) throws Exception {
-			checkSwitchOrder3(obj);
+		public void executeValidator(SwitchOrder7 obj) throws Exception {
+			checkSwitchOrder7(obj);
 		}
 	};
 	/**
@@ -148,7 +154,7 @@ public class ConstraintFinancialInstrumentQuantity1Rule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SwitchOrder7 SwitchOrder7}</li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchOrder3 SwitchOrder3}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -158,27 +164,21 @@ public class ConstraintFinancialInstrumentQuantity1Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If SubscriptionLegDetails/FinancialInstrumentQuantityChoice is not present, then RedemptionLegDetails/FinancialInstrumentQuantityChoice is mandatory in each occurrence of RedemptionLegDetails.\r\nIf SubscriptionLegDetails/FinancialInstrumentQuantityChoice is present, then it must be present in each occurrence of SubscriptionLegDetails."
+	 * "If SubscriptionLegDetails/FinancialInstrumentQuantityChoice is not present, then RedemptionLegDetails/FinancialInstrumentQuantityChoice is mandatory in each occurrence of RedemptionLegDetails.\nIf SubscriptionLegDetails/FinancialInstrumentQuantityChoice is present, then it must be present in each occurrence of SubscriptionLegDetails."
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintFinancialInstrumentQuantity1Rule#forSwitchOrder4
-	 * ConstraintFinancialInstrumentQuantity1Rule.forSwitchOrder4}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<SwitchOrder7> forSwitchOrder7 = new MMConstraint<SwitchOrder7>() {
+	public static final MMConstraint<SwitchOrder3> forSwitchOrder3 = new MMConstraint<SwitchOrder3>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentQuantity1Rule";
-			definition = "If SubscriptionLegDetails/FinancialInstrumentQuantityChoice is not present, then RedemptionLegDetails/FinancialInstrumentQuantityChoice is mandatory in each occurrence of RedemptionLegDetails.\r\nIf SubscriptionLegDetails/FinancialInstrumentQuantityChoice is present, then it must be present in each occurrence of SubscriptionLegDetails.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintFinancialInstrumentQuantity1Rule.forSwitchOrder4;
-			owner_lazy = () -> SwitchOrder7.mmObject();
+			definition = "If SubscriptionLegDetails/FinancialInstrumentQuantityChoice is not present, then RedemptionLegDetails/FinancialInstrumentQuantityChoice is mandatory in each occurrence of RedemptionLegDetails.\nIf SubscriptionLegDetails/FinancialInstrumentQuantityChoice is present, then it must be present in each occurrence of SubscriptionLegDetails.";
+			owner_lazy = () -> SwitchOrder3.mmObject();
 		}
 
 		@Override
-		public void executeValidator(SwitchOrder7 obj) throws Exception {
-			checkSwitchOrder7(obj);
+		public void executeValidator(SwitchOrder3 obj) throws Exception {
+			checkSwitchOrder3(obj);
 		}
 	};
 
@@ -196,11 +196,11 @@ public class ConstraintFinancialInstrumentQuantity1Rule {
 	/**
 	 * If SubscriptionLegDetails/FinancialInstrumentQuantityChoice is not
 	 * present, then RedemptionLegDetails/FinancialInstrumentQuantityChoice is
-	 * mandatory in each occurrence of RedemptionLegDetails. If
-	 * SubscriptionLegDetails/FinancialInstrumentQuantityChoice is present, then
-	 * it must be present in each occurrence of SubscriptionLegDetails.
+	 * mandatory in each occurrence of RedemptionLegDetails.<br>
+	 * If SubscriptionLegDetails/FinancialInstrumentQuantityChoice is present,
+	 * then it must be present in each occurrence of SubscriptionLegDetails.
 	 */
-	public static void checkSwitchOrder3(SwitchOrder3 obj) throws Exception {
+	public static void checkSwitchOrder7(SwitchOrder7 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -218,11 +218,11 @@ public class ConstraintFinancialInstrumentQuantity1Rule {
 	/**
 	 * If SubscriptionLegDetails/FinancialInstrumentQuantityChoice is not
 	 * present, then RedemptionLegDetails/FinancialInstrumentQuantityChoice is
-	 * mandatory in each occurrence of RedemptionLegDetails.<br>
-	 * If SubscriptionLegDetails/FinancialInstrumentQuantityChoice is present,
-	 * then it must be present in each occurrence of SubscriptionLegDetails.
+	 * mandatory in each occurrence of RedemptionLegDetails. If
+	 * SubscriptionLegDetails/FinancialInstrumentQuantityChoice is present, then
+	 * it must be present in each occurrence of SubscriptionLegDetails.
 	 */
-	public static void checkSwitchOrder7(SwitchOrder7 obj) throws Exception {
+	public static void checkSwitchOrder3(SwitchOrder3 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

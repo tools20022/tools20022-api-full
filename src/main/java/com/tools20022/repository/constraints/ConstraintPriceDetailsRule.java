@@ -25,9 +25,13 @@ import com.tools20022.repository.msg.PriceValuation3;
 import com.tools20022.repository.msg.PriceValuation4;
 
 /**
- * If SuspendedIndicator is "false" or "0" (No), then PriceDetails must be
- * present. If SuspendedIndicator is "true" or "1" (Yes), then PriceDetails is
- * optional.
+ * If SuspendedIndicator is "true" or "1" (Yes), then PriceDetails is optional.
+ * If SuspendedIndicator is "false" or "0" (No), and if
+ * FinancialInstrumentDetails /DualFundIndicator is "false" or "0" (No), then
+ * PriceDetails must be present at least once. If SuspendedIndicator is "false"
+ * or "0" (No), and if FinancialInstrumentDetails /DualFundIndicator is "true"
+ * or "1" (Yes), then PriceDetails must be present two or more times and
+ * PriceDetails/Type must be present with the values "BIDE" and "OFFR".
  */
 public class ConstraintPriceDetailsRule {
 
@@ -37,8 +41,8 @@ public class ConstraintPriceDetailsRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.PriceValuation2
-	 * PriceValuation2}</li>
+	 * {@linkplain com.tools20022.repository.msg.PriceValuation4
+	 * PriceValuation4}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -48,21 +52,21 @@ public class ConstraintPriceDetailsRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If SuspendedIndicator is \"false\" or \"0\" (No), then PriceDetails must be present. If SuspendedIndicator is \"true\" or \"1\" (Yes), then PriceDetails is optional."
+	 * "If SuspendedIndicator is \"true\" or \"1\" (Yes), then PriceDetails is optional.\nIf SuspendedIndicator is \"false\" or \"0\" (No), and if FinancialInstrumentDetails /DualFundIndicator is \"false\" or \"0\" (No), then PriceDetails must be present at least once.\nIf SuspendedIndicator is \"false\" or \"0\" (No), and if FinancialInstrumentDetails /DualFundIndicator is \"true\" or \"1\" (Yes), then PriceDetails must be present two or more times and PriceDetails/Type must be present with the values \"BIDE\" and \"OFFR\"."
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<PriceValuation2> forPriceValuation2 = new MMConstraint<PriceValuation2>() {
+	public static final MMConstraint<PriceValuation4> forPriceValuation4 = new MMConstraint<PriceValuation4>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceDetailsRule";
-			definition = "If SuspendedIndicator is \"false\" or \"0\" (No), then PriceDetails must be present. If SuspendedIndicator is \"true\" or \"1\" (Yes), then PriceDetails is optional.";
-			owner_lazy = () -> PriceValuation2.mmObject();
+			definition = "If SuspendedIndicator is \"true\" or \"1\" (Yes), then PriceDetails is optional.\nIf SuspendedIndicator is \"false\" or \"0\" (No), and if FinancialInstrumentDetails /DualFundIndicator is \"false\" or \"0\" (No), then PriceDetails must be present at least once.\nIf SuspendedIndicator is \"false\" or \"0\" (No), and if FinancialInstrumentDetails /DualFundIndicator is \"true\" or \"1\" (Yes), then PriceDetails must be present two or more times and PriceDetails/Type must be present with the values \"BIDE\" and \"OFFR\".";
+			owner_lazy = () -> PriceValuation4.mmObject();
 		}
 
 		@Override
-		public void executeValidator(PriceValuation2 obj) throws Exception {
-			checkPriceValuation2(obj);
+		public void executeValidator(PriceValuation4 obj) throws Exception {
+			checkPriceValuation4(obj);
 		}
 	};
 	/**
@@ -105,8 +109,8 @@ public class ConstraintPriceDetailsRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.PriceValuation4
-	 * PriceValuation4}</li>
+	 * {@linkplain com.tools20022.repository.msg.PriceValuation2
+	 * PriceValuation2}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -116,30 +120,35 @@ public class ConstraintPriceDetailsRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If SuspendedIndicator is \"true\" or \"1\" (Yes), then PriceDetails is optional.\nIf SuspendedIndicator is \"false\" or \"0\" (No), and if FinancialInstrumentDetails /DualFundIndicator is \"false\" or \"0\" (No), then PriceDetails must be present at least once.\nIf SuspendedIndicator is \"false\" or \"0\" (No), and if FinancialInstrumentDetails /DualFundIndicator is \"true\" or \"1\" (Yes), then PriceDetails must be present two or more times and PriceDetails/Type must be present with the values \"BIDE\" and \"OFFR\"."
+	 * "If SuspendedIndicator is \"false\" or \"0\" (No), then PriceDetails must be present. If SuspendedIndicator is \"true\" or \"1\" (Yes), then PriceDetails is optional."
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<PriceValuation4> forPriceValuation4 = new MMConstraint<PriceValuation4>() {
+	public static final MMConstraint<PriceValuation2> forPriceValuation2 = new MMConstraint<PriceValuation2>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceDetailsRule";
-			definition = "If SuspendedIndicator is \"true\" or \"1\" (Yes), then PriceDetails is optional.\nIf SuspendedIndicator is \"false\" or \"0\" (No), and if FinancialInstrumentDetails /DualFundIndicator is \"false\" or \"0\" (No), then PriceDetails must be present at least once.\nIf SuspendedIndicator is \"false\" or \"0\" (No), and if FinancialInstrumentDetails /DualFundIndicator is \"true\" or \"1\" (Yes), then PriceDetails must be present two or more times and PriceDetails/Type must be present with the values \"BIDE\" and \"OFFR\".";
-			owner_lazy = () -> PriceValuation4.mmObject();
+			definition = "If SuspendedIndicator is \"false\" or \"0\" (No), then PriceDetails must be present. If SuspendedIndicator is \"true\" or \"1\" (Yes), then PriceDetails is optional.";
+			owner_lazy = () -> PriceValuation2.mmObject();
 		}
 
 		@Override
-		public void executeValidator(PriceValuation4 obj) throws Exception {
-			checkPriceValuation4(obj);
+		public void executeValidator(PriceValuation2 obj) throws Exception {
+			checkPriceValuation2(obj);
 		}
 	};
 
 	/**
-	 * If SuspendedIndicator is "false" or "0" (No), then PriceDetails must be
-	 * present. If SuspendedIndicator is "true" or "1" (Yes), then PriceDetails
-	 * is optional.
+	 * If SuspendedIndicator is "true" or "1" (Yes), then PriceDetails is
+	 * optional. If SuspendedIndicator is "false" or "0" (No), and if
+	 * FinancialInstrumentDetails /DualFundIndicator is "false" or "0" (No),
+	 * then PriceDetails must be present at least once. If SuspendedIndicator is
+	 * "false" or "0" (No), and if FinancialInstrumentDetails /DualFundIndicator
+	 * is "true" or "1" (Yes), then PriceDetails must be present two or more
+	 * times and PriceDetails/Type must be present with the values "BIDE" and
+	 * "OFFR".
 	 */
-	public static void checkPriceValuation2(PriceValuation2 obj) throws Exception {
+	public static void checkPriceValuation4(PriceValuation4 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -158,16 +167,11 @@ public class ConstraintPriceDetailsRule {
 	}
 
 	/**
-	 * If SuspendedIndicator is "true" or "1" (Yes), then PriceDetails is
-	 * optional. If SuspendedIndicator is "false" or "0" (No), and if
-	 * FinancialInstrumentDetails /DualFundIndicator is "false" or "0" (No),
-	 * then PriceDetails must be present at least once. If SuspendedIndicator is
-	 * "false" or "0" (No), and if FinancialInstrumentDetails /DualFundIndicator
-	 * is "true" or "1" (Yes), then PriceDetails must be present two or more
-	 * times and PriceDetails/Type must be present with the values "BIDE" and
-	 * "OFFR".
+	 * If SuspendedIndicator is "false" or "0" (No), then PriceDetails must be
+	 * present. If SuspendedIndicator is "true" or "1" (Yes), then PriceDetails
+	 * is optional.
 	 */
-	public static void checkPriceValuation4(PriceValuation4 obj) throws Exception {
+	public static void checkPriceValuation2(PriceValuation2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

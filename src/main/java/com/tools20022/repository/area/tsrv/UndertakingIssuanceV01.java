@@ -90,41 +90,41 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintApplicant1Rule#forUndertakingIssuanceV01
- * ConstraintApplicant1Rule.forUndertakingIssuanceV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintApplicant1Rule#for_tsrv_UndertakingIssuanceV01
+ * ConstraintApplicant1Rule.for_tsrv_UndertakingIssuanceV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintApplicant2Rule#forUndertakingIssuanceV01
- * ConstraintApplicant2Rule.forUndertakingIssuanceV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintApplicant2Rule#for_tsrv_UndertakingIssuanceV01
+ * ConstraintApplicant2Rule.for_tsrv_UndertakingIssuanceV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintApplicant3Rule#forUndertakingIssuanceV01
- * ConstraintApplicant3Rule.forUndertakingIssuanceV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintApplicant3Rule#for_tsrv_UndertakingIssuanceV01
+ * ConstraintApplicant3Rule.for_tsrv_UndertakingIssuanceV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintApplicant4Rule#forUndertakingIssuanceV01
- * ConstraintApplicant4Rule.forUndertakingIssuanceV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintApplicant4Rule#for_tsrv_UndertakingIssuanceV01
+ * ConstraintApplicant4Rule.for_tsrv_UndertakingIssuanceV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintApplicant5Rule#forUndertakingIssuanceV01
- * ConstraintApplicant5Rule.forUndertakingIssuanceV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintApplicant5Rule#for_tsrv_UndertakingIssuanceV01
+ * ConstraintApplicant5Rule.for_tsrv_UndertakingIssuanceV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintApplicant6Rule#forUndertakingIssuanceV01
- * ConstraintApplicant6Rule.forUndertakingIssuanceV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintApplicant6Rule#for_tsrv_UndertakingIssuanceV01
+ * ConstraintApplicant6Rule.for_tsrv_UndertakingIssuanceV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintIssuanceType1Rule#forUndertakingIssuanceV01
- * ConstraintIssuanceType1Rule.forUndertakingIssuanceV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintIssuanceType1Rule#for_tsrv_UndertakingIssuanceV01
+ * ConstraintIssuanceType1Rule.for_tsrv_UndertakingIssuanceV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintIssuanceType2Rule#forUndertakingIssuanceV01
- * ConstraintIssuanceType2Rule.forUndertakingIssuanceV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintIssuanceType2Rule#for_tsrv_UndertakingIssuanceV01
+ * ConstraintIssuanceType2Rule.for_tsrv_UndertakingIssuanceV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintIssuanceType3Rule#forUndertakingIssuanceV01
- * ConstraintIssuanceType3Rule.forUndertakingIssuanceV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintIssuanceType3Rule#for_tsrv_UndertakingIssuanceV01
+ * ConstraintIssuanceType3Rule.for_tsrv_UndertakingIssuanceV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintIssuanceType4Rule#forUndertakingIssuanceV01
- * ConstraintIssuanceType4Rule.forUndertakingIssuanceV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintIssuanceType4Rule#for_tsrv_UndertakingIssuanceV01
+ * ConstraintIssuanceType4Rule.for_tsrv_UndertakingIssuanceV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintIssuanceType5Rule#forUndertakingIssuanceV01
- * ConstraintIssuanceType5Rule.forUndertakingIssuanceV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintIssuanceType5Rule#for_tsrv_UndertakingIssuanceV01
+ * ConstraintIssuanceType5Rule.for_tsrv_UndertakingIssuanceV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintIssuanceType6Rule#forUndertakingIssuanceV01
- * ConstraintIssuanceType6Rule.forUndertakingIssuanceV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintIssuanceType6Rule#for_tsrv_UndertakingIssuanceV01
+ * ConstraintIssuanceType6Rule.for_tsrv_UndertakingIssuanceV01}</li>
  * </ul>
  * </li>
  * <li>
@@ -333,12 +333,13 @@ public class UndertakingIssuanceV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintApplicant1Rule.forUndertakingIssuanceV01, com.tools20022.repository.constraints.ConstraintApplicant2Rule.forUndertakingIssuanceV01,
-						com.tools20022.repository.constraints.ConstraintApplicant3Rule.forUndertakingIssuanceV01, com.tools20022.repository.constraints.ConstraintApplicant4Rule.forUndertakingIssuanceV01,
-						com.tools20022.repository.constraints.ConstraintApplicant5Rule.forUndertakingIssuanceV01, com.tools20022.repository.constraints.ConstraintApplicant6Rule.forUndertakingIssuanceV01,
-						com.tools20022.repository.constraints.ConstraintIssuanceType1Rule.forUndertakingIssuanceV01, com.tools20022.repository.constraints.ConstraintIssuanceType2Rule.forUndertakingIssuanceV01,
-						com.tools20022.repository.constraints.ConstraintIssuanceType3Rule.forUndertakingIssuanceV01, com.tools20022.repository.constraints.ConstraintIssuanceType4Rule.forUndertakingIssuanceV01,
-						com.tools20022.repository.constraints.ConstraintIssuanceType5Rule.forUndertakingIssuanceV01, com.tools20022.repository.constraints.ConstraintIssuanceType6Rule.forUndertakingIssuanceV01);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintApplicant1Rule.for_tsrv_UndertakingIssuanceV01,
+						com.tools20022.repository.constraints.ConstraintApplicant2Rule.for_tsrv_UndertakingIssuanceV01, com.tools20022.repository.constraints.ConstraintApplicant3Rule.for_tsrv_UndertakingIssuanceV01,
+						com.tools20022.repository.constraints.ConstraintApplicant4Rule.for_tsrv_UndertakingIssuanceV01, com.tools20022.repository.constraints.ConstraintApplicant5Rule.for_tsrv_UndertakingIssuanceV01,
+						com.tools20022.repository.constraints.ConstraintApplicant6Rule.for_tsrv_UndertakingIssuanceV01, com.tools20022.repository.constraints.ConstraintIssuanceType1Rule.for_tsrv_UndertakingIssuanceV01,
+						com.tools20022.repository.constraints.ConstraintIssuanceType2Rule.for_tsrv_UndertakingIssuanceV01, com.tools20022.repository.constraints.ConstraintIssuanceType3Rule.for_tsrv_UndertakingIssuanceV01,
+						com.tools20022.repository.constraints.ConstraintIssuanceType4Rule.for_tsrv_UndertakingIssuanceV01, com.tools20022.repository.constraints.ConstraintIssuanceType5Rule.for_tsrv_UndertakingIssuanceV01,
+						com.tools20022.repository.constraints.ConstraintIssuanceType6Rule.for_tsrv_UndertakingIssuanceV01);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UndertakingIssuanceV01";
 				definition = "The UndertakingIssuance message is sent (and is thus issued) by the party issuing the undertaking to the beneficiary. The message may be sent either to the beneficiary directly or via an advising party. The undertaking could be a demand guarantee, standby letter of credit, or counter-undertaking (counter-guarantee or counter-standby). It contains details on the applicable rules, expiry date, the amount, required documents, and terms and conditions of the undertaking. The message constitutes an operative financial instrument.\r\nUnder the United Nations Convention on Independent Guarantees and Stand-by Letters of Credit (http://www.uncitral.org), 1996, Article 2, \"an undertaking is an independent commitment, known in international practice as an independent guarantee or as a standby letter of credit, given by a bank or other institution or person ('guarantor/issuer') to pay to the beneficiary a certain or determinable amount upon simple demand or upon demand accompanied by other documents, in conformity with the terms and any documentary conditions of the undertaking, indicating, or from which it is to be inferred, that payment is due because of a default in the performance of an obligation, or because of another contingency, or for money borrowed or advanced, or on account of any mature indebtedness undertaken by the principal/applicant or another person\".";

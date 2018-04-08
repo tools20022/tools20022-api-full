@@ -125,14 +125,14 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintResolution1Guideline#forMeetingNotificationV04
- * ConstraintResolution1Guideline.forMeetingNotificationV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintResolution1Guideline#for_seev_MeetingNotificationV04
+ * ConstraintResolution1Guideline.for_seev_MeetingNotificationV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintVoteInstructionType1Guideline#forMeetingNotificationV04
- * ConstraintVoteInstructionType1Guideline.forMeetingNotificationV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintVoteInstructionType1Guideline#for_seev_MeetingNotificationV04
+ * ConstraintVoteInstructionType1Guideline.for_seev_MeetingNotificationV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintEntitlementDate1Guideline#forMeetingNotificationV04
- * ConstraintEntitlementDate1Guideline.forMeetingNotificationV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintEntitlementDate1Guideline#for_seev_MeetingNotificationV04
+ * ConstraintEntitlementDate1Guideline.for_seev_MeetingNotificationV04}</li>
  * </ul>
  * </li>
  * <li>
@@ -975,8 +975,9 @@ public class MeetingNotificationV04 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintResolution1Guideline.forMeetingNotificationV04,
-						com.tools20022.repository.constraints.ConstraintVoteInstructionType1Guideline.forMeetingNotificationV04, com.tools20022.repository.constraints.ConstraintEntitlementDate1Guideline.forMeetingNotificationV04);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintResolution1Guideline.for_seev_MeetingNotificationV04,
+						com.tools20022.repository.constraints.ConstraintVoteInstructionType1Guideline.for_seev_MeetingNotificationV04,
+						com.tools20022.repository.constraints.ConstraintEntitlementDate1Guideline.for_seev_MeetingNotificationV04);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MeetingNotificationV04";
 				definition = "Scope\r\nA notifying party, eg, an issuer, its agent or an intermediary, sends the MeetingNotification message to a party holding the right to vote, to announce a shareholders meeting.\r\nUsage\r\nThe MeetingNotification message is used to announce a shareholders meeting, for example, it provides information on the participation details and requirements for the meeting, the vote parameters and the resolutions. The MeetingNotification message may also be used to announce an update.\r\nTo notify an update, the Amendment building block must be filled in. Any building block that is modified must be included in the amendment message. The information previously notified and not repeated in the amendment message remains valid.\r\nTo update the resolutions of the agenda, the complete list of resolutions must be repeated in the amendment message. The resolutions that are deleted should be assigned the status Withdrawn.";

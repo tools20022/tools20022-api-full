@@ -53,7 +53,7 @@ public class ConstraintEffectiveTransferDateRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<TransferInConfirmationV07> forTransferInConfirmationV07 = new MMConstraint<TransferInConfirmationV07>() {
+	public static final MMConstraint<TransferInConfirmationV07> for_sese_TransferInConfirmationV07 = new MMConstraint<TransferInConfirmationV07>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveTransferDateRule";
@@ -64,7 +64,7 @@ public class ConstraintEffectiveTransferDateRule {
 
 		@Override
 		public void executeValidator(TransferInConfirmationV07 obj) throws Exception {
-			checkTransferInConfirmationV07(obj);
+			check_sese_TransferInConfirmationV07(obj);
 		}
 	};
 
@@ -72,7 +72,7 @@ public class ConstraintEffectiveTransferDateRule {
 	 * If Function is ADVI (Advice) or Function is not present, then
 	 * EffectiveTransferDate must be present.
 	 */
-	public static void checkTransferInConfirmationV07(TransferInConfirmationV07 obj) throws Exception {
+	public static void check_sese_TransferInConfirmationV07(TransferInConfirmationV07 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

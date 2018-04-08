@@ -50,7 +50,7 @@ public class ConstraintModifyStandingOrderRules {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<ModifyStandingOrderV05> forModifyStandingOrderV05 = new MMConstraint<ModifyStandingOrderV05>() {
+	public static final MMConstraint<ModifyStandingOrderV05> for_camt_ModifyStandingOrderV05 = new MMConstraint<ModifyStandingOrderV05>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifyStandingOrderRules";
@@ -60,7 +60,7 @@ public class ConstraintModifyStandingOrderRules {
 
 		@Override
 		public void executeValidator(ModifyStandingOrderV05 obj) throws Exception {
-			checkModifyStandingOrderV05(obj);
+			check_camt_ModifyStandingOrderV05(obj);
 		}
 	};
 
@@ -69,7 +69,7 @@ public class ConstraintModifyStandingOrderRules {
 	 * CreditAccount, a ValidityPeriod or a Periodicity. At a minimum, one of
 	 * these elements must be present.
 	 */
-	public static void checkModifyStandingOrderV05(ModifyStandingOrderV05 obj) throws Exception {
+	public static void check_camt_ModifyStandingOrderV05(ModifyStandingOrderV05 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

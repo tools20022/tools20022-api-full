@@ -115,21 +115,21 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintAllegementDetailsActivityRule1#forSecuritiesSettlementTransactionAllegementReportV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAllegementDetailsActivityRule1#for_semt_SecuritiesSettlementTransactionAllegementReportV01
  * ConstraintAllegementDetailsActivityRule1.
- * forSecuritiesSettlementTransactionAllegementReportV01}</li>
+ * for_semt_SecuritiesSettlementTransactionAllegementReportV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintAllegementDetailsActivityRule2#forSecuritiesSettlementTransactionAllegementReportV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAllegementDetailsActivityRule2#for_semt_SecuritiesSettlementTransactionAllegementReportV01
  * ConstraintAllegementDetailsActivityRule2.
- * forSecuritiesSettlementTransactionAllegementReportV01}</li>
+ * for_semt_SecuritiesSettlementTransactionAllegementReportV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#forSecuritiesSettlementTransactionAllegementReportV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#for_semt_SecuritiesSettlementTransactionAllegementReportV01
  * ConstraintCoexistenceCharacterSetXRule.
- * forSecuritiesSettlementTransactionAllegementReportV01}</li>
+ * for_semt_SecuritiesSettlementTransactionAllegementReportV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forSecuritiesSettlementTransactionAllegementReportV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#for_semt_SecuritiesSettlementTransactionAllegementReportV01
  * ConstraintCoexistenceIdentificationRule.
- * forSecuritiesSettlementTransactionAllegementReportV01}</li>
+ * for_semt_SecuritiesSettlementTransactionAllegementReportV01}</li>
  * </ul>
  * </li>
  * <li>
@@ -537,10 +537,10 @@ public class SecuritiesSettlementTransactionAllegementReportV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAllegementDetailsActivityRule1.forSecuritiesSettlementTransactionAllegementReportV01,
-						com.tools20022.repository.constraints.ConstraintAllegementDetailsActivityRule2.forSecuritiesSettlementTransactionAllegementReportV01,
-						com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesSettlementTransactionAllegementReportV01,
-						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesSettlementTransactionAllegementReportV01);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAllegementDetailsActivityRule1.for_semt_SecuritiesSettlementTransactionAllegementReportV01,
+						com.tools20022.repository.constraints.ConstraintAllegementDetailsActivityRule2.for_semt_SecuritiesSettlementTransactionAllegementReportV01,
+						com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.for_semt_SecuritiesSettlementTransactionAllegementReportV01,
+						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.for_semt_SecuritiesSettlementTransactionAllegementReportV01);
 				semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, "MT 586, Seq A :23G:NEWM"));
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesSettlementTransactionAllegementReportV01";

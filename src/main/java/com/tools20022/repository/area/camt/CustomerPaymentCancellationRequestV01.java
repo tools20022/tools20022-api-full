@@ -108,16 +108,17 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrGroupCaseRule#forCustomerPaymentCancellationRequestV01
- * ConstraintMessageOrGroupCaseRule.forCustomerPaymentCancellationRequestV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrGroupCaseRule#for_camt_CustomerPaymentCancellationRequestV01
+ * ConstraintMessageOrGroupCaseRule.
+ * for_camt_CustomerPaymentCancellationRequestV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrPaymentInformationCaseRule#forCustomerPaymentCancellationRequestV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrPaymentInformationCaseRule#for_camt_CustomerPaymentCancellationRequestV01
  * ConstraintMessageOrPaymentInformationCaseRule.
- * forCustomerPaymentCancellationRequestV01}</li>
+ * for_camt_CustomerPaymentCancellationRequestV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrTransactionCaseRule#forCustomerPaymentCancellationRequestV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrTransactionCaseRule#for_camt_CustomerPaymentCancellationRequestV01
  * ConstraintMessageOrTransactionCaseRule.
- * forCustomerPaymentCancellationRequestV01}</li>
+ * for_camt_CustomerPaymentCancellationRequestV01}</li>
  * </ul>
  * </li>
  * <li>
@@ -336,9 +337,9 @@ public class CustomerPaymentCancellationRequestV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMessageOrGroupCaseRule.forCustomerPaymentCancellationRequestV01,
-						com.tools20022.repository.constraints.ConstraintMessageOrPaymentInformationCaseRule.forCustomerPaymentCancellationRequestV01,
-						com.tools20022.repository.constraints.ConstraintMessageOrTransactionCaseRule.forCustomerPaymentCancellationRequestV01);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMessageOrGroupCaseRule.for_camt_CustomerPaymentCancellationRequestV01,
+						com.tools20022.repository.constraints.ConstraintMessageOrPaymentInformationCaseRule.for_camt_CustomerPaymentCancellationRequestV01,
+						com.tools20022.repository.constraints.ConstraintMessageOrTransactionCaseRule.for_camt_CustomerPaymentCancellationRequestV01);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CustomerPaymentCancellationRequestV01";
 				definition = "Scope\r\nThe Customer Payment Cancellation Request message is sent by a case creator/case assigner to a case assignee.\r\nThis message is used to request the cancellation of an original payment instruction. The Customer Payment Cancellation Request message is issued by the initiating party to request the cancellation of an initiation payment message previously sent (such as CustomerCreditTransferInitiation or CustomerDirectDebitInitiation).\r\nUsage\r\nThe Customer Payment Cancellation Request message must be answered with a:\r\n- Resolution Of Investigation message with a positive final outcome when the case assignee can perform the requested cancellation\r\n- Resolution Of Investigation message with a negative final outcome when the case assignee may perform the requested cancellation but fails to do so (too late, irrevocable instruction.)\r\n- Reject Investigation message when the case assignee is unable or not authorised to perform the requested cancellation\r\n- Notification Of Case Assignment message to indicate whether the case assignee will take on the case himself or reassign the case to a subsequent party in the payment processing chain.\r\nA Customer Payment Cancellation Request message concerns one and only one original payment instruction at a time.\r\nWhen a case assignee successfully performs a cancellation, it must return the corresponding funds to the case assigner. It may provide some details about the return in the Resolution Of Investigation message.\r\nThe processing of a Customer Payment Cancellation Request message case may lead to a Debit Authorisation Request message sent to the creditor by its account servicing institution.\r\nThe Customer Payment Cancellation Request message may be used to escalate a case after an unsuccessful request to modify the payment. In this scenario, the case identification remains the same as in the original Customer Payment Cancellation Request message and the element ReopenCaseIndication is set to 'Yes' or 'true'.";

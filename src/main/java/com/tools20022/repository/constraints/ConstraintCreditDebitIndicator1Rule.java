@@ -37,72 +37,6 @@ public class ConstraintCreditDebitIndicator1Rule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.Transactions2 Transactions2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CreditDebitIndicator1Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If PaymentCommonInformation/CreditDebitIndicator is present, then TransactionReport/Transaction/CreditDebitIndicator is not allowed.\nIf PaymentCommonInformation/CreditDebitIndicator is not present, then TransactionReport/Transaction/CreditDebitIndicator is optional."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<Transactions2> forTransactions2 = new MMConstraint<Transactions2>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "CreditDebitIndicator1Rule";
-			definition = "If PaymentCommonInformation/CreditDebitIndicator is present, then TransactionReport/Transaction/CreditDebitIndicator is not allowed.\nIf PaymentCommonInformation/CreditDebitIndicator is not present, then TransactionReport/Transaction/CreditDebitIndicator is optional.";
-			owner_lazy = () -> Transactions2.mmObject();
-		}
-
-		@Override
-		public void executeValidator(Transactions2 obj) throws Exception {
-			checkTransactions2(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.Transactions3 Transactions3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CreditDebitIndicator1Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If PaymentCommonInformation/CreditDebitIndicator is present, then TransactionReport/Transaction/CreditDebitIndicator is not allowed.\nIf PaymentCommonInformation/CreditDebitIndicator is not present, then TransactionReport/Transaction/CreditDebitIndicator is optional."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<Transactions3> forTransactions3 = new MMConstraint<Transactions3>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "CreditDebitIndicator1Rule";
-			definition = "If PaymentCommonInformation/CreditDebitIndicator is present, then TransactionReport/Transaction/CreditDebitIndicator is not allowed.\nIf PaymentCommonInformation/CreditDebitIndicator is not present, then TransactionReport/Transaction/CreditDebitIndicator is optional.";
-			owner_lazy = () -> Transactions3.mmObject();
-		}
-
-		@Override
-		public void executeValidator(Transactions3 obj) throws Exception {
-			checkTransactions3(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Transactions4 Transactions4}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -236,6 +170,39 @@ public class ConstraintCreditDebitIndicator1Rule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.Transactions3 Transactions3}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CreditDebitIndicator1Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PaymentCommonInformation/CreditDebitIndicator is present, then TransactionReport/Transaction/CreditDebitIndicator is not allowed.\nIf PaymentCommonInformation/CreditDebitIndicator is not present, then TransactionReport/Transaction/CreditDebitIndicator is optional."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<Transactions3> forTransactions3 = new MMConstraint<Transactions3>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CreditDebitIndicator1Rule";
+			definition = "If PaymentCommonInformation/CreditDebitIndicator is present, then TransactionReport/Transaction/CreditDebitIndicator is not allowed.\nIf PaymentCommonInformation/CreditDebitIndicator is not present, then TransactionReport/Transaction/CreditDebitIndicator is optional.";
+			owner_lazy = () -> Transactions3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transactions3 obj) throws Exception {
+			checkTransactions3(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Transactions7 Transactions7}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
 	 * expression} =
@@ -274,26 +241,39 @@ public class ConstraintCreditDebitIndicator1Rule {
 			checkTransactions7(obj);
 		}
 	};
-
 	/**
-	 * If PaymentCommonInformation/CreditDebitIndicator is present, then
-	 * TransactionReport/Transaction/CreditDebitIndicator is not allowed. If
-	 * PaymentCommonInformation/CreditDebitIndicator is not present, then
-	 * TransactionReport/Transaction/CreditDebitIndicator is optional.
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.Transactions2 Transactions2}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CreditDebitIndicator1Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PaymentCommonInformation/CreditDebitIndicator is present, then TransactionReport/Transaction/CreditDebitIndicator is not allowed.\nIf PaymentCommonInformation/CreditDebitIndicator is not present, then TransactionReport/Transaction/CreditDebitIndicator is optional."
+	 * </li>
+	 * </ul>
 	 */
-	public static void checkTransactions2(Transactions2 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
+	public static final MMConstraint<Transactions2> forTransactions2 = new MMConstraint<Transactions2>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CreditDebitIndicator1Rule";
+			definition = "If PaymentCommonInformation/CreditDebitIndicator is present, then TransactionReport/Transaction/CreditDebitIndicator is not allowed.\nIf PaymentCommonInformation/CreditDebitIndicator is not present, then TransactionReport/Transaction/CreditDebitIndicator is optional.";
+			owner_lazy = () -> Transactions2.mmObject();
+		}
 
-	/**
-	 * If PaymentCommonInformation/CreditDebitIndicator is present, then
-	 * TransactionReport/Transaction/CreditDebitIndicator is not allowed. If
-	 * PaymentCommonInformation/CreditDebitIndicator is not present, then
-	 * TransactionReport/Transaction/CreditDebitIndicator is optional.
-	 */
-	public static void checkTransactions3(Transactions3 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
+		@Override
+		public void executeValidator(Transactions2 obj) throws Exception {
+			checkTransactions2(obj);
+		}
+	};
 
 	/**
 	 * If PaymentCommonInformation/CreditDebitIndicator is present, then
@@ -327,11 +307,31 @@ public class ConstraintCreditDebitIndicator1Rule {
 
 	/**
 	 * If PaymentCommonInformation/CreditDebitIndicator is present, then
+	 * TransactionReport/Transaction/CreditDebitIndicator is not allowed. If
+	 * PaymentCommonInformation/CreditDebitIndicator is not present, then
+	 * TransactionReport/Transaction/CreditDebitIndicator is optional.
+	 */
+	public static void checkTransactions3(Transactions3 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PaymentCommonInformation/CreditDebitIndicator is present, then
 	 * TransactionReport/Transaction/CreditDebitIndicator is not allowed.<br>
 	 * If PaymentCommonInformation/CreditDebitIndicator is not present, then
 	 * TransactionReport/Transaction/CreditDebitIndicator is optional.
 	 */
 	public static void checkTransactions7(Transactions7 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PaymentCommonInformation/CreditDebitIndicator is present, then
+	 * TransactionReport/Transaction/CreditDebitIndicator is not allowed. If
+	 * PaymentCommonInformation/CreditDebitIndicator is not present, then
+	 * TransactionReport/Transaction/CreditDebitIndicator is optional.
+	 */
+	public static void checkTransactions2(Transactions2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

@@ -49,7 +49,7 @@ public class ConstraintHomogeneity1Rule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<InvoiceFinancingRequestV01> forInvoiceFinancingRequestV01 = new MMConstraint<InvoiceFinancingRequestV01>() {
+	public static final MMConstraint<InvoiceFinancingRequestV01> for_tsin_InvoiceFinancingRequestV01 = new MMConstraint<InvoiceFinancingRequestV01>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Homogeneity1Rule";
@@ -59,7 +59,7 @@ public class ConstraintHomogeneity1Rule {
 
 		@Override
 		public void executeValidator(InvoiceFinancingRequestV01 obj) throws Exception {
-			checkInvoiceFinancingRequestV01(obj);
+			check_tsin_InvoiceFinancingRequestV01(obj);
 		}
 	};
 
@@ -67,7 +67,7 @@ public class ConstraintHomogeneity1Rule {
 	 * The bulk invoice financing request must be homogeneous for account IBAN
 	 * identifier.
 	 */
-	public static void checkInvoiceFinancingRequestV01(InvoiceFinancingRequestV01 obj) throws Exception {
+	public static void check_tsin_InvoiceFinancingRequestV01(InvoiceFinancingRequestV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

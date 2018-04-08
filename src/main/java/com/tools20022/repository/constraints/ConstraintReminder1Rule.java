@@ -27,9 +27,8 @@ import com.tools20022.repository.area.seev.MeetingInstructionStatusV05;
 import java.util.Arrays;
 
 /**
- * If InstructionType/InstructionIdentification/Identification is "NONREF", then
- * InstructionTypeStatus
- * /InstructionStatus/GlobalInstructionStatus/ProcessingStatus/Status must be
+ * If InstructionIdentification/Identification is "NONREF", then
+ * InstructionStatus/GlobalInstructionStatus/ProcessingStatus/Status must be
  * NOIN.
  */
 public class ConstraintReminder1Rule {
@@ -40,12 +39,8 @@ public class ConstraintReminder1Rule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionStatusV05
-	 * MeetingInstructionStatusV05}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
-	 * expression} =
-	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/InstructionTypeStatus/InstructionStatus/GlobalInstructionStatus/ProcessingStatus/Status&lt;/leftOperand&gt;&lt;rightOperand&gt;NotReceived&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/InstructionType/InstructionIdentification/Identification&lt;/leftOperand&gt;&lt;rightOperand&gt;NONREF&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
-	 * </li>
+	 * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionStatusV02
+	 * MeetingInstructionStatusV02}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -55,28 +50,21 @@ public class ConstraintReminder1Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If InstructionType/InstructionIdentification/Identification is \"NONREF\", then InstructionTypeStatus/InstructionStatus/GlobalInstructionStatus/ProcessingStatus/Status must be NOIN."
+	 * "If InstructionIdentification/Identification is \"NONREF\", then InstructionStatus/GlobalInstructionStatus/ProcessingStatus/Status must be NOIN."
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintReminder1Rule#forMeetingInstructionStatusV04
-	 * ConstraintReminder1Rule.forMeetingInstructionStatusV04}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<MeetingInstructionStatusV05> forMeetingInstructionStatusV05 = new MMConstraint<MeetingInstructionStatusV05>() {
+	public static final MMConstraint<MeetingInstructionStatusV02> for_seev_MeetingInstructionStatusV02 = new MMConstraint<MeetingInstructionStatusV02>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reminder1Rule";
-			definition = "If InstructionType/InstructionIdentification/Identification is \"NONREF\", then InstructionTypeStatus/InstructionStatus/GlobalInstructionStatus/ProcessingStatus/Status must be NOIN.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReminder1Rule.forMeetingInstructionStatusV04;
-			owner_lazy = () -> MeetingInstructionStatusV05.mmObject();
-			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/InstructionTypeStatus/InstructionStatus/GlobalInstructionStatus/ProcessingStatus/Status</leftOperand><rightOperand>NotReceived</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/InstructionType/InstructionIdentification/Identification</leftOperand><rightOperand>NONREF</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+			definition = "If InstructionIdentification/Identification is \"NONREF\", then InstructionStatus/GlobalInstructionStatus/ProcessingStatus/Status must be NOIN.";
+			owner_lazy = () -> MeetingInstructionStatusV02.mmObject();
 		}
 
 		@Override
-		public void executeValidator(MeetingInstructionStatusV05 obj) throws Exception {
-			checkMeetingInstructionStatusV05(obj);
+		public void executeValidator(MeetingInstructionStatusV02 obj) throws Exception {
+			check_seev_MeetingInstructionStatusV02(obj);
 		}
 	};
 	/**
@@ -106,25 +94,25 @@ public class ConstraintReminder1Rule {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintReminder1Rule#forMeetingInstructionStatusV05
-	 * ConstraintReminder1Rule.forMeetingInstructionStatusV05}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintReminder1Rule#for_seev_MeetingInstructionStatusV05
+	 * ConstraintReminder1Rule.for_seev_MeetingInstructionStatusV05}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<MeetingInstructionStatusV04> forMeetingInstructionStatusV04 = new MMConstraint<MeetingInstructionStatusV04>() {
+	public static final MMConstraint<MeetingInstructionStatusV04> for_seev_MeetingInstructionStatusV04 = new MMConstraint<MeetingInstructionStatusV04>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reminder1Rule";
 			definition = "If InstructionType/InstructionIdentification/Identification is \"NONREF\", then InstructionTypeStatus/InstructionStatus/GlobalInstructionStatus/ProcessingStatus/Status must be NOIN.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReminder1Rule.forMeetingInstructionStatusV05);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReminder1Rule.for_seev_MeetingInstructionStatusV05);
 			owner_lazy = () -> MeetingInstructionStatusV04.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/InstructionTypeStatus/InstructionStatus/GlobalInstructionStatus/ProcessingStatus/Status</leftOperand><rightOperand>NotReceived</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/InstructionType/InstructionIdentification/Identification</leftOperand><rightOperand>NONREF</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
 
 		@Override
 		public void executeValidator(MeetingInstructionStatusV04 obj) throws Exception {
-			checkMeetingInstructionStatusV04(obj);
+			check_seev_MeetingInstructionStatusV04(obj);
 		}
 	};
 	/**
@@ -133,8 +121,12 @@ public class ConstraintReminder1Rule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionStatusV02
-	 * MeetingInstructionStatusV02}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionStatusV05
+	 * MeetingInstructionStatusV05}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/InstructionTypeStatus/InstructionStatus/GlobalInstructionStatus/ProcessingStatus/Status&lt;/leftOperand&gt;&lt;rightOperand&gt;NotReceived&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/InstructionType/InstructionIdentification/Identification&lt;/leftOperand&gt;&lt;rightOperand&gt;NONREF&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -144,21 +136,28 @@ public class ConstraintReminder1Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If InstructionIdentification/Identification is \"NONREF\", then InstructionStatus/GlobalInstructionStatus/ProcessingStatus/Status must be NOIN."
+	 * "If InstructionType/InstructionIdentification/Identification is \"NONREF\", then InstructionTypeStatus/InstructionStatus/GlobalInstructionStatus/ProcessingStatus/Status must be NOIN."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintReminder1Rule#for_seev_MeetingInstructionStatusV04
+	 * ConstraintReminder1Rule.for_seev_MeetingInstructionStatusV04}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<MeetingInstructionStatusV02> forMeetingInstructionStatusV02 = new MMConstraint<MeetingInstructionStatusV02>() {
+	public static final MMConstraint<MeetingInstructionStatusV05> for_seev_MeetingInstructionStatusV05 = new MMConstraint<MeetingInstructionStatusV05>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reminder1Rule";
-			definition = "If InstructionIdentification/Identification is \"NONREF\", then InstructionStatus/GlobalInstructionStatus/ProcessingStatus/Status must be NOIN.";
-			owner_lazy = () -> MeetingInstructionStatusV02.mmObject();
+			definition = "If InstructionType/InstructionIdentification/Identification is \"NONREF\", then InstructionTypeStatus/InstructionStatus/GlobalInstructionStatus/ProcessingStatus/Status must be NOIN.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReminder1Rule.for_seev_MeetingInstructionStatusV04;
+			owner_lazy = () -> MeetingInstructionStatusV05.mmObject();
+			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/InstructionTypeStatus/InstructionStatus/GlobalInstructionStatus/ProcessingStatus/Status</leftOperand><rightOperand>NotReceived</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/InstructionType/InstructionIdentification/Identification</leftOperand><rightOperand>NONREF</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
 
 		@Override
-		public void executeValidator(MeetingInstructionStatusV02 obj) throws Exception {
-			checkMeetingInstructionStatusV02(obj);
+		public void executeValidator(MeetingInstructionStatusV05 obj) throws Exception {
+			check_seev_MeetingInstructionStatusV05(obj);
 		}
 	};
 	/**
@@ -186,7 +185,7 @@ public class ConstraintReminder1Rule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<MeetingInstructionStatusV03> forMeetingInstructionStatusV03 = new MMConstraint<MeetingInstructionStatusV03>() {
+	public static final MMConstraint<MeetingInstructionStatusV03> for_seev_MeetingInstructionStatusV03 = new MMConstraint<MeetingInstructionStatusV03>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reminder1Rule";
@@ -197,34 +196,16 @@ public class ConstraintReminder1Rule {
 
 		@Override
 		public void executeValidator(MeetingInstructionStatusV03 obj) throws Exception {
-			checkMeetingInstructionStatusV03(obj);
+			check_seev_MeetingInstructionStatusV03(obj);
 		}
 	};
-
-	/**
-	 * If InstructionType/InstructionIdentification/Identification is "NONREF",
-	 * then InstructionTypeStatus/InstructionStatus/GlobalInstructionStatus/
-	 * ProcessingStatus/Status must be NOIN.
-	 */
-	public static void checkMeetingInstructionStatusV05(MeetingInstructionStatusV05 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If InstructionType/InstructionIdentification/Identification is "NONREF",
-	 * then InstructionTypeStatus/InstructionStatus/GlobalInstructionStatus/
-	 * ProcessingStatus/Status must be NOIN.
-	 */
-	public static void checkMeetingInstructionStatusV04(MeetingInstructionStatusV04 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
 
 	/**
 	 * If InstructionIdentification/Identification is "NONREF", then
 	 * InstructionStatus/GlobalInstructionStatus/ProcessingStatus/Status must be
 	 * NOIN.
 	 */
-	public static void checkMeetingInstructionStatusV02(MeetingInstructionStatusV02 obj) throws Exception {
+	public static void check_seev_MeetingInstructionStatusV02(MeetingInstructionStatusV02 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -233,7 +214,25 @@ public class ConstraintReminder1Rule {
 	 * then InstructionTypeStatus/InstructionStatus/GlobalInstructionStatus/
 	 * ProcessingStatus/Status must be NOIN.
 	 */
-	public static void checkMeetingInstructionStatusV03(MeetingInstructionStatusV03 obj) throws Exception {
+	public static void check_seev_MeetingInstructionStatusV04(MeetingInstructionStatusV04 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If InstructionType/InstructionIdentification/Identification is "NONREF",
+	 * then InstructionTypeStatus/InstructionStatus/GlobalInstructionStatus/
+	 * ProcessingStatus/Status must be NOIN.
+	 */
+	public static void check_seev_MeetingInstructionStatusV05(MeetingInstructionStatusV05 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If InstructionType/InstructionIdentification/Identification is "NONREF",
+	 * then InstructionTypeStatus/InstructionStatus/GlobalInstructionStatus/
+	 * ProcessingStatus/Status must be NOIN.
+	 */
+	public static void check_seev_MeetingInstructionStatusV03(MeetingInstructionStatusV03 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

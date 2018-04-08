@@ -86,6 +86,40 @@ public class ConstraintMaximumAndMinimumQuantitySoughtUsageRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity8
+	 * CorporateActionQuantity8}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "MaximumAndMinimumQuantitySoughtUsageRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "When MaximumQuantity is present, MinimumQuantitySought must be present too. When MinimumQuantitySought is present, MaximumQuantity must be present too.\r\nWhen MinimumQuantitySought/Code is AnyAndAll, then MaximumQuantity/Code must not be AnyAndAll.\r\nWhen MaximumQuantity/Code is AnyAndAll, MinimumQuantitySought/code must not be used with the value AnyAndAll."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionQuantity8> forCorporateActionQuantity8 = new MMConstraint<CorporateActionQuantity8>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "MaximumAndMinimumQuantitySoughtUsageRule";
+			definition = "When MaximumQuantity is present, MinimumQuantitySought must be present too. When MinimumQuantitySought is present, MaximumQuantity must be present too.\r\nWhen MinimumQuantitySought/Code is AnyAndAll, then MaximumQuantity/Code must not be AnyAndAll.\r\nWhen MaximumQuantity/Code is AnyAndAll, MinimumQuantitySought/code must not be used with the value AnyAndAll.";
+			owner_lazy = () -> CorporateActionQuantity8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionQuantity8 obj) throws Exception {
+			checkCorporateActionQuantity8(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity6
 	 * CorporateActionQuantity6}</li>
 	 * <li>
@@ -155,40 +189,6 @@ public class ConstraintMaximumAndMinimumQuantitySoughtUsageRule {
 			checkCorporateActionQuantity7(obj);
 		}
 	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity8
-	 * CorporateActionQuantity8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "MaximumAndMinimumQuantitySoughtUsageRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "When MaximumQuantity is present, MinimumQuantitySought must be present too. When MinimumQuantitySought is present, MaximumQuantity must be present too.\r\nWhen MinimumQuantitySought/Code is AnyAndAll, then MaximumQuantity/Code must not be AnyAndAll.\r\nWhen MaximumQuantity/Code is AnyAndAll, MinimumQuantitySought/code must not be used with the value AnyAndAll."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CorporateActionQuantity8> forCorporateActionQuantity8 = new MMConstraint<CorporateActionQuantity8>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "MaximumAndMinimumQuantitySoughtUsageRule";
-			definition = "When MaximumQuantity is present, MinimumQuantitySought must be present too. When MinimumQuantitySought is present, MaximumQuantity must be present too.\r\nWhen MinimumQuantitySought/Code is AnyAndAll, then MaximumQuantity/Code must not be AnyAndAll.\r\nWhen MaximumQuantity/Code is AnyAndAll, MinimumQuantitySought/code must not be used with the value AnyAndAll.";
-			owner_lazy = () -> CorporateActionQuantity8.mmObject();
-		}
-
-		@Override
-		public void executeValidator(CorporateActionQuantity8 obj) throws Exception {
-			checkCorporateActionQuantity8(obj);
-		}
-	};
 
 	/**
 	 * When MaximumQuantity is present, MinimumQuantitySought must be present
@@ -200,6 +200,19 @@ public class ConstraintMaximumAndMinimumQuantitySoughtUsageRule {
 	 * not be used with the value AnyAndAll.
 	 */
 	public static void checkCorporateActionQuantity5(CorporateActionQuantity5 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * When MaximumQuantity is present, MinimumQuantitySought must be present
+	 * too. When MinimumQuantitySought is present, MaximumQuantity must be
+	 * present too.<br>
+	 * When MinimumQuantitySought/Code is AnyAndAll, then MaximumQuantity/Code
+	 * must not be AnyAndAll.<br>
+	 * When MaximumQuantity/Code is AnyAndAll, MinimumQuantitySought/code must
+	 * not be used with the value AnyAndAll.
+	 */
+	public static void checkCorporateActionQuantity8(CorporateActionQuantity8 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -226,19 +239,6 @@ public class ConstraintMaximumAndMinimumQuantitySoughtUsageRule {
 	 * not be used with the value AnyAndAll.
 	 */
 	public static void checkCorporateActionQuantity7(CorporateActionQuantity7 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * When MaximumQuantity is present, MinimumQuantitySought must be present
-	 * too. When MinimumQuantitySought is present, MaximumQuantity must be
-	 * present too.<br>
-	 * When MinimumQuantitySought/Code is AnyAndAll, then MaximumQuantity/Code
-	 * must not be AnyAndAll.<br>
-	 * When MaximumQuantity/Code is AnyAndAll, MinimumQuantitySought/code must
-	 * not be used with the value AnyAndAll.
-	 */
-	public static void checkCorporateActionQuantity8(CorporateActionQuantity8 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

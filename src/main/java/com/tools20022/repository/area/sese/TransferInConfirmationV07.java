@@ -119,14 +119,14 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintRequestedSettlementDateRule#forTransferInConfirmationV07
- * ConstraintRequestedSettlementDateRule.forTransferInConfirmationV07}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintRequestedSettlementDateRule#for_sese_TransferInConfirmationV07
+ * ConstraintRequestedSettlementDateRule.for_sese_TransferInConfirmationV07}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#forTransferInConfirmationV07
- * ConstraintEffectiveSettlementDateRule.forTransferInConfirmationV07}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#for_sese_TransferInConfirmationV07
+ * ConstraintEffectiveSettlementDateRule.for_sese_TransferInConfirmationV07}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveTransferDateRule#forTransferInConfirmationV07
- * ConstraintEffectiveTransferDateRule.forTransferInConfirmationV07}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveTransferDateRule#for_sese_TransferInConfirmationV07
+ * ConstraintEffectiveTransferDateRule.for_sese_TransferInConfirmationV07}</li>
  * </ul>
  * </li>
  * <li>
@@ -900,8 +900,9 @@ public class TransferInConfirmationV07 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRequestedSettlementDateRule.forTransferInConfirmationV07,
-						com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferInConfirmationV07, com.tools20022.repository.constraints.ConstraintEffectiveTransferDateRule.forTransferInConfirmationV07);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRequestedSettlementDateRule.for_sese_TransferInConfirmationV07,
+						com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.for_sese_TransferInConfirmationV07,
+						com.tools20022.repository.constraints.ConstraintEffectiveTransferDateRule.for_sese_TransferInConfirmationV07);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransferInConfirmationV07";
 				definition = "Scope\r\nAn executing party, for example, a transfer agent, sends the TransferInConfirmation message to the instructing party, for example, an investment manager or its authorised representative, to confirm the receipt of a financial instrument, free of payment, on a given date, from a specified party.\r\nThis message may also be used to confirm the receipt of a financial instrument, free of payment, from another of the instructing parties own accounts or from a third party.\r\nThis message may also be used as an advice, that is, the message is used to provide account information.\r\nUsage\r\nThe TransferInConfirmation message is used to confirm receipt of a financial instrument, either from another account owned by the instructing party or from a third party. The reference of the transfer confirmation is identified in TransferConfirmationReference.\r\nThe reference of the original transfer instruction is specified in TransferReference. The message identification of the TransferInInstruction message in which the transfer instruction was conveyed may also be quoted in RelatedReference.";

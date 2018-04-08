@@ -36,39 +36,6 @@ public class ConstraintCurrentInstructionNumberRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.TotalNumber1 TotalNumber1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CurrentInstructionNumberRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If the Sender wants to indicate that this instruction is linked to one or more settlement instruction, then the CurrentInstructionNumber must be specified."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<TotalNumber1> forTotalNumber1 = new MMConstraint<TotalNumber1>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "CurrentInstructionNumberRule";
-			definition = "If the Sender wants to indicate that this instruction is linked to one or more settlement instruction, then the CurrentInstructionNumber must be specified.";
-			owner_lazy = () -> TotalNumber1.mmObject();
-		}
-
-		@Override
-		public void executeValidator(TotalNumber1 obj) throws Exception {
-			checkTotalNumber1(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.NumberCount1Choice
 	 * NumberCount1Choice}</li>
 	 * <li>
@@ -97,13 +64,46 @@ public class ConstraintCurrentInstructionNumberRule {
 			checkNumberCount1Choice(obj);
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.TotalNumber1 TotalNumber1}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CurrentInstructionNumberRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If the Sender wants to indicate that this instruction is linked to one or more settlement instruction, then the CurrentInstructionNumber must be specified."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<TotalNumber1> forTotalNumber1 = new MMConstraint<TotalNumber1>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CurrentInstructionNumberRule";
+			definition = "If the Sender wants to indicate that this instruction is linked to one or more settlement instruction, then the CurrentInstructionNumber must be specified.";
+			owner_lazy = () -> TotalNumber1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TotalNumber1 obj) throws Exception {
+			checkTotalNumber1(obj);
+		}
+	};
 
 	/**
 	 * If the Sender wants to indicate that this instruction is linked to one or
 	 * more settlement instruction, then the CurrentInstructionNumber must be
 	 * specified.
 	 */
-	public static void checkTotalNumber1(TotalNumber1 obj) throws Exception {
+	public static void checkNumberCount1Choice(NumberCount1Choice obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -112,7 +112,7 @@ public class ConstraintCurrentInstructionNumberRule {
 	 * more settlement instruction, then the CurrentInstructionNumber must be
 	 * specified.
 	 */
-	public static void checkNumberCount1Choice(NumberCount1Choice obj) throws Exception {
+	public static void checkTotalNumber1(TotalNumber1 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

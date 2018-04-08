@@ -97,16 +97,17 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationRule#forSwitchOrderConfirmationAmendmentV01
- * ConstraintAccountIdentificationRule.forSwitchOrderConfirmationAmendmentV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationRule#for_setr_SwitchOrderConfirmationAmendmentV01
+ * ConstraintAccountIdentificationRule.
+ * for_setr_SwitchOrderConfirmationAmendmentV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintOrderOriginatorEligibility4Rule#forSwitchOrderConfirmationAmendmentV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOrderOriginatorEligibility4Rule#for_setr_SwitchOrderConfirmationAmendmentV01
  * ConstraintOrderOriginatorEligibility4Rule.
- * forSwitchOrderConfirmationAmendmentV01}</li>
+ * for_setr_SwitchOrderConfirmationAmendmentV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintMultipleSwitchExecutionRule#forSwitchOrderConfirmationAmendmentV01
- * ConstraintMultipleSwitchExecutionRule.forSwitchOrderConfirmationAmendmentV01}
- * </li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMultipleSwitchExecutionRule#for_setr_SwitchOrderConfirmationAmendmentV01
+ * ConstraintMultipleSwitchExecutionRule.
+ * for_setr_SwitchOrderConfirmationAmendmentV01}</li>
  * </ul>
  * </li>
  * <li>
@@ -454,9 +455,9 @@ public class SwitchOrderConfirmationAmendmentV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forSwitchOrderConfirmationAmendmentV01,
-						com.tools20022.repository.constraints.ConstraintOrderOriginatorEligibility4Rule.forSwitchOrderConfirmationAmendmentV01,
-						com.tools20022.repository.constraints.ConstraintMultipleSwitchExecutionRule.forSwitchOrderConfirmationAmendmentV01);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.for_setr_SwitchOrderConfirmationAmendmentV01,
+						com.tools20022.repository.constraints.ConstraintOrderOriginatorEligibility4Rule.for_setr_SwitchOrderConfirmationAmendmentV01,
+						com.tools20022.repository.constraints.ConstraintMultipleSwitchExecutionRule.for_setr_SwitchOrderConfirmationAmendmentV01);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SwitchOrderConfirmationAmendmentV01";
 				definition = "Scope\r\nAn executing party, for example, a transfer agent, sends the SwitchOrderConfirmationAmendment message to the instructing party, for example, an investment manager or its authorised representative to amend a previously sent SwitchOrderConfirmation message.\r\nUsage\r\nThe SwitchOrderConfirmationAmendment message is used to amend a previously sent switch order confirmation.\r\nEach order confirmation amendment specified is identified in DealReference. The reference of the original order is specified in OrderReference.\r\nThe message identification of the SwitchOrder message in which the switch order was conveyed may also be quoted in RelatedReference. The message identification of the SwitchOrderConfirmation message in which the original switch order confirmation was conveyed may also be quoted in PreviousReference.";

@@ -103,20 +103,20 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintOriginalGroupInformationAbsenceRule#forFIToFIPaymentStatusRequestV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOriginalGroupInformationAbsenceRule#for_pacs_FIToFIPaymentStatusRequestV01
  * ConstraintOriginalGroupInformationAbsenceRule.
- * forFIToFIPaymentStatusRequestV01}</li>
+ * for_pacs_FIToFIPaymentStatusRequestV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintOriginalGroupInformationMultiplePresenceRule#forFIToFIPaymentStatusRequestV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOriginalGroupInformationMultiplePresenceRule#for_pacs_FIToFIPaymentStatusRequestV01
  * ConstraintOriginalGroupInformationMultiplePresenceRule.
- * forFIToFIPaymentStatusRequestV01}</li>
+ * for_pacs_FIToFIPaymentStatusRequestV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintOriginalGroupInformationSinglePresenceRule#forFIToFIPaymentStatusRequestV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOriginalGroupInformationSinglePresenceRule#for_pacs_FIToFIPaymentStatusRequestV01
  * ConstraintOriginalGroupInformationSinglePresenceRule.
- * forFIToFIPaymentStatusRequestV01}</li>
+ * for_pacs_FIToFIPaymentStatusRequestV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintSupplementaryDataRule#forFIToFIPaymentStatusRequestV01
- * ConstraintSupplementaryDataRule.forFIToFIPaymentStatusRequestV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSupplementaryDataRule#for_pacs_FIToFIPaymentStatusRequestV01
+ * ConstraintSupplementaryDataRule.for_pacs_FIToFIPaymentStatusRequestV01}</li>
  * </ul>
  * </li>
  * <li>
@@ -372,10 +372,10 @@ public class FIToFIPaymentStatusRequestV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOriginalGroupInformationAbsenceRule.forFIToFIPaymentStatusRequestV01,
-						com.tools20022.repository.constraints.ConstraintOriginalGroupInformationMultiplePresenceRule.forFIToFIPaymentStatusRequestV01,
-						com.tools20022.repository.constraints.ConstraintOriginalGroupInformationSinglePresenceRule.forFIToFIPaymentStatusRequestV01,
-						com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFIToFIPaymentStatusRequestV01);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOriginalGroupInformationAbsenceRule.for_pacs_FIToFIPaymentStatusRequestV01,
+						com.tools20022.repository.constraints.ConstraintOriginalGroupInformationMultiplePresenceRule.for_pacs_FIToFIPaymentStatusRequestV01,
+						com.tools20022.repository.constraints.ConstraintOriginalGroupInformationSinglePresenceRule.for_pacs_FIToFIPaymentStatusRequestV01,
+						com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.for_pacs_FIToFIPaymentStatusRequestV01);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FIToFIPaymentStatusRequestV01";
 				definition = "Scope\r\nThe FinancialInstitutionToFinancialInstitutionPaymentStatusRequest message is sent by the debtor agent to the creditor agent, directly or through other agents and/or a payment clearing and settlement system. It is used to request a FIToFIPaymentStatusReport message containing information on the status of a previously sent instruction. \r\nUsage\r\nThe FIToFIPaymentStatusRequest message is exchanged between agents to request status information about instructions previously sent. Its usage will always be governed by a bilateral agreement between the agents.\r\nThe FIToFIPaymentStatusRequest message can be used to request information about the status (e.g. rejection, acceptance) of a credit transfer instruction, a direct debit instruction, as well as other intra-agent instructions (for example FIToFIPaymentCancellationRequest).\r\nThe FIToFIPaymentStatusRequest message refers to the original instruction(s) by means of references only or by means of references and a set of elements from the original instruction.\r\nThe FIToFIPaymentStatusRequest message can be used in domestic and cross-border scenarios.\r\n\r\n";

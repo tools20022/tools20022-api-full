@@ -34,7 +34,7 @@ public class ConstraintEarliestExerciseDateRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.Option2 Option2}</li>
+	 * {@linkplain com.tools20022.repository.msg.Option4 Option4}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -47,17 +47,50 @@ public class ConstraintEarliestExerciseDateRule {
 	 * "If ExerciseStyle is AMER, then EarliestExerciseDate must be present."</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<Option2> forOption2 = new MMConstraint<Option2>() {
+	public static final MMConstraint<Option4> forOption4 = new MMConstraint<Option4>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarliestExerciseDateRule";
 			definition = "If ExerciseStyle is AMER, then EarliestExerciseDate must be present.";
-			owner_lazy = () -> Option2.mmObject();
+			owner_lazy = () -> Option4.mmObject();
 		}
 
 		@Override
-		public void executeValidator(Option2 obj) throws Exception {
-			checkOption2(obj);
+		public void executeValidator(Option4 obj) throws Exception {
+			checkOption4(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.Option6 Option6}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "EarliestExerciseDateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If Option/ExerciseStyle is AMER, then Option/EarliestExerciseDate must be present."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<Option6> forOption6 = new MMConstraint<Option6>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "EarliestExerciseDateRule";
+			definition = "If Option/ExerciseStyle is AMER, then Option/EarliestExerciseDate must be present.";
+			owner_lazy = () -> Option6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Option6 obj) throws Exception {
+			checkOption6(obj);
 		}
 	};
 	/**
@@ -107,7 +140,45 @@ public class ConstraintEarliestExerciseDateRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.Option4 Option4}</li>
+	 * {@linkplain com.tools20022.repository.msg.Option10 Option10}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "EarliestExerciseDateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If ExerciseStyle is AMER, then EarliestExerciseDate must be present."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintEarliestExerciseDateRule#forOption3
+	 * ConstraintEarliestExerciseDateRule.forOption3}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<Option10> forOption10 = new MMConstraint<Option10>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "EarliestExerciseDateRule";
+			definition = "If ExerciseStyle is AMER, then EarliestExerciseDate must be present.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEarliestExerciseDateRule.forOption3;
+			owner_lazy = () -> Option10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Option10 obj) throws Exception {
+			checkOption10(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.Option2 Option2}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -120,17 +191,17 @@ public class ConstraintEarliestExerciseDateRule {
 	 * "If ExerciseStyle is AMER, then EarliestExerciseDate must be present."</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<Option4> forOption4 = new MMConstraint<Option4>() {
+	public static final MMConstraint<Option2> forOption2 = new MMConstraint<Option2>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarliestExerciseDateRule";
 			definition = "If ExerciseStyle is AMER, then EarliestExerciseDate must be present.";
-			owner_lazy = () -> Option4.mmObject();
+			owner_lazy = () -> Option2.mmObject();
 		}
 
 		@Override
-		public void executeValidator(Option4 obj) throws Exception {
-			checkOption4(obj);
+		public void executeValidator(Option2 obj) throws Exception {
+			checkOption2(obj);
 		}
 	};
 	/**
@@ -166,104 +237,11 @@ public class ConstraintEarliestExerciseDateRule {
 			checkOption5(obj);
 		}
 	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.Option6 Option6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "EarliestExerciseDateRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If Option/ExerciseStyle is AMER, then Option/EarliestExerciseDate must be present."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<Option6> forOption6 = new MMConstraint<Option6>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "EarliestExerciseDateRule";
-			definition = "If Option/ExerciseStyle is AMER, then Option/EarliestExerciseDate must be present.";
-			owner_lazy = () -> Option6.mmObject();
-		}
-
-		@Override
-		public void executeValidator(Option6 obj) throws Exception {
-			checkOption6(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.Option10 Option10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "EarliestExerciseDateRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If ExerciseStyle is AMER, then EarliestExerciseDate must be present."</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintEarliestExerciseDateRule#forOption3
-	 * ConstraintEarliestExerciseDateRule.forOption3}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<Option10> forOption10 = new MMConstraint<Option10>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "EarliestExerciseDateRule";
-			definition = "If ExerciseStyle is AMER, then EarliestExerciseDate must be present.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEarliestExerciseDateRule.forOption3;
-			owner_lazy = () -> Option10.mmObject();
-		}
-
-		@Override
-		public void executeValidator(Option10 obj) throws Exception {
-			checkOption10(obj);
-		}
-	};
-
-	/**
-	 * If ExerciseStyle is AMER, then EarliestExerciseDate must be present.
-	 */
-	public static void checkOption2(Option2 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If ExerciseStyle is AMER, then EarliestExerciseDate must be present.
-	 */
-	public static void checkOption3(Option3 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
 
 	/**
 	 * If ExerciseStyle is AMER, then EarliestExerciseDate must be present.
 	 */
 	public static void checkOption4(Option4 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If Opttion/ExerciseStyle is AMER, then Option/EarliestExerciseDate must
-	 * be present.
-	 */
-	public static void checkOption5(Option5 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -278,7 +256,29 @@ public class ConstraintEarliestExerciseDateRule {
 	/**
 	 * If ExerciseStyle is AMER, then EarliestExerciseDate must be present.
 	 */
+	public static void checkOption3(Option3 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If ExerciseStyle is AMER, then EarliestExerciseDate must be present.
+	 */
 	public static void checkOption10(Option10 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If ExerciseStyle is AMER, then EarliestExerciseDate must be present.
+	 */
+	public static void checkOption2(Option2 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If Opttion/ExerciseStyle is AMER, then Option/EarliestExerciseDate must
+	 * be present.
+	 */
+	public static void checkOption5(Option5 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

@@ -35,6 +35,347 @@ public class ConstraintDeliverersIntermediaryDetailsRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation9
+	 * DeliverInformation9}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DeliverersIntermediaryDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintDeliverersIntermediaryDetailsRule#forDeliverInformation13
+	 * ConstraintDeliverersIntermediaryDetailsRule.forDeliverInformation13}</li>
+	 * </ul>
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<DeliverInformation9> forDeliverInformation9 = new MMConstraint<DeliverInformation9>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DeliverersIntermediaryDetailsRule";
+			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDeliverersIntermediaryDetailsRule.forDeliverInformation13);
+			owner_lazy = () -> DeliverInformation9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DeliverInformation9 obj) throws Exception {
+			checkDeliverInformation9(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation12
+	 * DeliverInformation12}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DeliverersIntermediaryDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintDeliverersIntermediaryDetailsRule#forDeliverInformation14
+	 * ConstraintDeliverersIntermediaryDetailsRule.forDeliverInformation14}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintDeliverersIntermediaryDetailsRule#forDeliverInformation11
+	 * ConstraintDeliverersIntermediaryDetailsRule.forDeliverInformation11}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<DeliverInformation12> forDeliverInformation12 = new MMConstraint<DeliverInformation12>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DeliverersIntermediaryDetailsRule";
+			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDeliverersIntermediaryDetailsRule.forDeliverInformation14);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDeliverersIntermediaryDetailsRule.forDeliverInformation11;
+			owner_lazy = () -> DeliverInformation12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DeliverInformation12 obj) throws Exception {
+			checkDeliverInformation12(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation1
+	 * DeliverInformation1}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DeliverersIntermediaryDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<DeliverInformation1> forDeliverInformation1 = new MMConstraint<DeliverInformation1>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DeliverersIntermediaryDetailsRule";
+			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed.";
+			owner_lazy = () -> DeliverInformation1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DeliverInformation1 obj) throws Exception {
+			checkDeliverInformation1(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation19
+	 * DeliverInformation19}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DeliverersIntermediaryDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintDeliverersIntermediaryDetailsRule#forDeliverInformation16
+	 * ConstraintDeliverersIntermediaryDetailsRule.forDeliverInformation16}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<DeliverInformation19> forDeliverInformation19 = new MMConstraint<DeliverInformation19>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DeliverersIntermediaryDetailsRule";
+			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDeliverersIntermediaryDetailsRule.forDeliverInformation16;
+			owner_lazy = () -> DeliverInformation19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DeliverInformation19 obj) throws Exception {
+			checkDeliverInformation19(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation11
+	 * DeliverInformation11}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DeliverersIntermediaryDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintDeliverersIntermediaryDetailsRule#forDeliverInformation12
+	 * ConstraintDeliverersIntermediaryDetailsRule.forDeliverInformation12}</li>
+	 * </ul>
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<DeliverInformation11> forDeliverInformation11 = new MMConstraint<DeliverInformation11>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DeliverersIntermediaryDetailsRule";
+			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDeliverersIntermediaryDetailsRule.forDeliverInformation12);
+			owner_lazy = () -> DeliverInformation11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DeliverInformation11 obj) throws Exception {
+			checkDeliverInformation11(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation7
+	 * DeliverInformation7}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DeliverersIntermediaryDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<DeliverInformation7> forDeliverInformation7 = new MMConstraint<DeliverInformation7>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DeliverersIntermediaryDetailsRule";
+			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed.";
+			owner_lazy = () -> DeliverInformation7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DeliverInformation7 obj) throws Exception {
+			checkDeliverInformation7(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation15
+	 * DeliverInformation15}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DeliverersIntermediaryDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintDeliverersIntermediaryDetailsRule#forDeliverInformation16
+	 * ConstraintDeliverersIntermediaryDetailsRule.forDeliverInformation16}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintDeliverersIntermediaryDetailsRule#forDeliverInformation13
+	 * ConstraintDeliverersIntermediaryDetailsRule.forDeliverInformation13}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<DeliverInformation15> forDeliverInformation15 = new MMConstraint<DeliverInformation15>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DeliverersIntermediaryDetailsRule";
+			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDeliverersIntermediaryDetailsRule.forDeliverInformation16);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDeliverersIntermediaryDetailsRule.forDeliverInformation13;
+			owner_lazy = () -> DeliverInformation15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DeliverInformation15 obj) throws Exception {
+			checkDeliverInformation15(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation16
+	 * DeliverInformation16}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DeliverersIntermediaryDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintDeliverersIntermediaryDetailsRule#forDeliverInformation19
+	 * ConstraintDeliverersIntermediaryDetailsRule.forDeliverInformation19}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintDeliverersIntermediaryDetailsRule#forDeliverInformation15
+	 * ConstraintDeliverersIntermediaryDetailsRule.forDeliverInformation15}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<DeliverInformation16> forDeliverInformation16 = new MMConstraint<DeliverInformation16>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DeliverersIntermediaryDetailsRule";
+			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDeliverersIntermediaryDetailsRule.forDeliverInformation19);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDeliverersIntermediaryDetailsRule.forDeliverInformation15;
+			owner_lazy = () -> DeliverInformation16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DeliverInformation16 obj) throws Exception {
+			checkDeliverInformation16(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DeliverInformation2
 	 * DeliverInformation2}</li>
 	 * <li>
@@ -103,345 +444,6 @@ public class ConstraintDeliverersIntermediaryDetailsRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation7
-	 * DeliverInformation7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DeliverersIntermediaryDetailsRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<DeliverInformation7> forDeliverInformation7 = new MMConstraint<DeliverInformation7>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "DeliverersIntermediaryDetailsRule";
-			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed.";
-			owner_lazy = () -> DeliverInformation7.mmObject();
-		}
-
-		@Override
-		public void executeValidator(DeliverInformation7 obj) throws Exception {
-			checkDeliverInformation7(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation11
-	 * DeliverInformation11}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DeliverersIntermediaryDetailsRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintDeliverersIntermediaryDetailsRule#forDeliverInformation12
-	 * ConstraintDeliverersIntermediaryDetailsRule.forDeliverInformation12}</li>
-	 * </ul>
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<DeliverInformation11> forDeliverInformation11 = new MMConstraint<DeliverInformation11>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "DeliverersIntermediaryDetailsRule";
-			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDeliverersIntermediaryDetailsRule.forDeliverInformation12);
-			owner_lazy = () -> DeliverInformation11.mmObject();
-		}
-
-		@Override
-		public void executeValidator(DeliverInformation11 obj) throws Exception {
-			checkDeliverInformation11(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation1
-	 * DeliverInformation1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DeliverersIntermediaryDetailsRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<DeliverInformation1> forDeliverInformation1 = new MMConstraint<DeliverInformation1>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "DeliverersIntermediaryDetailsRule";
-			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed.";
-			owner_lazy = () -> DeliverInformation1.mmObject();
-		}
-
-		@Override
-		public void executeValidator(DeliverInformation1 obj) throws Exception {
-			checkDeliverInformation1(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation3
-	 * DeliverInformation3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DeliverersIntermediaryDetailsRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<DeliverInformation3> forDeliverInformation3 = new MMConstraint<DeliverInformation3>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "DeliverersIntermediaryDetailsRule";
-			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed.";
-			owner_lazy = () -> DeliverInformation3.mmObject();
-		}
-
-		@Override
-		public void executeValidator(DeliverInformation3 obj) throws Exception {
-			checkDeliverInformation3(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation8
-	 * DeliverInformation8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DeliverersIntermediaryDetailsRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<DeliverInformation8> forDeliverInformation8 = new MMConstraint<DeliverInformation8>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "DeliverersIntermediaryDetailsRule";
-			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed.";
-			owner_lazy = () -> DeliverInformation8.mmObject();
-		}
-
-		@Override
-		public void executeValidator(DeliverInformation8 obj) throws Exception {
-			checkDeliverInformation8(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation5
-	 * DeliverInformation5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DeliverersIntermediaryDetailsRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<DeliverInformation5> forDeliverInformation5 = new MMConstraint<DeliverInformation5>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "DeliverersIntermediaryDetailsRule";
-			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed.";
-			owner_lazy = () -> DeliverInformation5.mmObject();
-		}
-
-		@Override
-		public void executeValidator(DeliverInformation5 obj) throws Exception {
-			checkDeliverInformation5(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation9
-	 * DeliverInformation9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DeliverersIntermediaryDetailsRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintDeliverersIntermediaryDetailsRule#forDeliverInformation13
-	 * ConstraintDeliverersIntermediaryDetailsRule.forDeliverInformation13}</li>
-	 * </ul>
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<DeliverInformation9> forDeliverInformation9 = new MMConstraint<DeliverInformation9>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "DeliverersIntermediaryDetailsRule";
-			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDeliverersIntermediaryDetailsRule.forDeliverInformation13);
-			owner_lazy = () -> DeliverInformation9.mmObject();
-		}
-
-		@Override
-		public void executeValidator(DeliverInformation9 obj) throws Exception {
-			checkDeliverInformation9(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation6
-	 * DeliverInformation6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DeliverersIntermediaryDetailsRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<DeliverInformation6> forDeliverInformation6 = new MMConstraint<DeliverInformation6>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "DeliverersIntermediaryDetailsRule";
-			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed.";
-			owner_lazy = () -> DeliverInformation6.mmObject();
-		}
-
-		@Override
-		public void executeValidator(DeliverInformation6 obj) throws Exception {
-			checkDeliverInformation6(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation12
-	 * DeliverInformation12}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DeliverersIntermediaryDetailsRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintDeliverersIntermediaryDetailsRule#forDeliverInformation14
-	 * ConstraintDeliverersIntermediaryDetailsRule.forDeliverInformation14}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintDeliverersIntermediaryDetailsRule#forDeliverInformation11
-	 * ConstraintDeliverersIntermediaryDetailsRule.forDeliverInformation11}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<DeliverInformation12> forDeliverInformation12 = new MMConstraint<DeliverInformation12>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "DeliverersIntermediaryDetailsRule";
-			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDeliverersIntermediaryDetailsRule.forDeliverInformation14);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDeliverersIntermediaryDetailsRule.forDeliverInformation11;
-			owner_lazy = () -> DeliverInformation12.mmObject();
-		}
-
-		@Override
-		public void executeValidator(DeliverInformation12 obj) throws Exception {
-			checkDeliverInformation12(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DeliverInformation13
 	 * DeliverInformation13}</li>
 	 * <li>
@@ -491,8 +493,8 @@ public class ConstraintDeliverersIntermediaryDetailsRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation15
-	 * DeliverInformation15}</li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation8
+	 * DeliverInformation8}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -504,34 +506,53 @@ public class ConstraintDeliverersIntermediaryDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed."
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintDeliverersIntermediaryDetailsRule#forDeliverInformation16
-	 * ConstraintDeliverersIntermediaryDetailsRule.forDeliverInformation16}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintDeliverersIntermediaryDetailsRule#forDeliverInformation13
-	 * ConstraintDeliverersIntermediaryDetailsRule.forDeliverInformation13}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<DeliverInformation15> forDeliverInformation15 = new MMConstraint<DeliverInformation15>() {
+	public static final MMConstraint<DeliverInformation8> forDeliverInformation8 = new MMConstraint<DeliverInformation8>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverersIntermediaryDetailsRule";
 			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDeliverersIntermediaryDetailsRule.forDeliverInformation16);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDeliverersIntermediaryDetailsRule.forDeliverInformation13;
-			owner_lazy = () -> DeliverInformation15.mmObject();
+			owner_lazy = () -> DeliverInformation8.mmObject();
 		}
 
 		@Override
-		public void executeValidator(DeliverInformation15 obj) throws Exception {
-			checkDeliverInformation15(obj);
+		public void executeValidator(DeliverInformation8 obj) throws Exception {
+			checkDeliverInformation8(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation3
+	 * DeliverInformation3}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DeliverersIntermediaryDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<DeliverInformation3> forDeliverInformation3 = new MMConstraint<DeliverInformation3>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DeliverersIntermediaryDetailsRule";
+			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed.";
+			owner_lazy = () -> DeliverInformation3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DeliverInformation3 obj) throws Exception {
+			checkDeliverInformation3(obj);
 		}
 	};
 	/**
@@ -589,55 +610,6 @@ public class ConstraintDeliverersIntermediaryDetailsRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation16
-	 * DeliverInformation16}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DeliverersIntermediaryDetailsRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintDeliverersIntermediaryDetailsRule#forDeliverInformation19
-	 * ConstraintDeliverersIntermediaryDetailsRule.forDeliverInformation19}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintDeliverersIntermediaryDetailsRule#forDeliverInformation15
-	 * ConstraintDeliverersIntermediaryDetailsRule.forDeliverInformation15}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<DeliverInformation16> forDeliverInformation16 = new MMConstraint<DeliverInformation16>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "DeliverersIntermediaryDetailsRule";
-			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDeliverersIntermediaryDetailsRule.forDeliverInformation19);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDeliverersIntermediaryDetailsRule.forDeliverInformation15;
-			owner_lazy = () -> DeliverInformation16.mmObject();
-		}
-
-		@Override
-		public void executeValidator(DeliverInformation16 obj) throws Exception {
-			checkDeliverInformation16(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DeliverInformation17
 	 * DeliverInformation17}</li>
 	 * <li>
@@ -687,46 +659,6 @@ public class ConstraintDeliverersIntermediaryDetailsRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation19
-	 * DeliverInformation19}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DeliverersIntermediaryDetailsRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed."
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintDeliverersIntermediaryDetailsRule#forDeliverInformation16
-	 * ConstraintDeliverersIntermediaryDetailsRule.forDeliverInformation16}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<DeliverInformation19> forDeliverInformation19 = new MMConstraint<DeliverInformation19>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "DeliverersIntermediaryDetailsRule";
-			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDeliverersIntermediaryDetailsRule.forDeliverInformation16;
-			owner_lazy = () -> DeliverInformation19.mmObject();
-		}
-
-		@Override
-		public void executeValidator(DeliverInformation19 obj) throws Exception {
-			checkDeliverInformation19(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DeliverInformation18
 	 * DeliverInformation18}</li>
 	 * <li>
@@ -761,6 +693,138 @@ public class ConstraintDeliverersIntermediaryDetailsRule {
 			checkDeliverInformation18(obj);
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation6
+	 * DeliverInformation6}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DeliverersIntermediaryDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<DeliverInformation6> forDeliverInformation6 = new MMConstraint<DeliverInformation6>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DeliverersIntermediaryDetailsRule";
+			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed.";
+			owner_lazy = () -> DeliverInformation6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DeliverInformation6 obj) throws Exception {
+			checkDeliverInformation6(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation5
+	 * DeliverInformation5}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DeliverersIntermediaryDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<DeliverInformation5> forDeliverInformation5 = new MMConstraint<DeliverInformation5>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DeliverersIntermediaryDetailsRule";
+			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed.";
+			owner_lazy = () -> DeliverInformation5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DeliverInformation5 obj) throws Exception {
+			checkDeliverInformation5(obj);
+		}
+	};
+
+	/**
+	 * If PhysicalTransferDetails is present, then
+	 * SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed.
+	 */
+	public static void checkDeliverInformation9(DeliverInformation9 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PhysicalTransferDetails is present, then
+	 * SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed.
+	 */
+	public static void checkDeliverInformation12(DeliverInformation12 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PhysicalTransferDetails is present, then
+	 * SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed.
+	 */
+	public static void checkDeliverInformation1(DeliverInformation1 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PhysicalTransferDetails is present, then
+	 * SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed.
+	 */
+	public static void checkDeliverInformation19(DeliverInformation19 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PhysicalTransferDetails is present, then
+	 * SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed.
+	 */
+	public static void checkDeliverInformation11(DeliverInformation11 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PhysicalTransferDetails is present, then
+	 * SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed.
+	 */
+	public static void checkDeliverInformation7(DeliverInformation7 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PhysicalTransferDetails is present, then
+	 * SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed.
+	 */
+	public static void checkDeliverInformation15(DeliverInformation15 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PhysicalTransferDetails is present, then
+	 * SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed.
+	 */
+	public static void checkDeliverInformation16(DeliverInformation16 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
 
 	/**
 	 * If PhysicalTransferDetails is present, then
@@ -782,31 +846,7 @@ public class ConstraintDeliverersIntermediaryDetailsRule {
 	 * If PhysicalTransferDetails is present, then
 	 * SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed.
 	 */
-	public static void checkDeliverInformation7(DeliverInformation7 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If PhysicalTransferDetails is present, then
-	 * SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed.
-	 */
-	public static void checkDeliverInformation11(DeliverInformation11 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If PhysicalTransferDetails is present, then
-	 * SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed.
-	 */
-	public static void checkDeliverInformation1(DeliverInformation1 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If PhysicalTransferDetails is present, then
-	 * SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed.
-	 */
-	public static void checkDeliverInformation3(DeliverInformation3 obj) throws Exception {
+	public static void checkDeliverInformation13(DeliverInformation13 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -822,47 +862,7 @@ public class ConstraintDeliverersIntermediaryDetailsRule {
 	 * If PhysicalTransferDetails is present, then
 	 * SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed.
 	 */
-	public static void checkDeliverInformation5(DeliverInformation5 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If PhysicalTransferDetails is present, then
-	 * SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed.
-	 */
-	public static void checkDeliverInformation9(DeliverInformation9 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If PhysicalTransferDetails is present, then
-	 * SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed.
-	 */
-	public static void checkDeliverInformation6(DeliverInformation6 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If PhysicalTransferDetails is present, then
-	 * SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed.
-	 */
-	public static void checkDeliverInformation12(DeliverInformation12 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If PhysicalTransferDetails is present, then
-	 * SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed.
-	 */
-	public static void checkDeliverInformation13(DeliverInformation13 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If PhysicalTransferDetails is present, then
-	 * SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed.
-	 */
-	public static void checkDeliverInformation15(DeliverInformation15 obj) throws Exception {
+	public static void checkDeliverInformation3(DeliverInformation3 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -878,14 +878,6 @@ public class ConstraintDeliverersIntermediaryDetailsRule {
 	 * If PhysicalTransferDetails is present, then
 	 * SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed.
 	 */
-	public static void checkDeliverInformation16(DeliverInformation16 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If PhysicalTransferDetails is present, then
-	 * SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed.
-	 */
 	public static void checkDeliverInformation17(DeliverInformation17 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
@@ -894,7 +886,7 @@ public class ConstraintDeliverersIntermediaryDetailsRule {
 	 * If PhysicalTransferDetails is present, then
 	 * SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed.
 	 */
-	public static void checkDeliverInformation19(DeliverInformation19 obj) throws Exception {
+	public static void checkDeliverInformation18(DeliverInformation18 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -902,7 +894,15 @@ public class ConstraintDeliverersIntermediaryDetailsRule {
 	 * If PhysicalTransferDetails is present, then
 	 * SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed.
 	 */
-	public static void checkDeliverInformation18(DeliverInformation18 obj) throws Exception {
+	public static void checkDeliverInformation6(DeliverInformation6 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PhysicalTransferDetails is present, then
+	 * SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed.
+	 */
+	public static void checkDeliverInformation5(DeliverInformation5 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

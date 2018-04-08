@@ -51,7 +51,7 @@ public class ConstraintCurrencyGuideline {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<ReturnTransactionV07> forReturnTransactionV07 = new MMConstraint<ReturnTransactionV07>() {
+	public static final MMConstraint<ReturnTransactionV07> for_camt_ReturnTransactionV07 = new MMConstraint<ReturnTransactionV07>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyGuideline";
@@ -61,7 +61,7 @@ public class ConstraintCurrencyGuideline {
 
 		@Override
 		public void executeValidator(ReturnTransactionV07 obj) throws Exception {
-			checkReturnTransactionV07(obj);
+			check_camt_ReturnTransactionV07(obj);
 		}
 	};
 	/**
@@ -104,7 +104,7 @@ public class ConstraintCurrencyGuideline {
 	 * However, this should only be done in cases of one single currency systems
 	 * (eg, the euro).
 	 */
-	public static void checkReturnTransactionV07(ReturnTransactionV07 obj) throws Exception {
+	public static void check_camt_ReturnTransactionV07(ReturnTransactionV07 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 

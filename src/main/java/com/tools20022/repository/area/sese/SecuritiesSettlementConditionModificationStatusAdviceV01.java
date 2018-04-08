@@ -128,13 +128,13 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#forSecuritiesSettlementConditionModificationStatusAdviceV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#for_sese_SecuritiesSettlementConditionModificationStatusAdviceV01
  * ConstraintCoexistenceCharacterSetXRule.
- * forSecuritiesSettlementConditionModificationStatusAdviceV01}</li>
+ * for_sese_SecuritiesSettlementConditionModificationStatusAdviceV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forSecuritiesSettlementConditionModificationStatusAdviceV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#for_sese_SecuritiesSettlementConditionModificationStatusAdviceV01
  * ConstraintCoexistenceIdentificationRule.
- * forSecuritiesSettlementConditionModificationStatusAdviceV01}</li>
+ * for_sese_SecuritiesSettlementConditionModificationStatusAdviceV01}</li>
  * </ul>
  * </li>
  * <li>
@@ -591,8 +591,8 @@ public class SecuritiesSettlementConditionModificationStatusAdviceV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesSettlementConditionModificationStatusAdviceV01,
-						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesSettlementConditionModificationStatusAdviceV01);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.for_sese_SecuritiesSettlementConditionModificationStatusAdviceV01,
+						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.for_sese_SecuritiesSettlementConditionModificationStatusAdviceV01);
 				semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, "MT 548, Seq A :23G:INST, Seq A2 :25D::TPRC"));
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesSettlementConditionModificationStatusAdviceV01";

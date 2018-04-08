@@ -24,11 +24,11 @@ import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 
 /**
- * If PaymentMethod is CHK, then
- * CreditTransferTransactionInformation/ChequeInstruction is optional. If
- * PaymentMethod is different from CHK, then
- * CreditTransferTransactionInformation/ChequeInstruction is not allowed.
- * 
+ * If PaymentMethod is CHK (Cheque), then
+ * CreditTransferTransaction/ChequeInstruction is optional.<br>
+ * If PaymentMethod is different from CHK (Cheque), then
+ * CreditTransferTransaction/ChequeInstruction is not allowed. <br>
+ * <br>
  * Rule rationale: ChequeInstructionDetails may be present if the payment method
  * is Cheque. It must not be present if the payment method is 'Transfer'.
  */
@@ -40,8 +40,8 @@ public class ConstraintChequeInstructionRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionInformation1
-	 * PaymentInstructionInformation1}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction19
+	 * PaymentInstruction19}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -51,21 +51,36 @@ public class ConstraintChequeInstructionRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If PaymentMethod is CHK, then CreditTransferTransactionInformation/ChequeInstruction is optional.\nIf PaymentMethod is different from CHK, then CreditTransferTransactionInformation/ChequeInstruction is not allowed. \n\nRule rationale: ChequeInstructionDetails may be present if the payment method is Cheque. It must not be present if the payment method is 'Transfer'."
+	 * "If PaymentMethod is CHK (Cheque), then CreditTransferTransaction/ChequeInstruction is optional.\r\nIf PaymentMethod is different from CHK (Cheque), then CreditTransferTransaction/ChequeInstruction is not allowed. \r\n\r\nRule rationale: ChequeInstructionDetails may be present if the payment method is Cheque. It must not be present if the payment method is 'Transfer'."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintChequeInstructionRule#forPaymentInstruction23
+	 * ConstraintChequeInstructionRule.forPaymentInstruction23}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintChequeInstructionRule#forPaymentInstruction17
+	 * ConstraintChequeInstructionRule.forPaymentInstruction17}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<PaymentInstructionInformation1> forPaymentInstructionInformation1 = new MMConstraint<PaymentInstructionInformation1>() {
+	public static final MMConstraint<PaymentInstruction19> forPaymentInstruction19 = new MMConstraint<PaymentInstruction19>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeInstructionRule";
-			definition = "If PaymentMethod is CHK, then CreditTransferTransactionInformation/ChequeInstruction is optional.\nIf PaymentMethod is different from CHK, then CreditTransferTransactionInformation/ChequeInstruction is not allowed. \n\nRule rationale: ChequeInstructionDetails may be present if the payment method is Cheque. It must not be present if the payment method is 'Transfer'.";
-			owner_lazy = () -> PaymentInstructionInformation1.mmObject();
+			definition = "If PaymentMethod is CHK (Cheque), then CreditTransferTransaction/ChequeInstruction is optional.\r\nIf PaymentMethod is different from CHK (Cheque), then CreditTransferTransaction/ChequeInstruction is not allowed. \r\n\r\nRule rationale: ChequeInstructionDetails may be present if the payment method is Cheque. It must not be present if the payment method is 'Transfer'.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChequeInstructionRule.forPaymentInstruction23);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChequeInstructionRule.forPaymentInstruction17;
+			owner_lazy = () -> PaymentInstruction19.mmObject();
 		}
 
 		@Override
-		public void executeValidator(PaymentInstructionInformation1 obj) throws Exception {
-			checkPaymentInstructionInformation1(obj);
+		public void executeValidator(PaymentInstruction19 obj) throws Exception {
+			checkPaymentInstruction19(obj);
 		}
 	};
 	/**
@@ -152,12 +167,8 @@ public class ConstraintChequeInstructionRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction9
-	 * PaymentInstruction9}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
-	 * expression} =
-	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/CreditTransferTransactionInformation[*]/ChequeInstruction&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/PaymentMethod&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"DifferentFromValue\"&gt;&lt;leftOperand&gt;/PaymentMethod&lt;/leftOperand&gt;&lt;rightOperand&gt;Cheque&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
-	 * </li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionInformation1
+	 * PaymentInstructionInformation1}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -167,31 +178,21 @@ public class ConstraintChequeInstructionRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If PaymentMethod is different from CHK, then CreditTransferTransactionInformation/ChequeInstruction is not allowed."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintChequeInstructionRule#forPaymentInstruction16
-	 * ConstraintChequeInstructionRule.forPaymentInstruction16}</li>
-	 * </ul>
+	 * "If PaymentMethod is CHK, then CreditTransferTransactionInformation/ChequeInstruction is optional.\nIf PaymentMethod is different from CHK, then CreditTransferTransactionInformation/ChequeInstruction is not allowed. \n\nRule rationale: ChequeInstructionDetails may be present if the payment method is Cheque. It must not be present if the payment method is 'Transfer'."
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<PaymentInstruction9> forPaymentInstruction9 = new MMConstraint<PaymentInstruction9>() {
+	public static final MMConstraint<PaymentInstructionInformation1> forPaymentInstructionInformation1 = new MMConstraint<PaymentInstructionInformation1>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeInstructionRule";
-			definition = "If PaymentMethod is different from CHK, then CreditTransferTransactionInformation/ChequeInstruction is not allowed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChequeInstructionRule.forPaymentInstruction16);
-			owner_lazy = () -> PaymentInstruction9.mmObject();
-			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditTransferTransactionInformation[*]/ChequeInstruction</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentMethod</leftOperand></BooleanRule><BooleanRule xsi:type=\"DifferentFromValue\"><leftOperand>/PaymentMethod</leftOperand><rightOperand>Cheque</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+			definition = "If PaymentMethod is CHK, then CreditTransferTransactionInformation/ChequeInstruction is optional.\nIf PaymentMethod is different from CHK, then CreditTransferTransactionInformation/ChequeInstruction is not allowed. \n\nRule rationale: ChequeInstructionDetails may be present if the payment method is Cheque. It must not be present if the payment method is 'Transfer'.";
+			owner_lazy = () -> PaymentInstructionInformation1.mmObject();
 		}
 
 		@Override
-		public void executeValidator(PaymentInstruction9 obj) throws Exception {
-			checkPaymentInstruction9(obj);
+		public void executeValidator(PaymentInstructionInformation1 obj) throws Exception {
+			checkPaymentInstructionInformation1(obj);
 		}
 	};
 	/**
@@ -234,85 +235,8 @@ public class ConstraintChequeInstructionRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction8
-	 * PaymentInstruction8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ChequeInstructionRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If PaymentMethod is CHK, then CreditTransferTransaction/ChequeInstruction is optional.\r\nIf PaymentMethod is different from CHK, then CreditTransferTransaction/ChequeInstruction is not allowed. \r\n\r\nRule rationale: ChequeInstructionDetails may be present if the payment method is Cheque. It must not be present if the payment method is 'Transfer'."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<PaymentInstruction8> forPaymentInstruction8 = new MMConstraint<PaymentInstruction8>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ChequeInstructionRule";
-			definition = "If PaymentMethod is CHK, then CreditTransferTransaction/ChequeInstruction is optional.\r\nIf PaymentMethod is different from CHK, then CreditTransferTransaction/ChequeInstruction is not allowed. \r\n\r\nRule rationale: ChequeInstructionDetails may be present if the payment method is Cheque. It must not be present if the payment method is 'Transfer'.";
-			owner_lazy = () -> PaymentInstruction8.mmObject();
-		}
-
-		@Override
-		public void executeValidator(PaymentInstruction8 obj) throws Exception {
-			checkPaymentInstruction8(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction11
-	 * PaymentInstruction11}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ChequeInstructionRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If PaymentMethod is CHK, then CreditTransferTransaction/ChequeInstruction is optional.\r\nIf PaymentMethod is different from CHK, then CreditTransferTransaction/ChequeInstruction is not allowed. \r\n\r\nRule rationale: ChequeInstructionDetails may be present if the payment method is Cheque. It must not be present if the payment method is 'Transfer'."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintChequeInstructionRule#forPaymentInstruction17
-	 * ConstraintChequeInstructionRule.forPaymentInstruction17}</li>
-	 * </ul>
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<PaymentInstruction11> forPaymentInstruction11 = new MMConstraint<PaymentInstruction11>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ChequeInstructionRule";
-			definition = "If PaymentMethod is CHK, then CreditTransferTransaction/ChequeInstruction is optional.\r\nIf PaymentMethod is different from CHK, then CreditTransferTransaction/ChequeInstruction is not allowed. \r\n\r\nRule rationale: ChequeInstructionDetails may be present if the payment method is Cheque. It must not be present if the payment method is 'Transfer'.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChequeInstructionRule.forPaymentInstruction17);
-			owner_lazy = () -> PaymentInstruction11.mmObject();
-		}
-
-		@Override
-		public void executeValidator(PaymentInstruction11 obj) throws Exception {
-			checkPaymentInstruction11(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction16
-	 * PaymentInstruction16}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction22
+	 * PaymentInstruction22}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
 	 * expression} =
 	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/CreditTransferTransactionInformation[*]/ChequeInstruction&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/PaymentMethod&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"DifferentFromValue\"&gt;&lt;leftOperand&gt;/PaymentMethod&lt;/leftOperand&gt;&lt;rightOperand&gt;Cheque&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
@@ -326,37 +250,68 @@ public class ConstraintChequeInstructionRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If PaymentMethod is different from CHK, then CreditTransferTransactionInformation/ChequeInstruction is not allowed."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintChequeInstructionRule#forPaymentInstruction20
-	 * ConstraintChequeInstructionRule.forPaymentInstruction20}</li>
-	 * </ul>
+	 * "If PaymentMethod is different from CHK (Cheque), then CreditTransferTransactionInformation/ChequeInstruction is not allowed."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintChequeInstructionRule#forPaymentInstruction9
-	 * ConstraintChequeInstructionRule.forPaymentInstruction9}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintChequeInstructionRule#forPaymentInstruction20
+	 * ConstraintChequeInstructionRule.forPaymentInstruction20}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<PaymentInstruction16> forPaymentInstruction16 = new MMConstraint<PaymentInstruction16>() {
+	public static final MMConstraint<PaymentInstruction22> forPaymentInstruction22 = new MMConstraint<PaymentInstruction22>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeInstructionRule";
-			definition = "If PaymentMethod is different from CHK, then CreditTransferTransactionInformation/ChequeInstruction is not allowed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChequeInstructionRule.forPaymentInstruction20);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChequeInstructionRule.forPaymentInstruction9;
-			owner_lazy = () -> PaymentInstruction16.mmObject();
+			definition = "If PaymentMethod is different from CHK (Cheque), then CreditTransferTransactionInformation/ChequeInstruction is not allowed.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChequeInstructionRule.forPaymentInstruction20;
+			owner_lazy = () -> PaymentInstruction22.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditTransferTransactionInformation[*]/ChequeInstruction</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentMethod</leftOperand></BooleanRule><BooleanRule xsi:type=\"DifferentFromValue\"><leftOperand>/PaymentMethod</leftOperand><rightOperand>Cheque</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
 
 		@Override
-		public void executeValidator(PaymentInstruction16 obj) throws Exception {
-			checkPaymentInstruction16(obj);
+		public void executeValidator(PaymentInstruction22 obj) throws Exception {
+			checkPaymentInstruction22(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction23
+	 * PaymentInstruction23}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ChequeInstructionRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PaymentMethod is CHK (Cheque), then CreditTransferTransaction/ChequeInstruction is optional.\r\nIf PaymentMethod is different from CHK (Cheque), then CreditTransferTransaction/ChequeInstruction is not allowed. \r\n\r\nRule rationale: ChequeInstructionDetails may be present if the payment method is Cheque. It must not be present if the payment method is 'Transfer'."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintChequeInstructionRule#forPaymentInstruction19
+	 * ConstraintChequeInstructionRule.forPaymentInstruction19}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<PaymentInstruction23> forPaymentInstruction23 = new MMConstraint<PaymentInstruction23>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ChequeInstructionRule";
+			definition = "If PaymentMethod is CHK (Cheque), then CreditTransferTransaction/ChequeInstruction is optional.\r\nIf PaymentMethod is different from CHK (Cheque), then CreditTransferTransaction/ChequeInstruction is not allowed. \r\n\r\nRule rationale: ChequeInstructionDetails may be present if the payment method is Cheque. It must not be present if the payment method is 'Transfer'.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChequeInstructionRule.forPaymentInstruction19;
+			owner_lazy = () -> PaymentInstruction23.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction23 obj) throws Exception {
+			checkPaymentInstruction23(obj);
 		}
 	};
 	/**
@@ -414,8 +369,8 @@ public class ConstraintChequeInstructionRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction19
-	 * PaymentInstruction19}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction8
+	 * PaymentInstruction8}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -425,36 +380,75 @@ public class ConstraintChequeInstructionRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If PaymentMethod is CHK (Cheque), then CreditTransferTransaction/ChequeInstruction is optional.\r\nIf PaymentMethod is different from CHK (Cheque), then CreditTransferTransaction/ChequeInstruction is not allowed. \r\n\r\nRule rationale: ChequeInstructionDetails may be present if the payment method is Cheque. It must not be present if the payment method is 'Transfer'."
+	 * "If PaymentMethod is CHK, then CreditTransferTransaction/ChequeInstruction is optional.\r\nIf PaymentMethod is different from CHK, then CreditTransferTransaction/ChequeInstruction is not allowed. \r\n\r\nRule rationale: ChequeInstructionDetails may be present if the payment method is Cheque. It must not be present if the payment method is 'Transfer'."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<PaymentInstruction8> forPaymentInstruction8 = new MMConstraint<PaymentInstruction8>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ChequeInstructionRule";
+			definition = "If PaymentMethod is CHK, then CreditTransferTransaction/ChequeInstruction is optional.\r\nIf PaymentMethod is different from CHK, then CreditTransferTransaction/ChequeInstruction is not allowed. \r\n\r\nRule rationale: ChequeInstructionDetails may be present if the payment method is Cheque. It must not be present if the payment method is 'Transfer'.";
+			owner_lazy = () -> PaymentInstruction8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction8 obj) throws Exception {
+			checkPaymentInstruction8(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction16
+	 * PaymentInstruction16}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/CreditTransferTransactionInformation[*]/ChequeInstruction&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/PaymentMethod&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"DifferentFromValue\"&gt;&lt;leftOperand&gt;/PaymentMethod&lt;/leftOperand&gt;&lt;rightOperand&gt;Cheque&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ChequeInstructionRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PaymentMethod is different from CHK, then CreditTransferTransactionInformation/ChequeInstruction is not allowed."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintChequeInstructionRule#forPaymentInstruction23
-	 * ConstraintChequeInstructionRule.forPaymentInstruction23}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintChequeInstructionRule#forPaymentInstruction20
+	 * ConstraintChequeInstructionRule.forPaymentInstruction20}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintChequeInstructionRule#forPaymentInstruction17
-	 * ConstraintChequeInstructionRule.forPaymentInstruction17}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintChequeInstructionRule#forPaymentInstruction9
+	 * ConstraintChequeInstructionRule.forPaymentInstruction9}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<PaymentInstruction19> forPaymentInstruction19 = new MMConstraint<PaymentInstruction19>() {
+	public static final MMConstraint<PaymentInstruction16> forPaymentInstruction16 = new MMConstraint<PaymentInstruction16>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeInstructionRule";
-			definition = "If PaymentMethod is CHK (Cheque), then CreditTransferTransaction/ChequeInstruction is optional.\r\nIf PaymentMethod is different from CHK (Cheque), then CreditTransferTransaction/ChequeInstruction is not allowed. \r\n\r\nRule rationale: ChequeInstructionDetails may be present if the payment method is Cheque. It must not be present if the payment method is 'Transfer'.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChequeInstructionRule.forPaymentInstruction23);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChequeInstructionRule.forPaymentInstruction17;
-			owner_lazy = () -> PaymentInstruction19.mmObject();
+			definition = "If PaymentMethod is different from CHK, then CreditTransferTransactionInformation/ChequeInstruction is not allowed.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChequeInstructionRule.forPaymentInstruction20);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChequeInstructionRule.forPaymentInstruction9;
+			owner_lazy = () -> PaymentInstruction16.mmObject();
+			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditTransferTransactionInformation[*]/ChequeInstruction</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentMethod</leftOperand></BooleanRule><BooleanRule xsi:type=\"DifferentFromValue\"><leftOperand>/PaymentMethod</leftOperand><rightOperand>Cheque</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
 
 		@Override
-		public void executeValidator(PaymentInstruction19 obj) throws Exception {
-			checkPaymentInstruction19(obj);
+		public void executeValidator(PaymentInstruction16 obj) throws Exception {
+			checkPaymentInstruction16(obj);
 		}
 	};
 	/**
@@ -521,48 +515,8 @@ public class ConstraintChequeInstructionRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction23
-	 * PaymentInstruction23}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ChequeInstructionRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If PaymentMethod is CHK (Cheque), then CreditTransferTransaction/ChequeInstruction is optional.\r\nIf PaymentMethod is different from CHK (Cheque), then CreditTransferTransaction/ChequeInstruction is not allowed. \r\n\r\nRule rationale: ChequeInstructionDetails may be present if the payment method is Cheque. It must not be present if the payment method is 'Transfer'."
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintChequeInstructionRule#forPaymentInstruction19
-	 * ConstraintChequeInstructionRule.forPaymentInstruction19}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<PaymentInstruction23> forPaymentInstruction23 = new MMConstraint<PaymentInstruction23>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ChequeInstructionRule";
-			definition = "If PaymentMethod is CHK (Cheque), then CreditTransferTransaction/ChequeInstruction is optional.\r\nIf PaymentMethod is different from CHK (Cheque), then CreditTransferTransaction/ChequeInstruction is not allowed. \r\n\r\nRule rationale: ChequeInstructionDetails may be present if the payment method is Cheque. It must not be present if the payment method is 'Transfer'.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChequeInstructionRule.forPaymentInstruction19;
-			owner_lazy = () -> PaymentInstruction23.mmObject();
-		}
-
-		@Override
-		public void executeValidator(PaymentInstruction23 obj) throws Exception {
-			checkPaymentInstruction23(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction22
-	 * PaymentInstruction22}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction9
+	 * PaymentInstruction9}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
 	 * expression} =
 	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/CreditTransferTransactionInformation[*]/ChequeInstruction&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/PaymentMethod&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"DifferentFromValue\"&gt;&lt;leftOperand&gt;/PaymentMethod&lt;/leftOperand&gt;&lt;rightOperand&gt;Cheque&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
@@ -576,28 +530,74 @@ public class ConstraintChequeInstructionRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If PaymentMethod is different from CHK (Cheque), then CreditTransferTransactionInformation/ChequeInstruction is not allowed."
+	 * "If PaymentMethod is different from CHK, then CreditTransferTransactionInformation/ChequeInstruction is not allowed."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintChequeInstructionRule#forPaymentInstruction20
-	 * ConstraintChequeInstructionRule.forPaymentInstruction20}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintChequeInstructionRule#forPaymentInstruction16
+	 * ConstraintChequeInstructionRule.forPaymentInstruction16}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<PaymentInstruction22> forPaymentInstruction22 = new MMConstraint<PaymentInstruction22>() {
+	public static final MMConstraint<PaymentInstruction9> forPaymentInstruction9 = new MMConstraint<PaymentInstruction9>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeInstructionRule";
-			definition = "If PaymentMethod is different from CHK (Cheque), then CreditTransferTransactionInformation/ChequeInstruction is not allowed.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChequeInstructionRule.forPaymentInstruction20;
-			owner_lazy = () -> PaymentInstruction22.mmObject();
+			definition = "If PaymentMethod is different from CHK, then CreditTransferTransactionInformation/ChequeInstruction is not allowed.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChequeInstructionRule.forPaymentInstruction16);
+			owner_lazy = () -> PaymentInstruction9.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditTransferTransactionInformation[*]/ChequeInstruction</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentMethod</leftOperand></BooleanRule><BooleanRule xsi:type=\"DifferentFromValue\"><leftOperand>/PaymentMethod</leftOperand><rightOperand>Cheque</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
 
 		@Override
-		public void executeValidator(PaymentInstruction22 obj) throws Exception {
-			checkPaymentInstruction22(obj);
+		public void executeValidator(PaymentInstruction9 obj) throws Exception {
+			checkPaymentInstruction9(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction11
+	 * PaymentInstruction11}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ChequeInstructionRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PaymentMethod is CHK, then CreditTransferTransaction/ChequeInstruction is optional.\r\nIf PaymentMethod is different from CHK, then CreditTransferTransaction/ChequeInstruction is not allowed. \r\n\r\nRule rationale: ChequeInstructionDetails may be present if the payment method is Cheque. It must not be present if the payment method is 'Transfer'."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintChequeInstructionRule#forPaymentInstruction17
+	 * ConstraintChequeInstructionRule.forPaymentInstruction17}</li>
+	 * </ul>
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<PaymentInstruction11> forPaymentInstruction11 = new MMConstraint<PaymentInstruction11>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ChequeInstructionRule";
+			definition = "If PaymentMethod is CHK, then CreditTransferTransaction/ChequeInstruction is optional.\r\nIf PaymentMethod is different from CHK, then CreditTransferTransaction/ChequeInstruction is not allowed. \r\n\r\nRule rationale: ChequeInstructionDetails may be present if the payment method is Cheque. It must not be present if the payment method is 'Transfer'.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChequeInstructionRule.forPaymentInstruction17);
+			owner_lazy = () -> PaymentInstruction11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction11 obj) throws Exception {
+			checkPaymentInstruction11(obj);
 		}
 	};
 	/**
@@ -647,16 +647,16 @@ public class ConstraintChequeInstructionRule {
 	};
 
 	/**
-	 * If PaymentMethod is CHK, then
-	 * CreditTransferTransactionInformation/ChequeInstruction is optional. If
-	 * PaymentMethod is different from CHK, then
-	 * CreditTransferTransactionInformation/ChequeInstruction is not allowed.
-	 * 
+	 * If PaymentMethod is CHK (Cheque), then
+	 * CreditTransferTransaction/ChequeInstruction is optional.<br>
+	 * If PaymentMethod is different from CHK (Cheque), then
+	 * CreditTransferTransaction/ChequeInstruction is not allowed. <br>
+	 * <br>
 	 * Rule rationale: ChequeInstructionDetails may be present if the payment
 	 * method is Cheque. It must not be present if the payment method is
 	 * 'Transfer'.
 	 */
-	public static void checkPaymentInstructionInformation1(PaymentInstructionInformation1 obj) throws Exception {
+	public static void checkPaymentInstruction19(PaymentInstruction19 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -673,6 +673,100 @@ public class ConstraintChequeInstructionRule {
 	 * CreditTransferTransactionInformation/ChequeInstruction is not allowed.
 	 */
 	public static void checkPaymentInstruction6(PaymentInstruction6 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PaymentMethod is CHK, then
+	 * CreditTransferTransactionInformation/ChequeInstruction is optional. If
+	 * PaymentMethod is different from CHK, then
+	 * CreditTransferTransactionInformation/ChequeInstruction is not allowed.
+	 * 
+	 * Rule rationale: ChequeInstructionDetails may be present if the payment
+	 * method is Cheque. It must not be present if the payment method is
+	 * 'Transfer'.
+	 */
+	public static void checkPaymentInstructionInformation1(PaymentInstructionInformation1 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PaymentMethod is CHK, then CreditTransferTransaction/ChequeInstruction
+	 * is optional.<br>
+	 * If PaymentMethod is different from CHK, then
+	 * CreditTransferTransaction/ChequeInstruction is not allowed. <br>
+	 * <br>
+	 * Rule rationale: ChequeInstructionDetails may be present if the payment
+	 * method is Cheque. It must not be present if the payment method is
+	 * 'Transfer'.
+	 */
+	public static void checkPaymentInstruction5(PaymentInstruction5 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PaymentMethod is different from CHK (Cheque), then
+	 * CreditTransferTransactionInformation/ChequeInstruction is not allowed.
+	 */
+	public static void checkPaymentInstruction22(PaymentInstruction22 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PaymentMethod is CHK (Cheque), then
+	 * CreditTransferTransaction/ChequeInstruction is optional.<br>
+	 * If PaymentMethod is different from CHK (Cheque), then
+	 * CreditTransferTransaction/ChequeInstruction is not allowed. <br>
+	 * <br>
+	 * Rule rationale: ChequeInstructionDetails may be present if the payment
+	 * method is Cheque. It must not be present if the payment method is
+	 * 'Transfer'.
+	 */
+	public static void checkPaymentInstruction23(PaymentInstruction23 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PaymentMethod is CHK, then CreditTransferTransaction/ChequeInstruction
+	 * is optional.<br>
+	 * If PaymentMethod is different from CHK, then
+	 * CreditTransferTransaction/ChequeInstruction is not allowed. <br>
+	 * <br>
+	 * Rule rationale: ChequeInstructionDetails may be present if the payment
+	 * method is Cheque. It must not be present if the payment method is
+	 * 'Transfer'.
+	 */
+	public static void checkPaymentInstruction17(PaymentInstruction17 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PaymentMethod is CHK, then CreditTransferTransaction/ChequeInstruction
+	 * is optional.<br>
+	 * If PaymentMethod is different from CHK, then
+	 * CreditTransferTransaction/ChequeInstruction is not allowed. <br>
+	 * <br>
+	 * Rule rationale: ChequeInstructionDetails may be present if the payment
+	 * method is Cheque. It must not be present if the payment method is
+	 * 'Transfer'.
+	 */
+	public static void checkPaymentInstruction8(PaymentInstruction8 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PaymentMethod is different from CHK, then
+	 * CreditTransferTransactionInformation/ChequeInstruction is not allowed.
+	 */
+	public static void checkPaymentInstruction16(PaymentInstruction16 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PaymentMethod is different from CHK (Cheque), then
+	 * CreditTransferTransactionInformation/ChequeInstruction is not allowed.
+	 */
+	public static void checkPaymentInstruction20(PaymentInstruction20 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -694,101 +788,7 @@ public class ConstraintChequeInstructionRule {
 	 * method is Cheque. It must not be present if the payment method is
 	 * 'Transfer'.
 	 */
-	public static void checkPaymentInstruction5(PaymentInstruction5 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If PaymentMethod is CHK, then CreditTransferTransaction/ChequeInstruction
-	 * is optional.<br>
-	 * If PaymentMethod is different from CHK, then
-	 * CreditTransferTransaction/ChequeInstruction is not allowed. <br>
-	 * <br>
-	 * Rule rationale: ChequeInstructionDetails may be present if the payment
-	 * method is Cheque. It must not be present if the payment method is
-	 * 'Transfer'.
-	 */
-	public static void checkPaymentInstruction8(PaymentInstruction8 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If PaymentMethod is CHK, then CreditTransferTransaction/ChequeInstruction
-	 * is optional.<br>
-	 * If PaymentMethod is different from CHK, then
-	 * CreditTransferTransaction/ChequeInstruction is not allowed. <br>
-	 * <br>
-	 * Rule rationale: ChequeInstructionDetails may be present if the payment
-	 * method is Cheque. It must not be present if the payment method is
-	 * 'Transfer'.
-	 */
 	public static void checkPaymentInstruction11(PaymentInstruction11 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If PaymentMethod is different from CHK, then
-	 * CreditTransferTransactionInformation/ChequeInstruction is not allowed.
-	 */
-	public static void checkPaymentInstruction16(PaymentInstruction16 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If PaymentMethod is CHK, then CreditTransferTransaction/ChequeInstruction
-	 * is optional.<br>
-	 * If PaymentMethod is different from CHK, then
-	 * CreditTransferTransaction/ChequeInstruction is not allowed. <br>
-	 * <br>
-	 * Rule rationale: ChequeInstructionDetails may be present if the payment
-	 * method is Cheque. It must not be present if the payment method is
-	 * 'Transfer'.
-	 */
-	public static void checkPaymentInstruction17(PaymentInstruction17 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If PaymentMethod is CHK (Cheque), then
-	 * CreditTransferTransaction/ChequeInstruction is optional.<br>
-	 * If PaymentMethod is different from CHK (Cheque), then
-	 * CreditTransferTransaction/ChequeInstruction is not allowed. <br>
-	 * <br>
-	 * Rule rationale: ChequeInstructionDetails may be present if the payment
-	 * method is Cheque. It must not be present if the payment method is
-	 * 'Transfer'.
-	 */
-	public static void checkPaymentInstruction19(PaymentInstruction19 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If PaymentMethod is different from CHK (Cheque), then
-	 * CreditTransferTransactionInformation/ChequeInstruction is not allowed.
-	 */
-	public static void checkPaymentInstruction20(PaymentInstruction20 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If PaymentMethod is CHK (Cheque), then
-	 * CreditTransferTransaction/ChequeInstruction is optional.<br>
-	 * If PaymentMethod is different from CHK (Cheque), then
-	 * CreditTransferTransaction/ChequeInstruction is not allowed. <br>
-	 * <br>
-	 * Rule rationale: ChequeInstructionDetails may be present if the payment
-	 * method is Cheque. It must not be present if the payment method is
-	 * 'Transfer'.
-	 */
-	public static void checkPaymentInstruction23(PaymentInstruction23 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If PaymentMethod is different from CHK (Cheque), then
-	 * CreditTransferTransactionInformation/ChequeInstruction is not allowed.
-	 */
-	public static void checkPaymentInstruction22(PaymentInstruction22 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 

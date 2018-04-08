@@ -36,40 +36,6 @@ public class ConstraintBulkCashSettlementDetails6Rule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.RedemptionBulkExecution2
-	 * RedemptionBulkExecution2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BulkCashSettlementDetails6Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Either IndividualExecutionDetails/CashSettlementDetails or BulkCashSettlementDetails may be present, but not both."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<RedemptionBulkExecution2> forRedemptionBulkExecution2 = new MMConstraint<RedemptionBulkExecution2>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "BulkCashSettlementDetails6Rule";
-			definition = "Either IndividualExecutionDetails/CashSettlementDetails or BulkCashSettlementDetails may be present, but not both.";
-			owner_lazy = () -> RedemptionBulkExecution2.mmObject();
-		}
-
-		@Override
-		public void executeValidator(RedemptionBulkExecution2 obj) throws Exception {
-			checkRedemptionBulkExecution2(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RedemptionBulkExecution3
 	 * RedemptionBulkExecution3}</li>
 	 * <li>
@@ -107,12 +73,46 @@ public class ConstraintBulkCashSettlementDetails6Rule {
 			checkRedemptionBulkExecution3(obj);
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.RedemptionBulkExecution2
+	 * RedemptionBulkExecution2}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BulkCashSettlementDetails6Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Either IndividualExecutionDetails/CashSettlementDetails or BulkCashSettlementDetails may be present, but not both."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<RedemptionBulkExecution2> forRedemptionBulkExecution2 = new MMConstraint<RedemptionBulkExecution2>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "BulkCashSettlementDetails6Rule";
+			definition = "Either IndividualExecutionDetails/CashSettlementDetails or BulkCashSettlementDetails may be present, but not both.";
+			owner_lazy = () -> RedemptionBulkExecution2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionBulkExecution2 obj) throws Exception {
+			checkRedemptionBulkExecution2(obj);
+		}
+	};
 
 	/**
 	 * Either IndividualExecutionDetails/CashSettlementDetails or
 	 * BulkCashSettlementDetails may be present, but not both.
 	 */
-	public static void checkRedemptionBulkExecution2(RedemptionBulkExecution2 obj) throws Exception {
+	public static void checkRedemptionBulkExecution3(RedemptionBulkExecution3 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -120,7 +120,7 @@ public class ConstraintBulkCashSettlementDetails6Rule {
 	 * Either IndividualExecutionDetails/CashSettlementDetails or
 	 * BulkCashSettlementDetails may be present, but not both.
 	 */
-	public static void checkRedemptionBulkExecution3(RedemptionBulkExecution3 obj) throws Exception {
+	public static void checkRedemptionBulkExecution2(RedemptionBulkExecution2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

@@ -26,42 +26,11 @@ import com.tools20022.repository.msg.Proxy6;
 import java.util.Arrays;
 
 /**
- * If ProxyType is DISC or HLDR, then PersonDetails must be present.
+ * If ProxyType is Discretionary "DISC" or SecurityHolder "HLDR", then
+ * PersonDetails must be present.
  */
 public class ConstraintProxyAppointment1Rule {
 
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.Proxy2 Proxy2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ProxyAppointment1Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If ProxyType is DISC or HLDR, then PersonDetails must be present."</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<Proxy2> forProxy2 = new MMConstraint<Proxy2>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ProxyAppointment1Rule";
-			definition = "If ProxyType is DISC or HLDR, then PersonDetails must be present.";
-			owner_lazy = () -> Proxy2.mmObject();
-		}
-
-		@Override
-		public void executeValidator(Proxy2 obj) throws Exception {
-			checkProxy2(obj);
-		}
-	};
 	/**
 	 * 
 	 <p>
@@ -115,6 +84,38 @@ public class ConstraintProxyAppointment1Rule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.Proxy2 Proxy2}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ProxyAppointment1Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If ProxyType is DISC or HLDR, then PersonDetails must be present."</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<Proxy2> forProxy2 = new MMConstraint<Proxy2>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ProxyAppointment1Rule";
+			definition = "If ProxyType is DISC or HLDR, then PersonDetails must be present.";
+			owner_lazy = () -> Proxy2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Proxy2 obj) throws Exception {
+			checkProxy2(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Proxy6 Proxy6}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
 	 * expression} =
@@ -155,17 +156,17 @@ public class ConstraintProxyAppointment1Rule {
 	};
 
 	/**
-	 * If ProxyType is DISC or HLDR, then PersonDetails must be present.
-	 */
-	public static void checkProxy2(Proxy2 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
 	 * If ProxyType is Discretionary "DISC" or SecurityHolder "HLDR", then
 	 * PersonDetails must be present.
 	 */
 	public static void checkProxy4(Proxy4 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If ProxyType is DISC or HLDR, then PersonDetails must be present.
+	 */
+	public static void checkProxy2(Proxy2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 

@@ -80,21 +80,21 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus1Rule#forCreditorPaymentActivationRequestStatusReportV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus1Rule#for_pain_CreditorPaymentActivationRequestStatusReportV01
  * ConstraintGroupAndTransactionStatus1Rule.
- * forCreditorPaymentActivationRequestStatusReportV01}</li>
+ * for_pain_CreditorPaymentActivationRequestStatusReportV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus2Rule#forCreditorPaymentActivationRequestStatusReportV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus2Rule#for_pain_CreditorPaymentActivationRequestStatusReportV01
  * ConstraintGroupAndTransactionStatus2Rule.
- * forCreditorPaymentActivationRequestStatusReportV01}</li>
+ * for_pain_CreditorPaymentActivationRequestStatusReportV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus3Rule#forCreditorPaymentActivationRequestStatusReportV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus3Rule#for_pain_CreditorPaymentActivationRequestStatusReportV01
  * ConstraintGroupAndTransactionStatus3Rule.
- * forCreditorPaymentActivationRequestStatusReportV01}</li>
+ * for_pain_CreditorPaymentActivationRequestStatusReportV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus4Rule#forCreditorPaymentActivationRequestStatusReportV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus4Rule#for_pain_CreditorPaymentActivationRequestStatusReportV01
  * ConstraintGroupAndTransactionStatus4Rule.
- * forCreditorPaymentActivationRequestStatusReportV01}</li>
+ * for_pain_CreditorPaymentActivationRequestStatusReportV01}</li>
  * </ul>
  * </li>
  * <li>
@@ -268,10 +268,10 @@ public class CreditorPaymentActivationRequestStatusReportV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus1Rule.forCreditorPaymentActivationRequestStatusReportV01,
-						com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus2Rule.forCreditorPaymentActivationRequestStatusReportV01,
-						com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus3Rule.forCreditorPaymentActivationRequestStatusReportV01,
-						com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus4Rule.forCreditorPaymentActivationRequestStatusReportV01);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus1Rule.for_pain_CreditorPaymentActivationRequestStatusReportV01,
+						com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus2Rule.for_pain_CreditorPaymentActivationRequestStatusReportV01,
+						com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus3Rule.for_pain_CreditorPaymentActivationRequestStatusReportV01,
+						com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus4Rule.for_pain_CreditorPaymentActivationRequestStatusReportV01);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CreditorPaymentActivationRequestStatusReportV01";
 				definition = "Scope\r\nThis message is sent by a party to the next party in the creditor payment activation request chain.\r\nIt is used to inform the latter about the positive or negative status of a creditor payment activation request (either single or file).";

@@ -25,43 +25,10 @@ import com.tools20022.repository.msg.OrderStatusAndReason5;
 import com.tools20022.repository.msg.QuoteStatus1;
 
 /**
- * RejectionReason must be present if Status equals "Rejected".
+ * RejectionReason must be present if ListOrderStatus equals "Rejected".
  */
 public class ConstraintRejectionReason {
 
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason5
-	 * OrderStatusAndReason5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "RejectionReason"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "RejectionReason must be present if Status equals \"Rejected\"."</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<OrderStatusAndReason5> forOrderStatusAndReason5 = new MMConstraint<OrderStatusAndReason5>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "RejectionReason";
-			definition = "RejectionReason must be present if Status equals \"Rejected\".";
-			owner_lazy = () -> OrderStatusAndReason5.mmObject();
-		}
-
-		@Override
-		public void executeValidator(OrderStatusAndReason5 obj) throws Exception {
-			checkOrderStatusAndReason5(obj);
-		}
-	};
 	/**
 	 * 
 	 <p>
@@ -127,13 +94,39 @@ public class ConstraintRejectionReason {
 			checkQuoteStatus1(obj);
 		}
 	};
-
 	/**
-	 * RejectionReason must be present if Status equals "Rejected".
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason5
+	 * OrderStatusAndReason5}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RejectionReason"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "RejectionReason must be present if Status equals \"Rejected\"."</li>
+	 * </ul>
 	 */
-	public static void checkOrderStatusAndReason5(OrderStatusAndReason5 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
+	public static final MMConstraint<OrderStatusAndReason5> forOrderStatusAndReason5 = new MMConstraint<OrderStatusAndReason5>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "RejectionReason";
+			definition = "RejectionReason must be present if Status equals \"Rejected\".";
+			owner_lazy = () -> OrderStatusAndReason5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OrderStatusAndReason5 obj) throws Exception {
+			checkOrderStatusAndReason5(obj);
+		}
+	};
 
 	/**
 	 * RejectionReason must be present if ListOrderStatus equals "Rejected".
@@ -146,6 +139,13 @@ public class ConstraintRejectionReason {
 	 * RejectionReason is only present if QuoteStatus is Rejected.
 	 */
 	public static void checkQuoteStatus1(QuoteStatus1 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * RejectionReason must be present if Status equals "Rejected".
+	 */
+	public static void checkOrderStatusAndReason5(OrderStatusAndReason5 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

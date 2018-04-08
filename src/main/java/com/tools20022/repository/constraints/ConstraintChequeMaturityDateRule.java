@@ -25,48 +25,11 @@ import com.tools20022.repository.msg.Cheque6;
 import com.tools20022.repository.msg.Cheque7;
 
 /**
- * If ChequeType is present and is DRFT or ELDR, then ChequeMaturityDate is
- * optional. If ChequeType is not present or is different from DRFT or ELDR,
- * then ChequeMaturityDate is not allowed.
- * 
- * Rule rationale: ChequeMaturityDate may be present only when ChequeType is
- * DRFT or ELDR.
+ * If ChequeMaturityDate is present, then ChequeType must be present and equal
+ * to DRFT or ELDR.
  */
 public class ConstraintChequeMaturityDateRule {
 
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.Cheque5 Cheque5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ChequeMaturityDateRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If ChequeType is present and is DRFT or ELDR, then ChequeMaturityDate is optional. If ChequeType is not present or is different from DRFT or ELDR, then ChequeMaturityDate is not allowed.\n\nRule rationale: ChequeMaturityDate may be present only when ChequeType is DRFT or ELDR."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<Cheque5> forCheque5 = new MMConstraint<Cheque5>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ChequeMaturityDateRule";
-			definition = "If ChequeType is present and is DRFT or ELDR, then ChequeMaturityDate is optional. If ChequeType is not present or is different from DRFT or ELDR, then ChequeMaturityDate is not allowed.\n\nRule rationale: ChequeMaturityDate may be present only when ChequeType is DRFT or ELDR.";
-			owner_lazy = () -> Cheque5.mmObject();
-		}
-
-		@Override
-		public void executeValidator(Cheque5 obj) throws Exception {
-			checkCheque5(obj);
-		}
-	};
 	/**
 	 * 
 	 <p>
@@ -143,18 +106,39 @@ public class ConstraintChequeMaturityDateRule {
 			checkCheque7(obj);
 		}
 	};
-
 	/**
-	 * If ChequeType is present and is DRFT or ELDR, then ChequeMaturityDate is
-	 * optional. If ChequeType is not present or is different from DRFT or ELDR,
-	 * then ChequeMaturityDate is not allowed.
 	 * 
-	 * Rule rationale: ChequeMaturityDate may be present only when ChequeType is
-	 * DRFT or ELDR.
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.Cheque5 Cheque5}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ChequeMaturityDateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If ChequeType is present and is DRFT or ELDR, then ChequeMaturityDate is optional. If ChequeType is not present or is different from DRFT or ELDR, then ChequeMaturityDate is not allowed.\n\nRule rationale: ChequeMaturityDate may be present only when ChequeType is DRFT or ELDR."
+	 * </li>
+	 * </ul>
 	 */
-	public static void checkCheque5(Cheque5 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
+	public static final MMConstraint<Cheque5> forCheque5 = new MMConstraint<Cheque5>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ChequeMaturityDateRule";
+			definition = "If ChequeType is present and is DRFT or ELDR, then ChequeMaturityDate is optional. If ChequeType is not present or is different from DRFT or ELDR, then ChequeMaturityDate is not allowed.\n\nRule rationale: ChequeMaturityDate may be present only when ChequeType is DRFT or ELDR.";
+			owner_lazy = () -> Cheque5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Cheque5 obj) throws Exception {
+			checkCheque5(obj);
+		}
+	};
 
 	/**
 	 * If ChequeMaturityDate is present, then ChequeType must be present and
@@ -169,6 +153,18 @@ public class ConstraintChequeMaturityDateRule {
 	 * equal to DRFT or ELDR.
 	 */
 	public static void checkCheque7(Cheque7 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If ChequeType is present and is DRFT or ELDR, then ChequeMaturityDate is
+	 * optional. If ChequeType is not present or is different from DRFT or ELDR,
+	 * then ChequeMaturityDate is not allowed.
+	 * 
+	 * Rule rationale: ChequeMaturityDate may be present only when ChequeType is
+	 * DRFT or ELDR.
+	 */
+	public static void checkCheque5(Cheque5 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

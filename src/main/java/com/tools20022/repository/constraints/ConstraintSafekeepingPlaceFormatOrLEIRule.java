@@ -35,6 +35,50 @@ public class ConstraintSafekeepingPlaceFormatOrLEIRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SafeKeepingPlace2
+	 * SafeKeepingPlace2}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition&gt;&lt;SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;OR&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/SafekeepingPlaceFormat&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/LEI&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;/SimpleRule&gt;&lt;/RuleDefinition&gt;"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SafekeepingPlaceFormatOrLEIRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "SafekeepingPlaceFormat must be present or LEI must be present."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSafekeepingPlaceFormatOrLEIRule#forSafeKeepingPlace1
+	 * ConstraintSafekeepingPlaceFormatOrLEIRule.forSafeKeepingPlace1}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SafeKeepingPlace2> forSafeKeepingPlace2 = new MMConstraint<SafeKeepingPlace2>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SafekeepingPlaceFormatOrLEIRule";
+			definition = "SafekeepingPlaceFormat must be present or LEI must be present.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSafekeepingPlaceFormatOrLEIRule.forSafeKeepingPlace1;
+			owner_lazy = () -> SafeKeepingPlace2.mmObject();
+			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SafekeepingPlaceFormat</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/LEI</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SafeKeepingPlace2 obj) throws Exception {
+			checkSafeKeepingPlace2(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SafeKeepingPlace1
 	 * SafeKeepingPlace1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
@@ -76,62 +120,18 @@ public class ConstraintSafekeepingPlaceFormatOrLEIRule {
 			checkSafeKeepingPlace1(obj);
 		}
 	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SafeKeepingPlace2
-	 * SafeKeepingPlace2}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
-	 * expression} =
-	 * "&lt;RuleDefinition&gt;&lt;SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;OR&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/SafekeepingPlaceFormat&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/LEI&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;/SimpleRule&gt;&lt;/RuleDefinition&gt;"
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SafekeepingPlaceFormatOrLEIRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "SafekeepingPlaceFormat must be present or LEI must be present."</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSafekeepingPlaceFormatOrLEIRule#forSafeKeepingPlace1
-	 * ConstraintSafekeepingPlaceFormatOrLEIRule.forSafeKeepingPlace1}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SafeKeepingPlace2> forSafeKeepingPlace2 = new MMConstraint<SafeKeepingPlace2>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SafekeepingPlaceFormatOrLEIRule";
-			definition = "SafekeepingPlaceFormat must be present or LEI must be present.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSafekeepingPlaceFormatOrLEIRule.forSafeKeepingPlace1;
-			owner_lazy = () -> SafeKeepingPlace2.mmObject();
-			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SafekeepingPlaceFormat</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/LEI</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
-		}
-
-		@Override
-		public void executeValidator(SafeKeepingPlace2 obj) throws Exception {
-			checkSafeKeepingPlace2(obj);
-		}
-	};
 
 	/**
 	 * SafekeepingPlaceFormat must be present or LEI must be present.
 	 */
-	public static void checkSafeKeepingPlace1(SafeKeepingPlace1 obj) throws Exception {
+	public static void checkSafeKeepingPlace2(SafeKeepingPlace2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
 	/**
 	 * SafekeepingPlaceFormat must be present or LEI must be present.
 	 */
-	public static void checkSafeKeepingPlace2(SafeKeepingPlace2 obj) throws Exception {
+	public static void checkSafeKeepingPlace1(SafeKeepingPlace1 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

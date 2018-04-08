@@ -52,7 +52,7 @@ public class ConstraintTotalInterbankSettlementAmount2Rule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<FIToFICustomerCreditTransferV01> forFIToFICustomerCreditTransferV01 = new MMConstraint<FIToFICustomerCreditTransferV01>() {
+	public static final MMConstraint<FIToFICustomerCreditTransferV01> for_pacs_FIToFICustomerCreditTransferV01 = new MMConstraint<FIToFICustomerCreditTransferV01>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementAmount2Rule";
@@ -62,41 +62,7 @@ public class ConstraintTotalInterbankSettlementAmount2Rule {
 
 		@Override
 		public void executeValidator(FIToFICustomerCreditTransferV01 obj) throws Exception {
-			checkFIToFICustomerCreditTransferV01(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.pacs.FIToFICustomerDirectDebitV01
-	 * FIToFICustomerDirectDebitV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "TotalInterbankSettlementAmount2Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If GroupHeader/TotalInterbankSettlementAmount is present, then it must be equal to the sum of all occurrences of DirectDebitTransactionInformation/InterbankSettlementAmount."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<FIToFICustomerDirectDebitV01> forFIToFICustomerDirectDebitV01 = new MMConstraint<FIToFICustomerDirectDebitV01>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "TotalInterbankSettlementAmount2Rule";
-			definition = "If GroupHeader/TotalInterbankSettlementAmount is present, then it must be equal to the sum of all occurrences of DirectDebitTransactionInformation/InterbankSettlementAmount.";
-			owner_lazy = () -> FIToFICustomerDirectDebitV01.mmObject();
-		}
-
-		@Override
-		public void executeValidator(FIToFICustomerDirectDebitV01 obj) throws Exception {
-			checkFIToFICustomerDirectDebitV01(obj);
+			check_pacs_FIToFICustomerCreditTransferV01(obj);
 		}
 	};
 	/**
@@ -120,7 +86,7 @@ public class ConstraintTotalInterbankSettlementAmount2Rule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<FinancialInstitutionCreditTransferV01> forFinancialInstitutionCreditTransferV01 = new MMConstraint<FinancialInstitutionCreditTransferV01>() {
+	public static final MMConstraint<FinancialInstitutionCreditTransferV01> for_pacs_FinancialInstitutionCreditTransferV01 = new MMConstraint<FinancialInstitutionCreditTransferV01>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementAmount2Rule";
@@ -130,7 +96,41 @@ public class ConstraintTotalInterbankSettlementAmount2Rule {
 
 		@Override
 		public void executeValidator(FinancialInstitutionCreditTransferV01 obj) throws Exception {
-			checkFinancialInstitutionCreditTransferV01(obj);
+			check_pacs_FinancialInstitutionCreditTransferV01(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.pacs.FIToFICustomerDirectDebitV01
+	 * FIToFICustomerDirectDebitV01}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TotalInterbankSettlementAmount2Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If GroupHeader/TotalInterbankSettlementAmount is present, then it must be equal to the sum of all occurrences of DirectDebitTransactionInformation/InterbankSettlementAmount."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<FIToFICustomerDirectDebitV01> for_pacs_FIToFICustomerDirectDebitV01 = new MMConstraint<FIToFICustomerDirectDebitV01>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "TotalInterbankSettlementAmount2Rule";
+			definition = "If GroupHeader/TotalInterbankSettlementAmount is present, then it must be equal to the sum of all occurrences of DirectDebitTransactionInformation/InterbankSettlementAmount.";
+			owner_lazy = () -> FIToFICustomerDirectDebitV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerDirectDebitV01 obj) throws Exception {
+			check_pacs_FIToFICustomerDirectDebitV01(obj);
 		}
 	};
 
@@ -139,16 +139,7 @@ public class ConstraintTotalInterbankSettlementAmount2Rule {
 	 * equal to the sum of all occurrences of
 	 * CreditTransferTransactionInformation/InterbankSettlementAmount.
 	 */
-	public static void checkFIToFICustomerCreditTransferV01(FIToFICustomerCreditTransferV01 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If GroupHeader/TotalInterbankSettlementAmount is present, then it must be
-	 * equal to the sum of all occurrences of
-	 * DirectDebitTransactionInformation/InterbankSettlementAmount.
-	 */
-	public static void checkFIToFICustomerDirectDebitV01(FIToFICustomerDirectDebitV01 obj) throws Exception {
+	public static void check_pacs_FIToFICustomerCreditTransferV01(FIToFICustomerCreditTransferV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -157,7 +148,16 @@ public class ConstraintTotalInterbankSettlementAmount2Rule {
 	 * equal to the sum of all occurrences of
 	 * CreditTransferTransactionInformation/InterbankSettlementAmount.
 	 */
-	public static void checkFinancialInstitutionCreditTransferV01(FinancialInstitutionCreditTransferV01 obj) throws Exception {
+	public static void check_pacs_FinancialInstitutionCreditTransferV01(FinancialInstitutionCreditTransferV01 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If GroupHeader/TotalInterbankSettlementAmount is present, then it must be
+	 * equal to the sum of all occurrences of
+	 * DirectDebitTransactionInformation/InterbankSettlementAmount.
+	 */
+	public static void check_pacs_FIToFICustomerDirectDebitV01(FIToFICustomerDirectDebitV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

@@ -37,6 +37,45 @@ public class ConstraintPartialFillsRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.PartialFill2 PartialFill2}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PartialFillsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "A SecuritiesTradeConfirmation should not be used as a TradeExecution report. PartialFills aims at providing a for information summary of the different executions that the confirmation consisted of."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPartialFillsRule#forPartialFill1
+	 * ConstraintPartialFillsRule.forPartialFill1}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<PartialFill2> forPartialFill2 = new MMConstraint<PartialFill2>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PartialFillsRule";
+			definition = "A SecuritiesTradeConfirmation should not be used as a TradeExecution report. PartialFills aims at providing a for information summary of the different executions that the confirmation consisted of.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPartialFillsRule.forPartialFill1;
+			owner_lazy = () -> PartialFill2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartialFill2 obj) throws Exception {
+			checkPartialFill2(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PartialFill1 PartialFill1}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -73,52 +112,13 @@ public class ConstraintPartialFillsRule {
 			checkPartialFill1(obj);
 		}
 	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.PartialFill2 PartialFill2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PartialFillsRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "A SecuritiesTradeConfirmation should not be used as a TradeExecution report. PartialFills aims at providing a for information summary of the different executions that the confirmation consisted of."
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintPartialFillsRule#forPartialFill1
-	 * ConstraintPartialFillsRule.forPartialFill1}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<PartialFill2> forPartialFill2 = new MMConstraint<PartialFill2>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "PartialFillsRule";
-			definition = "A SecuritiesTradeConfirmation should not be used as a TradeExecution report. PartialFills aims at providing a for information summary of the different executions that the confirmation consisted of.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPartialFillsRule.forPartialFill1;
-			owner_lazy = () -> PartialFill2.mmObject();
-		}
-
-		@Override
-		public void executeValidator(PartialFill2 obj) throws Exception {
-			checkPartialFill2(obj);
-		}
-	};
 
 	/**
 	 * A SecuritiesTradeConfirmation should not be used as a TradeExecution
 	 * report. PartialFills aims at providing a for information summary of the
 	 * different executions that the confirmation consisted of.
 	 */
-	public static void checkPartialFill1(PartialFill1 obj) throws Exception {
+	public static void checkPartialFill2(PartialFill2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -127,7 +127,7 @@ public class ConstraintPartialFillsRule {
 	 * report. PartialFills aims at providing a for information summary of the
 	 * different executions that the confirmation consisted of.
 	 */
-	public static void checkPartialFill2(PartialFill2 obj) throws Exception {
+	public static void checkPartialFill1(PartialFill1 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

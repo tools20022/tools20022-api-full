@@ -26,259 +26,14 @@ import java.util.Arrays;
 
 /**
  * If PrimaryOwner is present, then at least one occurrence of
- * PrimaryOwner/Organisation/Address/RegistrationAddressIndicator or of
- * PrimaryOwner/IndividualPerson/Address/RegistrationAddressIndicator must be
- * "true" or "1" (Yes).
+ * PrimaryOwner/Party/Organisation/PostalAddress/RegistrationAddressIndicator
+ * must be "true" or "1" (Yes), or, at least one occurrence of
+ * PrimaryOwner/Party
+ * /IndividualPerson/PostalAddress/RegistrationAddressIndicator must be "true"
+ * or "1" (Yes).<br>
  */
 public class ConstraintRegistrationAddressIndicator1Rule {
 
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.AccountParties2
-	 * AccountParties2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "RegistrationAddressIndicator1Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If PrimaryOwner is present, then at least one occurrence of PrimaryOwner/Organisation/Address/RegistrationAddressIndicator or of PrimaryOwner/IndividualPerson/Address/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes)."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<AccountParties2> forAccountParties2 = new MMConstraint<AccountParties2>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "RegistrationAddressIndicator1Rule";
-			definition = "If PrimaryOwner is present, then at least one occurrence of PrimaryOwner/Organisation/Address/RegistrationAddressIndicator or of PrimaryOwner/IndividualPerson/Address/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes).";
-			owner_lazy = () -> AccountParties2.mmObject();
-		}
-
-		@Override
-		public void executeValidator(AccountParties2 obj) throws Exception {
-			checkAccountParties2(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.AccountParties5
-	 * AccountParties5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "RegistrationAddressIndicator1Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If PrimaryOwner is present, then at least one occurrence of PrimaryOwner/Organisation/Address/RegistrationAddressIndicator or of PrimaryOwner/IndividualPerson/Address/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes)."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<AccountParties5> forAccountParties5 = new MMConstraint<AccountParties5>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "RegistrationAddressIndicator1Rule";
-			definition = "If PrimaryOwner is present, then at least one occurrence of PrimaryOwner/Organisation/Address/RegistrationAddressIndicator or of PrimaryOwner/IndividualPerson/Address/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes).";
-			owner_lazy = () -> AccountParties5.mmObject();
-		}
-
-		@Override
-		public void executeValidator(AccountParties5 obj) throws Exception {
-			checkAccountParties5(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.AccountParties6
-	 * AccountParties6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "RegistrationAddressIndicator1Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If PrimaryOwner is present, then at least one occurrence of PrimaryOwner/Organisation/Address/RegistrationAddressIndicator or of PrimaryOwner/IndividualPerson/Address/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes)."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<AccountParties6> forAccountParties6 = new MMConstraint<AccountParties6>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "RegistrationAddressIndicator1Rule";
-			definition = "If PrimaryOwner is present, then at least one occurrence of PrimaryOwner/Organisation/Address/RegistrationAddressIndicator or of PrimaryOwner/IndividualPerson/Address/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes).";
-			owner_lazy = () -> AccountParties6.mmObject();
-		}
-
-		@Override
-		public void executeValidator(AccountParties6 obj) throws Exception {
-			checkAccountParties6(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.AccountParties3
-	 * AccountParties3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "RegistrationAddressIndicator1Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If PrimaryOwner is present, then at least one occurrence of PrimaryOwner/Organisation/ModifiedAddress/Address/RegistrationAddressIndicator or of PrimaryOwner/IndividualPerson/ModifiedAddress/Address/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes)."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<AccountParties3> forAccountParties3 = new MMConstraint<AccountParties3>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "RegistrationAddressIndicator1Rule";
-			definition = "If PrimaryOwner is present, then at least one occurrence of PrimaryOwner/Organisation/ModifiedAddress/Address/RegistrationAddressIndicator or of PrimaryOwner/IndividualPerson/ModifiedAddress/Address/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes).";
-			owner_lazy = () -> AccountParties3.mmObject();
-		}
-
-		@Override
-		public void executeValidator(AccountParties3 obj) throws Exception {
-			checkAccountParties3(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.AccountParties4
-	 * AccountParties4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "RegistrationAddressIndicator1Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If PrimaryOwner is present, then at least one occurrence of PrimaryOwner/Organisation/ModifiedAddress/Address/RegistrationAddressIndicator or of PrimaryOwner/IndividualPerson/ModifiedAddress/Address/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes)."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<AccountParties4> forAccountParties4 = new MMConstraint<AccountParties4>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "RegistrationAddressIndicator1Rule";
-			definition = "If PrimaryOwner is present, then at least one occurrence of PrimaryOwner/Organisation/ModifiedAddress/Address/RegistrationAddressIndicator or of PrimaryOwner/IndividualPerson/ModifiedAddress/Address/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes).";
-			owner_lazy = () -> AccountParties4.mmObject();
-		}
-
-		@Override
-		public void executeValidator(AccountParties4 obj) throws Exception {
-			checkAccountParties4(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.AccountParties7
-	 * AccountParties7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "RegistrationAddressIndicator1Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If PrimaryOwner is present, then at least one occurrence of PrimaryOwner/Organisation/ModifiedAddress/Address/RegistrationAddressIndicator or of PrimaryOwner/IndividualPerson/ModifiedAddress/Address/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes)."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<AccountParties7> forAccountParties7 = new MMConstraint<AccountParties7>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "RegistrationAddressIndicator1Rule";
-			definition = "If PrimaryOwner is present, then at least one occurrence of PrimaryOwner/Organisation/ModifiedAddress/Address/RegistrationAddressIndicator or of PrimaryOwner/IndividualPerson/ModifiedAddress/Address/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes).";
-			owner_lazy = () -> AccountParties7.mmObject();
-		}
-
-		@Override
-		public void executeValidator(AccountParties7 obj) throws Exception {
-			checkAccountParties7(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.choice.AccountParties3Choice
-	 * AccountParties3Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "RegistrationAddressIndicator1Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If PrimaryOwner is present, then at least one occurrence of Party/Organisation/ModifiedPostalAddress/PostalAddress/RegistrationAddressIndicator, or of \r\nParty/IndividualPerson/ModifiedPostalAddress/PostalAddress/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes).\r\n"
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintRegistrationAddressIndicator1Rule#forAccountParties6Choice
-	 * ConstraintRegistrationAddressIndicator1Rule.forAccountParties6Choice}</li>
-	 * </ul>
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<AccountParties3Choice> forAccountParties3Choice = new MMConstraint<AccountParties3Choice>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "RegistrationAddressIndicator1Rule";
-			definition = "If PrimaryOwner is present, then at least one occurrence of Party/Organisation/ModifiedPostalAddress/PostalAddress/RegistrationAddressIndicator, or of \r\nParty/IndividualPerson/ModifiedPostalAddress/PostalAddress/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes).\r\n";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRegistrationAddressIndicator1Rule.forAccountParties6Choice);
-			owner_lazy = () -> AccountParties3Choice.mmObject();
-		}
-
-		@Override
-		public void executeValidator(AccountParties3Choice obj) throws Exception {
-			checkAccountParties3Choice(obj);
-		}
-	};
 	/**
 	 * 
 	 <p>
@@ -332,6 +87,191 @@ public class ConstraintRegistrationAddressIndicator1Rule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.AccountParties5
+	 * AccountParties5}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RegistrationAddressIndicator1Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PrimaryOwner is present, then at least one occurrence of PrimaryOwner/Organisation/Address/RegistrationAddressIndicator or of PrimaryOwner/IndividualPerson/Address/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AccountParties5> forAccountParties5 = new MMConstraint<AccountParties5>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "RegistrationAddressIndicator1Rule";
+			definition = "If PrimaryOwner is present, then at least one occurrence of PrimaryOwner/Organisation/Address/RegistrationAddressIndicator or of PrimaryOwner/IndividualPerson/Address/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes).";
+			owner_lazy = () -> AccountParties5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountParties5 obj) throws Exception {
+			checkAccountParties5(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.choice.AccountParties3Choice
+	 * AccountParties3Choice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RegistrationAddressIndicator1Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PrimaryOwner is present, then at least one occurrence of Party/Organisation/ModifiedPostalAddress/PostalAddress/RegistrationAddressIndicator, or of \r\nParty/IndividualPerson/ModifiedPostalAddress/PostalAddress/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes).\r\n"
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintRegistrationAddressIndicator1Rule#forAccountParties6Choice
+	 * ConstraintRegistrationAddressIndicator1Rule.forAccountParties6Choice}</li>
+	 * </ul>
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AccountParties3Choice> forAccountParties3Choice = new MMConstraint<AccountParties3Choice>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "RegistrationAddressIndicator1Rule";
+			definition = "If PrimaryOwner is present, then at least one occurrence of Party/Organisation/ModifiedPostalAddress/PostalAddress/RegistrationAddressIndicator, or of \r\nParty/IndividualPerson/ModifiedPostalAddress/PostalAddress/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes).\r\n";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRegistrationAddressIndicator1Rule.forAccountParties6Choice);
+			owner_lazy = () -> AccountParties3Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountParties3Choice obj) throws Exception {
+			checkAccountParties3Choice(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.AccountParties7
+	 * AccountParties7}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RegistrationAddressIndicator1Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PrimaryOwner is present, then at least one occurrence of PrimaryOwner/Organisation/ModifiedAddress/Address/RegistrationAddressIndicator or of PrimaryOwner/IndividualPerson/ModifiedAddress/Address/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AccountParties7> forAccountParties7 = new MMConstraint<AccountParties7>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "RegistrationAddressIndicator1Rule";
+			definition = "If PrimaryOwner is present, then at least one occurrence of PrimaryOwner/Organisation/ModifiedAddress/Address/RegistrationAddressIndicator or of PrimaryOwner/IndividualPerson/ModifiedAddress/Address/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes).";
+			owner_lazy = () -> AccountParties7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountParties7 obj) throws Exception {
+			checkAccountParties7(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.choice.AccountParties5Choice
+	 * AccountParties5Choice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RegistrationAddressIndicator1Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PrimaryOwner is present, then at least one occurrence of PrimaryOwner/Party/Organisation/PostalAddress/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes), or, at least one occurrence of PrimaryOwner/Party/IndividualPerson/PostalAddress/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes).\r\n"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintRegistrationAddressIndicator1Rule#forAccountParties4Choice
+	 * ConstraintRegistrationAddressIndicator1Rule.forAccountParties4Choice}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AccountParties5Choice> forAccountParties5Choice = new MMConstraint<AccountParties5Choice>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "RegistrationAddressIndicator1Rule";
+			definition = "If PrimaryOwner is present, then at least one occurrence of PrimaryOwner/Party/Organisation/PostalAddress/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes), or, at least one occurrence of PrimaryOwner/Party/IndividualPerson/PostalAddress/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes).\r\n";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintRegistrationAddressIndicator1Rule.forAccountParties4Choice;
+			owner_lazy = () -> AccountParties5Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountParties5Choice obj) throws Exception {
+			checkAccountParties5Choice(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.AccountParties6
+	 * AccountParties6}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RegistrationAddressIndicator1Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PrimaryOwner is present, then at least one occurrence of PrimaryOwner/Organisation/Address/RegistrationAddressIndicator or of PrimaryOwner/IndividualPerson/Address/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AccountParties6> forAccountParties6 = new MMConstraint<AccountParties6>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "RegistrationAddressIndicator1Rule";
+			definition = "If PrimaryOwner is present, then at least one occurrence of PrimaryOwner/Organisation/Address/RegistrationAddressIndicator or of PrimaryOwner/IndividualPerson/Address/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes).";
+			owner_lazy = () -> AccountParties6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountParties6 obj) throws Exception {
+			checkAccountParties6(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.AccountParties7Choice
 	 * AccountParties7Choice}</li>
 	 * <li>
@@ -364,6 +304,74 @@ public class ConstraintRegistrationAddressIndicator1Rule {
 		@Override
 		public void executeValidator(AccountParties7Choice obj) throws Exception {
 			checkAccountParties7Choice(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.AccountParties2
+	 * AccountParties2}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RegistrationAddressIndicator1Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PrimaryOwner is present, then at least one occurrence of PrimaryOwner/Organisation/Address/RegistrationAddressIndicator or of PrimaryOwner/IndividualPerson/Address/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AccountParties2> forAccountParties2 = new MMConstraint<AccountParties2>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "RegistrationAddressIndicator1Rule";
+			definition = "If PrimaryOwner is present, then at least one occurrence of PrimaryOwner/Organisation/Address/RegistrationAddressIndicator or of PrimaryOwner/IndividualPerson/Address/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes).";
+			owner_lazy = () -> AccountParties2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountParties2 obj) throws Exception {
+			checkAccountParties2(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.AccountParties4
+	 * AccountParties4}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RegistrationAddressIndicator1Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PrimaryOwner is present, then at least one occurrence of PrimaryOwner/Organisation/ModifiedAddress/Address/RegistrationAddressIndicator or of PrimaryOwner/IndividualPerson/ModifiedAddress/Address/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AccountParties4> forAccountParties4 = new MMConstraint<AccountParties4>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "RegistrationAddressIndicator1Rule";
+			definition = "If PrimaryOwner is present, then at least one occurrence of PrimaryOwner/Organisation/ModifiedAddress/Address/RegistrationAddressIndicator or of PrimaryOwner/IndividualPerson/ModifiedAddress/Address/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes).";
+			owner_lazy = () -> AccountParties4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountParties4 obj) throws Exception {
+			checkAccountParties4(obj);
 		}
 	};
 	/**
@@ -412,8 +420,8 @@ public class ConstraintRegistrationAddressIndicator1Rule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.choice.AccountParties5Choice
-	 * AccountParties5Choice}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountParties3
+	 * AccountParties3}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -423,37 +431,33 @@ public class ConstraintRegistrationAddressIndicator1Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If PrimaryOwner is present, then at least one occurrence of PrimaryOwner/Party/Organisation/PostalAddress/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes), or, at least one occurrence of PrimaryOwner/Party/IndividualPerson/PostalAddress/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes).\r\n"
+	 * "If PrimaryOwner is present, then at least one occurrence of PrimaryOwner/Organisation/ModifiedAddress/Address/RegistrationAddressIndicator or of PrimaryOwner/IndividualPerson/ModifiedAddress/Address/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes)."
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintRegistrationAddressIndicator1Rule#forAccountParties4Choice
-	 * ConstraintRegistrationAddressIndicator1Rule.forAccountParties4Choice}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<AccountParties5Choice> forAccountParties5Choice = new MMConstraint<AccountParties5Choice>() {
+	public static final MMConstraint<AccountParties3> forAccountParties3 = new MMConstraint<AccountParties3>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationAddressIndicator1Rule";
-			definition = "If PrimaryOwner is present, then at least one occurrence of PrimaryOwner/Party/Organisation/PostalAddress/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes), or, at least one occurrence of PrimaryOwner/Party/IndividualPerson/PostalAddress/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes).\r\n";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintRegistrationAddressIndicator1Rule.forAccountParties4Choice;
-			owner_lazy = () -> AccountParties5Choice.mmObject();
+			definition = "If PrimaryOwner is present, then at least one occurrence of PrimaryOwner/Organisation/ModifiedAddress/Address/RegistrationAddressIndicator or of PrimaryOwner/IndividualPerson/ModifiedAddress/Address/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes).";
+			owner_lazy = () -> AccountParties3.mmObject();
 		}
 
 		@Override
-		public void executeValidator(AccountParties5Choice obj) throws Exception {
-			checkAccountParties5Choice(obj);
+		public void executeValidator(AccountParties3 obj) throws Exception {
+			checkAccountParties3(obj);
 		}
 	};
 
 	/**
 	 * If PrimaryOwner is present, then at least one occurrence of
-	 * PrimaryOwner/Organisation/Address/RegistrationAddressIndicator or of
-	 * PrimaryOwner/IndividualPerson/Address/RegistrationAddressIndicator must
-	 * be "true" or "1" (Yes).
+	 * PrimaryOwner/Party
+	 * /Organisation/PostalAddress/RegistrationAddressIndicator must be "true"
+	 * or "1" (Yes), or, at least one occurrence of
+	 * PrimaryOwner/Party/IndividualPerson
+	 * /PostalAddress/RegistrationAddressIndicator must be "true" or "1" (Yes).<br>
 	 */
-	public static void checkAccountParties2(AccountParties2 obj) throws Exception {
+	public static void checkAccountParties4Choice(AccountParties4Choice obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -469,35 +473,12 @@ public class ConstraintRegistrationAddressIndicator1Rule {
 
 	/**
 	 * If PrimaryOwner is present, then at least one occurrence of
-	 * PrimaryOwner/Organisation/Address/RegistrationAddressIndicator or of
-	 * PrimaryOwner/IndividualPerson/Address/RegistrationAddressIndicator must
-	 * be "true" or "1" (Yes).
+	 * Party/Organisation
+	 * /ModifiedPostalAddress/PostalAddress/RegistrationAddressIndicator, or of <br>
+	 * Party/IndividualPerson/ModifiedPostalAddress/PostalAddress/
+	 * RegistrationAddressIndicator must be "true" or "1" (Yes).<br>
 	 */
-	public static void checkAccountParties6(AccountParties6 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If PrimaryOwner is present, then at least one occurrence of
-	 * PrimaryOwner/Organisation
-	 * /ModifiedAddress/Address/RegistrationAddressIndicator or of
-	 * PrimaryOwner/IndividualPerson
-	 * /ModifiedAddress/Address/RegistrationAddressIndicator must be "true" or
-	 * "1" (Yes).
-	 */
-	public static void checkAccountParties3(AccountParties3 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If PrimaryOwner is present, then at least one occurrence of
-	 * PrimaryOwner/Organisation
-	 * /ModifiedAddress/Address/RegistrationAddressIndicator or of
-	 * PrimaryOwner/IndividualPerson
-	 * /ModifiedAddress/Address/RegistrationAddressIndicator must be "true" or
-	 * "1" (Yes).
-	 */
-	public static void checkAccountParties4(AccountParties4 obj) throws Exception {
+	public static void checkAccountParties3Choice(AccountParties3Choice obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -515,24 +496,23 @@ public class ConstraintRegistrationAddressIndicator1Rule {
 
 	/**
 	 * If PrimaryOwner is present, then at least one occurrence of
-	 * Party/Organisation
-	 * /ModifiedPostalAddress/PostalAddress/RegistrationAddressIndicator, or of <br>
-	 * Party/IndividualPerson/ModifiedPostalAddress/PostalAddress/
-	 * RegistrationAddressIndicator must be "true" or "1" (Yes).<br>
-	 */
-	public static void checkAccountParties3Choice(AccountParties3Choice obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If PrimaryOwner is present, then at least one occurrence of
 	 * PrimaryOwner/Party
 	 * /Organisation/PostalAddress/RegistrationAddressIndicator must be "true"
 	 * or "1" (Yes), or, at least one occurrence of
 	 * PrimaryOwner/Party/IndividualPerson
 	 * /PostalAddress/RegistrationAddressIndicator must be "true" or "1" (Yes).<br>
 	 */
-	public static void checkAccountParties4Choice(AccountParties4Choice obj) throws Exception {
+	public static void checkAccountParties5Choice(AccountParties5Choice obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PrimaryOwner is present, then at least one occurrence of
+	 * PrimaryOwner/Organisation/Address/RegistrationAddressIndicator or of
+	 * PrimaryOwner/IndividualPerson/Address/RegistrationAddressIndicator must
+	 * be "true" or "1" (Yes).
+	 */
+	public static void checkAccountParties6(AccountParties6 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -550,6 +530,28 @@ public class ConstraintRegistrationAddressIndicator1Rule {
 
 	/**
 	 * If PrimaryOwner is present, then at least one occurrence of
+	 * PrimaryOwner/Organisation/Address/RegistrationAddressIndicator or of
+	 * PrimaryOwner/IndividualPerson/Address/RegistrationAddressIndicator must
+	 * be "true" or "1" (Yes).
+	 */
+	public static void checkAccountParties2(AccountParties2 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PrimaryOwner is present, then at least one occurrence of
+	 * PrimaryOwner/Organisation
+	 * /ModifiedAddress/Address/RegistrationAddressIndicator or of
+	 * PrimaryOwner/IndividualPerson
+	 * /ModifiedAddress/Address/RegistrationAddressIndicator must be "true" or
+	 * "1" (Yes).
+	 */
+	public static void checkAccountParties4(AccountParties4 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PrimaryOwner is present, then at least one occurrence of
 	 * Party/Organisation
 	 * /ModifiedPostalAddress/PostalAddress/RegistrationAddressIndicator, or of <br>
 	 * Party/IndividualPerson/ModifiedPostalAddress/PostalAddress/
@@ -561,13 +563,13 @@ public class ConstraintRegistrationAddressIndicator1Rule {
 
 	/**
 	 * If PrimaryOwner is present, then at least one occurrence of
-	 * PrimaryOwner/Party
-	 * /Organisation/PostalAddress/RegistrationAddressIndicator must be "true"
-	 * or "1" (Yes), or, at least one occurrence of
-	 * PrimaryOwner/Party/IndividualPerson
-	 * /PostalAddress/RegistrationAddressIndicator must be "true" or "1" (Yes).<br>
+	 * PrimaryOwner/Organisation
+	 * /ModifiedAddress/Address/RegistrationAddressIndicator or of
+	 * PrimaryOwner/IndividualPerson
+	 * /ModifiedAddress/Address/RegistrationAddressIndicator must be "true" or
+	 * "1" (Yes).
 	 */
-	public static void checkAccountParties5Choice(AccountParties5Choice obj) throws Exception {
+	public static void checkAccountParties3(AccountParties3 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

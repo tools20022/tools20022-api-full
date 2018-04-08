@@ -63,22 +63,22 @@ public class ConstraintResolution1Guideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintResolution1Guideline#forMeetingNotificationV04
-	 * ConstraintResolution1Guideline.forMeetingNotificationV04}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintResolution1Guideline#for_seev_MeetingNotificationV04
+	 * ConstraintResolution1Guideline.for_seev_MeetingNotificationV04}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<MeetingNotificationV05> forMeetingNotificationV05 = new MMConstraint<MeetingNotificationV05>() {
+	public static final MMConstraint<MeetingNotificationV05> for_seev_MeetingNotificationV05 = new MMConstraint<MeetingNotificationV05>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Resolution1Guideline";
 			definition = "When an agenda item needs to be linked to a resolution, it is recommended to have the resolution information following directly the agenda item information to which the resolution is linked as illustrated in the following example: \n\nResolution/IssuerLabel = Agenda item 1\nDescription = <Item description.>\nForInformationOnly = True\nType =.\n\nDirectly followed by\n\nResolution/IssuerLabel = Resolution 1\nDescription = <Resolution description.>\nForInformationOnly = False\nType =.\n.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintResolution1Guideline.forMeetingNotificationV04;
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintResolution1Guideline.for_seev_MeetingNotificationV04;
 			owner_lazy = () -> MeetingNotificationV05.mmObject();
 		}
 
 		@Override
 		public void executeValidator(MeetingNotificationV05 obj) throws Exception {
-			checkMeetingNotificationV05(obj);
+			check_seev_MeetingNotificationV05(obj);
 		}
 	};
 	/**
@@ -104,24 +104,24 @@ public class ConstraintResolution1Guideline {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintResolution1Guideline#forMeetingNotificationV05
-	 * ConstraintResolution1Guideline.forMeetingNotificationV05}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintResolution1Guideline#for_seev_MeetingNotificationV05
+	 * ConstraintResolution1Guideline.for_seev_MeetingNotificationV05}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<MeetingNotificationV04> forMeetingNotificationV04 = new MMConstraint<MeetingNotificationV04>() {
+	public static final MMConstraint<MeetingNotificationV04> for_seev_MeetingNotificationV04 = new MMConstraint<MeetingNotificationV04>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Resolution1Guideline";
 			definition = "When an agenda item needs to be linked to a resolution, it is recommended to have the resolution information following directly the agenda item information to which the resolution is linked as illustrated in the following example: \n\nResolution/IssuerLabel = Agenda item 1\nDescription = <Item description.>\nForInformationOnly = True\nType =.\n\nDirectly followed by\n\nResolution/IssuerLabel = Resolution 1\nDescription = <Resolution description.>\nForInformationOnly = False\nType =.\n.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintResolution1Guideline.forMeetingNotificationV05);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintResolution1Guideline.for_seev_MeetingNotificationV05);
 			owner_lazy = () -> MeetingNotificationV04.mmObject();
 		}
 
 		@Override
 		public void executeValidator(MeetingNotificationV04 obj) throws Exception {
-			checkMeetingNotificationV04(obj);
+			check_seev_MeetingNotificationV04(obj);
 		}
 	};
 	/**
@@ -145,7 +145,7 @@ public class ConstraintResolution1Guideline {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<MeetingNotificationV03> forMeetingNotificationV03 = new MMConstraint<MeetingNotificationV03>() {
+	public static final MMConstraint<MeetingNotificationV03> for_seev_MeetingNotificationV03 = new MMConstraint<MeetingNotificationV03>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Resolution1Guideline";
@@ -155,7 +155,7 @@ public class ConstraintResolution1Guideline {
 
 		@Override
 		public void executeValidator(MeetingNotificationV03 obj) throws Exception {
-			checkMeetingNotificationV03(obj);
+			check_seev_MeetingNotificationV03(obj);
 		}
 	};
 
@@ -173,7 +173,7 @@ public class ConstraintResolution1Guideline {
 	 * Resolution/IssuerLabel = Resolution 1 Description = &lt;Resolution
 	 * description.&gt; ForInformationOnly = False Type =. .
 	 */
-	public static void checkMeetingNotificationV05(MeetingNotificationV05 obj) throws Exception {
+	public static void check_seev_MeetingNotificationV05(MeetingNotificationV05 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -191,7 +191,7 @@ public class ConstraintResolution1Guideline {
 	 * Resolution/IssuerLabel = Resolution 1 Description = &lt;Resolution
 	 * description.&gt; ForInformationOnly = False Type =. .
 	 */
-	public static void checkMeetingNotificationV04(MeetingNotificationV04 obj) throws Exception {
+	public static void check_seev_MeetingNotificationV04(MeetingNotificationV04 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -209,7 +209,7 @@ public class ConstraintResolution1Guideline {
 	 * Resolution/IssuerLabel = Resolution 1 Description = &lt;Resolution
 	 * description.&gt; ForInformationOnly = False Type =. .
 	 */
-	public static void checkMeetingNotificationV03(MeetingNotificationV03 obj) throws Exception {
+	public static void check_seev_MeetingNotificationV03(MeetingNotificationV03 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

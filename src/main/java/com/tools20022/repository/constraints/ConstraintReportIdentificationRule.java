@@ -24,6 +24,8 @@ import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 
 /**
+ * If Long number (Exact5NumericText) is used, then the report must be a delta
+ * reports (UpdateType: DELT).<br>
  * If the report has multiple pages, then the ReportIdentification must remain
  * the same through all the pages. It is a unique number to the report.<br>
  * Two reports of the same type sent one after the other to the same receiver in
@@ -33,6 +35,40 @@ import java.util.Arrays;
  */
 public class ConstraintReportIdentificationRule {
 
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.MovementReport1
+	 * MovementReport1}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ReportIdentificationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If Long number (Exact5NumericText) is used, then the report must be a delta reports (UpdateType: DELT).\r\nIf the report has multiple pages, then the ReportIdentification must remain the same through all the pages. It is a unique number to the report.\r\nTwo reports of the same type sent one after the other to the same receiver in relation to the same safekeeping account must have different report identifications. For example, a daily report sent on day 1 would have ReportIdentification 001, on day 2, 002, etc."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<MovementReport1> forMovementReport1 = new MMConstraint<MovementReport1>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ReportIdentificationRule";
+			definition = "If Long number (Exact5NumericText) is used, then the report must be a delta reports (UpdateType: DELT).\r\nIf the report has multiple pages, then the ReportIdentification must remain the same through all the pages. It is a unique number to the report.\r\nTwo reports of the same type sent one after the other to the same receiver in relation to the same safekeeping account must have different report identifications. For example, a daily report sent on day 1 would have ReportIdentification 001, on day 2, 002, etc.";
+			owner_lazy = () -> MovementReport1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MovementReport1 obj) throws Exception {
+			checkMovementReport1(obj);
+		}
+	};
 	/**
 	 * 
 	 <p>
@@ -82,8 +118,8 @@ public class ConstraintReportIdentificationRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.MovementReport1
-	 * MovementReport1}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesReport2
+	 * SecuritiesReport2}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -95,62 +131,25 @@ public class ConstraintReportIdentificationRule {
 	 * definition} =
 	 * "If Long number (Exact5NumericText) is used, then the report must be a delta reports (UpdateType: DELT).\r\nIf the report has multiple pages, then the ReportIdentification must remain the same through all the pages. It is a unique number to the report.\r\nTwo reports of the same type sent one after the other to the same receiver in relation to the same safekeeping account must have different report identifications. For example, a daily report sent on day 1 would have ReportIdentification 001, on day 2, 002, etc."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintReportIdentificationRule#forSecuritiesReport1
+	 * ConstraintReportIdentificationRule.forSecuritiesReport1}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<MovementReport1> forMovementReport1 = new MMConstraint<MovementReport1>() {
+	public static final MMConstraint<SecuritiesReport2> forSecuritiesReport2 = new MMConstraint<SecuritiesReport2>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportIdentificationRule";
 			definition = "If Long number (Exact5NumericText) is used, then the report must be a delta reports (UpdateType: DELT).\r\nIf the report has multiple pages, then the ReportIdentification must remain the same through all the pages. It is a unique number to the report.\r\nTwo reports of the same type sent one after the other to the same receiver in relation to the same safekeeping account must have different report identifications. For example, a daily report sent on day 1 would have ReportIdentification 001, on day 2, 002, etc.";
-			owner_lazy = () -> MovementReport1.mmObject();
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReportIdentificationRule.forSecuritiesReport1;
+			owner_lazy = () -> SecuritiesReport2.mmObject();
 		}
 
 		@Override
-		public void executeValidator(MovementReport1 obj) throws Exception {
-			checkMovementReport1(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesReport1
-	 * SecuritiesReport1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ReportIdentificationRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If Long number (Exact5NumericText) is used, then the report must be a delta reports (UpdateType: DELT).\r\nIf the report has multiple pages, then the ReportIdentification must remain the same through all the pages. It is a unique number to the report.\r\nTwo reports of the same type sent one after the other to the same receiver in relation to the same safekeeping account must have different report identifications. For example, a daily report sent on day 1 would have ReportIdentification 001, on day 2, 002, etc."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintReportIdentificationRule#forSecuritiesReport2
-	 * ConstraintReportIdentificationRule.forSecuritiesReport2}</li>
-	 * </ul>
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesReport1> forSecuritiesReport1 = new MMConstraint<SecuritiesReport1>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ReportIdentificationRule";
-			definition = "If Long number (Exact5NumericText) is used, then the report must be a delta reports (UpdateType: DELT).\r\nIf the report has multiple pages, then the ReportIdentification must remain the same through all the pages. It is a unique number to the report.\r\nTwo reports of the same type sent one after the other to the same receiver in relation to the same safekeeping account must have different report identifications. For example, a daily report sent on day 1 would have ReportIdentification 001, on day 2, 002, etc.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReportIdentificationRule.forSecuritiesReport2);
-			owner_lazy = () -> SecuritiesReport1.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SecuritiesReport1 obj) throws Exception {
-			checkSecuritiesReport1(obj);
+		public void executeValidator(SecuritiesReport2 obj) throws Exception {
+			checkSecuritiesReport2(obj);
 		}
 	};
 	/**
@@ -199,8 +198,8 @@ public class ConstraintReportIdentificationRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesReport2
-	 * SecuritiesReport2}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesReport1
+	 * SecuritiesReport1}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -212,27 +211,45 @@ public class ConstraintReportIdentificationRule {
 	 * definition} =
 	 * "If Long number (Exact5NumericText) is used, then the report must be a delta reports (UpdateType: DELT).\r\nIf the report has multiple pages, then the ReportIdentification must remain the same through all the pages. It is a unique number to the report.\r\nTwo reports of the same type sent one after the other to the same receiver in relation to the same safekeeping account must have different report identifications. For example, a daily report sent on day 1 would have ReportIdentification 001, on day 2, 002, etc."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintReportIdentificationRule#forSecuritiesReport1
-	 * ConstraintReportIdentificationRule.forSecuritiesReport1}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintReportIdentificationRule#forSecuritiesReport2
+	 * ConstraintReportIdentificationRule.forSecuritiesReport2}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<SecuritiesReport2> forSecuritiesReport2 = new MMConstraint<SecuritiesReport2>() {
+	public static final MMConstraint<SecuritiesReport1> forSecuritiesReport1 = new MMConstraint<SecuritiesReport1>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportIdentificationRule";
 			definition = "If Long number (Exact5NumericText) is used, then the report must be a delta reports (UpdateType: DELT).\r\nIf the report has multiple pages, then the ReportIdentification must remain the same through all the pages. It is a unique number to the report.\r\nTwo reports of the same type sent one after the other to the same receiver in relation to the same safekeeping account must have different report identifications. For example, a daily report sent on day 1 would have ReportIdentification 001, on day 2, 002, etc.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReportIdentificationRule.forSecuritiesReport1;
-			owner_lazy = () -> SecuritiesReport2.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReportIdentificationRule.forSecuritiesReport2);
+			owner_lazy = () -> SecuritiesReport1.mmObject();
 		}
 
 		@Override
-		public void executeValidator(SecuritiesReport2 obj) throws Exception {
-			checkSecuritiesReport2(obj);
+		public void executeValidator(SecuritiesReport1 obj) throws Exception {
+			checkSecuritiesReport1(obj);
 		}
 	};
+
+	/**
+	 * If Long number (Exact5NumericText) is used, then the report must be a
+	 * delta reports (UpdateType: DELT).<br>
+	 * If the report has multiple pages, then the ReportIdentification must
+	 * remain the same through all the pages. It is a unique number to the
+	 * report.<br>
+	 * Two reports of the same type sent one after the other to the same
+	 * receiver in relation to the same safekeeping account must have different
+	 * report identifications. For example, a daily report sent on day 1 would
+	 * have ReportIdentification 001, on day 2, 002, etc.
+	 */
+	public static void checkMovementReport1(MovementReport1 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
 
 	/**
 	 * If the report has multiple pages, then the ReportIdentification must
@@ -258,22 +275,7 @@ public class ConstraintReportIdentificationRule {
 	 * report identifications. For example, a daily report sent on day 1 would
 	 * have ReportIdentification 001, on day 2, 002, etc.
 	 */
-	public static void checkMovementReport1(MovementReport1 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If Long number (Exact5NumericText) is used, then the report must be a
-	 * delta reports (UpdateType: DELT).<br>
-	 * If the report has multiple pages, then the ReportIdentification must
-	 * remain the same through all the pages. It is a unique number to the
-	 * report.<br>
-	 * Two reports of the same type sent one after the other to the same
-	 * receiver in relation to the same safekeeping account must have different
-	 * report identifications. For example, a daily report sent on day 1 would
-	 * have ReportIdentification 001, on day 2, 002, etc.
-	 */
-	public static void checkSecuritiesReport1(SecuritiesReport1 obj) throws Exception {
+	public static void checkSecuritiesReport2(SecuritiesReport2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -301,7 +303,7 @@ public class ConstraintReportIdentificationRule {
 	 * report identifications. For example, a daily report sent on day 1 would
 	 * have ReportIdentification 001, on day 2, 002, etc.
 	 */
-	public static void checkSecuritiesReport2(SecuritiesReport2 obj) throws Exception {
+	public static void checkSecuritiesReport1(SecuritiesReport1 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

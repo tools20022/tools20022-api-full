@@ -152,9 +152,9 @@ public class TransferInCancellationRequestV03 {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Operation1";
-			messageDefinition_lazy = () -> com.tools20022.repository.area.sese.TransferInCancellationRequestV03.mmObject();
 			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInCancellationRequestV03.mmCancellationByReference,
 					com.tools20022.repository.area.sese.TransferInCancellationRequestV03.mmCancellationByTransferInDetails);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.sese.TransferInCancellationRequestV03.mmObject();
 		}
 	};
 	@XmlElement(name = "MsgId", required = true)

@@ -102,8 +102,9 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationRule#forRedemptionBulkOrderConfirmationV02
- * ConstraintAccountIdentificationRule.forRedemptionBulkOrderConfirmationV02}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationRule#for_setr_RedemptionBulkOrderConfirmationV02
+ * ConstraintAccountIdentificationRule.
+ * for_setr_RedemptionBulkOrderConfirmationV02}</li>
  * </ul>
  * </li>
  * <li>
@@ -507,7 +508,7 @@ public class RedemptionBulkOrderConfirmationV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forRedemptionBulkOrderConfirmationV02);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.for_setr_RedemptionBulkOrderConfirmationV02);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RedemptionBulkOrderConfirmationV02";
 				definition = "Scope\r\nThe RedemptionBulkOrderConfirmation message is sent by an executing party, eg, a transfer agent, to an instructing party, eg, an investment manager or its authorised representative. There may be one or more intermediary parties between the executing party and the instructing party. The intermediary party is, for example, an intermediary or a concentrator.\r\nThis message is used to confirm the details of the execution of a RedemptionBulkOrder message.\r\nUsage\r\nThe RedemptionBulkOrderConfirmation message is sent, after the price has been determined, to confirm the execution of all individual orders.\r\nThere is usually one bulk confirmation message for one bulk order message.\r\nA RedemptionBulkOrder must in all cases be responded to by a RedemptionBulkOrderConfirmation and in no circumstances by a RedemptionMultipleOrderConfirmation.\r\nIf the executing party needs to confirm a RedemptionMultipleOrder message, then the RedemptionMultipleOrderConfirmation message must be used.";

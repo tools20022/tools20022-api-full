@@ -81,9 +81,9 @@ public class AuthoritiesPreviousVersion {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Authorities - Previous version - master";
 				definition = "Messages that support the provision of miscellaneous financial information to authorities, such as Regulators, Police, Customs, Tax authorities, Enforcement authorities, Ministries, etc.";
+				code = "auth";
 				messageDefinition_lazy = () -> Arrays.asList(MoneyMarketForeignExchangeSwapsStatisticalReportV01.mmObject(), MoneyMarketOvernightIndexSwapsStatisticalReportV01.mmObject(),
 						MoneyMarketUnsecuredMarketStatisticalReportV01.mmObject(), MoneyMarketSecuredMarketStatisticalReportV01.mmObject(), FinancialInstrumentReportingTransactionReportV01.mmObject());
-				code = "auth";
 			}
 		});
 		return mmObject_lazy.get();

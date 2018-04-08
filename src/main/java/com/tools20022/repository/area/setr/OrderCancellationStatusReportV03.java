@@ -119,12 +119,12 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintMessageNameAndReferenceGuideline#forOrderCancellationStatusReportV03
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMessageNameAndReferenceGuideline#for_setr_OrderCancellationStatusReportV03
  * ConstraintMessageNameAndReferenceGuideline.
- * forOrderCancellationStatusReportV03}</li>
+ * for_setr_OrderCancellationStatusReportV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintOtherReferenceGuideline#forOrderCancellationStatusReportV03
- * ConstraintOtherReferenceGuideline.forOrderCancellationStatusReportV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOtherReferenceGuideline#for_setr_OrderCancellationStatusReportV03
+ * ConstraintOtherReferenceGuideline.for_setr_OrderCancellationStatusReportV03}</li>
  * </ul>
  * </li>
  * <li>
@@ -196,9 +196,9 @@ public class OrderCancellationStatusReportV03 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReferenceOrOtherReferenceRule";
 			definition = "Occurrences of either RelatedReference or OtherReference may be present, but not occurrences of both.";
-			messageDefinition_lazy = () -> com.tools20022.repository.area.setr.OrderCancellationStatusReportV03.mmObject();
 			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderCancellationStatusReportV03.mmRelatedReference,
 					com.tools20022.repository.area.setr.OrderCancellationStatusReportV03.mmOtherReference);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.setr.OrderCancellationStatusReportV03.mmObject();
 		}
 	};
 	/**
@@ -241,9 +241,9 @@ public class OrderCancellationStatusReportV03 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationOrIndividualCancellationStatusReportRule";
 			definition = "Either CancellationStatusReport or at least one occurrence of IndividualCancellationStatusReport must be present, but not both.";
-			messageDefinition_lazy = () -> com.tools20022.repository.area.setr.OrderCancellationStatusReportV03.mmObject();
 			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderCancellationStatusReportV03.mmCancellationStatusReport,
 					com.tools20022.repository.area.setr.OrderCancellationStatusReportV03.mmIndividualCancellationStatusReport);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.setr.OrderCancellationStatusReportV03.mmObject();
 		}
 	};
 	@XmlElement(name = "MsgId", required = true)
@@ -552,8 +552,8 @@ public class OrderCancellationStatusReportV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMessageNameAndReferenceGuideline.forOrderCancellationStatusReportV03,
-						com.tools20022.repository.constraints.ConstraintOtherReferenceGuideline.forOrderCancellationStatusReportV03);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMessageNameAndReferenceGuideline.for_setr_OrderCancellationStatusReportV03,
+						com.tools20022.repository.constraints.ConstraintOtherReferenceGuideline.for_setr_OrderCancellationStatusReportV03);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OrderCancellationStatusReportV03";
 				definition = "Scope\r\nAn executing party, for example, a transfer agent, sends the OrderCancellationStatusReport to the instructing party, for example, an investment manager or its authorised representative, to report the status of an order cancellation request that was previously received.\r\nUsage\r\nThe OrderCancellationStatusReport message is used to provide the status of:\r\n- one or more individual order cancellation requests by using IndividualCancellationStatusReport, or,\r\n- an order cancellation request message by using CancellationStatusReport.\r\nIf the OrderCancellationStatusReport message is used to report the status of an individual order cancellation request, then the repetitive IndividualCancellationStatusReport sequence is used and the order reference of the individual order is quoted in OrderReference. The message identification of the message in which the individual order was conveyed may also be quoted in RelatedReference.\r\nIf the OrderCancellationStatusReport message is used to report the status of an entire order cancellation request message, for example, the SubscriptionBulkOrderCancellationRequest, or a SubscriptionOrderCancellationRequest containing several orders, then the CancellationStatusReport sequence. is used and the message identification of the order cancellation request message is quoted in RelatedReference. All the order cancellation requests within the message must have the same status.\r\nOne of the following statuses can be reported:\r\n- the order cancellation is pending, or,\r\n- the order cancellation request is rejected, or,\r\n- the order is cancelled.\r\nWhen the cancellation is rejected, the reason for the rejection must be specified.";

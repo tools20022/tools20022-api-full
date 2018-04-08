@@ -36,6 +36,45 @@ public class ConstraintLinkedQuantityRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.Linkages37 Linkages37}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "LinkedQuantityRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If linked quantity for partial pair-off and turned quantity for partial turns is used, then its usage must be pre-agreed between the message account owner and account servicer."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintLinkedQuantityRule#forLinkages17
+	 * ConstraintLinkedQuantityRule.forLinkages17}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<Linkages37> forLinkages37 = new MMConstraint<Linkages37>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "LinkedQuantityRule";
+			definition = "If linked quantity for partial pair-off and turned quantity for partial turns is used, then its usage must be pre-agreed between the message account owner and account servicer.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintLinkedQuantityRule.forLinkages17;
+			owner_lazy = () -> Linkages37.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Linkages37 obj) throws Exception {
+			checkLinkages37(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Linkages1 Linkages1}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -70,285 +109,6 @@ public class ConstraintLinkedQuantityRule {
 		@Override
 		public void executeValidator(Linkages1 obj) throws Exception {
 			checkLinkages1(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.Linkages4 Linkages4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "LinkedQuantityRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If linked quantity for partial pair-off and turned quantity for partial turns is used, then its usage must be pre-agreed between the message account owner and account servicer."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<Linkages4> forLinkages4 = new MMConstraint<Linkages4>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "LinkedQuantityRule";
-			definition = "If linked quantity for partial pair-off and turned quantity for partial turns is used, then its usage must be pre-agreed between the message account owner and account servicer.";
-			owner_lazy = () -> Linkages4.mmObject();
-		}
-
-		@Override
-		public void executeValidator(Linkages4 obj) throws Exception {
-			checkLinkages4(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.Linkages9 Linkages9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "LinkedQuantityRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If linked quantity for partial pair-off and turned quantity for partial turns is used, then its usage must be pre-agreed between the message account owner and account servicer."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<Linkages9> forLinkages9 = new MMConstraint<Linkages9>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "LinkedQuantityRule";
-			definition = "If linked quantity for partial pair-off and turned quantity for partial turns is used, then its usage must be pre-agreed between the message account owner and account servicer.";
-			owner_lazy = () -> Linkages9.mmObject();
-		}
-
-		@Override
-		public void executeValidator(Linkages9 obj) throws Exception {
-			checkLinkages9(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.Linkages14 Linkages14}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "LinkedQuantityRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If linked quantity for partial pair-off and turned quantity for partial turns is used, then its usage must be pre-agreed between the message account owner and account servicer."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<Linkages14> forLinkages14 = new MMConstraint<Linkages14>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "LinkedQuantityRule";
-			definition = "If linked quantity for partial pair-off and turned quantity for partial turns is used, then its usage must be pre-agreed between the message account owner and account servicer.";
-			owner_lazy = () -> Linkages14.mmObject();
-		}
-
-		@Override
-		public void executeValidator(Linkages14 obj) throws Exception {
-			checkLinkages14(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.Linkages17 Linkages17}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "LinkedQuantityRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If linked quantity for partial pair-off and turned quantity for partial turns is used, then its usage must be pre-agreed between the message account owner and account servicer."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintLinkedQuantityRule#forLinkages37
-	 * ConstraintLinkedQuantityRule.forLinkages37}</li>
-	 * </ul>
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<Linkages17> forLinkages17 = new MMConstraint<Linkages17>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "LinkedQuantityRule";
-			definition = "If linked quantity for partial pair-off and turned quantity for partial turns is used, then its usage must be pre-agreed between the message account owner and account servicer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintLinkedQuantityRule.forLinkages37);
-			owner_lazy = () -> Linkages17.mmObject();
-		}
-
-		@Override
-		public void executeValidator(Linkages17 obj) throws Exception {
-			checkLinkages17(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.Linkages24 Linkages24}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "LinkedQuantityRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If linked quantity for partial pair-off and turned quantity for partial turns is used, then its usage must be pre-agreed between the message account owner and account servicer."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<Linkages24> forLinkages24 = new MMConstraint<Linkages24>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "LinkedQuantityRule";
-			definition = "If linked quantity for partial pair-off and turned quantity for partial turns is used, then its usage must be pre-agreed between the message account owner and account servicer.";
-			owner_lazy = () -> Linkages24.mmObject();
-		}
-
-		@Override
-		public void executeValidator(Linkages24 obj) throws Exception {
-			checkLinkages24(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.Linkages7 Linkages7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "LinkedQuantityRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If linked quantity for partial pair-off and turned quantity for partial turns is used, then its usage must be pre-agreed between the message account owner and account servicer."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<Linkages7> forLinkages7 = new MMConstraint<Linkages7>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "LinkedQuantityRule";
-			definition = "If linked quantity for partial pair-off and turned quantity for partial turns is used, then its usage must be pre-agreed between the message account owner and account servicer.";
-			owner_lazy = () -> Linkages7.mmObject();
-		}
-
-		@Override
-		public void executeValidator(Linkages7 obj) throws Exception {
-			checkLinkages7(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.Linkages12 Linkages12}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "LinkedQuantityRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If linked quantity for partial pair-off and turned quantity for partial turns is used, then its usage must be pre-agreed between the message account owner and account servicer."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<Linkages12> forLinkages12 = new MMConstraint<Linkages12>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "LinkedQuantityRule";
-			definition = "If linked quantity for partial pair-off and turned quantity for partial turns is used, then its usage must be pre-agreed between the message account owner and account servicer.";
-			owner_lazy = () -> Linkages12.mmObject();
-		}
-
-		@Override
-		public void executeValidator(Linkages12 obj) throws Exception {
-			checkLinkages12(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.Linkages37 Linkages37}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "LinkedQuantityRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If linked quantity for partial pair-off and turned quantity for partial turns is used, then its usage must be pre-agreed between the message account owner and account servicer."
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintLinkedQuantityRule#forLinkages17
-	 * ConstraintLinkedQuantityRule.forLinkages17}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<Linkages37> forLinkages37 = new MMConstraint<Linkages37>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "LinkedQuantityRule";
-			definition = "If linked quantity for partial pair-off and turned quantity for partial turns is used, then its usage must be pre-agreed between the message account owner and account servicer.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintLinkedQuantityRule.forLinkages17;
-			owner_lazy = () -> Linkages37.mmObject();
-		}
-
-		@Override
-		public void executeValidator(Linkages37 obj) throws Exception {
-			checkLinkages37(obj);
 		}
 	};
 	/**
@@ -429,6 +189,204 @@ public class ConstraintLinkedQuantityRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.Linkages4 Linkages4}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "LinkedQuantityRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If linked quantity for partial pair-off and turned quantity for partial turns is used, then its usage must be pre-agreed between the message account owner and account servicer."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<Linkages4> forLinkages4 = new MMConstraint<Linkages4>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "LinkedQuantityRule";
+			definition = "If linked quantity for partial pair-off and turned quantity for partial turns is used, then its usage must be pre-agreed between the message account owner and account servicer.";
+			owner_lazy = () -> Linkages4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Linkages4 obj) throws Exception {
+			checkLinkages4(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.Linkages12 Linkages12}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "LinkedQuantityRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If linked quantity for partial pair-off and turned quantity for partial turns is used, then its usage must be pre-agreed between the message account owner and account servicer."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<Linkages12> forLinkages12 = new MMConstraint<Linkages12>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "LinkedQuantityRule";
+			definition = "If linked quantity for partial pair-off and turned quantity for partial turns is used, then its usage must be pre-agreed between the message account owner and account servicer.";
+			owner_lazy = () -> Linkages12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Linkages12 obj) throws Exception {
+			checkLinkages12(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.Linkages7 Linkages7}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "LinkedQuantityRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If linked quantity for partial pair-off and turned quantity for partial turns is used, then its usage must be pre-agreed between the message account owner and account servicer."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<Linkages7> forLinkages7 = new MMConstraint<Linkages7>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "LinkedQuantityRule";
+			definition = "If linked quantity for partial pair-off and turned quantity for partial turns is used, then its usage must be pre-agreed between the message account owner and account servicer.";
+			owner_lazy = () -> Linkages7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Linkages7 obj) throws Exception {
+			checkLinkages7(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.Linkages9 Linkages9}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "LinkedQuantityRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If linked quantity for partial pair-off and turned quantity for partial turns is used, then its usage must be pre-agreed between the message account owner and account servicer."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<Linkages9> forLinkages9 = new MMConstraint<Linkages9>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "LinkedQuantityRule";
+			definition = "If linked quantity for partial pair-off and turned quantity for partial turns is used, then its usage must be pre-agreed between the message account owner and account servicer.";
+			owner_lazy = () -> Linkages9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Linkages9 obj) throws Exception {
+			checkLinkages9(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.Linkages24 Linkages24}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "LinkedQuantityRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If linked quantity for partial pair-off and turned quantity for partial turns is used, then its usage must be pre-agreed between the message account owner and account servicer."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<Linkages24> forLinkages24 = new MMConstraint<Linkages24>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "LinkedQuantityRule";
+			definition = "If linked quantity for partial pair-off and turned quantity for partial turns is used, then its usage must be pre-agreed between the message account owner and account servicer.";
+			owner_lazy = () -> Linkages24.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Linkages24 obj) throws Exception {
+			checkLinkages24(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.Linkages14 Linkages14}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "LinkedQuantityRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If linked quantity for partial pair-off and turned quantity for partial turns is used, then its usage must be pre-agreed between the message account owner and account servicer."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<Linkages14> forLinkages14 = new MMConstraint<Linkages14>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "LinkedQuantityRule";
+			definition = "If linked quantity for partial pair-off and turned quantity for partial turns is used, then its usage must be pre-agreed between the message account owner and account servicer.";
+			owner_lazy = () -> Linkages14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Linkages14 obj) throws Exception {
+			checkLinkages14(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Linkages48 Linkages48}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -456,78 +414,48 @@ public class ConstraintLinkedQuantityRule {
 			checkLinkages48(obj);
 		}
 	};
-
 	/**
-	 * If linked quantity for partial pair-off and turned quantity for partial
-	 * turns is used, then its usage must be pre-agreed between the message
-	 * account owner and account servicer.
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.Linkages17 Linkages17}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "LinkedQuantityRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If linked quantity for partial pair-off and turned quantity for partial turns is used, then its usage must be pre-agreed between the message account owner and account servicer."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintLinkedQuantityRule#forLinkages37
+	 * ConstraintLinkedQuantityRule.forLinkages37}</li>
+	 * </ul>
+	 * </li>
+	 * </ul>
 	 */
-	public static void checkLinkages1(Linkages1 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
+	public static final MMConstraint<Linkages17> forLinkages17 = new MMConstraint<Linkages17>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "LinkedQuantityRule";
+			definition = "If linked quantity for partial pair-off and turned quantity for partial turns is used, then its usage must be pre-agreed between the message account owner and account servicer.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintLinkedQuantityRule.forLinkages37);
+			owner_lazy = () -> Linkages17.mmObject();
+		}
 
-	/**
-	 * If linked quantity for partial pair-off and turned quantity for partial
-	 * turns is used, then its usage must be pre-agreed between the message
-	 * account owner and account servicer.
-	 */
-	public static void checkLinkages4(Linkages4 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If linked quantity for partial pair-off and turned quantity for partial
-	 * turns is used, then its usage must be pre-agreed between the message
-	 * account owner and account servicer.
-	 */
-	public static void checkLinkages9(Linkages9 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If linked quantity for partial pair-off and turned quantity for partial
-	 * turns is used, then its usage must be pre-agreed between the message
-	 * account owner and account servicer.
-	 */
-	public static void checkLinkages14(Linkages14 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If linked quantity for partial pair-off and turned quantity for partial
-	 * turns is used, then its usage must be pre-agreed between the message
-	 * account owner and account servicer.
-	 */
-	public static void checkLinkages17(Linkages17 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If linked quantity for partial pair-off and turned quantity for partial
-	 * turns is used, then its usage must be pre-agreed between the message
-	 * account owner and account servicer.
-	 */
-	public static void checkLinkages24(Linkages24 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If linked quantity for partial pair-off and turned quantity for partial
-	 * turns is used, then its usage must be pre-agreed between the message
-	 * account owner and account servicer.
-	 */
-	public static void checkLinkages7(Linkages7 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If linked quantity for partial pair-off and turned quantity for partial
-	 * turns is used, then its usage must be pre-agreed between the message
-	 * account owner and account servicer.
-	 */
-	public static void checkLinkages12(Linkages12 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
+		@Override
+		public void executeValidator(Linkages17 obj) throws Exception {
+			checkLinkages17(obj);
+		}
+	};
 
 	/**
 	 * If linked quantity for partial pair-off and turned quantity for partial
@@ -535,6 +463,15 @@ public class ConstraintLinkedQuantityRule {
 	 * account owner and account servicer.
 	 */
 	public static void checkLinkages37(Linkages37 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If linked quantity for partial pair-off and turned quantity for partial
+	 * turns is used, then its usage must be pre-agreed between the message
+	 * account owner and account servicer.
+	 */
+	public static void checkLinkages1(Linkages1 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -561,7 +498,70 @@ public class ConstraintLinkedQuantityRule {
 	 * turns is used, then its usage must be pre-agreed between the message
 	 * account owner and account servicer.
 	 */
+	public static void checkLinkages4(Linkages4 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If linked quantity for partial pair-off and turned quantity for partial
+	 * turns is used, then its usage must be pre-agreed between the message
+	 * account owner and account servicer.
+	 */
+	public static void checkLinkages12(Linkages12 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If linked quantity for partial pair-off and turned quantity for partial
+	 * turns is used, then its usage must be pre-agreed between the message
+	 * account owner and account servicer.
+	 */
+	public static void checkLinkages7(Linkages7 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If linked quantity for partial pair-off and turned quantity for partial
+	 * turns is used, then its usage must be pre-agreed between the message
+	 * account owner and account servicer.
+	 */
+	public static void checkLinkages9(Linkages9 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If linked quantity for partial pair-off and turned quantity for partial
+	 * turns is used, then its usage must be pre-agreed between the message
+	 * account owner and account servicer.
+	 */
+	public static void checkLinkages24(Linkages24 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If linked quantity for partial pair-off and turned quantity for partial
+	 * turns is used, then its usage must be pre-agreed between the message
+	 * account owner and account servicer.
+	 */
+	public static void checkLinkages14(Linkages14 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If linked quantity for partial pair-off and turned quantity for partial
+	 * turns is used, then its usage must be pre-agreed between the message
+	 * account owner and account servicer.
+	 */
 	public static void checkLinkages48(Linkages48 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If linked quantity for partial pair-off and turned quantity for partial
+	 * turns is used, then its usage must be pre-agreed between the message
+	 * account owner and account servicer.
+	 */
+	public static void checkLinkages17(Linkages17 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

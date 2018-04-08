@@ -121,12 +121,12 @@ public class AcceptortoAcquirerCardTransactionLatestVersion {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Acceptor to Acquirer Card Transaction - Latest version - master";
 				definition = "Messages that support any card payment related transactions and services between a card acceptor and a card transaction acquirer. It includes the authorisation, cancellation and capture of card transactions.";
+				code = "caaa";
 				messageDefinition_lazy = () -> Arrays.asList(AcceptorRejectionV05.mmObject(), AcceptorCompletionAdviceResponseV07.mmObject(), AcceptorCurrencyConversionRequestV05.mmObject(), AcceptorDiagnosticRequestV07.mmObject(),
 						AcceptorCancellationResponseV07.mmObject(), AcceptorAuthorisationResponseV07.mmObject(), AcceptorCurrencyConversionAdviceResponseV02.mmObject(), AcceptorCancellationAdviceResponseV07.mmObject(),
 						AcceptorReconciliationResponseV06.mmObject(), AcceptorCurrencyConversionAdviceV02.mmObject(), AcceptorCompletionAdviceV07.mmObject(), AcceptorAuthorisationRequestV07.mmObject(),
 						AcceptorReconciliationRequestV07.mmObject(), AcceptorDiagnosticResponseV06.mmObject(), AcceptorBatchTransferResponseV07.mmObject(), AcceptorBatchTransferV07.mmObject(), AcceptorCancellationRequestV07.mmObject(),
 						AcceptorCancellationAdviceV07.mmObject(), AcceptorCurrencyConversionResponseV05.mmObject());
-				code = "caaa";
 			}
 		});
 		return mmObject_lazy.get();

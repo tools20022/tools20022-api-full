@@ -106,11 +106,12 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationRule#forRedemptionBulkOrderConfirmationV04
- * ConstraintAccountIdentificationRule.forRedemptionBulkOrderConfirmationV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationRule#for_setr_RedemptionBulkOrderConfirmationV04
+ * ConstraintAccountIdentificationRule.
+ * for_setr_RedemptionBulkOrderConfirmationV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintOrderReferenceRule#forRedemptionBulkOrderConfirmationV04
- * ConstraintOrderReferenceRule.forRedemptionBulkOrderConfirmationV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOrderReferenceRule#for_setr_RedemptionBulkOrderConfirmationV04
+ * ConstraintOrderReferenceRule.for_setr_RedemptionBulkOrderConfirmationV04}</li>
  * </ul>
  * </li>
  * <li>
@@ -506,8 +507,8 @@ public class RedemptionBulkOrderConfirmationV04 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forRedemptionBulkOrderConfirmationV04,
-						com.tools20022.repository.constraints.ConstraintOrderReferenceRule.forRedemptionBulkOrderConfirmationV04);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.for_setr_RedemptionBulkOrderConfirmationV04,
+						com.tools20022.repository.constraints.ConstraintOrderReferenceRule.for_setr_RedemptionBulkOrderConfirmationV04);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RedemptionBulkOrderConfirmationV04";
 				definition = "Scope\r\nThe RedemptionBulkOrderConfirmation message is sent by an executing party, for example, a transfer agent, to the instructing party, for example, an investment manager or its authorised representative, to confirm the details of execution for a previously received RedemptionBulkOrder message.\r\nUsage\r\nThe RedemptionBulkOrderConfirmation message is used to confirm the execution of all individual orders included in a previously sent RedemptionBulkOrder message.\r\nThere is usually one bulk confirmation message for one bulk order message.\r\nEach individual order confirmation specified is identified in DealReference. The reference of the original individual order is specified in OrderReference. The message identification of the RedemptionBulkOrder message in which the individual order was conveyed may also be quoted in RelatedReference, but this is not recommended.\r\nA RedemptionBulkOrder must in all cases be responded to by a RedemptionBulkOrderConfirmation and in no circumstances by a RedemptionOrderConfirmation.\r\nIf the executing party needs to confirm a RedemptionOrder instruction, then the RedemptionOrderConfirmation must be used.\r\nWhen the message is used to convey a confirmation amendment/s, the AmendmentIndicator must be present with the value ‘true’ or ‘1’. When this is the case, the message must only contain a confirmation amendment/s and not contain both a confirmation amendment/s and a ‘new’ confirmation/s.";

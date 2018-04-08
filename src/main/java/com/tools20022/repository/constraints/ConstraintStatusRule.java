@@ -35,40 +35,6 @@ public class ConstraintStatusRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.choice.Status1Choice Status1Choice}
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "StatusRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If a specific Status is requested, then it must be in line with the statuses available for the message type requested."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<Status1Choice> forStatus1Choice = new MMConstraint<Status1Choice>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "StatusRule";
-			definition = "If a specific Status is requested, then it must be in line with the statuses available for the message type requested.";
-			owner_lazy = () -> Status1Choice.mmObject();
-		}
-
-		@Override
-		public void executeValidator(Status1Choice obj) throws Exception {
-			checkStatus1Choice(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.Status8Choice Status8Choice}
 	 * </li>
 	 * <li>
@@ -146,6 +112,74 @@ public class ConstraintStatusRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.choice.Status22Choice
+	 * Status22Choice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "StatusRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If a specific Status is requested, then it must be in line with the statuses available for the message type requested."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<Status22Choice> forStatus22Choice = new MMConstraint<Status22Choice>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "StatusRule";
+			definition = "If a specific Status is requested, then it must be in line with the statuses available for the message type requested.";
+			owner_lazy = () -> Status22Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Status22Choice obj) throws Exception {
+			checkStatus22Choice(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.choice.Status1Choice Status1Choice}
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "StatusRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If a specific Status is requested, then it must be in line with the statuses available for the message type requested."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<Status1Choice> forStatus1Choice = new MMConstraint<Status1Choice>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "StatusRule";
+			definition = "If a specific Status is requested, then it must be in line with the statuses available for the message type requested.";
+			owner_lazy = () -> Status1Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Status1Choice obj) throws Exception {
+			checkStatus1Choice(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.Status10Choice
 	 * Status10Choice}</li>
 	 * <li>
@@ -214,48 +248,6 @@ public class ConstraintStatusRule {
 			checkStatus19Choice(obj);
 		}
 	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.choice.Status22Choice
-	 * Status22Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "StatusRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If a specific Status is requested, then it must be in line with the statuses available for the message type requested."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<Status22Choice> forStatus22Choice = new MMConstraint<Status22Choice>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "StatusRule";
-			definition = "If a specific Status is requested, then it must be in line with the statuses available for the message type requested.";
-			owner_lazy = () -> Status22Choice.mmObject();
-		}
-
-		@Override
-		public void executeValidator(Status22Choice obj) throws Exception {
-			checkStatus22Choice(obj);
-		}
-	};
-
-	/**
-	 * If a specific Status is requested, then it must be in line with the
-	 * statuses available for the message type requested.
-	 */
-	public static void checkStatus1Choice(Status1Choice obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
 
 	/**
 	 * If a specific Status is requested, then it must be in line with the
@@ -277,6 +269,22 @@ public class ConstraintStatusRule {
 	 * If a specific Status is requested, then it must be in line with the
 	 * statuses available for the message type requested.
 	 */
+	public static void checkStatus22Choice(Status22Choice obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If a specific Status is requested, then it must be in line with the
+	 * statuses available for the message type requested.
+	 */
+	public static void checkStatus1Choice(Status1Choice obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If a specific Status is requested, then it must be in line with the
+	 * statuses available for the message type requested.
+	 */
 	public static void checkStatus10Choice(Status10Choice obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
@@ -286,14 +294,6 @@ public class ConstraintStatusRule {
 	 * statuses available for the message type requested.
 	 */
 	public static void checkStatus19Choice(Status19Choice obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If a specific Status is requested, then it must be in line with the
-	 * statuses available for the message type requested.
-	 */
-	public static void checkStatus22Choice(Status22Choice obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

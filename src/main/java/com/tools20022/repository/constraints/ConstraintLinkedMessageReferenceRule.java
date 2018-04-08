@@ -36,40 +36,6 @@ public class ConstraintLinkedMessageReferenceRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.RejectionReason1
-	 * RejectionReason1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "LinkedMessageReferenceRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If Reason is InvalidOrUnrecognisedReference, then LinkedMessageReference is mandatory. If Reason is not InvalidOrUnrecognisedReference, then LinkedMessageReference is optional."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<RejectionReason1> forRejectionReason1 = new MMConstraint<RejectionReason1>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "LinkedMessageReferenceRule";
-			definition = "If Reason is InvalidOrUnrecognisedReference, then LinkedMessageReference is mandatory. If Reason is not InvalidOrUnrecognisedReference, then LinkedMessageReference is optional.";
-			owner_lazy = () -> RejectionReason1.mmObject();
-		}
-
-		@Override
-		public void executeValidator(RejectionReason1 obj) throws Exception {
-			checkRejectionReason1(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RejectionReason3
 	 * RejectionReason3}</li>
 	 * <li>
@@ -98,13 +64,47 @@ public class ConstraintLinkedMessageReferenceRule {
 			checkRejectionReason3(obj);
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.RejectionReason1
+	 * RejectionReason1}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "LinkedMessageReferenceRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If Reason is InvalidOrUnrecognisedReference, then LinkedMessageReference is mandatory. If Reason is not InvalidOrUnrecognisedReference, then LinkedMessageReference is optional."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<RejectionReason1> forRejectionReason1 = new MMConstraint<RejectionReason1>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "LinkedMessageReferenceRule";
+			definition = "If Reason is InvalidOrUnrecognisedReference, then LinkedMessageReference is mandatory. If Reason is not InvalidOrUnrecognisedReference, then LinkedMessageReference is optional.";
+			owner_lazy = () -> RejectionReason1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RejectionReason1 obj) throws Exception {
+			checkRejectionReason1(obj);
+		}
+	};
 
 	/**
 	 * If Reason is InvalidOrUnrecognisedReference, then LinkedMessageReference
 	 * is mandatory. If Reason is not InvalidOrUnrecognisedReference, then
 	 * LinkedMessageReference is optional.
 	 */
-	public static void checkRejectionReason1(RejectionReason1 obj) throws Exception {
+	public static void checkRejectionReason3(RejectionReason3 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -113,7 +113,7 @@ public class ConstraintLinkedMessageReferenceRule {
 	 * is mandatory. If Reason is not InvalidOrUnrecognisedReference, then
 	 * LinkedMessageReference is optional.
 	 */
-	public static void checkRejectionReason3(RejectionReason3 obj) throws Exception {
+	public static void checkRejectionReason1(RejectionReason1 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

@@ -50,7 +50,7 @@ public class ConstraintMandatoryValueRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<ModifyMemberV03> forModifyMemberV03 = new MMConstraint<ModifyMemberV03>() {
+	public static final MMConstraint<ModifyMemberV03> for_camt_ModifyMemberV03 = new MMConstraint<ModifyMemberV03>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MandatoryValueRule";
@@ -60,7 +60,7 @@ public class ConstraintMandatoryValueRule {
 
 		@Override
 		public void executeValidator(ModifyMemberV03 obj) throws Exception {
-			checkModifyMemberV03(obj);
+			check_camt_ModifyMemberV03(obj);
 		}
 	};
 
@@ -69,7 +69,7 @@ public class ConstraintMandatoryValueRule {
 	 * CommunicationAddress or a ContactReference. At a minimum, one of these
 	 * elements must be present.
 	 */
-	public static void checkModifyMemberV03(ModifyMemberV03 obj) throws Exception {
+	public static void check_camt_ModifyMemberV03(ModifyMemberV03 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

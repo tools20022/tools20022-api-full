@@ -106,8 +106,8 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintMandatoryValueRule#forModifyMemberV03
- * ConstraintMandatoryValueRule.forModifyMemberV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMandatoryValueRule#for_camt_ModifyMemberV03
+ * ConstraintMandatoryValueRule.for_camt_ModifyMemberV03}</li>
  * </ul>
  * </li>
  * <li>
@@ -316,7 +316,7 @@ public class ModifyMemberV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMandatoryValueRule.forModifyMemberV03);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMandatoryValueRule.for_camt_ModifyMemberV03);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ModifyMemberV03";
 				definition = "Scope\r\nThe ModifyMember message is sent by a member to the transaction administrator.\r\nIt is used to request modifications to the static data related to the profile of a member that the transaction administrator maintains.\r\nUsage\r\nThe transaction administrator is in charge of providing the members with business information. The term business information covers all information related to the management of the system, that is, not related to the transactions entered into the system. The type of business information available can vary depending on the system. Among other things, it can, refer to information about the membership of the system.\r\nAt any time during the operating hours of the system, the member can request the transaction administrator to modify the information it maintains about the member.\r\nThe member will submit a message requesting modifications in one or more of the following criteria:\r\n- identification of the member\r\n- contact information for the member organization: postal address, e-mail address, telephone or fax number\r\n- identification of contact persons for the member, their role and/or details (postal address, e-mail address, telephone or fax number)\r\nBased on the criteria received within the Modify Member message, the transaction administrator will execute or reject the requested modifications.\r\nIn principle, the transaction administrator may send a Receipt message as a reply to the ModifyMember request. To verify the outcome of the request, the member may submit a GetMember message with the appropriate search criteria.";

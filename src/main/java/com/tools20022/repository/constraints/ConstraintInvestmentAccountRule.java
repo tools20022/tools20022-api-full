@@ -51,71 +51,22 @@ public class ConstraintInvestmentAccountRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestmentAccountRule#forAccountDetailsConfirmationV06
-	 * ConstraintInvestmentAccountRule.forAccountDetailsConfirmationV06}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestmentAccountRule#for_acmt_AccountDetailsConfirmationV06
+	 * ConstraintInvestmentAccountRule.for_acmt_AccountDetailsConfirmationV06}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<AccountDetailsConfirmationV07> forAccountDetailsConfirmationV07 = new MMConstraint<AccountDetailsConfirmationV07>() {
+	public static final MMConstraint<AccountDetailsConfirmationV07> for_acmt_AccountDetailsConfirmationV07 = new MMConstraint<AccountDetailsConfirmationV07>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccountRule";
 			definition = "If ConfirmationDetails/ConfirmationType/Code is ACCO (AccountOpening), then InvestmentAccount must be present.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestmentAccountRule.forAccountDetailsConfirmationV06;
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestmentAccountRule.for_acmt_AccountDetailsConfirmationV06;
 			owner_lazy = () -> AccountDetailsConfirmationV07.mmObject();
 		}
 
 		@Override
 		public void executeValidator(AccountDetailsConfirmationV07 obj) throws Exception {
-			checkAccountDetailsConfirmationV07(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV06
-	 * AccountDetailsConfirmationV06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "InvestmentAccountRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If ConfirmationDetails/ConfirmationType is ACCO (AccountOpening), then InvestmentAccount must be present."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestmentAccountRule#forAccountDetailsConfirmationV07
-	 * ConstraintInvestmentAccountRule.forAccountDetailsConfirmationV07}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestmentAccountRule#forAccountDetailsConfirmationV05
-	 * ConstraintInvestmentAccountRule.forAccountDetailsConfirmationV05}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<AccountDetailsConfirmationV06> forAccountDetailsConfirmationV06 = new MMConstraint<AccountDetailsConfirmationV06>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "InvestmentAccountRule";
-			definition = "If ConfirmationDetails/ConfirmationType is ACCO (AccountOpening), then InvestmentAccount must be present.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestmentAccountRule.forAccountDetailsConfirmationV07);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestmentAccountRule.forAccountDetailsConfirmationV05;
-			owner_lazy = () -> AccountDetailsConfirmationV06.mmObject();
-		}
-
-		@Override
-		public void executeValidator(AccountDetailsConfirmationV06 obj) throws Exception {
-			checkAccountDetailsConfirmationV06(obj);
+			check_acmt_AccountDetailsConfirmationV07(obj);
 		}
 	};
 	/**
@@ -139,7 +90,7 @@ public class ConstraintInvestmentAccountRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<AccountDetailsConfirmationV02> forAccountDetailsConfirmationV02 = new MMConstraint<AccountDetailsConfirmationV02>() {
+	public static final MMConstraint<AccountDetailsConfirmationV02> for_acmt_AccountDetailsConfirmationV02 = new MMConstraint<AccountDetailsConfirmationV02>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccountRule";
@@ -149,50 +100,7 @@ public class ConstraintInvestmentAccountRule {
 
 		@Override
 		public void executeValidator(AccountDetailsConfirmationV02 obj) throws Exception {
-			checkAccountDetailsConfirmationV02(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV03
-	 * AccountDetailsConfirmationV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "InvestmentAccountRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If ConfirmationDetails/ConfirmationType is ACCO, then InvestmentAccount must be present."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestmentAccountRule#forAccountDetailsConfirmationV04
-	 * ConstraintInvestmentAccountRule.forAccountDetailsConfirmationV04}</li>
-	 * </ul>
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<AccountDetailsConfirmationV03> forAccountDetailsConfirmationV03 = new MMConstraint<AccountDetailsConfirmationV03>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "InvestmentAccountRule";
-			definition = "If ConfirmationDetails/ConfirmationType is ACCO, then InvestmentAccount must be present.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestmentAccountRule.forAccountDetailsConfirmationV04);
-			owner_lazy = () -> AccountDetailsConfirmationV03.mmObject();
-		}
-
-		@Override
-		public void executeValidator(AccountDetailsConfirmationV03 obj) throws Exception {
-			checkAccountDetailsConfirmationV03(obj);
+			check_acmt_AccountDetailsConfirmationV02(obj);
 		}
 	};
 	/**
@@ -218,30 +126,122 @@ public class ConstraintInvestmentAccountRule {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestmentAccountRule#forAccountDetailsConfirmationV05
-	 * ConstraintInvestmentAccountRule.forAccountDetailsConfirmationV05}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestmentAccountRule#for_acmt_AccountDetailsConfirmationV05
+	 * ConstraintInvestmentAccountRule.for_acmt_AccountDetailsConfirmationV05}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestmentAccountRule#forAccountDetailsConfirmationV03
-	 * ConstraintInvestmentAccountRule.forAccountDetailsConfirmationV03}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestmentAccountRule#for_acmt_AccountDetailsConfirmationV03
+	 * ConstraintInvestmentAccountRule.for_acmt_AccountDetailsConfirmationV03}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<AccountDetailsConfirmationV04> forAccountDetailsConfirmationV04 = new MMConstraint<AccountDetailsConfirmationV04>() {
+	public static final MMConstraint<AccountDetailsConfirmationV04> for_acmt_AccountDetailsConfirmationV04 = new MMConstraint<AccountDetailsConfirmationV04>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccountRule";
 			definition = "If ConfirmationDetails/ConfirmationType is ACCO, then InvestmentAccount must be present.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestmentAccountRule.forAccountDetailsConfirmationV05);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestmentAccountRule.forAccountDetailsConfirmationV03;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestmentAccountRule.for_acmt_AccountDetailsConfirmationV05);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestmentAccountRule.for_acmt_AccountDetailsConfirmationV03;
 			owner_lazy = () -> AccountDetailsConfirmationV04.mmObject();
 		}
 
 		@Override
 		public void executeValidator(AccountDetailsConfirmationV04 obj) throws Exception {
-			checkAccountDetailsConfirmationV04(obj);
+			check_acmt_AccountDetailsConfirmationV04(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV03
+	 * AccountDetailsConfirmationV03}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InvestmentAccountRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If ConfirmationDetails/ConfirmationType is ACCO, then InvestmentAccount must be present."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestmentAccountRule#for_acmt_AccountDetailsConfirmationV04
+	 * ConstraintInvestmentAccountRule.for_acmt_AccountDetailsConfirmationV04}</li>
+	 * </ul>
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AccountDetailsConfirmationV03> for_acmt_AccountDetailsConfirmationV03 = new MMConstraint<AccountDetailsConfirmationV03>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "InvestmentAccountRule";
+			definition = "If ConfirmationDetails/ConfirmationType is ACCO, then InvestmentAccount must be present.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestmentAccountRule.for_acmt_AccountDetailsConfirmationV04);
+			owner_lazy = () -> AccountDetailsConfirmationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountDetailsConfirmationV03 obj) throws Exception {
+			check_acmt_AccountDetailsConfirmationV03(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV06
+	 * AccountDetailsConfirmationV06}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InvestmentAccountRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If ConfirmationDetails/ConfirmationType is ACCO (AccountOpening), then InvestmentAccount must be present."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestmentAccountRule#for_acmt_AccountDetailsConfirmationV07
+	 * ConstraintInvestmentAccountRule.for_acmt_AccountDetailsConfirmationV07}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestmentAccountRule#for_acmt_AccountDetailsConfirmationV05
+	 * ConstraintInvestmentAccountRule.for_acmt_AccountDetailsConfirmationV05}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AccountDetailsConfirmationV06> for_acmt_AccountDetailsConfirmationV06 = new MMConstraint<AccountDetailsConfirmationV06>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "InvestmentAccountRule";
+			definition = "If ConfirmationDetails/ConfirmationType is ACCO (AccountOpening), then InvestmentAccount must be present.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestmentAccountRule.for_acmt_AccountDetailsConfirmationV07);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestmentAccountRule.for_acmt_AccountDetailsConfirmationV05;
+			owner_lazy = () -> AccountDetailsConfirmationV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountDetailsConfirmationV06 obj) throws Exception {
+			check_acmt_AccountDetailsConfirmationV06(obj);
 		}
 	};
 	/**
@@ -267,30 +267,30 @@ public class ConstraintInvestmentAccountRule {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestmentAccountRule#forAccountDetailsConfirmationV06
-	 * ConstraintInvestmentAccountRule.forAccountDetailsConfirmationV06}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestmentAccountRule#for_acmt_AccountDetailsConfirmationV06
+	 * ConstraintInvestmentAccountRule.for_acmt_AccountDetailsConfirmationV06}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestmentAccountRule#forAccountDetailsConfirmationV04
-	 * ConstraintInvestmentAccountRule.forAccountDetailsConfirmationV04}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestmentAccountRule#for_acmt_AccountDetailsConfirmationV04
+	 * ConstraintInvestmentAccountRule.for_acmt_AccountDetailsConfirmationV04}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<AccountDetailsConfirmationV05> forAccountDetailsConfirmationV05 = new MMConstraint<AccountDetailsConfirmationV05>() {
+	public static final MMConstraint<AccountDetailsConfirmationV05> for_acmt_AccountDetailsConfirmationV05 = new MMConstraint<AccountDetailsConfirmationV05>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccountRule";
 			definition = "If ConfirmationDetails/ConfirmationType is ACCO, then InvestmentAccount must be present.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestmentAccountRule.forAccountDetailsConfirmationV06);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestmentAccountRule.forAccountDetailsConfirmationV04;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestmentAccountRule.for_acmt_AccountDetailsConfirmationV06);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestmentAccountRule.for_acmt_AccountDetailsConfirmationV04;
 			owner_lazy = () -> AccountDetailsConfirmationV05.mmObject();
 		}
 
 		@Override
 		public void executeValidator(AccountDetailsConfirmationV05 obj) throws Exception {
-			checkAccountDetailsConfirmationV05(obj);
+			check_acmt_AccountDetailsConfirmationV05(obj);
 		}
 	};
 
@@ -298,7 +298,31 @@ public class ConstraintInvestmentAccountRule {
 	 * If ConfirmationDetails/ConfirmationType/Code is ACCO (AccountOpening),
 	 * then InvestmentAccount must be present.
 	 */
-	public static void checkAccountDetailsConfirmationV07(AccountDetailsConfirmationV07 obj) throws Exception {
+	public static void check_acmt_AccountDetailsConfirmationV07(AccountDetailsConfirmationV07 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If ConfirmationDetails/ConfirmationType is ACCO, then InvestmentAccount
+	 * must be present.
+	 */
+	public static void check_acmt_AccountDetailsConfirmationV02(AccountDetailsConfirmationV02 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If ConfirmationDetails/ConfirmationType is ACCO, then InvestmentAccount
+	 * must be present.
+	 */
+	public static void check_acmt_AccountDetailsConfirmationV04(AccountDetailsConfirmationV04 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If ConfirmationDetails/ConfirmationType is ACCO, then InvestmentAccount
+	 * must be present.
+	 */
+	public static void check_acmt_AccountDetailsConfirmationV03(AccountDetailsConfirmationV03 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -306,7 +330,7 @@ public class ConstraintInvestmentAccountRule {
 	 * If ConfirmationDetails/ConfirmationType is ACCO (AccountOpening), then
 	 * InvestmentAccount must be present.
 	 */
-	public static void checkAccountDetailsConfirmationV06(AccountDetailsConfirmationV06 obj) throws Exception {
+	public static void check_acmt_AccountDetailsConfirmationV06(AccountDetailsConfirmationV06 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -314,31 +338,7 @@ public class ConstraintInvestmentAccountRule {
 	 * If ConfirmationDetails/ConfirmationType is ACCO, then InvestmentAccount
 	 * must be present.
 	 */
-	public static void checkAccountDetailsConfirmationV02(AccountDetailsConfirmationV02 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If ConfirmationDetails/ConfirmationType is ACCO, then InvestmentAccount
-	 * must be present.
-	 */
-	public static void checkAccountDetailsConfirmationV03(AccountDetailsConfirmationV03 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If ConfirmationDetails/ConfirmationType is ACCO, then InvestmentAccount
-	 * must be present.
-	 */
-	public static void checkAccountDetailsConfirmationV04(AccountDetailsConfirmationV04 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If ConfirmationDetails/ConfirmationType is ACCO, then InvestmentAccount
-	 * must be present.
-	 */
-	public static void checkAccountDetailsConfirmationV05(AccountDetailsConfirmationV05 obj) throws Exception {
+	public static void check_acmt_AccountDetailsConfirmationV05(AccountDetailsConfirmationV05 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

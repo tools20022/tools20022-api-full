@@ -36,8 +36,8 @@ public class ConstraintChargesAmountGuideline {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction19
-	 * CreditTransferTransaction19}</li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation21
+	 * DirectDebitTransactionInformation21}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -48,124 +48,26 @@ public class ConstraintChargesAmountGuideline {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "If ChargesInformation is present, then the currency of ChargesInformation/ChargesAmount is recommended to be the same as the currency of InterbankSettlementAmount."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintChargesAmountGuideline#forCreditTransferTransaction25
-	 * ConstraintChargesAmountGuideline.forCreditTransferTransaction25}</li>
-	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintChargesAmountRule#forCreditTransferTransaction7
-	 * ConstraintChargesAmountRule.forCreditTransferTransaction7}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CreditTransferTransaction19> forCreditTransferTransaction19 = new MMConstraint<CreditTransferTransaction19>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ChargesAmountGuideline";
-			definition = "If ChargesInformation is present, then the currency of ChargesInformation/ChargesAmount is recommended to be the same as the currency of InterbankSettlementAmount.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChargesAmountGuideline.forCreditTransferTransaction25);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChargesAmountRule.forCreditTransferTransaction7;
-			owner_lazy = () -> CreditTransferTransaction19.mmObject();
-		}
-
-		@Override
-		public void executeValidator(CreditTransferTransaction19 obj) throws Exception {
-			checkCreditTransferTransaction19(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation17
-	 * DirectDebitTransactionInformation17}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ChargesAmountGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If ChargesInformation is present, then the currency of ChargesInformation/ChargesAmount is recommended to be the same as the currency of InterbankSettlementAmount."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
 	 * {@linkplain com.tools20022.repository.constraints.ConstraintChargesAmountGuideline#forDirectDebitTransactionInformation20
 	 * ConstraintChargesAmountGuideline.forDirectDebitTransactionInformation20}</li>
 	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintChargesAmountRule#forDirectDebitTransactionInformation14
-	 * ConstraintChargesAmountRule.forDirectDebitTransactionInformation14}</li>
-	 * </ul>
 	 */
-	public static final MMConstraint<DirectDebitTransactionInformation17> forDirectDebitTransactionInformation17 = new MMConstraint<DirectDebitTransactionInformation17>() {
+	public static final MMConstraint<DirectDebitTransactionInformation21> forDirectDebitTransactionInformation21 = new MMConstraint<DirectDebitTransactionInformation21>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesAmountGuideline";
 			definition = "If ChargesInformation is present, then the currency of ChargesInformation/ChargesAmount is recommended to be the same as the currency of InterbankSettlementAmount.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChargesAmountGuideline.forDirectDebitTransactionInformation20);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChargesAmountRule.forDirectDebitTransactionInformation14;
-			owner_lazy = () -> DirectDebitTransactionInformation17.mmObject();
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChargesAmountGuideline.forDirectDebitTransactionInformation20;
+			owner_lazy = () -> DirectDebitTransactionInformation21.mmObject();
 		}
 
 		@Override
-		public void executeValidator(DirectDebitTransactionInformation17 obj) throws Exception {
-			checkDirectDebitTransactionInformation17(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction25
-	 * CreditTransferTransaction25}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ChargesAmountGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If ChargesInformation is present, then the currency of ChargesInformation/ChargesAmount is recommended to be the same as the currency of InterbankSettlementAmount."
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintChargesAmountGuideline#forCreditTransferTransaction19
-	 * ConstraintChargesAmountGuideline.forCreditTransferTransaction19}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CreditTransferTransaction25> forCreditTransferTransaction25 = new MMConstraint<CreditTransferTransaction25>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ChargesAmountGuideline";
-			definition = "If ChargesInformation is present, then the currency of ChargesInformation/ChargesAmount is recommended to be the same as the currency of InterbankSettlementAmount.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChargesAmountGuideline.forCreditTransferTransaction19;
-			owner_lazy = () -> CreditTransferTransaction25.mmObject();
-		}
-
-		@Override
-		public void executeValidator(CreditTransferTransaction25 obj) throws Exception {
-			checkCreditTransferTransaction25(obj);
+		public void executeValidator(DirectDebitTransactionInformation21 obj) throws Exception {
+			checkDirectDebitTransactionInformation21(obj);
 		}
 	};
 	/**
@@ -223,46 +125,6 @@ public class ConstraintChargesAmountGuideline {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation21
-	 * DirectDebitTransactionInformation21}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ChargesAmountGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If ChargesInformation is present, then the currency of ChargesInformation/ChargesAmount is recommended to be the same as the currency of InterbankSettlementAmount."
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintChargesAmountGuideline#forDirectDebitTransactionInformation20
-	 * ConstraintChargesAmountGuideline.forDirectDebitTransactionInformation20}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<DirectDebitTransactionInformation21> forDirectDebitTransactionInformation21 = new MMConstraint<DirectDebitTransactionInformation21>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ChargesAmountGuideline";
-			definition = "If ChargesInformation is present, then the currency of ChargesInformation/ChargesAmount is recommended to be the same as the currency of InterbankSettlementAmount.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChargesAmountGuideline.forDirectDebitTransactionInformation20;
-			owner_lazy = () -> DirectDebitTransactionInformation21.mmObject();
-		}
-
-		@Override
-		public void executeValidator(DirectDebitTransactionInformation21 obj) throws Exception {
-			checkDirectDebitTransactionInformation21(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction30
 	 * CreditTransferTransaction30}</li>
 	 * <li>
@@ -291,31 +153,151 @@ public class ConstraintChargesAmountGuideline {
 			checkCreditTransferTransaction30(obj);
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction19
+	 * CreditTransferTransaction19}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ChargesAmountGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If ChargesInformation is present, then the currency of ChargesInformation/ChargesAmount is recommended to be the same as the currency of InterbankSettlementAmount."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintChargesAmountGuideline#forCreditTransferTransaction25
+	 * ConstraintChargesAmountGuideline.forCreditTransferTransaction25}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintChargesAmountRule#forCreditTransferTransaction7
+	 * ConstraintChargesAmountRule.forCreditTransferTransaction7}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CreditTransferTransaction19> forCreditTransferTransaction19 = new MMConstraint<CreditTransferTransaction19>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ChargesAmountGuideline";
+			definition = "If ChargesInformation is present, then the currency of ChargesInformation/ChargesAmount is recommended to be the same as the currency of InterbankSettlementAmount.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChargesAmountGuideline.forCreditTransferTransaction25);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChargesAmountRule.forCreditTransferTransaction7;
+			owner_lazy = () -> CreditTransferTransaction19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransaction19 obj) throws Exception {
+			checkCreditTransferTransaction19(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction25
+	 * CreditTransferTransaction25}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ChargesAmountGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If ChargesInformation is present, then the currency of ChargesInformation/ChargesAmount is recommended to be the same as the currency of InterbankSettlementAmount."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintChargesAmountGuideline#forCreditTransferTransaction19
+	 * ConstraintChargesAmountGuideline.forCreditTransferTransaction19}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CreditTransferTransaction25> forCreditTransferTransaction25 = new MMConstraint<CreditTransferTransaction25>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ChargesAmountGuideline";
+			definition = "If ChargesInformation is present, then the currency of ChargesInformation/ChargesAmount is recommended to be the same as the currency of InterbankSettlementAmount.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChargesAmountGuideline.forCreditTransferTransaction19;
+			owner_lazy = () -> CreditTransferTransaction25.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransaction25 obj) throws Exception {
+			checkCreditTransferTransaction25(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation17
+	 * DirectDebitTransactionInformation17}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ChargesAmountGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If ChargesInformation is present, then the currency of ChargesInformation/ChargesAmount is recommended to be the same as the currency of InterbankSettlementAmount."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintChargesAmountGuideline#forDirectDebitTransactionInformation20
+	 * ConstraintChargesAmountGuideline.forDirectDebitTransactionInformation20}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintChargesAmountRule#forDirectDebitTransactionInformation14
+	 * ConstraintChargesAmountRule.forDirectDebitTransactionInformation14}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<DirectDebitTransactionInformation17> forDirectDebitTransactionInformation17 = new MMConstraint<DirectDebitTransactionInformation17>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ChargesAmountGuideline";
+			definition = "If ChargesInformation is present, then the currency of ChargesInformation/ChargesAmount is recommended to be the same as the currency of InterbankSettlementAmount.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChargesAmountGuideline.forDirectDebitTransactionInformation20);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChargesAmountRule.forDirectDebitTransactionInformation14;
+			owner_lazy = () -> DirectDebitTransactionInformation17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DirectDebitTransactionInformation17 obj) throws Exception {
+			checkDirectDebitTransactionInformation17(obj);
+		}
+	};
 
 	/**
 	 * If ChargesInformation is present, then the currency of
 	 * ChargesInformation/ChargesAmount is recommended to be the same as the
 	 * currency of InterbankSettlementAmount.
 	 */
-	public static void checkCreditTransferTransaction19(CreditTransferTransaction19 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If ChargesInformation is present, then the currency of
-	 * ChargesInformation/ChargesAmount is recommended to be the same as the
-	 * currency of InterbankSettlementAmount.
-	 */
-	public static void checkDirectDebitTransactionInformation17(DirectDebitTransactionInformation17 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If ChargesInformation is present, then the currency of
-	 * ChargesInformation/ChargesAmount is recommended to be the same as the
-	 * currency of InterbankSettlementAmount.
-	 */
-	public static void checkCreditTransferTransaction25(CreditTransferTransaction25 obj) throws Exception {
+	public static void checkDirectDebitTransactionInformation21(DirectDebitTransactionInformation21 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -333,7 +315,7 @@ public class ConstraintChargesAmountGuideline {
 	 * ChargesInformation/ChargesAmount is recommended to be the same as the
 	 * currency of InterbankSettlementAmount.
 	 */
-	public static void checkDirectDebitTransactionInformation21(DirectDebitTransactionInformation21 obj) throws Exception {
+	public static void checkCreditTransferTransaction30(CreditTransferTransaction30 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -342,7 +324,25 @@ public class ConstraintChargesAmountGuideline {
 	 * ChargesInformation/ChargesAmount is recommended to be the same as the
 	 * currency of InterbankSettlementAmount.
 	 */
-	public static void checkCreditTransferTransaction30(CreditTransferTransaction30 obj) throws Exception {
+	public static void checkCreditTransferTransaction19(CreditTransferTransaction19 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If ChargesInformation is present, then the currency of
+	 * ChargesInformation/ChargesAmount is recommended to be the same as the
+	 * currency of InterbankSettlementAmount.
+	 */
+	public static void checkCreditTransferTransaction25(CreditTransferTransaction25 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If ChargesInformation is present, then the currency of
+	 * ChargesInformation/ChargesAmount is recommended to be the same as the
+	 * currency of InterbankSettlementAmount.
+	 */
+	public static void checkDirectDebitTransactionInformation17(DirectDebitTransactionInformation17 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

@@ -25,11 +25,49 @@ import com.tools20022.repository.msg.ReferredAgent2;
 import java.util.Arrays;
 
 /**
- * ReferredPlacementAgent may only be present if Referred is equal to the code
- * value Referred (REFR).
+ * ReferredPlacementAgent may only be present if Referred is REFR (Referred).
  */
 public class ConstraintReferredPlacementAgentRule {
 
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.ReferredAgent2 ReferredAgent2}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ReferredPlacementAgentRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "ReferredPlacementAgent may only be present if Referred is REFR (Referred)."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintReferredPlacementAgentRule#forReferredAgent1
+	 * ConstraintReferredPlacementAgentRule.forReferredAgent1}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<ReferredAgent2> forReferredAgent2 = new MMConstraint<ReferredAgent2>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ReferredPlacementAgentRule";
+			definition = "ReferredPlacementAgent may only be present if Referred is REFR (Referred).";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReferredPlacementAgentRule.forReferredAgent1;
+			owner_lazy = () -> ReferredAgent2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ReferredAgent2 obj) throws Exception {
+			checkReferredAgent2(obj);
+		}
+	};
 	/**
 	 * 
 	 <p>
@@ -72,59 +110,20 @@ public class ConstraintReferredPlacementAgentRule {
 			checkReferredAgent1(obj);
 		}
 	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.ReferredAgent2 ReferredAgent2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ReferredPlacementAgentRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "ReferredPlacementAgent may only be present if Referred is REFR (Referred)."
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintReferredPlacementAgentRule#forReferredAgent1
-	 * ConstraintReferredPlacementAgentRule.forReferredAgent1}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<ReferredAgent2> forReferredAgent2 = new MMConstraint<ReferredAgent2>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ReferredPlacementAgentRule";
-			definition = "ReferredPlacementAgent may only be present if Referred is REFR (Referred).";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReferredPlacementAgentRule.forReferredAgent1;
-			owner_lazy = () -> ReferredAgent2.mmObject();
-		}
-
-		@Override
-		public void executeValidator(ReferredAgent2 obj) throws Exception {
-			checkReferredAgent2(obj);
-		}
-	};
-
-	/**
-	 * ReferredPlacementAgent may only be present if Referred is equal to the
-	 * code value Referred (REFR).
-	 */
-	public static void checkReferredAgent1(ReferredAgent1 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
 
 	/**
 	 * ReferredPlacementAgent may only be present if Referred is REFR
 	 * (Referred).
 	 */
 	public static void checkReferredAgent2(ReferredAgent2 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * ReferredPlacementAgent may only be present if Referred is equal to the
+	 * code value Referred (REFR).
+	 */
+	public static void checkReferredAgent1(ReferredAgent1 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

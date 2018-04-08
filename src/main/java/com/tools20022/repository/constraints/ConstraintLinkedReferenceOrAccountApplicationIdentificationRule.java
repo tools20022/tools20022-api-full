@@ -36,6 +36,47 @@ public class ConstraintLinkedReferenceOrAccountApplicationIdentificationRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.AccountManagementMessageReference4
+	 * AccountManagementMessageReference4}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "LinkedReferenceOrAccountApplicationIdentificationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Either LinkedReference or AccountApplicationIdentification must be present."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintLinkedReferenceOrAccountApplicationIdentificationRule#forAccountManagementMessageReference3
+	 * ConstraintLinkedReferenceOrAccountApplicationIdentificationRule.
+	 * forAccountManagementMessageReference3}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AccountManagementMessageReference4> forAccountManagementMessageReference4 = new MMConstraint<AccountManagementMessageReference4>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "LinkedReferenceOrAccountApplicationIdentificationRule";
+			definition = "Either LinkedReference or AccountApplicationIdentification must be present.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintLinkedReferenceOrAccountApplicationIdentificationRule.forAccountManagementMessageReference3;
+			owner_lazy = () -> AccountManagementMessageReference4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountManagementMessageReference4 obj) throws Exception {
+			checkAccountManagementMessageReference4(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountManagementMessageReference2
 	 * AccountManagementMessageReference2}</li>
 	 * <li>
@@ -125,47 +166,14 @@ public class ConstraintLinkedReferenceOrAccountApplicationIdentificationRule {
 			checkAccountManagementMessageReference3(obj);
 		}
 	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.AccountManagementMessageReference4
-	 * AccountManagementMessageReference4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "LinkedReferenceOrAccountApplicationIdentificationRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Either LinkedReference or AccountApplicationIdentification must be present."
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintLinkedReferenceOrAccountApplicationIdentificationRule#forAccountManagementMessageReference3
-	 * ConstraintLinkedReferenceOrAccountApplicationIdentificationRule.
-	 * forAccountManagementMessageReference3}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<AccountManagementMessageReference4> forAccountManagementMessageReference4 = new MMConstraint<AccountManagementMessageReference4>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "LinkedReferenceOrAccountApplicationIdentificationRule";
-			definition = "Either LinkedReference or AccountApplicationIdentification must be present.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintLinkedReferenceOrAccountApplicationIdentificationRule.forAccountManagementMessageReference3;
-			owner_lazy = () -> AccountManagementMessageReference4.mmObject();
-		}
 
-		@Override
-		public void executeValidator(AccountManagementMessageReference4 obj) throws Exception {
-			checkAccountManagementMessageReference4(obj);
-		}
-	};
+	/**
+	 * Either LinkedReference or AccountApplicationIdentification must be
+	 * present.
+	 */
+	public static void checkAccountManagementMessageReference4(AccountManagementMessageReference4 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
 
 	/**
 	 * Either LinkedReference or AccountApplicationIdentification must be
@@ -180,14 +188,6 @@ public class ConstraintLinkedReferenceOrAccountApplicationIdentificationRule {
 	 * present.
 	 */
 	public static void checkAccountManagementMessageReference3(AccountManagementMessageReference3 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Either LinkedReference or AccountApplicationIdentification must be
-	 * present.
-	 */
-	public static void checkAccountManagementMessageReference4(AccountManagementMessageReference4 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

@@ -24,45 +24,11 @@ import com.tools20022.repository.msg.Commission11;
 import com.tools20022.repository.msg.Commission14;
 
 /**
- * If Type or ExtendedType is present, then either Amount or Rate must be
- * present. If Amount or Rate is present, then either Type or Extended Type must
- * be present.
+ * If Type is present, then either Amount or Rate must be present. If Amount or
+ * Rate is present, then Type must be present.
  */
 public class ConstraintTypeAmountRateRule {
 
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.Commission11 Commission11}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "TypeAmountRateRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If Type or ExtendedType is present, then either Amount or Rate must be present. If Amount or Rate is present, then either Type or Extended Type must be present."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<Commission11> forCommission11 = new MMConstraint<Commission11>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "TypeAmountRateRule";
-			definition = "If Type or ExtendedType is present, then either Amount or Rate must be present. If Amount or Rate is present, then either Type or Extended Type must be present.";
-			owner_lazy = () -> Commission11.mmObject();
-		}
-
-		@Override
-		public void executeValidator(Commission11 obj) throws Exception {
-			checkCommission11(obj);
-		}
-	};
 	/**
 	 * 
 	 <p>
@@ -96,6 +62,47 @@ public class ConstraintTypeAmountRateRule {
 			checkCommission14(obj);
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.Commission11 Commission11}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TypeAmountRateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If Type or ExtendedType is present, then either Amount or Rate must be present. If Amount or Rate is present, then either Type or Extended Type must be present."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<Commission11> forCommission11 = new MMConstraint<Commission11>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "TypeAmountRateRule";
+			definition = "If Type or ExtendedType is present, then either Amount or Rate must be present. If Amount or Rate is present, then either Type or Extended Type must be present.";
+			owner_lazy = () -> Commission11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Commission11 obj) throws Exception {
+			checkCommission11(obj);
+		}
+	};
+
+	/**
+	 * If Type is present, then either Amount or Rate must be present. If Amount
+	 * or Rate is present, then Type must be present.
+	 */
+	public static void checkCommission14(Commission14 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
 
 	/**
 	 * If Type or ExtendedType is present, then either Amount or Rate must be
@@ -103,14 +110,6 @@ public class ConstraintTypeAmountRateRule {
 	 * must be present.
 	 */
 	public static void checkCommission11(Commission11 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If Type is present, then either Amount or Rate must be present. If Amount
-	 * or Rate is present, then Type must be present.
-	 */
-	public static void checkCommission14(Commission14 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

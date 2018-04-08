@@ -67,6 +67,34 @@ public class ConstraintValidationByTable {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.UnicodeChartsCode
+	 * UnicodeChartsCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ValidationByTable"</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<UnicodeChartsCode> forUnicodeChartsCode = new MMConstraint<UnicodeChartsCode>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ValidationByTable";
+			owner_lazy = () -> UnicodeChartsCode.mmObject();
+		}
+
+		@Override
+		public void executeValidator(UnicodeChartsCode obj) throws Exception {
+			checkUnicodeChartsCode(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.LanguageCode LanguageCode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -130,34 +158,6 @@ public class ConstraintValidationByTable {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.codeset.UnicodeChartsCode
-	 * UnicodeChartsCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ValidationByTable"</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<UnicodeChartsCode> forUnicodeChartsCode = new MMConstraint<UnicodeChartsCode>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ValidationByTable";
-			owner_lazy = () -> UnicodeChartsCode.mmObject();
-		}
-
-		@Override
-		public void executeValidator(UnicodeChartsCode obj) throws Exception {
-			checkUnicodeChartsCode(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.BusinessMessagePriorityCode
 	 * BusinessMessagePriorityCode}</li>
 	 * <li>
@@ -190,6 +190,13 @@ public class ConstraintValidationByTable {
 	}
 
 	/**
+	 * - no definition -
+	 */
+	public static void checkUnicodeChartsCode(UnicodeChartsCode obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
 	 * Must be a valid terrestrial language.
 	 */
 	public static void checkLanguageCode(LanguageCode obj) throws Exception {
@@ -200,13 +207,6 @@ public class ConstraintValidationByTable {
 	 * Must be a valid nationality.
 	 */
 	public static void checkNationalityCode(NationalityCode obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * - no definition -
-	 */
-	public static void checkUnicodeChartsCode(UnicodeChartsCode obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 

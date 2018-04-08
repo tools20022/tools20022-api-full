@@ -115,8 +115,8 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintNewPriceReportRule#forPriceReportV04
- * ConstraintNewPriceReportRule.forPriceReportV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintNewPriceReportRule#for_reda_PriceReportV04
+ * ConstraintNewPriceReportRule.for_reda_PriceReportV04}</li>
  * </ul>
  * </li>
  * <li>
@@ -609,7 +609,7 @@ public class PriceReportV04 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNewPriceReportRule.forPriceReportV04);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNewPriceReportRule.for_reda_PriceReportV04);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceReportV04";
 				definition = "SCOPE\n\nA report provider, for example, a transfer agent, fund accountant or market data provider, sends the PriceReport message to the report recipient, for example, a fund management company, transfer agent, market data provider, regulator or any other interested party to provide the net asset value and price information for financial instruments on specific trade dates and, optionally, to quote price variation information.\n\nUSAGE\n\nThe PriceReport message is sent by the report provider to the report recipient to: \n- report prices for one or several different financial instruments for one or several different trade dates,\n- report statistical information about the valuation of a financial instrument,\n- inform another party that the quotation of a financial instrument is suspended,\n- report prices that are used for other purposes than the execution of investment funds orders.\n.";

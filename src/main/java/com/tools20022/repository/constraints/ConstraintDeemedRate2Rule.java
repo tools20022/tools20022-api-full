@@ -26,10 +26,9 @@ import com.tools20022.repository.msg.RateDetails33;
 import com.tools20022.repository.msg.RateDetails34;
 
 /**
- * Only a single occurrence of either DeemedRate/Amount or DeemedRate/Rate or
- * DeemedRate/NotSpecifiedRate may be present, only one of these elements may be
- * present. <br>
- * (MT 564 NVR C7).
+ * Only a single occurrence of either DeemedRate/Amount or DeemedRate/Rate may
+ * be present, only one of those elements may be present. <br>
+ * (MT 566 NVR C3).
  */
 public class ConstraintDeemedRate2Rule {
 
@@ -39,7 +38,7 @@ public class ConstraintDeemedRate2Rule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.RateDetails31 RateDetails31}</li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails33 RateDetails33}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -49,21 +48,21 @@ public class ConstraintDeemedRate2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Only a single occurrence of either DeemedRate/Amount or DeemedRate/Rate or DeemedRate/NotSpecifiedRate may be present, only one of these elements may be present. \r\n(MT 564 NVR C7)."
+	 * "Only a single occurrence of either DeemedRate/Amount or DeemedRate/Rate may be present, only one of those elements may be present. \r\n(MT 566 NVR C3)."
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<RateDetails31> forRateDetails31 = new MMConstraint<RateDetails31>() {
+	public static final MMConstraint<RateDetails33> forRateDetails33 = new MMConstraint<RateDetails33>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeemedRate2Rule";
-			definition = "Only a single occurrence of either DeemedRate/Amount or DeemedRate/Rate or DeemedRate/NotSpecifiedRate may be present, only one of these elements may be present. \r\n(MT 564 NVR C7).";
-			owner_lazy = () -> RateDetails31.mmObject();
+			definition = "Only a single occurrence of either DeemedRate/Amount or DeemedRate/Rate may be present, only one of those elements may be present. \r\n(MT 566 NVR C3).";
+			owner_lazy = () -> RateDetails33.mmObject();
 		}
 
 		@Override
-		public void executeValidator(RateDetails31 obj) throws Exception {
-			checkRateDetails31(obj);
+		public void executeValidator(RateDetails33 obj) throws Exception {
+			checkRateDetails33(obj);
 		}
 	};
 	/**
@@ -105,39 +104,6 @@ public class ConstraintDeemedRate2Rule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.RateDetails33 RateDetails33}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DeemedRate2Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Only a single occurrence of either DeemedRate/Amount or DeemedRate/Rate may be present, only one of those elements may be present. \r\n(MT 566 NVR C3)."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<RateDetails33> forRateDetails33 = new MMConstraint<RateDetails33>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "DeemedRate2Rule";
-			definition = "Only a single occurrence of either DeemedRate/Amount or DeemedRate/Rate may be present, only one of those elements may be present. \r\n(MT 566 NVR C3).";
-			owner_lazy = () -> RateDetails33.mmObject();
-		}
-
-		@Override
-		public void executeValidator(RateDetails33 obj) throws Exception {
-			checkRateDetails33(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RateDetails34 RateDetails34}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -165,14 +131,46 @@ public class ConstraintDeemedRate2Rule {
 			checkRateDetails34(obj);
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.RateDetails31 RateDetails31}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DeemedRate2Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Only a single occurrence of either DeemedRate/Amount or DeemedRate/Rate or DeemedRate/NotSpecifiedRate may be present, only one of these elements may be present. \r\n(MT 564 NVR C7)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<RateDetails31> forRateDetails31 = new MMConstraint<RateDetails31>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DeemedRate2Rule";
+			definition = "Only a single occurrence of either DeemedRate/Amount or DeemedRate/Rate or DeemedRate/NotSpecifiedRate may be present, only one of these elements may be present. \r\n(MT 564 NVR C7).";
+			owner_lazy = () -> RateDetails31.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateDetails31 obj) throws Exception {
+			checkRateDetails31(obj);
+		}
+	};
 
 	/**
 	 * Only a single occurrence of either DeemedRate/Amount or DeemedRate/Rate
-	 * or DeemedRate/NotSpecifiedRate may be present, only one of these elements
-	 * may be present. <br>
-	 * (MT 564 NVR C7).
+	 * may be present, only one of those elements may be present. <br>
+	 * (MT 566 NVR C3).
 	 */
-	public static void checkRateDetails31(RateDetails31 obj) throws Exception {
+	public static void checkRateDetails33(RateDetails33 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -187,10 +185,11 @@ public class ConstraintDeemedRate2Rule {
 
 	/**
 	 * Only a single occurrence of either DeemedRate/Amount or DeemedRate/Rate
-	 * may be present, only one of those elements may be present. <br>
-	 * (MT 566 NVR C3).
+	 * or DeemedRate/NotSpecifiedRate may be present, only one of these elements
+	 * may be present. <br>
+	 * (MT 564 NVR C7).
 	 */
-	public static void checkRateDetails33(RateDetails33 obj) throws Exception {
+	public static void checkRateDetails34(RateDetails34 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -200,7 +199,7 @@ public class ConstraintDeemedRate2Rule {
 	 * may be present. <br>
 	 * (MT 564 NVR C7).
 	 */
-	public static void checkRateDetails34(RateDetails34 obj) throws Exception {
+	public static void checkRateDetails31(RateDetails31 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

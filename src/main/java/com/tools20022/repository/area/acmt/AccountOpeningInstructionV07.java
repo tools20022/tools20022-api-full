@@ -125,12 +125,12 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintInvestmentAccountIdentificationRule#forAccountOpeningInstructionV07
- * ConstraintInvestmentAccountIdentificationRule.forAccountOpeningInstructionV07
- * }</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInvestmentAccountIdentificationRule#for_acmt_AccountOpeningInstructionV07
+ * ConstraintInvestmentAccountIdentificationRule.
+ * for_acmt_AccountOpeningInstructionV07}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintUnitRule#forAccountOpeningInstructionV07
- * ConstraintUnitRule.forAccountOpeningInstructionV07}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintUnitRule#for_acmt_AccountOpeningInstructionV07
+ * ConstraintUnitRule.for_acmt_AccountOpeningInstructionV07}</li>
  * </ul>
  * </li>
  * <li>
@@ -1003,8 +1003,8 @@ public class AccountOpeningInstructionV07 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestmentAccountIdentificationRule.forAccountOpeningInstructionV07,
-						com.tools20022.repository.constraints.ConstraintUnitRule.forAccountOpeningInstructionV07);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestmentAccountIdentificationRule.for_acmt_AccountOpeningInstructionV07,
+						com.tools20022.repository.constraints.ConstraintUnitRule.for_acmt_AccountOpeningInstructionV07);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountOpeningInstructionV07";
 				definition = "Scope\r\nThe AccountOpeningInstruction message is sent by an account owner, for example, an investor or its designated agent to the account servicer, for example, a registrar, transfer agent, custodian or securities depository, to instruct the opening of an account or the opening of an account and the establishment of an investment plan.\r\nUsage\r\nThe AccountOpeningInstruction is used to open an account directly or indirectly with the account servicer or an intermediary.\r\nIn some markets, for example, Australia, and for some products in the United Kingdom, a first order (also known as a deposit instruction) is placed at the same time as the account opening. To cater for this scenario, an order message can be linked (via references in the message) to the AccountOpeningInstruction message when needed.\r\nExecution of the AccountOpeningInstruction is confirmed via an AccountDetailsConfirmation message.";

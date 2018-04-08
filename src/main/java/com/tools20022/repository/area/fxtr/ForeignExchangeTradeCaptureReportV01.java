@@ -109,14 +109,16 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintRequestRejectedRule#forForeignExchangeTradeCaptureReportV01
- * ConstraintRequestRejectedRule.forForeignExchangeTradeCaptureReportV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintRequestRejectedRule#for_fxtr_ForeignExchangeTradeCaptureReportV01
+ * ConstraintRequestRejectedRule.for_fxtr_ForeignExchangeTradeCaptureReportV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintRequestResponderRule#forForeignExchangeTradeCaptureReportV01
- * ConstraintRequestResponderRule.forForeignExchangeTradeCaptureReportV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintRequestResponderRule#for_fxtr_ForeignExchangeTradeCaptureReportV01
+ * ConstraintRequestResponderRule.for_fxtr_ForeignExchangeTradeCaptureReportV01}
+ * </li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintTotalNumberTradesRule#forForeignExchangeTradeCaptureReportV01
- * ConstraintTotalNumberTradesRule.forForeignExchangeTradeCaptureReportV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTotalNumberTradesRule#for_fxtr_ForeignExchangeTradeCaptureReportV01
+ * ConstraintTotalNumberTradesRule.for_fxtr_ForeignExchangeTradeCaptureReportV01
+ * }</li>
  * </ul>
  * </li>
  * <li>
@@ -697,9 +699,9 @@ public class ForeignExchangeTradeCaptureReportV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRequestRejectedRule.forForeignExchangeTradeCaptureReportV01,
-						com.tools20022.repository.constraints.ConstraintRequestResponderRule.forForeignExchangeTradeCaptureReportV01,
-						com.tools20022.repository.constraints.ConstraintTotalNumberTradesRule.forForeignExchangeTradeCaptureReportV01);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRequestRejectedRule.for_fxtr_ForeignExchangeTradeCaptureReportV01,
+						com.tools20022.repository.constraints.ConstraintRequestResponderRule.for_fxtr_ForeignExchangeTradeCaptureReportV01,
+						com.tools20022.repository.constraints.ConstraintTotalNumberTradesRule.for_fxtr_ForeignExchangeTradeCaptureReportV01);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ForeignExchangeTradeCaptureReportV01";
 				definition = "Scope\r\nThe ForeignExchangeTradeCaptureReport message is sent by a trading system to a participant for notification and providing details of a treasury trade.\r\nUsage\r\nThe report is sent by the trading system to the two trading parties after their trade has been executed. \r\nThe report can also be sent by the trading system to a trading parties to respond their inquiry (TradeCaptureRequest). \r\nNote that multiple reports can be sent to respond one inquiry message.\r\nThe message may contains trade details and trading parties' information.";

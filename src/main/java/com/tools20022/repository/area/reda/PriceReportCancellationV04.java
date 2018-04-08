@@ -118,11 +118,13 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCompletePriceCancellation1Rule#forPriceReportCancellationV04
- * ConstraintCompletePriceCancellation1Rule.forPriceReportCancellationV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCompletePriceCancellation1Rule#for_reda_PriceReportCancellationV04
+ * ConstraintCompletePriceCancellation1Rule.for_reda_PriceReportCancellationV04}
+ * </li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCompletePriceCancellation2Rule#forPriceReportCancellationV04
- * ConstraintCompletePriceCancellation2Rule.forPriceReportCancellationV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCompletePriceCancellation2Rule#for_reda_PriceReportCancellationV04
+ * ConstraintCompletePriceCancellation2Rule.for_reda_PriceReportCancellationV04}
+ * </li>
  * </ul>
  * </li>
  * <li>
@@ -659,8 +661,8 @@ public class PriceReportCancellationV04 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCompletePriceCancellation1Rule.forPriceReportCancellationV04,
-						com.tools20022.repository.constraints.ConstraintCompletePriceCancellation2Rule.forPriceReportCancellationV04);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCompletePriceCancellation1Rule.for_reda_PriceReportCancellationV04,
+						com.tools20022.repository.constraints.ConstraintCompletePriceCancellation2Rule.for_reda_PriceReportCancellationV04);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceReportCancellationV04";
 				definition = "SCOPE\r\nA report provider, for example, a transfer agent, fund accountant or market data provider, sends the PriceReportCancellation message to the report recipient, for example, a fund management company, transfer agent, market data provider, regulator or any other interested party to cancel previously sent prices.\n\r\nUSAGE\r\nThe PriceReportCancellation message is used to either: \n- cancel an entire PriceReport that was previously sent (by quoting the business reference of the original price report in the PriceReportIdentification element), or,\n- cancel one or more individual prices from a previously sent price report (by using the PriceDetailsToBeCancelled sequence).\nTechnically, it is possible to cancel all the prices individually by using the PriceDetailsToBeCancelled sequence, but this is not recommended.\nThe cancellation should not contain the cancellation of prices for more than one NAV date. \r\n\r\n";

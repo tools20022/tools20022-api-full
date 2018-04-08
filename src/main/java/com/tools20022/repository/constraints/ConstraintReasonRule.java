@@ -35,8 +35,8 @@ public class ConstraintReasonRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.choice.Reason1Choice Reason1Choice}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.choice.Reason17Choice
+	 * Reason17Choice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -50,17 +50,17 @@ public class ConstraintReasonRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<Reason1Choice> forReason1Choice = new MMConstraint<Reason1Choice>() {
+	public static final MMConstraint<Reason17Choice> forReason17Choice = new MMConstraint<Reason17Choice>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonRule";
 			definition = "If the reason is requested, then it must be in line with the reasons available for the message type requested.";
-			owner_lazy = () -> Reason1Choice.mmObject();
+			owner_lazy = () -> Reason17Choice.mmObject();
 		}
 
 		@Override
-		public void executeValidator(Reason1Choice obj) throws Exception {
-			checkReason1Choice(obj);
+		public void executeValidator(Reason17Choice obj) throws Exception {
+			checkReason17Choice(obj);
 		}
 	};
 	/**
@@ -69,8 +69,8 @@ public class ConstraintReasonRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.choice.Reason6Choice Reason6Choice}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.choice.Reason12Choice
+	 * Reason12Choice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -82,53 +82,34 @@ public class ConstraintReasonRule {
 	 * definition} =
 	 * "If the reason is requested, then it must be in line with the reasons available for the message type requested."
 	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<Reason6Choice> forReason6Choice = new MMConstraint<Reason6Choice>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ReasonRule";
-			definition = "If the reason is requested, then it must be in line with the reasons available for the message type requested.";
-			owner_lazy = () -> Reason6Choice.mmObject();
-		}
-
-		@Override
-		public void executeValidator(Reason6Choice obj) throws Exception {
-			checkReason6Choice(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.choice.Reason2Choice Reason2Choice}
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintReasonRule#forReason14Choice
+	 * ConstraintReasonRule.forReason14Choice}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ReasonRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If the reason is requested, then it must be in line with the reasons available for the message type requested."
-	 * </li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintReasonRule#forReason7Choice
+	 * ConstraintReasonRule.forReason7Choice}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<Reason2Choice> forReason2Choice = new MMConstraint<Reason2Choice>() {
+	public static final MMConstraint<Reason12Choice> forReason12Choice = new MMConstraint<Reason12Choice>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonRule";
 			definition = "If the reason is requested, then it must be in line with the reasons available for the message type requested.";
-			owner_lazy = () -> Reason2Choice.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReasonRule.forReason14Choice);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReasonRule.forReason7Choice;
+			owner_lazy = () -> Reason12Choice.mmObject();
 		}
 
 		@Override
-		public void executeValidator(Reason2Choice obj) throws Exception {
-			checkReason2Choice(obj);
+		public void executeValidator(Reason12Choice obj) throws Exception {
+			checkReason12Choice(obj);
 		}
 	};
 	/**
@@ -163,6 +144,40 @@ public class ConstraintReasonRule {
 		@Override
 		public void executeValidator(Reason10Choice obj) throws Exception {
 			checkReason10Choice(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.choice.Reason11Choice
+	 * Reason11Choice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ReasonRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If the reason is requested, then it must be in line with the reasons available for the message type requested."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<Reason11Choice> forReason11Choice = new MMConstraint<Reason11Choice>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ReasonRule";
+			definition = "If the reason is requested, then it must be in line with the reasons available for the message type requested.";
+			owner_lazy = () -> Reason11Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Reason11Choice obj) throws Exception {
+			checkReason11Choice(obj);
 		}
 	};
 	/**
@@ -214,8 +229,8 @@ public class ConstraintReasonRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.choice.Reason11Choice
-	 * Reason11Choice}</li>
+	 * {@linkplain com.tools20022.repository.choice.Reason2Choice Reason2Choice}
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -229,17 +244,17 @@ public class ConstraintReasonRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<Reason11Choice> forReason11Choice = new MMConstraint<Reason11Choice>() {
+	public static final MMConstraint<Reason2Choice> forReason2Choice = new MMConstraint<Reason2Choice>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonRule";
 			definition = "If the reason is requested, then it must be in line with the reasons available for the message type requested.";
-			owner_lazy = () -> Reason11Choice.mmObject();
+			owner_lazy = () -> Reason2Choice.mmObject();
 		}
 
 		@Override
-		public void executeValidator(Reason11Choice obj) throws Exception {
-			checkReason11Choice(obj);
+		public void executeValidator(Reason2Choice obj) throws Exception {
+			checkReason2Choice(obj);
 		}
 	};
 	/**
@@ -248,8 +263,8 @@ public class ConstraintReasonRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.choice.Reason12Choice
-	 * Reason12Choice}</li>
+	 * {@linkplain com.tools20022.repository.choice.Reason15Choice
+	 * Reason15Choice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -261,34 +276,127 @@ public class ConstraintReasonRule {
 	 * definition} =
 	 * "If the reason is requested, then it must be in line with the reasons available for the message type requested."
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintReasonRule#forReason14Choice
-	 * ConstraintReasonRule.forReason14Choice}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintReasonRule#forReason7Choice
-	 * ConstraintReasonRule.forReason7Choice}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<Reason12Choice> forReason12Choice = new MMConstraint<Reason12Choice>() {
+	public static final MMConstraint<Reason15Choice> forReason15Choice = new MMConstraint<Reason15Choice>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonRule";
 			definition = "If the reason is requested, then it must be in line with the reasons available for the message type requested.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReasonRule.forReason14Choice);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReasonRule.forReason7Choice;
-			owner_lazy = () -> Reason12Choice.mmObject();
+			owner_lazy = () -> Reason15Choice.mmObject();
 		}
 
 		@Override
-		public void executeValidator(Reason12Choice obj) throws Exception {
-			checkReason12Choice(obj);
+		public void executeValidator(Reason15Choice obj) throws Exception {
+			checkReason15Choice(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.choice.Reason6Choice Reason6Choice}
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ReasonRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If the reason is requested, then it must be in line with the reasons available for the message type requested."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<Reason6Choice> forReason6Choice = new MMConstraint<Reason6Choice>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ReasonRule";
+			definition = "If the reason is requested, then it must be in line with the reasons available for the message type requested.";
+			owner_lazy = () -> Reason6Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Reason6Choice obj) throws Exception {
+			checkReason6Choice(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.choice.Reason1Choice Reason1Choice}
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ReasonRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If the reason is requested, then it must be in line with the reasons available for the message type requested."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<Reason1Choice> forReason1Choice = new MMConstraint<Reason1Choice>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ReasonRule";
+			definition = "If the reason is requested, then it must be in line with the reasons available for the message type requested.";
+			owner_lazy = () -> Reason1Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Reason1Choice obj) throws Exception {
+			checkReason1Choice(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.choice.Reason16Choice
+	 * Reason16Choice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ReasonRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If the reason is requested, then it must be in line with the reasons available for the message type requested."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintReasonRule#forReason14Choice
+	 * ConstraintReasonRule.forReason14Choice}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<Reason16Choice> forReason16Choice = new MMConstraint<Reason16Choice>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ReasonRule";
+			definition = "If the reason is requested, then it must be in line with the reasons available for the message type requested.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReasonRule.forReason14Choice;
+			owner_lazy = () -> Reason16Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Reason16Choice obj) throws Exception {
+			checkReason16Choice(obj);
 		}
 	};
 	/**
@@ -374,120 +482,12 @@ public class ConstraintReasonRule {
 			checkReason14Choice(obj);
 		}
 	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.choice.Reason15Choice
-	 * Reason15Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ReasonRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If the reason is requested, then it must be in line with the reasons available for the message type requested."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<Reason15Choice> forReason15Choice = new MMConstraint<Reason15Choice>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ReasonRule";
-			definition = "If the reason is requested, then it must be in line with the reasons available for the message type requested.";
-			owner_lazy = () -> Reason15Choice.mmObject();
-		}
-
-		@Override
-		public void executeValidator(Reason15Choice obj) throws Exception {
-			checkReason15Choice(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.choice.Reason16Choice
-	 * Reason16Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ReasonRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If the reason is requested, then it must be in line with the reasons available for the message type requested."
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintReasonRule#forReason14Choice
-	 * ConstraintReasonRule.forReason14Choice}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<Reason16Choice> forReason16Choice = new MMConstraint<Reason16Choice>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ReasonRule";
-			definition = "If the reason is requested, then it must be in line with the reasons available for the message type requested.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReasonRule.forReason14Choice;
-			owner_lazy = () -> Reason16Choice.mmObject();
-		}
-
-		@Override
-		public void executeValidator(Reason16Choice obj) throws Exception {
-			checkReason16Choice(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.choice.Reason17Choice
-	 * Reason17Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ReasonRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If the reason is requested, then it must be in line with the reasons available for the message type requested."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<Reason17Choice> forReason17Choice = new MMConstraint<Reason17Choice>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ReasonRule";
-			definition = "If the reason is requested, then it must be in line with the reasons available for the message type requested.";
-			owner_lazy = () -> Reason17Choice.mmObject();
-		}
-
-		@Override
-		public void executeValidator(Reason17Choice obj) throws Exception {
-			checkReason17Choice(obj);
-		}
-	};
 
 	/**
 	 * If the reason is requested, then it must be in line with the reasons
 	 * available for the message type requested.
 	 */
-	public static void checkReason1Choice(Reason1Choice obj) throws Exception {
+	public static void checkReason17Choice(Reason17Choice obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -495,15 +495,7 @@ public class ConstraintReasonRule {
 	 * If the reason is requested, then it must be in line with the reasons
 	 * available for the message type requested.
 	 */
-	public static void checkReason6Choice(Reason6Choice obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If the reason is requested, then it must be in line with the reasons
-	 * available for the message type requested.
-	 */
-	public static void checkReason2Choice(Reason2Choice obj) throws Exception {
+	public static void checkReason12Choice(Reason12Choice obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -519,14 +511,6 @@ public class ConstraintReasonRule {
 	 * If the reason is requested, then it must be in line with the reasons
 	 * available for the message type requested.
 	 */
-	public static void checkReason7Choice(Reason7Choice obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If the reason is requested, then it must be in line with the reasons
-	 * available for the message type requested.
-	 */
 	public static void checkReason11Choice(Reason11Choice obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
@@ -535,7 +519,47 @@ public class ConstraintReasonRule {
 	 * If the reason is requested, then it must be in line with the reasons
 	 * available for the message type requested.
 	 */
-	public static void checkReason12Choice(Reason12Choice obj) throws Exception {
+	public static void checkReason7Choice(Reason7Choice obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If the reason is requested, then it must be in line with the reasons
+	 * available for the message type requested.
+	 */
+	public static void checkReason2Choice(Reason2Choice obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If the reason is requested, then it must be in line with the reasons
+	 * available for the message type requested.
+	 */
+	public static void checkReason15Choice(Reason15Choice obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If the reason is requested, then it must be in line with the reasons
+	 * available for the message type requested.
+	 */
+	public static void checkReason6Choice(Reason6Choice obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If the reason is requested, then it must be in line with the reasons
+	 * available for the message type requested.
+	 */
+	public static void checkReason1Choice(Reason1Choice obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If the reason is requested, then it must be in line with the reasons
+	 * available for the message type requested.
+	 */
+	public static void checkReason16Choice(Reason16Choice obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -552,30 +576,6 @@ public class ConstraintReasonRule {
 	 * available for the message type requested.
 	 */
 	public static void checkReason14Choice(Reason14Choice obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If the reason is requested, then it must be in line with the reasons
-	 * available for the message type requested.
-	 */
-	public static void checkReason15Choice(Reason15Choice obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If the reason is requested, then it must be in line with the reasons
-	 * available for the message type requested.
-	 */
-	public static void checkReason16Choice(Reason16Choice obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If the reason is requested, then it must be in line with the reasons
-	 * available for the message type requested.
-	 */
-	public static void checkReason17Choice(Reason17Choice obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

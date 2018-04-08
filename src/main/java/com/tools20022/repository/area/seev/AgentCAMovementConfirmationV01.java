@@ -187,10 +187,10 @@ public class AgentCAMovementConfirmationV01 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MovementInstructionIDOrElectionStatusAdviceIDOrGlobalDistributionStatusAdviceIDRule";
 			definition = "Either AgentCAMovementInstructionIdentification or AgentCAElectionStatusAdviceIdentification or AgentCAGlobalDistributionStatusAdviceIdentification must be present.";
-			messageDefinition_lazy = () -> com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.mmObject();
 			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.mmAgentCAMovementInstructionIdentification,
 					com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.mmAgentCAElectionStatusAdviceIdentification,
 					com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.mmAgentCAGlobalDistributionStatusAdviceIdentification);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.mmObject();
 		}
 	};
 	@XmlElement(name = "Id", required = true)

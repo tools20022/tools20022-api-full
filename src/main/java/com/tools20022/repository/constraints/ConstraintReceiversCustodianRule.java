@@ -38,6 +38,40 @@ public class ConstraintReceiversCustodianRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount5
+	 * ReceivingPartiesAndAccount5}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ReceiversCustodianRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If ReceiversIntermediaryDetails is present, then ReceiversCustodianDetails must be present. If ReceiversIntermediaryDetails is not present, then ReceiversCustodianDetails is optional."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<ReceivingPartiesAndAccount5> forReceivingPartiesAndAccount5 = new MMConstraint<ReceivingPartiesAndAccount5>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ReceiversCustodianRule";
+			definition = "If ReceiversIntermediaryDetails is present, then ReceiversCustodianDetails must be present. If ReceiversIntermediaryDetails is not present, then ReceiversCustodianDetails is optional.";
+			owner_lazy = () -> ReceivingPartiesAndAccount5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ReceivingPartiesAndAccount5 obj) throws Exception {
+			checkReceivingPartiesAndAccount5(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount3
 	 * ReceivingPartiesAndAccount3}</li>
 	 * <li>
@@ -73,40 +107,6 @@ public class ConstraintReceiversCustodianRule {
 		@Override
 		public void executeValidator(ReceivingPartiesAndAccount3 obj) throws Exception {
 			checkReceivingPartiesAndAccount3(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount5
-	 * ReceivingPartiesAndAccount5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ReceiversCustodianRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If ReceiversIntermediaryDetails is present, then ReceiversCustodianDetails must be present. If ReceiversIntermediaryDetails is not present, then ReceiversCustodianDetails is optional."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<ReceivingPartiesAndAccount5> forReceivingPartiesAndAccount5 = new MMConstraint<ReceivingPartiesAndAccount5>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ReceiversCustodianRule";
-			definition = "If ReceiversIntermediaryDetails is present, then ReceiversCustodianDetails must be present. If ReceiversIntermediaryDetails is not present, then ReceiversCustodianDetails is optional.";
-			owner_lazy = () -> ReceivingPartiesAndAccount5.mmObject();
-		}
-
-		@Override
-		public void executeValidator(ReceivingPartiesAndAccount5 obj) throws Exception {
-			checkReceivingPartiesAndAccount5(obj);
 		}
 	};
 	/**
@@ -161,7 +161,7 @@ public class ConstraintReceiversCustodianRule {
 	 * ReceiversIntermediaryDetails is not present, then
 	 * ReceiversCustodianDetails is optional.
 	 */
-	public static void checkReceivingPartiesAndAccount3(ReceivingPartiesAndAccount3 obj) throws Exception {
+	public static void checkReceivingPartiesAndAccount5(ReceivingPartiesAndAccount5 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -171,7 +171,7 @@ public class ConstraintReceiversCustodianRule {
 	 * ReceiversIntermediaryDetails is not present, then
 	 * ReceiversCustodianDetails is optional.
 	 */
-	public static void checkReceivingPartiesAndAccount5(ReceivingPartiesAndAccount5 obj) throws Exception {
+	public static void checkReceivingPartiesAndAccount3(ReceivingPartiesAndAccount3 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 

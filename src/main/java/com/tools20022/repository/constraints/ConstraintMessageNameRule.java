@@ -49,7 +49,7 @@ public class ConstraintMessageNameRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<OrderInstructionStatusReportV02> forOrderInstructionStatusReportV02 = new MMConstraint<OrderInstructionStatusReportV02>() {
+	public static final MMConstraint<OrderInstructionStatusReportV02> for_setr_OrderInstructionStatusReportV02 = new MMConstraint<OrderInstructionStatusReportV02>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageNameRule";
@@ -59,7 +59,7 @@ public class ConstraintMessageNameRule {
 
 		@Override
 		public void executeValidator(OrderInstructionStatusReportV02 obj) throws Exception {
-			checkOrderInstructionStatusReportV02(obj);
+			check_setr_OrderInstructionStatusReportV02(obj);
 		}
 	};
 
@@ -67,7 +67,7 @@ public class ConstraintMessageNameRule {
 	 * If MasterReference is present, then MasterReference/MessageName is not
 	 * allowed.
 	 */
-	public static void checkOrderInstructionStatusReportV02(OrderInstructionStatusReportV02 obj) throws Exception {
+	public static void check_setr_OrderInstructionStatusReportV02(OrderInstructionStatusReportV02 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

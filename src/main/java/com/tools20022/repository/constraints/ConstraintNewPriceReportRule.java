@@ -52,7 +52,7 @@ public class ConstraintNewPriceReportRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<PriceReportV04> forPriceReportV04 = new MMConstraint<PriceReportV04>() {
+	public static final MMConstraint<PriceReportV04> for_reda_PriceReportV04 = new MMConstraint<PriceReportV04>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewPriceReportRule";
@@ -63,7 +63,7 @@ public class ConstraintNewPriceReportRule {
 
 		@Override
 		public void executeValidator(PriceReportV04 obj) throws Exception {
-			checkPriceReportV04(obj);
+			check_reda_PriceReportV04(obj);
 		}
 	};
 
@@ -71,7 +71,7 @@ public class ConstraintNewPriceReportRule {
 	 * If Function is "NEWP" then CancellationIdentification must not be
 	 * present.
 	 */
-	public static void checkPriceReportV04(PriceReportV04 obj) throws Exception {
+	public static void check_reda_PriceReportV04(PriceReportV04 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

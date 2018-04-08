@@ -116,17 +116,18 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintMessageNameRule#forOrderInstructionStatusReportV02
- * ConstraintMessageNameRule.forOrderInstructionStatusReportV02}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMessageNameRule#for_setr_OrderInstructionStatusReportV02
+ * ConstraintMessageNameRule.for_setr_OrderInstructionStatusReportV02}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintRelatedReferenceGuideline#forOrderInstructionStatusReportV02
- * ConstraintRelatedReferenceGuideline.forOrderInstructionStatusReportV02}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintRelatedReferenceGuideline#for_setr_OrderInstructionStatusReportV02
+ * ConstraintRelatedReferenceGuideline.for_setr_OrderInstructionStatusReportV02}
+ * </li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintOtherReferenceGuideline#forOrderInstructionStatusReportV02
- * ConstraintOtherReferenceGuideline.forOrderInstructionStatusReportV02}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOtherReferenceGuideline#for_setr_OrderInstructionStatusReportV02
+ * ConstraintOtherReferenceGuideline.for_setr_OrderInstructionStatusReportV02}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintStatusCancelledGuideline#forOrderInstructionStatusReportV02
- * ConstraintStatusCancelledGuideline.forOrderInstructionStatusReportV02}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintStatusCancelledGuideline#for_setr_OrderInstructionStatusReportV02
+ * ConstraintStatusCancelledGuideline.for_setr_OrderInstructionStatusReportV02}</li>
  * </ul>
  * </li>
  * <li>
@@ -196,9 +197,9 @@ public class OrderInstructionStatusReportV02 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderDetailsOrIndividualOrderDetailsRule";
 			definition = "If OrderDetailsReport is present, then no occurrence of IndividualOrderDetailsReport is allowed. If OrderDetailsReport is not present, then at least one occurrence of IndividualOrderDetailsReport must be present.";
-			messageDefinition_lazy = () -> com.tools20022.repository.area.setr.OrderInstructionStatusReportV02.mmObject();
 			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderInstructionStatusReportV02.mmOrderDetailsReport,
 					com.tools20022.repository.area.setr.OrderInstructionStatusReportV02.mmIndividualOrderDetailsReport);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.setr.OrderInstructionStatusReportV02.mmObject();
 		}
 	};
 	/**
@@ -241,9 +242,9 @@ public class OrderInstructionStatusReportV02 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReferenceOrOtherReferenceRule";
 			definition = "At least one occurrence of either RelatedReference or OtherReference must be present, but not both.";
-			messageDefinition_lazy = () -> com.tools20022.repository.area.setr.OrderInstructionStatusReportV02.mmObject();
 			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderInstructionStatusReportV02.mmOtherReference,
 					com.tools20022.repository.area.setr.OrderInstructionStatusReportV02.mmRelatedReference);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.setr.OrderInstructionStatusReportV02.mmObject();
 		}
 	};
 	@XmlElement(name = "OthrRef", required = true)
@@ -488,11 +489,10 @@ public class OrderInstructionStatusReportV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays
-						.asList(com.tools20022.repository.constraints.ConstraintMessageNameRule.forOrderInstructionStatusReportV02,
-								com.tools20022.repository.constraints.ConstraintRelatedReferenceGuideline.forOrderInstructionStatusReportV02,
-								com.tools20022.repository.constraints.ConstraintOtherReferenceGuideline.forOrderInstructionStatusReportV02,
-								com.tools20022.repository.constraints.ConstraintStatusCancelledGuideline.forOrderInstructionStatusReportV02);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMessageNameRule.for_setr_OrderInstructionStatusReportV02,
+						com.tools20022.repository.constraints.ConstraintRelatedReferenceGuideline.for_setr_OrderInstructionStatusReportV02,
+						com.tools20022.repository.constraints.ConstraintOtherReferenceGuideline.for_setr_OrderInstructionStatusReportV02,
+						com.tools20022.repository.constraints.ConstraintStatusCancelledGuideline.for_setr_OrderInstructionStatusReportV02);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OrderInstructionStatusReportV02";
 				definition = "Scope\r\nThe OrderInstructionStatusReport is sent by an executing party, eg, a transfer agent, to an instructing party, eg, an investment manager or its authorised representative. There may be one or more intermediary parties between the executing party and the instructing party. The intermediary party is, for example, an intermediary or a concentrator.\r\nThis message reports the status of an order from the time the executing party receives the order until the order is executed.\r\nUsage\r\nThe OrderInstructionStatusReport message is sent by an executing party to the instructing party to report on the status of a subscription, redemption or a switch order.\r\nThe message can be used to report one of the following:\r\n- a received status, or\r\n- an accepted status, or\r\n- a sent to next party status, or\r\n- an already executed status, or\r\n- a cancelled status, or\r\n- a conditionally accepted status, or\r\n- a rejected status, or\r\n- a suspended status, or\r\n- an in-repair status (at the individual order level only), or\r\n- repaired conditions (at the individual order level only).\r\nFor subscription and redemption orders, the OrderInstructionStatusReport message covers both bulk and multiple categories of orders, and this message may provide the status either at the bulk or at the individual level.\r\nFor a switch order, this message provides the status of the whole order, ie, it is not possible to accept one leg and to reject the other leg, the entire switch order has to be rejected. In order to identify which leg within the switch is causing a problem, the redemption or subscription leg identification is used.";

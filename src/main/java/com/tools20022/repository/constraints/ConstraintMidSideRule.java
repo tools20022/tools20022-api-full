@@ -36,7 +36,7 @@ public class ConstraintMidSideRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.QuoteSide1 QuoteSide1}</li>
+	 * {@linkplain com.tools20022.repository.msg.QuoteEntry1 QuoteEntry1}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -50,17 +50,17 @@ public class ConstraintMidSideRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<QuoteSide1> forQuoteSide1 = new MMConstraint<QuoteSide1>() {
+	public static final MMConstraint<QuoteEntry1> forQuoteEntry1 = new MMConstraint<QuoteEntry1>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MidSideRule";
 			definition = "If MidSide is present then MinimumQuantity, MaximumQuantity, Quantity and MarketPrice must not be present.";
-			owner_lazy = () -> QuoteSide1.mmObject();
+			owner_lazy = () -> QuoteEntry1.mmObject();
 		}
 
 		@Override
-		public void executeValidator(QuoteSide1 obj) throws Exception {
-			checkQuoteSide1(obj);
+		public void executeValidator(QuoteEntry1 obj) throws Exception {
+			checkQuoteEntry1(obj);
 		}
 	};
 	/**
@@ -102,7 +102,7 @@ public class ConstraintMidSideRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.QuoteEntry1 QuoteEntry1}</li>
+	 * {@linkplain com.tools20022.repository.msg.QuoteSide1 QuoteSide1}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -116,17 +116,17 @@ public class ConstraintMidSideRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<QuoteEntry1> forQuoteEntry1 = new MMConstraint<QuoteEntry1>() {
+	public static final MMConstraint<QuoteSide1> forQuoteSide1 = new MMConstraint<QuoteSide1>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MidSideRule";
 			definition = "If MidSide is present then MinimumQuantity, MaximumQuantity, Quantity and MarketPrice must not be present.";
-			owner_lazy = () -> QuoteEntry1.mmObject();
+			owner_lazy = () -> QuoteSide1.mmObject();
 		}
 
 		@Override
-		public void executeValidator(QuoteEntry1 obj) throws Exception {
-			checkQuoteEntry1(obj);
+		public void executeValidator(QuoteSide1 obj) throws Exception {
+			checkQuoteSide1(obj);
 		}
 	};
 
@@ -134,7 +134,7 @@ public class ConstraintMidSideRule {
 	 * If MidSide is present then MinimumQuantity, MaximumQuantity, Quantity and
 	 * MarketPrice must not be present.
 	 */
-	public static void checkQuoteSide1(QuoteSide1 obj) throws Exception {
+	public static void checkQuoteEntry1(QuoteEntry1 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -150,7 +150,7 @@ public class ConstraintMidSideRule {
 	 * If MidSide is present then MinimumQuantity, MaximumQuantity, Quantity and
 	 * MarketPrice must not be present.
 	 */
-	public static void checkQuoteEntry1(QuoteEntry1 obj) throws Exception {
+	public static void checkQuoteSide1(QuoteSide1 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

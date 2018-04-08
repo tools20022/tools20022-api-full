@@ -39,72 +39,6 @@ public class ConstraintPaymentInstructionStatusRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.Transactions2 Transactions2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PaymentInstructionStatusRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If PaymentCommonInformation/PaymentInstructionStatus is present, then TransactionReport/Transaction/Payment/InstructionStatus/PaymentInstructionStatus is not allowed.\nIf PaymentCommonInformation/PaymentInstructionStatus is not present, then TransactionReport/Transaction/Payment/InstructionStatus/PaymentInstructionStatus is optional."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<Transactions2> forTransactions2 = new MMConstraint<Transactions2>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "PaymentInstructionStatusRule";
-			definition = "If PaymentCommonInformation/PaymentInstructionStatus is present, then TransactionReport/Transaction/Payment/InstructionStatus/PaymentInstructionStatus is not allowed.\nIf PaymentCommonInformation/PaymentInstructionStatus is not present, then TransactionReport/Transaction/Payment/InstructionStatus/PaymentInstructionStatus is optional.";
-			owner_lazy = () -> Transactions2.mmObject();
-		}
-
-		@Override
-		public void executeValidator(Transactions2 obj) throws Exception {
-			checkTransactions2(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.Transactions3 Transactions3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PaymentInstructionStatusRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If PaymentCommonInformation/PaymentInstructionStatus is present, then TransactionReport/Transaction/Payment/InstructionStatus/PaymentInstructionStatus is not allowed.\nIf PaymentCommonInformation/PaymentInstructionStatus is not present, then TransactionReport/Transaction/Payment/InstructionStatus/PaymentInstructionStatus is optional."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<Transactions3> forTransactions3 = new MMConstraint<Transactions3>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "PaymentInstructionStatusRule";
-			definition = "If PaymentCommonInformation/PaymentInstructionStatus is present, then TransactionReport/Transaction/Payment/InstructionStatus/PaymentInstructionStatus is not allowed.\nIf PaymentCommonInformation/PaymentInstructionStatus is not present, then TransactionReport/Transaction/Payment/InstructionStatus/PaymentInstructionStatus is optional.";
-			owner_lazy = () -> Transactions3.mmObject();
-		}
-
-		@Override
-		public void executeValidator(Transactions3 obj) throws Exception {
-			checkTransactions3(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Transactions4 Transactions4}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -238,6 +172,39 @@ public class ConstraintPaymentInstructionStatusRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.Transactions3 Transactions3}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PaymentInstructionStatusRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PaymentCommonInformation/PaymentInstructionStatus is present, then TransactionReport/Transaction/Payment/InstructionStatus/PaymentInstructionStatus is not allowed.\nIf PaymentCommonInformation/PaymentInstructionStatus is not present, then TransactionReport/Transaction/Payment/InstructionStatus/PaymentInstructionStatus is optional."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<Transactions3> forTransactions3 = new MMConstraint<Transactions3>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PaymentInstructionStatusRule";
+			definition = "If PaymentCommonInformation/PaymentInstructionStatus is present, then TransactionReport/Transaction/Payment/InstructionStatus/PaymentInstructionStatus is not allowed.\nIf PaymentCommonInformation/PaymentInstructionStatus is not present, then TransactionReport/Transaction/Payment/InstructionStatus/PaymentInstructionStatus is optional.";
+			owner_lazy = () -> Transactions3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transactions3 obj) throws Exception {
+			checkTransactions3(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Transactions7 Transactions7}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
 	 * expression} =
@@ -276,30 +243,39 @@ public class ConstraintPaymentInstructionStatusRule {
 			checkTransactions7(obj);
 		}
 	};
-
 	/**
-	 * If PaymentCommonInformation/PaymentInstructionStatus is present, then
-	 * TransactionReport
-	 * /Transaction/Payment/InstructionStatus/PaymentInstructionStatus is not
-	 * allowed. If PaymentCommonInformation/PaymentInstructionStatus is not
-	 * present, then TransactionReport/Transaction/Payment/InstructionStatus/
-	 * PaymentInstructionStatus is optional.
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.Transactions2 Transactions2}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PaymentInstructionStatusRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PaymentCommonInformation/PaymentInstructionStatus is present, then TransactionReport/Transaction/Payment/InstructionStatus/PaymentInstructionStatus is not allowed.\nIf PaymentCommonInformation/PaymentInstructionStatus is not present, then TransactionReport/Transaction/Payment/InstructionStatus/PaymentInstructionStatus is optional."
+	 * </li>
+	 * </ul>
 	 */
-	public static void checkTransactions2(Transactions2 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
+	public static final MMConstraint<Transactions2> forTransactions2 = new MMConstraint<Transactions2>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PaymentInstructionStatusRule";
+			definition = "If PaymentCommonInformation/PaymentInstructionStatus is present, then TransactionReport/Transaction/Payment/InstructionStatus/PaymentInstructionStatus is not allowed.\nIf PaymentCommonInformation/PaymentInstructionStatus is not present, then TransactionReport/Transaction/Payment/InstructionStatus/PaymentInstructionStatus is optional.";
+			owner_lazy = () -> Transactions2.mmObject();
+		}
 
-	/**
-	 * If PaymentCommonInformation/PaymentInstructionStatus is present, then
-	 * TransactionReport
-	 * /Transaction/Payment/InstructionStatus/PaymentInstructionStatus is not
-	 * allowed. If PaymentCommonInformation/PaymentInstructionStatus is not
-	 * present, then TransactionReport/Transaction/Payment/InstructionStatus/
-	 * PaymentInstructionStatus is optional.
-	 */
-	public static void checkTransactions3(Transactions3 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
+		@Override
+		public void executeValidator(Transactions2 obj) throws Exception {
+			checkTransactions2(obj);
+		}
+	};
 
 	/**
 	 * If PaymentCommonInformation/PaymentInstructionStatus is present, then
@@ -345,7 +321,31 @@ public class ConstraintPaymentInstructionStatusRule {
 	 * present, then TransactionReport/Transaction/Payment/InstructionStatus/
 	 * PaymentInstructionStatus is optional.
 	 */
+	public static void checkTransactions3(Transactions3 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PaymentCommonInformation/PaymentInstructionStatus is present, then
+	 * TransactionReport
+	 * /Transaction/Payment/InstructionStatus/PaymentInstructionStatus is not
+	 * allowed. If PaymentCommonInformation/PaymentInstructionStatus is not
+	 * present, then TransactionReport/Transaction/Payment/InstructionStatus/
+	 * PaymentInstructionStatus is optional.
+	 */
 	public static void checkTransactions7(Transactions7 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PaymentCommonInformation/PaymentInstructionStatus is present, then
+	 * TransactionReport
+	 * /Transaction/Payment/InstructionStatus/PaymentInstructionStatus is not
+	 * allowed. If PaymentCommonInformation/PaymentInstructionStatus is not
+	 * present, then TransactionReport/Transaction/Payment/InstructionStatus/
+	 * PaymentInstructionStatus is optional.
+	 */
+	public static void checkTransactions2(Transactions2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

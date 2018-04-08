@@ -194,6 +194,7 @@ public class PaymentsInitiationArchive {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Payments Initiation - Archive - master";
 				definition = "Messages that support the initiation of a payment from the ordering customer to a financial institution that services a cash account and reporting its status.";
+				code = "pain";
 				messageDefinition_lazy = () -> Arrays.asList(CustomerCreditTransferInitiationV02.mmObject(), CustomerCreditTransferInitiationV03.mmObject(), CustomerCreditTransferInitiationV04.mmObject(),
 						CustomerCreditTransferInitiationV05.mmObject(), CustomerDirectDebitInitiationV01.mmObject(), CustomerDirectDebitInitiationV02.mmObject(), CustomerDirectDebitInitiationV03.mmObject(),
 						CustomerDirectDebitInitiationV04.mmObject(), PaymentCancellationRequestV01.mmObject(), CustomerPaymentReversalV01.mmObject(), CustomerPaymentReversalV02.mmObject(), CustomerPaymentReversalV03.mmObject(),
@@ -204,7 +205,6 @@ public class PaymentsInitiationArchive {
 						CreditorPaymentActivationRequestStatusReportV03.mmObject(), CreditorPaymentActivationRequestV01.mmObject(), CreditorPaymentActivationRequestV02.mmObject(), CreditorPaymentActivationRequestV03.mmObject(),
 						CustomerPaymentReversalV05.mmObject(), CustomerCreditTransferInitiationV06.mmObject(), CustomerPaymentStatusReportV06.mmObject(), CustomerDirectDebitInitiationV05.mmObject(),
 						CreditorPaymentActivationRequestStatusReportV04.mmObject(), CreditorPaymentActivationRequestV04.mmObject(), CustomerPaymentReversalV06.mmObject(), CustomerPaymentStatusReportV07.mmObject());
-				code = "pain";
 			}
 		});
 		return mmObject_lazy.get();

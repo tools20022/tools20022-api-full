@@ -98,23 +98,23 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus1Rule#forPaymentStatusReportV02
- * ConstraintGroupAndTransactionStatus1Rule.forPaymentStatusReportV02}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus1Rule#for_pain_PaymentStatusReportV02
+ * ConstraintGroupAndTransactionStatus1Rule.for_pain_PaymentStatusReportV02}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus2Rule#forPaymentStatusReportV02
- * ConstraintGroupAndTransactionStatus2Rule.forPaymentStatusReportV02}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus2Rule#for_pain_PaymentStatusReportV02
+ * ConstraintGroupAndTransactionStatus2Rule.for_pain_PaymentStatusReportV02}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus3Rule#forPaymentStatusReportV02
- * ConstraintGroupAndTransactionStatus3Rule.forPaymentStatusReportV02}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus3Rule#for_pain_PaymentStatusReportV02
+ * ConstraintGroupAndTransactionStatus3Rule.for_pain_PaymentStatusReportV02}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus4Rule#forPaymentStatusReportV02
- * ConstraintGroupAndTransactionStatus4Rule.forPaymentStatusReportV02}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus4Rule#for_pain_PaymentStatusReportV02
+ * ConstraintGroupAndTransactionStatus4Rule.for_pain_PaymentStatusReportV02}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintInstructedAgentRule#forPaymentStatusReportV02
- * ConstraintInstructedAgentRule.forPaymentStatusReportV02}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInstructedAgentRule#for_pain_PaymentStatusReportV02
+ * ConstraintInstructedAgentRule.for_pain_PaymentStatusReportV02}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintInstructingAgentRule#forPaymentStatusReportV02
- * ConstraintInstructingAgentRule.forPaymentStatusReportV02}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInstructingAgentRule#for_pain_PaymentStatusReportV02
+ * ConstraintInstructingAgentRule.for_pain_PaymentStatusReportV02}</li>
  * </ul>
  * </li>
  * <li>
@@ -288,10 +288,11 @@ public class PaymentStatusReportV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus1Rule.forPaymentStatusReportV02,
-						com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus2Rule.forPaymentStatusReportV02, com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus3Rule.forPaymentStatusReportV02,
-						com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus4Rule.forPaymentStatusReportV02, com.tools20022.repository.constraints.ConstraintInstructedAgentRule.forPaymentStatusReportV02,
-						com.tools20022.repository.constraints.ConstraintInstructingAgentRule.forPaymentStatusReportV02);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus1Rule.for_pain_PaymentStatusReportV02,
+						com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus2Rule.for_pain_PaymentStatusReportV02,
+						com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus3Rule.for_pain_PaymentStatusReportV02,
+						com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus4Rule.for_pain_PaymentStatusReportV02, com.tools20022.repository.constraints.ConstraintInstructedAgentRule.for_pain_PaymentStatusReportV02,
+						com.tools20022.repository.constraints.ConstraintInstructingAgentRule.for_pain_PaymentStatusReportV02);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentStatusReportV02";
 				definition = "Scope\r\nThe PaymentStatusReport message is sent by an instructed agent to the previous party in the payment chain. It is used to inform this party about the positive or negative status of an instruction (either single or file). It is also used to report on a pending instruction.\r\nUsage\r\nThe PaymentStatusReport message is exchanged between an agent and a non-financial institution customer to provide status information on instructions previously sent. Its usage will always be governed by a bilateral agreement between the agent and the non-financial institution customer.\r\nThe PaymentStatusReport message can be used to provide information about the status (e.g. rejection, acceptance) of the initiation of a credit transfer, a direct debit, as well as on the initiation of other customer instructions (e.g. PaymentCancellationRequest).\r\nThe PaymentStatusReport message refers to the original instruction(s) by means of references only or by means of references and a set of elements from the original instruction.\r\nThe PaymentStatusReport message can be used in domestic and cross-border scenarios.\r\nThe PaymentStatusReport message exchanged between agents and non-financial institution customers is identified in the schema as follows: urn:iso:std:iso:20022:tech:xsd:pain.002.001.02.";

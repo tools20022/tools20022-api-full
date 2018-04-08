@@ -122,13 +122,13 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#forSecuritiesStatusOrStatementQueryStatusAdviceV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#for_sese_SecuritiesStatusOrStatementQueryStatusAdviceV01
  * ConstraintCoexistenceCharacterSetXRule.
- * forSecuritiesStatusOrStatementQueryStatusAdviceV01}</li>
+ * for_sese_SecuritiesStatusOrStatementQueryStatusAdviceV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forSecuritiesStatusOrStatementQueryStatusAdviceV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#for_sese_SecuritiesStatusOrStatementQueryStatusAdviceV01
  * ConstraintCoexistenceIdentificationRule.
- * forSecuritiesStatusOrStatementQueryStatusAdviceV01}</li>
+ * for_sese_SecuritiesStatusOrStatementQueryStatusAdviceV01}</li>
  * </ul>
  * </li>
  * <li>
@@ -585,8 +585,8 @@ public class SecuritiesStatusOrStatementQueryStatusAdviceV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesStatusOrStatementQueryStatusAdviceV01,
-						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesStatusOrStatementQueryStatusAdviceV01);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.for_sese_SecuritiesStatusOrStatementQueryStatusAdviceV01,
+						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.for_sese_SecuritiesStatusOrStatementQueryStatusAdviceV01);
 				semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, "MT 548, Seq A :23G:INST, Seq A2 :25D::SPRC"));
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesStatusOrStatementQueryStatusAdviceV01";

@@ -125,21 +125,22 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintPreviousTradeDateRule#forFundConfirmedCashForecastReportV04
- * ConstraintPreviousTradeDateRule.forFundConfirmedCashForecastReportV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPreviousTradeDateRule#for_camt_FundConfirmedCashForecastReportV04
+ * ConstraintPreviousTradeDateRule.for_camt_FundConfirmedCashForecastReportV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintTradeDate1Rule#forFundConfirmedCashForecastReportV04
- * ConstraintTradeDate1Rule.forFundConfirmedCashForecastReportV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTradeDate1Rule#for_camt_FundConfirmedCashForecastReportV04
+ * ConstraintTradeDate1Rule.for_camt_FundConfirmedCashForecastReportV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintTradeDate2Rule#forFundConfirmedCashForecastReportV04
- * ConstraintTradeDate2Rule.forFundConfirmedCashForecastReportV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTradeDate2Rule#for_camt_FundConfirmedCashForecastReportV04
+ * ConstraintTradeDate2Rule.for_camt_FundConfirmedCashForecastReportV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintConsolidatedNetCashRule#forFundConfirmedCashForecastReportV04
- * ConstraintConsolidatedNetCashRule.forFundConfirmedCashForecastReportV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintConsolidatedNetCashRule#for_camt_FundConfirmedCashForecastReportV04
+ * ConstraintConsolidatedNetCashRule.for_camt_FundConfirmedCashForecastReportV04
+ * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintFundOrSubFundAndShareClassGuideline#forFundConfirmedCashForecastReportV04
+ * {@linkplain com.tools20022.repository.constraints.ConstraintFundOrSubFundAndShareClassGuideline#for_camt_FundConfirmedCashForecastReportV04
  * ConstraintFundOrSubFundAndShareClassGuideline.
- * forFundConfirmedCashForecastReportV04}</li>
+ * for_camt_FundConfirmedCashForecastReportV04}</li>
  * </ul>
  * </li>
  * <li>
@@ -629,10 +630,10 @@ public class FundConfirmedCashForecastReportV04 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPreviousTradeDateRule.forFundConfirmedCashForecastReportV04,
-						com.tools20022.repository.constraints.ConstraintTradeDate1Rule.forFundConfirmedCashForecastReportV04, com.tools20022.repository.constraints.ConstraintTradeDate2Rule.forFundConfirmedCashForecastReportV04,
-						com.tools20022.repository.constraints.ConstraintConsolidatedNetCashRule.forFundConfirmedCashForecastReportV04,
-						com.tools20022.repository.constraints.ConstraintFundOrSubFundAndShareClassGuideline.forFundConfirmedCashForecastReportV04);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPreviousTradeDateRule.for_camt_FundConfirmedCashForecastReportV04,
+						com.tools20022.repository.constraints.ConstraintTradeDate1Rule.for_camt_FundConfirmedCashForecastReportV04, com.tools20022.repository.constraints.ConstraintTradeDate2Rule.for_camt_FundConfirmedCashForecastReportV04,
+						com.tools20022.repository.constraints.ConstraintConsolidatedNetCashRule.for_camt_FundConfirmedCashForecastReportV04,
+						com.tools20022.repository.constraints.ConstraintFundOrSubFundAndShareClassGuideline.for_camt_FundConfirmedCashForecastReportV04);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FundConfirmedCashForecastReportV04";
 				definition = "Scope\r\nA report provider, such as a transfer agent, sends the FundConfirmedCashForecastReport message to the report user, such as an investment manager or pricing agent, to report the confirmed cash incomings and outgoings of one or more share classes of an investment fund on one or more trade dates.\r\nThe cash movements may result from, for example, redemption, subscription, switch transactions or reinvestment of dividends.\r\nUsage\r\nThe FundConfirmedCashForecastReport is used to report definitive cash movements, that is it is sent after the cut-off time and/or the price valuation of the fund.\r\nThis message contains incoming and outgoing cash flows that are confirmed, that is, the price has been applied. If the price is not yet definitive, then the FundEstimatedCashForecastReport message must be used.\r\nThe message structure allows for the following uses:\r\n-\tto provide cash in and cash out amounts for a fund/sub fund (a FundOrSubFundDetails sequence is used),\r\n-\tto provide cash in and cash out amounts for a fund/sub fund and one or more share classes (FundOrSubFundDetails sequence and one or more FundCashForecastDetails sequences are used),\r\n-\tto provide cash in and cash out amounts for one or more share classes (one or more FundCashForecastDetails sequences are used).\r\n-\tto provide cash in and cash out amounts for more than one fund/sub fund, and more than one share classes (two or more FundOrSubFundDetails sequences and two or more FundCashForecastDetails sequences and used); however, it should be noted that, in this usage, there is no way to determine which share class belongs to which fund/sub fund from the message content itself, which may not be desirable and the use of this kind of combination should be bilaterally agreed.\r\nThis message allows the report provider to report cash movements in or out of a fund, but does not allow the Sender to categorise these movements, for example by country, or to give details of the underlying orders, commission or charges.\r\nIf the report provider wishes to give detailed information related to cash movements, then the FundDetailedConfirmedCashForecastReport message must be used.";

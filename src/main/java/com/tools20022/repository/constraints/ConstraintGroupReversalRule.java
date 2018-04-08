@@ -49,7 +49,7 @@ public class ConstraintGroupReversalRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<FIToFIPaymentReversalV01> forFIToFIPaymentReversalV01 = new MMConstraint<FIToFIPaymentReversalV01>() {
+	public static final MMConstraint<FIToFIPaymentReversalV01> for_pacs_FIToFIPaymentReversalV01 = new MMConstraint<FIToFIPaymentReversalV01>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupReversalRule";
@@ -59,7 +59,7 @@ public class ConstraintGroupReversalRule {
 
 		@Override
 		public void executeValidator(FIToFIPaymentReversalV01 obj) throws Exception {
-			checkFIToFIPaymentReversalV01(obj);
+			check_pacs_FIToFIPaymentReversalV01(obj);
 		}
 	};
 
@@ -68,7 +68,7 @@ public class ConstraintGroupReversalRule {
 	 * GroupHeader/NumberOfTransactions must equal the number of occurrences of
 	 * TransactionInformation.
 	 */
-	public static void checkFIToFIPaymentReversalV01(FIToFIPaymentReversalV01 obj) throws Exception {
+	public static void check_pacs_FIToFIPaymentReversalV01(FIToFIPaymentReversalV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

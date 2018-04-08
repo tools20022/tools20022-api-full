@@ -35,6 +35,39 @@ public class ConstraintOtherStatusRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.RejectedStatusReason5
+	 * RejectedStatusReason5}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OtherStatusRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If Structured is Other, then AdditionalInformation is mandatory."</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<RejectedStatusReason5> forRejectedStatusReason5 = new MMConstraint<RejectedStatusReason5>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OtherStatusRule";
+			definition = "If Structured is Other, then AdditionalInformation is mandatory.";
+			owner_lazy = () -> RejectedStatusReason5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RejectedStatusReason5 obj) throws Exception {
+			checkRejectedStatusReason5(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PendingSettlementStatusReason1
 	 * PendingSettlementStatusReason1}</li>
 	 * <li>
@@ -95,39 +128,13 @@ public class ConstraintOtherStatusRule {
 			checkTransferUnmatchedStatusReason1(obj);
 		}
 	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.RejectedStatusReason5
-	 * RejectedStatusReason5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "OtherStatusRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If Structured is Other, then AdditionalInformation is mandatory."</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<RejectedStatusReason5> forRejectedStatusReason5 = new MMConstraint<RejectedStatusReason5>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "OtherStatusRule";
-			definition = "If Structured is Other, then AdditionalInformation is mandatory.";
-			owner_lazy = () -> RejectedStatusReason5.mmObject();
-		}
 
-		@Override
-		public void executeValidator(RejectedStatusReason5 obj) throws Exception {
-			checkRejectedStatusReason5(obj);
-		}
-	};
+	/**
+	 * If Structured is Other, then AdditionalInformation is mandatory.
+	 */
+	public static void checkRejectedStatusReason5(RejectedStatusReason5 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
 
 	/**
 	 * If Structured is Other, then AdditionalInformation is mandatory.
@@ -140,13 +147,6 @@ public class ConstraintOtherStatusRule {
 	 * If Structured is Other, then AdditionalInformation is mandatory.
 	 */
 	public static void checkTransferUnmatchedStatusReason1(TransferUnmatchedStatusReason1 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If Structured is Other, then AdditionalInformation is mandatory.
-	 */
-	public static void checkRejectedStatusReason5(RejectedStatusReason5 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

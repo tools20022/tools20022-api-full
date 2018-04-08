@@ -58,6 +58,644 @@ public class ConstraintSettlementParametersGuideline {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails101
+	 * SettlementDetails101}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementParametersGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline#forSettlementDetails120
+	 * ConstraintSettlementParametersGuideline.forSettlementDetails120}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline#forSettlementDetails93
+	 * ConstraintSettlementParametersGuideline.forSettlementDetails93}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SettlementDetails101> forSettlementDetails101 = new MMConstraint<SettlementDetails101>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementParametersGuideline";
+			definition = "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline.forSettlementDetails120);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline.forSettlementDetails93;
+			owner_lazy = () -> SettlementDetails101.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails101 obj) throws Exception {
+			checkSettlementDetails101(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails137
+	 * SettlementDetails137}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementParametersGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SettlementDetails137> forSettlementDetails137 = new MMConstraint<SettlementDetails137>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementParametersGuideline";
+			definition = "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info.";
+			owner_lazy = () -> SettlementDetails137.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails137 obj) throws Exception {
+			checkSettlementDetails137(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails156
+	 * SettlementDetails156}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementParametersGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SettlementDetails156> forSettlementDetails156 = new MMConstraint<SettlementDetails156>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementParametersGuideline";
+			definition = "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info.";
+			owner_lazy = () -> SettlementDetails156.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails156 obj) throws Exception {
+			checkSettlementDetails156(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails93
+	 * SettlementDetails93}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementParametersGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline#forSettlementDetails101
+	 * ConstraintSettlementParametersGuideline.forSettlementDetails101}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline#forSettlementDetails119
+	 * ConstraintSettlementParametersGuideline.forSettlementDetails119}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline#forSettlementDetails140
+	 * ConstraintSettlementParametersGuideline.forSettlementDetails140}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline#forSettlementDetails67
+	 * ConstraintSettlementParametersGuideline.forSettlementDetails67}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SettlementDetails93> forSettlementDetails93 = new MMConstraint<SettlementDetails93>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementParametersGuideline";
+			definition = "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline.forSettlementDetails101,
+					com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline.forSettlementDetails119, com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline.forSettlementDetails140);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline.forSettlementDetails67;
+			owner_lazy = () -> SettlementDetails93.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails93 obj) throws Exception {
+			checkSettlementDetails93(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails142
+	 * SettlementDetails142}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementParametersGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline#forSettlementDetails119
+	 * ConstraintSettlementParametersGuideline.forSettlementDetails119}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SettlementDetails142> forSettlementDetails142 = new MMConstraint<SettlementDetails142>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementParametersGuideline";
+			definition = "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline.forSettlementDetails119;
+			owner_lazy = () -> SettlementDetails142.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails142 obj) throws Exception {
+			checkSettlementDetails142(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails67
+	 * SettlementDetails67}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementParametersGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline#forSettlementDetails93
+	 * ConstraintSettlementParametersGuideline.forSettlementDetails93}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline#forSettlementDetails42
+	 * ConstraintSettlementParametersGuideline.forSettlementDetails42}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SettlementDetails67> forSettlementDetails67 = new MMConstraint<SettlementDetails67>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementParametersGuideline";
+			definition = "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline.forSettlementDetails93);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline.forSettlementDetails42;
+			owner_lazy = () -> SettlementDetails67.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails67 obj) throws Exception {
+			checkSettlementDetails67(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails145
+	 * SettlementDetails145}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementParametersGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline#forSettlementDetails120
+	 * ConstraintSettlementParametersGuideline.forSettlementDetails120}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SettlementDetails145> forSettlementDetails145 = new MMConstraint<SettlementDetails145>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementParametersGuideline";
+			definition = "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline.forSettlementDetails120;
+			owner_lazy = () -> SettlementDetails145.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails145 obj) throws Exception {
+			checkSettlementDetails145(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails120
+	 * SettlementDetails120}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementParametersGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline#forSettlementDetails145
+	 * ConstraintSettlementParametersGuideline.forSettlementDetails145}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline#forSettlementDetails101
+	 * ConstraintSettlementParametersGuideline.forSettlementDetails101}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SettlementDetails120> forSettlementDetails120 = new MMConstraint<SettlementDetails120>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementParametersGuideline";
+			definition = "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline.forSettlementDetails145);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline.forSettlementDetails101;
+			owner_lazy = () -> SettlementDetails120.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails120 obj) throws Exception {
+			checkSettlementDetails120(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails111
+	 * SettlementDetails111}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementParametersGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SettlementDetails111> forSettlementDetails111 = new MMConstraint<SettlementDetails111>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementParametersGuideline";
+			definition = "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info.";
+			owner_lazy = () -> SettlementDetails111.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails111 obj) throws Exception {
+			checkSettlementDetails111(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails52
+	 * SettlementDetails52}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementParametersGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SettlementDetails52> forSettlementDetails52 = new MMConstraint<SettlementDetails52>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementParametersGuideline";
+			definition = "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info.";
+			owner_lazy = () -> SettlementDetails52.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails52 obj) throws Exception {
+			checkSettlementDetails52(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails35
+	 * SettlementDetails35}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementParametersGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SettlementDetails35> forSettlementDetails35 = new MMConstraint<SettlementDetails35>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementParametersGuideline";
+			definition = "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info.";
+			owner_lazy = () -> SettlementDetails35.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails35 obj) throws Exception {
+			checkSettlementDetails35(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails157
+	 * SettlementDetails157}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementParametersGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SettlementDetails157> forSettlementDetails157 = new MMConstraint<SettlementDetails157>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementParametersGuideline";
+			definition = "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info.";
+			owner_lazy = () -> SettlementDetails157.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails157 obj) throws Exception {
+			checkSettlementDetails157(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails112
+	 * SettlementDetails112}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementParametersGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SettlementDetails112> forSettlementDetails112 = new MMConstraint<SettlementDetails112>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementParametersGuideline";
+			definition = "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info.";
+			owner_lazy = () -> SettlementDetails112.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails112 obj) throws Exception {
+			checkSettlementDetails112(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails81
+	 * SettlementDetails81}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementParametersGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SettlementDetails81> forSettlementDetails81 = new MMConstraint<SettlementDetails81>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementParametersGuideline";
+			definition = "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info.";
+			owner_lazy = () -> SettlementDetails81.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails81 obj) throws Exception {
+			checkSettlementDetails81(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails132
+	 * SettlementDetails132}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementParametersGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SettlementDetails132> forSettlementDetails132 = new MMConstraint<SettlementDetails132>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementParametersGuideline";
+			definition = "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info.";
+			owner_lazy = () -> SettlementDetails132.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails132 obj) throws Exception {
+			checkSettlementDetails132(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails119
+	 * SettlementDetails119}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementParametersGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline#forSettlementDetails142
+	 * ConstraintSettlementParametersGuideline.forSettlementDetails142}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline#forSettlementDetails93
+	 * ConstraintSettlementParametersGuideline.forSettlementDetails93}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SettlementDetails119> forSettlementDetails119 = new MMConstraint<SettlementDetails119>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementParametersGuideline";
+			definition = "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline.forSettlementDetails142);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline.forSettlementDetails93;
+			owner_lazy = () -> SettlementDetails119.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails119 obj) throws Exception {
+			checkSettlementDetails119(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SettlementDetails1
 	 * SettlementDetails1}</li>
 	 * <li>
@@ -84,6 +722,40 @@ public class ConstraintSettlementParametersGuideline {
 		@Override
 		public void executeValidator(SettlementDetails1 obj) throws Exception {
 			checkSettlementDetails1(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails43
+	 * SettlementDetails43}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementParametersGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SettlementDetails43> forSettlementDetails43 = new MMConstraint<SettlementDetails43>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementParametersGuideline";
+			definition = "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info.";
+			owner_lazy = () -> SettlementDetails43.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails43 obj) throws Exception {
+			checkSettlementDetails43(obj);
 		}
 	};
 	/**
@@ -160,8 +832,8 @@ public class ConstraintSettlementParametersGuideline {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails35
-	 * SettlementDetails35}</li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails140
+	 * SettlementDetails140}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -173,19 +845,25 @@ public class ConstraintSettlementParametersGuideline {
 	 * definition} =
 	 * "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline#forSettlementDetails93
+	 * ConstraintSettlementParametersGuideline.forSettlementDetails93}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<SettlementDetails35> forSettlementDetails35 = new MMConstraint<SettlementDetails35>() {
+	public static final MMConstraint<SettlementDetails140> forSettlementDetails140 = new MMConstraint<SettlementDetails140>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementParametersGuideline";
 			definition = "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info.";
-			owner_lazy = () -> SettlementDetails35.mmObject();
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline.forSettlementDetails93;
+			owner_lazy = () -> SettlementDetails140.mmObject();
 		}
 
 		@Override
-		public void executeValidator(SettlementDetails35 obj) throws Exception {
-			checkSettlementDetails35(obj);
+		public void executeValidator(SettlementDetails140 obj) throws Exception {
+			checkSettlementDetails140(obj);
 		}
 	};
 	/**
@@ -231,684 +909,518 @@ public class ConstraintSettlementParametersGuideline {
 			checkSettlementDetails42(obj);
 		}
 	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails52
-	 * SettlementDetails52}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementParametersGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SettlementDetails52> forSettlementDetails52 = new MMConstraint<SettlementDetails52>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementParametersGuideline";
-			definition = "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info.";
-			owner_lazy = () -> SettlementDetails52.mmObject();
-		}
 
-		@Override
-		public void executeValidator(SettlementDetails52 obj) throws Exception {
-			checkSettlementDetails52(obj);
-		}
-	};
 	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails43
-	 * SettlementDetails43}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementParametersGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info."
-	 * </li>
-	 * </ul>
+	 * • Physical settlement:<br>
+	 * In case of physical receipt at local agent level, the receiving agent
+	 * must receive a receipt free instruction<br>
+	 * for reconciliation purposes. If the final beneficiary of the securities
+	 * uses a global custodian, the receipt free<br>
+	 * instruction will be sent to the global custodian that will forward it to
+	 * his receiving agent on the market.<br>
+	 * For physical settlement, SettlementTransactionCondition/Physical must be
+	 * used.<br>
+	 * • Partial settlement:<br>
+	 * This market practice only applies in markets where partial settlement is
+	 * allowed.<br>
+	 * If an account owner wants to specify in its original instruction that
+	 * partial settlement is allowed or not, they<br>
+	 * must use the PartialSettlementIndicator.<br>
+	 * • Book Transfer:<br>
+	 * The use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other
+	 * booktransfer<br>
+	 * related fields is governed by a market practice document.<br>
+	 * • Block Trades:<br>
+	 * The parent transaction must be identified using the BloclTrade field with
+	 * code BLPA. The children<br>
+	 * transactions must be identified using the code BLCH.<br>
+	 * <br>
+	 * For more details, see the relevant market practice document on
+	 * www.smpg.info.
 	 */
-	public static final MMConstraint<SettlementDetails43> forSettlementDetails43 = new MMConstraint<SettlementDetails43>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementParametersGuideline";
-			definition = "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info.";
-			owner_lazy = () -> SettlementDetails43.mmObject();
-		}
+	public static void checkSettlementDetails101(SettlementDetails101 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
 
-		@Override
-		public void executeValidator(SettlementDetails43 obj) throws Exception {
-			checkSettlementDetails43(obj);
-		}
-	};
 	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails67
-	 * SettlementDetails67}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementParametersGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline#forSettlementDetails93
-	 * ConstraintSettlementParametersGuideline.forSettlementDetails93}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline#forSettlementDetails42
-	 * ConstraintSettlementParametersGuideline.forSettlementDetails42}</li>
-	 * </ul>
+	 * • Physical settlement:<br>
+	 * In case of physical receipt at local agent level, the receiving agent
+	 * must receive a receipt free instruction<br>
+	 * for reconciliation purposes. If the final beneficiary of the securities
+	 * uses a global custodian, the receipt free<br>
+	 * instruction will be sent to the global custodian that will forward it to
+	 * his receiving agent on the market.<br>
+	 * For physical settlement, SettlementTransactionCondition/Physical must be
+	 * used.<br>
+	 * • Partial settlement:<br>
+	 * This market practice only applies in markets where partial settlement is
+	 * allowed.<br>
+	 * If an account owner wants to specify in its original instruction that
+	 * partial settlement is allowed or not, they<br>
+	 * must use the PartialSettlementIndicator.<br>
+	 * • Book Transfer:<br>
+	 * The use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other
+	 * booktransfer<br>
+	 * related fields is governed by a market practice document.<br>
+	 * • Block Trades:<br>
+	 * The parent transaction must be identified using the BloclTrade field with
+	 * code BLPA. The children<br>
+	 * transactions must be identified using the code BLCH.<br>
+	 * <br>
+	 * For more details, see the relevant market practice document on
+	 * www.smpg.info.
 	 */
-	public static final MMConstraint<SettlementDetails67> forSettlementDetails67 = new MMConstraint<SettlementDetails67>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementParametersGuideline";
-			definition = "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline.forSettlementDetails93);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline.forSettlementDetails42;
-			owner_lazy = () -> SettlementDetails67.mmObject();
-		}
+	public static void checkSettlementDetails137(SettlementDetails137 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
 
-		@Override
-		public void executeValidator(SettlementDetails67 obj) throws Exception {
-			checkSettlementDetails67(obj);
-		}
-	};
 	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails81
-	 * SettlementDetails81}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementParametersGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info."
-	 * </li>
-	 * </ul>
+	 * • Physical settlement:<br>
+	 * In case of physical receipt at local agent level, the receiving agent
+	 * must receive a receipt free instruction<br>
+	 * for reconciliation purposes. If the final beneficiary of the securities
+	 * uses a global custodian, the receipt free<br>
+	 * instruction will be sent to the global custodian that will forward it to
+	 * his receiving agent on the market.<br>
+	 * For physical settlement, SettlementTransactionCondition/Physical must be
+	 * used.<br>
+	 * • Partial settlement:<br>
+	 * This market practice only applies in markets where partial settlement is
+	 * allowed.<br>
+	 * If an account owner wants to specify in its original instruction that
+	 * partial settlement is allowed or not, they<br>
+	 * must use the PartialSettlementIndicator.<br>
+	 * • Book Transfer:<br>
+	 * The use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other
+	 * booktransfer<br>
+	 * related fields is governed by a market practice document.<br>
+	 * • Block Trades:<br>
+	 * The parent transaction must be identified using the BloclTrade field with
+	 * code BLPA. The children<br>
+	 * transactions must be identified using the code BLCH.<br>
+	 * <br>
+	 * For more details, see the relevant market practice document on
+	 * www.smpg.info.
 	 */
-	public static final MMConstraint<SettlementDetails81> forSettlementDetails81 = new MMConstraint<SettlementDetails81>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementParametersGuideline";
-			definition = "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info.";
-			owner_lazy = () -> SettlementDetails81.mmObject();
-		}
+	public static void checkSettlementDetails156(SettlementDetails156 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
 
-		@Override
-		public void executeValidator(SettlementDetails81 obj) throws Exception {
-			checkSettlementDetails81(obj);
-		}
-	};
 	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails93
-	 * SettlementDetails93}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementParametersGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline#forSettlementDetails101
-	 * ConstraintSettlementParametersGuideline.forSettlementDetails101}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline#forSettlementDetails119
-	 * ConstraintSettlementParametersGuideline.forSettlementDetails119}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline#forSettlementDetails140
-	 * ConstraintSettlementParametersGuideline.forSettlementDetails140}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline#forSettlementDetails67
-	 * ConstraintSettlementParametersGuideline.forSettlementDetails67}</li>
-	 * </ul>
+	 * • Physical settlement:<br>
+	 * In case of physical receipt at local agent level, the receiving agent
+	 * must receive a receipt free instruction<br>
+	 * for reconciliation purposes. If the final beneficiary of the securities
+	 * uses a global custodian, the receipt free<br>
+	 * instruction will be sent to the global custodian that will forward it to
+	 * his receiving agent on the market.<br>
+	 * For physical settlement, SettlementTransactionCondition/Physical must be
+	 * used.<br>
+	 * • Partial settlement:<br>
+	 * This market practice only applies in markets where partial settlement is
+	 * allowed.<br>
+	 * If an account owner wants to specify in its original instruction that
+	 * partial settlement is allowed or not, they<br>
+	 * must use the PartialSettlementIndicator.<br>
+	 * • Book Transfer:<br>
+	 * The use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other
+	 * booktransfer<br>
+	 * related fields is governed by a market practice document.<br>
+	 * • Block Trades:<br>
+	 * The parent transaction must be identified using the BloclTrade field with
+	 * code BLPA. The children<br>
+	 * transactions must be identified using the code BLCH.<br>
+	 * <br>
+	 * For more details, see the relevant market practice document on
+	 * www.smpg.info.
 	 */
-	public static final MMConstraint<SettlementDetails93> forSettlementDetails93 = new MMConstraint<SettlementDetails93>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementParametersGuideline";
-			definition = "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline.forSettlementDetails101,
-					com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline.forSettlementDetails119, com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline.forSettlementDetails140);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline.forSettlementDetails67;
-			owner_lazy = () -> SettlementDetails93.mmObject();
-		}
+	public static void checkSettlementDetails93(SettlementDetails93 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
 
-		@Override
-		public void executeValidator(SettlementDetails93 obj) throws Exception {
-			checkSettlementDetails93(obj);
-		}
-	};
 	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails101
-	 * SettlementDetails101}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementParametersGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline#forSettlementDetails120
-	 * ConstraintSettlementParametersGuideline.forSettlementDetails120}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline#forSettlementDetails93
-	 * ConstraintSettlementParametersGuideline.forSettlementDetails93}</li>
-	 * </ul>
+	 * • Physical settlement:<br>
+	 * In case of physical receipt at local agent level, the receiving agent
+	 * must receive a receipt free instruction<br>
+	 * for reconciliation purposes. If the final beneficiary of the securities
+	 * uses a global custodian, the receipt free<br>
+	 * instruction will be sent to the global custodian that will forward it to
+	 * his receiving agent on the market.<br>
+	 * For physical settlement, SettlementTransactionCondition/Physical must be
+	 * used.<br>
+	 * • Partial settlement:<br>
+	 * This market practice only applies in markets where partial settlement is
+	 * allowed.<br>
+	 * If an account owner wants to specify in its original instruction that
+	 * partial settlement is allowed or not, they<br>
+	 * must use the PartialSettlementIndicator.<br>
+	 * • Book Transfer:<br>
+	 * The use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other
+	 * booktransfer<br>
+	 * related fields is governed by a market practice document.<br>
+	 * • Block Trades:<br>
+	 * The parent transaction must be identified using the BloclTrade field with
+	 * code BLPA. The children<br>
+	 * transactions must be identified using the code BLCH.<br>
+	 * <br>
+	 * For more details, see the relevant market practice document on
+	 * www.smpg.info.
 	 */
-	public static final MMConstraint<SettlementDetails101> forSettlementDetails101 = new MMConstraint<SettlementDetails101>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementParametersGuideline";
-			definition = "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline.forSettlementDetails120);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline.forSettlementDetails93;
-			owner_lazy = () -> SettlementDetails101.mmObject();
-		}
+	public static void checkSettlementDetails142(SettlementDetails142 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
 
-		@Override
-		public void executeValidator(SettlementDetails101 obj) throws Exception {
-			checkSettlementDetails101(obj);
-		}
-	};
 	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails111
-	 * SettlementDetails111}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementParametersGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info."
-	 * </li>
-	 * </ul>
+	 * • Physical settlement:<br>
+	 * In case of physical receipt at local agent level, the receiving agent
+	 * must receive a receipt free instruction<br>
+	 * for reconciliation purposes. If the final beneficiary of the securities
+	 * uses a global custodian, the receipt free<br>
+	 * instruction will be sent to the global custodian that will forward it to
+	 * his receiving agent on the market.<br>
+	 * For physical settlement, SettlementTransactionCondition/Physical must be
+	 * used.<br>
+	 * • Partial settlement:<br>
+	 * This market practice only applies in markets where partial settlement is
+	 * allowed.<br>
+	 * If an account owner wants to specify in its original instruction that
+	 * partial settlement is allowed or not, they<br>
+	 * must use the PartialSettlementIndicator.<br>
+	 * • Book Transfer:<br>
+	 * The use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other
+	 * booktransfer<br>
+	 * related fields is governed by a market practice document.<br>
+	 * • Block Trades:<br>
+	 * The parent transaction must be identified using the BloclTrade field with
+	 * code BLPA. The children<br>
+	 * transactions must be identified using the code BLCH.<br>
+	 * <br>
+	 * For more details, see the relevant market practice document on
+	 * www.smpg.info.
 	 */
-	public static final MMConstraint<SettlementDetails111> forSettlementDetails111 = new MMConstraint<SettlementDetails111>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementParametersGuideline";
-			definition = "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info.";
-			owner_lazy = () -> SettlementDetails111.mmObject();
-		}
+	public static void checkSettlementDetails67(SettlementDetails67 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
 
-		@Override
-		public void executeValidator(SettlementDetails111 obj) throws Exception {
-			checkSettlementDetails111(obj);
-		}
-	};
 	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails112
-	 * SettlementDetails112}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementParametersGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info."
-	 * </li>
-	 * </ul>
+	 * • Physical settlement:<br>
+	 * In case of physical receipt at local agent level, the receiving agent
+	 * must receive a receipt free instruction<br>
+	 * for reconciliation purposes. If the final beneficiary of the securities
+	 * uses a global custodian, the receipt free<br>
+	 * instruction will be sent to the global custodian that will forward it to
+	 * his receiving agent on the market.<br>
+	 * For physical settlement, SettlementTransactionCondition/Physical must be
+	 * used.<br>
+	 * • Partial settlement:<br>
+	 * This market practice only applies in markets where partial settlement is
+	 * allowed.<br>
+	 * If an account owner wants to specify in its original instruction that
+	 * partial settlement is allowed or not, they<br>
+	 * must use the PartialSettlementIndicator.<br>
+	 * • Book Transfer:<br>
+	 * The use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other
+	 * booktransfer<br>
+	 * related fields is governed by a market practice document.<br>
+	 * • Block Trades:<br>
+	 * The parent transaction must be identified using the BloclTrade field with
+	 * code BLPA. The children<br>
+	 * transactions must be identified using the code BLCH.<br>
+	 * <br>
+	 * For more details, see the relevant market practice document on
+	 * www.smpg.info.
 	 */
-	public static final MMConstraint<SettlementDetails112> forSettlementDetails112 = new MMConstraint<SettlementDetails112>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementParametersGuideline";
-			definition = "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info.";
-			owner_lazy = () -> SettlementDetails112.mmObject();
-		}
+	public static void checkSettlementDetails145(SettlementDetails145 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
 
-		@Override
-		public void executeValidator(SettlementDetails112 obj) throws Exception {
-			checkSettlementDetails112(obj);
-		}
-	};
 	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails120
-	 * SettlementDetails120}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementParametersGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline#forSettlementDetails145
-	 * ConstraintSettlementParametersGuideline.forSettlementDetails145}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline#forSettlementDetails101
-	 * ConstraintSettlementParametersGuideline.forSettlementDetails101}</li>
-	 * </ul>
+	 * • Physical settlement:<br>
+	 * In case of physical receipt at local agent level, the receiving agent
+	 * must receive a receipt free instruction<br>
+	 * for reconciliation purposes. If the final beneficiary of the securities
+	 * uses a global custodian, the receipt free<br>
+	 * instruction will be sent to the global custodian that will forward it to
+	 * his receiving agent on the market.<br>
+	 * For physical settlement, SettlementTransactionCondition/Physical must be
+	 * used.<br>
+	 * • Partial settlement:<br>
+	 * This market practice only applies in markets where partial settlement is
+	 * allowed.<br>
+	 * If an account owner wants to specify in its original instruction that
+	 * partial settlement is allowed or not, they<br>
+	 * must use the PartialSettlementIndicator.<br>
+	 * • Book Transfer:<br>
+	 * The use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other
+	 * booktransfer<br>
+	 * related fields is governed by a market practice document.<br>
+	 * • Block Trades:<br>
+	 * The parent transaction must be identified using the BloclTrade field with
+	 * code BLPA. The children<br>
+	 * transactions must be identified using the code BLCH.<br>
+	 * <br>
+	 * For more details, see the relevant market practice document on
+	 * www.smpg.info.
 	 */
-	public static final MMConstraint<SettlementDetails120> forSettlementDetails120 = new MMConstraint<SettlementDetails120>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementParametersGuideline";
-			definition = "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline.forSettlementDetails145);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline.forSettlementDetails101;
-			owner_lazy = () -> SettlementDetails120.mmObject();
-		}
+	public static void checkSettlementDetails120(SettlementDetails120 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
 
-		@Override
-		public void executeValidator(SettlementDetails120 obj) throws Exception {
-			checkSettlementDetails120(obj);
-		}
-	};
 	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails119
-	 * SettlementDetails119}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementParametersGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline#forSettlementDetails142
-	 * ConstraintSettlementParametersGuideline.forSettlementDetails142}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline#forSettlementDetails93
-	 * ConstraintSettlementParametersGuideline.forSettlementDetails93}</li>
-	 * </ul>
+	 * • Physical settlement:<br>
+	 * In case of physical receipt at local agent level, the receiving agent
+	 * must receive a receipt free instruction<br>
+	 * for reconciliation purposes. If the final beneficiary of the securities
+	 * uses a global custodian, the receipt free<br>
+	 * instruction will be sent to the global custodian that will forward it to
+	 * his receiving agent on the market.<br>
+	 * For physical settlement, SettlementTransactionCondition/Physical must be
+	 * used.<br>
+	 * • Partial settlement:<br>
+	 * This market practice only applies in markets where partial settlement is
+	 * allowed.<br>
+	 * If an account owner wants to specify in its original instruction that
+	 * partial settlement is allowed or not, they<br>
+	 * must use the PartialSettlementIndicator.<br>
+	 * • Book Transfer:<br>
+	 * The use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other
+	 * booktransfer<br>
+	 * related fields is governed by a market practice document.<br>
+	 * • Block Trades:<br>
+	 * The parent transaction must be identified using the BloclTrade field with
+	 * code BLPA. The children<br>
+	 * transactions must be identified using the code BLCH.<br>
+	 * <br>
+	 * For more details, see the relevant market practice document on
+	 * www.smpg.info.
 	 */
-	public static final MMConstraint<SettlementDetails119> forSettlementDetails119 = new MMConstraint<SettlementDetails119>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementParametersGuideline";
-			definition = "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline.forSettlementDetails142);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline.forSettlementDetails93;
-			owner_lazy = () -> SettlementDetails119.mmObject();
-		}
+	public static void checkSettlementDetails111(SettlementDetails111 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
 
-		@Override
-		public void executeValidator(SettlementDetails119 obj) throws Exception {
-			checkSettlementDetails119(obj);
-		}
-	};
 	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails137
-	 * SettlementDetails137}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementParametersGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info."
-	 * </li>
-	 * </ul>
+	 * • Physical settlement:<br>
+	 * In case of physical receipt at local agent level, the receiving agent
+	 * must receive a receipt free instruction<br>
+	 * for reconciliation purposes. If the final beneficiary of the securities
+	 * uses a global custodian, the receipt free<br>
+	 * instruction will be sent to the global custodian that will forward it to
+	 * his receiving agent on the market.<br>
+	 * For physical settlement, SettlementTransactionCondition/Physical must be
+	 * used.<br>
+	 * • Partial settlement:<br>
+	 * This market practice only applies in markets where partial settlement is
+	 * allowed.<br>
+	 * If an account owner wants to specify in its original instruction that
+	 * partial settlement is allowed or not, they<br>
+	 * must use the PartialSettlementIndicator.<br>
+	 * • Book Transfer:<br>
+	 * The use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other
+	 * booktransfer<br>
+	 * related fields is governed by a market practice document.<br>
+	 * • Block Trades:<br>
+	 * The parent transaction must be identified using the BloclTrade field with
+	 * code BLPA. The children<br>
+	 * transactions must be identified using the code BLCH.<br>
+	 * <br>
+	 * For more details, see the relevant market practice document on
+	 * www.smpg.info.
 	 */
-	public static final MMConstraint<SettlementDetails137> forSettlementDetails137 = new MMConstraint<SettlementDetails137>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementParametersGuideline";
-			definition = "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info.";
-			owner_lazy = () -> SettlementDetails137.mmObject();
-		}
+	public static void checkSettlementDetails52(SettlementDetails52 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
 
-		@Override
-		public void executeValidator(SettlementDetails137 obj) throws Exception {
-			checkSettlementDetails137(obj);
-		}
-	};
 	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails132
-	 * SettlementDetails132}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementParametersGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info."
-	 * </li>
-	 * </ul>
+	 * • Physical settlement:<br>
+	 * In case of physical receipt at local agent level, the receiving agent
+	 * must receive a receipt free instruction<br>
+	 * for reconciliation purposes. If the final beneficiary of the securities
+	 * uses a global custodian, the receipt free<br>
+	 * instruction will be sent to the global custodian that will forward it to
+	 * his receiving agent on the market.<br>
+	 * For physical settlement, SettlementTransactionCondition/Physical must be
+	 * used.<br>
+	 * • Partial settlement:<br>
+	 * This market practice only applies in markets where partial settlement is
+	 * allowed.<br>
+	 * If an account owner wants to specify in its original instruction that
+	 * partial settlement is allowed or not, they<br>
+	 * must use the PartialSettlementIndicator.<br>
+	 * • Book Transfer:<br>
+	 * The use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other
+	 * booktransfer<br>
+	 * related fields is governed by a market practice document.<br>
+	 * • Block Trades:<br>
+	 * The parent transaction must be identified using the BloclTrade field with
+	 * code BLPA. The children<br>
+	 * transactions must be identified using the code BLCH.<br>
+	 * <br>
+	 * For more details, see the relevant market practice document on
+	 * www.smpg.info.
 	 */
-	public static final MMConstraint<SettlementDetails132> forSettlementDetails132 = new MMConstraint<SettlementDetails132>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementParametersGuideline";
-			definition = "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info.";
-			owner_lazy = () -> SettlementDetails132.mmObject();
-		}
+	public static void checkSettlementDetails35(SettlementDetails35 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
 
-		@Override
-		public void executeValidator(SettlementDetails132 obj) throws Exception {
-			checkSettlementDetails132(obj);
-		}
-	};
 	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails140
-	 * SettlementDetails140}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementParametersGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info."
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline#forSettlementDetails93
-	 * ConstraintSettlementParametersGuideline.forSettlementDetails93}</li>
-	 * </ul>
+	 * • Physical settlement:<br>
+	 * In case of physical receipt at local agent level, the receiving agent
+	 * must receive a receipt free instruction<br>
+	 * for reconciliation purposes. If the final beneficiary of the securities
+	 * uses a global custodian, the receipt free<br>
+	 * instruction will be sent to the global custodian that will forward it to
+	 * his receiving agent on the market.<br>
+	 * For physical settlement, SettlementTransactionCondition/Physical must be
+	 * used.<br>
+	 * • Partial settlement:<br>
+	 * This market practice only applies in markets where partial settlement is
+	 * allowed.<br>
+	 * If an account owner wants to specify in its original instruction that
+	 * partial settlement is allowed or not, they<br>
+	 * must use the PartialSettlementIndicator.<br>
+	 * • Book Transfer:<br>
+	 * The use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other
+	 * booktransfer<br>
+	 * related fields is governed by a market practice document.<br>
+	 * • Block Trades:<br>
+	 * The parent transaction must be identified using the BloclTrade field with
+	 * code BLPA. The children<br>
+	 * transactions must be identified using the code BLCH.<br>
+	 * <br>
+	 * For more details, see the relevant market practice document on
+	 * www.smpg.info.
 	 */
-	public static final MMConstraint<SettlementDetails140> forSettlementDetails140 = new MMConstraint<SettlementDetails140>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementParametersGuideline";
-			definition = "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline.forSettlementDetails93;
-			owner_lazy = () -> SettlementDetails140.mmObject();
-		}
+	public static void checkSettlementDetails157(SettlementDetails157 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
 
-		@Override
-		public void executeValidator(SettlementDetails140 obj) throws Exception {
-			checkSettlementDetails140(obj);
-		}
-	};
 	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails142
-	 * SettlementDetails142}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementParametersGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info."
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline#forSettlementDetails119
-	 * ConstraintSettlementParametersGuideline.forSettlementDetails119}</li>
-	 * </ul>
+	 * • Physical settlement:<br>
+	 * In case of physical receipt at local agent level, the receiving agent
+	 * must receive a receipt free instruction<br>
+	 * for reconciliation purposes. If the final beneficiary of the securities
+	 * uses a global custodian, the receipt free<br>
+	 * instruction will be sent to the global custodian that will forward it to
+	 * his receiving agent on the market.<br>
+	 * For physical settlement, SettlementTransactionCondition/Physical must be
+	 * used.<br>
+	 * • Partial settlement:<br>
+	 * This market practice only applies in markets where partial settlement is
+	 * allowed.<br>
+	 * If an account owner wants to specify in its original instruction that
+	 * partial settlement is allowed or not, they<br>
+	 * must use the PartialSettlementIndicator.<br>
+	 * • Book Transfer:<br>
+	 * The use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other
+	 * booktransfer<br>
+	 * related fields is governed by a market practice document.<br>
+	 * • Block Trades:<br>
+	 * The parent transaction must be identified using the BloclTrade field with
+	 * code BLPA. The children<br>
+	 * transactions must be identified using the code BLCH.<br>
+	 * <br>
+	 * For more details, see the relevant market practice document on
+	 * www.smpg.info.
 	 */
-	public static final MMConstraint<SettlementDetails142> forSettlementDetails142 = new MMConstraint<SettlementDetails142>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementParametersGuideline";
-			definition = "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline.forSettlementDetails119;
-			owner_lazy = () -> SettlementDetails142.mmObject();
-		}
+	public static void checkSettlementDetails112(SettlementDetails112 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
 
-		@Override
-		public void executeValidator(SettlementDetails142 obj) throws Exception {
-			checkSettlementDetails142(obj);
-		}
-	};
 	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails145
-	 * SettlementDetails145}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementParametersGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info."
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline#forSettlementDetails120
-	 * ConstraintSettlementParametersGuideline.forSettlementDetails120}</li>
-	 * </ul>
+	 * • Physical settlement:<br>
+	 * In case of physical receipt at local agent level, the receiving agent
+	 * must receive a receipt free instruction<br>
+	 * for reconciliation purposes. If the final beneficiary of the securities
+	 * uses a global custodian, the receipt free<br>
+	 * instruction will be sent to the global custodian that will forward it to
+	 * his receiving agent on the market.<br>
+	 * For physical settlement, SettlementTransactionCondition/Physical must be
+	 * used.<br>
+	 * • Partial settlement:<br>
+	 * This market practice only applies in markets where partial settlement is
+	 * allowed.<br>
+	 * If an account owner wants to specify in its original instruction that
+	 * partial settlement is allowed or not, they<br>
+	 * must use the PartialSettlementIndicator.<br>
+	 * • Book Transfer:<br>
+	 * The use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other
+	 * booktransfer<br>
+	 * related fields is governed by a market practice document.<br>
+	 * • Block Trades:<br>
+	 * The parent transaction must be identified using the BloclTrade field with
+	 * code BLPA. The children<br>
+	 * transactions must be identified using the code BLCH.<br>
+	 * <br>
+	 * For more details, see the relevant market practice document on
+	 * www.smpg.info.
 	 */
-	public static final MMConstraint<SettlementDetails145> forSettlementDetails145 = new MMConstraint<SettlementDetails145>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementParametersGuideline";
-			definition = "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementParametersGuideline.forSettlementDetails120;
-			owner_lazy = () -> SettlementDetails145.mmObject();
-		}
+	public static void checkSettlementDetails81(SettlementDetails81 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
 
-		@Override
-		public void executeValidator(SettlementDetails145 obj) throws Exception {
-			checkSettlementDetails145(obj);
-		}
-	};
 	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails156
-	 * SettlementDetails156}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementParametersGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info."
-	 * </li>
-	 * </ul>
+	 * • Physical settlement:<br>
+	 * In case of physical receipt at local agent level, the receiving agent
+	 * must receive a receipt free instruction<br>
+	 * for reconciliation purposes. If the final beneficiary of the securities
+	 * uses a global custodian, the receipt free<br>
+	 * instruction will be sent to the global custodian that will forward it to
+	 * his receiving agent on the market.<br>
+	 * For physical settlement, SettlementTransactionCondition/Physical must be
+	 * used.<br>
+	 * • Partial settlement:<br>
+	 * This market practice only applies in markets where partial settlement is
+	 * allowed.<br>
+	 * If an account owner wants to specify in its original instruction that
+	 * partial settlement is allowed or not, they<br>
+	 * must use the PartialSettlementIndicator.<br>
+	 * • Book Transfer:<br>
+	 * The use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other
+	 * booktransfer<br>
+	 * related fields is governed by a market practice document.<br>
+	 * • Block Trades:<br>
+	 * The parent transaction must be identified using the BloclTrade field with
+	 * code BLPA. The children<br>
+	 * transactions must be identified using the code BLCH.<br>
+	 * <br>
+	 * For more details, see the relevant market practice document on
+	 * www.smpg.info.
 	 */
-	public static final MMConstraint<SettlementDetails156> forSettlementDetails156 = new MMConstraint<SettlementDetails156>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementParametersGuideline";
-			definition = "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info.";
-			owner_lazy = () -> SettlementDetails156.mmObject();
-		}
+	public static void checkSettlementDetails132(SettlementDetails132 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
 
-		@Override
-		public void executeValidator(SettlementDetails156 obj) throws Exception {
-			checkSettlementDetails156(obj);
-		}
-	};
 	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails157
-	 * SettlementDetails157}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementParametersGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info."
-	 * </li>
-	 * </ul>
+	 * • Physical settlement:<br>
+	 * In case of physical receipt at local agent level, the receiving agent
+	 * must receive a receipt free instruction<br>
+	 * for reconciliation purposes. If the final beneficiary of the securities
+	 * uses a global custodian, the receipt free<br>
+	 * instruction will be sent to the global custodian that will forward it to
+	 * his receiving agent on the market.<br>
+	 * For physical settlement, SettlementTransactionCondition/Physical must be
+	 * used.<br>
+	 * • Partial settlement:<br>
+	 * This market practice only applies in markets where partial settlement is
+	 * allowed.<br>
+	 * If an account owner wants to specify in its original instruction that
+	 * partial settlement is allowed or not, they<br>
+	 * must use the PartialSettlementIndicator.<br>
+	 * • Book Transfer:<br>
+	 * The use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other
+	 * booktransfer<br>
+	 * related fields is governed by a market practice document.<br>
+	 * • Block Trades:<br>
+	 * The parent transaction must be identified using the BloclTrade field with
+	 * code BLPA. The children<br>
+	 * transactions must be identified using the code BLCH.<br>
+	 * <br>
+	 * For more details, see the relevant market practice document on
+	 * www.smpg.info.
 	 */
-	public static final MMConstraint<SettlementDetails157> forSettlementDetails157 = new MMConstraint<SettlementDetails157>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementParametersGuideline";
-			definition = "• Physical settlement:\r\nIn case of physical receipt at local agent level, the receiving agent must receive a receipt free instruction\r\nfor reconciliation purposes. If the final beneficiary of the securities uses a global custodian, the receipt free\r\ninstruction will be sent to the global custodian that will forward it to his receiving agent on the market.\r\nFor physical settlement, SettlementTransactionCondition/Physical must be used.\r\n• Partial settlement:\r\nThis market practice only applies in markets where partial settlement is allowed.\r\nIf an account owner wants to specify in its original instruction that partial settlement is allowed or not, they\r\nmust use the PartialSettlementIndicator.\r\n• Book Transfer:\r\nThe use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other booktransfer\r\nrelated fields is governed by a market practice document.\r\n• Block Trades:\r\nThe parent transaction must be identified using the BloclTrade field with code BLPA. The children\r\ntransactions must be identified using the code BLCH.\r\n\r\nFor more details, see the relevant market practice document on www.smpg.info.";
-			owner_lazy = () -> SettlementDetails157.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SettlementDetails157 obj) throws Exception {
-			checkSettlementDetails157(obj);
-		}
-	};
+	public static void checkSettlementDetails119(SettlementDetails119 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
 
 	/**
 	 * • Physical settlement:<br>
@@ -939,6 +1451,38 @@ public class ConstraintSettlementParametersGuideline {
 	 * www.smpg.info.
 	 */
 	public static void checkSettlementDetails1(SettlementDetails1 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * • Physical settlement:<br>
+	 * In case of physical receipt at local agent level, the receiving agent
+	 * must receive a receipt free instruction<br>
+	 * for reconciliation purposes. If the final beneficiary of the securities
+	 * uses a global custodian, the receipt free<br>
+	 * instruction will be sent to the global custodian that will forward it to
+	 * his receiving agent on the market.<br>
+	 * For physical settlement, SettlementTransactionCondition/Physical must be
+	 * used.<br>
+	 * • Partial settlement:<br>
+	 * This market practice only applies in markets where partial settlement is
+	 * allowed.<br>
+	 * If an account owner wants to specify in its original instruction that
+	 * partial settlement is allowed or not, they<br>
+	 * must use the PartialSettlementIndicator.<br>
+	 * • Book Transfer:<br>
+	 * The use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other
+	 * booktransfer<br>
+	 * related fields is governed by a market practice document.<br>
+	 * • Block Trades:<br>
+	 * The parent transaction must be identified using the BloclTrade field with
+	 * code BLPA. The children<br>
+	 * transactions must be identified using the code BLCH.<br>
+	 * <br>
+	 * For more details, see the relevant market practice document on
+	 * www.smpg.info.
+	 */
+	public static void checkSettlementDetails43(SettlementDetails43 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1034,454 +1578,6 @@ public class ConstraintSettlementParametersGuideline {
 	 * For more details, see the relevant market practice document on
 	 * www.smpg.info.
 	 */
-	public static void checkSettlementDetails35(SettlementDetails35 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * • Physical settlement:<br>
-	 * In case of physical receipt at local agent level, the receiving agent
-	 * must receive a receipt free instruction<br>
-	 * for reconciliation purposes. If the final beneficiary of the securities
-	 * uses a global custodian, the receipt free<br>
-	 * instruction will be sent to the global custodian that will forward it to
-	 * his receiving agent on the market.<br>
-	 * For physical settlement, SettlementTransactionCondition/Physical must be
-	 * used.<br>
-	 * • Partial settlement:<br>
-	 * This market practice only applies in markets where partial settlement is
-	 * allowed.<br>
-	 * If an account owner wants to specify in its original instruction that
-	 * partial settlement is allowed or not, they<br>
-	 * must use the PartialSettlementIndicator.<br>
-	 * • Book Transfer:<br>
-	 * The use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other
-	 * booktransfer<br>
-	 * related fields is governed by a market practice document.<br>
-	 * • Block Trades:<br>
-	 * The parent transaction must be identified using the BloclTrade field with
-	 * code BLPA. The children<br>
-	 * transactions must be identified using the code BLCH.<br>
-	 * <br>
-	 * For more details, see the relevant market practice document on
-	 * www.smpg.info.
-	 */
-	public static void checkSettlementDetails42(SettlementDetails42 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * • Physical settlement:<br>
-	 * In case of physical receipt at local agent level, the receiving agent
-	 * must receive a receipt free instruction<br>
-	 * for reconciliation purposes. If the final beneficiary of the securities
-	 * uses a global custodian, the receipt free<br>
-	 * instruction will be sent to the global custodian that will forward it to
-	 * his receiving agent on the market.<br>
-	 * For physical settlement, SettlementTransactionCondition/Physical must be
-	 * used.<br>
-	 * • Partial settlement:<br>
-	 * This market practice only applies in markets where partial settlement is
-	 * allowed.<br>
-	 * If an account owner wants to specify in its original instruction that
-	 * partial settlement is allowed or not, they<br>
-	 * must use the PartialSettlementIndicator.<br>
-	 * • Book Transfer:<br>
-	 * The use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other
-	 * booktransfer<br>
-	 * related fields is governed by a market practice document.<br>
-	 * • Block Trades:<br>
-	 * The parent transaction must be identified using the BloclTrade field with
-	 * code BLPA. The children<br>
-	 * transactions must be identified using the code BLCH.<br>
-	 * <br>
-	 * For more details, see the relevant market practice document on
-	 * www.smpg.info.
-	 */
-	public static void checkSettlementDetails52(SettlementDetails52 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * • Physical settlement:<br>
-	 * In case of physical receipt at local agent level, the receiving agent
-	 * must receive a receipt free instruction<br>
-	 * for reconciliation purposes. If the final beneficiary of the securities
-	 * uses a global custodian, the receipt free<br>
-	 * instruction will be sent to the global custodian that will forward it to
-	 * his receiving agent on the market.<br>
-	 * For physical settlement, SettlementTransactionCondition/Physical must be
-	 * used.<br>
-	 * • Partial settlement:<br>
-	 * This market practice only applies in markets where partial settlement is
-	 * allowed.<br>
-	 * If an account owner wants to specify in its original instruction that
-	 * partial settlement is allowed or not, they<br>
-	 * must use the PartialSettlementIndicator.<br>
-	 * • Book Transfer:<br>
-	 * The use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other
-	 * booktransfer<br>
-	 * related fields is governed by a market practice document.<br>
-	 * • Block Trades:<br>
-	 * The parent transaction must be identified using the BloclTrade field with
-	 * code BLPA. The children<br>
-	 * transactions must be identified using the code BLCH.<br>
-	 * <br>
-	 * For more details, see the relevant market practice document on
-	 * www.smpg.info.
-	 */
-	public static void checkSettlementDetails43(SettlementDetails43 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * • Physical settlement:<br>
-	 * In case of physical receipt at local agent level, the receiving agent
-	 * must receive a receipt free instruction<br>
-	 * for reconciliation purposes. If the final beneficiary of the securities
-	 * uses a global custodian, the receipt free<br>
-	 * instruction will be sent to the global custodian that will forward it to
-	 * his receiving agent on the market.<br>
-	 * For physical settlement, SettlementTransactionCondition/Physical must be
-	 * used.<br>
-	 * • Partial settlement:<br>
-	 * This market practice only applies in markets where partial settlement is
-	 * allowed.<br>
-	 * If an account owner wants to specify in its original instruction that
-	 * partial settlement is allowed or not, they<br>
-	 * must use the PartialSettlementIndicator.<br>
-	 * • Book Transfer:<br>
-	 * The use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other
-	 * booktransfer<br>
-	 * related fields is governed by a market practice document.<br>
-	 * • Block Trades:<br>
-	 * The parent transaction must be identified using the BloclTrade field with
-	 * code BLPA. The children<br>
-	 * transactions must be identified using the code BLCH.<br>
-	 * <br>
-	 * For more details, see the relevant market practice document on
-	 * www.smpg.info.
-	 */
-	public static void checkSettlementDetails67(SettlementDetails67 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * • Physical settlement:<br>
-	 * In case of physical receipt at local agent level, the receiving agent
-	 * must receive a receipt free instruction<br>
-	 * for reconciliation purposes. If the final beneficiary of the securities
-	 * uses a global custodian, the receipt free<br>
-	 * instruction will be sent to the global custodian that will forward it to
-	 * his receiving agent on the market.<br>
-	 * For physical settlement, SettlementTransactionCondition/Physical must be
-	 * used.<br>
-	 * • Partial settlement:<br>
-	 * This market practice only applies in markets where partial settlement is
-	 * allowed.<br>
-	 * If an account owner wants to specify in its original instruction that
-	 * partial settlement is allowed or not, they<br>
-	 * must use the PartialSettlementIndicator.<br>
-	 * • Book Transfer:<br>
-	 * The use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other
-	 * booktransfer<br>
-	 * related fields is governed by a market practice document.<br>
-	 * • Block Trades:<br>
-	 * The parent transaction must be identified using the BloclTrade field with
-	 * code BLPA. The children<br>
-	 * transactions must be identified using the code BLCH.<br>
-	 * <br>
-	 * For more details, see the relevant market practice document on
-	 * www.smpg.info.
-	 */
-	public static void checkSettlementDetails81(SettlementDetails81 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * • Physical settlement:<br>
-	 * In case of physical receipt at local agent level, the receiving agent
-	 * must receive a receipt free instruction<br>
-	 * for reconciliation purposes. If the final beneficiary of the securities
-	 * uses a global custodian, the receipt free<br>
-	 * instruction will be sent to the global custodian that will forward it to
-	 * his receiving agent on the market.<br>
-	 * For physical settlement, SettlementTransactionCondition/Physical must be
-	 * used.<br>
-	 * • Partial settlement:<br>
-	 * This market practice only applies in markets where partial settlement is
-	 * allowed.<br>
-	 * If an account owner wants to specify in its original instruction that
-	 * partial settlement is allowed or not, they<br>
-	 * must use the PartialSettlementIndicator.<br>
-	 * • Book Transfer:<br>
-	 * The use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other
-	 * booktransfer<br>
-	 * related fields is governed by a market practice document.<br>
-	 * • Block Trades:<br>
-	 * The parent transaction must be identified using the BloclTrade field with
-	 * code BLPA. The children<br>
-	 * transactions must be identified using the code BLCH.<br>
-	 * <br>
-	 * For more details, see the relevant market practice document on
-	 * www.smpg.info.
-	 */
-	public static void checkSettlementDetails93(SettlementDetails93 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * • Physical settlement:<br>
-	 * In case of physical receipt at local agent level, the receiving agent
-	 * must receive a receipt free instruction<br>
-	 * for reconciliation purposes. If the final beneficiary of the securities
-	 * uses a global custodian, the receipt free<br>
-	 * instruction will be sent to the global custodian that will forward it to
-	 * his receiving agent on the market.<br>
-	 * For physical settlement, SettlementTransactionCondition/Physical must be
-	 * used.<br>
-	 * • Partial settlement:<br>
-	 * This market practice only applies in markets where partial settlement is
-	 * allowed.<br>
-	 * If an account owner wants to specify in its original instruction that
-	 * partial settlement is allowed or not, they<br>
-	 * must use the PartialSettlementIndicator.<br>
-	 * • Book Transfer:<br>
-	 * The use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other
-	 * booktransfer<br>
-	 * related fields is governed by a market practice document.<br>
-	 * • Block Trades:<br>
-	 * The parent transaction must be identified using the BloclTrade field with
-	 * code BLPA. The children<br>
-	 * transactions must be identified using the code BLCH.<br>
-	 * <br>
-	 * For more details, see the relevant market practice document on
-	 * www.smpg.info.
-	 */
-	public static void checkSettlementDetails101(SettlementDetails101 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * • Physical settlement:<br>
-	 * In case of physical receipt at local agent level, the receiving agent
-	 * must receive a receipt free instruction<br>
-	 * for reconciliation purposes. If the final beneficiary of the securities
-	 * uses a global custodian, the receipt free<br>
-	 * instruction will be sent to the global custodian that will forward it to
-	 * his receiving agent on the market.<br>
-	 * For physical settlement, SettlementTransactionCondition/Physical must be
-	 * used.<br>
-	 * • Partial settlement:<br>
-	 * This market practice only applies in markets where partial settlement is
-	 * allowed.<br>
-	 * If an account owner wants to specify in its original instruction that
-	 * partial settlement is allowed or not, they<br>
-	 * must use the PartialSettlementIndicator.<br>
-	 * • Book Transfer:<br>
-	 * The use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other
-	 * booktransfer<br>
-	 * related fields is governed by a market practice document.<br>
-	 * • Block Trades:<br>
-	 * The parent transaction must be identified using the BloclTrade field with
-	 * code BLPA. The children<br>
-	 * transactions must be identified using the code BLCH.<br>
-	 * <br>
-	 * For more details, see the relevant market practice document on
-	 * www.smpg.info.
-	 */
-	public static void checkSettlementDetails111(SettlementDetails111 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * • Physical settlement:<br>
-	 * In case of physical receipt at local agent level, the receiving agent
-	 * must receive a receipt free instruction<br>
-	 * for reconciliation purposes. If the final beneficiary of the securities
-	 * uses a global custodian, the receipt free<br>
-	 * instruction will be sent to the global custodian that will forward it to
-	 * his receiving agent on the market.<br>
-	 * For physical settlement, SettlementTransactionCondition/Physical must be
-	 * used.<br>
-	 * • Partial settlement:<br>
-	 * This market practice only applies in markets where partial settlement is
-	 * allowed.<br>
-	 * If an account owner wants to specify in its original instruction that
-	 * partial settlement is allowed or not, they<br>
-	 * must use the PartialSettlementIndicator.<br>
-	 * • Book Transfer:<br>
-	 * The use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other
-	 * booktransfer<br>
-	 * related fields is governed by a market practice document.<br>
-	 * • Block Trades:<br>
-	 * The parent transaction must be identified using the BloclTrade field with
-	 * code BLPA. The children<br>
-	 * transactions must be identified using the code BLCH.<br>
-	 * <br>
-	 * For more details, see the relevant market practice document on
-	 * www.smpg.info.
-	 */
-	public static void checkSettlementDetails112(SettlementDetails112 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * • Physical settlement:<br>
-	 * In case of physical receipt at local agent level, the receiving agent
-	 * must receive a receipt free instruction<br>
-	 * for reconciliation purposes. If the final beneficiary of the securities
-	 * uses a global custodian, the receipt free<br>
-	 * instruction will be sent to the global custodian that will forward it to
-	 * his receiving agent on the market.<br>
-	 * For physical settlement, SettlementTransactionCondition/Physical must be
-	 * used.<br>
-	 * • Partial settlement:<br>
-	 * This market practice only applies in markets where partial settlement is
-	 * allowed.<br>
-	 * If an account owner wants to specify in its original instruction that
-	 * partial settlement is allowed or not, they<br>
-	 * must use the PartialSettlementIndicator.<br>
-	 * • Book Transfer:<br>
-	 * The use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other
-	 * booktransfer<br>
-	 * related fields is governed by a market practice document.<br>
-	 * • Block Trades:<br>
-	 * The parent transaction must be identified using the BloclTrade field with
-	 * code BLPA. The children<br>
-	 * transactions must be identified using the code BLCH.<br>
-	 * <br>
-	 * For more details, see the relevant market practice document on
-	 * www.smpg.info.
-	 */
-	public static void checkSettlementDetails120(SettlementDetails120 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * • Physical settlement:<br>
-	 * In case of physical receipt at local agent level, the receiving agent
-	 * must receive a receipt free instruction<br>
-	 * for reconciliation purposes. If the final beneficiary of the securities
-	 * uses a global custodian, the receipt free<br>
-	 * instruction will be sent to the global custodian that will forward it to
-	 * his receiving agent on the market.<br>
-	 * For physical settlement, SettlementTransactionCondition/Physical must be
-	 * used.<br>
-	 * • Partial settlement:<br>
-	 * This market practice only applies in markets where partial settlement is
-	 * allowed.<br>
-	 * If an account owner wants to specify in its original instruction that
-	 * partial settlement is allowed or not, they<br>
-	 * must use the PartialSettlementIndicator.<br>
-	 * • Book Transfer:<br>
-	 * The use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other
-	 * booktransfer<br>
-	 * related fields is governed by a market practice document.<br>
-	 * • Block Trades:<br>
-	 * The parent transaction must be identified using the BloclTrade field with
-	 * code BLPA. The children<br>
-	 * transactions must be identified using the code BLCH.<br>
-	 * <br>
-	 * For more details, see the relevant market practice document on
-	 * www.smpg.info.
-	 */
-	public static void checkSettlementDetails119(SettlementDetails119 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * • Physical settlement:<br>
-	 * In case of physical receipt at local agent level, the receiving agent
-	 * must receive a receipt free instruction<br>
-	 * for reconciliation purposes. If the final beneficiary of the securities
-	 * uses a global custodian, the receipt free<br>
-	 * instruction will be sent to the global custodian that will forward it to
-	 * his receiving agent on the market.<br>
-	 * For physical settlement, SettlementTransactionCondition/Physical must be
-	 * used.<br>
-	 * • Partial settlement:<br>
-	 * This market practice only applies in markets where partial settlement is
-	 * allowed.<br>
-	 * If an account owner wants to specify in its original instruction that
-	 * partial settlement is allowed or not, they<br>
-	 * must use the PartialSettlementIndicator.<br>
-	 * • Book Transfer:<br>
-	 * The use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other
-	 * booktransfer<br>
-	 * related fields is governed by a market practice document.<br>
-	 * • Block Trades:<br>
-	 * The parent transaction must be identified using the BloclTrade field with
-	 * code BLPA. The children<br>
-	 * transactions must be identified using the code BLCH.<br>
-	 * <br>
-	 * For more details, see the relevant market practice document on
-	 * www.smpg.info.
-	 */
-	public static void checkSettlementDetails137(SettlementDetails137 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * • Physical settlement:<br>
-	 * In case of physical receipt at local agent level, the receiving agent
-	 * must receive a receipt free instruction<br>
-	 * for reconciliation purposes. If the final beneficiary of the securities
-	 * uses a global custodian, the receipt free<br>
-	 * instruction will be sent to the global custodian that will forward it to
-	 * his receiving agent on the market.<br>
-	 * For physical settlement, SettlementTransactionCondition/Physical must be
-	 * used.<br>
-	 * • Partial settlement:<br>
-	 * This market practice only applies in markets where partial settlement is
-	 * allowed.<br>
-	 * If an account owner wants to specify in its original instruction that
-	 * partial settlement is allowed or not, they<br>
-	 * must use the PartialSettlementIndicator.<br>
-	 * • Book Transfer:<br>
-	 * The use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other
-	 * booktransfer<br>
-	 * related fields is governed by a market practice document.<br>
-	 * • Block Trades:<br>
-	 * The parent transaction must be identified using the BloclTrade field with
-	 * code BLPA. The children<br>
-	 * transactions must be identified using the code BLCH.<br>
-	 * <br>
-	 * For more details, see the relevant market practice document on
-	 * www.smpg.info.
-	 */
-	public static void checkSettlementDetails132(SettlementDetails132 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * • Physical settlement:<br>
-	 * In case of physical receipt at local agent level, the receiving agent
-	 * must receive a receipt free instruction<br>
-	 * for reconciliation purposes. If the final beneficiary of the securities
-	 * uses a global custodian, the receipt free<br>
-	 * instruction will be sent to the global custodian that will forward it to
-	 * his receiving agent on the market.<br>
-	 * For physical settlement, SettlementTransactionCondition/Physical must be
-	 * used.<br>
-	 * • Partial settlement:<br>
-	 * This market practice only applies in markets where partial settlement is
-	 * allowed.<br>
-	 * If an account owner wants to specify in its original instruction that
-	 * partial settlement is allowed or not, they<br>
-	 * must use the PartialSettlementIndicator.<br>
-	 * • Book Transfer:<br>
-	 * The use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other
-	 * booktransfer<br>
-	 * related fields is governed by a market practice document.<br>
-	 * • Block Trades:<br>
-	 * The parent transaction must be identified using the BloclTrade field with
-	 * code BLPA. The children<br>
-	 * transactions must be identified using the code BLCH.<br>
-	 * <br>
-	 * For more details, see the relevant market practice document on
-	 * www.smpg.info.
-	 */
 	public static void checkSettlementDetails140(SettlementDetails140 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
@@ -1514,103 +1610,7 @@ public class ConstraintSettlementParametersGuideline {
 	 * For more details, see the relevant market practice document on
 	 * www.smpg.info.
 	 */
-	public static void checkSettlementDetails142(SettlementDetails142 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * • Physical settlement:<br>
-	 * In case of physical receipt at local agent level, the receiving agent
-	 * must receive a receipt free instruction<br>
-	 * for reconciliation purposes. If the final beneficiary of the securities
-	 * uses a global custodian, the receipt free<br>
-	 * instruction will be sent to the global custodian that will forward it to
-	 * his receiving agent on the market.<br>
-	 * For physical settlement, SettlementTransactionCondition/Physical must be
-	 * used.<br>
-	 * • Partial settlement:<br>
-	 * This market practice only applies in markets where partial settlement is
-	 * allowed.<br>
-	 * If an account owner wants to specify in its original instruction that
-	 * partial settlement is allowed or not, they<br>
-	 * must use the PartialSettlementIndicator.<br>
-	 * • Book Transfer:<br>
-	 * The use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other
-	 * booktransfer<br>
-	 * related fields is governed by a market practice document.<br>
-	 * • Block Trades:<br>
-	 * The parent transaction must be identified using the BloclTrade field with
-	 * code BLPA. The children<br>
-	 * transactions must be identified using the code BLCH.<br>
-	 * <br>
-	 * For more details, see the relevant market practice document on
-	 * www.smpg.info.
-	 */
-	public static void checkSettlementDetails145(SettlementDetails145 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * • Physical settlement:<br>
-	 * In case of physical receipt at local agent level, the receiving agent
-	 * must receive a receipt free instruction<br>
-	 * for reconciliation purposes. If the final beneficiary of the securities
-	 * uses a global custodian, the receipt free<br>
-	 * instruction will be sent to the global custodian that will forward it to
-	 * his receiving agent on the market.<br>
-	 * For physical settlement, SettlementTransactionCondition/Physical must be
-	 * used.<br>
-	 * • Partial settlement:<br>
-	 * This market practice only applies in markets where partial settlement is
-	 * allowed.<br>
-	 * If an account owner wants to specify in its original instruction that
-	 * partial settlement is allowed or not, they<br>
-	 * must use the PartialSettlementIndicator.<br>
-	 * • Book Transfer:<br>
-	 * The use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other
-	 * booktransfer<br>
-	 * related fields is governed by a market practice document.<br>
-	 * • Block Trades:<br>
-	 * The parent transaction must be identified using the BloclTrade field with
-	 * code BLPA. The children<br>
-	 * transactions must be identified using the code BLCH.<br>
-	 * <br>
-	 * For more details, see the relevant market practice document on
-	 * www.smpg.info.
-	 */
-	public static void checkSettlementDetails156(SettlementDetails156 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * • Physical settlement:<br>
-	 * In case of physical receipt at local agent level, the receiving agent
-	 * must receive a receipt free instruction<br>
-	 * for reconciliation purposes. If the final beneficiary of the securities
-	 * uses a global custodian, the receipt free<br>
-	 * instruction will be sent to the global custodian that will forward it to
-	 * his receiving agent on the market.<br>
-	 * For physical settlement, SettlementTransactionCondition/Physical must be
-	 * used.<br>
-	 * • Partial settlement:<br>
-	 * This market practice only applies in markets where partial settlement is
-	 * allowed.<br>
-	 * If an account owner wants to specify in its original instruction that
-	 * partial settlement is allowed or not, they<br>
-	 * must use the PartialSettlementIndicator.<br>
-	 * • Book Transfer:<br>
-	 * The use of SecuritiesTransactionTypes OWNI, OWNE, INSP and PORT and other
-	 * booktransfer<br>
-	 * related fields is governed by a market practice document.<br>
-	 * • Block Trades:<br>
-	 * The parent transaction must be identified using the BloclTrade field with
-	 * code BLPA. The children<br>
-	 * transactions must be identified using the code BLCH.<br>
-	 * <br>
-	 * For more details, see the relevant market practice document on
-	 * www.smpg.info.
-	 */
-	public static void checkSettlementDetails157(SettlementDetails157 obj) throws Exception {
+	public static void checkSettlementDetails42(SettlementDetails42 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

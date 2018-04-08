@@ -138,23 +138,25 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintPartialOrRejectedCancellationRule#forResolutionOfInvestigationV06
- * ConstraintPartialOrRejectedCancellationRule.forResolutionOfInvestigationV06}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPartialOrRejectedCancellationRule#for_camt_ResolutionOfInvestigationV06
+ * ConstraintPartialOrRejectedCancellationRule.
+ * for_camt_ResolutionOfInvestigationV06}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrGroupResolvedCaseRule#forResolutionOfInvestigationV06
- * ConstraintMessageOrGroupResolvedCaseRule.forResolutionOfInvestigationV06}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrGroupResolvedCaseRule#for_camt_ResolutionOfInvestigationV06
+ * ConstraintMessageOrGroupResolvedCaseRule.
+ * for_camt_ResolutionOfInvestigationV06}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrPaymentInformationResolvedCaseRule#forResolutionOfInvestigationV06
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrPaymentInformationResolvedCaseRule#for_camt_ResolutionOfInvestigationV06
  * ConstraintMessageOrPaymentInformationResolvedCaseRule.
- * forResolutionOfInvestigationV06}</li>
+ * for_camt_ResolutionOfInvestigationV06}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrInitiationTransactionResolvedCaseRule#forResolutionOfInvestigationV06
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrInitiationTransactionResolvedCaseRule#for_camt_ResolutionOfInvestigationV06
  * ConstraintMessageOrInitiationTransactionResolvedCaseRule.
- * forResolutionOfInvestigationV06}</li>
+ * for_camt_ResolutionOfInvestigationV06}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrInterbankTransactionResolvedCaseRule#forResolutionOfInvestigationV06
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrInterbankTransactionResolvedCaseRule#for_camt_ResolutionOfInvestigationV06
  * ConstraintMessageOrInterbankTransactionResolvedCaseRule.
- * forResolutionOfInvestigationV06}</li>
+ * for_camt_ResolutionOfInvestigationV06}</li>
  * </ul>
  * </li>
  * <li>
@@ -682,11 +684,11 @@ public class ResolutionOfInvestigationV06 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPartialOrRejectedCancellationRule.forResolutionOfInvestigationV06,
-						com.tools20022.repository.constraints.ConstraintMessageOrGroupResolvedCaseRule.forResolutionOfInvestigationV06,
-						com.tools20022.repository.constraints.ConstraintMessageOrPaymentInformationResolvedCaseRule.forResolutionOfInvestigationV06,
-						com.tools20022.repository.constraints.ConstraintMessageOrInitiationTransactionResolvedCaseRule.forResolutionOfInvestigationV06,
-						com.tools20022.repository.constraints.ConstraintMessageOrInterbankTransactionResolvedCaseRule.forResolutionOfInvestigationV06);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPartialOrRejectedCancellationRule.for_camt_ResolutionOfInvestigationV06,
+						com.tools20022.repository.constraints.ConstraintMessageOrGroupResolvedCaseRule.for_camt_ResolutionOfInvestigationV06,
+						com.tools20022.repository.constraints.ConstraintMessageOrPaymentInformationResolvedCaseRule.for_camt_ResolutionOfInvestigationV06,
+						com.tools20022.repository.constraints.ConstraintMessageOrInitiationTransactionResolvedCaseRule.for_camt_ResolutionOfInvestigationV06,
+						com.tools20022.repository.constraints.ConstraintMessageOrInterbankTransactionResolvedCaseRule.for_camt_ResolutionOfInvestigationV06);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ResolutionOfInvestigationV06";
 				definition = "Scope\r\nThe ResolutionOfInvestigation message is sent by a case assignee to a case creator/case assigner.\r\nThis message is used to inform of the resolution of a case, and optionally provides details about.\r\n- the corrective action undertaken by the case assignee\r\n- information on the return where applicable\r\nUsage\r\nThe ResolutionOfInvestigation message is used by the case assignee to inform a case creator or case assigner about the resolution of a:\r\n- request to cancel payment case\r\n- request to modify payment case\r\n- unable to apply case\r\n- claim non receipt case\r\nThe ResolutionOfInvestigation message covers one and only one case at a time. If the case assignee needs to communicate about several cases, then several Resolution Of Investigation messages must be sent.\r\nThe ResolutionOfInvestigation message provides:\r\n- the final outcome of the case, whether positive or negative\r\n- optionally, the details of the corrective action undertaken by the case assignee and the information of the return\r\nWhenever a payment instruction has been generated to solve the case under investigation following a claim non receipt or an unable to apply, the optional CorrectionTransaction component present in the message must be completed.\r\nWhenever the action of modifying or cancelling a payment results in funds being returned or reversed, an investigating agent may provide the details in the resolution related investigation component, to identify the return or reversal transaction. These details will facilitate the account reconciliations at the initiating bank and the intermediaries. It must be stressed that the return or reversal of funds is outside the scope of this Exceptions and Investigation service. The features given here is only meant to transmit the information of return or reversal when it is available through the resolution of the case.\r\nThe ResolutionOfInvestigation message must:\r\n- be forwarded by all subsequent case assignee(s) until it reaches the case creator\r\n- not be used in place of a RejectCaseAssignment or CaseStatusReport or NotificationOfCaseAssignment message\r\nTake note of an exceptional rule that allows the use of ResolutionOfInvestigation in lieu of a CaseStatusReport. CaseStatusReport is a response-message to a CaseStatusReportRequest. The latter which is sent when the assigner has reached its own time-out threshold to receive a response. However it may happen that when the request arrives, the investigating agent has just obtained a resolution. In such a situation, it would be redundant to send a CaseStatusReport when then followed immediately by a ResolutionOfInvestigation. It is therefore quite acceptable for the investigating agent, the assignee, to skip the Case Status Report and send the ResolutionOfInvestigation message directly.\r\nThe ResolutionOfInvestigation message should be the sole message to respond to a cancellation request. Details of the underlying transactions and the related statuses for which the cancellation request has been issued may be provided in the CancellationDetails component.";

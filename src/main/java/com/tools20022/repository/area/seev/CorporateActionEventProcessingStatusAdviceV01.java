@@ -112,13 +112,13 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#forCorporateActionEventProcessingStatusAdviceV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#for_seev_CorporateActionEventProcessingStatusAdviceV01
  * ConstraintCoexistenceCharacterSetXRule.
- * forCorporateActionEventProcessingStatusAdviceV01}</li>
+ * for_seev_CorporateActionEventProcessingStatusAdviceV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forCorporateActionEventProcessingStatusAdviceV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#for_seev_CorporateActionEventProcessingStatusAdviceV01
  * ConstraintCoexistenceIdentificationRule.
- * forCorporateActionEventProcessingStatusAdviceV01}</li>
+ * for_seev_CorporateActionEventProcessingStatusAdviceV01}</li>
  * </ul>
  * </li>
  * <li>
@@ -586,8 +586,8 @@ public class CorporateActionEventProcessingStatusAdviceV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forCorporateActionEventProcessingStatusAdviceV01,
-						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionEventProcessingStatusAdviceV01);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.for_seev_CorporateActionEventProcessingStatusAdviceV01,
+						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.for_seev_CorporateActionEventProcessingStatusAdviceV01);
 				semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, "MT 567, Seq A :23G:EVST and Seq A2 :25D::EPRC"));
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionEventProcessingStatusAdviceV01";

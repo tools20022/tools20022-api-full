@@ -35,39 +35,6 @@ public class ConstraintCommercialAgreementRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.Commission11 Commission11}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CommercialAgreementRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If CommercialAgreementReference is present, then NewCommercialAgreementReferenceIndicator must be present too."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<Commission11> forCommission11 = new MMConstraint<Commission11>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "CommercialAgreementRule";
-			definition = "If CommercialAgreementReference is present, then NewCommercialAgreementReferenceIndicator must be present too.";
-			owner_lazy = () -> Commission11.mmObject();
-		}
-
-		@Override
-		public void executeValidator(Commission11 obj) throws Exception {
-			checkCommission11(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Fee3 Fee3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
 	 * expression} =
@@ -100,12 +67,45 @@ public class ConstraintCommercialAgreementRule {
 			checkFee3(obj);
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.Commission11 Commission11}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CommercialAgreementRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If CommercialAgreementReference is present, then NewCommercialAgreementReferenceIndicator must be present too."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<Commission11> forCommission11 = new MMConstraint<Commission11>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CommercialAgreementRule";
+			definition = "If CommercialAgreementReference is present, then NewCommercialAgreementReferenceIndicator must be present too.";
+			owner_lazy = () -> Commission11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Commission11 obj) throws Exception {
+			checkCommission11(obj);
+		}
+	};
 
 	/**
 	 * If CommercialAgreementReference is present, then
 	 * NewCommercialAgreementReferenceIndicator must be present too.
 	 */
-	public static void checkCommission11(Commission11 obj) throws Exception {
+	public static void checkFee3(Fee3 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -113,7 +113,7 @@ public class ConstraintCommercialAgreementRule {
 	 * If CommercialAgreementReference is present, then
 	 * NewCommercialAgreementReferenceIndicator must be present too.
 	 */
-	public static void checkFee3(Fee3 obj) throws Exception {
+	public static void checkCommission11(Commission11 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

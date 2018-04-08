@@ -151,47 +151,49 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintSettledAmountRule#forSecuritiesSettlementTransactionConfirmationV01
- * ConstraintSettledAmountRule.forSecuritiesSettlementTransactionConfirmationV01
- * }</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSettledAmountRule#for_sese_SecuritiesSettlementTransactionConfirmationV01
+ * ConstraintSettledAmountRule.
+ * for_sese_SecuritiesSettlementTransactionConfirmationV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintReceivingDepositoryAndParty1Rule#forSecuritiesSettlementTransactionConfirmationV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintReceivingDepositoryAndParty1Rule#for_sese_SecuritiesSettlementTransactionConfirmationV01
  * ConstraintReceivingDepositoryAndParty1Rule.
- * forSecuritiesSettlementTransactionConfirmationV01}</li>
+ * for_sese_SecuritiesSettlementTransactionConfirmationV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintDeliveringDepositoryAndParty1Rule#forSecuritiesSettlementTransactionConfirmationV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDeliveringDepositoryAndParty1Rule#for_sese_SecuritiesSettlementTransactionConfirmationV01
  * ConstraintDeliveringDepositoryAndParty1Rule.
- * forSecuritiesSettlementTransactionConfirmationV01}</li>
+ * for_sese_SecuritiesSettlementTransactionConfirmationV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintSellerSSIRule#forSecuritiesSettlementTransactionConfirmationV01
- * ConstraintSellerSSIRule.forSecuritiesSettlementTransactionConfirmationV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSellerSSIRule#for_sese_SecuritiesSettlementTransactionConfirmationV01
+ * ConstraintSellerSSIRule.
+ * for_sese_SecuritiesSettlementTransactionConfirmationV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintBuyerSSIRule#forSecuritiesSettlementTransactionConfirmationV01
- * ConstraintBuyerSSIRule.forSecuritiesSettlementTransactionConfirmationV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintBuyerSSIRule#for_sese_SecuritiesSettlementTransactionConfirmationV01
+ * ConstraintBuyerSSIRule.
+ * for_sese_SecuritiesSettlementTransactionConfirmationV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule#forSecuritiesSettlementTransactionConfirmationV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule#for_sese_SecuritiesSettlementTransactionConfirmationV01
  * ConstraintCoexistenceAmountRule.
- * forSecuritiesSettlementTransactionConfirmationV01}</li>
+ * for_sese_SecuritiesSettlementTransactionConfirmationV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#forSecuritiesSettlementTransactionConfirmationV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#for_sese_SecuritiesSettlementTransactionConfirmationV01
  * ConstraintCoexistenceCharacterSetXRule.
- * forSecuritiesSettlementTransactionConfirmationV01}</li>
+ * for_sese_SecuritiesSettlementTransactionConfirmationV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing1Rule#forSecuritiesSettlementTransactionConfirmationV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing1Rule#for_sese_SecuritiesSettlementTransactionConfirmationV01
  * ConstraintTwoLegTransactionOpeningClosing1Rule.
- * forSecuritiesSettlementTransactionConfirmationV01}</li>
+ * for_sese_SecuritiesSettlementTransactionConfirmationV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forSecuritiesSettlementTransactionConfirmationV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#for_sese_SecuritiesSettlementTransactionConfirmationV01
  * ConstraintCoexistenceIdentificationRule.
- * forSecuritiesSettlementTransactionConfirmationV01}</li>
+ * for_sese_SecuritiesSettlementTransactionConfirmationV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesSettlementTransactionConfirmationV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#for_sese_SecuritiesSettlementTransactionConfirmationV01
  * ConstraintSecuritiesMarketPracticeGroupGuideline.
- * forSecuritiesSettlementTransactionConfirmationV01}</li>
+ * for_sese_SecuritiesSettlementTransactionConfirmationV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule#forSecuritiesSettlementTransactionConfirmationV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule#for_sese_SecuritiesSettlementTransactionConfirmationV01
  * ConstraintTwoLegTransactionOpeningClosing2Rule.
- * forSecuritiesSettlementTransactionConfirmationV01}</li>
+ * for_sese_SecuritiesSettlementTransactionConfirmationV01}</li>
  * </ul>
  * </li>
  * <li>
@@ -1119,17 +1121,17 @@ public class SecuritiesSettlementTransactionConfirmationV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettledAmountRule.forSecuritiesSettlementTransactionConfirmationV01,
-						com.tools20022.repository.constraints.ConstraintReceivingDepositoryAndParty1Rule.forSecuritiesSettlementTransactionConfirmationV01,
-						com.tools20022.repository.constraints.ConstraintDeliveringDepositoryAndParty1Rule.forSecuritiesSettlementTransactionConfirmationV01,
-						com.tools20022.repository.constraints.ConstraintSellerSSIRule.forSecuritiesSettlementTransactionConfirmationV01,
-						com.tools20022.repository.constraints.ConstraintBuyerSSIRule.forSecuritiesSettlementTransactionConfirmationV01,
-						com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forSecuritiesSettlementTransactionConfirmationV01,
-						com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesSettlementTransactionConfirmationV01,
-						com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing1Rule.forSecuritiesSettlementTransactionConfirmationV01,
-						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesSettlementTransactionConfirmationV01,
-						com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionConfirmationV01,
-						com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forSecuritiesSettlementTransactionConfirmationV01);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettledAmountRule.for_sese_SecuritiesSettlementTransactionConfirmationV01,
+						com.tools20022.repository.constraints.ConstraintReceivingDepositoryAndParty1Rule.for_sese_SecuritiesSettlementTransactionConfirmationV01,
+						com.tools20022.repository.constraints.ConstraintDeliveringDepositoryAndParty1Rule.for_sese_SecuritiesSettlementTransactionConfirmationV01,
+						com.tools20022.repository.constraints.ConstraintSellerSSIRule.for_sese_SecuritiesSettlementTransactionConfirmationV01,
+						com.tools20022.repository.constraints.ConstraintBuyerSSIRule.for_sese_SecuritiesSettlementTransactionConfirmationV01,
+						com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.for_sese_SecuritiesSettlementTransactionConfirmationV01,
+						com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.for_sese_SecuritiesSettlementTransactionConfirmationV01,
+						com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing1Rule.for_sese_SecuritiesSettlementTransactionConfirmationV01,
+						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.for_sese_SecuritiesSettlementTransactionConfirmationV01,
+						com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.for_sese_SecuritiesSettlementTransactionConfirmationV01,
+						com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.for_sese_SecuritiesSettlementTransactionConfirmationV01);
 				semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, "MT 544-7, Seq A :23G:NEWM, Seq D absent"));
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesSettlementTransactionConfirmationV01";

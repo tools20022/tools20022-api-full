@@ -20,8 +20,8 @@ package com.tools20022.repository.constraints;
 import com.tools20022.core.repo.NotImplementedConstraintException;
 import com.tools20022.metamodel.MMConstraint;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.LanguageCode;
 import com.tools20022.repository.msg.GroupHeader69;
-import com.tools20022.repository.msg.GroupHeader69.LanguageCode;
 
 /**
  * according to ISO 639-1.
@@ -47,7 +47,7 @@ public class ConstraintR5 {
 	 * definition} = "according to ISO 639-1."</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<LanguageCode> forLanguageCode = new MMConstraint<LanguageCode>() {
+	public static final MMConstraint<LanguageCode> forGroupHeader69_LanguageCode = new MMConstraint<LanguageCode>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "R5";
@@ -57,14 +57,14 @@ public class ConstraintR5 {
 
 		@Override
 		public void executeValidator(LanguageCode obj) throws Exception {
-			checkGroupHeader69(obj);
+			checkGroupHeader69_LanguageCode(obj);
 		}
 	};
 
 	/**
 	 * according to ISO 639-1.
 	 */
-	public static void checkGroupHeader69(LanguageCode obj) throws Exception {
+	public static void checkGroupHeader69_LanguageCode(LanguageCode obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

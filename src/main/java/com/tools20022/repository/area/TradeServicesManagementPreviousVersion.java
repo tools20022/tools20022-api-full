@@ -92,10 +92,10 @@ public class TradeServicesManagementPreviousVersion {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Trade Services Management - Previous version - master";
 				definition = "The Trade Services Management business area contains messages that support ancillary commercial trade services functions, including checking, matching and reporting, plus any exceptions and investigations related to trade services transactions.";
+				code = "tsmt";
 				messageDefinition_lazy = () -> Arrays.asList(ActivityReportV03.mmObject(), BaselineReportV03.mmObject(), IntentToPayNotificationV01.mmObject(), ForwardIntentToPayNotificationV01.mmObject(),
 						BaselineReSubmissionV04.mmObject(), DataSetSubmissionV04.mmObject(), FullPushThroughReportV04.mmObject(), BaselineAmendmentRequestV04.mmObject(), ForwardDataSetSubmissionReportV04.mmObject(),
 						InitialBaselineSubmissionV04.mmObject());
-				code = "tsmt";
 			}
 		});
 		return mmObject_lazy.get();

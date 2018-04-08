@@ -122,16 +122,16 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintElectionAdviceStatusRule#forAgentCAElectionStatusAdviceV01
- * ConstraintElectionAdviceStatusRule.forAgentCAElectionStatusAdviceV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintElectionAdviceStatusRule#for_seev_AgentCAElectionStatusAdviceV01
+ * ConstraintElectionAdviceStatusRule.for_seev_AgentCAElectionStatusAdviceV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintElectionAmendmentRequestStatusRule#forAgentCAElectionStatusAdviceV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintElectionAmendmentRequestStatusRule#for_seev_AgentCAElectionStatusAdviceV01
  * ConstraintElectionAmendmentRequestStatusRule.
- * forAgentCAElectionStatusAdviceV01}</li>
+ * for_seev_AgentCAElectionStatusAdviceV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintElectionCancellationRequestStatusRule#forAgentCAElectionStatusAdviceV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintElectionCancellationRequestStatusRule#for_seev_AgentCAElectionStatusAdviceV01
  * ConstraintElectionCancellationRequestStatusRule.
- * forAgentCAElectionStatusAdviceV01}</li>
+ * for_seev_AgentCAElectionStatusAdviceV01}</li>
  * </ul>
  * </li>
  * <li>
@@ -200,10 +200,10 @@ public class AgentCAElectionStatusAdviceV01 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectionAdviceIDOrElectionCancellationRequestIDOrElectionAmendmentRequestIDRule";
 			definition = "Either AgentCAElectionAdviceIdentification or AgentCAElectionCancellationRequestIdentification or AgentCAElectionAmendmentRequestIdentification must be present.";
-			messageDefinition_lazy = () -> com.tools20022.repository.area.seev.AgentCAElectionStatusAdviceV01.mmObject();
 			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAElectionStatusAdviceV01.mmAgentCAElectionAdviceIdentification,
 					com.tools20022.repository.area.seev.AgentCAElectionStatusAdviceV01.mmAgentCAElectionCancellationRequestIdentification,
 					com.tools20022.repository.area.seev.AgentCAElectionStatusAdviceV01.mmAgentCAElectionAmendmentRequestIdentification);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.seev.AgentCAElectionStatusAdviceV01.mmObject();
 		}
 	};
 	/**
@@ -251,9 +251,9 @@ public class AgentCAElectionStatusAdviceV01 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectionAdviceStatusOrCancellationRequestStatusOrAmendmentRequestStatusRule";
 			definition = "Either ElectionAdviceStatus or ElectionCancellationRequestStatus or ElectionAmendmentRequestStatus must be present.";
-			messageDefinition_lazy = () -> com.tools20022.repository.area.seev.AgentCAElectionStatusAdviceV01.mmObject();
 			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAElectionStatusAdviceV01.mmElectionAdviceStatus,
 					com.tools20022.repository.area.seev.AgentCAElectionStatusAdviceV01.mmElectionCancellationRequestStatus, com.tools20022.repository.area.seev.AgentCAElectionStatusAdviceV01.mmElectionAmendmentRequestStatus);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.seev.AgentCAElectionStatusAdviceV01.mmObject();
 		}
 	};
 	@XmlElement(name = "Id", required = true)
@@ -637,9 +637,9 @@ public class AgentCAElectionStatusAdviceV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintElectionAdviceStatusRule.forAgentCAElectionStatusAdviceV01,
-						com.tools20022.repository.constraints.ConstraintElectionAmendmentRequestStatusRule.forAgentCAElectionStatusAdviceV01,
-						com.tools20022.repository.constraints.ConstraintElectionCancellationRequestStatusRule.forAgentCAElectionStatusAdviceV01);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintElectionAdviceStatusRule.for_seev_AgentCAElectionStatusAdviceV01,
+						com.tools20022.repository.constraints.ConstraintElectionAmendmentRequestStatusRule.for_seev_AgentCAElectionStatusAdviceV01,
+						com.tools20022.repository.constraints.ConstraintElectionCancellationRequestStatusRule.for_seev_AgentCAElectionStatusAdviceV01);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AgentCAElectionStatusAdviceV01";
 				definition = "Scope\r\nThis message is sent by an issuer (or its agent) to the CSD to report the status, or a change in status, of:\r\n- a corporate action election advice;\r\n- an election cancellation request; or\r\n- an election amendment request.\r\nUsage\r\nThis message must be sent in response to an:\r\n- Agent Corporation Action Election Advice to provide the status of an election advice in the case of a rejection. However, it may also be used in all other situations, in which case, the building blocks Election Advice Identification and the Election Advice Status must be present.\r\n- Agent Corporation Action Election Cancellation Request to provide the status of the cancellation request, in which case, the building blocks Election Cancellation Request Identification and the Election Cancellation Request Status must be present.\r\n- Agent Corporation Action Election Amendment Request to provide the status of the amendment request, in which case, the building blocks Election Amendment Request Identification and the Election Amendment Request Status must be present.";

@@ -126,12 +126,12 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintMovementStatusDetailsRule#forAgentCAMovementStatusAdviceV01
- * ConstraintMovementStatusDetailsRule.forAgentCAMovementStatusAdviceV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMovementStatusDetailsRule#for_seev_AgentCAMovementStatusAdviceV01
+ * ConstraintMovementStatusDetailsRule.for_seev_AgentCAMovementStatusAdviceV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintMovementCancellationStatusDetailsRule#forAgentCAMovementStatusAdviceV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMovementCancellationStatusDetailsRule#for_seev_AgentCAMovementStatusAdviceV01
  * ConstraintMovementCancellationStatusDetailsRule.
- * forAgentCAMovementStatusAdviceV01}</li>
+ * for_seev_AgentCAMovementStatusAdviceV01}</li>
  * </ul>
  * </li>
  * <li>
@@ -204,11 +204,11 @@ public class AgentCAMovementStatusAdviceV01 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusIdentificationRule";
 			definition = "Either AgentCAElectionStatusAdviceIdentification or AgentCAGlobalDistributionStatusAdviceIdentification or AgentCAMovementInstructionIdentification or AgentCAMovementCancellationRequestIdentification must be present.";
-			messageDefinition_lazy = () -> com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01.mmObject();
 			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01.mmAgentCAElectionStatusAdviceIdentification,
 					com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01.mmAgentCAGlobalDistributionStatusAdviceIdentification,
 					com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01.mmAgentCAMovementInstructionIdentification,
 					com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01.mmAgentCAMovementCancellationRequestIdentification);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01.mmObject();
 		}
 	};
 	/**
@@ -251,9 +251,9 @@ public class AgentCAMovementStatusAdviceV01 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MovementStatusDetailsOrMovementCancellationStatusDetailsRule";
 			definition = "Either MovementStatusDetails or MovementCancellationStatusDetails must be present but not both.";
-			messageDefinition_lazy = () -> com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01.mmObject();
 			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01.mmMovementStatusDetails,
 					com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01.mmMovementCancellationStatusDetails);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01.mmObject();
 		}
 	};
 	@XmlElement(name = "Id", required = true)
@@ -637,8 +637,8 @@ public class AgentCAMovementStatusAdviceV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMovementStatusDetailsRule.forAgentCAMovementStatusAdviceV01,
-						com.tools20022.repository.constraints.ConstraintMovementCancellationStatusDetailsRule.forAgentCAMovementStatusAdviceV01);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMovementStatusDetailsRule.for_seev_AgentCAMovementStatusAdviceV01,
+						com.tools20022.repository.constraints.ConstraintMovementCancellationStatusDetailsRule.for_seev_AgentCAMovementStatusAdviceV01);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AgentCAMovementStatusAdviceV01";
 				definition = "Scope\r\nThis message is sent by a CSD to an issuer (or its agent) to report the status, or a change in status, of\r\n- a global distribution status advice released by an issuer (or its agent);\r\n- a movement instruction released by an issuer (or its agent);\r\n- a movement cancellation request sent by the issuer (or its agent); and\r\n- the non-settlement of the movements at the CSD.\r\nUsage\r\nThis message is used to report the status of:\r\n- the movements resulting from a movement instruction message, in which case, the Agent Corporate Action Movement Instruction Identification must be present;\r\n- the movements resulting from a global distribution status advice message (with the status, authorised), in which case, the Agent Corporate Action Global Distribution Status Advice Identification must be present;\r\n- the movement cancellation request, in which case, the Agent Corporate Action Movement Cancellation Request Identification must be present; and\r\n- the movements resulting from an election status advice (if the status of the election advice is rejected or if the status of the election cancellation request or amendment request is accepted) in case there is a settlement problem. The Election Status Advice Identification must be present.\r\nIn the case of a failed settlement, the message contains details of the movement, such as account details, securities or cash information and the reason of the failure.\r\nThis message should not be used to provide the confirmation of the settlement; the Agent Corporate Action Movement Confirmation message should be used instead.";

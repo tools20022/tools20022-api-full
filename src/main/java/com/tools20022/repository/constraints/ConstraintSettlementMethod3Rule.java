@@ -37,40 +37,6 @@ public class ConstraintSettlementMethod3Rule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SettlementInformation1
-	 * SettlementInformation1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementMethod3Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If SettlementMethod is equal to CLRG then: \n- SettlementAccount is not allowed;\n- Reimbursement agent(s) is(are) not allowed;\n- ClearingSystem must be present."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SettlementInformation1> forSettlementInformation1 = new MMConstraint<SettlementInformation1>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementMethod3Rule";
-			definition = "If SettlementMethod is equal to CLRG then: \n- SettlementAccount is not allowed;\n- Reimbursement agent(s) is(are) not allowed;\n- ClearingSystem must be present.";
-			owner_lazy = () -> SettlementInformation1.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SettlementInformation1 obj) throws Exception {
-			checkSettlementInformation1(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SettlementInformation6
 	 * SettlementInformation6}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
@@ -102,6 +68,40 @@ public class ConstraintSettlementMethod3Rule {
 		@Override
 		public void executeValidator(SettlementInformation6 obj) throws Exception {
 			checkSettlementInformation6(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SettlementInformation1
+	 * SettlementInformation1}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementMethod3Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SettlementMethod is equal to CLRG then: \n- SettlementAccount is not allowed;\n- Reimbursement agent(s) is(are) not allowed;\n- ClearingSystem must be present."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SettlementInformation1> forSettlementInformation1 = new MMConstraint<SettlementInformation1>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementMethod3Rule";
+			definition = "If SettlementMethod is equal to CLRG then: \n- SettlementAccount is not allowed;\n- Reimbursement agent(s) is(are) not allowed;\n- ClearingSystem must be present.";
+			owner_lazy = () -> SettlementInformation1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementInformation1 obj) throws Exception {
+			checkSettlementInformation1(obj);
 		}
 	};
 	/**
@@ -149,7 +149,7 @@ public class ConstraintSettlementMethod3Rule {
 	 * allowed; - Reimbursement agent(s) is(are) not allowed; - ClearingSystem
 	 * must be present.
 	 */
-	public static void checkSettlementInformation1(SettlementInformation1 obj) throws Exception {
+	public static void checkSettlementInformation6(SettlementInformation6 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -158,7 +158,7 @@ public class ConstraintSettlementMethod3Rule {
 	 * allowed; - Reimbursement agent(s) is(are) not allowed; - ClearingSystem
 	 * must be present.
 	 */
-	public static void checkSettlementInformation6(SettlementInformation6 obj) throws Exception {
+	public static void checkSettlementInformation1(SettlementInformation1 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 

@@ -111,11 +111,11 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintOtherReferenceRule#forTransferInstructionStatusReportV06
- * ConstraintOtherReferenceRule.forTransferInstructionStatusReportV06}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOtherReferenceRule#for_sese_TransferInstructionStatusReportV06
+ * ConstraintOtherReferenceRule.for_sese_TransferInstructionStatusReportV06}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintRelatedReferenceRule#forTransferInstructionStatusReportV06
- * ConstraintRelatedReferenceRule.forTransferInstructionStatusReportV06}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintRelatedReferenceRule#for_sese_TransferInstructionStatusReportV06
+ * ConstraintRelatedReferenceRule.for_sese_TransferInstructionStatusReportV06}</li>
  * </ul>
  * </li>
  * <li>
@@ -462,8 +462,8 @@ public class TransferInstructionStatusReportV06 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOtherReferenceRule.forTransferInstructionStatusReportV06,
-						com.tools20022.repository.constraints.ConstraintRelatedReferenceRule.forTransferInstructionStatusReportV06);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOtherReferenceRule.for_sese_TransferInstructionStatusReportV06,
+						com.tools20022.repository.constraints.ConstraintRelatedReferenceRule.for_sese_TransferInstructionStatusReportV06);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransferInstructionStatusReportV06";
 				definition = "Scope\r\nThe TransferInstructionStatusReport is sent by an executing party, for example, a transfer agent, to the instructing party, for example, an investment manager or one of its authorised representatives to provide the status of a previously received transfer instruction.\r\n\r\nUsage\r\nThe TransferInstructionStatusReport message is sent by an executing party, for example, a transfer agent, to the instructing party, for example, an investment manager or one of its authorised representatives to provide the status of a previously received transfer instruction.\r\nThe message identification of the transfer instruction message in which the transfer instruction was conveyed may also be quoted in RelatedReference.\r\nOne of the following statuses can be reported:\r\n- an accepted status, or,\r\n- an already executed status, or,\r\n- a sent to next party status, or,\r\n- a matched status, or,\r\n- a settled status, or,\r\n- a pending settlement status and the reason for the status, or,\r\n- an unmatched status and the reason for the status, or,\r\n- an in-repair status and the reason for the status, or,\r\n- a rejected status and the reason for the status, or,\r\n- a failed settlement status and the reason for the status, or,\r\n- a cancelled status and the reason for the status, or,\r\n- a cancelled status and the reason for the status, or,\r\n- a cancellation pending status and the reason for the status.";

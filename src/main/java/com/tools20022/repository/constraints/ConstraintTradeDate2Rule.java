@@ -55,7 +55,7 @@ public class ConstraintTradeDate2Rule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<FundConfirmedCashForecastReportV04> forFundConfirmedCashForecastReportV04 = new MMConstraint<FundConfirmedCashForecastReportV04>() {
+	public static final MMConstraint<FundConfirmedCashForecastReportV04> for_camt_FundConfirmedCashForecastReportV04 = new MMConstraint<FundConfirmedCashForecastReportV04>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate2Rule";
@@ -66,46 +66,7 @@ public class ConstraintTradeDate2Rule {
 
 		@Override
 		public void executeValidator(FundConfirmedCashForecastReportV04 obj) throws Exception {
-			checkFundConfirmedCashForecastReportV04(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04
-	 * FundEstimatedCashForecastReportV04}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
-	 * expression} =
-	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/FundOrSubFundDetails[*]/TradeDateTime&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/EstimatedFundCashForecastDetails[*]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "TradeDate2Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If EstimatedFundCashForecastDetails is not present, then at least one occurrence of FundOrSubFundDetails/TradeDateTime must be present."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<FundEstimatedCashForecastReportV04> forFundEstimatedCashForecastReportV04 = new MMConstraint<FundEstimatedCashForecastReportV04>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "TradeDate2Rule";
-			definition = "If EstimatedFundCashForecastDetails is not present, then at least one occurrence of FundOrSubFundDetails/TradeDateTime must be present.";
-			owner_lazy = () -> FundEstimatedCashForecastReportV04.mmObject();
-			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/FundOrSubFundDetails[*]/TradeDateTime</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/EstimatedFundCashForecastDetails[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
-		}
-
-		@Override
-		public void executeValidator(FundEstimatedCashForecastReportV04 obj) throws Exception {
-			checkFundEstimatedCashForecastReportV04(obj);
+			check_camt_FundConfirmedCashForecastReportV04(obj);
 		}
 	};
 	/**
@@ -147,20 +108,51 @@ public class ConstraintTradeDate2Rule {
 			checkFundConfirmedCashForecastReport3(obj);
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04
+	 * FundEstimatedCashForecastReportV04}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/FundOrSubFundDetails[*]/TradeDateTime&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/EstimatedFundCashForecastDetails[*]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TradeDate2Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If EstimatedFundCashForecastDetails is not present, then at least one occurrence of FundOrSubFundDetails/TradeDateTime must be present."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<FundEstimatedCashForecastReportV04> for_camt_FundEstimatedCashForecastReportV04 = new MMConstraint<FundEstimatedCashForecastReportV04>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "TradeDate2Rule";
+			definition = "If EstimatedFundCashForecastDetails is not present, then at least one occurrence of FundOrSubFundDetails/TradeDateTime must be present.";
+			owner_lazy = () -> FundEstimatedCashForecastReportV04.mmObject();
+			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/FundOrSubFundDetails[*]/TradeDateTime</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/EstimatedFundCashForecastDetails[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(FundEstimatedCashForecastReportV04 obj) throws Exception {
+			check_camt_FundEstimatedCashForecastReportV04(obj);
+		}
+	};
 
 	/**
 	 * If FundCashForecastDetails is not present, then at least one occurrence
 	 * of FundOrSubFundDetails/TradeDateTime must be present.
 	 */
-	public static void checkFundConfirmedCashForecastReportV04(FundConfirmedCashForecastReportV04 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If EstimatedFundCashForecastDetails is not present, then at least one
-	 * occurrence of FundOrSubFundDetails/TradeDateTime must be present.
-	 */
-	public static void checkFundEstimatedCashForecastReportV04(FundEstimatedCashForecastReportV04 obj) throws Exception {
+	public static void check_camt_FundConfirmedCashForecastReportV04(FundConfirmedCashForecastReportV04 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -169,6 +161,14 @@ public class ConstraintTradeDate2Rule {
 	 * of FundOrSubFundDetails/TradeDateTime must be present.
 	 */
 	public static void checkFundConfirmedCashForecastReport3(FundConfirmedCashForecastReport3 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If EstimatedFundCashForecastDetails is not present, then at least one
+	 * occurrence of FundOrSubFundDetails/TradeDateTime must be present.
+	 */
+	public static void check_camt_FundEstimatedCashForecastReportV04(FundEstimatedCashForecastReportV04 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

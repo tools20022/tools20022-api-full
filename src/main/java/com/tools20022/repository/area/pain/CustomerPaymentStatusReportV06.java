@@ -97,20 +97,20 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintGroupStatusAcceptedRule#forCustomerPaymentStatusReportV06
- * ConstraintGroupStatusAcceptedRule.forCustomerPaymentStatusReportV06}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupStatusAcceptedRule#for_pain_CustomerPaymentStatusReportV06
+ * ConstraintGroupStatusAcceptedRule.for_pain_CustomerPaymentStatusReportV06}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintGroupStatusPendingRule#forCustomerPaymentStatusReportV06
- * ConstraintGroupStatusPendingRule.forCustomerPaymentStatusReportV06}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupStatusPendingRule#for_pain_CustomerPaymentStatusReportV06
+ * ConstraintGroupStatusPendingRule.for_pain_CustomerPaymentStatusReportV06}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintGroupStatusRejectedRule#forCustomerPaymentStatusReportV06
- * ConstraintGroupStatusRejectedRule.forCustomerPaymentStatusReportV06}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupStatusRejectedRule#for_pain_CustomerPaymentStatusReportV06
+ * ConstraintGroupStatusRejectedRule.for_pain_CustomerPaymentStatusReportV06}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintGroupStatusReceivedRule#forCustomerPaymentStatusReportV06
- * ConstraintGroupStatusReceivedRule.forCustomerPaymentStatusReportV06}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupStatusReceivedRule#for_pain_CustomerPaymentStatusReportV06
+ * ConstraintGroupStatusReceivedRule.for_pain_CustomerPaymentStatusReportV06}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintSupplementaryDataRule#forCustomerPaymentStatusReportV06
- * ConstraintSupplementaryDataRule.forCustomerPaymentStatusReportV06}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSupplementaryDataRule#for_pain_CustomerPaymentStatusReportV06
+ * ConstraintSupplementaryDataRule.for_pain_CustomerPaymentStatusReportV06}</li>
  * </ul>
  * </li>
  * <li>
@@ -395,9 +395,11 @@ public class CustomerPaymentStatusReportV06 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupStatusAcceptedRule.forCustomerPaymentStatusReportV06,
-						com.tools20022.repository.constraints.ConstraintGroupStatusPendingRule.forCustomerPaymentStatusReportV06, com.tools20022.repository.constraints.ConstraintGroupStatusRejectedRule.forCustomerPaymentStatusReportV06,
-						com.tools20022.repository.constraints.ConstraintGroupStatusReceivedRule.forCustomerPaymentStatusReportV06, com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCustomerPaymentStatusReportV06);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupStatusAcceptedRule.for_pain_CustomerPaymentStatusReportV06,
+						com.tools20022.repository.constraints.ConstraintGroupStatusPendingRule.for_pain_CustomerPaymentStatusReportV06,
+						com.tools20022.repository.constraints.ConstraintGroupStatusRejectedRule.for_pain_CustomerPaymentStatusReportV06,
+						com.tools20022.repository.constraints.ConstraintGroupStatusReceivedRule.for_pain_CustomerPaymentStatusReportV06,
+						com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.for_pain_CustomerPaymentStatusReportV06);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CustomerPaymentStatusReportV06";
 				definition = "Scope\r\nThe CustomerPaymentStatusReport message is sent by an instructed agent to the previous party in the payment chain. It is used to inform this party about the positive or negative status of an instruction (either single or file). It is also used to report on a pending instruction.\r\nUsage\r\nThe CustomerPaymentStatusReport message is exchanged between an agent and a non-financial institution customer to provide status information on instructions previously sent. Its usage will always be governed by a bilateral agreement between the agent and the non-financial institution customer.\r\nThe CustomerPaymentStatusReport message can be used to provide information about the status (e.g. rejection, acceptance) of the initiation of a credit transfer, a direct debit, as well as on the initiation of other customer instructions.\r\nThe CustomerPaymentStatusReport message refers to the original instruction(s) by means of references only or by means of references and a set of elements from the original instruction.\r\nThe CustomerPaymentStatusReport message can be used in domestic and cross-border scenarios.";

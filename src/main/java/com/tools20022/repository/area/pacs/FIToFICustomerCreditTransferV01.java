@@ -100,25 +100,27 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintInstructedAgentRule#forFIToFICustomerCreditTransferV01
- * ConstraintInstructedAgentRule.forFIToFICustomerCreditTransferV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInstructedAgentRule#for_pacs_FIToFICustomerCreditTransferV01
+ * ConstraintInstructedAgentRule.for_pacs_FIToFICustomerCreditTransferV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintInstructingAgentRule#forFIToFICustomerCreditTransferV01
- * ConstraintInstructingAgentRule.forFIToFICustomerCreditTransferV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInstructingAgentRule#for_pacs_FIToFICustomerCreditTransferV01
+ * ConstraintInstructingAgentRule.for_pacs_FIToFICustomerCreditTransferV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmount1Rule#forFIToFICustomerCreditTransferV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmount1Rule#for_pacs_FIToFICustomerCreditTransferV01
  * ConstraintTotalInterbankSettlementAmount1Rule.
- * forFIToFICustomerCreditTransferV01}</li>
+ * for_pacs_FIToFICustomerCreditTransferV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmount2Rule#forFIToFICustomerCreditTransferV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmount2Rule#for_pacs_FIToFICustomerCreditTransferV01
  * ConstraintTotalInterbankSettlementAmount2Rule.
- * forFIToFICustomerCreditTransferV01}</li>
+ * for_pacs_FIToFICustomerCreditTransferV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintInterbankSettlementDateRule#forFIToFICustomerCreditTransferV01
- * ConstraintInterbankSettlementDateRule.forFIToFICustomerCreditTransferV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInterbankSettlementDateRule#for_pacs_FIToFICustomerCreditTransferV01
+ * ConstraintInterbankSettlementDateRule.
+ * for_pacs_FIToFICustomerCreditTransferV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintPaymentTypeInformationRule#forFIToFICustomerCreditTransferV01
- * ConstraintPaymentTypeInformationRule.forFIToFICustomerCreditTransferV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPaymentTypeInformationRule#for_pacs_FIToFICustomerCreditTransferV01
+ * ConstraintPaymentTypeInformationRule.for_pacs_FIToFICustomerCreditTransferV01
+ * }</li>
  * </ul>
  * </li>
  * <li>
@@ -244,12 +246,12 @@ public class FIToFICustomerCreditTransferV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInstructedAgentRule.forFIToFICustomerCreditTransferV01,
-						com.tools20022.repository.constraints.ConstraintInstructingAgentRule.forFIToFICustomerCreditTransferV01,
-						com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmount1Rule.forFIToFICustomerCreditTransferV01,
-						com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmount2Rule.forFIToFICustomerCreditTransferV01,
-						com.tools20022.repository.constraints.ConstraintInterbankSettlementDateRule.forFIToFICustomerCreditTransferV01,
-						com.tools20022.repository.constraints.ConstraintPaymentTypeInformationRule.forFIToFICustomerCreditTransferV01);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInstructedAgentRule.for_pacs_FIToFICustomerCreditTransferV01,
+						com.tools20022.repository.constraints.ConstraintInstructingAgentRule.for_pacs_FIToFICustomerCreditTransferV01,
+						com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmount1Rule.for_pacs_FIToFICustomerCreditTransferV01,
+						com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmount2Rule.for_pacs_FIToFICustomerCreditTransferV01,
+						com.tools20022.repository.constraints.ConstraintInterbankSettlementDateRule.for_pacs_FIToFICustomerCreditTransferV01,
+						com.tools20022.repository.constraints.ConstraintPaymentTypeInformationRule.for_pacs_FIToFICustomerCreditTransferV01);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FIToFICustomerCreditTransferV01";
 				definition = "Scope\r\nThe FinancialInstitutionToFinancialInstitutionCustomerCreditTransfer message is sent by the debtor agent to the creditor agent, directly or through other agents and/or a payment clearing and settlement system. It is used to move funds from a debtor account to a creditor.\r\nUsage\r\nThe FIToFICustomerCreditTransfer message is exchanged between agents and can contain one or more customer credit transfer instructions.\r\nThe FIToFICustomerCreditTransfer message does not allow for grouping: a CreditTransferTransactionInformation block must be present for each credit transfer transaction.\r\nThe FIToFICustomerCreditTransfer message can be used in different ways:\r\n- If the instructing agent and the instructed agent wish to use their direct account relationship in the currency of the transfer then the message contains both the funds for the customer transfer(s) as well as the payment details;\r\n- If the instructing agent and the instructed agent have no direct account relationship in the currency of the transfer, or do not wish to use their account relationship, then other (reimbursement) agents will be involved to cover for the customer transfer(s). The FIToFICustomerCreditTransfer contains only the payment details and the instructing agent must cover the customer transfer by sending a FinancialInstitutionCreditTransfer to a reimbursement agent. This payment method is called the Cover method;\r\n- If more than two financial institutions are involved in the payment chain and if the FIToFICustomerCreditTransfer is sent from one financial institution to the next financial institution in the payment chain, then the payment method is called the Serial method.\r\nThe FIToFICustomerCreditTransfer message can be used in domestic and cross-border scenarios.\r\n";

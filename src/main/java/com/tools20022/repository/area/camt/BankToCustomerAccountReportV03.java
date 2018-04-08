@@ -92,8 +92,9 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrReportPaginationRule#forBankToCustomerAccountReportV03
- * ConstraintMessageOrReportPaginationRule.forBankToCustomerAccountReportV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrReportPaginationRule#for_camt_BankToCustomerAccountReportV03
+ * ConstraintMessageOrReportPaginationRule.
+ * for_camt_BankToCustomerAccountReportV03}</li>
  * </ul>
  * </li>
  * <li>
@@ -265,7 +266,7 @@ public class BankToCustomerAccountReportV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMessageOrReportPaginationRule.forBankToCustomerAccountReportV03);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMessageOrReportPaginationRule.for_camt_BankToCustomerAccountReportV03);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BankToCustomerAccountReportV03";
 				definition = "Scope\r\nThe BankToCustomerAccountReport message is sent by the account servicer to an account owner or to a party authorised by the account owner to receive the message. It can be used to inform the account owner, or authorised party, of the entries reported to the account, and/or to provide the owner with balance information on the account at a given point in time.\r\nUsage\r\nThe BankToCustomerAccountReport message can contain reports for more than one account. It provides information for cash management and/or reconciliation. It can be used to:\r\n- report pending and booked items;\r\n- provide balance information.\r\nIt can include underlying details of transactions that have been included in the entry.\r\nIt is possible that the receiver of the message is not the account owner, but a party entitled by the account owner to receive the account information (also known as recipient).\r\nFor a statement, the Bank-to-Customer Account Statement message should be used.";

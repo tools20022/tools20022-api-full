@@ -118,12 +118,12 @@ public class TradeServicesLatestVersion {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Trade Services -  Latest version - master";
 				definition = "Messages that support the issuance of a trade services instrument, execution and/or settlement of a trade transaction, including any related reimbursement, acceptance, authorisation, claims, enquiries, invoicing, financing or other undertaking.";
+				code = "tsrv";
 				messageDefinition_lazy = () -> Arrays.asList(DemandRefusalNotificationV01.mmObject(), DemandWithdrawalNotificationV01.mmObject(), ExtendOrPayRequestV01.mmObject(), ExtendOrPayResponseV01.mmObject(),
 						TradeStatusReportV01.mmObject(), UndertakingAmendmentAdviceV01.mmObject(), UndertakingAmendmentNotificationV01.mmObject(), UndertakingAmendmentRequestV01.mmObject(),
 						UndertakingAmendmentResponseNotificationV01.mmObject(), UndertakingAmendmentResponseV01.mmObject(), UndertakingAmendmentV01.mmObject(), UndertakingDemandV01.mmObject(), UndertakingIssuanceAdviceV01.mmObject(),
 						UndertakingIssuanceNotificationV01.mmObject(), UndertakingIssuanceV01.mmObject(), UndertakingNonExtensionNotificationV01.mmObject(), UndertakingNonExtensionRequestV01.mmObject(),
 						UndertakingStatusReportV01.mmObject(), UndertakingTerminationNotificationV01.mmObject());
-				code = "tsrv";
 			}
 		});
 		return mmObject_lazy.get();

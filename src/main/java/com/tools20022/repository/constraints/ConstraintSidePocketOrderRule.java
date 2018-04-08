@@ -37,8 +37,8 @@ public class ConstraintSidePocketOrderRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution10
-	 * RedemptionExecution10}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution7
+	 * SubscriptionExecution7}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -52,17 +52,17 @@ public class ConstraintSidePocketOrderRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<RedemptionExecution10> forRedemptionExecution10 = new MMConstraint<RedemptionExecution10>() {
+	public static final MMConstraint<SubscriptionExecution7> forSubscriptionExecution7 = new MMConstraint<SubscriptionExecution7>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SidePocketOrderRule";
 			definition = "If HedgeFundOrderType is SPOR in any occurrence of HedgeFundOrderType, then SidePocketDetails is not allowed.";
-			owner_lazy = () -> RedemptionExecution10.mmObject();
+			owner_lazy = () -> SubscriptionExecution7.mmObject();
 		}
 
 		@Override
-		public void executeValidator(RedemptionExecution10 obj) throws Exception {
-			checkRedemptionExecution10(obj);
+		public void executeValidator(SubscriptionExecution7 obj) throws Exception {
+			checkSubscriptionExecution7(obj);
 		}
 	};
 	/**
@@ -105,40 +105,6 @@ public class ConstraintSidePocketOrderRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution7
-	 * SubscriptionExecution7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SidePocketOrderRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If HedgeFundOrderType is SPOR in any occurrence of HedgeFundOrderType, then SidePocketDetails is not allowed."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SubscriptionExecution7> forSubscriptionExecution7 = new MMConstraint<SubscriptionExecution7>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SidePocketOrderRule";
-			definition = "If HedgeFundOrderType is SPOR in any occurrence of HedgeFundOrderType, then SidePocketDetails is not allowed.";
-			owner_lazy = () -> SubscriptionExecution7.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SubscriptionExecution7 obj) throws Exception {
-			checkSubscriptionExecution7(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder9
 	 * SubscriptionOrder9}</li>
 	 * <li>
@@ -167,12 +133,46 @@ public class ConstraintSidePocketOrderRule {
 			checkSubscriptionOrder9(obj);
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution10
+	 * RedemptionExecution10}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SidePocketOrderRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If HedgeFundOrderType is SPOR in any occurrence of HedgeFundOrderType, then SidePocketDetails is not allowed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<RedemptionExecution10> forRedemptionExecution10 = new MMConstraint<RedemptionExecution10>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SidePocketOrderRule";
+			definition = "If HedgeFundOrderType is SPOR in any occurrence of HedgeFundOrderType, then SidePocketDetails is not allowed.";
+			owner_lazy = () -> RedemptionExecution10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionExecution10 obj) throws Exception {
+			checkRedemptionExecution10(obj);
+		}
+	};
 
 	/**
 	 * If HedgeFundOrderType is SPOR in any occurrence of HedgeFundOrderType,
 	 * then SidePocketDetails is not allowed.
 	 */
-	public static void checkRedemptionExecution10(RedemptionExecution10 obj) throws Exception {
+	public static void checkSubscriptionExecution7(SubscriptionExecution7 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -188,7 +188,7 @@ public class ConstraintSidePocketOrderRule {
 	 * If HedgeFundOrderType is SPOR in any occurrence of HedgeFundOrderType,
 	 * then SidePocketDetails is not allowed.
 	 */
-	public static void checkSubscriptionExecution7(SubscriptionExecution7 obj) throws Exception {
+	public static void checkSubscriptionOrder9(SubscriptionOrder9 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -196,7 +196,7 @@ public class ConstraintSidePocketOrderRule {
 	 * If HedgeFundOrderType is SPOR in any occurrence of HedgeFundOrderType,
 	 * then SidePocketDetails is not allowed.
 	 */
-	public static void checkSubscriptionOrder9(SubscriptionOrder9 obj) throws Exception {
+	public static void checkRedemptionExecution10(RedemptionExecution10 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

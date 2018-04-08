@@ -124,9 +124,9 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintBalanceForAccountOrSubAccountDetailsRule#forCustodyStatementOfHoldings
+ * {@linkplain com.tools20022.repository.constraints.ConstraintBalanceForAccountOrSubAccountDetailsRule#for_semt_CustodyStatementOfHoldings
  * ConstraintBalanceForAccountOrSubAccountDetailsRule.
- * forCustodyStatementOfHoldings}</li>
+ * for_semt_CustodyStatementOfHoldings}</li>
  * </ul>
  * </li>
  * <li>
@@ -571,7 +571,7 @@ public class CustodyStatementOfHoldings {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBalanceForAccountOrSubAccountDetailsRule.forCustodyStatementOfHoldings);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBalanceForAccountOrSubAccountDetailsRule.for_semt_CustodyStatementOfHoldings);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CustodyStatementOfHoldings";
 				definition = "Scope\r\nThe CustodyStatementOfHoldings message is sent by an account servicer to the account owner or the account owner's designated agent. The account servicer may be a local agent acting on behalf of its global custodian customer, a custodian acting on behalf of an investment management institution or a broker/dealer, a fund administrator or fund intermediary, trustee or registrar, etc.\r\nThis message reports, at a specified moment in time, the quantity and identification of financial instruments that an account servicer holds for the account owner.\r\nThis message is used to reconcile the books of the account owner and the account servicer for the specified account or sub-account.\r\nThis message can also report availability and/or the location of security holdings to facilitate trading and minimise settlement issues. The reporting is per financial instrument, ie, when a financial instrument is held at multiple places of safekeeping, the total holding for all locations can be provided.\r\nUsage\r\nThe CustodyStatementOfHoldings message can be sent:\r\n- At a frequency agreed bi-laterally between the Sender and the Receiver\r\n- As a response to a request for statement sent by the account owner.\r\nThis message can reflect all outstanding holding information or may only contain changes since the previously sent statement.\r\nThe CustodyStatementOfHoldings message can only be used to list the holdings of a single (master) account. However, it is possible to break down these holdings into one or several sub-accounts. Therefore, this message can be used to either specify holdings at\r\n- the main account level, or\r\n- the sub-account level.\r\nThis message can be also be used to report where the securities are safe-kept, physically or notionally. If a security is held in more than one safekeeping place, this can also be indicated.\r\nThis message must not be used to report audited positions. Audited positions are reported using the AccountingStatementOfHoldings message.\r\nSince a SWIFT message as sent is restricted to the maximum input message length, several messages may be needed to accommodate all the information.";

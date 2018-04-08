@@ -37,40 +37,6 @@ public class ConstraintBulkCashSettlementDetails5Rule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.RedemptionBulkOrder2
-	 * RedemptionBulkOrder2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BulkCashSettlementDetails5Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Either IndividualOrderDetails/CashSettlementDetails or BulkCashSettlementDetails may be present, but not both."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<RedemptionBulkOrder2> forRedemptionBulkOrder2 = new MMConstraint<RedemptionBulkOrder2>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "BulkCashSettlementDetails5Rule";
-			definition = "Either IndividualOrderDetails/CashSettlementDetails or BulkCashSettlementDetails may be present, but not both.";
-			owner_lazy = () -> RedemptionBulkOrder2.mmObject();
-		}
-
-		@Override
-		public void executeValidator(RedemptionBulkOrder2 obj) throws Exception {
-			checkRedemptionBulkOrder2(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RedemptionBulkOrder3
 	 * RedemptionBulkOrder3}</li>
 	 * <li>
@@ -97,6 +63,40 @@ public class ConstraintBulkCashSettlementDetails5Rule {
 		@Override
 		public void executeValidator(RedemptionBulkOrder3 obj) throws Exception {
 			checkRedemptionBulkOrder3(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.RedemptionBulkOrder2
+	 * RedemptionBulkOrder2}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BulkCashSettlementDetails5Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Either IndividualOrderDetails/CashSettlementDetails or BulkCashSettlementDetails may be present, but not both."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<RedemptionBulkOrder2> forRedemptionBulkOrder2 = new MMConstraint<RedemptionBulkOrder2>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "BulkCashSettlementDetails5Rule";
+			definition = "Either IndividualOrderDetails/CashSettlementDetails or BulkCashSettlementDetails may be present, but not both.";
+			owner_lazy = () -> RedemptionBulkOrder2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionBulkOrder2 obj) throws Exception {
+			checkRedemptionBulkOrder2(obj);
 		}
 	};
 	/**
@@ -147,7 +147,7 @@ public class ConstraintBulkCashSettlementDetails5Rule {
 	 * Either IndividualOrderDetails/CashSettlementDetails or
 	 * BulkCashSettlementDetails may be present, but not both.
 	 */
-	public static void checkRedemptionBulkOrder2(RedemptionBulkOrder2 obj) throws Exception {
+	public static void checkRedemptionBulkOrder3(RedemptionBulkOrder3 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -155,7 +155,7 @@ public class ConstraintBulkCashSettlementDetails5Rule {
 	 * Either IndividualOrderDetails/CashSettlementDetails or
 	 * BulkCashSettlementDetails may be present, but not both.
 	 */
-	public static void checkRedemptionBulkOrder3(RedemptionBulkOrder3 obj) throws Exception {
+	public static void checkRedemptionBulkOrder2(RedemptionBulkOrder2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 

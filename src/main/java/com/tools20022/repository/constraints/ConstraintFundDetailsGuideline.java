@@ -36,76 +36,8 @@ public class ConstraintFundDetailsGuideline {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount17
-	 * InvestmentAccount17}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "FundDetailsGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<InvestmentAccount17> forInvestmentAccount17 = new MMConstraint<InvestmentAccount17>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "FundDetailsGuideline";
-			definition = "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
-			owner_lazy = () -> InvestmentAccount17.mmObject();
-		}
-
-		@Override
-		public void executeValidator(InvestmentAccount17 obj) throws Exception {
-			checkInvestmentAccount17(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount27
-	 * InvestmentAccount27}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "FundDetailsGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<InvestmentAccount27> forInvestmentAccount27 = new MMConstraint<InvestmentAccount27>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "FundDetailsGuideline";
-			definition = "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
-			owner_lazy = () -> InvestmentAccount27.mmObject();
-		}
-
-		@Override
-		public void executeValidator(InvestmentAccount27 obj) throws Exception {
-			checkInvestmentAccount27(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount35
-	 * InvestmentAccount35}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount49
+	 * InvestmentAccount49}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -121,246 +53,30 @@ public class ConstraintFundDetailsGuideline {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintFundDetailsGuideline#forInvestmentAccount38
-	 * ConstraintFundDetailsGuideline.forInvestmentAccount38}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintFinancialInstrumentDetailsGuideline#forInvestmentAccount61
+	 * ConstraintFinancialInstrumentDetailsGuideline.forInvestmentAccount61}</li>
 	 * </ul>
 	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<InvestmentAccount35> forInvestmentAccount35 = new MMConstraint<InvestmentAccount35>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "FundDetailsGuideline";
-			definition = "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintFundDetailsGuideline.forInvestmentAccount38);
-			owner_lazy = () -> InvestmentAccount35.mmObject();
-		}
-
-		@Override
-		public void executeValidator(InvestmentAccount35 obj) throws Exception {
-			checkInvestmentAccount35(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount18
-	 * InvestmentAccount18}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "FundDetailsGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<InvestmentAccount18> forInvestmentAccount18 = new MMConstraint<InvestmentAccount18>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "FundDetailsGuideline";
-			definition = "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
-			owner_lazy = () -> InvestmentAccount18.mmObject();
-		}
-
-		@Override
-		public void executeValidator(InvestmentAccount18 obj) throws Exception {
-			checkInvestmentAccount18(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount28
-	 * InvestmentAccount28}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "FundDetailsGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<InvestmentAccount28> forInvestmentAccount28 = new MMConstraint<InvestmentAccount28>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "FundDetailsGuideline";
-			definition = "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
-			owner_lazy = () -> InvestmentAccount28.mmObject();
-		}
-
-		@Override
-		public void executeValidator(InvestmentAccount28 obj) throws Exception {
-			checkInvestmentAccount28(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount36
-	 * InvestmentAccount36}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "FundDetailsGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintFundDetailsGuideline#forInvestmentAccount39
-	 * ConstraintFundDetailsGuideline.forInvestmentAccount39}</li>
-	 * </ul>
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<InvestmentAccount36> forInvestmentAccount36 = new MMConstraint<InvestmentAccount36>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "FundDetailsGuideline";
-			definition = "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintFundDetailsGuideline.forInvestmentAccount39);
-			owner_lazy = () -> InvestmentAccount36.mmObject();
-		}
-
-		@Override
-		public void executeValidator(InvestmentAccount36 obj) throws Exception {
-			checkInvestmentAccount36(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount16
-	 * InvestmentAccount16}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "FundDetailsGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<InvestmentAccount16> forInvestmentAccount16 = new MMConstraint<InvestmentAccount16>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "FundDetailsGuideline";
-			definition = "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
-			owner_lazy = () -> InvestmentAccount16.mmObject();
-		}
-
-		@Override
-		public void executeValidator(InvestmentAccount16 obj) throws Exception {
-			checkInvestmentAccount16(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount26
-	 * InvestmentAccount26}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "FundDetailsGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<InvestmentAccount26> forInvestmentAccount26 = new MMConstraint<InvestmentAccount26>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "FundDetailsGuideline";
-			definition = "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
-			owner_lazy = () -> InvestmentAccount26.mmObject();
-		}
-
-		@Override
-		public void executeValidator(InvestmentAccount26 obj) throws Exception {
-			checkInvestmentAccount26(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount34
-	 * InvestmentAccount34}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "FundDetailsGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
 	 * {@linkplain com.tools20022.repository.constraints.ConstraintFundDetailsGuideline#forInvestmentAccount37
 	 * ConstraintFundDetailsGuideline.forInvestmentAccount37}</li>
 	 * </ul>
-	 * </li>
-	 * </ul>
 	 */
-	public static final MMConstraint<InvestmentAccount34> forInvestmentAccount34 = new MMConstraint<InvestmentAccount34>() {
+	public static final MMConstraint<InvestmentAccount49> forInvestmentAccount49 = new MMConstraint<InvestmentAccount49>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundDetailsGuideline";
 			definition = "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintFundDetailsGuideline.forInvestmentAccount37);
-			owner_lazy = () -> InvestmentAccount34.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintFinancialInstrumentDetailsGuideline.forInvestmentAccount61);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintFundDetailsGuideline.forInvestmentAccount37;
+			owner_lazy = () -> InvestmentAccount49.mmObject();
 		}
 
 		@Override
-		public void executeValidator(InvestmentAccount34 obj) throws Exception {
-			checkInvestmentAccount34(obj);
+		public void executeValidator(InvestmentAccount49 obj) throws Exception {
+			checkInvestmentAccount49(obj);
 		}
 	};
 	/**
@@ -418,104 +134,6 @@ public class ConstraintFundDetailsGuideline {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount37
-	 * InvestmentAccount37}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "FundDetailsGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintFundDetailsGuideline#forInvestmentAccount49
-	 * ConstraintFundDetailsGuideline.forInvestmentAccount49}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintFundDetailsGuideline#forInvestmentAccount34
-	 * ConstraintFundDetailsGuideline.forInvestmentAccount34}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<InvestmentAccount37> forInvestmentAccount37 = new MMConstraint<InvestmentAccount37>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "FundDetailsGuideline";
-			definition = "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintFundDetailsGuideline.forInvestmentAccount49);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintFundDetailsGuideline.forInvestmentAccount34;
-			owner_lazy = () -> InvestmentAccount37.mmObject();
-		}
-
-		@Override
-		public void executeValidator(InvestmentAccount37 obj) throws Exception {
-			checkInvestmentAccount37(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39
-	 * InvestmentAccount39}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "FundDetailsGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintFundDetailsGuideline#forInvestmentAccount47
-	 * ConstraintFundDetailsGuideline.forInvestmentAccount47}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintFundDetailsGuideline#forInvestmentAccount36
-	 * ConstraintFundDetailsGuideline.forInvestmentAccount36}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<InvestmentAccount39> forInvestmentAccount39 = new MMConstraint<InvestmentAccount39>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "FundDetailsGuideline";
-			definition = "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintFundDetailsGuideline.forInvestmentAccount47);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintFundDetailsGuideline.forInvestmentAccount36;
-			owner_lazy = () -> InvestmentAccount39.mmObject();
-		}
-
-		@Override
-		public void executeValidator(InvestmentAccount39 obj) throws Exception {
-			checkInvestmentAccount39(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount46
 	 * InvestmentAccount46}</li>
 	 * <li>
@@ -565,8 +183,8 @@ public class ConstraintFundDetailsGuideline {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount47
-	 * InvestmentAccount47}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount16
+	 * InvestmentAccount16}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -578,34 +196,19 @@ public class ConstraintFundDetailsGuideline {
 	 * definition} =
 	 * "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintFundDetailsGuideline#forInvestmentAccount51
-	 * ConstraintFundDetailsGuideline.forInvestmentAccount51}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintFundDetailsGuideline#forInvestmentAccount39
-	 * ConstraintFundDetailsGuideline.forInvestmentAccount39}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<InvestmentAccount47> forInvestmentAccount47 = new MMConstraint<InvestmentAccount47>() {
+	public static final MMConstraint<InvestmentAccount16> forInvestmentAccount16 = new MMConstraint<InvestmentAccount16>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundDetailsGuideline";
 			definition = "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintFundDetailsGuideline.forInvestmentAccount51);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintFundDetailsGuideline.forInvestmentAccount39;
-			owner_lazy = () -> InvestmentAccount47.mmObject();
+			owner_lazy = () -> InvestmentAccount16.mmObject();
 		}
 
 		@Override
-		public void executeValidator(InvestmentAccount47 obj) throws Exception {
-			checkInvestmentAccount47(obj);
+		public void executeValidator(InvestmentAccount16 obj) throws Exception {
+			checkInvestmentAccount16(obj);
 		}
 	};
 	/**
@@ -614,8 +217,8 @@ public class ConstraintFundDetailsGuideline {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount49
-	 * InvestmentAccount49}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount35
+	 * InvestmentAccount35}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -631,30 +234,116 @@ public class ConstraintFundDetailsGuideline {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintFinancialInstrumentDetailsGuideline#forInvestmentAccount61
-	 * ConstraintFinancialInstrumentDetailsGuideline.forInvestmentAccount61}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintFundDetailsGuideline#forInvestmentAccount38
+	 * ConstraintFundDetailsGuideline.forInvestmentAccount38}</li>
+	 * </ul>
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<InvestmentAccount35> forInvestmentAccount35 = new MMConstraint<InvestmentAccount35>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "FundDetailsGuideline";
+			definition = "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintFundDetailsGuideline.forInvestmentAccount38);
+			owner_lazy = () -> InvestmentAccount35.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvestmentAccount35 obj) throws Exception {
+			checkInvestmentAccount35(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount34
+	 * InvestmentAccount34}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "FundDetailsGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintFundDetailsGuideline#forInvestmentAccount37
+	 * ConstraintFundDetailsGuideline.forInvestmentAccount37}</li>
+	 * </ul>
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<InvestmentAccount34> forInvestmentAccount34 = new MMConstraint<InvestmentAccount34>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "FundDetailsGuideline";
+			definition = "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintFundDetailsGuideline.forInvestmentAccount37);
+			owner_lazy = () -> InvestmentAccount34.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvestmentAccount34 obj) throws Exception {
+			checkInvestmentAccount34(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount37
+	 * InvestmentAccount37}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "FundDetailsGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintFundDetailsGuideline#forInvestmentAccount49
+	 * ConstraintFundDetailsGuideline.forInvestmentAccount49}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintFundDetailsGuideline#forInvestmentAccount37
-	 * ConstraintFundDetailsGuideline.forInvestmentAccount37}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintFundDetailsGuideline#forInvestmentAccount34
+	 * ConstraintFundDetailsGuideline.forInvestmentAccount34}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<InvestmentAccount49> forInvestmentAccount49 = new MMConstraint<InvestmentAccount49>() {
+	public static final MMConstraint<InvestmentAccount37> forInvestmentAccount37 = new MMConstraint<InvestmentAccount37>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundDetailsGuideline";
 			definition = "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintFinancialInstrumentDetailsGuideline.forInvestmentAccount61);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintFundDetailsGuideline.forInvestmentAccount37;
-			owner_lazy = () -> InvestmentAccount49.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintFundDetailsGuideline.forInvestmentAccount49);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintFundDetailsGuideline.forInvestmentAccount34;
+			owner_lazy = () -> InvestmentAccount37.mmObject();
 		}
 
 		@Override
-		public void executeValidator(InvestmentAccount49 obj) throws Exception {
-			checkInvestmentAccount49(obj);
+		public void executeValidator(InvestmentAccount37 obj) throws Exception {
+			checkInvestmentAccount37(obj);
 		}
 	};
 	/**
@@ -712,6 +401,123 @@ public class ConstraintFundDetailsGuideline {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount26
+	 * InvestmentAccount26}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "FundDetailsGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<InvestmentAccount26> forInvestmentAccount26 = new MMConstraint<InvestmentAccount26>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "FundDetailsGuideline";
+			definition = "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
+			owner_lazy = () -> InvestmentAccount26.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvestmentAccount26 obj) throws Exception {
+			checkInvestmentAccount26(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount18
+	 * InvestmentAccount18}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "FundDetailsGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<InvestmentAccount18> forInvestmentAccount18 = new MMConstraint<InvestmentAccount18>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "FundDetailsGuideline";
+			definition = "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
+			owner_lazy = () -> InvestmentAccount18.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvestmentAccount18 obj) throws Exception {
+			checkInvestmentAccount18(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39
+	 * InvestmentAccount39}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "FundDetailsGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintFundDetailsGuideline#forInvestmentAccount47
+	 * ConstraintFundDetailsGuideline.forInvestmentAccount47}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintFundDetailsGuideline#forInvestmentAccount36
+	 * ConstraintFundDetailsGuideline.forInvestmentAccount36}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<InvestmentAccount39> forInvestmentAccount39 = new MMConstraint<InvestmentAccount39>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "FundDetailsGuideline";
+			definition = "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintFundDetailsGuideline.forInvestmentAccount47);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintFundDetailsGuideline.forInvestmentAccount36;
+			owner_lazy = () -> InvestmentAccount39.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvestmentAccount39 obj) throws Exception {
+			checkInvestmentAccount39(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount50
 	 * InvestmentAccount50}</li>
 	 * <li>
@@ -755,85 +561,207 @@ public class ConstraintFundDetailsGuideline {
 			checkInvestmentAccount50(obj);
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount27
+	 * InvestmentAccount27}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "FundDetailsGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<InvestmentAccount27> forInvestmentAccount27 = new MMConstraint<InvestmentAccount27>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "FundDetailsGuideline";
+			definition = "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
+			owner_lazy = () -> InvestmentAccount27.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvestmentAccount27 obj) throws Exception {
+			checkInvestmentAccount27(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount28
+	 * InvestmentAccount28}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "FundDetailsGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<InvestmentAccount28> forInvestmentAccount28 = new MMConstraint<InvestmentAccount28>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "FundDetailsGuideline";
+			definition = "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
+			owner_lazy = () -> InvestmentAccount28.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvestmentAccount28 obj) throws Exception {
+			checkInvestmentAccount28(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount47
+	 * InvestmentAccount47}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "FundDetailsGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintFundDetailsGuideline#forInvestmentAccount51
+	 * ConstraintFundDetailsGuideline.forInvestmentAccount51}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintFundDetailsGuideline#forInvestmentAccount39
+	 * ConstraintFundDetailsGuideline.forInvestmentAccount39}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<InvestmentAccount47> forInvestmentAccount47 = new MMConstraint<InvestmentAccount47>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "FundDetailsGuideline";
+			definition = "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintFundDetailsGuideline.forInvestmentAccount51);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintFundDetailsGuideline.forInvestmentAccount39;
+			owner_lazy = () -> InvestmentAccount47.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvestmentAccount47 obj) throws Exception {
+			checkInvestmentAccount47(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount36
+	 * InvestmentAccount36}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "FundDetailsGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintFundDetailsGuideline#forInvestmentAccount39
+	 * ConstraintFundDetailsGuideline.forInvestmentAccount39}</li>
+	 * </ul>
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<InvestmentAccount36> forInvestmentAccount36 = new MMConstraint<InvestmentAccount36>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "FundDetailsGuideline";
+			definition = "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintFundDetailsGuideline.forInvestmentAccount39);
+			owner_lazy = () -> InvestmentAccount36.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvestmentAccount36 obj) throws Exception {
+			checkInvestmentAccount36(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount17
+	 * InvestmentAccount17}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "FundDetailsGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<InvestmentAccount17> forInvestmentAccount17 = new MMConstraint<InvestmentAccount17>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "FundDetailsGuideline";
+			definition = "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
+			owner_lazy = () -> InvestmentAccount17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvestmentAccount17 obj) throws Exception {
+			checkInvestmentAccount17(obj);
+		}
+	};
 
 	/**
 	 * FundDetails may be present if a single investment fund is associated to
 	 * the investment account. If several investment funds are associated to the
 	 * investment account, the FundFamilyName only should be specified.
 	 */
-	public static void checkInvestmentAccount17(InvestmentAccount17 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * FundDetails may be present if a single investment fund is associated to
-	 * the investment account. If several investment funds are associated to the
-	 * investment account, the FundFamilyName only should be specified.
-	 */
-	public static void checkInvestmentAccount27(InvestmentAccount27 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * FundDetails may be present if a single investment fund is associated to
-	 * the investment account. If several investment funds are associated to the
-	 * investment account, the FundFamilyName only should be specified.
-	 */
-	public static void checkInvestmentAccount35(InvestmentAccount35 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * FundDetails may be present if a single investment fund is associated to
-	 * the investment account. If several investment funds are associated to the
-	 * investment account, the FundFamilyName only should be specified.
-	 */
-	public static void checkInvestmentAccount18(InvestmentAccount18 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * FundDetails may be present if a single investment fund is associated to
-	 * the investment account. If several investment funds are associated to the
-	 * investment account, the FundFamilyName only should be specified.
-	 */
-	public static void checkInvestmentAccount28(InvestmentAccount28 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * FundDetails may be present if a single investment fund is associated to
-	 * the investment account. If several investment funds are associated to the
-	 * investment account, the FundFamilyName only should be specified.
-	 */
-	public static void checkInvestmentAccount36(InvestmentAccount36 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * FundDetails may be present if a single investment fund is associated to
-	 * the investment account. If several investment funds are associated to the
-	 * investment account, the FundFamilyName only should be specified.
-	 */
-	public static void checkInvestmentAccount16(InvestmentAccount16 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * FundDetails may be present if a single investment fund is associated to
-	 * the investment account. If several investment funds are associated to the
-	 * investment account, the FundFamilyName only should be specified.
-	 */
-	public static void checkInvestmentAccount26(InvestmentAccount26 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * FundDetails may be present if a single investment fund is associated to
-	 * the investment account. If several investment funds are associated to the
-	 * investment account, the FundFamilyName only should be specified.
-	 */
-	public static void checkInvestmentAccount34(InvestmentAccount34 obj) throws Exception {
+	public static void checkInvestmentAccount49(InvestmentAccount49 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -851,24 +779,6 @@ public class ConstraintFundDetailsGuideline {
 	 * the investment account. If several investment funds are associated to the
 	 * investment account, the FundFamilyName only should be specified.
 	 */
-	public static void checkInvestmentAccount37(InvestmentAccount37 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * FundDetails may be present if a single investment fund is associated to
-	 * the investment account. If several investment funds are associated to the
-	 * investment account, the FundFamilyName only should be specified.
-	 */
-	public static void checkInvestmentAccount39(InvestmentAccount39 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * FundDetails may be present if a single investment fund is associated to
-	 * the investment account. If several investment funds are associated to the
-	 * investment account, the FundFamilyName only should be specified.
-	 */
 	public static void checkInvestmentAccount46(InvestmentAccount46 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
@@ -878,7 +788,7 @@ public class ConstraintFundDetailsGuideline {
 	 * the investment account. If several investment funds are associated to the
 	 * investment account, the FundFamilyName only should be specified.
 	 */
-	public static void checkInvestmentAccount47(InvestmentAccount47 obj) throws Exception {
+	public static void checkInvestmentAccount16(InvestmentAccount16 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -887,7 +797,25 @@ public class ConstraintFundDetailsGuideline {
 	 * the investment account. If several investment funds are associated to the
 	 * investment account, the FundFamilyName only should be specified.
 	 */
-	public static void checkInvestmentAccount49(InvestmentAccount49 obj) throws Exception {
+	public static void checkInvestmentAccount35(InvestmentAccount35 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * FundDetails may be present if a single investment fund is associated to
+	 * the investment account. If several investment funds are associated to the
+	 * investment account, the FundFamilyName only should be specified.
+	 */
+	public static void checkInvestmentAccount34(InvestmentAccount34 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * FundDetails may be present if a single investment fund is associated to
+	 * the investment account. If several investment funds are associated to the
+	 * investment account, the FundFamilyName only should be specified.
+	 */
+	public static void checkInvestmentAccount37(InvestmentAccount37 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -905,7 +833,79 @@ public class ConstraintFundDetailsGuideline {
 	 * the investment account. If several investment funds are associated to the
 	 * investment account, the FundFamilyName only should be specified.
 	 */
+	public static void checkInvestmentAccount26(InvestmentAccount26 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * FundDetails may be present if a single investment fund is associated to
+	 * the investment account. If several investment funds are associated to the
+	 * investment account, the FundFamilyName only should be specified.
+	 */
+	public static void checkInvestmentAccount18(InvestmentAccount18 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * FundDetails may be present if a single investment fund is associated to
+	 * the investment account. If several investment funds are associated to the
+	 * investment account, the FundFamilyName only should be specified.
+	 */
+	public static void checkInvestmentAccount39(InvestmentAccount39 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * FundDetails may be present if a single investment fund is associated to
+	 * the investment account. If several investment funds are associated to the
+	 * investment account, the FundFamilyName only should be specified.
+	 */
 	public static void checkInvestmentAccount50(InvestmentAccount50 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * FundDetails may be present if a single investment fund is associated to
+	 * the investment account. If several investment funds are associated to the
+	 * investment account, the FundFamilyName only should be specified.
+	 */
+	public static void checkInvestmentAccount27(InvestmentAccount27 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * FundDetails may be present if a single investment fund is associated to
+	 * the investment account. If several investment funds are associated to the
+	 * investment account, the FundFamilyName only should be specified.
+	 */
+	public static void checkInvestmentAccount28(InvestmentAccount28 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * FundDetails may be present if a single investment fund is associated to
+	 * the investment account. If several investment funds are associated to the
+	 * investment account, the FundFamilyName only should be specified.
+	 */
+	public static void checkInvestmentAccount47(InvestmentAccount47 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * FundDetails may be present if a single investment fund is associated to
+	 * the investment account. If several investment funds are associated to the
+	 * investment account, the FundFamilyName only should be specified.
+	 */
+	public static void checkInvestmentAccount36(InvestmentAccount36 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * FundDetails may be present if a single investment fund is associated to
+	 * the investment account. If several investment funds are associated to the
+	 * investment account, the FundFamilyName only should be specified.
+	 */
+	public static void checkInvestmentAccount17(InvestmentAccount17 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

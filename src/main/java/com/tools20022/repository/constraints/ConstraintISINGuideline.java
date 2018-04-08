@@ -24,10 +24,50 @@ import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 
 /**
- * When a ISIN code exist. It is strongly recommended that the ISIN be used.
+ * When an ISIN code exists, it is strongly recommended that the ISIN be used.
  */
 public class ConstraintISINGuideline {
 
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification19
+	 * SecurityIdentification19}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ISINGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "When an ISIN code exists, it is strongly recommended that the ISIN be used."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintISINGuideline#forSecurityIdentification14
+	 * ConstraintISINGuideline.forSecurityIdentification14}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecurityIdentification19> forSecurityIdentification19 = new MMConstraint<SecurityIdentification19>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ISINGuideline";
+			definition = "When an ISIN code exists, it is strongly recommended that the ISIN be used.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintISINGuideline.forSecurityIdentification14;
+			owner_lazy = () -> SecurityIdentification19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecurityIdentification19 obj) throws Exception {
+			checkSecurityIdentification19(obj);
+		}
+	};
 	/**
 	 * 
 	 <p>
@@ -77,8 +117,8 @@ public class ConstraintISINGuideline {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification15
-	 * SecurityIdentification15}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification32
+	 * SecurityIdentification32}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -92,91 +132,17 @@ public class ConstraintISINGuideline {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<SecurityIdentification15> forSecurityIdentification15 = new MMConstraint<SecurityIdentification15>() {
+	public static final MMConstraint<SecurityIdentification32> forSecurityIdentification32 = new MMConstraint<SecurityIdentification32>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISINGuideline";
 			definition = "When a ISIN code exist. It is strongly recommended that the ISIN be used.";
-			owner_lazy = () -> SecurityIdentification15.mmObject();
+			owner_lazy = () -> SecurityIdentification32.mmObject();
 		}
 
 		@Override
-		public void executeValidator(SecurityIdentification15 obj) throws Exception {
-			checkSecurityIdentification15(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification16
-	 * SecurityIdentification16}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ISINGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "When a ISIN code exist. It is strongly recommended that the ISIN be used."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecurityIdentification16> forSecurityIdentification16 = new MMConstraint<SecurityIdentification16>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ISINGuideline";
-			definition = "When a ISIN code exist. It is strongly recommended that the ISIN be used.";
-			owner_lazy = () -> SecurityIdentification16.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SecurityIdentification16 obj) throws Exception {
-			checkSecurityIdentification16(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification19
-	 * SecurityIdentification19}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ISINGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "When an ISIN code exists, it is strongly recommended that the ISIN be used."
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintISINGuideline#forSecurityIdentification14
-	 * ConstraintISINGuideline.forSecurityIdentification14}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecurityIdentification19> forSecurityIdentification19 = new MMConstraint<SecurityIdentification19>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ISINGuideline";
-			definition = "When an ISIN code exists, it is strongly recommended that the ISIN be used.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintISINGuideline.forSecurityIdentification14;
-			owner_lazy = () -> SecurityIdentification19.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SecurityIdentification19 obj) throws Exception {
-			checkSecurityIdentification19(obj);
+		public void executeValidator(SecurityIdentification32 obj) throws Exception {
+			checkSecurityIdentification32(obj);
 		}
 	};
 	/**
@@ -219,40 +185,6 @@ public class ConstraintISINGuideline {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification32
-	 * SecurityIdentification32}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ISINGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "When a ISIN code exist. It is strongly recommended that the ISIN be used."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecurityIdentification32> forSecurityIdentification32 = new MMConstraint<SecurityIdentification32>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ISINGuideline";
-			definition = "When a ISIN code exist. It is strongly recommended that the ISIN be used.";
-			owner_lazy = () -> SecurityIdentification32.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SecurityIdentification32 obj) throws Exception {
-			checkSecurityIdentification32(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification21
 	 * SecurityIdentification21}</li>
 	 * <li>
@@ -281,27 +213,74 @@ public class ConstraintISINGuideline {
 			checkSecurityIdentification21(obj);
 		}
 	};
-
 	/**
-	 * When a ISIN code exist. It is strongly recommended that the ISIN be used.
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification16
+	 * SecurityIdentification16}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ISINGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "When a ISIN code exist. It is strongly recommended that the ISIN be used."
+	 * </li>
+	 * </ul>
 	 */
-	public static void checkSecurityIdentification14(SecurityIdentification14 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
+	public static final MMConstraint<SecurityIdentification16> forSecurityIdentification16 = new MMConstraint<SecurityIdentification16>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ISINGuideline";
+			definition = "When a ISIN code exist. It is strongly recommended that the ISIN be used.";
+			owner_lazy = () -> SecurityIdentification16.mmObject();
+		}
 
+		@Override
+		public void executeValidator(SecurityIdentification16 obj) throws Exception {
+			checkSecurityIdentification16(obj);
+		}
+	};
 	/**
-	 * When a ISIN code exist. It is strongly recommended that the ISIN be used.
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification15
+	 * SecurityIdentification15}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ISINGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "When a ISIN code exist. It is strongly recommended that the ISIN be used."
+	 * </li>
+	 * </ul>
 	 */
-	public static void checkSecurityIdentification15(SecurityIdentification15 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
+	public static final MMConstraint<SecurityIdentification15> forSecurityIdentification15 = new MMConstraint<SecurityIdentification15>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ISINGuideline";
+			definition = "When a ISIN code exist. It is strongly recommended that the ISIN be used.";
+			owner_lazy = () -> SecurityIdentification15.mmObject();
+		}
 
-	/**
-	 * When a ISIN code exist. It is strongly recommended that the ISIN be used.
-	 */
-	public static void checkSecurityIdentification16(SecurityIdentification16 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
+		@Override
+		public void executeValidator(SecurityIdentification15 obj) throws Exception {
+			checkSecurityIdentification15(obj);
+		}
+	};
 
 	/**
 	 * When an ISIN code exists, it is strongly recommended that the ISIN be
@@ -314,7 +293,7 @@ public class ConstraintISINGuideline {
 	/**
 	 * When a ISIN code exist. It is strongly recommended that the ISIN be used.
 	 */
-	public static void checkSecurityIdentification20(SecurityIdentification20 obj) throws Exception {
+	public static void checkSecurityIdentification14(SecurityIdentification14 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -326,9 +305,30 @@ public class ConstraintISINGuideline {
 	}
 
 	/**
+	 * When a ISIN code exist. It is strongly recommended that the ISIN be used.
+	 */
+	public static void checkSecurityIdentification20(SecurityIdentification20 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
 	 * When a ISIN code exist, it is strongly recommended that the ISIN be used.
 	 */
 	public static void checkSecurityIdentification21(SecurityIdentification21 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * When a ISIN code exist. It is strongly recommended that the ISIN be used.
+	 */
+	public static void checkSecurityIdentification16(SecurityIdentification16 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * When a ISIN code exist. It is strongly recommended that the ISIN be used.
+	 */
+	public static void checkSecurityIdentification15(SecurityIdentification15 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

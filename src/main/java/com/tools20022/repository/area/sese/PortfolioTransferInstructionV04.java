@@ -128,17 +128,18 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule#forPortfolioTransferInstructionV04
- * ConstraintNomineeAccountServicerRule.forPortfolioTransferInstructionV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule#for_sese_PortfolioTransferInstructionV04
+ * ConstraintNomineeAccountServicerRule.for_sese_PortfolioTransferInstructionV04
+ * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintPorfolioRule#forPortfolioTransferInstructionV04
- * ConstraintPorfolioRule.forPortfolioTransferInstructionV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPorfolioRule#for_sese_PortfolioTransferInstructionV04
+ * ConstraintPorfolioRule.for_sese_PortfolioTransferInstructionV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorRule#forPortfolioTransferInstructionV04
- * ConstraintInvestorRule.forPortfolioTransferInstructionV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorRule#for_sese_PortfolioTransferInstructionV04
+ * ConstraintInvestorRule.for_sese_PortfolioTransferInstructionV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCorporateRule#forPortfolioTransferInstructionV04
- * ConstraintCorporateRule.forPortfolioTransferInstructionV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCorporateRule#for_sese_PortfolioTransferInstructionV04
+ * ConstraintCorporateRule.for_sese_PortfolioTransferInstructionV04}</li>
  * </ul>
  * </li>
  * <li>
@@ -1067,9 +1068,9 @@ public class PortfolioTransferInstructionV04 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule.forPortfolioTransferInstructionV04,
-						com.tools20022.repository.constraints.ConstraintPorfolioRule.forPortfolioTransferInstructionV04, com.tools20022.repository.constraints.ConstraintInvestorRule.forPortfolioTransferInstructionV04,
-						com.tools20022.repository.constraints.ConstraintCorporateRule.forPortfolioTransferInstructionV04);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule.for_sese_PortfolioTransferInstructionV04,
+						com.tools20022.repository.constraints.ConstraintPorfolioRule.for_sese_PortfolioTransferInstructionV04, com.tools20022.repository.constraints.ConstraintInvestorRule.for_sese_PortfolioTransferInstructionV04,
+						com.tools20022.repository.constraints.ConstraintCorporateRule.for_sese_PortfolioTransferInstructionV04);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PortfolioTransferInstructionV04";
 				definition = "Scope\r\nAn instructing party, for example, a (new) plan manager (Transferee), sends the PortfolioTransferInstruction message to the executing party, for example, a (old) plan manager (Transferor), on behalf of the initiating party, for example, an investor (client), to instruct the transfer of financial instruments from the clients account at the old plan manager (Transferor) to the clients account at the new plan manager (Transferee) through a nominee account.\r\nUsage\r\nThe PortfolioTransferInstruction message is used to instruct the withdrawal of one or more ISA or portfolio products from one account and deliver them to another account.\r\nThe PortfolioTransferInstruction message is used to instruct one or more transfers for one client. Each transfer is for delivery to the same account. The account may be owned by one or more individual investors or one or more corporate investors. Each transfer is identified in TransferIdentification.\r\nIf the instructing party does not have enough information to instruct the transfer, then it must first send a AccountHoldingInformationRequest message to the executing party in order to receive a AccountHoldingInformation message.";

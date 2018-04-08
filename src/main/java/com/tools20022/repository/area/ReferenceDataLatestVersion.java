@@ -114,11 +114,11 @@ public class ReferenceDataLatestVersion {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Reference Data - Latest version - master";
 				definition = "Messages that support the communication of reference data related to financial instruments, parties, accounts, prices and other business information required to support financial activities.";
+				code = "reda";
 				messageDefinition_lazy = () -> Arrays.asList(FundProcessingPassportReportV02.mmObject(), InvestmentFundReportRequestV02.mmObject(), PriceReportCancellationV04.mmObject(), PriceReportV04.mmObject(),
 						StandingSettlementInstructionV01.mmObject(), StandingSettlementInstructionCancellationV01.mmObject(), StandingSettlementInstructionStatusAdviceV01.mmObject(), StandingSettlementInstructionDeletionV01.mmObject(),
 						NettingCutOffReferenceDataUpdateRequestV01.mmObject(), NettingCutOffReferenceDataReportV01.mmObject(), PartyAuditTrailQueryV01.mmObject(), PartyActivityAdviceV01.mmObject(), PartyCreationRequestV01.mmObject(),
 						PartyReportV01.mmObject(), PartyAuditTrailReportV02.mmObject(), PartyDeletionRequestV01.mmObject(), PartyQueryV01.mmObject(), PartyStatusAdviceV01.mmObject(), PartyModificationRequestV01.mmObject());
-				code = "reda";
 			}
 		});
 		return mmObject_lazy.get();

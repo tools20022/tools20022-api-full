@@ -110,14 +110,14 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationRule#forRedemptionOrderConfirmationV03
- * ConstraintAccountIdentificationRule.forRedemptionOrderConfirmationV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationRule#for_setr_RedemptionOrderConfirmationV03
+ * ConstraintAccountIdentificationRule.for_setr_RedemptionOrderConfirmationV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintOrderReferenceRule#forRedemptionOrderConfirmationV03
- * ConstraintOrderReferenceRule.forRedemptionOrderConfirmationV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOrderReferenceRule#for_setr_RedemptionOrderConfirmationV03
+ * ConstraintOrderReferenceRule.for_setr_RedemptionOrderConfirmationV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintRelatedPartiesDetailsRule#forRedemptionOrderConfirmationV03
- * ConstraintRelatedPartiesDetailsRule.forRedemptionOrderConfirmationV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintRelatedPartiesDetailsRule#for_setr_RedemptionOrderConfirmationV03
+ * ConstraintRelatedPartiesDetailsRule.for_setr_RedemptionOrderConfirmationV03}</li>
  * </ul>
  * </li>
  * <li>
@@ -588,8 +588,9 @@ public class RedemptionOrderConfirmationV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forRedemptionOrderConfirmationV03,
-						com.tools20022.repository.constraints.ConstraintOrderReferenceRule.forRedemptionOrderConfirmationV03, com.tools20022.repository.constraints.ConstraintRelatedPartiesDetailsRule.forRedemptionOrderConfirmationV03);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.for_setr_RedemptionOrderConfirmationV03,
+						com.tools20022.repository.constraints.ConstraintOrderReferenceRule.for_setr_RedemptionOrderConfirmationV03,
+						com.tools20022.repository.constraints.ConstraintRelatedPartiesDetailsRule.for_setr_RedemptionOrderConfirmationV03);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RedemptionOrderConfirmationV03";
 				definition = "Scope\r\nAn executing party, for example, a transfer agent, sends the RedemptionOrderConfirmation message to the instructing party, for example, an investment manager or its authorised representative to confirm the details of execution for a previously received RedemptionOrder message.\r\nUsage\r\nThe RedemptionOrderConfirmation message is used to confirm the execution of one or more individual orders.\r\nA RedemptionOrder message containing more than one individual order may be responded to by more than one RedemptionOrderConfirmation message, as the valuation cycle of the financial instruments in each individual order may be different.\r\nEach individual order confirmation specified is identified in DealReference. The reference of the original individual order is specified in OrderReference. The message identification of the RedemptionOrder message in which the individual order was conveyed may also be quoted in RelatedReference.\r\nWhen the executing party sends several confirmations, there is no specific indication in the message that it is an incomplete confirmation. Reconciliation should be based on the references.\r\nA RedemptionOrder must in all cases be responded to by a RedemptionOrderConfirmation message and in no circumstances by a RedemptionBulkOrderConfirmation message.\r\nIf the executing party needs to confirm a RedemptionBulkOrder message, then a RedemptionBulkOrderConfirmation message must be used.";

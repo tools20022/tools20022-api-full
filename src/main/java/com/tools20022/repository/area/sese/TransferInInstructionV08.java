@@ -115,8 +115,8 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintRequestedSettlementDateRule#forTransferInInstructionV08
- * ConstraintRequestedSettlementDateRule.forTransferInInstructionV08}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintRequestedSettlementDateRule#for_sese_TransferInInstructionV08
+ * ConstraintRequestedSettlementDateRule.for_sese_TransferInInstructionV08}</li>
  * </ul>
  * </li>
  * <li>
@@ -780,7 +780,7 @@ public class TransferInInstructionV08 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRequestedSettlementDateRule.forTransferInInstructionV08);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRequestedSettlementDateRule.for_sese_TransferInInstructionV08);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransferInInstructionV08";
 				definition = "The TransferInInstruction message is sent by an instructing party, for example, an investment manager or its authorised representative, to the executing party, for example, a transfer agent, to instruct the receipt of a financial instrument, free of payment, on a given date from a specified party.\r\nThis message may also be used to instruct the receipt of a financial instrument, free of payment, from another of the instructing parties own accounts or from a third party.\r\nUsage\r\nThe TransferInInstruction message is used to instruct the receipt of a financial instrument from another account, either owned by the instructing party or by a third party.";

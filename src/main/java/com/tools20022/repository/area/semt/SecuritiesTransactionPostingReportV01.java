@@ -120,28 +120,29 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintFinancialInstrumentDetailsReportingRule#forSecuritiesTransactionPostingReportV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintFinancialInstrumentDetailsReportingRule#for_semt_SecuritiesTransactionPostingReportV01
  * ConstraintFinancialInstrumentDetailsReportingRule.
- * forSecuritiesTransactionPostingReportV01}</li>
+ * for_semt_SecuritiesTransactionPostingReportV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintSubAccountReportingRule#forSecuritiesTransactionPostingReportV01
- * ConstraintSubAccountReportingRule.forSecuritiesTransactionPostingReportV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSubAccountReportingRule#for_semt_SecuritiesTransactionPostingReportV01
+ * ConstraintSubAccountReportingRule.
+ * for_semt_SecuritiesTransactionPostingReportV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintFinancialInstrumentDetailsOrSubAccountDetailsRule#forSecuritiesTransactionPostingReportV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintFinancialInstrumentDetailsOrSubAccountDetailsRule#for_semt_SecuritiesTransactionPostingReportV01
  * ConstraintFinancialInstrumentDetailsOrSubAccountDetailsRule.
- * forSecuritiesTransactionPostingReportV01}</li>
+ * for_semt_SecuritiesTransactionPostingReportV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#forSecuritiesTransactionPostingReportV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#for_semt_SecuritiesTransactionPostingReportV01
  * ConstraintCoexistenceCharacterSetXRule.
- * forSecuritiesTransactionPostingReportV01}</li>
+ * for_semt_SecuritiesTransactionPostingReportV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forSecuritiesTransactionPostingReportV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#for_semt_SecuritiesTransactionPostingReportV01
  * ConstraintCoexistenceIdentificationRule.
- * forSecuritiesTransactionPostingReportV01}</li>
+ * for_semt_SecuritiesTransactionPostingReportV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesTransactionPostingReportV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#for_semt_SecuritiesTransactionPostingReportV01
  * ConstraintSecuritiesMarketPracticeGroupGuideline.
- * forSecuritiesTransactionPostingReportV01}</li>
+ * for_semt_SecuritiesTransactionPostingReportV01}</li>
  * </ul>
  * </li>
  * <li>
@@ -594,12 +595,12 @@ public class SecuritiesTransactionPostingReportV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintFinancialInstrumentDetailsReportingRule.forSecuritiesTransactionPostingReportV01,
-						com.tools20022.repository.constraints.ConstraintSubAccountReportingRule.forSecuritiesTransactionPostingReportV01,
-						com.tools20022.repository.constraints.ConstraintFinancialInstrumentDetailsOrSubAccountDetailsRule.forSecuritiesTransactionPostingReportV01,
-						com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesTransactionPostingReportV01,
-						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesTransactionPostingReportV01,
-						com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionPostingReportV01);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintFinancialInstrumentDetailsReportingRule.for_semt_SecuritiesTransactionPostingReportV01,
+						com.tools20022.repository.constraints.ConstraintSubAccountReportingRule.for_semt_SecuritiesTransactionPostingReportV01,
+						com.tools20022.repository.constraints.ConstraintFinancialInstrumentDetailsOrSubAccountDetailsRule.for_semt_SecuritiesTransactionPostingReportV01,
+						com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.for_semt_SecuritiesTransactionPostingReportV01,
+						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.for_semt_SecuritiesTransactionPostingReportV01,
+						com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.for_semt_SecuritiesTransactionPostingReportV01);
 				semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, "MT 536, :23G:NEWM"));
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTransactionPostingReportV01";

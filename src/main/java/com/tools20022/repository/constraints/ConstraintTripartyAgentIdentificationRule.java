@@ -81,55 +81,6 @@ public class ConstraintTripartyAgentIdentificationRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SecuredMarketTransaction2
-	 * SecuredMarketTransaction2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "TripartyAgentIdentificationRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "TripartyAgentIdentification must be present, when the transaction is performed via tri-party agent."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintTripartyAgentIdentificationRule#forSecuredMarketTransaction3
-	 * ConstraintTripartyAgentIdentificationRule.forSecuredMarketTransaction3}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintTripartyAgentIdentificationRule#forSecuredMarketTransaction1
-	 * ConstraintTripartyAgentIdentificationRule.forSecuredMarketTransaction1}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuredMarketTransaction2> forSecuredMarketTransaction2 = new MMConstraint<SecuredMarketTransaction2>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "TripartyAgentIdentificationRule";
-			definition = "TripartyAgentIdentification must be present, when the transaction is performed via tri-party agent.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTripartyAgentIdentificationRule.forSecuredMarketTransaction3);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTripartyAgentIdentificationRule.forSecuredMarketTransaction1;
-			owner_lazy = () -> SecuredMarketTransaction2.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SecuredMarketTransaction2 obj) throws Exception {
-			checkSecuredMarketTransaction2(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuredMarketTransaction3
 	 * SecuredMarketTransaction3}</li>
 	 * <li>
@@ -171,6 +122,55 @@ public class ConstraintTripartyAgentIdentificationRule {
 		@Override
 		public void executeValidator(SecuredMarketTransaction3 obj) throws Exception {
 			checkSecuredMarketTransaction3(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuredMarketTransaction2
+	 * SecuredMarketTransaction2}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TripartyAgentIdentificationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "TripartyAgentIdentification must be present, when the transaction is performed via tri-party agent."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintTripartyAgentIdentificationRule#forSecuredMarketTransaction3
+	 * ConstraintTripartyAgentIdentificationRule.forSecuredMarketTransaction3}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintTripartyAgentIdentificationRule#forSecuredMarketTransaction1
+	 * ConstraintTripartyAgentIdentificationRule.forSecuredMarketTransaction1}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuredMarketTransaction2> forSecuredMarketTransaction2 = new MMConstraint<SecuredMarketTransaction2>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "TripartyAgentIdentificationRule";
+			definition = "TripartyAgentIdentification must be present, when the transaction is performed via tri-party agent.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTripartyAgentIdentificationRule.forSecuredMarketTransaction3);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTripartyAgentIdentificationRule.forSecuredMarketTransaction1;
+			owner_lazy = () -> SecuredMarketTransaction2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuredMarketTransaction2 obj) throws Exception {
+			checkSecuredMarketTransaction2(obj);
 		}
 	};
 	/**
@@ -226,7 +226,7 @@ public class ConstraintTripartyAgentIdentificationRule {
 	 * TripartyAgentIdentification must be present, when the transaction is
 	 * performed via tri-party agent.
 	 */
-	public static void checkSecuredMarketTransaction2(SecuredMarketTransaction2 obj) throws Exception {
+	public static void checkSecuredMarketTransaction3(SecuredMarketTransaction3 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -234,7 +234,7 @@ public class ConstraintTripartyAgentIdentificationRule {
 	 * TripartyAgentIdentification must be present, when the transaction is
 	 * performed via tri-party agent.
 	 */
-	public static void checkSecuredMarketTransaction3(SecuredMarketTransaction3 obj) throws Exception {
+	public static void checkSecuredMarketTransaction2(SecuredMarketTransaction2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 

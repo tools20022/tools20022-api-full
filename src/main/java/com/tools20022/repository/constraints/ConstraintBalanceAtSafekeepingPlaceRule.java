@@ -35,8 +35,8 @@ public class ConstraintBalanceAtSafekeepingPlaceRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation8
-	 * AggregateBalanceInformation8}</li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation7
+	 * AggregateBalanceInformation7}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -50,119 +50,17 @@ public class ConstraintBalanceAtSafekeepingPlaceRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<AggregateBalanceInformation8> forAggregateBalanceInformation8 = new MMConstraint<AggregateBalanceInformation8>() {
+	public static final MMConstraint<AggregateBalanceInformation7> forAggregateBalanceInformation7 = new MMConstraint<AggregateBalanceInformation7>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceAtSafekeepingPlaceRule";
 			definition = "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed.";
-			owner_lazy = () -> AggregateBalanceInformation8.mmObject();
+			owner_lazy = () -> AggregateBalanceInformation7.mmObject();
 		}
 
 		@Override
-		public void executeValidator(AggregateBalanceInformation8 obj) throws Exception {
-			checkAggregateBalanceInformation8(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation11
-	 * AggregateBalanceInformation11}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BalanceAtSafekeepingPlaceRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<AggregateBalanceInformation11> forAggregateBalanceInformation11 = new MMConstraint<AggregateBalanceInformation11>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "BalanceAtSafekeepingPlaceRule";
-			definition = "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed.";
-			owner_lazy = () -> AggregateBalanceInformation11.mmObject();
-		}
-
-		@Override
-		public void executeValidator(AggregateBalanceInformation11 obj) throws Exception {
-			checkAggregateBalanceInformation11(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation2
-	 * AggregateBalanceInformation2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BalanceAtSafekeepingPlaceRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<AggregateBalanceInformation2> forAggregateBalanceInformation2 = new MMConstraint<AggregateBalanceInformation2>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "BalanceAtSafekeepingPlaceRule";
-			definition = "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed.";
-			owner_lazy = () -> AggregateBalanceInformation2.mmObject();
-		}
-
-		@Override
-		public void executeValidator(AggregateBalanceInformation2 obj) throws Exception {
-			checkAggregateBalanceInformation2(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation3
-	 * AggregateBalanceInformation3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BalanceAtSafekeepingPlaceRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<AggregateBalanceInformation3> forAggregateBalanceInformation3 = new MMConstraint<AggregateBalanceInformation3>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "BalanceAtSafekeepingPlaceRule";
-			definition = "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed.";
-			owner_lazy = () -> AggregateBalanceInformation3.mmObject();
-		}
-
-		@Override
-		public void executeValidator(AggregateBalanceInformation3 obj) throws Exception {
-			checkAggregateBalanceInformation3(obj);
+		public void executeValidator(AggregateBalanceInformation7 obj) throws Exception {
+			checkAggregateBalanceInformation7(obj);
 		}
 	};
 	/**
@@ -197,40 +95,6 @@ public class ConstraintBalanceAtSafekeepingPlaceRule {
 		@Override
 		public void executeValidator(AggregateBalanceInformation13 obj) throws Exception {
 			checkAggregateBalanceInformation13(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation15
-	 * AggregateBalanceInformation15}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BalanceAtSafekeepingPlaceRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<AggregateBalanceInformation15> forAggregateBalanceInformation15 = new MMConstraint<AggregateBalanceInformation15>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "BalanceAtSafekeepingPlaceRule";
-			definition = "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed.";
-			owner_lazy = () -> AggregateBalanceInformation15.mmObject();
-		}
-
-		@Override
-		public void executeValidator(AggregateBalanceInformation15 obj) throws Exception {
-			checkAggregateBalanceInformation15(obj);
 		}
 	};
 	/**
@@ -307,152 +171,6 @@ public class ConstraintBalanceAtSafekeepingPlaceRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation22
-	 * AggregateBalanceInformation22}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BalanceAtSafekeepingPlaceRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintBalanceAtSafekeepingPlaceRule#forAggregateBalanceInformation26
-	 * ConstraintBalanceAtSafekeepingPlaceRule.forAggregateBalanceInformation26}
-	 * </li>
-	 * </ul>
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<AggregateBalanceInformation22> forAggregateBalanceInformation22 = new MMConstraint<AggregateBalanceInformation22>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "BalanceAtSafekeepingPlaceRule";
-			definition = "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBalanceAtSafekeepingPlaceRule.forAggregateBalanceInformation26);
-			owner_lazy = () -> AggregateBalanceInformation22.mmObject();
-		}
-
-		@Override
-		public void executeValidator(AggregateBalanceInformation22 obj) throws Exception {
-			checkAggregateBalanceInformation22(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation23
-	 * AggregateBalanceInformation23}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BalanceAtSafekeepingPlaceRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<AggregateBalanceInformation23> forAggregateBalanceInformation23 = new MMConstraint<AggregateBalanceInformation23>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "BalanceAtSafekeepingPlaceRule";
-			definition = "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed.";
-			owner_lazy = () -> AggregateBalanceInformation23.mmObject();
-		}
-
-		@Override
-		public void executeValidator(AggregateBalanceInformation23 obj) throws Exception {
-			checkAggregateBalanceInformation23(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation9
-	 * AggregateBalanceInformation9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BalanceAtSafekeepingPlaceRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<AggregateBalanceInformation9> forAggregateBalanceInformation9 = new MMConstraint<AggregateBalanceInformation9>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "BalanceAtSafekeepingPlaceRule";
-			definition = "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed.";
-			owner_lazy = () -> AggregateBalanceInformation9.mmObject();
-		}
-
-		@Override
-		public void executeValidator(AggregateBalanceInformation9 obj) throws Exception {
-			checkAggregateBalanceInformation9(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation10
-	 * AggregateBalanceInformation10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BalanceAtSafekeepingPlaceRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<AggregateBalanceInformation10> forAggregateBalanceInformation10 = new MMConstraint<AggregateBalanceInformation10>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "BalanceAtSafekeepingPlaceRule";
-			definition = "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed.";
-			owner_lazy = () -> AggregateBalanceInformation10.mmObject();
-		}
-
-		@Override
-		public void executeValidator(AggregateBalanceInformation10 obj) throws Exception {
-			checkAggregateBalanceInformation10(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation1
 	 * AggregateBalanceInformation1}</li>
 	 * <li>
@@ -479,417 +197,6 @@ public class ConstraintBalanceAtSafekeepingPlaceRule {
 		@Override
 		public void executeValidator(AggregateBalanceInformation1 obj) throws Exception {
 			checkAggregateBalanceInformation1(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation4
-	 * AggregateBalanceInformation4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BalanceAtSafekeepingPlaceRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<AggregateBalanceInformation4> forAggregateBalanceInformation4 = new MMConstraint<AggregateBalanceInformation4>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "BalanceAtSafekeepingPlaceRule";
-			definition = "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed.";
-			owner_lazy = () -> AggregateBalanceInformation4.mmObject();
-		}
-
-		@Override
-		public void executeValidator(AggregateBalanceInformation4 obj) throws Exception {
-			checkAggregateBalanceInformation4(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation12
-	 * AggregateBalanceInformation12}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BalanceAtSafekeepingPlaceRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<AggregateBalanceInformation12> forAggregateBalanceInformation12 = new MMConstraint<AggregateBalanceInformation12>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "BalanceAtSafekeepingPlaceRule";
-			definition = "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed.";
-			owner_lazy = () -> AggregateBalanceInformation12.mmObject();
-		}
-
-		@Override
-		public void executeValidator(AggregateBalanceInformation12 obj) throws Exception {
-			checkAggregateBalanceInformation12(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation14
-	 * AggregateBalanceInformation14}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BalanceAtSafekeepingPlaceRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<AggregateBalanceInformation14> forAggregateBalanceInformation14 = new MMConstraint<AggregateBalanceInformation14>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "BalanceAtSafekeepingPlaceRule";
-			definition = "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed.";
-			owner_lazy = () -> AggregateBalanceInformation14.mmObject();
-		}
-
-		@Override
-		public void executeValidator(AggregateBalanceInformation14 obj) throws Exception {
-			checkAggregateBalanceInformation14(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation16
-	 * AggregateBalanceInformation16}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BalanceAtSafekeepingPlaceRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<AggregateBalanceInformation16> forAggregateBalanceInformation16 = new MMConstraint<AggregateBalanceInformation16>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "BalanceAtSafekeepingPlaceRule";
-			definition = "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed.";
-			owner_lazy = () -> AggregateBalanceInformation16.mmObject();
-		}
-
-		@Override
-		public void executeValidator(AggregateBalanceInformation16 obj) throws Exception {
-			checkAggregateBalanceInformation16(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation18
-	 * AggregateBalanceInformation18}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BalanceAtSafekeepingPlaceRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<AggregateBalanceInformation18> forAggregateBalanceInformation18 = new MMConstraint<AggregateBalanceInformation18>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "BalanceAtSafekeepingPlaceRule";
-			definition = "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed.";
-			owner_lazy = () -> AggregateBalanceInformation18.mmObject();
-		}
-
-		@Override
-		public void executeValidator(AggregateBalanceInformation18 obj) throws Exception {
-			checkAggregateBalanceInformation18(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation21
-	 * AggregateBalanceInformation21}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BalanceAtSafekeepingPlaceRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintBalanceAtSafekeepingPlaceRule#forAggregateBalanceInformation25
-	 * ConstraintBalanceAtSafekeepingPlaceRule.forAggregateBalanceInformation25}
-	 * </li>
-	 * </ul>
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<AggregateBalanceInformation21> forAggregateBalanceInformation21 = new MMConstraint<AggregateBalanceInformation21>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "BalanceAtSafekeepingPlaceRule";
-			definition = "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBalanceAtSafekeepingPlaceRule.forAggregateBalanceInformation25);
-			owner_lazy = () -> AggregateBalanceInformation21.mmObject();
-		}
-
-		@Override
-		public void executeValidator(AggregateBalanceInformation21 obj) throws Exception {
-			checkAggregateBalanceInformation21(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation24
-	 * AggregateBalanceInformation24}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BalanceAtSafekeepingPlaceRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<AggregateBalanceInformation24> forAggregateBalanceInformation24 = new MMConstraint<AggregateBalanceInformation24>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "BalanceAtSafekeepingPlaceRule";
-			definition = "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed.";
-			owner_lazy = () -> AggregateBalanceInformation24.mmObject();
-		}
-
-		@Override
-		public void executeValidator(AggregateBalanceInformation24 obj) throws Exception {
-			checkAggregateBalanceInformation24(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation20
-	 * AggregateBalanceInformation20}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BalanceAtSafekeepingPlaceRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintBalanceAtSafekeepingPlaceRule#forAggregateBalanceInformation34
-	 * ConstraintBalanceAtSafekeepingPlaceRule.forAggregateBalanceInformation34}
-	 * </li>
-	 * </ul>
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<AggregateBalanceInformation20> forAggregateBalanceInformation20 = new MMConstraint<AggregateBalanceInformation20>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "BalanceAtSafekeepingPlaceRule";
-			definition = "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBalanceAtSafekeepingPlaceRule.forAggregateBalanceInformation34);
-			owner_lazy = () -> AggregateBalanceInformation20.mmObject();
-		}
-
-		@Override
-		public void executeValidator(AggregateBalanceInformation20 obj) throws Exception {
-			checkAggregateBalanceInformation20(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation6
-	 * AggregateBalanceInformation6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BalanceAtSafekeepingPlaceRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<AggregateBalanceInformation6> forAggregateBalanceInformation6 = new MMConstraint<AggregateBalanceInformation6>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "BalanceAtSafekeepingPlaceRule";
-			definition = "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed.";
-			owner_lazy = () -> AggregateBalanceInformation6.mmObject();
-		}
-
-		@Override
-		public void executeValidator(AggregateBalanceInformation6 obj) throws Exception {
-			checkAggregateBalanceInformation6(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation7
-	 * AggregateBalanceInformation7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BalanceAtSafekeepingPlaceRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<AggregateBalanceInformation7> forAggregateBalanceInformation7 = new MMConstraint<AggregateBalanceInformation7>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "BalanceAtSafekeepingPlaceRule";
-			definition = "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed.";
-			owner_lazy = () -> AggregateBalanceInformation7.mmObject();
-		}
-
-		@Override
-		public void executeValidator(AggregateBalanceInformation7 obj) throws Exception {
-			checkAggregateBalanceInformation7(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation26
-	 * AggregateBalanceInformation26}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BalanceAtSafekeepingPlaceRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintBalanceAtSafekeepingPlaceRule#forAggregateBalanceInformation31
-	 * ConstraintBalanceAtSafekeepingPlaceRule.forAggregateBalanceInformation31}
-	 * </li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintBalanceAtSafekeepingPlaceRule#forAggregateBalanceInformation22
-	 * ConstraintBalanceAtSafekeepingPlaceRule.forAggregateBalanceInformation22}
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<AggregateBalanceInformation26> forAggregateBalanceInformation26 = new MMConstraint<AggregateBalanceInformation26>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "BalanceAtSafekeepingPlaceRule";
-			definition = "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBalanceAtSafekeepingPlaceRule.forAggregateBalanceInformation31);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintBalanceAtSafekeepingPlaceRule.forAggregateBalanceInformation22;
-			owner_lazy = () -> AggregateBalanceInformation26.mmObject();
-		}
-
-		@Override
-		public void executeValidator(AggregateBalanceInformation26 obj) throws Exception {
-			checkAggregateBalanceInformation26(obj);
 		}
 	};
 	/**
@@ -949,8 +256,8 @@ public class ConstraintBalanceAtSafekeepingPlaceRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation28
-	 * AggregateBalanceInformation28}</li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation6
+	 * AggregateBalanceInformation6}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -964,17 +271,17 @@ public class ConstraintBalanceAtSafekeepingPlaceRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<AggregateBalanceInformation28> forAggregateBalanceInformation28 = new MMConstraint<AggregateBalanceInformation28>() {
+	public static final MMConstraint<AggregateBalanceInformation6> forAggregateBalanceInformation6 = new MMConstraint<AggregateBalanceInformation6>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceAtSafekeepingPlaceRule";
 			definition = "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed.";
-			owner_lazy = () -> AggregateBalanceInformation28.mmObject();
+			owner_lazy = () -> AggregateBalanceInformation6.mmObject();
 		}
 
 		@Override
-		public void executeValidator(AggregateBalanceInformation28 obj) throws Exception {
-			checkAggregateBalanceInformation28(obj);
+		public void executeValidator(AggregateBalanceInformation6 obj) throws Exception {
+			checkAggregateBalanceInformation6(obj);
 		}
 	};
 	/**
@@ -983,8 +290,8 @@ public class ConstraintBalanceAtSafekeepingPlaceRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation27
-	 * AggregateBalanceInformation27}</li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation20
+	 * AggregateBalanceInformation20}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -995,20 +302,30 @@ public class ConstraintBalanceAtSafekeepingPlaceRule {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintBalanceAtSafekeepingPlaceRule#forAggregateBalanceInformation34
+	 * ConstraintBalanceAtSafekeepingPlaceRule.forAggregateBalanceInformation34}
+	 * </li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<AggregateBalanceInformation27> forAggregateBalanceInformation27 = new MMConstraint<AggregateBalanceInformation27>() {
+	public static final MMConstraint<AggregateBalanceInformation20> forAggregateBalanceInformation20 = new MMConstraint<AggregateBalanceInformation20>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceAtSafekeepingPlaceRule";
 			definition = "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed.";
-			owner_lazy = () -> AggregateBalanceInformation27.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBalanceAtSafekeepingPlaceRule.forAggregateBalanceInformation34);
+			owner_lazy = () -> AggregateBalanceInformation20.mmObject();
 		}
 
 		@Override
-		public void executeValidator(AggregateBalanceInformation27 obj) throws Exception {
-			checkAggregateBalanceInformation27(obj);
+		public void executeValidator(AggregateBalanceInformation20 obj) throws Exception {
+			checkAggregateBalanceInformation20(obj);
 		}
 	};
 	/**
@@ -1017,8 +334,8 @@ public class ConstraintBalanceAtSafekeepingPlaceRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation30
-	 * AggregateBalanceInformation30}</li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation22
+	 * AggregateBalanceInformation22}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1030,101 +347,29 @@ public class ConstraintBalanceAtSafekeepingPlaceRule {
 	 * definition} =
 	 * "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed."
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintBalanceAtSafekeepingPlaceRule#forAggregateBalanceInformation25
-	 * ConstraintBalanceAtSafekeepingPlaceRule.forAggregateBalanceInformation25}
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<AggregateBalanceInformation30> forAggregateBalanceInformation30 = new MMConstraint<AggregateBalanceInformation30>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "BalanceAtSafekeepingPlaceRule";
-			definition = "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintBalanceAtSafekeepingPlaceRule.forAggregateBalanceInformation25;
-			owner_lazy = () -> AggregateBalanceInformation30.mmObject();
-		}
-
-		@Override
-		public void executeValidator(AggregateBalanceInformation30 obj) throws Exception {
-			checkAggregateBalanceInformation30(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation31
-	 * AggregateBalanceInformation31}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BalanceAtSafekeepingPlaceRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed."
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
 	 * {@linkplain com.tools20022.repository.constraints.ConstraintBalanceAtSafekeepingPlaceRule#forAggregateBalanceInformation26
 	 * ConstraintBalanceAtSafekeepingPlaceRule.forAggregateBalanceInformation26}
 	 * </li>
 	 * </ul>
-	 */
-	public static final MMConstraint<AggregateBalanceInformation31> forAggregateBalanceInformation31 = new MMConstraint<AggregateBalanceInformation31>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "BalanceAtSafekeepingPlaceRule";
-			definition = "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintBalanceAtSafekeepingPlaceRule.forAggregateBalanceInformation26;
-			owner_lazy = () -> AggregateBalanceInformation31.mmObject();
-		}
-
-		@Override
-		public void executeValidator(AggregateBalanceInformation31 obj) throws Exception {
-			checkAggregateBalanceInformation31(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation32
-	 * AggregateBalanceInformation32}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BalanceAtSafekeepingPlaceRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed."
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<AggregateBalanceInformation32> forAggregateBalanceInformation32 = new MMConstraint<AggregateBalanceInformation32>() {
+	public static final MMConstraint<AggregateBalanceInformation22> forAggregateBalanceInformation22 = new MMConstraint<AggregateBalanceInformation22>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceAtSafekeepingPlaceRule";
 			definition = "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed.";
-			owner_lazy = () -> AggregateBalanceInformation32.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBalanceAtSafekeepingPlaceRule.forAggregateBalanceInformation26);
+			owner_lazy = () -> AggregateBalanceInformation22.mmObject();
 		}
 
 		@Override
-		public void executeValidator(AggregateBalanceInformation32 obj) throws Exception {
-			checkAggregateBalanceInformation32(obj);
+		public void executeValidator(AggregateBalanceInformation22 obj) throws Exception {
+			checkAggregateBalanceInformation22(obj);
 		}
 	};
 	/**
@@ -1202,36 +447,767 @@ public class ConstraintBalanceAtSafekeepingPlaceRule {
 			checkAggregateBalanceInformation34(obj);
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation10
+	 * AggregateBalanceInformation10}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BalanceAtSafekeepingPlaceRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AggregateBalanceInformation10> forAggregateBalanceInformation10 = new MMConstraint<AggregateBalanceInformation10>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "BalanceAtSafekeepingPlaceRule";
+			definition = "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed.";
+			owner_lazy = () -> AggregateBalanceInformation10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation10 obj) throws Exception {
+			checkAggregateBalanceInformation10(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation15
+	 * AggregateBalanceInformation15}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BalanceAtSafekeepingPlaceRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AggregateBalanceInformation15> forAggregateBalanceInformation15 = new MMConstraint<AggregateBalanceInformation15>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "BalanceAtSafekeepingPlaceRule";
+			definition = "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed.";
+			owner_lazy = () -> AggregateBalanceInformation15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation15 obj) throws Exception {
+			checkAggregateBalanceInformation15(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation3
+	 * AggregateBalanceInformation3}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BalanceAtSafekeepingPlaceRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AggregateBalanceInformation3> forAggregateBalanceInformation3 = new MMConstraint<AggregateBalanceInformation3>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "BalanceAtSafekeepingPlaceRule";
+			definition = "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed.";
+			owner_lazy = () -> AggregateBalanceInformation3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation3 obj) throws Exception {
+			checkAggregateBalanceInformation3(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation4
+	 * AggregateBalanceInformation4}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BalanceAtSafekeepingPlaceRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AggregateBalanceInformation4> forAggregateBalanceInformation4 = new MMConstraint<AggregateBalanceInformation4>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "BalanceAtSafekeepingPlaceRule";
+			definition = "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed.";
+			owner_lazy = () -> AggregateBalanceInformation4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation4 obj) throws Exception {
+			checkAggregateBalanceInformation4(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation8
+	 * AggregateBalanceInformation8}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BalanceAtSafekeepingPlaceRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AggregateBalanceInformation8> forAggregateBalanceInformation8 = new MMConstraint<AggregateBalanceInformation8>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "BalanceAtSafekeepingPlaceRule";
+			definition = "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed.";
+			owner_lazy = () -> AggregateBalanceInformation8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation8 obj) throws Exception {
+			checkAggregateBalanceInformation8(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation12
+	 * AggregateBalanceInformation12}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BalanceAtSafekeepingPlaceRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AggregateBalanceInformation12> forAggregateBalanceInformation12 = new MMConstraint<AggregateBalanceInformation12>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "BalanceAtSafekeepingPlaceRule";
+			definition = "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed.";
+			owner_lazy = () -> AggregateBalanceInformation12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation12 obj) throws Exception {
+			checkAggregateBalanceInformation12(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation11
+	 * AggregateBalanceInformation11}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BalanceAtSafekeepingPlaceRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AggregateBalanceInformation11> forAggregateBalanceInformation11 = new MMConstraint<AggregateBalanceInformation11>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "BalanceAtSafekeepingPlaceRule";
+			definition = "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed.";
+			owner_lazy = () -> AggregateBalanceInformation11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation11 obj) throws Exception {
+			checkAggregateBalanceInformation11(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation32
+	 * AggregateBalanceInformation32}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BalanceAtSafekeepingPlaceRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AggregateBalanceInformation32> forAggregateBalanceInformation32 = new MMConstraint<AggregateBalanceInformation32>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "BalanceAtSafekeepingPlaceRule";
+			definition = "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed.";
+			owner_lazy = () -> AggregateBalanceInformation32.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation32 obj) throws Exception {
+			checkAggregateBalanceInformation32(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation9
+	 * AggregateBalanceInformation9}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BalanceAtSafekeepingPlaceRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AggregateBalanceInformation9> forAggregateBalanceInformation9 = new MMConstraint<AggregateBalanceInformation9>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "BalanceAtSafekeepingPlaceRule";
+			definition = "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed.";
+			owner_lazy = () -> AggregateBalanceInformation9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation9 obj) throws Exception {
+			checkAggregateBalanceInformation9(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation24
+	 * AggregateBalanceInformation24}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BalanceAtSafekeepingPlaceRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AggregateBalanceInformation24> forAggregateBalanceInformation24 = new MMConstraint<AggregateBalanceInformation24>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "BalanceAtSafekeepingPlaceRule";
+			definition = "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed.";
+			owner_lazy = () -> AggregateBalanceInformation24.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation24 obj) throws Exception {
+			checkAggregateBalanceInformation24(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation28
+	 * AggregateBalanceInformation28}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BalanceAtSafekeepingPlaceRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AggregateBalanceInformation28> forAggregateBalanceInformation28 = new MMConstraint<AggregateBalanceInformation28>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "BalanceAtSafekeepingPlaceRule";
+			definition = "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed.";
+			owner_lazy = () -> AggregateBalanceInformation28.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation28 obj) throws Exception {
+			checkAggregateBalanceInformation28(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation18
+	 * AggregateBalanceInformation18}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BalanceAtSafekeepingPlaceRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AggregateBalanceInformation18> forAggregateBalanceInformation18 = new MMConstraint<AggregateBalanceInformation18>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "BalanceAtSafekeepingPlaceRule";
+			definition = "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed.";
+			owner_lazy = () -> AggregateBalanceInformation18.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation18 obj) throws Exception {
+			checkAggregateBalanceInformation18(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation26
+	 * AggregateBalanceInformation26}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BalanceAtSafekeepingPlaceRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintBalanceAtSafekeepingPlaceRule#forAggregateBalanceInformation31
+	 * ConstraintBalanceAtSafekeepingPlaceRule.forAggregateBalanceInformation31}
+	 * </li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintBalanceAtSafekeepingPlaceRule#forAggregateBalanceInformation22
+	 * ConstraintBalanceAtSafekeepingPlaceRule.forAggregateBalanceInformation22}
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AggregateBalanceInformation26> forAggregateBalanceInformation26 = new MMConstraint<AggregateBalanceInformation26>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "BalanceAtSafekeepingPlaceRule";
+			definition = "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBalanceAtSafekeepingPlaceRule.forAggregateBalanceInformation31);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintBalanceAtSafekeepingPlaceRule.forAggregateBalanceInformation22;
+			owner_lazy = () -> AggregateBalanceInformation26.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation26 obj) throws Exception {
+			checkAggregateBalanceInformation26(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation30
+	 * AggregateBalanceInformation30}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BalanceAtSafekeepingPlaceRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintBalanceAtSafekeepingPlaceRule#forAggregateBalanceInformation25
+	 * ConstraintBalanceAtSafekeepingPlaceRule.forAggregateBalanceInformation25}
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AggregateBalanceInformation30> forAggregateBalanceInformation30 = new MMConstraint<AggregateBalanceInformation30>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "BalanceAtSafekeepingPlaceRule";
+			definition = "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintBalanceAtSafekeepingPlaceRule.forAggregateBalanceInformation25;
+			owner_lazy = () -> AggregateBalanceInformation30.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation30 obj) throws Exception {
+			checkAggregateBalanceInformation30(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation23
+	 * AggregateBalanceInformation23}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BalanceAtSafekeepingPlaceRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AggregateBalanceInformation23> forAggregateBalanceInformation23 = new MMConstraint<AggregateBalanceInformation23>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "BalanceAtSafekeepingPlaceRule";
+			definition = "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed.";
+			owner_lazy = () -> AggregateBalanceInformation23.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation23 obj) throws Exception {
+			checkAggregateBalanceInformation23(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation16
+	 * AggregateBalanceInformation16}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BalanceAtSafekeepingPlaceRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AggregateBalanceInformation16> forAggregateBalanceInformation16 = new MMConstraint<AggregateBalanceInformation16>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "BalanceAtSafekeepingPlaceRule";
+			definition = "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed.";
+			owner_lazy = () -> AggregateBalanceInformation16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation16 obj) throws Exception {
+			checkAggregateBalanceInformation16(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation27
+	 * AggregateBalanceInformation27}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BalanceAtSafekeepingPlaceRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AggregateBalanceInformation27> forAggregateBalanceInformation27 = new MMConstraint<AggregateBalanceInformation27>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "BalanceAtSafekeepingPlaceRule";
+			definition = "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed.";
+			owner_lazy = () -> AggregateBalanceInformation27.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation27 obj) throws Exception {
+			checkAggregateBalanceInformation27(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation31
+	 * AggregateBalanceInformation31}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BalanceAtSafekeepingPlaceRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintBalanceAtSafekeepingPlaceRule#forAggregateBalanceInformation26
+	 * ConstraintBalanceAtSafekeepingPlaceRule.forAggregateBalanceInformation26}
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AggregateBalanceInformation31> forAggregateBalanceInformation31 = new MMConstraint<AggregateBalanceInformation31>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "BalanceAtSafekeepingPlaceRule";
+			definition = "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintBalanceAtSafekeepingPlaceRule.forAggregateBalanceInformation26;
+			owner_lazy = () -> AggregateBalanceInformation31.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation31 obj) throws Exception {
+			checkAggregateBalanceInformation31(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation2
+	 * AggregateBalanceInformation2}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BalanceAtSafekeepingPlaceRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AggregateBalanceInformation2> forAggregateBalanceInformation2 = new MMConstraint<AggregateBalanceInformation2>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "BalanceAtSafekeepingPlaceRule";
+			definition = "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed.";
+			owner_lazy = () -> AggregateBalanceInformation2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation2 obj) throws Exception {
+			checkAggregateBalanceInformation2(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation14
+	 * AggregateBalanceInformation14}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BalanceAtSafekeepingPlaceRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AggregateBalanceInformation14> forAggregateBalanceInformation14 = new MMConstraint<AggregateBalanceInformation14>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "BalanceAtSafekeepingPlaceRule";
+			definition = "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed.";
+			owner_lazy = () -> AggregateBalanceInformation14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation14 obj) throws Exception {
+			checkAggregateBalanceInformation14(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation21
+	 * AggregateBalanceInformation21}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BalanceAtSafekeepingPlaceRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintBalanceAtSafekeepingPlaceRule#forAggregateBalanceInformation25
+	 * ConstraintBalanceAtSafekeepingPlaceRule.forAggregateBalanceInformation25}
+	 * </li>
+	 * </ul>
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AggregateBalanceInformation21> forAggregateBalanceInformation21 = new MMConstraint<AggregateBalanceInformation21>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "BalanceAtSafekeepingPlaceRule";
+			definition = "If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not allowed.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBalanceAtSafekeepingPlaceRule.forAggregateBalanceInformation25);
+			owner_lazy = () -> AggregateBalanceInformation21.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation21 obj) throws Exception {
+			checkAggregateBalanceInformation21(obj);
+		}
+	};
 
 	/**
 	 * If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not
 	 * allowed.
 	 */
-	public static void checkAggregateBalanceInformation8(AggregateBalanceInformation8 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not
-	 * allowed.
-	 */
-	public static void checkAggregateBalanceInformation11(AggregateBalanceInformation11 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not
-	 * allowed.
-	 */
-	public static void checkAggregateBalanceInformation2(AggregateBalanceInformation2 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not
-	 * allowed.
-	 */
-	public static void checkAggregateBalanceInformation3(AggregateBalanceInformation3 obj) throws Exception {
+	public static void checkAggregateBalanceInformation7(AggregateBalanceInformation7 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1240,14 +1216,6 @@ public class ConstraintBalanceAtSafekeepingPlaceRule {
 	 * allowed.
 	 */
 	public static void checkAggregateBalanceInformation13(AggregateBalanceInformation13 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not
-	 * allowed.
-	 */
-	public static void checkAggregateBalanceInformation15(AggregateBalanceInformation15 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1271,127 +1239,7 @@ public class ConstraintBalanceAtSafekeepingPlaceRule {
 	 * If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not
 	 * allowed.
 	 */
-	public static void checkAggregateBalanceInformation22(AggregateBalanceInformation22 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not
-	 * allowed.
-	 */
-	public static void checkAggregateBalanceInformation23(AggregateBalanceInformation23 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not
-	 * allowed.
-	 */
-	public static void checkAggregateBalanceInformation9(AggregateBalanceInformation9 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not
-	 * allowed.
-	 */
-	public static void checkAggregateBalanceInformation10(AggregateBalanceInformation10 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not
-	 * allowed.
-	 */
 	public static void checkAggregateBalanceInformation1(AggregateBalanceInformation1 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not
-	 * allowed.
-	 */
-	public static void checkAggregateBalanceInformation4(AggregateBalanceInformation4 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not
-	 * allowed.
-	 */
-	public static void checkAggregateBalanceInformation12(AggregateBalanceInformation12 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not
-	 * allowed.
-	 */
-	public static void checkAggregateBalanceInformation14(AggregateBalanceInformation14 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not
-	 * allowed.
-	 */
-	public static void checkAggregateBalanceInformation16(AggregateBalanceInformation16 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not
-	 * allowed.
-	 */
-	public static void checkAggregateBalanceInformation18(AggregateBalanceInformation18 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not
-	 * allowed.
-	 */
-	public static void checkAggregateBalanceInformation21(AggregateBalanceInformation21 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not
-	 * allowed.
-	 */
-	public static void checkAggregateBalanceInformation24(AggregateBalanceInformation24 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not
-	 * allowed.
-	 */
-	public static void checkAggregateBalanceInformation20(AggregateBalanceInformation20 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not
-	 * allowed.
-	 */
-	public static void checkAggregateBalanceInformation6(AggregateBalanceInformation6 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not
-	 * allowed.
-	 */
-	public static void checkAggregateBalanceInformation7(AggregateBalanceInformation7 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not
-	 * allowed.
-	 */
-	public static void checkAggregateBalanceInformation26(AggregateBalanceInformation26 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1407,7 +1255,7 @@ public class ConstraintBalanceAtSafekeepingPlaceRule {
 	 * If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not
 	 * allowed.
 	 */
-	public static void checkAggregateBalanceInformation28(AggregateBalanceInformation28 obj) throws Exception {
+	public static void checkAggregateBalanceInformation6(AggregateBalanceInformation6 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1415,7 +1263,7 @@ public class ConstraintBalanceAtSafekeepingPlaceRule {
 	 * If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not
 	 * allowed.
 	 */
-	public static void checkAggregateBalanceInformation27(AggregateBalanceInformation27 obj) throws Exception {
+	public static void checkAggregateBalanceInformation20(AggregateBalanceInformation20 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1423,23 +1271,7 @@ public class ConstraintBalanceAtSafekeepingPlaceRule {
 	 * If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not
 	 * allowed.
 	 */
-	public static void checkAggregateBalanceInformation30(AggregateBalanceInformation30 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not
-	 * allowed.
-	 */
-	public static void checkAggregateBalanceInformation31(AggregateBalanceInformation31 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not
-	 * allowed.
-	 */
-	public static void checkAggregateBalanceInformation32(AggregateBalanceInformation32 obj) throws Exception {
+	public static void checkAggregateBalanceInformation22(AggregateBalanceInformation22 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1456,6 +1288,174 @@ public class ConstraintBalanceAtSafekeepingPlaceRule {
 	 * allowed.
 	 */
 	public static void checkAggregateBalanceInformation34(AggregateBalanceInformation34 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not
+	 * allowed.
+	 */
+	public static void checkAggregateBalanceInformation10(AggregateBalanceInformation10 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not
+	 * allowed.
+	 */
+	public static void checkAggregateBalanceInformation15(AggregateBalanceInformation15 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not
+	 * allowed.
+	 */
+	public static void checkAggregateBalanceInformation3(AggregateBalanceInformation3 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not
+	 * allowed.
+	 */
+	public static void checkAggregateBalanceInformation4(AggregateBalanceInformation4 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not
+	 * allowed.
+	 */
+	public static void checkAggregateBalanceInformation8(AggregateBalanceInformation8 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not
+	 * allowed.
+	 */
+	public static void checkAggregateBalanceInformation12(AggregateBalanceInformation12 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not
+	 * allowed.
+	 */
+	public static void checkAggregateBalanceInformation11(AggregateBalanceInformation11 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not
+	 * allowed.
+	 */
+	public static void checkAggregateBalanceInformation32(AggregateBalanceInformation32 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not
+	 * allowed.
+	 */
+	public static void checkAggregateBalanceInformation9(AggregateBalanceInformation9 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not
+	 * allowed.
+	 */
+	public static void checkAggregateBalanceInformation24(AggregateBalanceInformation24 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not
+	 * allowed.
+	 */
+	public static void checkAggregateBalanceInformation28(AggregateBalanceInformation28 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not
+	 * allowed.
+	 */
+	public static void checkAggregateBalanceInformation18(AggregateBalanceInformation18 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not
+	 * allowed.
+	 */
+	public static void checkAggregateBalanceInformation26(AggregateBalanceInformation26 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not
+	 * allowed.
+	 */
+	public static void checkAggregateBalanceInformation30(AggregateBalanceInformation30 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not
+	 * allowed.
+	 */
+	public static void checkAggregateBalanceInformation23(AggregateBalanceInformation23 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not
+	 * allowed.
+	 */
+	public static void checkAggregateBalanceInformation16(AggregateBalanceInformation16 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not
+	 * allowed.
+	 */
+	public static void checkAggregateBalanceInformation27(AggregateBalanceInformation27 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not
+	 * allowed.
+	 */
+	public static void checkAggregateBalanceInformation31(AggregateBalanceInformation31 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not
+	 * allowed.
+	 */
+	public static void checkAggregateBalanceInformation2(AggregateBalanceInformation2 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not
+	 * allowed.
+	 */
+	public static void checkAggregateBalanceInformation14(AggregateBalanceInformation14 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SafekeepingPlace is present, then BalanceAtSafekeepingPlace is not
+	 * allowed.
+	 */
+	public static void checkAggregateBalanceInformation21(AggregateBalanceInformation21 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

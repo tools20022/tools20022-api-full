@@ -110,13 +110,13 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintStandingInstructionCancellationRequestStatusRule#forAgentCAStandingInstructionStatusAdviceV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintStandingInstructionCancellationRequestStatusRule#for_seev_AgentCAStandingInstructionStatusAdviceV01
  * ConstraintStandingInstructionCancellationRequestStatusRule.
- * forAgentCAStandingInstructionStatusAdviceV01}</li>
+ * for_seev_AgentCAStandingInstructionStatusAdviceV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintStandingInstructionRequestStatusRule#forAgentCAStandingInstructionStatusAdviceV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintStandingInstructionRequestStatusRule#for_seev_AgentCAStandingInstructionStatusAdviceV01
  * ConstraintStandingInstructionRequestStatusRule.
- * forAgentCAStandingInstructionStatusAdviceV01}</li>
+ * for_seev_AgentCAStandingInstructionStatusAdviceV01}</li>
  * </ul>
  * </li>
  * <li>
@@ -182,9 +182,9 @@ public class AgentCAStandingInstructionStatusAdviceV01 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingInstructionRequestIdentificationOrStandingInstructionCancellationIdentificationRule";
 			definition = "Either AgentCAStandingInstructionRequestIdentification or AgentCAStandingInstructionCancellationRequestIdentification must be present, but not both.";
-			messageDefinition_lazy = () -> com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.mmObject();
 			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.mmAgentCAStandingInstructionRequestIdentification,
 					com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.mmAgentCAStandingInstructionCancellationRequestIdentification);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.mmObject();
 		}
 	};
 	/**
@@ -232,9 +232,9 @@ public class AgentCAStandingInstructionStatusAdviceV01 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingInstructionRequestStatusOrStandingInstructionCancellationRequestStatusRule";
 			definition = "Either StandingInstructionRequestStatus or StandingInstructionCancellationRequestStatus must be present, but not both.";
-			messageDefinition_lazy = () -> com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.mmObject();
 			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.mmStandingInstructionRequestStatus,
 					com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.mmStandingInstructionCancellationRequestStatus);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.mmObject();
 		}
 	};
 	@XmlElement(name = "Id", required = true)
@@ -525,8 +525,8 @@ public class AgentCAStandingInstructionStatusAdviceV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintStandingInstructionCancellationRequestStatusRule.forAgentCAStandingInstructionStatusAdviceV01,
-						com.tools20022.repository.constraints.ConstraintStandingInstructionRequestStatusRule.forAgentCAStandingInstructionStatusAdviceV01);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintStandingInstructionCancellationRequestStatusRule.for_seev_AgentCAStandingInstructionStatusAdviceV01,
+						com.tools20022.repository.constraints.ConstraintStandingInstructionRequestStatusRule.for_seev_AgentCAStandingInstructionStatusAdviceV01);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AgentCAStandingInstructionStatusAdviceV01";
 				definition = "Scope\r\nThis message is sent by an issuer (or its agent) to the CSD to report the status, or a change in status, of a standing instruction request or the status of a standing instruction cancellation request.\r\nUsage\r\nWhen this message is used to report the status of a standing instruction request, the building block Standing Instruction Request Identification must be present.\r\nWhen this message is used to report the status of a standing instruction cancellation request, the building block Standing Instruction Cancellation Request Identification must be present.";

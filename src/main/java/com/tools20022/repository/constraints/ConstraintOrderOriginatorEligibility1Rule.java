@@ -23,8 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.msg.*;
 
 /**
- * OrderOriginatorEligibility may only be present if Role is either UCL1 or
- * UCL2.
+ * OrderOriginatorEligibility may only be present if Role is either UCL1
+ * (UnderlyingClient1) or UCL2 (UnderlyingClient2).
  */
 public class ConstraintOrderOriginatorEligibility1Rule {
 
@@ -34,7 +34,7 @@ public class ConstraintOrderOriginatorEligibility1Rule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.Intermediary8 Intermediary8}</li>
+	 * {@linkplain com.tools20022.repository.msg.Intermediary40 Intermediary40}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -44,54 +44,21 @@ public class ConstraintOrderOriginatorEligibility1Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "OrderOriginatorEligibility may only be present if Role is either UCL1 or UCL2."
+	 * "OrderOriginatorEligibility may only be present if Role is either UCL1 (UnderlyingClient1) or UCL2 (UnderlyingClient2)."
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<Intermediary8> forIntermediary8 = new MMConstraint<Intermediary8>() {
+	public static final MMConstraint<Intermediary40> forIntermediary40 = new MMConstraint<Intermediary40>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginatorEligibility1Rule";
-			definition = "OrderOriginatorEligibility may only be present if Role is either UCL1 or UCL2.";
-			owner_lazy = () -> Intermediary8.mmObject();
+			definition = "OrderOriginatorEligibility may only be present if Role is either UCL1 (UnderlyingClient1) or UCL2 (UnderlyingClient2).";
+			owner_lazy = () -> Intermediary40.mmObject();
 		}
 
 		@Override
-		public void executeValidator(Intermediary8 obj) throws Exception {
-			checkIntermediary8(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.Intermediary9 Intermediary9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "OrderOriginatorEligibility1Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "OrderOriginatorEligibility may only be present if Role is either UCL1 or UCL2."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<Intermediary9> forIntermediary9 = new MMConstraint<Intermediary9>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "OrderOriginatorEligibility1Rule";
-			definition = "OrderOriginatorEligibility may only be present if Role is either UCL1 or UCL2.";
-			owner_lazy = () -> Intermediary9.mmObject();
-		}
-
-		@Override
-		public void executeValidator(Intermediary9 obj) throws Exception {
-			checkIntermediary9(obj);
+		public void executeValidator(Intermediary40 obj) throws Exception {
+			checkIntermediary40(obj);
 		}
 	};
 	/**
@@ -133,6 +100,39 @@ public class ConstraintOrderOriginatorEligibility1Rule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.Intermediary9 Intermediary9}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OrderOriginatorEligibility1Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "OrderOriginatorEligibility may only be present if Role is either UCL1 or UCL2."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<Intermediary9> forIntermediary9 = new MMConstraint<Intermediary9>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OrderOriginatorEligibility1Rule";
+			definition = "OrderOriginatorEligibility may only be present if Role is either UCL1 or UCL2.";
+			owner_lazy = () -> Intermediary9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Intermediary9 obj) throws Exception {
+			checkIntermediary9(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Intermediary39 Intermediary39}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -166,7 +166,7 @@ public class ConstraintOrderOriginatorEligibility1Rule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.Intermediary40 Intermediary40}</li>
+	 * {@linkplain com.tools20022.repository.msg.Intermediary8 Intermediary8}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -176,37 +176,29 @@ public class ConstraintOrderOriginatorEligibility1Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "OrderOriginatorEligibility may only be present if Role is either UCL1 (UnderlyingClient1) or UCL2 (UnderlyingClient2)."
+	 * "OrderOriginatorEligibility may only be present if Role is either UCL1 or UCL2."
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<Intermediary40> forIntermediary40 = new MMConstraint<Intermediary40>() {
+	public static final MMConstraint<Intermediary8> forIntermediary8 = new MMConstraint<Intermediary8>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginatorEligibility1Rule";
-			definition = "OrderOriginatorEligibility may only be present if Role is either UCL1 (UnderlyingClient1) or UCL2 (UnderlyingClient2).";
-			owner_lazy = () -> Intermediary40.mmObject();
+			definition = "OrderOriginatorEligibility may only be present if Role is either UCL1 or UCL2.";
+			owner_lazy = () -> Intermediary8.mmObject();
 		}
 
 		@Override
-		public void executeValidator(Intermediary40 obj) throws Exception {
-			checkIntermediary40(obj);
+		public void executeValidator(Intermediary8 obj) throws Exception {
+			checkIntermediary8(obj);
 		}
 	};
 
 	/**
-	 * OrderOriginatorEligibility may only be present if Role is either UCL1 or
-	 * UCL2.
+	 * OrderOriginatorEligibility may only be present if Role is either UCL1
+	 * (UnderlyingClient1) or UCL2 (UnderlyingClient2).
 	 */
-	public static void checkIntermediary8(Intermediary8 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * OrderOriginatorEligibility may only be present if Role is either UCL1 or
-	 * UCL2.
-	 */
-	public static void checkIntermediary9(Intermediary9 obj) throws Exception {
+	public static void checkIntermediary40(Intermediary40 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -219,6 +211,14 @@ public class ConstraintOrderOriginatorEligibility1Rule {
 	}
 
 	/**
+	 * OrderOriginatorEligibility may only be present if Role is either UCL1 or
+	 * UCL2.
+	 */
+	public static void checkIntermediary9(Intermediary9 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
 	 * OrderOriginatorEligibility may only be present if Role is either UCL1
 	 * (UnderlyingClient1) or UCL2 (UnderlyingClient2).
 	 */
@@ -227,10 +227,10 @@ public class ConstraintOrderOriginatorEligibility1Rule {
 	}
 
 	/**
-	 * OrderOriginatorEligibility may only be present if Role is either UCL1
-	 * (UnderlyingClient1) or UCL2 (UnderlyingClient2).
+	 * OrderOriginatorEligibility may only be present if Role is either UCL1 or
+	 * UCL2.
 	 */
-	public static void checkIntermediary40(Intermediary40 obj) throws Exception {
+	public static void checkIntermediary8(Intermediary8 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

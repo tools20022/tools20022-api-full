@@ -35,8 +35,8 @@ public class ConstraintGroupCancellationTrueAndTransactionInformationRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.UnderlyingTransaction2
-	 * UnderlyingTransaction2}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingTransaction13
+	 * UnderlyingTransaction13}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
 	 * expression} =
 	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/TransactionInformation[*]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/OriginalGroupInformationAndCancellation/GroupCancellation&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/OriginalGroupInformationAndCancellation/GroupCancellation&lt;/leftOperand&gt;&lt;rightOperand&gt;true&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
@@ -52,20 +52,37 @@ public class ConstraintGroupCancellationTrueAndTransactionInformationRule {
 	 * definition} =
 	 * "If OriginalGroupInformationAndCancellation/GroupCancellation is true, then TransactionInformation is not allowed."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintGroupCancellationTrueAndTransactionInformationRule#forUnderlyingTransaction16
+	 * ConstraintGroupCancellationTrueAndTransactionInformationRule.
+	 * forUnderlyingTransaction16}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintGroupCancellationTrueAndTransactionInformationRule#forUnderlyingTransaction10
+	 * ConstraintGroupCancellationTrueAndTransactionInformationRule.
+	 * forUnderlyingTransaction10}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<UnderlyingTransaction2> forUnderlyingTransaction2 = new MMConstraint<UnderlyingTransaction2>() {
+	public static final MMConstraint<UnderlyingTransaction13> forUnderlyingTransaction13 = new MMConstraint<UnderlyingTransaction13>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupCancellationTrueAndTransactionInformationRule";
 			definition = "If OriginalGroupInformationAndCancellation/GroupCancellation is true, then TransactionInformation is not allowed.";
-			owner_lazy = () -> UnderlyingTransaction2.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupCancellationTrueAndTransactionInformationRule.forUnderlyingTransaction16);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintGroupCancellationTrueAndTransactionInformationRule.forUnderlyingTransaction10;
+			owner_lazy = () -> UnderlyingTransaction13.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TransactionInformation[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalGroupInformationAndCancellation/GroupCancellation</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/OriginalGroupInformationAndCancellation/GroupCancellation</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
 
 		@Override
-		public void executeValidator(UnderlyingTransaction2 obj) throws Exception {
-			checkUnderlyingTransaction2(obj);
+		public void executeValidator(UnderlyingTransaction13 obj) throws Exception {
+			checkUnderlyingTransaction13(obj);
 		}
 	};
 	/**
@@ -105,55 +122,6 @@ public class ConstraintGroupCancellationTrueAndTransactionInformationRule {
 		@Override
 		public void executeValidator(UnderlyingTransaction5 obj) throws Exception {
 			checkUnderlyingTransaction5(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.UnderlyingTransaction8
-	 * UnderlyingTransaction8}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
-	 * expression} =
-	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/TransactionInformation[*]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/OriginalGroupInformationAndCancellation/GroupCancellation&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/OriginalGroupInformationAndCancellation/GroupCancellation&lt;/leftOperand&gt;&lt;rightOperand&gt;true&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "GroupCancellationTrueAndTransactionInformationRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If OriginalGroupInformationAndCancellation/GroupCancellation is true, then TransactionInformation is not allowed."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintGroupCancellationTrueAndTransactionInformationRule#forUnderlyingTransaction10
-	 * ConstraintGroupCancellationTrueAndTransactionInformationRule.
-	 * forUnderlyingTransaction10}</li>
-	 * </ul>
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<UnderlyingTransaction8> forUnderlyingTransaction8 = new MMConstraint<UnderlyingTransaction8>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "GroupCancellationTrueAndTransactionInformationRule";
-			definition = "If OriginalGroupInformationAndCancellation/GroupCancellation is true, then TransactionInformation is not allowed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupCancellationTrueAndTransactionInformationRule.forUnderlyingTransaction10);
-			owner_lazy = () -> UnderlyingTransaction8.mmObject();
-			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TransactionInformation[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalGroupInformationAndCancellation/GroupCancellation</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/OriginalGroupInformationAndCancellation/GroupCancellation</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
-		}
-
-		@Override
-		public void executeValidator(UnderlyingTransaction8 obj) throws Exception {
-			checkUnderlyingTransaction8(obj);
 		}
 	};
 	/**
@@ -218,8 +186,47 @@ public class ConstraintGroupCancellationTrueAndTransactionInformationRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.UnderlyingTransaction13
-	 * UnderlyingTransaction13}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingTransaction2
+	 * UnderlyingTransaction2}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/TransactionInformation[*]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/OriginalGroupInformationAndCancellation/GroupCancellation&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/OriginalGroupInformationAndCancellation/GroupCancellation&lt;/leftOperand&gt;&lt;rightOperand&gt;true&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "GroupCancellationTrueAndTransactionInformationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If OriginalGroupInformationAndCancellation/GroupCancellation is true, then TransactionInformation is not allowed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<UnderlyingTransaction2> forUnderlyingTransaction2 = new MMConstraint<UnderlyingTransaction2>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "GroupCancellationTrueAndTransactionInformationRule";
+			definition = "If OriginalGroupInformationAndCancellation/GroupCancellation is true, then TransactionInformation is not allowed.";
+			owner_lazy = () -> UnderlyingTransaction2.mmObject();
+			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TransactionInformation[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalGroupInformationAndCancellation/GroupCancellation</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/OriginalGroupInformationAndCancellation/GroupCancellation</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(UnderlyingTransaction2 obj) throws Exception {
+			checkUnderlyingTransaction2(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingTransaction8
+	 * UnderlyingTransaction8}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
 	 * expression} =
 	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/TransactionInformation[*]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/OriginalGroupInformationAndCancellation/GroupCancellation&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/OriginalGroupInformationAndCancellation/GroupCancellation&lt;/leftOperand&gt;&lt;rightOperand&gt;true&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
@@ -239,33 +246,26 @@ public class ConstraintGroupCancellationTrueAndTransactionInformationRule {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintGroupCancellationTrueAndTransactionInformationRule#forUnderlyingTransaction16
-	 * ConstraintGroupCancellationTrueAndTransactionInformationRule.
-	 * forUnderlyingTransaction16}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
 	 * {@linkplain com.tools20022.repository.constraints.ConstraintGroupCancellationTrueAndTransactionInformationRule#forUnderlyingTransaction10
 	 * ConstraintGroupCancellationTrueAndTransactionInformationRule.
 	 * forUnderlyingTransaction10}</li>
 	 * </ul>
+	 * </li>
+	 * </ul>
 	 */
-	public static final MMConstraint<UnderlyingTransaction13> forUnderlyingTransaction13 = new MMConstraint<UnderlyingTransaction13>() {
+	public static final MMConstraint<UnderlyingTransaction8> forUnderlyingTransaction8 = new MMConstraint<UnderlyingTransaction8>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupCancellationTrueAndTransactionInformationRule";
 			definition = "If OriginalGroupInformationAndCancellation/GroupCancellation is true, then TransactionInformation is not allowed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupCancellationTrueAndTransactionInformationRule.forUnderlyingTransaction16);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintGroupCancellationTrueAndTransactionInformationRule.forUnderlyingTransaction10;
-			owner_lazy = () -> UnderlyingTransaction13.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupCancellationTrueAndTransactionInformationRule.forUnderlyingTransaction10);
+			owner_lazy = () -> UnderlyingTransaction8.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TransactionInformation[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalGroupInformationAndCancellation/GroupCancellation</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/OriginalGroupInformationAndCancellation/GroupCancellation</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
 
 		@Override
-		public void executeValidator(UnderlyingTransaction13 obj) throws Exception {
-			checkUnderlyingTransaction13(obj);
+		public void executeValidator(UnderlyingTransaction8 obj) throws Exception {
+			checkUnderlyingTransaction8(obj);
 		}
 	};
 	/**
@@ -375,7 +375,7 @@ public class ConstraintGroupCancellationTrueAndTransactionInformationRule {
 	 * If OriginalGroupInformationAndCancellation/GroupCancellation is true,
 	 * then TransactionInformation is not allowed.
 	 */
-	public static void checkUnderlyingTransaction2(UnderlyingTransaction2 obj) throws Exception {
+	public static void checkUnderlyingTransaction13(UnderlyingTransaction13 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -391,14 +391,6 @@ public class ConstraintGroupCancellationTrueAndTransactionInformationRule {
 	 * If OriginalGroupInformationAndCancellation/GroupCancellation is true,
 	 * then TransactionInformation is not allowed.
 	 */
-	public static void checkUnderlyingTransaction8(UnderlyingTransaction8 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If OriginalGroupInformationAndCancellation/GroupCancellation is true,
-	 * then TransactionInformation is not allowed.
-	 */
 	public static void checkUnderlyingTransaction10(UnderlyingTransaction10 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
@@ -407,7 +399,15 @@ public class ConstraintGroupCancellationTrueAndTransactionInformationRule {
 	 * If OriginalGroupInformationAndCancellation/GroupCancellation is true,
 	 * then TransactionInformation is not allowed.
 	 */
-	public static void checkUnderlyingTransaction13(UnderlyingTransaction13 obj) throws Exception {
+	public static void checkUnderlyingTransaction2(UnderlyingTransaction2 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If OriginalGroupInformationAndCancellation/GroupCancellation is true,
+	 * then TransactionInformation is not allowed.
+	 */
+	public static void checkUnderlyingTransaction8(UnderlyingTransaction8 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 

@@ -87,27 +87,29 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintInstructedAgentRule#forFinancialInstitutionCreditTransferV01
- * ConstraintInstructedAgentRule.forFinancialInstitutionCreditTransferV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInstructedAgentRule#for_pacs_FinancialInstitutionCreditTransferV01
+ * ConstraintInstructedAgentRule.for_pacs_FinancialInstitutionCreditTransferV01}
+ * </li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintInstructingAgentRule#forFinancialInstitutionCreditTransferV01
- * ConstraintInstructingAgentRule.forFinancialInstitutionCreditTransferV01}</li>
- * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmount1Rule#forFinancialInstitutionCreditTransferV01
- * ConstraintTotalInterbankSettlementAmount1Rule.
- * forFinancialInstitutionCreditTransferV01}</li>
- * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmount2Rule#forFinancialInstitutionCreditTransferV01
- * ConstraintTotalInterbankSettlementAmount2Rule.
- * forFinancialInstitutionCreditTransferV01}</li>
- * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintInterbankSettlementDateRule#forFinancialInstitutionCreditTransferV01
- * ConstraintInterbankSettlementDateRule.
- * forFinancialInstitutionCreditTransferV01}</li>
- * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintPaymentTypeInformationRule#forFinancialInstitutionCreditTransferV01
- * ConstraintPaymentTypeInformationRule.forFinancialInstitutionCreditTransferV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInstructingAgentRule#for_pacs_FinancialInstitutionCreditTransferV01
+ * ConstraintInstructingAgentRule.for_pacs_FinancialInstitutionCreditTransferV01
  * }</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmount1Rule#for_pacs_FinancialInstitutionCreditTransferV01
+ * ConstraintTotalInterbankSettlementAmount1Rule.
+ * for_pacs_FinancialInstitutionCreditTransferV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmount2Rule#for_pacs_FinancialInstitutionCreditTransferV01
+ * ConstraintTotalInterbankSettlementAmount2Rule.
+ * for_pacs_FinancialInstitutionCreditTransferV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInterbankSettlementDateRule#for_pacs_FinancialInstitutionCreditTransferV01
+ * ConstraintInterbankSettlementDateRule.
+ * for_pacs_FinancialInstitutionCreditTransferV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPaymentTypeInformationRule#for_pacs_FinancialInstitutionCreditTransferV01
+ * ConstraintPaymentTypeInformationRule.
+ * for_pacs_FinancialInstitutionCreditTransferV01}</li>
  * </ul>
  * </li>
  * <li>
@@ -233,12 +235,12 @@ public class FinancialInstitutionCreditTransferV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInstructedAgentRule.forFinancialInstitutionCreditTransferV01,
-						com.tools20022.repository.constraints.ConstraintInstructingAgentRule.forFinancialInstitutionCreditTransferV01,
-						com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmount1Rule.forFinancialInstitutionCreditTransferV01,
-						com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmount2Rule.forFinancialInstitutionCreditTransferV01,
-						com.tools20022.repository.constraints.ConstraintInterbankSettlementDateRule.forFinancialInstitutionCreditTransferV01,
-						com.tools20022.repository.constraints.ConstraintPaymentTypeInformationRule.forFinancialInstitutionCreditTransferV01);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInstructedAgentRule.for_pacs_FinancialInstitutionCreditTransferV01,
+						com.tools20022.repository.constraints.ConstraintInstructingAgentRule.for_pacs_FinancialInstitutionCreditTransferV01,
+						com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmount1Rule.for_pacs_FinancialInstitutionCreditTransferV01,
+						com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmount2Rule.for_pacs_FinancialInstitutionCreditTransferV01,
+						com.tools20022.repository.constraints.ConstraintInterbankSettlementDateRule.for_pacs_FinancialInstitutionCreditTransferV01,
+						com.tools20022.repository.constraints.ConstraintPaymentTypeInformationRule.for_pacs_FinancialInstitutionCreditTransferV01);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstitutionCreditTransferV01";
 				definition = "Scope\r\nThe FinancialInstitutionCreditTransfer message is sent by a debtor financial institution to a creditor financial institution, directly or through other agents and/or a payment clearing and settlement system.\r\nIt is used to move funds from a debtor account to a creditor, where both debtor and creditor are financial institutions.\r\nUsage\r\nThe FinancialInstitutionCreditTransfer message is exchanged between agents and can contain one or more credit transfer instructions where debtor and creditor are both financial institutions.\r\nThe FinancialInstitutionCreditTransfer message does not allow for grouping: a CreditTransferTransactionInformation block must be present for each credit transfer transaction.\r\nThe FinancialInstitutionCreditTransfer message can be used in domestic and cross-border scenarios.\r\n";

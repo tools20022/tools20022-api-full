@@ -54,65 +54,22 @@ public class ConstraintMultipleSwitchOrderRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintMultipleSwitchOrderRule#forSwitchOrderV03
-	 * ConstraintMultipleSwitchOrderRule.forSwitchOrderV03}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintMultipleSwitchOrderRule#for_setr_SwitchOrderV03
+	 * ConstraintMultipleSwitchOrderRule.for_setr_SwitchOrderV03}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<SwitchOrderV04> forSwitchOrderV04 = new MMConstraint<SwitchOrderV04>() {
+	public static final MMConstraint<SwitchOrderV04> for_setr_SwitchOrderV04 = new MMConstraint<SwitchOrderV04>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultipleSwitchOrderRule";
 			definition = "If SwitchOrderDetails is present more than once, then SwitchOrderDetails/RedemptionLegDetails and SwitchOrderDetails/SubscriptionLegDetails must only be present once.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMultipleSwitchOrderRule.forSwitchOrderV03;
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMultipleSwitchOrderRule.for_setr_SwitchOrderV03;
 			owner_lazy = () -> SwitchOrderV04.mmObject();
 		}
 
 		@Override
 		public void executeValidator(SwitchOrderV04 obj) throws Exception {
-			checkSwitchOrderV04(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV03
-	 * SwitchOrderV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "MultipleSwitchOrderRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If SwitchOrderDetails is present more than once, then SwitchOrderDetails/RedemptionLegDetails and SwitchOrderDetails/SubscriptionLegDetails may only be present once."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintMultipleSwitchOrderRule#forSwitchOrderV04
-	 * ConstraintMultipleSwitchOrderRule.forSwitchOrderV04}</li>
-	 * </ul>
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SwitchOrderV03> forSwitchOrderV03 = new MMConstraint<SwitchOrderV03>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "MultipleSwitchOrderRule";
-			definition = "If SwitchOrderDetails is present more than once, then SwitchOrderDetails/RedemptionLegDetails and SwitchOrderDetails/SubscriptionLegDetails may only be present once.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMultipleSwitchOrderRule.forSwitchOrderV04);
-			owner_lazy = () -> SwitchOrderV03.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SwitchOrderV03 obj) throws Exception {
-			checkSwitchOrderV03(obj);
+			check_setr_SwitchOrderV04(obj);
 		}
 	};
 	/**
@@ -149,22 +106,56 @@ public class ConstraintMultipleSwitchOrderRule {
 			checkSwitchOrderInstruction2(obj);
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV03
+	 * SwitchOrderV03}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "MultipleSwitchOrderRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SwitchOrderDetails is present more than once, then SwitchOrderDetails/RedemptionLegDetails and SwitchOrderDetails/SubscriptionLegDetails may only be present once."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintMultipleSwitchOrderRule#for_setr_SwitchOrderV04
+	 * ConstraintMultipleSwitchOrderRule.for_setr_SwitchOrderV04}</li>
+	 * </ul>
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SwitchOrderV03> for_setr_SwitchOrderV03 = new MMConstraint<SwitchOrderV03>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "MultipleSwitchOrderRule";
+			definition = "If SwitchOrderDetails is present more than once, then SwitchOrderDetails/RedemptionLegDetails and SwitchOrderDetails/SubscriptionLegDetails may only be present once.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMultipleSwitchOrderRule.for_setr_SwitchOrderV04);
+			owner_lazy = () -> SwitchOrderV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchOrderV03 obj) throws Exception {
+			check_setr_SwitchOrderV03(obj);
+		}
+	};
 
 	/**
 	 * If SwitchOrderDetails is present more than once, then
 	 * SwitchOrderDetails/RedemptionLegDetails and
 	 * SwitchOrderDetails/SubscriptionLegDetails must only be present once.
 	 */
-	public static void checkSwitchOrderV04(SwitchOrderV04 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If SwitchOrderDetails is present more than once, then
-	 * SwitchOrderDetails/RedemptionLegDetails and
-	 * SwitchOrderDetails/SubscriptionLegDetails may only be present once.
-	 */
-	public static void checkSwitchOrderV03(SwitchOrderV03 obj) throws Exception {
+	public static void check_setr_SwitchOrderV04(SwitchOrderV04 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -174,6 +165,15 @@ public class ConstraintMultipleSwitchOrderRule {
 	 * SwitchOrderDetails/SubscriptionLegDetails may only be present once.
 	 */
 	public static void checkSwitchOrderInstruction2(SwitchOrderInstruction2 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SwitchOrderDetails is present more than once, then
+	 * SwitchOrderDetails/RedemptionLegDetails and
+	 * SwitchOrderDetails/SubscriptionLegDetails may only be present once.
+	 */
+	public static void check_setr_SwitchOrderV03(SwitchOrderV03 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

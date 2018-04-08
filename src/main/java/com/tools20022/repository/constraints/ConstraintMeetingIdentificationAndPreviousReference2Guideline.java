@@ -36,40 +36,6 @@ public class ConstraintMeetingIdentificationAndPreviousReference2Guideline {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.seev.MeetingCancellationV04
-	 * MeetingCancellationV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "MeetingIdentificationAndPreviousReference2Guideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If MessageCancellation is present, then the MeetingNotification message is cancelled however the meeting itself is not cancelled."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<MeetingCancellationV04> forMeetingCancellationV04 = new MMConstraint<MeetingCancellationV04>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "MeetingIdentificationAndPreviousReference2Guideline";
-			definition = "If MessageCancellation is present, then the MeetingNotification message is cancelled however the meeting itself is not cancelled.";
-			owner_lazy = () -> MeetingCancellationV04.mmObject();
-		}
-
-		@Override
-		public void executeValidator(MeetingCancellationV04 obj) throws Exception {
-			checkMeetingCancellationV04(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.MeetingCancellationV02
 	 * MeetingCancellationV02}</li>
 	 * <li>
@@ -85,7 +51,7 @@ public class ConstraintMeetingIdentificationAndPreviousReference2Guideline {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<MeetingCancellationV02> forMeetingCancellationV02 = new MMConstraint<MeetingCancellationV02>() {
+	public static final MMConstraint<MeetingCancellationV02> for_seev_MeetingCancellationV02 = new MMConstraint<MeetingCancellationV02>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MeetingIdentificationAndPreviousReference2Guideline";
@@ -95,7 +61,41 @@ public class ConstraintMeetingIdentificationAndPreviousReference2Guideline {
 
 		@Override
 		public void executeValidator(MeetingCancellationV02 obj) throws Exception {
-			checkMeetingCancellationV02(obj);
+			check_seev_MeetingCancellationV02(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.MeetingCancellationV04
+	 * MeetingCancellationV04}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "MeetingIdentificationAndPreviousReference2Guideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If MessageCancellation is present, then the MeetingNotification message is cancelled however the meeting itself is not cancelled."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<MeetingCancellationV04> for_seev_MeetingCancellationV04 = new MMConstraint<MeetingCancellationV04>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "MeetingIdentificationAndPreviousReference2Guideline";
+			definition = "If MessageCancellation is present, then the MeetingNotification message is cancelled however the meeting itself is not cancelled.";
+			owner_lazy = () -> MeetingCancellationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MeetingCancellationV04 obj) throws Exception {
+			check_seev_MeetingCancellationV04(obj);
 		}
 	};
 	/**
@@ -119,7 +119,7 @@ public class ConstraintMeetingIdentificationAndPreviousReference2Guideline {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<MeetingCancellationV03> forMeetingCancellationV03 = new MMConstraint<MeetingCancellationV03>() {
+	public static final MMConstraint<MeetingCancellationV03> for_seev_MeetingCancellationV03 = new MMConstraint<MeetingCancellationV03>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MeetingIdentificationAndPreviousReference2Guideline";
@@ -129,7 +129,7 @@ public class ConstraintMeetingIdentificationAndPreviousReference2Guideline {
 
 		@Override
 		public void executeValidator(MeetingCancellationV03 obj) throws Exception {
-			checkMeetingCancellationV03(obj);
+			check_seev_MeetingCancellationV03(obj);
 		}
 	};
 
@@ -137,7 +137,7 @@ public class ConstraintMeetingIdentificationAndPreviousReference2Guideline {
 	 * If MessageCancellation is present, then the MeetingNotification message
 	 * is cancelled however the meeting itself is not cancelled.
 	 */
-	public static void checkMeetingCancellationV04(MeetingCancellationV04 obj) throws Exception {
+	public static void check_seev_MeetingCancellationV02(MeetingCancellationV02 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -145,7 +145,7 @@ public class ConstraintMeetingIdentificationAndPreviousReference2Guideline {
 	 * If MessageCancellation is present, then the MeetingNotification message
 	 * is cancelled however the meeting itself is not cancelled.
 	 */
-	public static void checkMeetingCancellationV02(MeetingCancellationV02 obj) throws Exception {
+	public static void check_seev_MeetingCancellationV04(MeetingCancellationV04 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -153,7 +153,7 @@ public class ConstraintMeetingIdentificationAndPreviousReference2Guideline {
 	 * If MessageCancellation is present, then the MeetingNotification message
 	 * is cancelled however the meeting itself is not cancelled.
 	 */
-	public static void checkMeetingCancellationV03(MeetingCancellationV03 obj) throws Exception {
+	public static void check_seev_MeetingCancellationV03(MeetingCancellationV03 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

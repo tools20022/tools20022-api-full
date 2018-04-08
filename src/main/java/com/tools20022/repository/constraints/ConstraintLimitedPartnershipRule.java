@@ -36,40 +36,6 @@ public class ConstraintLimitedPartnershipRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution10
-	 * RedemptionExecution10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "LimitedPartnershipRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If HedgeFundOrderType is NUNI in any occurrence of HedgeFundOrderType, then OrderedAmount must be present."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<RedemptionExecution10> forRedemptionExecution10 = new MMConstraint<RedemptionExecution10>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "LimitedPartnershipRule";
-			definition = "If HedgeFundOrderType is NUNI in any occurrence of HedgeFundOrderType, then OrderedAmount must be present.";
-			owner_lazy = () -> RedemptionExecution10.mmObject();
-		}
-
-		@Override
-		public void executeValidator(RedemptionExecution10 obj) throws Exception {
-			checkRedemptionExecution10(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder9
 	 * RedemptionOrder9}</li>
 	 * <li>
@@ -132,14 +98,40 @@ public class ConstraintLimitedPartnershipRule {
 			checkSubscriptionOrder9(obj);
 		}
 	};
-
 	/**
-	 * If HedgeFundOrderType is NUNI in any occurrence of HedgeFundOrderType,
-	 * then OrderedAmount must be present.
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution10
+	 * RedemptionExecution10}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "LimitedPartnershipRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If HedgeFundOrderType is NUNI in any occurrence of HedgeFundOrderType, then OrderedAmount must be present."
+	 * </li>
+	 * </ul>
 	 */
-	public static void checkRedemptionExecution10(RedemptionExecution10 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
+	public static final MMConstraint<RedemptionExecution10> forRedemptionExecution10 = new MMConstraint<RedemptionExecution10>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "LimitedPartnershipRule";
+			definition = "If HedgeFundOrderType is NUNI in any occurrence of HedgeFundOrderType, then OrderedAmount must be present.";
+			owner_lazy = () -> RedemptionExecution10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionExecution10 obj) throws Exception {
+			checkRedemptionExecution10(obj);
+		}
+	};
 
 	/**
 	 * If HedgeFundOrderType is NUNI in any occurrence of HedgeFundOrderType,
@@ -154,6 +146,14 @@ public class ConstraintLimitedPartnershipRule {
 	 * then OrderedAmount must be present.
 	 */
 	public static void checkSubscriptionOrder9(SubscriptionOrder9 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If HedgeFundOrderType is NUNI in any occurrence of HedgeFundOrderType,
+	 * then OrderedAmount must be present.
+	 */
+	public static void checkRedemptionExecution10(RedemptionExecution10 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

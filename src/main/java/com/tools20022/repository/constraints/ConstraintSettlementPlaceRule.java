@@ -69,8 +69,8 @@ public class ConstraintSettlementPlaceRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount4
-	 * DeliveringPartiesAndAccount4}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount4
+	 * ReceivingPartiesAndAccount4}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -83,17 +83,17 @@ public class ConstraintSettlementPlaceRule {
 	 * "PlaceOfSettlementDetails/AccountIdentification is not allowed."</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<DeliveringPartiesAndAccount4> forDeliveringPartiesAndAccount4 = new MMConstraint<DeliveringPartiesAndAccount4>() {
+	public static final MMConstraint<ReceivingPartiesAndAccount4> forReceivingPartiesAndAccount4 = new MMConstraint<ReceivingPartiesAndAccount4>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementPlaceRule";
 			definition = "PlaceOfSettlementDetails/AccountIdentification is not allowed.";
-			owner_lazy = () -> DeliveringPartiesAndAccount4.mmObject();
+			owner_lazy = () -> ReceivingPartiesAndAccount4.mmObject();
 		}
 
 		@Override
-		public void executeValidator(DeliveringPartiesAndAccount4 obj) throws Exception {
-			checkDeliveringPartiesAndAccount4(obj);
+		public void executeValidator(ReceivingPartiesAndAccount4 obj) throws Exception {
+			checkReceivingPartiesAndAccount4(obj);
 		}
 	};
 	/**
@@ -135,8 +135,8 @@ public class ConstraintSettlementPlaceRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount4
-	 * ReceivingPartiesAndAccount4}</li>
+	 * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount4
+	 * DeliveringPartiesAndAccount4}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -149,17 +149,17 @@ public class ConstraintSettlementPlaceRule {
 	 * "PlaceOfSettlementDetails/AccountIdentification is not allowed."</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<ReceivingPartiesAndAccount4> forReceivingPartiesAndAccount4 = new MMConstraint<ReceivingPartiesAndAccount4>() {
+	public static final MMConstraint<DeliveringPartiesAndAccount4> forDeliveringPartiesAndAccount4 = new MMConstraint<DeliveringPartiesAndAccount4>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementPlaceRule";
 			definition = "PlaceOfSettlementDetails/AccountIdentification is not allowed.";
-			owner_lazy = () -> ReceivingPartiesAndAccount4.mmObject();
+			owner_lazy = () -> DeliveringPartiesAndAccount4.mmObject();
 		}
 
 		@Override
-		public void executeValidator(ReceivingPartiesAndAccount4 obj) throws Exception {
-			checkReceivingPartiesAndAccount4(obj);
+		public void executeValidator(DeliveringPartiesAndAccount4 obj) throws Exception {
+			checkDeliveringPartiesAndAccount4(obj);
 		}
 	};
 
@@ -173,7 +173,7 @@ public class ConstraintSettlementPlaceRule {
 	/**
 	 * PlaceOfSettlementDetails/AccountIdentification is not allowed.
 	 */
-	public static void checkDeliveringPartiesAndAccount4(DeliveringPartiesAndAccount4 obj) throws Exception {
+	public static void checkReceivingPartiesAndAccount4(ReceivingPartiesAndAccount4 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -187,7 +187,7 @@ public class ConstraintSettlementPlaceRule {
 	/**
 	 * PlaceOfSettlementDetails/AccountIdentification is not allowed.
 	 */
-	public static void checkReceivingPartiesAndAccount4(ReceivingPartiesAndAccount4 obj) throws Exception {
+	public static void checkDeliveringPartiesAndAccount4(DeliveringPartiesAndAccount4 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

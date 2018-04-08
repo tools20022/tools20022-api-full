@@ -101,16 +101,17 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationRule#forRedemptionBulkOrderConfirmationAmendmentV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationRule#for_setr_RedemptionBulkOrderConfirmationAmendmentV01
  * ConstraintAccountIdentificationRule.
- * forRedemptionBulkOrderConfirmationAmendmentV01}</li>
+ * for_setr_RedemptionBulkOrderConfirmationAmendmentV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintOrderReferenceRule#forRedemptionBulkOrderConfirmationAmendmentV01
- * ConstraintOrderReferenceRule.forRedemptionBulkOrderConfirmationAmendmentV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOrderReferenceRule#for_setr_RedemptionBulkOrderConfirmationAmendmentV01
+ * ConstraintOrderReferenceRule.
+ * for_setr_RedemptionBulkOrderConfirmationAmendmentV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintRelatedPartiesDetailsRule#forRedemptionBulkOrderConfirmationAmendmentV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintRelatedPartiesDetailsRule#for_setr_RedemptionBulkOrderConfirmationAmendmentV01
  * ConstraintRelatedPartiesDetailsRule.
- * forRedemptionBulkOrderConfirmationAmendmentV01}</li>
+ * for_setr_RedemptionBulkOrderConfirmationAmendmentV01}</li>
  * </ul>
  * </li>
  * <li>
@@ -506,9 +507,9 @@ public class RedemptionBulkOrderConfirmationAmendmentV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forRedemptionBulkOrderConfirmationAmendmentV01,
-						com.tools20022.repository.constraints.ConstraintOrderReferenceRule.forRedemptionBulkOrderConfirmationAmendmentV01,
-						com.tools20022.repository.constraints.ConstraintRelatedPartiesDetailsRule.forRedemptionBulkOrderConfirmationAmendmentV01);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.for_setr_RedemptionBulkOrderConfirmationAmendmentV01,
+						com.tools20022.repository.constraints.ConstraintOrderReferenceRule.for_setr_RedemptionBulkOrderConfirmationAmendmentV01,
+						com.tools20022.repository.constraints.ConstraintRelatedPartiesDetailsRule.for_setr_RedemptionBulkOrderConfirmationAmendmentV01);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RedemptionBulkOrderConfirmationAmendmentV01";
 				definition = "Scope\r\nAn executing party, for example, a transfer agent, sends the RedemptionBulkOrderConfirmationAmendment message to the instructing party, for example, an investment manager or its authorised representative to amend a previously sent RedemptionBulkOrderConfirmation message.\r\nUsage\r\nThe RedemptionBulkOrderConfirmationAmendment message is used to amend one or more previously sent redemption bulk order confirmations.\r\nEach bulk order confirmation amendment specified is identified in DealReference. The reference of the original individual order is specified in OrderReference.\r\nThe message identification of the RedemptionBulkOrder message in which the orders were conveyed may also be quoted in RelatedReference. The message identification of the RedemptionBulkOrderConfirmation message in which the original order confirmations were conveyed may also be quoted in PreviousReference.";

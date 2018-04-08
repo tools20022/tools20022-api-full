@@ -35,40 +35,6 @@ public class ConstraintSettlementMethodRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentReversalV01
-	 * FIToFIPaymentReversalV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementMethodRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "GroupHeader/SettlementInformation/SettlementMethod/COVE is not allowed when returning direct debit transactions."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<FIToFIPaymentReversalV01> forFIToFIPaymentReversalV01 = new MMConstraint<FIToFIPaymentReversalV01>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementMethodRule";
-			definition = "GroupHeader/SettlementInformation/SettlementMethod/COVE is not allowed when returning direct debit transactions.";
-			owner_lazy = () -> FIToFIPaymentReversalV01.mmObject();
-		}
-
-		@Override
-		public void executeValidator(FIToFIPaymentReversalV01 obj) throws Exception {
-			checkFIToFIPaymentReversalV01(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.pacs.PaymentReturnV01
 	 * PaymentReturnV01}</li>
 	 * <li>
@@ -84,7 +50,7 @@ public class ConstraintSettlementMethodRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<PaymentReturnV01> forPaymentReturnV01 = new MMConstraint<PaymentReturnV01>() {
+	public static final MMConstraint<PaymentReturnV01> for_pacs_PaymentReturnV01 = new MMConstraint<PaymentReturnV01>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMethodRule";
@@ -94,7 +60,41 @@ public class ConstraintSettlementMethodRule {
 
 		@Override
 		public void executeValidator(PaymentReturnV01 obj) throws Exception {
-			checkPaymentReturnV01(obj);
+			check_pacs_PaymentReturnV01(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentReversalV01
+	 * FIToFIPaymentReversalV01}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementMethodRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "GroupHeader/SettlementInformation/SettlementMethod/COVE is not allowed when returning direct debit transactions."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<FIToFIPaymentReversalV01> for_pacs_FIToFIPaymentReversalV01 = new MMConstraint<FIToFIPaymentReversalV01>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementMethodRule";
+			definition = "GroupHeader/SettlementInformation/SettlementMethod/COVE is not allowed when returning direct debit transactions.";
+			owner_lazy = () -> FIToFIPaymentReversalV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FIToFIPaymentReversalV01 obj) throws Exception {
+			check_pacs_FIToFIPaymentReversalV01(obj);
 		}
 	};
 
@@ -102,7 +102,7 @@ public class ConstraintSettlementMethodRule {
 	 * GroupHeader/SettlementInformation/SettlementMethod/COVE is not allowed
 	 * when returning direct debit transactions.
 	 */
-	public static void checkFIToFIPaymentReversalV01(FIToFIPaymentReversalV01 obj) throws Exception {
+	public static void check_pacs_PaymentReturnV01(PaymentReturnV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -110,7 +110,7 @@ public class ConstraintSettlementMethodRule {
 	 * GroupHeader/SettlementInformation/SettlementMethod/COVE is not allowed
 	 * when returning direct debit transactions.
 	 */
-	public static void checkPaymentReturnV01(PaymentReturnV01 obj) throws Exception {
+	public static void check_pacs_FIToFIPaymentReversalV01(FIToFIPaymentReversalV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

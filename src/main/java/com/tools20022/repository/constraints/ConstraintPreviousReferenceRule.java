@@ -70,6 +70,46 @@ public class ConstraintPreviousReferenceRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference11
+	 * MessageAndBusinessReference11}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PreviousReferenceRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If Reference/PreviousReference/MessageName is present, it must start with sese.001, sese.002, sese.005, sese.006, sese.012 or sese.014."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPreviousReferenceRule#forMessageAndBusinessReference8
+	 * ConstraintPreviousReferenceRule.forMessageAndBusinessReference8}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<MessageAndBusinessReference11> forMessageAndBusinessReference11 = new MMConstraint<MessageAndBusinessReference11>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PreviousReferenceRule";
+			definition = "If Reference/PreviousReference/MessageName is present, it must start with sese.001, sese.002, sese.005, sese.006, sese.012 or sese.014.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPreviousReferenceRule.forMessageAndBusinessReference8;
+			owner_lazy = () -> MessageAndBusinessReference11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MessageAndBusinessReference11 obj) throws Exception {
+			checkMessageAndBusinessReference11(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference6
 	 * MessageAndBusinessReference6}</li>
 	 * <li>
@@ -105,55 +145,6 @@ public class ConstraintPreviousReferenceRule {
 		@Override
 		public void executeValidator(MessageAndBusinessReference6 obj) throws Exception {
 			checkMessageAndBusinessReference6(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference7
-	 * MessageAndBusinessReference7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PreviousReferenceRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If Reference/PreviousReference/MessageName is present, it must start with sese.001, sese.002, sese.005, sese.006, sese.012 or sese.014."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintPreviousReferenceRule#forMessageAndBusinessReference8
-	 * ConstraintPreviousReferenceRule.forMessageAndBusinessReference8}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintPreviousReferenceRule#forMessageAndBusinessReference6
-	 * ConstraintPreviousReferenceRule.forMessageAndBusinessReference6}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<MessageAndBusinessReference7> forMessageAndBusinessReference7 = new MMConstraint<MessageAndBusinessReference7>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "PreviousReferenceRule";
-			definition = "If Reference/PreviousReference/MessageName is present, it must start with sese.001, sese.002, sese.005, sese.006, sese.012 or sese.014.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPreviousReferenceRule.forMessageAndBusinessReference8);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPreviousReferenceRule.forMessageAndBusinessReference6;
-			owner_lazy = () -> MessageAndBusinessReference7.mmObject();
-		}
-
-		@Override
-		public void executeValidator(MessageAndBusinessReference7 obj) throws Exception {
-			checkMessageAndBusinessReference7(obj);
 		}
 	};
 	/**
@@ -211,8 +202,8 @@ public class ConstraintPreviousReferenceRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference11
-	 * MessageAndBusinessReference11}</li>
+	 * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference7
+	 * MessageAndBusinessReference7}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -224,25 +215,34 @@ public class ConstraintPreviousReferenceRule {
 	 * definition} =
 	 * "If Reference/PreviousReference/MessageName is present, it must start with sese.001, sese.002, sese.005, sese.006, sese.012 or sese.014."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
 	 * {@linkplain com.tools20022.repository.constraints.ConstraintPreviousReferenceRule#forMessageAndBusinessReference8
 	 * ConstraintPreviousReferenceRule.forMessageAndBusinessReference8}</li>
 	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPreviousReferenceRule#forMessageAndBusinessReference6
+	 * ConstraintPreviousReferenceRule.forMessageAndBusinessReference6}</li>
+	 * </ul>
 	 */
-	public static final MMConstraint<MessageAndBusinessReference11> forMessageAndBusinessReference11 = new MMConstraint<MessageAndBusinessReference11>() {
+	public static final MMConstraint<MessageAndBusinessReference7> forMessageAndBusinessReference7 = new MMConstraint<MessageAndBusinessReference7>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReferenceRule";
 			definition = "If Reference/PreviousReference/MessageName is present, it must start with sese.001, sese.002, sese.005, sese.006, sese.012 or sese.014.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPreviousReferenceRule.forMessageAndBusinessReference8;
-			owner_lazy = () -> MessageAndBusinessReference11.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPreviousReferenceRule.forMessageAndBusinessReference8);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPreviousReferenceRule.forMessageAndBusinessReference6;
+			owner_lazy = () -> MessageAndBusinessReference7.mmObject();
 		}
 
 		@Override
-		public void executeValidator(MessageAndBusinessReference11 obj) throws Exception {
-			checkMessageAndBusinessReference11(obj);
+		public void executeValidator(MessageAndBusinessReference7 obj) throws Exception {
+			checkMessageAndBusinessReference7(obj);
 		}
 	};
 
@@ -252,6 +252,14 @@ public class ConstraintPreviousReferenceRule {
 	 * Reference must contain the MessageReference from the Application Header.
 	 */
 	public static void checkMessageAndBusinessReference1(MessageAndBusinessReference1 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If Reference/PreviousReference/MessageName is present, it must start with
+	 * sese.001, sese.002, sese.005, sese.006, sese.012 or sese.014.
+	 */
+	public static void checkMessageAndBusinessReference11(MessageAndBusinessReference11 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -269,14 +277,6 @@ public class ConstraintPreviousReferenceRule {
 	 * If Reference/PreviousReference/MessageName is present, it must start with
 	 * sese.001, sese.002, sese.005, sese.006, sese.012 or sese.014.
 	 */
-	public static void checkMessageAndBusinessReference7(MessageAndBusinessReference7 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If Reference/PreviousReference/MessageName is present, it must start with
-	 * sese.001, sese.002, sese.005, sese.006, sese.012 or sese.014.
-	 */
 	public static void checkMessageAndBusinessReference8(MessageAndBusinessReference8 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
@@ -285,7 +285,7 @@ public class ConstraintPreviousReferenceRule {
 	 * If Reference/PreviousReference/MessageName is present, it must start with
 	 * sese.001, sese.002, sese.005, sese.006, sese.012 or sese.014.
 	 */
-	public static void checkMessageAndBusinessReference11(MessageAndBusinessReference11 obj) throws Exception {
+	public static void checkMessageAndBusinessReference7(MessageAndBusinessReference7 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

@@ -35,6 +35,80 @@ public class ConstraintShortLongNumberRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.choice.DocumentNumber6Choice
+	 * DocumentNumber6Choice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ShortLongNumberRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "ShortNumber must contain the FIN message type number of the linked message. LongNumber must contain the XML message identifier of the linked message."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<DocumentNumber6Choice> forDocumentNumber6Choice = new MMConstraint<DocumentNumber6Choice>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ShortLongNumberRule";
+			definition = "ShortNumber must contain the FIN message type number of the linked message. LongNumber must contain the XML message identifier of the linked message.";
+			owner_lazy = () -> DocumentNumber6Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DocumentNumber6Choice obj) throws Exception {
+			checkDocumentNumber6Choice(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.choice.DocumentNumber5Choice
+	 * DocumentNumber5Choice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ShortLongNumberRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "ShortNumber must contain the FIN message type number of the linked message. LongNumber must contain the XML message identifier of the linked message."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintShortLongNumberRule#forDocumentNumber1Choice
+	 * ConstraintShortLongNumberRule.forDocumentNumber1Choice}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<DocumentNumber5Choice> forDocumentNumber5Choice = new MMConstraint<DocumentNumber5Choice>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ShortLongNumberRule";
+			definition = "ShortNumber must contain the FIN message type number of the linked message. LongNumber must contain the XML message identifier of the linked message.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintShortLongNumberRule.forDocumentNumber1Choice;
+			owner_lazy = () -> DocumentNumber5Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DocumentNumber5Choice obj) throws Exception {
+			checkDocumentNumber5Choice(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.DocumentNumber1Choice
 	 * DocumentNumber1Choice}</li>
 	 * <li>
@@ -180,80 +254,6 @@ public class ConstraintShortLongNumberRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.choice.DocumentNumber5Choice
-	 * DocumentNumber5Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ShortLongNumberRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "ShortNumber must contain the FIN message type number of the linked message. LongNumber must contain the XML message identifier of the linked message."
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintShortLongNumberRule#forDocumentNumber1Choice
-	 * ConstraintShortLongNumberRule.forDocumentNumber1Choice}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<DocumentNumber5Choice> forDocumentNumber5Choice = new MMConstraint<DocumentNumber5Choice>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ShortLongNumberRule";
-			definition = "ShortNumber must contain the FIN message type number of the linked message. LongNumber must contain the XML message identifier of the linked message.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintShortLongNumberRule.forDocumentNumber1Choice;
-			owner_lazy = () -> DocumentNumber5Choice.mmObject();
-		}
-
-		@Override
-		public void executeValidator(DocumentNumber5Choice obj) throws Exception {
-			checkDocumentNumber5Choice(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.choice.DocumentNumber6Choice
-	 * DocumentNumber6Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ShortLongNumberRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "ShortNumber must contain the FIN message type number of the linked message. LongNumber must contain the XML message identifier of the linked message."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<DocumentNumber6Choice> forDocumentNumber6Choice = new MMConstraint<DocumentNumber6Choice>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ShortLongNumberRule";
-			definition = "ShortNumber must contain the FIN message type number of the linked message. LongNumber must contain the XML message identifier of the linked message.";
-			owner_lazy = () -> DocumentNumber6Choice.mmObject();
-		}
-
-		@Override
-		public void executeValidator(DocumentNumber6Choice obj) throws Exception {
-			checkDocumentNumber6Choice(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.DocumentNumber16Choice
 	 * DocumentNumber16Choice}</li>
 	 * <li>
@@ -288,6 +288,24 @@ public class ConstraintShortLongNumberRule {
 	 * message. LongNumber must contain the XML message identifier of the linked
 	 * message.
 	 */
+	public static void checkDocumentNumber6Choice(DocumentNumber6Choice obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * ShortNumber must contain the FIN message type number of the linked
+	 * message. LongNumber must contain the XML message identifier of the linked
+	 * message.
+	 */
+	public static void checkDocumentNumber5Choice(DocumentNumber5Choice obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * ShortNumber must contain the FIN message type number of the linked
+	 * message. LongNumber must contain the XML message identifier of the linked
+	 * message.
+	 */
 	public static void checkDocumentNumber1Choice(DocumentNumber1Choice obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
@@ -316,24 +334,6 @@ public class ConstraintShortLongNumberRule {
 	 * message.
 	 */
 	public static void checkDocumentNumber4Choice(DocumentNumber4Choice obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * ShortNumber must contain the FIN message type number of the linked
-	 * message. LongNumber must contain the XML message identifier of the linked
-	 * message.
-	 */
-	public static void checkDocumentNumber5Choice(DocumentNumber5Choice obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * ShortNumber must contain the FIN message type number of the linked
-	 * message. LongNumber must contain the XML message identifier of the linked
-	 * message.
-	 */
-	public static void checkDocumentNumber6Choice(DocumentNumber6Choice obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 

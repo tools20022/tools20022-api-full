@@ -50,7 +50,7 @@ public class ConstraintTotalReversedInterbankSettlementAmount2Rule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<FIToFIPaymentReversalV01> forFIToFIPaymentReversalV01 = new MMConstraint<FIToFIPaymentReversalV01>() {
+	public static final MMConstraint<FIToFIPaymentReversalV01> for_pacs_FIToFIPaymentReversalV01 = new MMConstraint<FIToFIPaymentReversalV01>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalReversedInterbankSettlementAmount2Rule";
@@ -60,7 +60,7 @@ public class ConstraintTotalReversedInterbankSettlementAmount2Rule {
 
 		@Override
 		public void executeValidator(FIToFIPaymentReversalV01 obj) throws Exception {
-			checkFIToFIPaymentReversalV01(obj);
+			check_pacs_FIToFIPaymentReversalV01(obj);
 		}
 	};
 
@@ -69,7 +69,7 @@ public class ConstraintTotalReversedInterbankSettlementAmount2Rule {
 	 * all individual TransactionInformation/ReversedInterbankSettlementAmount
 	 * when present.
 	 */
-	public static void checkFIToFIPaymentReversalV01(FIToFIPaymentReversalV01 obj) throws Exception {
+	public static void check_pacs_FIToFIPaymentReversalV01(FIToFIPaymentReversalV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

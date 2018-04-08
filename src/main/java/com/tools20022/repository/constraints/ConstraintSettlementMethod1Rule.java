@@ -23,119 +23,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.msg.*;
 
 /**
- * If SettlementMethod is equal to INDA or INGA then: - SettlementAccount may be
- * present; - ReimbursementAgent(s) is(are) not allowed; - ClearingSystem is not
+ * If SettlementMethod is equal to INDA or INGA then ClearingSystem is not
  * allowed.
  */
 public class ConstraintSettlementMethod1Rule {
 
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SettlementInformation1
-	 * SettlementInformation1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementMethod1Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If SettlementMethod is equal to INDA or INGA then: \n- SettlementAccount may be present;\n- ReimbursementAgent(s) is(are) not allowed;\n- ClearingSystem is not allowed."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SettlementInformation1> forSettlementInformation1 = new MMConstraint<SettlementInformation1>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementMethod1Rule";
-			definition = "If SettlementMethod is equal to INDA or INGA then: \n- SettlementAccount may be present;\n- ReimbursementAgent(s) is(are) not allowed;\n- ClearingSystem is not allowed.";
-			owner_lazy = () -> SettlementInformation1.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SettlementInformation1 obj) throws Exception {
-			checkSettlementInformation1(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SettlementInformation2
-	 * SettlementInformation2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementMethod1Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If SettlementMethod is equal to INDA or INGA then: \n- SettlementAccount may be present;\n- ClearingSystem is not allowed."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SettlementInformation2> forSettlementInformation2 = new MMConstraint<SettlementInformation2>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementMethod1Rule";
-			definition = "If SettlementMethod is equal to INDA or INGA then: \n- SettlementAccount may be present;\n- ClearingSystem is not allowed.";
-			owner_lazy = () -> SettlementInformation2.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SettlementInformation2 obj) throws Exception {
-			checkSettlementInformation2(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SettlementInformation6
-	 * SettlementInformation6}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
-	 * expression} =
-	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/InstructingReimbursementAgent&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/InstructedReimbursementAgent&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/ThirdReimbursementAgent&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/ClearingSystem&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;OR&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/SettlementMethod&lt;/leftOperand&gt;&lt;rightOperand&gt;InstructingAgent&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/SettlementMethod&lt;/leftOperand&gt;&lt;rightOperand&gt;InstructedAgent&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementMethod1Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If SettlementMethod is equal to INDA or INGA then: \n- SettlementAccount may be present;\n- ReimbursementAgent(s) is(are) not allowed;\n- ClearingSystem is not allowed."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SettlementInformation6> forSettlementInformation6 = new MMConstraint<SettlementInformation6>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementMethod1Rule";
-			definition = "If SettlementMethod is equal to INDA or INGA then: \n- SettlementAccount may be present;\n- ReimbursementAgent(s) is(are) not allowed;\n- ClearingSystem is not allowed.";
-			owner_lazy = () -> SettlementInformation6.mmObject();
-			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructingReimbursementAgent</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructedReimbursementAgent</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/ThirdReimbursementAgent</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/ClearingSystem</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementMethod</leftOperand><rightOperand>InstructingAgent</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementMethod</leftOperand><rightOperand>InstructedAgent</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
-		}
-
-		@Override
-		public void executeValidator(SettlementInformation6 obj) throws Exception {
-			checkSettlementInformation6(obj);
-		}
-	};
 	/**
 	 * 
 	 <p>
@@ -173,6 +65,40 @@ public class ConstraintSettlementMethod1Rule {
 		@Override
 		public void executeValidator(SettlementInformation11 obj) throws Exception {
 			checkSettlementInformation11(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SettlementInformation2
+	 * SettlementInformation2}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementMethod1Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SettlementMethod is equal to INDA or INGA then: \n- SettlementAccount may be present;\n- ClearingSystem is not allowed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SettlementInformation2> forSettlementInformation2 = new MMConstraint<SettlementInformation2>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementMethod1Rule";
+			definition = "If SettlementMethod is equal to INDA or INGA then: \n- SettlementAccount may be present;\n- ClearingSystem is not allowed.";
+			owner_lazy = () -> SettlementInformation2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementInformation2 obj) throws Exception {
+			checkSettlementInformation2(obj);
 		}
 	};
 	/**
@@ -220,8 +146,8 @@ public class ConstraintSettlementMethod1Rule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SettlementInformation8
-	 * SettlementInformation8}</li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementInformation6
+	 * SettlementInformation6}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
 	 * expression} =
 	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/InstructingReimbursementAgent&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/InstructedReimbursementAgent&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/ThirdReimbursementAgent&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/ClearingSystem&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;OR&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/SettlementMethod&lt;/leftOperand&gt;&lt;rightOperand&gt;InstructingAgent&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/SettlementMethod&lt;/leftOperand&gt;&lt;rightOperand&gt;InstructedAgent&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
@@ -239,18 +165,52 @@ public class ConstraintSettlementMethod1Rule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<SettlementInformation8> forSettlementInformation8 = new MMConstraint<SettlementInformation8>() {
+	public static final MMConstraint<SettlementInformation6> forSettlementInformation6 = new MMConstraint<SettlementInformation6>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMethod1Rule";
 			definition = "If SettlementMethod is equal to INDA or INGA then: \n- SettlementAccount may be present;\n- ReimbursementAgent(s) is(are) not allowed;\n- ClearingSystem is not allowed.";
-			owner_lazy = () -> SettlementInformation8.mmObject();
+			owner_lazy = () -> SettlementInformation6.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructingReimbursementAgent</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructedReimbursementAgent</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/ThirdReimbursementAgent</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/ClearingSystem</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementMethod</leftOperand><rightOperand>InstructingAgent</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementMethod</leftOperand><rightOperand>InstructedAgent</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
 
 		@Override
-		public void executeValidator(SettlementInformation8 obj) throws Exception {
-			checkSettlementInformation8(obj);
+		public void executeValidator(SettlementInformation6 obj) throws Exception {
+			checkSettlementInformation6(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SettlementInformation1
+	 * SettlementInformation1}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementMethod1Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SettlementMethod is equal to INDA or INGA then: \n- SettlementAccount may be present;\n- ReimbursementAgent(s) is(are) not allowed;\n- ClearingSystem is not allowed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SettlementInformation1> forSettlementInformation1 = new MMConstraint<SettlementInformation1>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementMethod1Rule";
+			definition = "If SettlementMethod is equal to INDA or INGA then: \n- SettlementAccount may be present;\n- ReimbursementAgent(s) is(are) not allowed;\n- ClearingSystem is not allowed.";
+			owner_lazy = () -> SettlementInformation1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementInformation1 obj) throws Exception {
+			checkSettlementInformation1(obj);
 		}
 	};
 	/**
@@ -292,13 +252,51 @@ public class ConstraintSettlementMethod1Rule {
 			checkSettlementInformation9(obj);
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SettlementInformation8
+	 * SettlementInformation8}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/InstructingReimbursementAgent&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/InstructedReimbursementAgent&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/ThirdReimbursementAgent&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/ClearingSystem&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;OR&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/SettlementMethod&lt;/leftOperand&gt;&lt;rightOperand&gt;InstructingAgent&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/SettlementMethod&lt;/leftOperand&gt;&lt;rightOperand&gt;InstructedAgent&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementMethod1Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SettlementMethod is equal to INDA or INGA then: \n- SettlementAccount may be present;\n- ReimbursementAgent(s) is(are) not allowed;\n- ClearingSystem is not allowed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SettlementInformation8> forSettlementInformation8 = new MMConstraint<SettlementInformation8>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementMethod1Rule";
+			definition = "If SettlementMethod is equal to INDA or INGA then: \n- SettlementAccount may be present;\n- ReimbursementAgent(s) is(are) not allowed;\n- ClearingSystem is not allowed.";
+			owner_lazy = () -> SettlementInformation8.mmObject();
+			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructingReimbursementAgent</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructedReimbursementAgent</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/ThirdReimbursementAgent</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/ClearingSystem</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementMethod</leftOperand><rightOperand>InstructingAgent</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementMethod</leftOperand><rightOperand>InstructedAgent</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(SettlementInformation8 obj) throws Exception {
+			checkSettlementInformation8(obj);
+		}
+	};
 
 	/**
-	 * If SettlementMethod is equal to INDA or INGA then: - SettlementAccount
-	 * may be present; - ReimbursementAgent(s) is(are) not allowed; -
-	 * ClearingSystem is not allowed.
+	 * If SettlementMethod is equal to INDA or INGA then ClearingSystem is not
+	 * allowed.
 	 */
-	public static void checkSettlementInformation1(SettlementInformation1 obj) throws Exception {
+	public static void checkSettlementInformation11(SettlementInformation11 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -307,23 +305,6 @@ public class ConstraintSettlementMethod1Rule {
 	 * may be present; - ClearingSystem is not allowed.
 	 */
 	public static void checkSettlementInformation2(SettlementInformation2 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If SettlementMethod is equal to INDA or INGA then: - SettlementAccount
-	 * may be present; - ReimbursementAgent(s) is(are) not allowed; -
-	 * ClearingSystem is not allowed.
-	 */
-	public static void checkSettlementInformation6(SettlementInformation6 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If SettlementMethod is equal to INDA or INGA then ClearingSystem is not
-	 * allowed.
-	 */
-	public static void checkSettlementInformation11(SettlementInformation11 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -340,7 +321,16 @@ public class ConstraintSettlementMethod1Rule {
 	 * may be present; - ReimbursementAgent(s) is(are) not allowed; -
 	 * ClearingSystem is not allowed.
 	 */
-	public static void checkSettlementInformation8(SettlementInformation8 obj) throws Exception {
+	public static void checkSettlementInformation6(SettlementInformation6 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SettlementMethod is equal to INDA or INGA then: - SettlementAccount
+	 * may be present; - ReimbursementAgent(s) is(are) not allowed; -
+	 * ClearingSystem is not allowed.
+	 */
+	public static void checkSettlementInformation1(SettlementInformation1 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -349,6 +339,15 @@ public class ConstraintSettlementMethod1Rule {
 	 * may be present; - ClearingSystem is not allowed.
 	 */
 	public static void checkSettlementInformation9(SettlementInformation9 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SettlementMethod is equal to INDA or INGA then: - SettlementAccount
+	 * may be present; - ReimbursementAgent(s) is(are) not allowed; -
+	 * ClearingSystem is not allowed.
+	 */
+	public static void checkSettlementInformation8(SettlementInformation8 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

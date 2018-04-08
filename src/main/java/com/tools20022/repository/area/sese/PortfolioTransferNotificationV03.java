@@ -107,15 +107,17 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#forPortfolioTransferNotificationV03
- * ConstraintCoexistenceCharacterSetXRule.forPortfolioTransferNotificationV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#for_sese_PortfolioTransferNotificationV03
+ * ConstraintCoexistenceCharacterSetXRule.
+ * for_sese_PortfolioTransferNotificationV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forPortfolioTransferNotificationV03
- * ConstraintCoexistenceIdentificationRule.forPortfolioTransferNotificationV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#for_sese_PortfolioTransferNotificationV03
+ * ConstraintCoexistenceIdentificationRule.
+ * for_sese_PortfolioTransferNotificationV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forPortfolioTransferNotificationV03
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#for_sese_PortfolioTransferNotificationV03
  * ConstraintSecuritiesMarketPracticeGroupGuideline.
- * forPortfolioTransferNotificationV03}</li>
+ * for_sese_PortfolioTransferNotificationV03}</li>
  * </ul>
  * </li>
  * <li>
@@ -425,9 +427,9 @@ public class PortfolioTransferNotificationV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forPortfolioTransferNotificationV03,
-						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forPortfolioTransferNotificationV03,
-						com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forPortfolioTransferNotificationV03);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.for_sese_PortfolioTransferNotificationV03,
+						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.for_sese_PortfolioTransferNotificationV03,
+						com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.for_sese_PortfolioTransferNotificationV03);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PortfolioTransferNotificationV03";
 				definition = "Scope\nAn account servicer sends a PortfolioTransferNotification to another account servicer to exchange transfer settlement details information during a retail or institutional client portfolio transfer.\nThe account servicers will typically be local agents or global custodians acting on behalf of an investment management institution, a broker/dealer or a retail client.\n\nUsage\nBy exchange of transfer settlement details, it is understood the providing, by the delivering account servicer to the receiving account servicer, of the settlement details (trade date, settlement date, delivering settlement chain, quantities, etc.) of the individual transfers that will take place during a full or partial portfolio transfer. This delivering account servicer message may also include, for validation, the receiving settlement chain as provided by the client. In case the receiving settlement chain is not available to the delivering account servicer, the receiving account servicer may in return provide to the delivering account servicer the receiving settlement chain using the same message.\nThe message may also be used to:\n- re-send a message previously sent,\n- provide a third party with a copy of a message for information,\n- re-send to a third party a copy of a message for information\nusing the relevant elements in the Business Application Header.\n\nISO 15022 - 20022 Coexistence\nThis ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment. The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows: “CoexistenceXxxxRule”.";

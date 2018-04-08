@@ -35,40 +35,6 @@ public class ConstraintProductOriginBPORule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails13
-	 * LineItemDetails13}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ProductOriginBPORule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "ProductOrigin is mandatory if PaymentObligation (BPO) is used in this transaction."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<LineItemDetails13> forLineItemDetails13 = new MMConstraint<LineItemDetails13>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ProductOriginBPORule";
-			definition = "ProductOrigin is mandatory if PaymentObligation (BPO) is used in this transaction.";
-			owner_lazy = () -> LineItemDetails13.mmObject();
-		}
-
-		@Override
-		public void executeValidator(LineItemDetails13 obj) throws Exception {
-			checkLineItemDetails13(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.LineItemDetails14
 	 * LineItemDetails14}</li>
 	 * <li>
@@ -97,12 +63,46 @@ public class ConstraintProductOriginBPORule {
 			checkLineItemDetails14(obj);
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails13
+	 * LineItemDetails13}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ProductOriginBPORule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "ProductOrigin is mandatory if PaymentObligation (BPO) is used in this transaction."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<LineItemDetails13> forLineItemDetails13 = new MMConstraint<LineItemDetails13>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ProductOriginBPORule";
+			definition = "ProductOrigin is mandatory if PaymentObligation (BPO) is used in this transaction.";
+			owner_lazy = () -> LineItemDetails13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(LineItemDetails13 obj) throws Exception {
+			checkLineItemDetails13(obj);
+		}
+	};
 
 	/**
 	 * ProductOrigin is mandatory if PaymentObligation (BPO) is used in this
 	 * transaction.
 	 */
-	public static void checkLineItemDetails13(LineItemDetails13 obj) throws Exception {
+	public static void checkLineItemDetails14(LineItemDetails14 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -110,7 +110,7 @@ public class ConstraintProductOriginBPORule {
 	 * ProductOrigin is mandatory if PaymentObligation (BPO) is used in this
 	 * transaction.
 	 */
-	public static void checkLineItemDetails14(LineItemDetails14 obj) throws Exception {
+	public static void checkLineItemDetails13(LineItemDetails13 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

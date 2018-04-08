@@ -98,10 +98,10 @@ public class AcquirertoIssuerCardTransactionLatestVersion {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Acquirer to Issuer Card Transaction - Latest version - master";
 				definition = "Messages that support any card payment related transactions and services between a card transaction acquirer and a card issuer.";
+				code = "cain";
 				messageDefinition_lazy = () -> Arrays.asList(NetworkManagementResponse.mmObject(), AcquirerRejection.mmObject(), AcquirerFinancialResponse.mmObject(), AcquirerReversalInitiation.mmObject(), KeyExchangeResponse.mmObject(),
 						AcquirerAuthorisationInitiation.mmObject(), ReconciliationInitiation.mmObject(), AcquirerAuthorisationResponse.mmObject(), NetworkManagementInitiation.mmObject(), AcquirerReversalResponse.mmObject(),
 						KeyExchangeInitiation.mmObject(), ReconciliationResponse.mmObject(), AcquirerFinancialInitiation.mmObject());
-				code = "cain";
 			}
 		});
 		return mmObject_lazy.get();

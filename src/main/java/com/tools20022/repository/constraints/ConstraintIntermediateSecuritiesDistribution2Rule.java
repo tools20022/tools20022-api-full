@@ -56,7 +56,7 @@ public class ConstraintIntermediateSecuritiesDistribution2Rule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<CorporateActionNotificationV01> forCorporateActionNotificationV01 = new MMConstraint<CorporateActionNotificationV01>() {
+	public static final MMConstraint<CorporateActionNotificationV01> for_seev_CorporateActionNotificationV01 = new MMConstraint<CorporateActionNotificationV01>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediateSecuritiesDistribution2Rule";
@@ -67,7 +67,7 @@ public class ConstraintIntermediateSecuritiesDistribution2Rule {
 
 		@Override
 		public void executeValidator(CorporateActionNotificationV01 obj) throws Exception {
-			checkCorporateActionNotificationV01(obj);
+			check_seev_CorporateActionNotificationV01(obj);
 		}
 	};
 
@@ -79,7 +79,7 @@ public class ConstraintIntermediateSecuritiesDistribution2Rule {
 	 * be present in at least one occurrence of CorporateActionOptionDetails.
 	 * (MT 564 NVRC12).
 	 */
-	public static void checkCorporateActionNotificationV01(CorporateActionNotificationV01 obj) throws Exception {
+	public static void check_seev_CorporateActionNotificationV01(CorporateActionNotificationV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

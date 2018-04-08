@@ -53,7 +53,7 @@ public class ConstraintStatusCancelledGuideline {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<OrderInstructionStatusReportV02> forOrderInstructionStatusReportV02 = new MMConstraint<OrderInstructionStatusReportV02>() {
+	public static final MMConstraint<OrderInstructionStatusReportV02> for_setr_OrderInstructionStatusReportV02 = new MMConstraint<OrderInstructionStatusReportV02>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusCancelledGuideline";
@@ -63,7 +63,7 @@ public class ConstraintStatusCancelledGuideline {
 
 		@Override
 		public void executeValidator(OrderInstructionStatusReportV02 obj) throws Exception {
-			checkOrderInstructionStatusReportV02(obj);
+			check_setr_OrderInstructionStatusReportV02(obj);
 		}
 	};
 
@@ -75,7 +75,7 @@ public class ConstraintStatusCancelledGuideline {
 	 * message OrderCancellationStatusReport must be used to report the status
 	 * of this cancellation request.
 	 */
-	public static void checkOrderInstructionStatusReportV02(OrderInstructionStatusReportV02 obj) throws Exception {
+	public static void check_setr_OrderInstructionStatusReportV02(OrderInstructionStatusReportV02 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

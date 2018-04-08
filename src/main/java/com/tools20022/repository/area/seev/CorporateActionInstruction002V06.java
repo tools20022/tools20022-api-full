@@ -111,23 +111,24 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintInstructionCancellationRequestIdentificationRule#forCorporateActionInstruction002V06
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInstructionCancellationRequestIdentificationRule#for_seev_CorporateActionInstruction002V06
  * ConstraintInstructionCancellationRequestIdentificationRule.
- * forCorporateActionInstruction002V06}</li>
+ * for_seev_CorporateActionInstruction002V06}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCorporateActionEventIdentificationRule#forCorporateActionInstruction002V06
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCorporateActionEventIdentificationRule#for_seev_CorporateActionInstruction002V06
  * ConstraintCorporateActionEventIdentificationRule.
- * forCorporateActionInstruction002V06}</li>
+ * for_seev_CorporateActionInstruction002V06}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintChangeInstructionIndicatorGuideline#forCorporateActionInstruction002V06
+ * {@linkplain com.tools20022.repository.constraints.ConstraintChangeInstructionIndicatorGuideline#for_seev_CorporateActionInstruction002V06
  * ConstraintChangeInstructionIndicatorGuideline.
- * forCorporateActionInstruction002V06}</li>
+ * for_seev_CorporateActionInstruction002V06}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalInformationRule#forCorporateActionInstruction002V06
- * ConstraintAdditionalInformationRule.forCorporateActionInstruction002V06}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalInformationRule#for_seev_CorporateActionInstruction002V06
+ * ConstraintAdditionalInformationRule.for_seev_CorporateActionInstruction002V06
+ * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintOptionTypeRule#forCorporateActionInstruction002V06
- * ConstraintOptionTypeRule.forCorporateActionInstruction002V06}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOptionTypeRule#for_seev_CorporateActionInstruction002V06
+ * ConstraintOptionTypeRule.for_seev_CorporateActionInstruction002V06}</li>
  * </ul>
  * </li>
  * <li>
@@ -667,10 +668,11 @@ public class CorporateActionInstruction002V06 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInstructionCancellationRequestIdentificationRule.forCorporateActionInstruction002V06,
-						com.tools20022.repository.constraints.ConstraintCorporateActionEventIdentificationRule.forCorporateActionInstruction002V06,
-						com.tools20022.repository.constraints.ConstraintChangeInstructionIndicatorGuideline.forCorporateActionInstruction002V06,
-						com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionInstruction002V06, com.tools20022.repository.constraints.ConstraintOptionTypeRule.forCorporateActionInstruction002V06);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInstructionCancellationRequestIdentificationRule.for_seev_CorporateActionInstruction002V06,
+						com.tools20022.repository.constraints.ConstraintCorporateActionEventIdentificationRule.for_seev_CorporateActionInstruction002V06,
+						com.tools20022.repository.constraints.ConstraintChangeInstructionIndicatorGuideline.for_seev_CorporateActionInstruction002V06,
+						com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.for_seev_CorporateActionInstruction002V06,
+						com.tools20022.repository.constraints.ConstraintOptionTypeRule.for_seev_CorporateActionInstruction002V06);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionInstruction002V06";
 				definition = "Scope\r\nAn account owner sends the CorporateActionInstruction message to an account servicer to instruct election on a corporate action event.\r\r\nThis message is used to provide the custodian with instructions on how the account owner wishes to proceed with a corporate action event. Instructions include investment decisions regarding the exercise of rights issues, the election of stock or cash when the option is available, and decisions on the conversion or tendering of securities.\r\nUsage\r\nThe message may also be used to:\r\n- re-send a message previously sent (the sub-function of the message is Duplicate),\r\n- provide a third party with a copy of a message for information (the sub-function of the message is Copy),\r\n- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate),\r\nusing the relevant elements in the business application header (BAH).";

@@ -36,6 +36,46 @@ public class ConstraintOtherDocumentation1Guideline {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.PowerOfAttorneyRequirements3
+	 * PowerOfAttorneyRequirements3}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OtherDocumentation1Guideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PowerOfAttorney specific deadlines are announced, it is recommended that OtherDocumentation be used."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintOtherDocumentation1Guideline#forPowerOfAttorneyRequirements2
+	 * ConstraintOtherDocumentation1Guideline.forPowerOfAttorneyRequirements2}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<PowerOfAttorneyRequirements3> forPowerOfAttorneyRequirements3 = new MMConstraint<PowerOfAttorneyRequirements3>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OtherDocumentation1Guideline";
+			definition = "If PowerOfAttorney specific deadlines are announced, it is recommended that OtherDocumentation be used.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOtherDocumentation1Guideline.forPowerOfAttorneyRequirements2;
+			owner_lazy = () -> PowerOfAttorneyRequirements3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PowerOfAttorneyRequirements3 obj) throws Exception {
+			checkPowerOfAttorneyRequirements3(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PowerOfAttorneyRequirements2
 	 * PowerOfAttorneyRequirements2}</li>
 	 * <li>
@@ -73,52 +113,12 @@ public class ConstraintOtherDocumentation1Guideline {
 			checkPowerOfAttorneyRequirements2(obj);
 		}
 	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.PowerOfAttorneyRequirements3
-	 * PowerOfAttorneyRequirements3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "OtherDocumentation1Guideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If PowerOfAttorney specific deadlines are announced, it is recommended that OtherDocumentation be used."
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintOtherDocumentation1Guideline#forPowerOfAttorneyRequirements2
-	 * ConstraintOtherDocumentation1Guideline.forPowerOfAttorneyRequirements2}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<PowerOfAttorneyRequirements3> forPowerOfAttorneyRequirements3 = new MMConstraint<PowerOfAttorneyRequirements3>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "OtherDocumentation1Guideline";
-			definition = "If PowerOfAttorney specific deadlines are announced, it is recommended that OtherDocumentation be used.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOtherDocumentation1Guideline.forPowerOfAttorneyRequirements2;
-			owner_lazy = () -> PowerOfAttorneyRequirements3.mmObject();
-		}
-
-		@Override
-		public void executeValidator(PowerOfAttorneyRequirements3 obj) throws Exception {
-			checkPowerOfAttorneyRequirements3(obj);
-		}
-	};
 
 	/**
 	 * If PowerOfAttorney specific deadlines are announced, it is recommended
 	 * that OtherDocumentation be used.
 	 */
-	public static void checkPowerOfAttorneyRequirements2(PowerOfAttorneyRequirements2 obj) throws Exception {
+	public static void checkPowerOfAttorneyRequirements3(PowerOfAttorneyRequirements3 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -126,7 +126,7 @@ public class ConstraintOtherDocumentation1Guideline {
 	 * If PowerOfAttorney specific deadlines are announced, it is recommended
 	 * that OtherDocumentation be used.
 	 */
-	public static void checkPowerOfAttorneyRequirements3(PowerOfAttorneyRequirements3 obj) throws Exception {
+	public static void checkPowerOfAttorneyRequirements2(PowerOfAttorneyRequirements2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

@@ -90,8 +90,8 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintPriceCorrectionRepeatRule#forPriceReportCorrectionV03
- * ConstraintPriceCorrectionRepeatRule.forPriceReportCorrectionV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPriceCorrectionRepeatRule#for_reda_PriceReportCorrectionV03
+ * ConstraintPriceCorrectionRepeatRule.for_reda_PriceReportCorrectionV03}</li>
  * </ul>
  * </li>
  * <li>
@@ -351,7 +351,7 @@ public class PriceReportCorrectionV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPriceCorrectionRepeatRule.forPriceReportCorrectionV03);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPriceCorrectionRepeatRule.for_reda_PriceReportCorrectionV03);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceReportCorrectionV03";
 				definition = "Scope\r\nA report provider, eg, a transfer agent, fund accountant or market data provider, sends the PriceReportCorrection message to the report recipient, eg, a fund management company, transfer agent, market data provider, regulator or any other interested party to correct at least one of the prices for a financial instrument that was reported in a previously sent PriceReport message.\r\nUsage\r\nThe PriceReportCorrection message is used to correct information reported in a previously sent PriceReport.\r\nIf an entire PriceReport message must be corrected, eg, due to an incorrect trade date, it is recommended that a PriceReportCancellation message is used to cancel the entire PriceReport message and a new PriceReport sent.";

@@ -90,35 +90,38 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintGroupReturnAndTransactionInformationRule#forPaymentReturnV01
- * ConstraintGroupReturnAndTransactionInformationRule.forPaymentReturnV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupReturnAndTransactionInformationRule#for_pacs_PaymentReturnV01
+ * ConstraintGroupReturnAndTransactionInformationRule.for_pacs_PaymentReturnV01}
+ * </li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintInstructedAgentRule#forPaymentReturnV01
- * ConstraintInstructedAgentRule.forPaymentReturnV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInstructedAgentRule#for_pacs_PaymentReturnV01
+ * ConstraintInstructedAgentRule.for_pacs_PaymentReturnV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintInstructingAgentRule#forPaymentReturnV01
- * ConstraintInstructingAgentRule.forPaymentReturnV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInstructingAgentRule#for_pacs_PaymentReturnV01
+ * ConstraintInstructingAgentRule.for_pacs_PaymentReturnV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintInterbankSettlementDateRule#forPaymentReturnV01
- * ConstraintInterbankSettlementDateRule.forPaymentReturnV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInterbankSettlementDateRule#for_pacs_PaymentReturnV01
+ * ConstraintInterbankSettlementDateRule.for_pacs_PaymentReturnV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintGroupReturnAndNumberOfTransactionsRule#forPaymentReturnV01
- * ConstraintGroupReturnAndNumberOfTransactionsRule.forPaymentReturnV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupReturnAndNumberOfTransactionsRule#for_pacs_PaymentReturnV01
+ * ConstraintGroupReturnAndNumberOfTransactionsRule.for_pacs_PaymentReturnV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintGroupReturnAndReturnReasonRule#forPaymentReturnV01
- * ConstraintGroupReturnAndReturnReasonRule.forPaymentReturnV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupReturnAndReturnReasonRule#for_pacs_PaymentReturnV01
+ * ConstraintGroupReturnAndReturnReasonRule.for_pacs_PaymentReturnV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintTotalReturnedInterbankSettlementAmount1Rule#forPaymentReturnV01
- * ConstraintTotalReturnedInterbankSettlementAmount1Rule.forPaymentReturnV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTotalReturnedInterbankSettlementAmount1Rule#for_pacs_PaymentReturnV01
+ * ConstraintTotalReturnedInterbankSettlementAmount1Rule.
+ * for_pacs_PaymentReturnV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintTotalReturnedInterbankSettlementAmount2Rule#forPaymentReturnV01
- * ConstraintTotalReturnedInterbankSettlementAmount2Rule.forPaymentReturnV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTotalReturnedInterbankSettlementAmount2Rule#for_pacs_PaymentReturnV01
+ * ConstraintTotalReturnedInterbankSettlementAmount2Rule.
+ * for_pacs_PaymentReturnV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintOriginalGroupInformationRule#forPaymentReturnV01
- * ConstraintOriginalGroupInformationRule.forPaymentReturnV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOriginalGroupInformationRule#for_pacs_PaymentReturnV01
+ * ConstraintOriginalGroupInformationRule.for_pacs_PaymentReturnV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementMethodRule#forPaymentReturnV01
- * ConstraintSettlementMethodRule.forPaymentReturnV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementMethodRule#for_pacs_PaymentReturnV01
+ * ConstraintSettlementMethodRule.for_pacs_PaymentReturnV01}</li>
  * </ul>
  * </li>
  * <li>
@@ -291,12 +294,14 @@ public class PaymentReturnV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupReturnAndTransactionInformationRule.forPaymentReturnV01,
-						com.tools20022.repository.constraints.ConstraintInstructedAgentRule.forPaymentReturnV01, com.tools20022.repository.constraints.ConstraintInstructingAgentRule.forPaymentReturnV01,
-						com.tools20022.repository.constraints.ConstraintInterbankSettlementDateRule.forPaymentReturnV01, com.tools20022.repository.constraints.ConstraintGroupReturnAndNumberOfTransactionsRule.forPaymentReturnV01,
-						com.tools20022.repository.constraints.ConstraintGroupReturnAndReturnReasonRule.forPaymentReturnV01, com.tools20022.repository.constraints.ConstraintTotalReturnedInterbankSettlementAmount1Rule.forPaymentReturnV01,
-						com.tools20022.repository.constraints.ConstraintTotalReturnedInterbankSettlementAmount2Rule.forPaymentReturnV01, com.tools20022.repository.constraints.ConstraintOriginalGroupInformationRule.forPaymentReturnV01,
-						com.tools20022.repository.constraints.ConstraintSettlementMethodRule.forPaymentReturnV01);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupReturnAndTransactionInformationRule.for_pacs_PaymentReturnV01,
+						com.tools20022.repository.constraints.ConstraintInstructedAgentRule.for_pacs_PaymentReturnV01, com.tools20022.repository.constraints.ConstraintInstructingAgentRule.for_pacs_PaymentReturnV01,
+						com.tools20022.repository.constraints.ConstraintInterbankSettlementDateRule.for_pacs_PaymentReturnV01,
+						com.tools20022.repository.constraints.ConstraintGroupReturnAndNumberOfTransactionsRule.for_pacs_PaymentReturnV01,
+						com.tools20022.repository.constraints.ConstraintGroupReturnAndReturnReasonRule.for_pacs_PaymentReturnV01,
+						com.tools20022.repository.constraints.ConstraintTotalReturnedInterbankSettlementAmount1Rule.for_pacs_PaymentReturnV01,
+						com.tools20022.repository.constraints.ConstraintTotalReturnedInterbankSettlementAmount2Rule.for_pacs_PaymentReturnV01,
+						com.tools20022.repository.constraints.ConstraintOriginalGroupInformationRule.for_pacs_PaymentReturnV01, com.tools20022.repository.constraints.ConstraintSettlementMethodRule.for_pacs_PaymentReturnV01);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentReturnV01";
 				definition = "Scope\r\nThe PaymentReturn message is sent by an agent to the previous agent in the payment chain to undo a payment previously settled.\r\nUsage\r\nThe PaymentReturn message is exchanged between agents to return funds after settlement of credit transfer instructions (i.e. FIToFICustomerCreditTransfer message and FinancialInstitutionCreditTransfer message) or direct debit instructions (FIToFICustomerDirectDebit message).\r\nThe PaymentReturn message should not be used between agents and non-financial institution customers. Non-financial institution customers will be informed about a debit or a credit on their account(s) through an Advice of Credit/Debit message and/or Statement message.\r\nThe PaymentReturn message can be used to return single instructions or multiple instructions from one or different files.\r\nThe PaymentReturn message can be used in domestic and cross-border scenarios.\r\nThe PaymentReturn message refers to the original instruction(s) by means of references only or by means of references and a set of elements from the original instruction.\r.";

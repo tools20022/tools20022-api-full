@@ -48,7 +48,7 @@ public class ConstraintQueryPeriodandTradeIdentificationRule1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<ForeignExchangeTradeCaptureReportRequestV01> forForeignExchangeTradeCaptureReportRequestV01 = new MMConstraint<ForeignExchangeTradeCaptureReportRequestV01>() {
+	public static final MMConstraint<ForeignExchangeTradeCaptureReportRequestV01> for_fxtr_ForeignExchangeTradeCaptureReportRequestV01 = new MMConstraint<ForeignExchangeTradeCaptureReportRequestV01>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryPeriodandTradeIdentificationRule1";
@@ -58,7 +58,7 @@ public class ConstraintQueryPeriodandTradeIdentificationRule1 {
 
 		@Override
 		public void executeValidator(ForeignExchangeTradeCaptureReportRequestV01 obj) throws Exception {
-			checkForeignExchangeTradeCaptureReportRequestV01(obj);
+			check_fxtr_ForeignExchangeTradeCaptureReportRequestV01(obj);
 		}
 	};
 
@@ -66,7 +66,7 @@ public class ConstraintQueryPeriodandTradeIdentificationRule1 {
 	 * Either QueryTradeIdentification or QueryPeriod may be present, but not
 	 * both.
 	 */
-	public static void checkForeignExchangeTradeCaptureReportRequestV01(ForeignExchangeTradeCaptureReportRequestV01 obj) throws Exception {
+	public static void check_fxtr_ForeignExchangeTradeCaptureReportRequestV01(ForeignExchangeTradeCaptureReportRequestV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

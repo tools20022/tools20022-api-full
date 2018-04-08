@@ -27,9 +27,9 @@ import com.tools20022.repository.msg.Baseline5;
 import java.util.Arrays;
 
 /**
- * If DataSetRequired/RequiredTransportDataSet is TRUE, then Goods/TransShipment
- * is mandatory. If DataSetRequired/RequiredTransportDataSet is FALSE, then
- * Goods/TransShipment is optional.
+ * If TransportDataSetRequired is present, then Goods/TransShipment is
+ * mandatory. If TransportDataSetRequired is absent, then Goods/TransShipment is
+ * optional.
  */
 public class ConstraintTransShipmentRule {
 
@@ -39,7 +39,7 @@ public class ConstraintTransShipmentRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.Baseline2 Baseline2}</li>
+	 * {@linkplain com.tools20022.repository.msg.Baseline5 Baseline5}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -49,21 +49,27 @@ public class ConstraintTransShipmentRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If DataSetRequired/RequiredTransportDataSet is TRUE, then Goods/TransShipment is mandatory. If DataSetRequired/RequiredTransportDataSet is FALSE, then Goods/TransShipment is optional."
+	 * "If TransportDataSetRequired is present, then Goods/TransShipment is mandatory. If TransportDataSetRequired is absent, then Goods/TransShipment is optional."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintTransShipmentRule#forBaseline4
+	 * ConstraintTransShipmentRule.forBaseline4}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<Baseline2> forBaseline2 = new MMConstraint<Baseline2>() {
+	public static final MMConstraint<Baseline5> forBaseline5 = new MMConstraint<Baseline5>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransShipmentRule";
-			definition = "If DataSetRequired/RequiredTransportDataSet is TRUE, then Goods/TransShipment is mandatory. If DataSetRequired/RequiredTransportDataSet is FALSE, then Goods/TransShipment is optional.";
-			owner_lazy = () -> Baseline2.mmObject();
+			definition = "If TransportDataSetRequired is present, then Goods/TransShipment is mandatory. If TransportDataSetRequired is absent, then Goods/TransShipment is optional.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTransShipmentRule.forBaseline4;
+			owner_lazy = () -> Baseline5.mmObject();
 		}
 
 		@Override
-		public void executeValidator(Baseline2 obj) throws Exception {
-			checkBaseline2(obj);
+		public void executeValidator(Baseline5 obj) throws Exception {
+			checkBaseline5(obj);
 		}
 	};
 	/**
@@ -162,7 +168,7 @@ public class ConstraintTransShipmentRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.Baseline5 Baseline5}</li>
+	 * {@linkplain com.tools20022.repository.msg.Baseline2 Baseline2}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -172,37 +178,30 @@ public class ConstraintTransShipmentRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If TransportDataSetRequired is present, then Goods/TransShipment is mandatory. If TransportDataSetRequired is absent, then Goods/TransShipment is optional."
+	 * "If DataSetRequired/RequiredTransportDataSet is TRUE, then Goods/TransShipment is mandatory. If DataSetRequired/RequiredTransportDataSet is FALSE, then Goods/TransShipment is optional."
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintTransShipmentRule#forBaseline4
-	 * ConstraintTransShipmentRule.forBaseline4}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<Baseline5> forBaseline5 = new MMConstraint<Baseline5>() {
+	public static final MMConstraint<Baseline2> forBaseline2 = new MMConstraint<Baseline2>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransShipmentRule";
-			definition = "If TransportDataSetRequired is present, then Goods/TransShipment is mandatory. If TransportDataSetRequired is absent, then Goods/TransShipment is optional.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTransShipmentRule.forBaseline4;
-			owner_lazy = () -> Baseline5.mmObject();
+			definition = "If DataSetRequired/RequiredTransportDataSet is TRUE, then Goods/TransShipment is mandatory. If DataSetRequired/RequiredTransportDataSet is FALSE, then Goods/TransShipment is optional.";
+			owner_lazy = () -> Baseline2.mmObject();
 		}
 
 		@Override
-		public void executeValidator(Baseline5 obj) throws Exception {
-			checkBaseline5(obj);
+		public void executeValidator(Baseline2 obj) throws Exception {
+			checkBaseline2(obj);
 		}
 	};
 
 	/**
-	 * If DataSetRequired/RequiredTransportDataSet is TRUE, then
-	 * Goods/TransShipment is mandatory. If
-	 * DataSetRequired/RequiredTransportDataSet is FALSE, then
+	 * If TransportDataSetRequired is present, then Goods/TransShipment is
+	 * mandatory. If TransportDataSetRequired is absent, then
 	 * Goods/TransShipment is optional.
 	 */
-	public static void checkBaseline2(Baseline2 obj) throws Exception {
+	public static void checkBaseline5(Baseline5 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -225,11 +224,12 @@ public class ConstraintTransShipmentRule {
 	}
 
 	/**
-	 * If TransportDataSetRequired is present, then Goods/TransShipment is
-	 * mandatory. If TransportDataSetRequired is absent, then
+	 * If DataSetRequired/RequiredTransportDataSet is TRUE, then
+	 * Goods/TransShipment is mandatory. If
+	 * DataSetRequired/RequiredTransportDataSet is FALSE, then
 	 * Goods/TransShipment is optional.
 	 */
-	public static void checkBaseline5(Baseline5 obj) throws Exception {
+	public static void checkBaseline2(Baseline2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

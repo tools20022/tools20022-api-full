@@ -95,35 +95,35 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus1Rule#forPaymentStatusReportV02
- * ConstraintGroupAndTransactionStatus1Rule.forPaymentStatusReportV02}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus1Rule#for_pacs_PaymentStatusReportV02
+ * ConstraintGroupAndTransactionStatus1Rule.for_pacs_PaymentStatusReportV02}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus2Rule#forPaymentStatusReportV02
- * ConstraintGroupAndTransactionStatus2Rule.forPaymentStatusReportV02}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus2Rule#for_pacs_PaymentStatusReportV02
+ * ConstraintGroupAndTransactionStatus2Rule.for_pacs_PaymentStatusReportV02}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus3Rule#forPaymentStatusReportV02
- * ConstraintGroupAndTransactionStatus3Rule.forPaymentStatusReportV02}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus3Rule#for_pacs_PaymentStatusReportV02
+ * ConstraintGroupAndTransactionStatus3Rule.for_pacs_PaymentStatusReportV02}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus4Rule#forPaymentStatusReportV02
- * ConstraintGroupAndTransactionStatus4Rule.forPaymentStatusReportV02}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus4Rule#for_pacs_PaymentStatusReportV02
+ * ConstraintGroupAndTransactionStatus4Rule.for_pacs_PaymentStatusReportV02}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintInstructedAgentRule#forPaymentStatusReportV02
- * ConstraintInstructedAgentRule.forPaymentStatusReportV02}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInstructedAgentRule#for_pacs_PaymentStatusReportV02
+ * ConstraintInstructedAgentRule.for_pacs_PaymentStatusReportV02}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintInstructingAgentRule#forPaymentStatusReportV02
- * ConstraintInstructingAgentRule.forPaymentStatusReportV02}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInstructingAgentRule#for_pacs_PaymentStatusReportV02
+ * ConstraintInstructingAgentRule.for_pacs_PaymentStatusReportV02}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintForwardingAgentRule#forPaymentStatusReportV02
- * ConstraintForwardingAgentRule.forPaymentStatusReportV02}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintForwardingAgentRule#for_pacs_PaymentStatusReportV02
+ * ConstraintForwardingAgentRule.for_pacs_PaymentStatusReportV02}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintInitiatingPartyRule#forPaymentStatusReportV02
- * ConstraintInitiatingPartyRule.forPaymentStatusReportV02}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInitiatingPartyRule#for_pacs_PaymentStatusReportV02
+ * ConstraintInitiatingPartyRule.for_pacs_PaymentStatusReportV02}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCreditorAgentRule#forPaymentStatusReportV02
- * ConstraintCreditorAgentRule.forPaymentStatusReportV02}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCreditorAgentRule#for_pacs_PaymentStatusReportV02
+ * ConstraintCreditorAgentRule.for_pacs_PaymentStatusReportV02}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintDebtorAgentRule#forPaymentStatusReportV02
- * ConstraintDebtorAgentRule.forPaymentStatusReportV02}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDebtorAgentRule#for_pacs_PaymentStatusReportV02
+ * ConstraintDebtorAgentRule.for_pacs_PaymentStatusReportV02}</li>
  * </ul>
  * </li>
  * <li>
@@ -297,12 +297,13 @@ public class PaymentStatusReportV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus1Rule.forPaymentStatusReportV02,
-						com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus2Rule.forPaymentStatusReportV02, com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus3Rule.forPaymentStatusReportV02,
-						com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus4Rule.forPaymentStatusReportV02, com.tools20022.repository.constraints.ConstraintInstructedAgentRule.forPaymentStatusReportV02,
-						com.tools20022.repository.constraints.ConstraintInstructingAgentRule.forPaymentStatusReportV02, com.tools20022.repository.constraints.ConstraintForwardingAgentRule.forPaymentStatusReportV02,
-						com.tools20022.repository.constraints.ConstraintInitiatingPartyRule.forPaymentStatusReportV02, com.tools20022.repository.constraints.ConstraintCreditorAgentRule.forPaymentStatusReportV02,
-						com.tools20022.repository.constraints.ConstraintDebtorAgentRule.forPaymentStatusReportV02);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus1Rule.for_pacs_PaymentStatusReportV02,
+						com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus2Rule.for_pacs_PaymentStatusReportV02,
+						com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus3Rule.for_pacs_PaymentStatusReportV02,
+						com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus4Rule.for_pacs_PaymentStatusReportV02, com.tools20022.repository.constraints.ConstraintInstructedAgentRule.for_pacs_PaymentStatusReportV02,
+						com.tools20022.repository.constraints.ConstraintInstructingAgentRule.for_pacs_PaymentStatusReportV02, com.tools20022.repository.constraints.ConstraintForwardingAgentRule.for_pacs_PaymentStatusReportV02,
+						com.tools20022.repository.constraints.ConstraintInitiatingPartyRule.for_pacs_PaymentStatusReportV02, com.tools20022.repository.constraints.ConstraintCreditorAgentRule.for_pacs_PaymentStatusReportV02,
+						com.tools20022.repository.constraints.ConstraintDebtorAgentRule.for_pacs_PaymentStatusReportV02);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentStatusReportV02";
 				definition = "Scope\r\nThe PaymentStatusReport message is sent by an instructed agent to the previous party in the payment chain. It is used to inform this party about the positive or negative status of an instruction (either single or file). It is also used to report on a pending instruction.\r\nUsage\r\nThe PaymentStatusReport message is exchanged between agents to provide status information about instructions previously sent. Its usage will always be governed by a bilateral agreement between the agents.\r\nThe PaymentStatusReport message can be used to provide information about the status (e.g. rejection, acceptance) of a credit transfer instruction, a direct debit instruction, as well as other intra-agent instructions (e.g. PaymentCancellationRequest).\r\nThe PaymentStatusReport message refers to the original instruction(s) by means of references only or by means of references and a set of elements from the original instruction.\r\nThe PaymentStatusReport message can be used in domestic and cross-border scenarios.\r\nThe PaymentStatusReport message exchanged between agents is identified in the schema as follows: \nurn:iso:std:iso:20022:tech:xsd:pacs.002.001.02\r.";

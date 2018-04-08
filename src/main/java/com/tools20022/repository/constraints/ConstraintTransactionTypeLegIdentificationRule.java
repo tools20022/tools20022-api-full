@@ -26,46 +26,12 @@ import com.tools20022.repository.msg.InvestmentFundTransaction4;
 import java.util.Arrays;
 
 /**
- * If TransactionType is SWII or SWIO, then LegIdentification is mandatory. If
- * TransactionType is not SWII and not SWIO, then LegIdentification is not
+ * If TransactionType is SWII or SWIO, then LegIdentification is optional. If
+ * TransactionType is neither SWII nor SWIO, then LegIdentification is not
  * allowed.
  */
 public class ConstraintTransactionTypeLegIdentificationRule {
 
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.InvestmentFundTransaction2
-	 * InvestmentFundTransaction2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "TransactionTypeLegIdentificationRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If TransactionType is SWII or SWIO, then LegIdentification is mandatory. If TransactionType is not SWII and not SWIO, then LegIdentification is not allowed."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<InvestmentFundTransaction2> forInvestmentFundTransaction2 = new MMConstraint<InvestmentFundTransaction2>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "TransactionTypeLegIdentificationRule";
-			definition = "If TransactionType is SWII or SWIO, then LegIdentification is mandatory. If TransactionType is not SWII and not SWIO, then LegIdentification is not allowed.";
-			owner_lazy = () -> InvestmentFundTransaction2.mmObject();
-		}
-
-		@Override
-		public void executeValidator(InvestmentFundTransaction2 obj) throws Exception {
-			checkInvestmentFundTransaction2(obj);
-		}
-	};
 	/**
 	 * 
 	 <p>
@@ -151,15 +117,40 @@ public class ConstraintTransactionTypeLegIdentificationRule {
 			checkInvestmentFundTransaction4(obj);
 		}
 	};
-
 	/**
-	 * If TransactionType is SWII or SWIO, then LegIdentification is mandatory.
-	 * If TransactionType is not SWII and not SWIO, then LegIdentification is
-	 * not allowed.
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.InvestmentFundTransaction2
+	 * InvestmentFundTransaction2}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TransactionTypeLegIdentificationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If TransactionType is SWII or SWIO, then LegIdentification is mandatory. If TransactionType is not SWII and not SWIO, then LegIdentification is not allowed."
+	 * </li>
+	 * </ul>
 	 */
-	public static void checkInvestmentFundTransaction2(InvestmentFundTransaction2 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
+	public static final MMConstraint<InvestmentFundTransaction2> forInvestmentFundTransaction2 = new MMConstraint<InvestmentFundTransaction2>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "TransactionTypeLegIdentificationRule";
+			definition = "If TransactionType is SWII or SWIO, then LegIdentification is mandatory. If TransactionType is not SWII and not SWIO, then LegIdentification is not allowed.";
+			owner_lazy = () -> InvestmentFundTransaction2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvestmentFundTransaction2 obj) throws Exception {
+			checkInvestmentFundTransaction2(obj);
+		}
+	};
 
 	/**
 	 * If TransactionType is SWII or SWIO, then LegIdentification is optional.
@@ -176,6 +167,15 @@ public class ConstraintTransactionTypeLegIdentificationRule {
 	 * not allowed.
 	 */
 	public static void checkInvestmentFundTransaction4(InvestmentFundTransaction4 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If TransactionType is SWII or SWIO, then LegIdentification is mandatory.
+	 * If TransactionType is not SWII and not SWIO, then LegIdentification is
+	 * not allowed.
+	 */
+	public static void checkInvestmentFundTransaction2(InvestmentFundTransaction2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

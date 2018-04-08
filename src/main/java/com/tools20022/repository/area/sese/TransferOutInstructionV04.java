@@ -106,8 +106,8 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintRequestedSettlementDateRule#forTransferOutInstructionV04
- * ConstraintRequestedSettlementDateRule.forTransferOutInstructionV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintRequestedSettlementDateRule#for_sese_TransferOutInstructionV04
+ * ConstraintRequestedSettlementDateRule.for_sese_TransferOutInstructionV04}</li>
  * </ul>
  * </li>
  * <li>
@@ -759,7 +759,7 @@ public class TransferOutInstructionV04 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRequestedSettlementDateRule.forTransferOutInstructionV04);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRequestedSettlementDateRule.for_sese_TransferOutInstructionV04);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransferOutInstructionV04";
 				definition = "Scope\r\nAn instructing party, for example, an investment manager or its authorised representative, sends the TransferOutInstruction message to the executing party, for example, a transfer agent, to instruct the delivery of a financial instrument, free of payment, on a given date from a specified party.\r\nThis message may also be used to instruct the delivery of a financial instrument, free of payment, to another of the instructing parties own accounts or to a third party.\r\nUsage\r\nThe TransferOutInstruction message is used to instruct the withdrawal of a financial instrument from one account and deliver it to either another account or to a third party.";

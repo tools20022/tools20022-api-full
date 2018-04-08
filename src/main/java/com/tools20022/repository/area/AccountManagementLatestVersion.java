@@ -163,6 +163,7 @@ public class AccountManagementLatestVersion {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Account Management - Latest version - master";
 				definition = "Messages that support the management of account related activities, such as the opening and maintenance of an account.";
+				code = "acmt";
 				messageDefinition_lazy = () -> Arrays.asList(AccountAdditionalInformationRequestV02.mmObject(), AccountClosingAdditionalInformationRequestV02.mmObject(), AccountClosingAmendmentRequestV02.mmObject(),
 						AccountClosingRequestV02.mmObject(), AccountExcludedMandateMaintenanceAmendmentRequestV02.mmObject(), AccountExcludedMandateMaintenanceRequestV02.mmObject(), AccountMandateMaintenanceAmendmentRequestV02.mmObject(),
 						AccountMandateMaintenanceRequestV02.mmObject(), AccountOpeningAdditionalInformationRequestV02.mmObject(), AccountOpeningAmendmentRequestV02.mmObject(), AccountOpeningRequestV02.mmObject(),
@@ -172,7 +173,6 @@ public class AccountManagementLatestVersion {
 						AccountSwitchBalanceTransferAcknowledgementV01.mmObject(), AccountSwitchTechnicalRejectionV01.mmObject(), AccountSwitchPaymentResponseV01.mmObject(), AccountSwitchNotifyAccountSwitchCompleteV01.mmObject(),
 						AccountSwitchRequestBalanceTransferV01.mmObject(), AccountSwitchInformationRequestV01.mmObject(), AccountSwitchRequestRedirectionV01.mmObject(), AccountSwitchTerminationSwitchV01.mmObject(),
 						AccountSwitchCancelExistingPaymentV01.mmObject(), AccountSwitchRequestPaymentV01.mmObject());
-				code = "acmt";
 			}
 		});
 		return mmObject_lazy.get();

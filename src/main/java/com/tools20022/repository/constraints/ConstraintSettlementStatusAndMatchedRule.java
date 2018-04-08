@@ -26,8 +26,8 @@ import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 
 /**
- * If SettlementStatus is present alone, then it means that the transaction is
- * matched (if a matching process exists in the concerned market or at the
+ * If settlement status/reason is used alone, then it means that the transaction
+ * is matched (if a matching process exists in the concerned market or at the
  * concerned account servicer).
  */
 public class ConstraintSettlementStatusAndMatchedRule {
@@ -38,90 +38,8 @@ public class ConstraintSettlementStatusAndMatchedRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV07
-	 * SecuritiesFinancingStatusAdviceV07}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementStatusAndMatchedRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If SettlementStatus is present alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer)."
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#forSecuritiesFinancingStatusAdviceV06
-	 * ConstraintSettlementStatusAndMatchedRule.
-	 * forSecuritiesFinancingStatusAdviceV06}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesFinancingStatusAdviceV07> forSecuritiesFinancingStatusAdviceV07 = new MMConstraint<SecuritiesFinancingStatusAdviceV07>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementStatusAndMatchedRule";
-			definition = "If SettlementStatus is present alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.forSecuritiesFinancingStatusAdviceV06;
-			owner_lazy = () -> SecuritiesFinancingStatusAdviceV07.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SecuritiesFinancingStatusAdviceV07 obj) throws Exception {
-			checkSecuritiesFinancingStatusAdviceV07(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV09
-	 * SecuritiesSettlementTransactionStatusAdviceV09}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementStatusAndMatchedRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If settlement status/reason is present alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer)."
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#forSecuritiesSettlementTransactionStatusAdviceV08
-	 * ConstraintSettlementStatusAndMatchedRule.
-	 * forSecuritiesSettlementTransactionStatusAdviceV08}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV09> forSecuritiesSettlementTransactionStatusAdviceV09 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV09>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementStatusAndMatchedRule";
-			definition = "If settlement status/reason is present alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.forSecuritiesSettlementTransactionStatusAdviceV08;
-			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV09.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SecuritiesSettlementTransactionStatusAdviceV09 obj) throws Exception {
-			checkSecuritiesSettlementTransactionStatusAdviceV09(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdvice002V07
-	 * SecuritiesFinancingStatusAdvice002V07}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV02
+	 * SecuritiesFinancingStatusAdviceV02}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -135,255 +53,17 @@ public class ConstraintSettlementStatusAndMatchedRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<SecuritiesFinancingStatusAdvice002V07> forSecuritiesFinancingStatusAdvice002V07 = new MMConstraint<SecuritiesFinancingStatusAdvice002V07>() {
+	public static final MMConstraint<SecuritiesFinancingStatusAdviceV02> for_sese_SecuritiesFinancingStatusAdviceV02 = new MMConstraint<SecuritiesFinancingStatusAdviceV02>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementStatusAndMatchedRule";
 			definition = "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
-			owner_lazy = () -> SecuritiesFinancingStatusAdvice002V07.mmObject();
+			owner_lazy = () -> SecuritiesFinancingStatusAdviceV02.mmObject();
 		}
 
 		@Override
-		public void executeValidator(SecuritiesFinancingStatusAdvice002V07 obj) throws Exception {
-			checkSecuritiesFinancingStatusAdvice002V07(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V09
-	 * SecuritiesSettlementTransactionStatusAdvice002V09}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementStatusAndMatchedRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer)."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdvice002V09> forSecuritiesSettlementTransactionStatusAdvice002V09 = new MMConstraint<SecuritiesSettlementTransactionStatusAdvice002V09>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementStatusAndMatchedRule";
-			definition = "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
-			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdvice002V09.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SecuritiesSettlementTransactionStatusAdvice002V09 obj) throws Exception {
-			checkSecuritiesSettlementTransactionStatusAdvice002V09(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV06
-	 * SecuritiesFinancingStatusAdviceV06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementStatusAndMatchedRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer)."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#forSecuritiesFinancingStatusAdviceV07
-	 * ConstraintSettlementStatusAndMatchedRule.
-	 * forSecuritiesFinancingStatusAdviceV07}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#forSecuritiesFinancingStatusAdviceV05
-	 * ConstraintSettlementStatusAndMatchedRule.
-	 * forSecuritiesFinancingStatusAdviceV05}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesFinancingStatusAdviceV06> forSecuritiesFinancingStatusAdviceV06 = new MMConstraint<SecuritiesFinancingStatusAdviceV06>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementStatusAndMatchedRule";
-			definition = "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.forSecuritiesFinancingStatusAdviceV07);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.forSecuritiesFinancingStatusAdviceV05;
-			owner_lazy = () -> SecuritiesFinancingStatusAdviceV06.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SecuritiesFinancingStatusAdviceV06 obj) throws Exception {
-			checkSecuritiesFinancingStatusAdviceV06(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV08
-	 * SecuritiesSettlementTransactionStatusAdviceV08}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementStatusAndMatchedRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If settlement status/reason is present alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer)."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#forSecuritiesSettlementTransactionStatusAdviceV09
-	 * ConstraintSettlementStatusAndMatchedRule.
-	 * forSecuritiesSettlementTransactionStatusAdviceV09}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#forSecuritiesSettlementTransactionStatusAdviceV07
-	 * ConstraintSettlementStatusAndMatchedRule.
-	 * forSecuritiesSettlementTransactionStatusAdviceV07}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV08> forSecuritiesSettlementTransactionStatusAdviceV08 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV08>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementStatusAndMatchedRule";
-			definition = "If settlement status/reason is present alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.forSecuritiesSettlementTransactionStatusAdviceV09);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.forSecuritiesSettlementTransactionStatusAdviceV07;
-			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV08.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SecuritiesSettlementTransactionStatusAdviceV08 obj) throws Exception {
-			checkSecuritiesSettlementTransactionStatusAdviceV08(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdvice002V06
-	 * SecuritiesFinancingStatusAdvice002V06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementStatusAndMatchedRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer)."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesFinancingStatusAdvice002V06> forSecuritiesFinancingStatusAdvice002V06 = new MMConstraint<SecuritiesFinancingStatusAdvice002V06>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementStatusAndMatchedRule";
-			definition = "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
-			owner_lazy = () -> SecuritiesFinancingStatusAdvice002V06.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SecuritiesFinancingStatusAdvice002V06 obj) throws Exception {
-			checkSecuritiesFinancingStatusAdvice002V06(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V08
-	 * SecuritiesSettlementTransactionStatusAdvice002V08}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementStatusAndMatchedRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer)."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdvice002V08> forSecuritiesSettlementTransactionStatusAdvice002V08 = new MMConstraint<SecuritiesSettlementTransactionStatusAdvice002V08>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementStatusAndMatchedRule";
-			definition = "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
-			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdvice002V08.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SecuritiesSettlementTransactionStatusAdvice002V08 obj) throws Exception {
-			checkSecuritiesSettlementTransactionStatusAdvice002V08(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV01
-	 * SecuritiesSettlementTransactionStatusAdviceV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementStatusAndMatchedRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer)."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV01> forSecuritiesSettlementTransactionStatusAdviceV01 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV01>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementStatusAndMatchedRule";
-			definition = "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
-			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV01.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SecuritiesSettlementTransactionStatusAdviceV01 obj) throws Exception {
-			checkSecuritiesSettlementTransactionStatusAdviceV01(obj);
+		public void executeValidator(SecuritiesFinancingStatusAdviceV02 obj) throws Exception {
+			check_sese_SecuritiesFinancingStatusAdviceV02(obj);
 		}
 	};
 	/**
@@ -407,7 +87,7 @@ public class ConstraintSettlementStatusAndMatchedRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV02> forSecuritiesSettlementTransactionStatusAdviceV02 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV02>() {
+	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV02> for_sese_SecuritiesSettlementTransactionStatusAdviceV02 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV02>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementStatusAndMatchedRule";
@@ -417,153 +97,7 @@ public class ConstraintSettlementStatusAndMatchedRule {
 
 		@Override
 		public void executeValidator(SecuritiesSettlementTransactionStatusAdviceV02 obj) throws Exception {
-			checkSecuritiesSettlementTransactionStatusAdviceV02(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV03
-	 * SecuritiesSettlementTransactionStatusAdviceV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementStatusAndMatchedRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer)."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV03> forSecuritiesSettlementTransactionStatusAdviceV03 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV03>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementStatusAndMatchedRule";
-			definition = "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
-			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV03.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SecuritiesSettlementTransactionStatusAdviceV03 obj) throws Exception {
-			checkSecuritiesSettlementTransactionStatusAdviceV03(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV04
-	 * SecuritiesSettlementTransactionStatusAdviceV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementStatusAndMatchedRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer)."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#forSecuritiesSettlementTransactionStatusAdviceV05
-	 * ConstraintSettlementStatusAndMatchedRule.
-	 * forSecuritiesSettlementTransactionStatusAdviceV05}</li>
-	 * </ul>
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV04> forSecuritiesSettlementTransactionStatusAdviceV04 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV04>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementStatusAndMatchedRule";
-			definition = "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.forSecuritiesSettlementTransactionStatusAdviceV05);
-			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV04.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SecuritiesSettlementTransactionStatusAdviceV04 obj) throws Exception {
-			checkSecuritiesSettlementTransactionStatusAdviceV04(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV01
-	 * SecuritiesFinancingStatusAdviceV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementStatusAndMatchedRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer)."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesFinancingStatusAdviceV01> forSecuritiesFinancingStatusAdviceV01 = new MMConstraint<SecuritiesFinancingStatusAdviceV01>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementStatusAndMatchedRule";
-			definition = "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
-			owner_lazy = () -> SecuritiesFinancingStatusAdviceV01.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SecuritiesFinancingStatusAdviceV01 obj) throws Exception {
-			checkSecuritiesFinancingStatusAdviceV01(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV02
-	 * SecuritiesFinancingStatusAdviceV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementStatusAndMatchedRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer)."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesFinancingStatusAdviceV02> forSecuritiesFinancingStatusAdviceV02 = new MMConstraint<SecuritiesFinancingStatusAdviceV02>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementStatusAndMatchedRule";
-			definition = "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
-			owner_lazy = () -> SecuritiesFinancingStatusAdviceV02.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SecuritiesFinancingStatusAdviceV02 obj) throws Exception {
-			checkSecuritiesFinancingStatusAdviceV02(obj);
+			check_sese_SecuritiesSettlementTransactionStatusAdviceV02(obj);
 		}
 	};
 	/**
@@ -589,127 +123,25 @@ public class ConstraintSettlementStatusAndMatchedRule {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#forSecuritiesFinancingStatusAdviceV04
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#for_sese_SecuritiesFinancingStatusAdviceV04
 	 * ConstraintSettlementStatusAndMatchedRule.
-	 * forSecuritiesFinancingStatusAdviceV04}</li>
+	 * for_sese_SecuritiesFinancingStatusAdviceV04}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<SecuritiesFinancingStatusAdviceV03> forSecuritiesFinancingStatusAdviceV03 = new MMConstraint<SecuritiesFinancingStatusAdviceV03>() {
+	public static final MMConstraint<SecuritiesFinancingStatusAdviceV03> for_sese_SecuritiesFinancingStatusAdviceV03 = new MMConstraint<SecuritiesFinancingStatusAdviceV03>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementStatusAndMatchedRule";
 			definition = "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.forSecuritiesFinancingStatusAdviceV04);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.for_sese_SecuritiesFinancingStatusAdviceV04);
 			owner_lazy = () -> SecuritiesFinancingStatusAdviceV03.mmObject();
 		}
 
 		@Override
 		public void executeValidator(SecuritiesFinancingStatusAdviceV03 obj) throws Exception {
-			checkSecuritiesFinancingStatusAdviceV03(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV04
-	 * SecuritiesFinancingStatusAdviceV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementStatusAndMatchedRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer)."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#forSecuritiesFinancingStatusAdviceV05
-	 * ConstraintSettlementStatusAndMatchedRule.
-	 * forSecuritiesFinancingStatusAdviceV05}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#forSecuritiesFinancingStatusAdviceV03
-	 * ConstraintSettlementStatusAndMatchedRule.
-	 * forSecuritiesFinancingStatusAdviceV03}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesFinancingStatusAdviceV04> forSecuritiesFinancingStatusAdviceV04 = new MMConstraint<SecuritiesFinancingStatusAdviceV04>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementStatusAndMatchedRule";
-			definition = "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.forSecuritiesFinancingStatusAdviceV05);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.forSecuritiesFinancingStatusAdviceV03;
-			owner_lazy = () -> SecuritiesFinancingStatusAdviceV04.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SecuritiesFinancingStatusAdviceV04 obj) throws Exception {
-			checkSecuritiesFinancingStatusAdviceV04(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV05
-	 * SecuritiesSettlementTransactionStatusAdviceV05}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementStatusAndMatchedRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer)."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#forSecuritiesSettlementTransactionStatusAdviceV06
-	 * ConstraintSettlementStatusAndMatchedRule.
-	 * forSecuritiesSettlementTransactionStatusAdviceV06}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#forSecuritiesSettlementTransactionStatusAdviceV04
-	 * ConstraintSettlementStatusAndMatchedRule.
-	 * forSecuritiesSettlementTransactionStatusAdviceV04}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV05> forSecuritiesSettlementTransactionStatusAdviceV05 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV05>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementStatusAndMatchedRule";
-			definition = "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.forSecuritiesSettlementTransactionStatusAdviceV06);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.forSecuritiesSettlementTransactionStatusAdviceV04;
-			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV05.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SecuritiesSettlementTransactionStatusAdviceV05 obj) throws Exception {
-			checkSecuritiesSettlementTransactionStatusAdviceV05(obj);
+			check_sese_SecuritiesFinancingStatusAdviceV03(obj);
 		}
 	};
 	/**
@@ -735,32 +167,32 @@ public class ConstraintSettlementStatusAndMatchedRule {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#forSecuritiesFinancingStatusAdviceV06
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#for_sese_SecuritiesFinancingStatusAdviceV06
 	 * ConstraintSettlementStatusAndMatchedRule.
-	 * forSecuritiesFinancingStatusAdviceV06}</li>
+	 * for_sese_SecuritiesFinancingStatusAdviceV06}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#forSecuritiesFinancingStatusAdviceV04
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#for_sese_SecuritiesFinancingStatusAdviceV04
 	 * ConstraintSettlementStatusAndMatchedRule.
-	 * forSecuritiesFinancingStatusAdviceV04}</li>
+	 * for_sese_SecuritiesFinancingStatusAdviceV04}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<SecuritiesFinancingStatusAdviceV05> forSecuritiesFinancingStatusAdviceV05 = new MMConstraint<SecuritiesFinancingStatusAdviceV05>() {
+	public static final MMConstraint<SecuritiesFinancingStatusAdviceV05> for_sese_SecuritiesFinancingStatusAdviceV05 = new MMConstraint<SecuritiesFinancingStatusAdviceV05>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementStatusAndMatchedRule";
 			definition = "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.forSecuritiesFinancingStatusAdviceV06);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.forSecuritiesFinancingStatusAdviceV04;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.for_sese_SecuritiesFinancingStatusAdviceV06);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.for_sese_SecuritiesFinancingStatusAdviceV04;
 			owner_lazy = () -> SecuritiesFinancingStatusAdviceV05.mmObject();
 		}
 
 		@Override
 		public void executeValidator(SecuritiesFinancingStatusAdviceV05 obj) throws Exception {
-			checkSecuritiesFinancingStatusAdviceV05(obj);
+			check_sese_SecuritiesFinancingStatusAdviceV05(obj);
 		}
 	};
 	/**
@@ -769,8 +201,8 @@ public class ConstraintSettlementStatusAndMatchedRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV06
-	 * SecuritiesSettlementTransactionStatusAdviceV06}</li>
+	 * {@linkplain com.tools20022.repository.msg.StatusAndReason6
+	 * StatusAndReason6}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -782,36 +214,94 @@ public class ConstraintSettlementStatusAndMatchedRule {
 	 * definition} =
 	 * "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer)."
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#forSecuritiesSettlementTransactionStatusAdviceV07
-	 * ConstraintSettlementStatusAndMatchedRule.
-	 * forSecuritiesSettlementTransactionStatusAdviceV07}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#forSecuritiesSettlementTransactionStatusAdviceV05
-	 * ConstraintSettlementStatusAndMatchedRule.
-	 * forSecuritiesSettlementTransactionStatusAdviceV05}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV06> forSecuritiesSettlementTransactionStatusAdviceV06 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV06>() {
+	public static final MMConstraint<StatusAndReason6> forStatusAndReason6 = new MMConstraint<StatusAndReason6>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementStatusAndMatchedRule";
 			definition = "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.forSecuritiesSettlementTransactionStatusAdviceV07);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.forSecuritiesSettlementTransactionStatusAdviceV05;
-			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV06.mmObject();
+			owner_lazy = () -> StatusAndReason6.mmObject();
 		}
 
 		@Override
-		public void executeValidator(SecuritiesSettlementTransactionStatusAdviceV06 obj) throws Exception {
-			checkSecuritiesSettlementTransactionStatusAdviceV06(obj);
+		public void executeValidator(StatusAndReason6 obj) throws Exception {
+			checkStatusAndReason6(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV07
+	 * SecuritiesFinancingStatusAdviceV07}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementStatusAndMatchedRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SettlementStatus is present alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer)."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#for_sese_SecuritiesFinancingStatusAdviceV06
+	 * ConstraintSettlementStatusAndMatchedRule.
+	 * for_sese_SecuritiesFinancingStatusAdviceV06}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesFinancingStatusAdviceV07> for_sese_SecuritiesFinancingStatusAdviceV07 = new MMConstraint<SecuritiesFinancingStatusAdviceV07>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementStatusAndMatchedRule";
+			definition = "If SettlementStatus is present alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.for_sese_SecuritiesFinancingStatusAdviceV06;
+			owner_lazy = () -> SecuritiesFinancingStatusAdviceV07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingStatusAdviceV07 obj) throws Exception {
+			check_sese_SecuritiesFinancingStatusAdviceV07(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.choice.Status2Choice Status2Choice}
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementStatusAndMatchedRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<Status2Choice> forStatus2Choice = new MMConstraint<Status2Choice>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementStatusAndMatchedRule";
+			definition = "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
+			owner_lazy = () -> Status2Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Status2Choice obj) throws Exception {
+			checkStatus2Choice(obj);
 		}
 	};
 	/**
@@ -837,32 +327,32 @@ public class ConstraintSettlementStatusAndMatchedRule {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#forSecuritiesSettlementTransactionStatusAdviceV08
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#for_sese_SecuritiesSettlementTransactionStatusAdviceV08
 	 * ConstraintSettlementStatusAndMatchedRule.
-	 * forSecuritiesSettlementTransactionStatusAdviceV08}</li>
+	 * for_sese_SecuritiesSettlementTransactionStatusAdviceV08}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#forSecuritiesSettlementTransactionStatusAdviceV06
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#for_sese_SecuritiesSettlementTransactionStatusAdviceV06
 	 * ConstraintSettlementStatusAndMatchedRule.
-	 * forSecuritiesSettlementTransactionStatusAdviceV06}</li>
+	 * for_sese_SecuritiesSettlementTransactionStatusAdviceV06}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV07> forSecuritiesSettlementTransactionStatusAdviceV07 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV07>() {
+	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV07> for_sese_SecuritiesSettlementTransactionStatusAdviceV07 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV07>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementStatusAndMatchedRule";
 			definition = "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.forSecuritiesSettlementTransactionStatusAdviceV08);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.forSecuritiesSettlementTransactionStatusAdviceV06;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.for_sese_SecuritiesSettlementTransactionStatusAdviceV08);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.for_sese_SecuritiesSettlementTransactionStatusAdviceV06;
 			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV07.mmObject();
 		}
 
 		@Override
 		public void executeValidator(SecuritiesSettlementTransactionStatusAdviceV07 obj) throws Exception {
-			checkSecuritiesSettlementTransactionStatusAdviceV07(obj);
+			check_sese_SecuritiesSettlementTransactionStatusAdviceV07(obj);
 		}
 	};
 	/**
@@ -871,8 +361,8 @@ public class ConstraintSettlementStatusAndMatchedRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V07
-	 * SecuritiesSettlementTransactionStatusAdvice002V07}</li>
+	 * {@linkplain com.tools20022.repository.choice.Status16Choice
+	 * Status16Choice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -886,17 +376,51 @@ public class ConstraintSettlementStatusAndMatchedRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdvice002V07> forSecuritiesSettlementTransactionStatusAdvice002V07 = new MMConstraint<SecuritiesSettlementTransactionStatusAdvice002V07>() {
+	public static final MMConstraint<Status16Choice> forStatus16Choice = new MMConstraint<Status16Choice>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementStatusAndMatchedRule";
 			definition = "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
-			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdvice002V07.mmObject();
+			owner_lazy = () -> Status16Choice.mmObject();
 		}
 
 		@Override
-		public void executeValidator(SecuritiesSettlementTransactionStatusAdvice002V07 obj) throws Exception {
-			checkSecuritiesSettlementTransactionStatusAdvice002V07(obj);
+		public void executeValidator(Status16Choice obj) throws Exception {
+			checkStatus16Choice(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.choice.Status11Choice
+	 * Status11Choice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementStatusAndMatchedRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<Status11Choice> forStatus11Choice = new MMConstraint<Status11Choice>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementStatusAndMatchedRule";
+			definition = "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
+			owner_lazy = () -> Status11Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Status11Choice obj) throws Exception {
+			checkStatus11Choice(obj);
 		}
 	};
 	/**
@@ -939,8 +463,48 @@ public class ConstraintSettlementStatusAndMatchedRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.StatusAndReason6
-	 * StatusAndReason6}</li>
+	 * {@linkplain com.tools20022.repository.msg.StatusAndReason28
+	 * StatusAndReason28}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementStatusAndMatchedRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer)."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#forStatusAndReason19
+	 * ConstraintSettlementStatusAndMatchedRule.forStatusAndReason19}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<StatusAndReason28> forStatusAndReason28 = new MMConstraint<StatusAndReason28>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementStatusAndMatchedRule";
+			definition = "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.forStatusAndReason19;
+			owner_lazy = () -> StatusAndReason28.mmObject();
+		}
+
+		@Override
+		public void executeValidator(StatusAndReason28 obj) throws Exception {
+			checkStatusAndReason28(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V09
+	 * SecuritiesSettlementTransactionStatusAdvice002V09}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -954,17 +518,193 @@ public class ConstraintSettlementStatusAndMatchedRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<StatusAndReason6> forStatusAndReason6 = new MMConstraint<StatusAndReason6>() {
+	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdvice002V09> for_sese_SecuritiesSettlementTransactionStatusAdvice002V09 = new MMConstraint<SecuritiesSettlementTransactionStatusAdvice002V09>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementStatusAndMatchedRule";
 			definition = "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
-			owner_lazy = () -> StatusAndReason6.mmObject();
+			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdvice002V09.mmObject();
 		}
 
 		@Override
-		public void executeValidator(StatusAndReason6 obj) throws Exception {
-			checkStatusAndReason6(obj);
+		public void executeValidator(SecuritiesSettlementTransactionStatusAdvice002V09 obj) throws Exception {
+			check_sese_SecuritiesSettlementTransactionStatusAdvice002V09(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.StatusAndReason29
+	 * StatusAndReason29}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementStatusAndMatchedRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<StatusAndReason29> forStatusAndReason29 = new MMConstraint<StatusAndReason29>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementStatusAndMatchedRule";
+			definition = "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
+			owner_lazy = () -> StatusAndReason29.mmObject();
+		}
+
+		@Override
+		public void executeValidator(StatusAndReason29 obj) throws Exception {
+			checkStatusAndReason29(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V07
+	 * SecuritiesSettlementTransactionStatusAdvice002V07}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementStatusAndMatchedRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdvice002V07> for_sese_SecuritiesSettlementTransactionStatusAdvice002V07 = new MMConstraint<SecuritiesSettlementTransactionStatusAdvice002V07>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementStatusAndMatchedRule";
+			definition = "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
+			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdvice002V07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionStatusAdvice002V07 obj) throws Exception {
+			check_sese_SecuritiesSettlementTransactionStatusAdvice002V07(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.choice.Status18Choice
+	 * Status18Choice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementStatusAndMatchedRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer)."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#forStatus15Choice
+	 * ConstraintSettlementStatusAndMatchedRule.forStatus15Choice}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<Status18Choice> forStatus18Choice = new MMConstraint<Status18Choice>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementStatusAndMatchedRule";
+			definition = "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.forStatus15Choice;
+			owner_lazy = () -> Status18Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Status18Choice obj) throws Exception {
+			checkStatus18Choice(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdvice002V06
+	 * SecuritiesFinancingStatusAdvice002V06}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementStatusAndMatchedRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesFinancingStatusAdvice002V06> for_sese_SecuritiesFinancingStatusAdvice002V06 = new MMConstraint<SecuritiesFinancingStatusAdvice002V06>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementStatusAndMatchedRule";
+			definition = "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
+			owner_lazy = () -> SecuritiesFinancingStatusAdvice002V06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingStatusAdvice002V06 obj) throws Exception {
+			check_sese_SecuritiesFinancingStatusAdvice002V06(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.StatusAndReason14
+	 * StatusAndReason14}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementStatusAndMatchedRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<StatusAndReason14> forStatusAndReason14 = new MMConstraint<StatusAndReason14>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementStatusAndMatchedRule";
+			definition = "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
+			owner_lazy = () -> StatusAndReason14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(StatusAndReason14 obj) throws Exception {
+			checkStatusAndReason14(obj);
 		}
 	};
 	/**
@@ -1016,8 +756,8 @@ public class ConstraintSettlementStatusAndMatchedRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.StatusAndReason14
-	 * StatusAndReason14}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV04
+	 * SecuritiesSettlementTransactionStatusAdviceV04}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1029,87 +769,29 @@ public class ConstraintSettlementStatusAndMatchedRule {
 	 * definition} =
 	 * "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer)."
 	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<StatusAndReason14> forStatusAndReason14 = new MMConstraint<StatusAndReason14>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementStatusAndMatchedRule";
-			definition = "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
-			owner_lazy = () -> StatusAndReason14.mmObject();
-		}
-
-		@Override
-		public void executeValidator(StatusAndReason14 obj) throws Exception {
-			checkStatusAndReason14(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.choice.Status2Choice Status2Choice}
-	 * </li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementStatusAndMatchedRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer)."
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#for_sese_SecuritiesSettlementTransactionStatusAdviceV05
+	 * ConstraintSettlementStatusAndMatchedRule.
+	 * for_sese_SecuritiesSettlementTransactionStatusAdviceV05}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<Status2Choice> forStatus2Choice = new MMConstraint<Status2Choice>() {
+	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV04> for_sese_SecuritiesSettlementTransactionStatusAdviceV04 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV04>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementStatusAndMatchedRule";
 			definition = "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
-			owner_lazy = () -> Status2Choice.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.for_sese_SecuritiesSettlementTransactionStatusAdviceV05);
+			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV04.mmObject();
 		}
 
 		@Override
-		public void executeValidator(Status2Choice obj) throws Exception {
-			checkStatus2Choice(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.choice.Status4Choice Status4Choice}
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementStatusAndMatchedRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer)."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<Status4Choice> forStatus4Choice = new MMConstraint<Status4Choice>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementStatusAndMatchedRule";
-			definition = "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
-			owner_lazy = () -> Status4Choice.mmObject();
-		}
-
-		@Override
-		public void executeValidator(Status4Choice obj) throws Exception {
-			checkStatus4Choice(obj);
+		public void executeValidator(SecuritiesSettlementTransactionStatusAdviceV04 obj) throws Exception {
+			check_sese_SecuritiesSettlementTransactionStatusAdviceV04(obj);
 		}
 	};
 	/**
@@ -1161,42 +843,8 @@ public class ConstraintSettlementStatusAndMatchedRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.choice.Status11Choice
-	 * Status11Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementStatusAndMatchedRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer)."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<Status11Choice> forStatus11Choice = new MMConstraint<Status11Choice>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementStatusAndMatchedRule";
-			definition = "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
-			owner_lazy = () -> Status11Choice.mmObject();
-		}
-
-		@Override
-		public void executeValidator(Status11Choice obj) throws Exception {
-			checkStatus11Choice(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.StatusAndReason15
-	 * StatusAndReason15}</li>
+	 * {@linkplain com.tools20022.repository.msg.StatusAndReason31
+	 * StatusAndReason31}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1208,28 +856,25 @@ public class ConstraintSettlementStatusAndMatchedRule {
 	 * definition} =
 	 * "If SettlementStatus/Reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer)."
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#forStatusAndReason31
-	 * ConstraintSettlementStatusAndMatchedRule.forStatusAndReason31}</li>
-	 * </ul>
-	 * </li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#forStatusAndReason15
+	 * ConstraintSettlementStatusAndMatchedRule.forStatusAndReason15}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<StatusAndReason15> forStatusAndReason15 = new MMConstraint<StatusAndReason15>() {
+	public static final MMConstraint<StatusAndReason31> forStatusAndReason31 = new MMConstraint<StatusAndReason31>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementStatusAndMatchedRule";
 			definition = "If SettlementStatus/Reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.forStatusAndReason31);
-			owner_lazy = () -> StatusAndReason15.mmObject();
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.forStatusAndReason15;
+			owner_lazy = () -> StatusAndReason31.mmObject();
 		}
 
 		@Override
-		public void executeValidator(StatusAndReason15 obj) throws Exception {
-			checkStatusAndReason15(obj);
+		public void executeValidator(StatusAndReason31 obj) throws Exception {
+			checkStatusAndReason31(obj);
 		}
 	};
 	/**
@@ -1238,8 +883,42 @@ public class ConstraintSettlementStatusAndMatchedRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.choice.Status15Choice
-	 * Status15Choice}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV03
+	 * SecuritiesSettlementTransactionStatusAdviceV03}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementStatusAndMatchedRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV03> for_sese_SecuritiesSettlementTransactionStatusAdviceV03 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV03>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementStatusAndMatchedRule";
+			definition = "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
+			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionStatusAdviceV03 obj) throws Exception {
+			check_sese_SecuritiesSettlementTransactionStatusAdviceV03(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV04
+	 * SecuritiesFinancingStatusAdviceV04}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1255,30 +934,304 @@ public class ConstraintSettlementStatusAndMatchedRule {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#forStatus18Choice
-	 * ConstraintSettlementStatusAndMatchedRule.forStatus18Choice}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#for_sese_SecuritiesFinancingStatusAdviceV05
+	 * ConstraintSettlementStatusAndMatchedRule.
+	 * for_sese_SecuritiesFinancingStatusAdviceV05}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#forStatus9Choice
-	 * ConstraintSettlementStatusAndMatchedRule.forStatus9Choice}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#for_sese_SecuritiesFinancingStatusAdviceV03
+	 * ConstraintSettlementStatusAndMatchedRule.
+	 * for_sese_SecuritiesFinancingStatusAdviceV03}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<Status15Choice> forStatus15Choice = new MMConstraint<Status15Choice>() {
+	public static final MMConstraint<SecuritiesFinancingStatusAdviceV04> for_sese_SecuritiesFinancingStatusAdviceV04 = new MMConstraint<SecuritiesFinancingStatusAdviceV04>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementStatusAndMatchedRule";
 			definition = "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.forStatus18Choice);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.forStatus9Choice;
-			owner_lazy = () -> Status15Choice.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.for_sese_SecuritiesFinancingStatusAdviceV05);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.for_sese_SecuritiesFinancingStatusAdviceV03;
+			owner_lazy = () -> SecuritiesFinancingStatusAdviceV04.mmObject();
 		}
 
 		@Override
-		public void executeValidator(Status15Choice obj) throws Exception {
-			checkStatus15Choice(obj);
+		public void executeValidator(SecuritiesFinancingStatusAdviceV04 obj) throws Exception {
+			check_sese_SecuritiesFinancingStatusAdviceV04(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.choice.Status23Choice
+	 * Status23Choice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementStatusAndMatchedRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<Status23Choice> forStatus23Choice = new MMConstraint<Status23Choice>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementStatusAndMatchedRule";
+			definition = "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
+			owner_lazy = () -> Status23Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Status23Choice obj) throws Exception {
+			checkStatus23Choice(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V08
+	 * SecuritiesSettlementTransactionStatusAdvice002V08}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementStatusAndMatchedRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdvice002V08> for_sese_SecuritiesSettlementTransactionStatusAdvice002V08 = new MMConstraint<SecuritiesSettlementTransactionStatusAdvice002V08>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementStatusAndMatchedRule";
+			definition = "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
+			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdvice002V08.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionStatusAdvice002V08 obj) throws Exception {
+			check_sese_SecuritiesSettlementTransactionStatusAdvice002V08(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV05
+	 * SecuritiesSettlementTransactionStatusAdviceV05}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementStatusAndMatchedRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer)."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#for_sese_SecuritiesSettlementTransactionStatusAdviceV06
+	 * ConstraintSettlementStatusAndMatchedRule.
+	 * for_sese_SecuritiesSettlementTransactionStatusAdviceV06}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#for_sese_SecuritiesSettlementTransactionStatusAdviceV04
+	 * ConstraintSettlementStatusAndMatchedRule.
+	 * for_sese_SecuritiesSettlementTransactionStatusAdviceV04}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV05> for_sese_SecuritiesSettlementTransactionStatusAdviceV05 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV05>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementStatusAndMatchedRule";
+			definition = "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.for_sese_SecuritiesSettlementTransactionStatusAdviceV06);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.for_sese_SecuritiesSettlementTransactionStatusAdviceV04;
+			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionStatusAdviceV05 obj) throws Exception {
+			check_sese_SecuritiesSettlementTransactionStatusAdviceV05(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.StatusAndReason20
+	 * StatusAndReason20}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementStatusAndMatchedRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<StatusAndReason20> forStatusAndReason20 = new MMConstraint<StatusAndReason20>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementStatusAndMatchedRule";
+			definition = "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
+			owner_lazy = () -> StatusAndReason20.mmObject();
+		}
+
+		@Override
+		public void executeValidator(StatusAndReason20 obj) throws Exception {
+			checkStatusAndReason20(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV06
+	 * SecuritiesSettlementTransactionStatusAdviceV06}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementStatusAndMatchedRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer)."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#for_sese_SecuritiesSettlementTransactionStatusAdviceV07
+	 * ConstraintSettlementStatusAndMatchedRule.
+	 * for_sese_SecuritiesSettlementTransactionStatusAdviceV07}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#for_sese_SecuritiesSettlementTransactionStatusAdviceV05
+	 * ConstraintSettlementStatusAndMatchedRule.
+	 * for_sese_SecuritiesSettlementTransactionStatusAdviceV05}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV06> for_sese_SecuritiesSettlementTransactionStatusAdviceV06 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV06>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementStatusAndMatchedRule";
+			definition = "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.for_sese_SecuritiesSettlementTransactionStatusAdviceV07);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.for_sese_SecuritiesSettlementTransactionStatusAdviceV05;
+			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionStatusAdviceV06 obj) throws Exception {
+			check_sese_SecuritiesSettlementTransactionStatusAdviceV06(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV01
+	 * SecuritiesFinancingStatusAdviceV01}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementStatusAndMatchedRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesFinancingStatusAdviceV01> for_sese_SecuritiesFinancingStatusAdviceV01 = new MMConstraint<SecuritiesFinancingStatusAdviceV01>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementStatusAndMatchedRule";
+			definition = "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
+			owner_lazy = () -> SecuritiesFinancingStatusAdviceV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingStatusAdviceV01 obj) throws Exception {
+			check_sese_SecuritiesFinancingStatusAdviceV01(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdvice002V07
+	 * SecuritiesFinancingStatusAdvice002V07}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementStatusAndMatchedRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesFinancingStatusAdvice002V07> for_sese_SecuritiesFinancingStatusAdvice002V07 = new MMConstraint<SecuritiesFinancingStatusAdvice002V07>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementStatusAndMatchedRule";
+			definition = "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
+			owner_lazy = () -> SecuritiesFinancingStatusAdvice002V07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingStatusAdvice002V07 obj) throws Exception {
+			check_sese_SecuritiesFinancingStatusAdvice002V07(obj);
 		}
 	};
 	/**
@@ -1336,8 +1289,8 @@ public class ConstraintSettlementStatusAndMatchedRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.StatusAndReason20
-	 * StatusAndReason20}</li>
+	 * {@linkplain com.tools20022.repository.choice.Status4Choice Status4Choice}
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1351,17 +1304,17 @@ public class ConstraintSettlementStatusAndMatchedRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<StatusAndReason20> forStatusAndReason20 = new MMConstraint<StatusAndReason20>() {
+	public static final MMConstraint<Status4Choice> forStatus4Choice = new MMConstraint<Status4Choice>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementStatusAndMatchedRule";
 			definition = "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
-			owner_lazy = () -> StatusAndReason20.mmObject();
+			owner_lazy = () -> Status4Choice.mmObject();
 		}
 
 		@Override
-		public void executeValidator(StatusAndReason20 obj) throws Exception {
-			checkStatusAndReason20(obj);
+		public void executeValidator(Status4Choice obj) throws Exception {
+			checkStatus4Choice(obj);
 		}
 	};
 	/**
@@ -1370,190 +1323,8 @@ public class ConstraintSettlementStatusAndMatchedRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.choice.Status16Choice
-	 * Status16Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementStatusAndMatchedRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer)."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<Status16Choice> forStatus16Choice = new MMConstraint<Status16Choice>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementStatusAndMatchedRule";
-			definition = "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
-			owner_lazy = () -> Status16Choice.mmObject();
-		}
-
-		@Override
-		public void executeValidator(Status16Choice obj) throws Exception {
-			checkStatus16Choice(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.StatusAndReason28
-	 * StatusAndReason28}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementStatusAndMatchedRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer)."
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#forStatusAndReason19
-	 * ConstraintSettlementStatusAndMatchedRule.forStatusAndReason19}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<StatusAndReason28> forStatusAndReason28 = new MMConstraint<StatusAndReason28>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementStatusAndMatchedRule";
-			definition = "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.forStatusAndReason19;
-			owner_lazy = () -> StatusAndReason28.mmObject();
-		}
-
-		@Override
-		public void executeValidator(StatusAndReason28 obj) throws Exception {
-			checkStatusAndReason28(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.choice.Status18Choice
-	 * Status18Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementStatusAndMatchedRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer)."
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#forStatus15Choice
-	 * ConstraintSettlementStatusAndMatchedRule.forStatus15Choice}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<Status18Choice> forStatus18Choice = new MMConstraint<Status18Choice>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementStatusAndMatchedRule";
-			definition = "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.forStatus15Choice;
-			owner_lazy = () -> Status18Choice.mmObject();
-		}
-
-		@Override
-		public void executeValidator(Status18Choice obj) throws Exception {
-			checkStatus18Choice(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.StatusAndReason29
-	 * StatusAndReason29}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementStatusAndMatchedRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer)."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<StatusAndReason29> forStatusAndReason29 = new MMConstraint<StatusAndReason29>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementStatusAndMatchedRule";
-			definition = "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
-			owner_lazy = () -> StatusAndReason29.mmObject();
-		}
-
-		@Override
-		public void executeValidator(StatusAndReason29 obj) throws Exception {
-			checkStatusAndReason29(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.choice.Status23Choice
-	 * Status23Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementStatusAndMatchedRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer)."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<Status23Choice> forStatus23Choice = new MMConstraint<Status23Choice>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementStatusAndMatchedRule";
-			definition = "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
-			owner_lazy = () -> Status23Choice.mmObject();
-		}
-
-		@Override
-		public void executeValidator(Status23Choice obj) throws Exception {
-			checkStatus23Choice(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.StatusAndReason31
-	 * StatusAndReason31}</li>
+	 * {@linkplain com.tools20022.repository.msg.StatusAndReason15
+	 * StatusAndReason15}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1565,43 +1336,263 @@ public class ConstraintSettlementStatusAndMatchedRule {
 	 * definition} =
 	 * "If SettlementStatus/Reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#forStatusAndReason15
-	 * ConstraintSettlementStatusAndMatchedRule.forStatusAndReason15}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#forStatusAndReason31
+	 * ConstraintSettlementStatusAndMatchedRule.forStatusAndReason31}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<StatusAndReason31> forStatusAndReason31 = new MMConstraint<StatusAndReason31>() {
+	public static final MMConstraint<StatusAndReason15> forStatusAndReason15 = new MMConstraint<StatusAndReason15>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementStatusAndMatchedRule";
 			definition = "If SettlementStatus/Reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.forStatusAndReason15;
-			owner_lazy = () -> StatusAndReason31.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.forStatusAndReason31);
+			owner_lazy = () -> StatusAndReason15.mmObject();
 		}
 
 		@Override
-		public void executeValidator(StatusAndReason31 obj) throws Exception {
-			checkStatusAndReason31(obj);
+		public void executeValidator(StatusAndReason15 obj) throws Exception {
+			checkStatusAndReason15(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV08
+	 * SecuritiesSettlementTransactionStatusAdviceV08}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementStatusAndMatchedRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If settlement status/reason is present alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer)."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#for_sese_SecuritiesSettlementTransactionStatusAdviceV09
+	 * ConstraintSettlementStatusAndMatchedRule.
+	 * for_sese_SecuritiesSettlementTransactionStatusAdviceV09}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#for_sese_SecuritiesSettlementTransactionStatusAdviceV07
+	 * ConstraintSettlementStatusAndMatchedRule.
+	 * for_sese_SecuritiesSettlementTransactionStatusAdviceV07}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV08> for_sese_SecuritiesSettlementTransactionStatusAdviceV08 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV08>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementStatusAndMatchedRule";
+			definition = "If settlement status/reason is present alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.for_sese_SecuritiesSettlementTransactionStatusAdviceV09);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.for_sese_SecuritiesSettlementTransactionStatusAdviceV07;
+			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV08.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionStatusAdviceV08 obj) throws Exception {
+			check_sese_SecuritiesSettlementTransactionStatusAdviceV08(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.choice.Status15Choice
+	 * Status15Choice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementStatusAndMatchedRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer)."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#forStatus18Choice
+	 * ConstraintSettlementStatusAndMatchedRule.forStatus18Choice}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#forStatus9Choice
+	 * ConstraintSettlementStatusAndMatchedRule.forStatus9Choice}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<Status15Choice> forStatus15Choice = new MMConstraint<Status15Choice>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementStatusAndMatchedRule";
+			definition = "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.forStatus18Choice);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.forStatus9Choice;
+			owner_lazy = () -> Status15Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Status15Choice obj) throws Exception {
+			checkStatus15Choice(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV09
+	 * SecuritiesSettlementTransactionStatusAdviceV09}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementStatusAndMatchedRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If settlement status/reason is present alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer)."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#for_sese_SecuritiesSettlementTransactionStatusAdviceV08
+	 * ConstraintSettlementStatusAndMatchedRule.
+	 * for_sese_SecuritiesSettlementTransactionStatusAdviceV08}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV09> for_sese_SecuritiesSettlementTransactionStatusAdviceV09 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV09>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementStatusAndMatchedRule";
+			definition = "If settlement status/reason is present alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.for_sese_SecuritiesSettlementTransactionStatusAdviceV08;
+			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV09.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionStatusAdviceV09 obj) throws Exception {
+			check_sese_SecuritiesSettlementTransactionStatusAdviceV09(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV01
+	 * SecuritiesSettlementTransactionStatusAdviceV01}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementStatusAndMatchedRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV01> for_sese_SecuritiesSettlementTransactionStatusAdviceV01 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV01>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementStatusAndMatchedRule";
+			definition = "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
+			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionStatusAdviceV01 obj) throws Exception {
+			check_sese_SecuritiesSettlementTransactionStatusAdviceV01(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV06
+	 * SecuritiesFinancingStatusAdviceV06}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementStatusAndMatchedRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer)."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#for_sese_SecuritiesFinancingStatusAdviceV07
+	 * ConstraintSettlementStatusAndMatchedRule.
+	 * for_sese_SecuritiesFinancingStatusAdviceV07}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#for_sese_SecuritiesFinancingStatusAdviceV05
+	 * ConstraintSettlementStatusAndMatchedRule.
+	 * for_sese_SecuritiesFinancingStatusAdviceV05}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesFinancingStatusAdviceV06> for_sese_SecuritiesFinancingStatusAdviceV06 = new MMConstraint<SecuritiesFinancingStatusAdviceV06>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementStatusAndMatchedRule";
+			definition = "If settlement status/reason is used alone, then it means that the transaction is matched (if a matching process exists in the concerned market or at the concerned account servicer).";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.for_sese_SecuritiesFinancingStatusAdviceV07);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.for_sese_SecuritiesFinancingStatusAdviceV05;
+			owner_lazy = () -> SecuritiesFinancingStatusAdviceV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingStatusAdviceV06 obj) throws Exception {
+			check_sese_SecuritiesFinancingStatusAdviceV06(obj);
 		}
 	};
 
 	/**
-	 * If SettlementStatus is present alone, then it means that the transaction
-	 * is matched (if a matching process exists in the concerned market or at
-	 * the concerned account servicer).
-	 */
-	public static void checkSecuritiesFinancingStatusAdviceV07(SecuritiesFinancingStatusAdviceV07 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If settlement status/reason is present alone, then it means that the
+	 * If settlement status/reason is used alone, then it means that the
 	 * transaction is matched (if a matching process exists in the concerned
 	 * market or at the concerned account servicer).
 	 */
-	public static void checkSecuritiesSettlementTransactionStatusAdviceV09(SecuritiesSettlementTransactionStatusAdviceV09 obj) throws Exception {
+	public static void check_sese_SecuritiesFinancingStatusAdviceV02(SecuritiesFinancingStatusAdviceV02 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1610,7 +1601,7 @@ public class ConstraintSettlementStatusAndMatchedRule {
 	 * transaction is matched (if a matching process exists in the concerned
 	 * market or at the concerned account servicer).
 	 */
-	public static void checkSecuritiesFinancingStatusAdvice002V07(SecuritiesFinancingStatusAdvice002V07 obj) throws Exception {
+	public static void check_sese_SecuritiesSettlementTransactionStatusAdviceV02(SecuritiesSettlementTransactionStatusAdviceV02 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1619,7 +1610,7 @@ public class ConstraintSettlementStatusAndMatchedRule {
 	 * transaction is matched (if a matching process exists in the concerned
 	 * market or at the concerned account servicer).
 	 */
-	public static void checkSecuritiesSettlementTransactionStatusAdvice002V09(SecuritiesSettlementTransactionStatusAdvice002V09 obj) throws Exception {
+	public static void check_sese_SecuritiesFinancingStatusAdviceV03(SecuritiesFinancingStatusAdviceV03 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1628,160 +1619,7 @@ public class ConstraintSettlementStatusAndMatchedRule {
 	 * transaction is matched (if a matching process exists in the concerned
 	 * market or at the concerned account servicer).
 	 */
-	public static void checkSecuritiesFinancingStatusAdviceV06(SecuritiesFinancingStatusAdviceV06 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If settlement status/reason is present alone, then it means that the
-	 * transaction is matched (if a matching process exists in the concerned
-	 * market or at the concerned account servicer).
-	 */
-	public static void checkSecuritiesSettlementTransactionStatusAdviceV08(SecuritiesSettlementTransactionStatusAdviceV08 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If settlement status/reason is used alone, then it means that the
-	 * transaction is matched (if a matching process exists in the concerned
-	 * market or at the concerned account servicer).
-	 */
-	public static void checkSecuritiesFinancingStatusAdvice002V06(SecuritiesFinancingStatusAdvice002V06 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If settlement status/reason is used alone, then it means that the
-	 * transaction is matched (if a matching process exists in the concerned
-	 * market or at the concerned account servicer).
-	 */
-	public static void checkSecuritiesSettlementTransactionStatusAdvice002V08(SecuritiesSettlementTransactionStatusAdvice002V08 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If settlement status/reason is used alone, then it means that the
-	 * transaction is matched (if a matching process exists in the concerned
-	 * market or at the concerned account servicer).
-	 */
-	public static void checkSecuritiesSettlementTransactionStatusAdviceV01(SecuritiesSettlementTransactionStatusAdviceV01 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If settlement status/reason is used alone, then it means that the
-	 * transaction is matched (if a matching process exists in the concerned
-	 * market or at the concerned account servicer).
-	 */
-	public static void checkSecuritiesSettlementTransactionStatusAdviceV02(SecuritiesSettlementTransactionStatusAdviceV02 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If settlement status/reason is used alone, then it means that the
-	 * transaction is matched (if a matching process exists in the concerned
-	 * market or at the concerned account servicer).
-	 */
-	public static void checkSecuritiesSettlementTransactionStatusAdviceV03(SecuritiesSettlementTransactionStatusAdviceV03 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If settlement status/reason is used alone, then it means that the
-	 * transaction is matched (if a matching process exists in the concerned
-	 * market or at the concerned account servicer).
-	 */
-	public static void checkSecuritiesSettlementTransactionStatusAdviceV04(SecuritiesSettlementTransactionStatusAdviceV04 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If settlement status/reason is used alone, then it means that the
-	 * transaction is matched (if a matching process exists in the concerned
-	 * market or at the concerned account servicer).
-	 */
-	public static void checkSecuritiesFinancingStatusAdviceV01(SecuritiesFinancingStatusAdviceV01 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If settlement status/reason is used alone, then it means that the
-	 * transaction is matched (if a matching process exists in the concerned
-	 * market or at the concerned account servicer).
-	 */
-	public static void checkSecuritiesFinancingStatusAdviceV02(SecuritiesFinancingStatusAdviceV02 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If settlement status/reason is used alone, then it means that the
-	 * transaction is matched (if a matching process exists in the concerned
-	 * market or at the concerned account servicer).
-	 */
-	public static void checkSecuritiesFinancingStatusAdviceV03(SecuritiesFinancingStatusAdviceV03 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If settlement status/reason is used alone, then it means that the
-	 * transaction is matched (if a matching process exists in the concerned
-	 * market or at the concerned account servicer).
-	 */
-	public static void checkSecuritiesFinancingStatusAdviceV04(SecuritiesFinancingStatusAdviceV04 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If settlement status/reason is used alone, then it means that the
-	 * transaction is matched (if a matching process exists in the concerned
-	 * market or at the concerned account servicer).
-	 */
-	public static void checkSecuritiesSettlementTransactionStatusAdviceV05(SecuritiesSettlementTransactionStatusAdviceV05 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If settlement status/reason is used alone, then it means that the
-	 * transaction is matched (if a matching process exists in the concerned
-	 * market or at the concerned account servicer).
-	 */
-	public static void checkSecuritiesFinancingStatusAdviceV05(SecuritiesFinancingStatusAdviceV05 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If settlement status/reason is used alone, then it means that the
-	 * transaction is matched (if a matching process exists in the concerned
-	 * market or at the concerned account servicer).
-	 */
-	public static void checkSecuritiesSettlementTransactionStatusAdviceV06(SecuritiesSettlementTransactionStatusAdviceV06 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If settlement status/reason is used alone, then it means that the
-	 * transaction is matched (if a matching process exists in the concerned
-	 * market or at the concerned account servicer).
-	 */
-	public static void checkSecuritiesSettlementTransactionStatusAdviceV07(SecuritiesSettlementTransactionStatusAdviceV07 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If settlement status/reason is used alone, then it means that the
-	 * transaction is matched (if a matching process exists in the concerned
-	 * market or at the concerned account servicer).
-	 */
-	public static void checkSecuritiesSettlementTransactionStatusAdvice002V07(SecuritiesSettlementTransactionStatusAdvice002V07 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If settlement status/reason is used alone, then it means that the
-	 * transaction is matched (if a matching process exists in the concerned
-	 * market or at the concerned account servicer).
-	 */
-	public static void checkStatusAndReason3(StatusAndReason3 obj) throws Exception {
+	public static void check_sese_SecuritiesFinancingStatusAdviceV05(SecuritiesFinancingStatusAdviceV05 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1795,20 +1633,11 @@ public class ConstraintSettlementStatusAndMatchedRule {
 	}
 
 	/**
-	 * If settlement status/reason is used alone, then it means that the
-	 * transaction is matched (if a matching process exists in the concerned
-	 * market or at the concerned account servicer).
+	 * If SettlementStatus is present alone, then it means that the transaction
+	 * is matched (if a matching process exists in the concerned market or at
+	 * the concerned account servicer).
 	 */
-	public static void checkStatusAndReason12(StatusAndReason12 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If settlement status/reason is used alone, then it means that the
-	 * transaction is matched (if a matching process exists in the concerned
-	 * market or at the concerned account servicer).
-	 */
-	public static void checkStatusAndReason14(StatusAndReason14 obj) throws Exception {
+	public static void check_sese_SecuritiesFinancingStatusAdviceV07(SecuritiesFinancingStatusAdviceV07 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1826,61 +1655,7 @@ public class ConstraintSettlementStatusAndMatchedRule {
 	 * transaction is matched (if a matching process exists in the concerned
 	 * market or at the concerned account servicer).
 	 */
-	public static void checkStatus4Choice(Status4Choice obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If settlement status/reason is used alone, then it means that the
-	 * transaction is matched (if a matching process exists in the concerned
-	 * market or at the concerned account servicer).
-	 */
-	public static void checkStatus9Choice(Status9Choice obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If settlement status/reason is used alone, then it means that the
-	 * transaction is matched (if a matching process exists in the concerned
-	 * market or at the concerned account servicer).
-	 */
-	public static void checkStatus11Choice(Status11Choice obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If SettlementStatus/Reason is used alone, then it means that the
-	 * transaction is matched (if a matching process exists in the concerned
-	 * market or at the concerned account servicer).
-	 */
-	public static void checkStatusAndReason15(StatusAndReason15 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If settlement status/reason is used alone, then it means that the
-	 * transaction is matched (if a matching process exists in the concerned
-	 * market or at the concerned account servicer).
-	 */
-	public static void checkStatus15Choice(Status15Choice obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If settlement status/reason is used alone, then it means that the
-	 * transaction is matched (if a matching process exists in the concerned
-	 * market or at the concerned account servicer).
-	 */
-	public static void checkStatusAndReason19(StatusAndReason19 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If settlement status/reason is used alone, then it means that the
-	 * transaction is matched (if a matching process exists in the concerned
-	 * market or at the concerned account servicer).
-	 */
-	public static void checkStatusAndReason20(StatusAndReason20 obj) throws Exception {
+	public static void check_sese_SecuritiesSettlementTransactionStatusAdviceV07(SecuritiesSettlementTransactionStatusAdviceV07 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1898,6 +1673,24 @@ public class ConstraintSettlementStatusAndMatchedRule {
 	 * transaction is matched (if a matching process exists in the concerned
 	 * market or at the concerned account servicer).
 	 */
+	public static void checkStatus11Choice(Status11Choice obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If settlement status/reason is used alone, then it means that the
+	 * transaction is matched (if a matching process exists in the concerned
+	 * market or at the concerned account servicer).
+	 */
+	public static void checkStatusAndReason3(StatusAndReason3 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If settlement status/reason is used alone, then it means that the
+	 * transaction is matched (if a matching process exists in the concerned
+	 * market or at the concerned account servicer).
+	 */
 	public static void checkStatusAndReason28(StatusAndReason28 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
@@ -1907,7 +1700,7 @@ public class ConstraintSettlementStatusAndMatchedRule {
 	 * transaction is matched (if a matching process exists in the concerned
 	 * market or at the concerned account servicer).
 	 */
-	public static void checkStatus18Choice(Status18Choice obj) throws Exception {
+	public static void check_sese_SecuritiesSettlementTransactionStatusAdvice002V09(SecuritiesSettlementTransactionStatusAdvice002V09 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1925,7 +1718,61 @@ public class ConstraintSettlementStatusAndMatchedRule {
 	 * transaction is matched (if a matching process exists in the concerned
 	 * market or at the concerned account servicer).
 	 */
-	public static void checkStatus23Choice(Status23Choice obj) throws Exception {
+	public static void check_sese_SecuritiesSettlementTransactionStatusAdvice002V07(SecuritiesSettlementTransactionStatusAdvice002V07 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If settlement status/reason is used alone, then it means that the
+	 * transaction is matched (if a matching process exists in the concerned
+	 * market or at the concerned account servicer).
+	 */
+	public static void checkStatus18Choice(Status18Choice obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If settlement status/reason is used alone, then it means that the
+	 * transaction is matched (if a matching process exists in the concerned
+	 * market or at the concerned account servicer).
+	 */
+	public static void check_sese_SecuritiesFinancingStatusAdvice002V06(SecuritiesFinancingStatusAdvice002V06 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If settlement status/reason is used alone, then it means that the
+	 * transaction is matched (if a matching process exists in the concerned
+	 * market or at the concerned account servicer).
+	 */
+	public static void checkStatusAndReason14(StatusAndReason14 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If settlement status/reason is used alone, then it means that the
+	 * transaction is matched (if a matching process exists in the concerned
+	 * market or at the concerned account servicer).
+	 */
+	public static void checkStatusAndReason12(StatusAndReason12 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If settlement status/reason is used alone, then it means that the
+	 * transaction is matched (if a matching process exists in the concerned
+	 * market or at the concerned account servicer).
+	 */
+	public static void check_sese_SecuritiesSettlementTransactionStatusAdviceV04(SecuritiesSettlementTransactionStatusAdviceV04 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If settlement status/reason is used alone, then it means that the
+	 * transaction is matched (if a matching process exists in the concerned
+	 * market or at the concerned account servicer).
+	 */
+	public static void checkStatus9Choice(Status9Choice obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1935,6 +1782,159 @@ public class ConstraintSettlementStatusAndMatchedRule {
 	 * market or at the concerned account servicer).
 	 */
 	public static void checkStatusAndReason31(StatusAndReason31 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If settlement status/reason is used alone, then it means that the
+	 * transaction is matched (if a matching process exists in the concerned
+	 * market or at the concerned account servicer).
+	 */
+	public static void check_sese_SecuritiesSettlementTransactionStatusAdviceV03(SecuritiesSettlementTransactionStatusAdviceV03 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If settlement status/reason is used alone, then it means that the
+	 * transaction is matched (if a matching process exists in the concerned
+	 * market or at the concerned account servicer).
+	 */
+	public static void check_sese_SecuritiesFinancingStatusAdviceV04(SecuritiesFinancingStatusAdviceV04 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If settlement status/reason is used alone, then it means that the
+	 * transaction is matched (if a matching process exists in the concerned
+	 * market or at the concerned account servicer).
+	 */
+	public static void checkStatus23Choice(Status23Choice obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If settlement status/reason is used alone, then it means that the
+	 * transaction is matched (if a matching process exists in the concerned
+	 * market or at the concerned account servicer).
+	 */
+	public static void check_sese_SecuritiesSettlementTransactionStatusAdvice002V08(SecuritiesSettlementTransactionStatusAdvice002V08 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If settlement status/reason is used alone, then it means that the
+	 * transaction is matched (if a matching process exists in the concerned
+	 * market or at the concerned account servicer).
+	 */
+	public static void check_sese_SecuritiesSettlementTransactionStatusAdviceV05(SecuritiesSettlementTransactionStatusAdviceV05 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If settlement status/reason is used alone, then it means that the
+	 * transaction is matched (if a matching process exists in the concerned
+	 * market or at the concerned account servicer).
+	 */
+	public static void checkStatusAndReason20(StatusAndReason20 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If settlement status/reason is used alone, then it means that the
+	 * transaction is matched (if a matching process exists in the concerned
+	 * market or at the concerned account servicer).
+	 */
+	public static void check_sese_SecuritiesSettlementTransactionStatusAdviceV06(SecuritiesSettlementTransactionStatusAdviceV06 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If settlement status/reason is used alone, then it means that the
+	 * transaction is matched (if a matching process exists in the concerned
+	 * market or at the concerned account servicer).
+	 */
+	public static void check_sese_SecuritiesFinancingStatusAdviceV01(SecuritiesFinancingStatusAdviceV01 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If settlement status/reason is used alone, then it means that the
+	 * transaction is matched (if a matching process exists in the concerned
+	 * market or at the concerned account servicer).
+	 */
+	public static void check_sese_SecuritiesFinancingStatusAdvice002V07(SecuritiesFinancingStatusAdvice002V07 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If settlement status/reason is used alone, then it means that the
+	 * transaction is matched (if a matching process exists in the concerned
+	 * market or at the concerned account servicer).
+	 */
+	public static void checkStatusAndReason19(StatusAndReason19 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If settlement status/reason is used alone, then it means that the
+	 * transaction is matched (if a matching process exists in the concerned
+	 * market or at the concerned account servicer).
+	 */
+	public static void checkStatus4Choice(Status4Choice obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SettlementStatus/Reason is used alone, then it means that the
+	 * transaction is matched (if a matching process exists in the concerned
+	 * market or at the concerned account servicer).
+	 */
+	public static void checkStatusAndReason15(StatusAndReason15 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If settlement status/reason is present alone, then it means that the
+	 * transaction is matched (if a matching process exists in the concerned
+	 * market or at the concerned account servicer).
+	 */
+	public static void check_sese_SecuritiesSettlementTransactionStatusAdviceV08(SecuritiesSettlementTransactionStatusAdviceV08 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If settlement status/reason is used alone, then it means that the
+	 * transaction is matched (if a matching process exists in the concerned
+	 * market or at the concerned account servicer).
+	 */
+	public static void checkStatus15Choice(Status15Choice obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If settlement status/reason is present alone, then it means that the
+	 * transaction is matched (if a matching process exists in the concerned
+	 * market or at the concerned account servicer).
+	 */
+	public static void check_sese_SecuritiesSettlementTransactionStatusAdviceV09(SecuritiesSettlementTransactionStatusAdviceV09 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If settlement status/reason is used alone, then it means that the
+	 * transaction is matched (if a matching process exists in the concerned
+	 * market or at the concerned account servicer).
+	 */
+	public static void check_sese_SecuritiesSettlementTransactionStatusAdviceV01(SecuritiesSettlementTransactionStatusAdviceV01 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If settlement status/reason is used alone, then it means that the
+	 * transaction is matched (if a matching process exists in the concerned
+	 * market or at the concerned account servicer).
+	 */
+	public static void check_sese_SecuritiesFinancingStatusAdviceV06(SecuritiesFinancingStatusAdviceV06 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

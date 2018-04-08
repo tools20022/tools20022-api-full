@@ -88,9 +88,9 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementSessionIdentifierRule#forForeignExchangeTradeBulkStatusNotificationV04
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementSessionIdentifierRule#for_fxtr_ForeignExchangeTradeBulkStatusNotificationV04
  * ConstraintSettlementSessionIdentifierRule.
- * forForeignExchangeTradeBulkStatusNotificationV04}</li>
+ * for_fxtr_ForeignExchangeTradeBulkStatusNotificationV04}</li>
  * </ul>
  * </li>
  * <li>
@@ -300,7 +300,7 @@ public class ForeignExchangeTradeBulkStatusNotificationV04 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementSessionIdentifierRule.forForeignExchangeTradeBulkStatusNotificationV04);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementSessionIdentifierRule.for_fxtr_ForeignExchangeTradeBulkStatusNotificationV04);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ForeignExchangeTradeBulkStatusNotificationV04";
 				definition = "Scope\r\r\nThe ForeignExchangeTradeBulkStatusNotification message is sent by a central system to the participant to provide notification of the current status of one or more foreign exchange trades.";

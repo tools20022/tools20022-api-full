@@ -24,47 +24,14 @@ import com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdv
 import com.tools20022.repository.area.seev.CorporateActionNotificationV04;
 
 /**
- * If any occurrence of CorporateActionMovementDetails/OfferType/Code is present
- * with the value MINI (MiniOddLotOffer), then
- * CorporateActionGeneralInformation/EventType/Code value must be ODLT
- * (OddLotSalePurchase).
+ * If CorporateActionDetails/OfferType/Code is present with the value MINI
+ * (MiniOddLotOffer) or if in any occurrence of
+ * CorporateActionOptionDetails/OfferType/Code is present with the value MINI
+ * (MiniOddLotOffer), then CorporateActionGeneralInformation/EventType/Code
+ * value must be ODLT (OddLotSalePurchase).
  */
 public class ConstraintMiniOddLotOfferUsageRule {
 
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV04
-	 * CorporateActionMovementPreliminaryAdviceV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "MiniOddLotOfferUsageRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If any occurrence of CorporateActionMovementDetails/OfferType/Code is present with the value MINI (MiniOddLotOffer), then CorporateActionGeneralInformation/EventType/Code value must be ODLT (OddLotSalePurchase)."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CorporateActionMovementPreliminaryAdviceV04> forCorporateActionMovementPreliminaryAdviceV04 = new MMConstraint<CorporateActionMovementPreliminaryAdviceV04>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "MiniOddLotOfferUsageRule";
-			definition = "If any occurrence of CorporateActionMovementDetails/OfferType/Code is present with the value MINI (MiniOddLotOffer), then CorporateActionGeneralInformation/EventType/Code value must be ODLT (OddLotSalePurchase).";
-			owner_lazy = () -> CorporateActionMovementPreliminaryAdviceV04.mmObject();
-		}
-
-		@Override
-		public void executeValidator(CorporateActionMovementPreliminaryAdviceV04 obj) throws Exception {
-			checkCorporateActionMovementPreliminaryAdviceV04(obj);
-		}
-	};
 	/**
 	 * 
 	 <p>
@@ -86,7 +53,7 @@ public class ConstraintMiniOddLotOfferUsageRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<CorporateActionNotificationV04> forCorporateActionNotificationV04 = new MMConstraint<CorporateActionNotificationV04>() {
+	public static final MMConstraint<CorporateActionNotificationV04> for_seev_CorporateActionNotificationV04 = new MMConstraint<CorporateActionNotificationV04>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MiniOddLotOfferUsageRule";
@@ -96,19 +63,43 @@ public class ConstraintMiniOddLotOfferUsageRule {
 
 		@Override
 		public void executeValidator(CorporateActionNotificationV04 obj) throws Exception {
-			checkCorporateActionNotificationV04(obj);
+			check_seev_CorporateActionNotificationV04(obj);
 		}
 	};
-
 	/**
-	 * If any occurrence of CorporateActionMovementDetails/OfferType/Code is
-	 * present with the value MINI (MiniOddLotOffer), then
-	 * CorporateActionGeneralInformation/EventType/Code value must be ODLT
-	 * (OddLotSalePurchase).
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV04
+	 * CorporateActionMovementPreliminaryAdviceV04}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "MiniOddLotOfferUsageRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If any occurrence of CorporateActionMovementDetails/OfferType/Code is present with the value MINI (MiniOddLotOffer), then CorporateActionGeneralInformation/EventType/Code value must be ODLT (OddLotSalePurchase)."
+	 * </li>
+	 * </ul>
 	 */
-	public static void checkCorporateActionMovementPreliminaryAdviceV04(CorporateActionMovementPreliminaryAdviceV04 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
+	public static final MMConstraint<CorporateActionMovementPreliminaryAdviceV04> for_seev_CorporateActionMovementPreliminaryAdviceV04 = new MMConstraint<CorporateActionMovementPreliminaryAdviceV04>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "MiniOddLotOfferUsageRule";
+			definition = "If any occurrence of CorporateActionMovementDetails/OfferType/Code is present with the value MINI (MiniOddLotOffer), then CorporateActionGeneralInformation/EventType/Code value must be ODLT (OddLotSalePurchase).";
+			owner_lazy = () -> CorporateActionMovementPreliminaryAdviceV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionMovementPreliminaryAdviceV04 obj) throws Exception {
+			check_seev_CorporateActionMovementPreliminaryAdviceV04(obj);
+		}
+	};
 
 	/**
 	 * If CorporateActionDetails/OfferType/Code is present with the value MINI
@@ -118,7 +109,17 @@ public class ConstraintMiniOddLotOfferUsageRule {
 	 * CorporateActionGeneralInformation/EventType/Code value must be ODLT
 	 * (OddLotSalePurchase).
 	 */
-	public static void checkCorporateActionNotificationV04(CorporateActionNotificationV04 obj) throws Exception {
+	public static void check_seev_CorporateActionNotificationV04(CorporateActionNotificationV04 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If any occurrence of CorporateActionMovementDetails/OfferType/Code is
+	 * present with the value MINI (MiniOddLotOffer), then
+	 * CorporateActionGeneralInformation/EventType/Code value must be ODLT
+	 * (OddLotSalePurchase).
+	 */
+	public static void check_seev_CorporateActionMovementPreliminaryAdviceV04(CorporateActionMovementPreliminaryAdviceV04 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

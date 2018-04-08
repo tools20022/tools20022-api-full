@@ -68,8 +68,8 @@ public class CollateralManagementArchive {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Collateral Management - Archive - master";
 				definition = "Messages that support collateral management actions.";
-				messageDefinition_lazy = () -> Arrays.asList(CollateralProposalResponseV03.mmObject(), CollateralProposalV03.mmObject());
 				code = "colr";
+				messageDefinition_lazy = () -> Arrays.asList(CollateralProposalResponseV03.mmObject(), CollateralProposalV03.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

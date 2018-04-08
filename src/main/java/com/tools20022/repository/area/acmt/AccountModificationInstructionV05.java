@@ -127,26 +127,32 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintDividendPercentage1Rule#forAccountModificationInstructionV05
- * ConstraintDividendPercentage1Rule.forAccountModificationInstructionV05}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDividendPercentage1Rule#for_acmt_AccountModificationInstructionV05
+ * ConstraintDividendPercentage1Rule.for_acmt_AccountModificationInstructionV05}
+ * </li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintDividendPercentage2Rule#forAccountModificationInstructionV05
- * ConstraintDividendPercentage2Rule.forAccountModificationInstructionV05}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDividendPercentage2Rule#for_acmt_AccountModificationInstructionV05
+ * ConstraintDividendPercentage2Rule.for_acmt_AccountModificationInstructionV05}
+ * </li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintDividendPercentage3Rule#forAccountModificationInstructionV05
- * ConstraintDividendPercentage3Rule.forAccountModificationInstructionV05}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDividendPercentage3Rule#for_acmt_AccountModificationInstructionV05
+ * ConstraintDividendPercentage3Rule.for_acmt_AccountModificationInstructionV05}
+ * </li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintDividendPercentage4Rule#forAccountModificationInstructionV05
- * ConstraintDividendPercentage4Rule.forAccountModificationInstructionV05}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDividendPercentage4Rule#for_acmt_AccountModificationInstructionV05
+ * ConstraintDividendPercentage4Rule.for_acmt_AccountModificationInstructionV05}
+ * </li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintDividendPercentage5Rule#forAccountModificationInstructionV05
- * ConstraintDividendPercentage5Rule.forAccountModificationInstructionV05}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDividendPercentage5Rule#for_acmt_AccountModificationInstructionV05
+ * ConstraintDividendPercentage5Rule.for_acmt_AccountModificationInstructionV05}
+ * </li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintDividendPercentage6Rule#forAccountModificationInstructionV05
- * ConstraintDividendPercentage6Rule.forAccountModificationInstructionV05}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDividendPercentage6Rule#for_acmt_AccountModificationInstructionV05
+ * ConstraintDividendPercentage6Rule.for_acmt_AccountModificationInstructionV05}
+ * </li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintUnit1Rule#forAccountModificationInstructionV05
- * ConstraintUnit1Rule.forAccountModificationInstructionV05}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintUnit1Rule#for_acmt_AccountModificationInstructionV05
+ * ConstraintUnit1Rule.for_acmt_AccountModificationInstructionV05}</li>
  * </ul>
  * </li>
  * <li>
@@ -1120,12 +1126,13 @@ public class AccountModificationInstructionV05 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDividendPercentage1Rule.forAccountModificationInstructionV05,
-						com.tools20022.repository.constraints.ConstraintDividendPercentage2Rule.forAccountModificationInstructionV05,
-						com.tools20022.repository.constraints.ConstraintDividendPercentage3Rule.forAccountModificationInstructionV05,
-						com.tools20022.repository.constraints.ConstraintDividendPercentage4Rule.forAccountModificationInstructionV05,
-						com.tools20022.repository.constraints.ConstraintDividendPercentage5Rule.forAccountModificationInstructionV05,
-						com.tools20022.repository.constraints.ConstraintDividendPercentage6Rule.forAccountModificationInstructionV05, com.tools20022.repository.constraints.ConstraintUnit1Rule.forAccountModificationInstructionV05);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDividendPercentage1Rule.for_acmt_AccountModificationInstructionV05,
+						com.tools20022.repository.constraints.ConstraintDividendPercentage2Rule.for_acmt_AccountModificationInstructionV05,
+						com.tools20022.repository.constraints.ConstraintDividendPercentage3Rule.for_acmt_AccountModificationInstructionV05,
+						com.tools20022.repository.constraints.ConstraintDividendPercentage4Rule.for_acmt_AccountModificationInstructionV05,
+						com.tools20022.repository.constraints.ConstraintDividendPercentage5Rule.for_acmt_AccountModificationInstructionV05,
+						com.tools20022.repository.constraints.ConstraintDividendPercentage6Rule.for_acmt_AccountModificationInstructionV05,
+						com.tools20022.repository.constraints.ConstraintUnit1Rule.for_acmt_AccountModificationInstructionV05);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountModificationInstructionV05";
 				definition = "Scope\r\nAn account owner, for example, an investor or its designated agent, sends the AccountModificationInstruction message to the account servicer, for example, a registrar, transfer agent or custodian bank to modify, that is, create, update or delete specific details of an existing investment fund account.\r\nUsage\r\nThe AccountModificationInstruction message is used to modify the details of an existing account.\r\nThe AccountModificationInstruction message has three specific uses:\r\n- to maintain/update any of the existing account details, for example, to update the address of the beneficiary or modify the preference to income from distribution to capitalisation, or,\r\n- to add/create specific details to the existing account when these details were not yet recorded at the time of account creation, for example, to add a second address or to establish new cash settlement standing instructions, or,\r\n- to delete specific account details, for example, delete cash standing instructions.\r\nThis message cannot be used to delete an entire account, as institution specific and regulatory rules pertaining to account deletion are diverse.\r\nThe usage of this message may be subject to service level agreement (SLA) between the counterparties.\r\nExecution of the AccountModificationInstruction is confirmed via an AccountDetailsConfirmation message.";

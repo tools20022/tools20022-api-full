@@ -102,6 +102,40 @@ public class ConstraintValidMICRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.TransparencyDataReport15
+	 * TransparencyDataReport15}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ValidMICRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Market Identification code must be an active market at the time of reporting."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<TransparencyDataReport15> forTransparencyDataReport15 = new MMConstraint<TransparencyDataReport15>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ValidMICRule";
+			definition = "Market Identification code must be an active market at the time of reporting.";
+			owner_lazy = () -> TransparencyDataReport15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransparencyDataReport15 obj) throws Exception {
+			checkTransparencyDataReport15(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.VolumeCapReport1
 	 * VolumeCapReport1}</li>
 	 * <li>
@@ -162,6 +196,40 @@ public class ConstraintValidMICRule {
 		@Override
 		public void executeValidator(TransparencyDataReport11 obj) throws Exception {
 			checkTransparencyDataReport11(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.TransparencyDataReport10
+	 * TransparencyDataReport10}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ValidMICRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Where reported, Market Identification code must be an active market for that reporting period."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<TransparencyDataReport10> forTransparencyDataReport10 = new MMConstraint<TransparencyDataReport10>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ValidMICRule";
+			definition = "Where reported, Market Identification code must be an active market for that reporting period.";
+			owner_lazy = () -> TransparencyDataReport10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransparencyDataReport10 obj) throws Exception {
+			checkTransparencyDataReport10(obj);
 		}
 	};
 	/**
@@ -238,8 +306,7 @@ public class ConstraintValidMICRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.TransparencyDataReport15
-	 * TransparencyDataReport15}</li>
+	 * {@linkplain com.tools20022.repository.msg.MarketDetail2 MarketDetail2}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -253,51 +320,17 @@ public class ConstraintValidMICRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<TransparencyDataReport15> forTransparencyDataReport15 = new MMConstraint<TransparencyDataReport15>() {
+	public static final MMConstraint<MarketDetail2> forMarketDetail2 = new MMConstraint<MarketDetail2>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidMICRule";
 			definition = "Market Identification code must be an active market at the time of reporting.";
-			owner_lazy = () -> TransparencyDataReport15.mmObject();
+			owner_lazy = () -> MarketDetail2.mmObject();
 		}
 
 		@Override
-		public void executeValidator(TransparencyDataReport15 obj) throws Exception {
-			checkTransparencyDataReport15(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.TransparencyDataReport10
-	 * TransparencyDataReport10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ValidMICRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Where reported, Market Identification code must be an active market for that reporting period."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<TransparencyDataReport10> forTransparencyDataReport10 = new MMConstraint<TransparencyDataReport10>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ValidMICRule";
-			definition = "Where reported, Market Identification code must be an active market for that reporting period.";
-			owner_lazy = () -> TransparencyDataReport10.mmObject();
-		}
-
-		@Override
-		public void executeValidator(TransparencyDataReport10 obj) throws Exception {
-			checkTransparencyDataReport10(obj);
+		public void executeValidator(MarketDetail2 obj) throws Exception {
+			checkMarketDetail2(obj);
 		}
 	};
 	/**
@@ -334,39 +367,6 @@ public class ConstraintValidMICRule {
 			checkTransparencyDataReport14(obj);
 		}
 	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.MarketDetail2 MarketDetail2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ValidMICRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Market Identification code must be an active market at the time of reporting."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<MarketDetail2> forMarketDetail2 = new MMConstraint<MarketDetail2>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ValidMICRule";
-			definition = "Market Identification code must be an active market at the time of reporting.";
-			owner_lazy = () -> MarketDetail2.mmObject();
-		}
-
-		@Override
-		public void executeValidator(MarketDetail2 obj) throws Exception {
-			checkMarketDetail2(obj);
-		}
-	};
 
 	/**
 	 * Market Identification code must be an active market at the time of
@@ -385,6 +385,14 @@ public class ConstraintValidMICRule {
 	}
 
 	/**
+	 * Market Identification code must be an active market at the time of
+	 * reporting.
+	 */
+	public static void checkTransparencyDataReport15(TransparencyDataReport15 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
 	 * Where populated, the market identification code must be an active market
 	 * at the time of reporting.
 	 */
@@ -397,6 +405,14 @@ public class ConstraintValidMICRule {
 	 * that reporting period.
 	 */
 	public static void checkTransparencyDataReport11(TransparencyDataReport11 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Where reported, Market Identification code must be an active market for
+	 * that reporting period.
+	 */
+	public static void checkTransparencyDataReport10(TransparencyDataReport10 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -420,15 +436,7 @@ public class ConstraintValidMICRule {
 	 * Market Identification code must be an active market at the time of
 	 * reporting.
 	 */
-	public static void checkTransparencyDataReport15(TransparencyDataReport15 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Where reported, Market Identification code must be an active market for
-	 * that reporting period.
-	 */
-	public static void checkTransparencyDataReport10(TransparencyDataReport10 obj) throws Exception {
+	public static void checkMarketDetail2(MarketDetail2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -437,14 +445,6 @@ public class ConstraintValidMICRule {
 	 * that reporting period.
 	 */
 	public static void checkTransparencyDataReport14(TransparencyDataReport14 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Market Identification code must be an active market at the time of
-	 * reporting.
-	 */
-	public static void checkMarketDetail2(MarketDetail2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

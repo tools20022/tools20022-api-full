@@ -116,12 +116,12 @@ public class AccountManagementArchive {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Account Management - Archive - master";
 				definition = "Messages that support the management of account related activities, such as the opening and maintenance of an account.";
+				code = "acmt";
 				messageDefinition_lazy = () -> Arrays.asList(AccountDetailsConfirmationV02.mmObject(), AccountDetailsConfirmationV03.mmObject(), AccountManagementStatusReportV02.mmObject(), AccountManagementStatusReportV03.mmObject(),
 						AccountModificationInstructionV02.mmObject(), AccountModificationInstructionV03.mmObject(), AccountOpeningInstructionV02.mmObject(), AccountOpeningInstructionV03.mmObject(),
 						RequestForAccountManagementStatusReportV02.mmObject(), AccountDetailsConfirmationV04.mmObject(), AccountModificationInstructionV04.mmObject(), AccountOpeningInstructionV04.mmObject(),
 						AccountManagementStatusReportV04.mmObject(), AccountOpeningInstructionV05.mmObject(), AccountModificationInstructionV05.mmObject(), RequestForAccountManagementStatusReportV03.mmObject(),
 						AccountDetailsConfirmationV05.mmObject());
-				code = "acmt";
 			}
 		});
 		return mmObject_lazy.get();

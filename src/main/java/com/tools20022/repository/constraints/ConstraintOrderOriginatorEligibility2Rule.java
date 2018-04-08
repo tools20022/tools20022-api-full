@@ -36,6 +36,46 @@ public class ConstraintOrderOriginatorEligibility2Rule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount58
+	 * InvestmentAccount58}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OrderOriginatorEligibility2Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "OrderOriginatorEligibility may only be present if one or more of the parties identified in OwnerIdentification is/are the originator of the order."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintOrderOriginatorEligibility2Rule#forInvestmentAccount21
+	 * ConstraintOrderOriginatorEligibility2Rule.forInvestmentAccount21}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<InvestmentAccount58> forInvestmentAccount58 = new MMConstraint<InvestmentAccount58>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OrderOriginatorEligibility2Rule";
+			definition = "OrderOriginatorEligibility may only be present if one or more of the parties identified in OwnerIdentification is/are the originator of the order.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOrderOriginatorEligibility2Rule.forInvestmentAccount21;
+			owner_lazy = () -> InvestmentAccount58.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvestmentAccount58 obj) throws Exception {
+			checkInvestmentAccount58(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount21
 	 * InvestmentAccount21}</li>
 	 * <li>
@@ -73,53 +113,13 @@ public class ConstraintOrderOriginatorEligibility2Rule {
 			checkInvestmentAccount21(obj);
 		}
 	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount58
-	 * InvestmentAccount58}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "OrderOriginatorEligibility2Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "OrderOriginatorEligibility may only be present if one or more of the parties identified in OwnerIdentification is/are the originator of the order."
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintOrderOriginatorEligibility2Rule#forInvestmentAccount21
-	 * ConstraintOrderOriginatorEligibility2Rule.forInvestmentAccount21}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<InvestmentAccount58> forInvestmentAccount58 = new MMConstraint<InvestmentAccount58>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "OrderOriginatorEligibility2Rule";
-			definition = "OrderOriginatorEligibility may only be present if one or more of the parties identified in OwnerIdentification is/are the originator of the order.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOrderOriginatorEligibility2Rule.forInvestmentAccount21;
-			owner_lazy = () -> InvestmentAccount58.mmObject();
-		}
-
-		@Override
-		public void executeValidator(InvestmentAccount58 obj) throws Exception {
-			checkInvestmentAccount58(obj);
-		}
-	};
 
 	/**
 	 * OrderOriginatorEligibility may only be present if one or more of the
 	 * parties identified in OwnerIdentification is/are the originator of the
 	 * order.
 	 */
-	public static void checkInvestmentAccount21(InvestmentAccount21 obj) throws Exception {
+	public static void checkInvestmentAccount58(InvestmentAccount58 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -128,7 +128,7 @@ public class ConstraintOrderOriginatorEligibility2Rule {
 	 * parties identified in OwnerIdentification is/are the originator of the
 	 * order.
 	 */
-	public static void checkInvestmentAccount58(InvestmentAccount58 obj) throws Exception {
+	public static void checkInvestmentAccount21(InvestmentAccount21 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

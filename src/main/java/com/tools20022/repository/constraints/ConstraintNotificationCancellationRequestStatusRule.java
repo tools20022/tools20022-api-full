@@ -49,7 +49,7 @@ public class ConstraintNotificationCancellationRequestStatusRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<AgentCANotificationStatusAdviceV01> forAgentCANotificationStatusAdviceV01 = new MMConstraint<AgentCANotificationStatusAdviceV01>() {
+	public static final MMConstraint<AgentCANotificationStatusAdviceV01> for_seev_AgentCANotificationStatusAdviceV01 = new MMConstraint<AgentCANotificationStatusAdviceV01>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationCancellationRequestStatusRule";
@@ -59,7 +59,7 @@ public class ConstraintNotificationCancellationRequestStatusRule {
 
 		@Override
 		public void executeValidator(AgentCANotificationStatusAdviceV01 obj) throws Exception {
-			checkAgentCANotificationStatusAdviceV01(obj);
+			check_seev_AgentCANotificationStatusAdviceV01(obj);
 		}
 	};
 
@@ -67,7 +67,7 @@ public class ConstraintNotificationCancellationRequestStatusRule {
 	 * If AgentCANotificationCancellationRequestIdentification is present then
 	 * NotificationCancellationRequestStatus must be present.
 	 */
-	public static void checkAgentCANotificationStatusAdviceV01(AgentCANotificationStatusAdviceV01 obj) throws Exception {
+	public static void check_seev_AgentCANotificationStatusAdviceV01(AgentCANotificationStatusAdviceV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

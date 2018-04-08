@@ -25,10 +25,42 @@ import com.tools20022.repository.msg.ReportEntry1;
 import com.tools20022.repository.msg.StatementEntry1;
 
 /**
- * If Status is pending, BookingDate is not allowed.
+ * If Status is pending, BookingDate must is not allowed.
  */
 public class ConstraintStatusAndBookingDateRule {
 
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.StatementEntry1
+	 * StatementEntry1}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "StatusAndBookingDateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "If Status is pending, BookingDate must is not allowed."</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<StatementEntry1> forStatementEntry1 = new MMConstraint<StatementEntry1>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "StatusAndBookingDateRule";
+			definition = "If Status is pending, BookingDate must is not allowed.";
+			owner_lazy = () -> StatementEntry1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(StatementEntry1 obj) throws Exception {
+			checkStatementEntry1(obj);
+		}
+	};
 	/**
 	 * 
 	 <p>
@@ -92,38 +124,13 @@ public class ConstraintStatusAndBookingDateRule {
 			checkNotificationEntry1(obj);
 		}
 	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.StatementEntry1
-	 * StatementEntry1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "StatusAndBookingDateRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "If Status is pending, BookingDate must is not allowed."</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<StatementEntry1> forStatementEntry1 = new MMConstraint<StatementEntry1>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "StatusAndBookingDateRule";
-			definition = "If Status is pending, BookingDate must is not allowed.";
-			owner_lazy = () -> StatementEntry1.mmObject();
-		}
 
-		@Override
-		public void executeValidator(StatementEntry1 obj) throws Exception {
-			checkStatementEntry1(obj);
-		}
-	};
+	/**
+	 * If Status is pending, BookingDate must is not allowed.
+	 */
+	public static void checkStatementEntry1(StatementEntry1 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
 
 	/**
 	 * If Status is pending, BookingDate is not allowed.
@@ -136,13 +143,6 @@ public class ConstraintStatusAndBookingDateRule {
 	 * If Status is pending, BookingDate is not allowed.
 	 */
 	public static void checkNotificationEntry1(NotificationEntry1 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If Status is pending, BookingDate must is not allowed.
-	 */
-	public static void checkStatementEntry1(StatementEntry1 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

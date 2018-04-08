@@ -98,11 +98,11 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationRule#forSubscriptionBulkOrderV03
- * ConstraintAccountIdentificationRule.forSubscriptionBulkOrderV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationRule#for_setr_SubscriptionBulkOrderV03
+ * ConstraintAccountIdentificationRule.for_setr_SubscriptionBulkOrderV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintRelatedPartiesDetailsRule#forSubscriptionBulkOrderV03
- * ConstraintRelatedPartiesDetailsRule.forSubscriptionBulkOrderV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintRelatedPartiesDetailsRule#for_setr_SubscriptionBulkOrderV03
+ * ConstraintRelatedPartiesDetailsRule.for_setr_SubscriptionBulkOrderV03}</li>
  * </ul>
  * </li>
  * <li>
@@ -514,8 +514,8 @@ public class SubscriptionBulkOrderV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forSubscriptionBulkOrderV03,
-						com.tools20022.repository.constraints.ConstraintRelatedPartiesDetailsRule.forSubscriptionBulkOrderV03);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.for_setr_SubscriptionBulkOrderV03,
+						com.tools20022.repository.constraints.ConstraintRelatedPartiesDetailsRule.for_setr_SubscriptionBulkOrderV03);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SubscriptionBulkOrderV03";
 				definition = "Scope\r\nAn instructing party, for example, an investment manager or its authorised representative sends the SubscriptionBulkOrder message to the executing party, for example, a transfer agent, to instruct a subscription to a financial instrument for two or more accounts.\r\nUsage\r\nThe SubscriptionBulkOrder message is used to bulk several individual orders into one bulk order. The individual orders come from different instructing parties, that is, account owners, but are related to the same financial instrument. This message will typically be used by a party collecting orders and bulking these individual orders into one bulk order before sending it to another party.\r\nFor a single subscription order, the SubscriptionOrder message, not the SubscriptionBulkOrder message, must be used.\r\nIf there are subscription orders for different financial instruments but for the same account, then the SubscriptionOrder must be used.";

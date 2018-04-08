@@ -58,73 +58,26 @@ public class ConstraintDividendPercentageRule6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintDividendPercentage6Rule#forAccountDetailsConfirmationV04
-	 * ConstraintDividendPercentage6Rule.forAccountDetailsConfirmationV04}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintDividendPercentage6Rule#for_acmt_AccountDetailsConfirmationV04
+	 * ConstraintDividendPercentage6Rule.for_acmt_AccountDetailsConfirmationV04}
+	 * </li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<AccountDetailsConfirmationV03> forAccountDetailsConfirmationV03 = new MMConstraint<AccountDetailsConfirmationV03>() {
+	public static final MMConstraint<AccountDetailsConfirmationV03> for_acmt_AccountDetailsConfirmationV03 = new MMConstraint<AccountDetailsConfirmationV03>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendPercentageRule6";
 			definition = "WithdrawalInvestmentPlan\\CashSettlement\\InterestPaymentInstrument\\DividendPercentage is not allowed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDividendPercentage6Rule.forAccountDetailsConfirmationV04);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDividendPercentage6Rule.for_acmt_AccountDetailsConfirmationV04);
 			owner_lazy = () -> AccountDetailsConfirmationV03.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/WithdrawalInvestmentPlan[*]/CashSettlement[*]/InterestPaymentInstrument/DividendPercentage</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
 		}
 
 		@Override
 		public void executeValidator(AccountDetailsConfirmationV03 obj) throws Exception {
-			checkAccountDetailsConfirmationV03(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV03
-	 * AccountModificationInstructionV03}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
-	 * expression} =
-	 * "&lt;RuleDefinition&gt;&lt;SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/ModifiedWithdrawalInvestmentPlan[*]/InvestmentPlan/ModifiedCashSettlement[*]/InterestPaymentInstrument/DividendPercentage&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;/SimpleRule&gt;&lt;/RuleDefinition&gt;"
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DividendPercentageRule6"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "ModifiedWithdrawalInvestmentPlan\\InvestmentPlan\\ModifiedCashSettlement\\InterestPaymentInstrument\\DividendPercentage is not allowed."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintDividendPercentage6Rule#forAccountModificationInstructionV04
-	 * ConstraintDividendPercentage6Rule.forAccountModificationInstructionV04}</li>
-	 * </ul>
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<AccountModificationInstructionV03> forAccountModificationInstructionV03 = new MMConstraint<AccountModificationInstructionV03>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "DividendPercentageRule6";
-			definition = "ModifiedWithdrawalInvestmentPlan\\InvestmentPlan\\ModifiedCashSettlement\\InterestPaymentInstrument\\DividendPercentage is not allowed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDividendPercentage6Rule.forAccountModificationInstructionV04);
-			owner_lazy = () -> AccountModificationInstructionV03.mmObject();
-			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ModifiedWithdrawalInvestmentPlan[*]/InvestmentPlan/ModifiedCashSettlement[*]/InterestPaymentInstrument/DividendPercentage</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
-		}
-
-		@Override
-		public void executeValidator(AccountModificationInstructionV03 obj) throws Exception {
-			checkAccountModificationInstructionV03(obj);
+			check_acmt_AccountDetailsConfirmationV03(obj);
 		}
 	};
 	/**
@@ -154,25 +107,74 @@ public class ConstraintDividendPercentageRule6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintDividendPercentage6Rule#forAccountOpeningInstructionV04
-	 * ConstraintDividendPercentage6Rule.forAccountOpeningInstructionV04}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintDividendPercentage6Rule#for_acmt_AccountOpeningInstructionV04
+	 * ConstraintDividendPercentage6Rule.for_acmt_AccountOpeningInstructionV04}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<AccountOpeningInstructionV03> forAccountOpeningInstructionV03 = new MMConstraint<AccountOpeningInstructionV03>() {
+	public static final MMConstraint<AccountOpeningInstructionV03> for_acmt_AccountOpeningInstructionV03 = new MMConstraint<AccountOpeningInstructionV03>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendPercentageRule6";
 			definition = "WithdrawalInvestmentPlan\\CashSettlement\\InterestPaymentInstrument\\DividendPercentage is not allowed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDividendPercentage6Rule.forAccountOpeningInstructionV04);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDividendPercentage6Rule.for_acmt_AccountOpeningInstructionV04);
 			owner_lazy = () -> AccountOpeningInstructionV03.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/WithdrawalInvestmentPlan[*]/CashSettlement[*]/InterestPaymentInstrument/DividendPercentage</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
 		}
 
 		@Override
 		public void executeValidator(AccountOpeningInstructionV03 obj) throws Exception {
-			checkAccountOpeningInstructionV03(obj);
+			check_acmt_AccountOpeningInstructionV03(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV03
+	 * AccountModificationInstructionV03}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition&gt;&lt;SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/ModifiedWithdrawalInvestmentPlan[*]/InvestmentPlan/ModifiedCashSettlement[*]/InterestPaymentInstrument/DividendPercentage&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;/SimpleRule&gt;&lt;/RuleDefinition&gt;"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DividendPercentageRule6"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "ModifiedWithdrawalInvestmentPlan\\InvestmentPlan\\ModifiedCashSettlement\\InterestPaymentInstrument\\DividendPercentage is not allowed."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintDividendPercentage6Rule#for_acmt_AccountModificationInstructionV04
+	 * ConstraintDividendPercentage6Rule.
+	 * for_acmt_AccountModificationInstructionV04}</li>
+	 * </ul>
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AccountModificationInstructionV03> for_acmt_AccountModificationInstructionV03 = new MMConstraint<AccountModificationInstructionV03>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DividendPercentageRule6";
+			definition = "ModifiedWithdrawalInvestmentPlan\\InvestmentPlan\\ModifiedCashSettlement\\InterestPaymentInstrument\\DividendPercentage is not allowed.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDividendPercentage6Rule.for_acmt_AccountModificationInstructionV04);
+			owner_lazy = () -> AccountModificationInstructionV03.mmObject();
+			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ModifiedWithdrawalInvestmentPlan[*]/InvestmentPlan/ModifiedCashSettlement[*]/InterestPaymentInstrument/DividendPercentage</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(AccountModificationInstructionV03 obj) throws Exception {
+			check_acmt_AccountModificationInstructionV03(obj);
 		}
 	};
 
@@ -180,15 +182,7 @@ public class ConstraintDividendPercentageRule6 {
 	 * WithdrawalInvestmentPlan\CashSettlement\InterestPaymentInstrument\
 	 * DividendPercentage is not allowed.
 	 */
-	public static void checkAccountDetailsConfirmationV03(AccountDetailsConfirmationV03 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * ModifiedWithdrawalInvestmentPlan\InvestmentPlan\ModifiedCashSettlement\
-	 * InterestPaymentInstrument\DividendPercentage is not allowed.
-	 */
-	public static void checkAccountModificationInstructionV03(AccountModificationInstructionV03 obj) throws Exception {
+	public static void check_acmt_AccountDetailsConfirmationV03(AccountDetailsConfirmationV03 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -196,7 +190,15 @@ public class ConstraintDividendPercentageRule6 {
 	 * WithdrawalInvestmentPlan\CashSettlement\InterestPaymentInstrument\
 	 * DividendPercentage is not allowed.
 	 */
-	public static void checkAccountOpeningInstructionV03(AccountOpeningInstructionV03 obj) throws Exception {
+	public static void check_acmt_AccountOpeningInstructionV03(AccountOpeningInstructionV03 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * ModifiedWithdrawalInvestmentPlan\InvestmentPlan\ModifiedCashSettlement\
+	 * InterestPaymentInstrument\DividendPercentage is not allowed.
+	 */
+	public static void check_acmt_AccountModificationInstructionV03(AccountModificationInstructionV03 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

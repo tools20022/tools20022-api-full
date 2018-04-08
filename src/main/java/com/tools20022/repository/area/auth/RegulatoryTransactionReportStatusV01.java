@@ -149,9 +149,9 @@ public class RegulatoryTransactionReportStatusV01 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportStatusOrIndividualTransactionStatusRule";
 			definition = "Either ReportStatus or IndividualTransactionStatus must be present, but not both.";
-			messageDefinition_lazy = () -> com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01.mmObject();
 			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01.mmReportStatus,
 					com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01.mmIndividualTransactionStatus);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01.mmObject();
 		}
 	};
 	@XmlElement(name = "Id", required = true)

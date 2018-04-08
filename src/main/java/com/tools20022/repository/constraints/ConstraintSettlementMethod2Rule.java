@@ -23,80 +23,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.msg.*;
 
 /**
- * If SettlementMethod is equal to COVE then: - SettlementAccount is not
- * allowed; - Reimbursement agent(s) must be present; - ClearingSystem is not
- * allowed.
+ * If SettlementMethod is equal to CLRG then: - SettlementAccount is not
+ * allowed; - ClearingSystem must be present.
  */
 public class ConstraintSettlementMethod2Rule {
 
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SettlementInformation1
-	 * SettlementInformation1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementMethod2Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If SettlementMethod is equal to COVE then: \n- SettlementAccount is not allowed;\n- Reimbursement agent(s) must be present;\n- ClearingSystem is not allowed."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SettlementInformation1> forSettlementInformation1 = new MMConstraint<SettlementInformation1>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementMethod2Rule";
-			definition = "If SettlementMethod is equal to COVE then: \n- SettlementAccount is not allowed;\n- Reimbursement agent(s) must be present;\n- ClearingSystem is not allowed.";
-			owner_lazy = () -> SettlementInformation1.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SettlementInformation1 obj) throws Exception {
-			checkSettlementInformation1(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SettlementInformation2
-	 * SettlementInformation2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementMethod2Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If SettlementMethod is equal to CLRG then: \n- SettlementAccount is not allowed;\n- ClearingSystem must be present."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SettlementInformation2> forSettlementInformation2 = new MMConstraint<SettlementInformation2>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementMethod2Rule";
-			definition = "If SettlementMethod is equal to CLRG then: \n- SettlementAccount is not allowed;\n- ClearingSystem must be present.";
-			owner_lazy = () -> SettlementInformation2.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SettlementInformation2 obj) throws Exception {
-			checkSettlementInformation2(obj);
-		}
-	};
 	/**
 	 * 
 	 <p>
@@ -134,6 +65,40 @@ public class ConstraintSettlementMethod2Rule {
 		@Override
 		public void executeValidator(SettlementInformation11 obj) throws Exception {
 			checkSettlementInformation11(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SettlementInformation2
+	 * SettlementInformation2}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementMethod2Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SettlementMethod is equal to CLRG then: \n- SettlementAccount is not allowed;\n- ClearingSystem must be present."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SettlementInformation2> forSettlementInformation2 = new MMConstraint<SettlementInformation2>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementMethod2Rule";
+			definition = "If SettlementMethod is equal to CLRG then: \n- SettlementAccount is not allowed;\n- ClearingSystem must be present.";
+			owner_lazy = () -> SettlementInformation2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementInformation2 obj) throws Exception {
+			checkSettlementInformation2(obj);
 		}
 	};
 	/**
@@ -181,6 +146,40 @@ public class ConstraintSettlementMethod2Rule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SettlementInformation1
+	 * SettlementInformation1}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementMethod2Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SettlementMethod is equal to COVE then: \n- SettlementAccount is not allowed;\n- Reimbursement agent(s) must be present;\n- ClearingSystem is not allowed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SettlementInformation1> forSettlementInformation1 = new MMConstraint<SettlementInformation1>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementMethod2Rule";
+			definition = "If SettlementMethod is equal to COVE then: \n- SettlementAccount is not allowed;\n- Reimbursement agent(s) must be present;\n- ClearingSystem is not allowed.";
+			owner_lazy = () -> SettlementInformation1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementInformation1 obj) throws Exception {
+			checkSettlementInformation1(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SettlementInformation9
 	 * SettlementInformation9}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
@@ -216,11 +215,10 @@ public class ConstraintSettlementMethod2Rule {
 	};
 
 	/**
-	 * If SettlementMethod is equal to COVE then: - SettlementAccount is not
-	 * allowed; - Reimbursement agent(s) must be present; - ClearingSystem is
-	 * not allowed.
+	 * If SettlementMethod is equal to CLRG then: - SettlementAccount is not
+	 * allowed; - ClearingSystem must be present.
 	 */
-	public static void checkSettlementInformation1(SettlementInformation1 obj) throws Exception {
+	public static void checkSettlementInformation11(SettlementInformation11 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -236,15 +234,16 @@ public class ConstraintSettlementMethod2Rule {
 	 * If SettlementMethod is equal to CLRG then: - SettlementAccount is not
 	 * allowed; - ClearingSystem must be present.
 	 */
-	public static void checkSettlementInformation11(SettlementInformation11 obj) throws Exception {
+	public static void checkSettlementInformation12(SettlementInformation12 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
 	/**
-	 * If SettlementMethod is equal to CLRG then: - SettlementAccount is not
-	 * allowed; - ClearingSystem must be present.
+	 * If SettlementMethod is equal to COVE then: - SettlementAccount is not
+	 * allowed; - Reimbursement agent(s) must be present; - ClearingSystem is
+	 * not allowed.
 	 */
-	public static void checkSettlementInformation12(SettlementInformation12 obj) throws Exception {
+	public static void checkSettlementInformation1(SettlementInformation1 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 

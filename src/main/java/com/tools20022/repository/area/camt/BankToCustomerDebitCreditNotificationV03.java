@@ -94,9 +94,9 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrNotificationPaginationRule#forBankToCustomerDebitCreditNotificationV03
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrNotificationPaginationRule#for_camt_BankToCustomerDebitCreditNotificationV03
  * ConstraintMessageOrNotificationPaginationRule.
- * forBankToCustomerDebitCreditNotificationV03}</li>
+ * for_camt_BankToCustomerDebitCreditNotificationV03}</li>
  * </ul>
  * </li>
  * <li>
@@ -269,7 +269,7 @@ public class BankToCustomerDebitCreditNotificationV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMessageOrNotificationPaginationRule.forBankToCustomerDebitCreditNotificationV03);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMessageOrNotificationPaginationRule.for_camt_BankToCustomerDebitCreditNotificationV03);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BankToCustomerDebitCreditNotificationV03";
 				definition = "Scope\r\nThe BankToCustomerDebitCreditNotification message is sent by the account servicer to an account owner or to a party authorised by the account owner to receive the message. It can be used to inform the account owner, or authorised party, of single or multiple debit and/or credit entries reported to the account.\r\nUsage\r\nThe BankToCustomerDebitCreditNotification message can contain reports for more than one account. It provides information for cash management and/or reconciliation.\r\nIt can be used to:\r\n- report pending and booked items;\r\n- notify one or more debit entries;\r\n- notify one or more credit entries;\r\n- notify a combination of debit and credit entries.\r\nIt can include underlying details of transactions that have been included in the entry.\r\nIt is possible that the receiver of the message is not the account owner, but a party entitled by the account owner to receive the account information (also known as recipient).\r\nIt does not contain balance information.";

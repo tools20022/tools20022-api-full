@@ -50,7 +50,7 @@ public class ConstraintDefaultOptionRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<AgentCANotificationAdviceV01> forAgentCANotificationAdviceV01 = new MMConstraint<AgentCANotificationAdviceV01>() {
+	public static final MMConstraint<AgentCANotificationAdviceV01> for_seev_AgentCANotificationAdviceV01 = new MMConstraint<AgentCANotificationAdviceV01>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefaultOptionRule";
@@ -60,7 +60,7 @@ public class ConstraintDefaultOptionRule {
 
 		@Override
 		public void executeValidator(AgentCANotificationAdviceV01 obj) throws Exception {
-			checkAgentCANotificationAdviceV01(obj);
+			check_seev_AgentCANotificationAdviceV01(obj);
 		}
 	};
 
@@ -70,7 +70,7 @@ public class ConstraintDefaultOptionRule {
 	 * Mandatory, then CorporateActionDetails/DefaultOptionNumber and
 	 * CorporateActionDetails/DefaultOptionType must be present. .
 	 */
-	public static void checkAgentCANotificationAdviceV01(AgentCANotificationAdviceV01 obj) throws Exception {
+	public static void check_seev_AgentCANotificationAdviceV01(AgentCANotificationAdviceV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

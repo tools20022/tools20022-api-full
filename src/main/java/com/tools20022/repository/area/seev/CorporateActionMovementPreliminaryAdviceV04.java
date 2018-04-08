@@ -152,36 +152,37 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintRateAndCorporateActionEventRule#forCorporateActionMovementPreliminaryAdviceV04
+ * {@linkplain com.tools20022.repository.constraints.ConstraintRateAndCorporateActionEventRule#for_seev_CorporateActionMovementPreliminaryAdviceV04
  * ConstraintRateAndCorporateActionEventRule.
- * forCorporateActionMovementPreliminaryAdviceV04}</li>
+ * for_seev_CorporateActionMovementPreliminaryAdviceV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintSafekeepingAccount1Rule#forCorporateActionMovementPreliminaryAdviceV04
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSafekeepingAccount1Rule#for_seev_CorporateActionMovementPreliminaryAdviceV04
  * ConstraintSafekeepingAccount1Rule.
- * forCorporateActionMovementPreliminaryAdviceV04}</li>
+ * for_seev_CorporateActionMovementPreliminaryAdviceV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintSafekeepingAccount2Rule#forCorporateActionMovementPreliminaryAdviceV04
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSafekeepingAccount2Rule#for_seev_CorporateActionMovementPreliminaryAdviceV04
  * ConstraintSafekeepingAccount2Rule.
- * forCorporateActionMovementPreliminaryAdviceV04}</li>
+ * for_seev_CorporateActionMovementPreliminaryAdviceV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintOtherEventRule#forCorporateActionMovementPreliminaryAdviceV04
- * ConstraintOtherEventRule.forCorporateActionMovementPreliminaryAdviceV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOtherEventRule#for_seev_CorporateActionMovementPreliminaryAdviceV04
+ * ConstraintOtherEventRule.for_seev_CorporateActionMovementPreliminaryAdviceV04
+ * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintIntermediateSecuritiesDistributionRule#forCorporateActionMovementPreliminaryAdviceV04
+ * {@linkplain com.tools20022.repository.constraints.ConstraintIntermediateSecuritiesDistributionRule#for_seev_CorporateActionMovementPreliminaryAdviceV04
  * ConstraintIntermediateSecuritiesDistributionRule.
- * forCorporateActionMovementPreliminaryAdviceV04}</li>
+ * for_seev_CorporateActionMovementPreliminaryAdviceV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#forCorporateActionMovementPreliminaryAdviceV04
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#for_seev_CorporateActionMovementPreliminaryAdviceV04
  * ConstraintCoexistenceCharacterSetXRule.
- * forCorporateActionMovementPreliminaryAdviceV04}</li>
+ * for_seev_CorporateActionMovementPreliminaryAdviceV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forCorporateActionMovementPreliminaryAdviceV04
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#for_seev_CorporateActionMovementPreliminaryAdviceV04
  * ConstraintCoexistenceIdentificationRule.
- * forCorporateActionMovementPreliminaryAdviceV04}</li>
+ * for_seev_CorporateActionMovementPreliminaryAdviceV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintMiniOddLotOfferUsageRule#forCorporateActionMovementPreliminaryAdviceV04
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMiniOddLotOfferUsageRule#for_seev_CorporateActionMovementPreliminaryAdviceV04
  * ConstraintMiniOddLotOfferUsageRule.
- * forCorporateActionMovementPreliminaryAdviceV04}</li>
+ * for_seev_CorporateActionMovementPreliminaryAdviceV04}</li>
  * </ul>
  * </li>
  * <li>
@@ -1512,14 +1513,14 @@ public class CorporateActionMovementPreliminaryAdviceV04 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRateAndCorporateActionEventRule.forCorporateActionMovementPreliminaryAdviceV04,
-						com.tools20022.repository.constraints.ConstraintSafekeepingAccount1Rule.forCorporateActionMovementPreliminaryAdviceV04,
-						com.tools20022.repository.constraints.ConstraintSafekeepingAccount2Rule.forCorporateActionMovementPreliminaryAdviceV04,
-						com.tools20022.repository.constraints.ConstraintOtherEventRule.forCorporateActionMovementPreliminaryAdviceV04,
-						com.tools20022.repository.constraints.ConstraintIntermediateSecuritiesDistributionRule.forCorporateActionMovementPreliminaryAdviceV04,
-						com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forCorporateActionMovementPreliminaryAdviceV04,
-						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionMovementPreliminaryAdviceV04,
-						com.tools20022.repository.constraints.ConstraintMiniOddLotOfferUsageRule.forCorporateActionMovementPreliminaryAdviceV04);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRateAndCorporateActionEventRule.for_seev_CorporateActionMovementPreliminaryAdviceV04,
+						com.tools20022.repository.constraints.ConstraintSafekeepingAccount1Rule.for_seev_CorporateActionMovementPreliminaryAdviceV04,
+						com.tools20022.repository.constraints.ConstraintSafekeepingAccount2Rule.for_seev_CorporateActionMovementPreliminaryAdviceV04,
+						com.tools20022.repository.constraints.ConstraintOtherEventRule.for_seev_CorporateActionMovementPreliminaryAdviceV04,
+						com.tools20022.repository.constraints.ConstraintIntermediateSecuritiesDistributionRule.for_seev_CorporateActionMovementPreliminaryAdviceV04,
+						com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.for_seev_CorporateActionMovementPreliminaryAdviceV04,
+						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.for_seev_CorporateActionMovementPreliminaryAdviceV04,
+						com.tools20022.repository.constraints.ConstraintMiniOddLotOfferUsageRule.for_seev_CorporateActionMovementPreliminaryAdviceV04);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionMovementPreliminaryAdviceV04";
 				definition = "Scope\nAn account servicer sends the CorporateActionMovementPreliminaryAdvice message to an account owner or its designated agent to pre-advise upcoming posting or reversal of securities and/or cash postings.\nUsage\nThe message may also be used to:\n- re-send a message previously sent (the sub-function of the message is Duplicate),\n- provide a third party with a copy of a message for information (the sub-function of the message is Copy),\n- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate),\nusing the relevant elements in the business application header (BAH).\nISO 15022 - 20022 COEXISTENCE\r\nThis ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment. The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows: “CoexistenceXxxxRule”.";

@@ -107,13 +107,13 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintQueryPeriodandTradeIdentificationRule1#forForeignExchangeTradeCaptureReportRequestV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintQueryPeriodandTradeIdentificationRule1#for_fxtr_ForeignExchangeTradeCaptureReportRequestV01
  * ConstraintQueryPeriodandTradeIdentificationRule1.
- * forForeignExchangeTradeCaptureReportRequestV01}</li>
+ * for_fxtr_ForeignExchangeTradeCaptureReportRequestV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintQueryPeriodandTradeIdentificationRule2#forForeignExchangeTradeCaptureReportRequestV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintQueryPeriodandTradeIdentificationRule2#for_fxtr_ForeignExchangeTradeCaptureReportRequestV01
  * ConstraintQueryPeriodandTradeIdentificationRule2.
- * forForeignExchangeTradeCaptureReportRequestV01}</li>
+ * for_fxtr_ForeignExchangeTradeCaptureReportRequestV01}</li>
  * </ul>
  * </li>
  * <li>
@@ -644,8 +644,8 @@ public class ForeignExchangeTradeCaptureReportRequestV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintQueryPeriodandTradeIdentificationRule1.forForeignExchangeTradeCaptureReportRequestV01,
-						com.tools20022.repository.constraints.ConstraintQueryPeriodandTradeIdentificationRule2.forForeignExchangeTradeCaptureReportRequestV01);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintQueryPeriodandTradeIdentificationRule1.for_fxtr_ForeignExchangeTradeCaptureReportRequestV01,
+						com.tools20022.repository.constraints.ConstraintQueryPeriodandTradeIdentificationRule2.for_fxtr_ForeignExchangeTradeCaptureReportRequestV01);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ForeignExchangeTradeCaptureReportRequestV01";
 				definition = "Scope\r\nThe ForeignExchangeTradeCaptureReportRequest message is sent by a trading member to the trading system for inquiry of trade capture report. \r\nUsage\r\nThe request is sent by the trading member to the trading system to inquire trade capture report. \r\nNote a capture request could be rejected.";

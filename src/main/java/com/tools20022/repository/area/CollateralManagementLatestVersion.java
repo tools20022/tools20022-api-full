@@ -101,11 +101,11 @@ public class CollateralManagementLatestVersion {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Collateral Management - Latest version - master";
 				definition = "Messages that support collateral management actions.";
+				code = "colr";
 				messageDefinition_lazy = () -> Arrays.asList(MarginCallRequestV04.mmObject(), InterestPaymentResponseV04.mmObject(), MarginCallDisputeNotificationV04.mmObject(), CollateralSubstitutionResponseV04.mmObject(),
 						MarginCallResponseV04.mmObject(), InterestPaymentStatementV04.mmObject(), CollateralManagementCancellationRequestV04.mmObject(), CollateralSubstitutionConfirmationV04.mmObject(),
 						InterestPaymentRequestV04.mmObject(), CollateralManagementCancellationStatusV04.mmObject(), CollateralSubstitutionRequestV04.mmObject(), CollateralAndExposureReportV03.mmObject(),
 						CollateralProposalResponseV05.mmObject(), CollateralProposalV05.mmObject());
-				code = "colr";
 			}
 		});
 		return mmObject_lazy.get();

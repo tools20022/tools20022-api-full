@@ -34,40 +34,6 @@ public class ConstraintBilateralLimitCounterparty2Rule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.RiskManagementLimitIdentificationDetails
-	 * RiskManagementLimitIdentificationDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BilateralLimitCounterparty2Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If Type is BILI or NELI or INBI, then BilateralLimitCounterpartyIdentification must be present."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<RiskManagementLimitIdentificationDetails> forRiskManagementLimitIdentificationDetails = new MMConstraint<RiskManagementLimitIdentificationDetails>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "BilateralLimitCounterparty2Rule";
-			definition = "If Type is BILI or NELI or INBI, then BilateralLimitCounterpartyIdentification must be present.";
-			owner_lazy = () -> RiskManagementLimitIdentificationDetails.mmObject();
-		}
-
-		@Override
-		public void executeValidator(RiskManagementLimitIdentificationDetails obj) throws Exception {
-			checkRiskManagementLimitIdentificationDetails(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.LimitIdentificationDetails1
 	 * LimitIdentificationDetails1}</li>
 	 * <li>
@@ -102,8 +68,8 @@ public class ConstraintBilateralLimitCounterparty2Rule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.LimitIdentificationDetails2
-	 * LimitIdentificationDetails2}</li>
+	 * {@linkplain com.tools20022.repository.msg.RiskManagementLimitIdentificationDetails
+	 * RiskManagementLimitIdentificationDetails}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -117,17 +83,56 @@ public class ConstraintBilateralLimitCounterparty2Rule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<LimitIdentificationDetails2> forLimitIdentificationDetails2 = new MMConstraint<LimitIdentificationDetails2>() {
+	public static final MMConstraint<RiskManagementLimitIdentificationDetails> forRiskManagementLimitIdentificationDetails = new MMConstraint<RiskManagementLimitIdentificationDetails>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BilateralLimitCounterparty2Rule";
 			definition = "If Type is BILI or NELI or INBI, then BilateralLimitCounterpartyIdentification must be present.";
-			owner_lazy = () -> LimitIdentificationDetails2.mmObject();
+			owner_lazy = () -> RiskManagementLimitIdentificationDetails.mmObject();
 		}
 
 		@Override
-		public void executeValidator(LimitIdentificationDetails2 obj) throws Exception {
-			checkLimitIdentificationDetails2(obj);
+		public void executeValidator(RiskManagementLimitIdentificationDetails obj) throws Exception {
+			checkRiskManagementLimitIdentificationDetails(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.LimitIdentification1
+	 * LimitIdentification1}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/BilateralLimitCounterpartyIdentification&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;OR&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/Type/Code&lt;/leftOperand&gt;&lt;rightOperand&gt;Bilateral&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/Type/Code&lt;/leftOperand&gt;&lt;rightOperand&gt;NetBilateral&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/Type/Code&lt;/leftOperand&gt;&lt;rightOperand&gt;IndirectBilateral&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BilateralLimitCounterparty2Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If Type is BILI or NELI or INBI, then BilateralLimitCounterpartyIdentification must be present."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<LimitIdentification1> forLimitIdentification1 = new MMConstraint<LimitIdentification1>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "BilateralLimitCounterparty2Rule";
+			definition = "If Type is BILI or NELI or INBI, then BilateralLimitCounterpartyIdentification must be present.";
+			owner_lazy = () -> LimitIdentification1.mmObject();
+			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/BilateralLimitCounterpartyIdentification</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/Type/Code</leftOperand><rightOperand>Bilateral</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/Type/Code</leftOperand><rightOperand>NetBilateral</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/Type/Code</leftOperand><rightOperand>IndirectBilateral</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(LimitIdentification1 obj) throws Exception {
+			checkLimitIdentification1(obj);
 		}
 	};
 	/**
@@ -170,12 +175,8 @@ public class ConstraintBilateralLimitCounterparty2Rule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.LimitIdentification1
-	 * LimitIdentification1}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
-	 * expression} =
-	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/BilateralLimitCounterpartyIdentification&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;OR&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/Type/Code&lt;/leftOperand&gt;&lt;rightOperand&gt;Bilateral&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/Type/Code&lt;/leftOperand&gt;&lt;rightOperand&gt;NetBilateral&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/Type/Code&lt;/leftOperand&gt;&lt;rightOperand&gt;IndirectBilateral&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
-	 * </li>
+	 * {@linkplain com.tools20022.repository.msg.LimitIdentificationDetails2
+	 * LimitIdentificationDetails2}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -189,28 +190,19 @@ public class ConstraintBilateralLimitCounterparty2Rule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<LimitIdentification1> forLimitIdentification1 = new MMConstraint<LimitIdentification1>() {
+	public static final MMConstraint<LimitIdentificationDetails2> forLimitIdentificationDetails2 = new MMConstraint<LimitIdentificationDetails2>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BilateralLimitCounterparty2Rule";
 			definition = "If Type is BILI or NELI or INBI, then BilateralLimitCounterpartyIdentification must be present.";
-			owner_lazy = () -> LimitIdentification1.mmObject();
-			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/BilateralLimitCounterpartyIdentification</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/Type/Code</leftOperand><rightOperand>Bilateral</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/Type/Code</leftOperand><rightOperand>NetBilateral</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/Type/Code</leftOperand><rightOperand>IndirectBilateral</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+			owner_lazy = () -> LimitIdentificationDetails2.mmObject();
 		}
 
 		@Override
-		public void executeValidator(LimitIdentification1 obj) throws Exception {
-			checkLimitIdentification1(obj);
+		public void executeValidator(LimitIdentificationDetails2 obj) throws Exception {
+			checkLimitIdentificationDetails2(obj);
 		}
 	};
-
-	/**
-	 * If Type is BILI or NELI or INBI, then
-	 * BilateralLimitCounterpartyIdentification must be present.
-	 */
-	public static void checkRiskManagementLimitIdentificationDetails(RiskManagementLimitIdentificationDetails obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
 
 	/**
 	 * If Type is BILI or NELI or INBI, then
@@ -224,7 +216,15 @@ public class ConstraintBilateralLimitCounterparty2Rule {
 	 * If Type is BILI or NELI or INBI, then
 	 * BilateralLimitCounterpartyIdentification must be present.
 	 */
-	public static void checkLimitIdentificationDetails2(LimitIdentificationDetails2 obj) throws Exception {
+	public static void checkRiskManagementLimitIdentificationDetails(RiskManagementLimitIdentificationDetails obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If Type is BILI or NELI or INBI, then
+	 * BilateralLimitCounterpartyIdentification must be present.
+	 */
+	public static void checkLimitIdentification1(LimitIdentification1 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -240,7 +240,7 @@ public class ConstraintBilateralLimitCounterparty2Rule {
 	 * If Type is BILI or NELI or INBI, then
 	 * BilateralLimitCounterpartyIdentification must be present.
 	 */
-	public static void checkLimitIdentification1(LimitIdentification1 obj) throws Exception {
+	public static void checkLimitIdentificationDetails2(LimitIdentificationDetails2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

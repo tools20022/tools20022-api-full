@@ -20,50 +20,13 @@ package com.tools20022.repository.constraints;
 import com.tools20022.core.repo.NotImplementedConstraintException;
 import com.tools20022.metamodel.MMConstraint;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.pacs.PaymentCancellationRequestV01;
-import com.tools20022.repository.area.pain.PaymentCancellationRequestV01;
 
 /**
- * If GroupHeader/GroupCancellation is true, then
- * OriginalGroupInformation/CancellationReasonInformation/CancellationReason
- * must present.
+ * If GroupHeader/GroupCancellation is false, then NumberOfTransactions must
+ * equal the number of occurrences of TransactionInformation.
  */
 public class ConstraintGroupCancellation2Rule {
 
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.pain.PaymentCancellationRequestV01
-	 * PaymentCancellationRequestV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "GroupCancellation2Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If GroupHeader/GroupCancellation is true, then OriginalGroupInformation/CancellationReasonInformation/CancellationReason must present."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<com.tools20022.repository.area.pain.PaymentCancellationRequestV01> forPaymentCancellationRequestV01 = new MMConstraint<com.tools20022.repository.area.pain.PaymentCancellationRequestV01>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "GroupCancellation2Rule";
-			definition = "If GroupHeader/GroupCancellation is true, then OriginalGroupInformation/CancellationReasonInformation/CancellationReason must present.";
-			owner_lazy = () -> com.tools20022.repository.area.pain.PaymentCancellationRequestV01.mmObject();
-		}
-
-		@Override
-		public void executeValidator(com.tools20022.repository.area.pain.PaymentCancellationRequestV01 obj) throws Exception {
-			checkPaymentCancellationRequestV01(obj);
-		}
-	};
 	/**
 	 * 
 	 <p>
@@ -85,7 +48,7 @@ public class ConstraintGroupCancellation2Rule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<com.tools20022.repository.area.pacs.PaymentCancellationRequestV01> forPaymentCancellationRequestV01 = new MMConstraint<com.tools20022.repository.area.pacs.PaymentCancellationRequestV01>() {
+	public static final MMConstraint<com.tools20022.repository.area.pacs.PaymentCancellationRequestV01> for_pacs_PaymentCancellationRequestV01 = new MMConstraint<com.tools20022.repository.area.pacs.PaymentCancellationRequestV01>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupCancellation2Rule";
@@ -95,24 +58,58 @@ public class ConstraintGroupCancellation2Rule {
 
 		@Override
 		public void executeValidator(com.tools20022.repository.area.pacs.PaymentCancellationRequestV01 obj) throws Exception {
-			checkPaymentCancellationRequestV01(obj);
+			check_pacs_PaymentCancellationRequestV01(obj);
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.pain.PaymentCancellationRequestV01
+	 * PaymentCancellationRequestV01}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "GroupCancellation2Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If GroupHeader/GroupCancellation is true, then OriginalGroupInformation/CancellationReasonInformation/CancellationReason must present."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<com.tools20022.repository.area.pain.PaymentCancellationRequestV01> for_pain_PaymentCancellationRequestV01 = new MMConstraint<com.tools20022.repository.area.pain.PaymentCancellationRequestV01>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "GroupCancellation2Rule";
+			definition = "If GroupHeader/GroupCancellation is true, then OriginalGroupInformation/CancellationReasonInformation/CancellationReason must present.";
+			owner_lazy = () -> com.tools20022.repository.area.pain.PaymentCancellationRequestV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(com.tools20022.repository.area.pain.PaymentCancellationRequestV01 obj) throws Exception {
+			check_pain_PaymentCancellationRequestV01(obj);
+		}
+	};
+
+	/**
+	 * If GroupHeader/GroupCancellation is false, then NumberOfTransactions must
+	 * equal the number of occurrences of TransactionInformation.
+	 */
+	public static void check_pacs_PaymentCancellationRequestV01(com.tools20022.repository.area.pacs.PaymentCancellationRequestV01 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
 
 	/**
 	 * If GroupHeader/GroupCancellation is true, then
 	 * OriginalGroupInformation/CancellationReasonInformation/CancellationReason
 	 * must present.
 	 */
-	public static void checkPaymentCancellationRequestV01(com.tools20022.repository.area.pain.PaymentCancellationRequestV01 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If GroupHeader/GroupCancellation is false, then NumberOfTransactions must
-	 * equal the number of occurrences of TransactionInformation.
-	 */
-	public static void checkPaymentCancellationRequestV01(com.tools20022.repository.area.pacs.PaymentCancellationRequestV01 obj) throws Exception {
+	public static void check_pain_PaymentCancellationRequestV01(com.tools20022.repository.area.pain.PaymentCancellationRequestV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

@@ -119,15 +119,17 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#forPortfolioTransferNotificationV01
- * ConstraintCoexistenceCharacterSetXRule.forPortfolioTransferNotificationV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#for_sese_PortfolioTransferNotificationV01
+ * ConstraintCoexistenceCharacterSetXRule.
+ * for_sese_PortfolioTransferNotificationV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forPortfolioTransferNotificationV01
- * ConstraintCoexistenceIdentificationRule.forPortfolioTransferNotificationV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#for_sese_PortfolioTransferNotificationV01
+ * ConstraintCoexistenceIdentificationRule.
+ * for_sese_PortfolioTransferNotificationV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forPortfolioTransferNotificationV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#for_sese_PortfolioTransferNotificationV01
  * ConstraintSecuritiesMarketPracticeGroupGuideline.
- * forPortfolioTransferNotificationV01}</li>
+ * for_sese_PortfolioTransferNotificationV01}</li>
  * </ul>
  * </li>
  * <li>
@@ -534,9 +536,9 @@ public class PortfolioTransferNotificationV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forPortfolioTransferNotificationV01,
-						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forPortfolioTransferNotificationV01,
-						com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forPortfolioTransferNotificationV01);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.for_sese_PortfolioTransferNotificationV01,
+						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.for_sese_PortfolioTransferNotificationV01,
+						com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.for_sese_PortfolioTransferNotificationV01);
 				semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, "MT 586, Seq A :23G:NEWM/PORT"));
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PortfolioTransferNotificationV01";

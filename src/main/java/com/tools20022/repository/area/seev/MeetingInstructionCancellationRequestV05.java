@@ -88,9 +88,9 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCancellation3Guideline#forMeetingInstructionCancellationRequestV05
- * ConstraintCancellation3Guideline.forMeetingInstructionCancellationRequestV05}
- * </li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCancellation3Guideline#for_seev_MeetingInstructionCancellationRequestV05
+ * ConstraintCancellation3Guideline.
+ * for_seev_MeetingInstructionCancellationRequestV05}</li>
  * </ul>
  * </li>
  * <li>
@@ -375,7 +375,7 @@ public class MeetingInstructionCancellationRequestV05 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCancellation3Guideline.forMeetingInstructionCancellationRequestV05);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCancellation3Guideline.for_seev_MeetingInstructionCancellationRequestV05);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MeetingInstructionCancellationRequestV05";
 				definition = "Scope\r\nThe MeetingInstructionCancellationRequest message is sent by the same party that sent the MeetingInstruction message. It is sent to request the cancellation of all instructions included in the original the MeetingInstruction message.\r\nUsage\r\nThis message must be answered by a MeetingInstructionStatus message. Some instructions in the previously sent MeetingInstruction message may have already been executed and cannot be cancelled. This information should appear clearly in the status message.\r\nThis message definition is intended for use with the Business Application Header (head.001.001.01).";

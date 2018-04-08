@@ -49,7 +49,7 @@ public class ConstraintStandingInstructionCancellationRequestStatusRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<AgentCAStandingInstructionStatusAdviceV01> forAgentCAStandingInstructionStatusAdviceV01 = new MMConstraint<AgentCAStandingInstructionStatusAdviceV01>() {
+	public static final MMConstraint<AgentCAStandingInstructionStatusAdviceV01> for_seev_AgentCAStandingInstructionStatusAdviceV01 = new MMConstraint<AgentCAStandingInstructionStatusAdviceV01>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingInstructionCancellationRequestStatusRule";
@@ -59,7 +59,7 @@ public class ConstraintStandingInstructionCancellationRequestStatusRule {
 
 		@Override
 		public void executeValidator(AgentCAStandingInstructionStatusAdviceV01 obj) throws Exception {
-			checkAgentCAStandingInstructionStatusAdviceV01(obj);
+			check_seev_AgentCAStandingInstructionStatusAdviceV01(obj);
 		}
 	};
 
@@ -68,7 +68,7 @@ public class ConstraintStandingInstructionCancellationRequestStatusRule {
 	 * present, then StandingInstructionCancellationRequestStatus must be
 	 * present.
 	 */
-	public static void checkAgentCAStandingInstructionStatusAdviceV01(AgentCAStandingInstructionStatusAdviceV01 obj) throws Exception {
+	public static void check_seev_AgentCAStandingInstructionStatusAdviceV01(AgentCAStandingInstructionStatusAdviceV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

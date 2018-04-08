@@ -67,8 +67,8 @@ public class PaymentsRemittanceAdviceArchive {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Payments Remittance Advice - Archive - master";
 				definition = "Messages that support communication between creditors and debtors regarding remittance details associated with payments.";
-				messageDefinition_lazy = () -> Arrays.asList(RemittanceAdviceV01.mmObject());
 				code = "remt";
+				messageDefinition_lazy = () -> Arrays.asList(RemittanceAdviceV01.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

@@ -117,8 +117,9 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintStatusPresenceRule#forSecuritiesTradeConfirmationStatusAdviceV02
- * ConstraintStatusPresenceRule.forSecuritiesTradeConfirmationStatusAdviceV02}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintStatusPresenceRule#for_setr_SecuritiesTradeConfirmationStatusAdviceV02
+ * ConstraintStatusPresenceRule.
+ * for_setr_SecuritiesTradeConfirmationStatusAdviceV02}</li>
  * </ul>
  * </li>
  * <li>
@@ -828,7 +829,7 @@ public class SecuritiesTradeConfirmationStatusAdviceV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintStatusPresenceRule.forSecuritiesTradeConfirmationStatusAdviceV02);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintStatusPresenceRule.for_setr_SecuritiesTradeConfirmationStatusAdviceV02);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTradeConfirmationStatusAdviceV02";
 				definition = "Scope\r\nThis message is sent from Central Matching Utility (CMU) to an executing party or an instructing party to advise the status of the SecuritiesTradeConfirmation message previously sent by the party. The status may be a processing, pending processing, affirmed or disaffirmed, cancel or replacement by an instructing party, a custodian or an affirming party, internal matching, and/or matching status.\r\nThe instructing party is typically the investment manager or an intermediary system/vendor communicating on behalf of the investment manager or of other categories of investors. The executing party is typically the broker/dealer or an intermediary system/vendor communicating on behalf of the broker/dealer.\r\nThe ISO 20022 Business Application Header must be used\r\nUsage\r\nInitiator: In central matching the Initiator is the Central Matching Utility.\r\nRespondent: no response is needed by the recipient of the message.";

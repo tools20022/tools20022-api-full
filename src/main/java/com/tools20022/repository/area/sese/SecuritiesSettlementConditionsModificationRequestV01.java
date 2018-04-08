@@ -124,17 +124,17 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#forSecuritiesSettlementConditionsModificationRequestV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#for_sese_SecuritiesSettlementConditionsModificationRequestV01
  * ConstraintCoexistenceCharacterSetXRule.
- * forSecuritiesSettlementConditionsModificationRequestV01}</li>
+ * for_sese_SecuritiesSettlementConditionsModificationRequestV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forSecuritiesSettlementConditionsModificationRequestV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#for_sese_SecuritiesSettlementConditionsModificationRequestV01
  * ConstraintCoexistenceIdentificationRule.
- * forSecuritiesSettlementConditionsModificationRequestV01}</li>
+ * for_sese_SecuritiesSettlementConditionsModificationRequestV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesSettlementConditionsModificationRequestV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#for_sese_SecuritiesSettlementConditionsModificationRequestV01
  * ConstraintSecuritiesMarketPracticeGroupGuideline.
- * forSecuritiesSettlementConditionsModificationRequestV01}</li>
+ * for_sese_SecuritiesSettlementConditionsModificationRequestV01}</li>
  * </ul>
  * </li>
  * <li>
@@ -541,9 +541,9 @@ public class SecuritiesSettlementConditionsModificationRequestV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesSettlementConditionsModificationRequestV01,
-						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesSettlementConditionsModificationRequestV01,
-						com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementConditionsModificationRequestV01);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.for_sese_SecuritiesSettlementConditionsModificationRequestV01,
+						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.for_sese_SecuritiesSettlementConditionsModificationRequestV01,
+						com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.for_sese_SecuritiesSettlementConditionsModificationRequestV01);
 				semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, "MT 530"));
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesSettlementConditionsModificationRequestV01";

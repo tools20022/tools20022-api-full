@@ -31,10 +31,44 @@ import com.tools20022.repository.msg.CorporateActionRate5;
  * - RateTypeAndAmountAndRateStatus/RateType/Code values must all be different
  * in each occurrence of NettDividendRate.<br>
  * <br>
- * (MT 566 NVR C3 and C4).
+ * (MT 564 NVR C8 and C9).
  */
 public class ConstraintNetDividendRateRule {
 
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate12
+	 * CorporateActionRate12}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NetDividendRateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If NettDividendRate is repeated, then:\r\n- NettDividendRate/RateTypeAndAmountAndRateStatus must be present and\r\n- RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NettDividendRate.\r\n\r\n(MT 564 NVR C8 and C9)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionRate12> forCorporateActionRate12 = new MMConstraint<CorporateActionRate12>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NetDividendRateRule";
+			definition = "If NettDividendRate is repeated, then:\r\n- NettDividendRate/RateTypeAndAmountAndRateStatus must be present and\r\n- RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NettDividendRate.\r\n\r\n(MT 564 NVR C8 and C9).";
+			owner_lazy = () -> CorporateActionRate12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate12 obj) throws Exception {
+			checkCorporateActionRate12(obj);
+		}
+	};
 	/**
 	 * 
 	 <p>
@@ -67,40 +101,6 @@ public class ConstraintNetDividendRateRule {
 		@Override
 		public void executeValidator(CorporateActionRate4 obj) throws Exception {
 			checkCorporateActionRate4(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate10
-	 * CorporateActionRate10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "NetDividendRateRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If NettDividendRate is repeated, then:\r\n- NettDividendRate/RateTypeAndAmountAndRateStatus must be present and\r\n- RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NettDividendRate.\r\n\r\n(MT 566 NVR C3 and C4)."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CorporateActionRate10> forCorporateActionRate10 = new MMConstraint<CorporateActionRate10>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "NetDividendRateRule";
-			definition = "If NettDividendRate is repeated, then:\r\n- NettDividendRate/RateTypeAndAmountAndRateStatus must be present and\r\n- RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NettDividendRate.\r\n\r\n(MT 566 NVR C3 and C4).";
-			owner_lazy = () -> CorporateActionRate10.mmObject();
-		}
-
-		@Override
-		public void executeValidator(CorporateActionRate10 obj) throws Exception {
-			checkCorporateActionRate10(obj);
 		}
 	};
 	/**
@@ -143,8 +143,8 @@ public class ConstraintNetDividendRateRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate12
-	 * CorporateActionRate12}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate10
+	 * CorporateActionRate10}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -154,21 +154,21 @@ public class ConstraintNetDividendRateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If NettDividendRate is repeated, then:\r\n- NettDividendRate/RateTypeAndAmountAndRateStatus must be present and\r\n- RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NettDividendRate.\r\n\r\n(MT 564 NVR C8 and C9)."
+	 * "If NettDividendRate is repeated, then:\r\n- NettDividendRate/RateTypeAndAmountAndRateStatus must be present and\r\n- RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NettDividendRate.\r\n\r\n(MT 566 NVR C3 and C4)."
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<CorporateActionRate12> forCorporateActionRate12 = new MMConstraint<CorporateActionRate12>() {
+	public static final MMConstraint<CorporateActionRate10> forCorporateActionRate10 = new MMConstraint<CorporateActionRate10>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetDividendRateRule";
-			definition = "If NettDividendRate is repeated, then:\r\n- NettDividendRate/RateTypeAndAmountAndRateStatus must be present and\r\n- RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NettDividendRate.\r\n\r\n(MT 564 NVR C8 and C9).";
-			owner_lazy = () -> CorporateActionRate12.mmObject();
+			definition = "If NettDividendRate is repeated, then:\r\n- NettDividendRate/RateTypeAndAmountAndRateStatus must be present and\r\n- RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NettDividendRate.\r\n\r\n(MT 566 NVR C3 and C4).";
+			owner_lazy = () -> CorporateActionRate10.mmObject();
 		}
 
 		@Override
-		public void executeValidator(CorporateActionRate12 obj) throws Exception {
-			checkCorporateActionRate12(obj);
+		public void executeValidator(CorporateActionRate10 obj) throws Exception {
+			checkCorporateActionRate10(obj);
 		}
 	};
 
@@ -178,9 +178,9 @@ public class ConstraintNetDividendRateRule {
 	 * - RateTypeAndAmountAndRateStatus/RateType/Code values must all be
 	 * different in each occurrence of NettDividendRate.<br>
 	 * <br>
-	 * (MT 566 NVR C3 and C4).
+	 * (MT 564 NVR C8 and C9).
 	 */
-	public static void checkCorporateActionRate4(CorporateActionRate4 obj) throws Exception {
+	public static void checkCorporateActionRate12(CorporateActionRate12 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -192,7 +192,7 @@ public class ConstraintNetDividendRateRule {
 	 * <br>
 	 * (MT 566 NVR C3 and C4).
 	 */
-	public static void checkCorporateActionRate10(CorporateActionRate10 obj) throws Exception {
+	public static void checkCorporateActionRate4(CorporateActionRate4 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -214,9 +214,9 @@ public class ConstraintNetDividendRateRule {
 	 * - RateTypeAndAmountAndRateStatus/RateType/Code values must all be
 	 * different in each occurrence of NettDividendRate.<br>
 	 * <br>
-	 * (MT 564 NVR C8 and C9).
+	 * (MT 566 NVR C3 and C4).
 	 */
-	public static void checkCorporateActionRate12(CorporateActionRate12 obj) throws Exception {
+	public static void checkCorporateActionRate10(CorporateActionRate10 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

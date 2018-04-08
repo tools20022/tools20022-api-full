@@ -77,11 +77,11 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintGrouping1Rule#forCreditorPaymentActivationRequestV02
- * ConstraintGrouping1Rule.forCreditorPaymentActivationRequestV02}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGrouping1Rule#for_pain_CreditorPaymentActivationRequestV02
+ * ConstraintGrouping1Rule.for_pain_CreditorPaymentActivationRequestV02}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintGrouping2Rule#forCreditorPaymentActivationRequestV02
- * ConstraintGrouping2Rule.forCreditorPaymentActivationRequestV02}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGrouping2Rule#for_pain_CreditorPaymentActivationRequestV02
+ * ConstraintGrouping2Rule.for_pain_CreditorPaymentActivationRequestV02}</li>
  * </ul>
  * </li>
  * <li>
@@ -258,8 +258,8 @@ public class CreditorPaymentActivationRequestV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGrouping1Rule.forCreditorPaymentActivationRequestV02,
-						com.tools20022.repository.constraints.ConstraintGrouping2Rule.forCreditorPaymentActivationRequestV02);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGrouping1Rule.for_pain_CreditorPaymentActivationRequestV02,
+						com.tools20022.repository.constraints.ConstraintGrouping2Rule.for_pain_CreditorPaymentActivationRequestV02);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CreditorPaymentActivationRequestV02";
 				definition = "Scope\r\nThis message is sent by the Creditor sending party to the Debtor receiving party, directly or through agents.\r\nIt is used to initiate a creditor payment activation request.";

@@ -109,13 +109,13 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#forSecuritiesSettlementTransactionAuditTrailReportV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#for_semt_SecuritiesSettlementTransactionAuditTrailReportV01
  * ConstraintCoexistenceCharacterSetXRule.
- * forSecuritiesSettlementTransactionAuditTrailReportV01}</li>
+ * for_semt_SecuritiesSettlementTransactionAuditTrailReportV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forSecuritiesSettlementTransactionAuditTrailReportV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#for_semt_SecuritiesSettlementTransactionAuditTrailReportV01
  * ConstraintCoexistenceIdentificationRule.
- * forSecuritiesSettlementTransactionAuditTrailReportV01}</li>
+ * for_semt_SecuritiesSettlementTransactionAuditTrailReportV01}</li>
  * </ul>
  * </li>
  * <li>
@@ -481,8 +481,8 @@ public class SecuritiesSettlementTransactionAuditTrailReportV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesSettlementTransactionAuditTrailReportV01,
-						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesSettlementTransactionAuditTrailReportV01);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.for_semt_SecuritiesSettlementTransactionAuditTrailReportV01,
+						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.for_semt_SecuritiesSettlementTransactionAuditTrailReportV01);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesSettlementTransactionAuditTrailReportV01";
 				definition = "Scope\n\nThis message is sent by the Market Infrastructure to the CSD to advise of the history of all the statuses, modifications, replacement and cancellation of a specific transaction during its whole life cycle when the instructing party is a direct participant to the Settlement Infrastructure.\n\n\nUsage\n\nThe message may also be used to: \n\n- re-send a message sent by the market infrastructure to the direct participant,\n\n- provide a third party with a copy of a message being sent by the market infrastructure for information,\n\n- re-send to a third party a copy of a message being sent by the market infrastructure for information\nusing the relevant elements in the Business Application Header.\n\nISO 15022 - 20022 Coexistence\nThis ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment. The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows: “CoexistenceXxxxRule”.";

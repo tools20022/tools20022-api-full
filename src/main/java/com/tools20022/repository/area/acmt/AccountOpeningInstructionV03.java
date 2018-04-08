@@ -116,30 +116,30 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintInvestmentAccountIdentificationRule#forAccountOpeningInstructionV03
- * ConstraintInvestmentAccountIdentificationRule.forAccountOpeningInstructionV03
- * }</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInvestmentAccountIdentificationRule#for_acmt_AccountOpeningInstructionV03
+ * ConstraintInvestmentAccountIdentificationRule.
+ * for_acmt_AccountOpeningInstructionV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintUnitRule#forAccountOpeningInstructionV03
- * ConstraintUnitRule.forAccountOpeningInstructionV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintUnitRule#for_acmt_AccountOpeningInstructionV03
+ * ConstraintUnitRule.for_acmt_AccountOpeningInstructionV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintDividendPercentageRule1#forAccountOpeningInstructionV03
- * ConstraintDividendPercentageRule1.forAccountOpeningInstructionV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDividendPercentageRule1#for_acmt_AccountOpeningInstructionV03
+ * ConstraintDividendPercentageRule1.for_acmt_AccountOpeningInstructionV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintDividendPercentageRule2#forAccountOpeningInstructionV03
- * ConstraintDividendPercentageRule2.forAccountOpeningInstructionV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDividendPercentageRule2#for_acmt_AccountOpeningInstructionV03
+ * ConstraintDividendPercentageRule2.for_acmt_AccountOpeningInstructionV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintDividendPercentageRule3#forAccountOpeningInstructionV03
- * ConstraintDividendPercentageRule3.forAccountOpeningInstructionV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDividendPercentageRule3#for_acmt_AccountOpeningInstructionV03
+ * ConstraintDividendPercentageRule3.for_acmt_AccountOpeningInstructionV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintDividendPercentageRule4#forAccountOpeningInstructionV03
- * ConstraintDividendPercentageRule4.forAccountOpeningInstructionV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDividendPercentageRule4#for_acmt_AccountOpeningInstructionV03
+ * ConstraintDividendPercentageRule4.for_acmt_AccountOpeningInstructionV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintDividendPercentageRule5#forAccountOpeningInstructionV03
- * ConstraintDividendPercentageRule5.forAccountOpeningInstructionV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDividendPercentageRule5#for_acmt_AccountOpeningInstructionV03
+ * ConstraintDividendPercentageRule5.for_acmt_AccountOpeningInstructionV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintDividendPercentageRule6#forAccountOpeningInstructionV03
- * ConstraintDividendPercentageRule6.forAccountOpeningInstructionV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDividendPercentageRule6#for_acmt_AccountOpeningInstructionV03
+ * ConstraintDividendPercentageRule6.for_acmt_AccountOpeningInstructionV03}</li>
  * </ul>
  * </li>
  * <li>
@@ -953,11 +953,13 @@ public class AccountOpeningInstructionV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestmentAccountIdentificationRule.forAccountOpeningInstructionV03,
-						com.tools20022.repository.constraints.ConstraintUnitRule.forAccountOpeningInstructionV03, com.tools20022.repository.constraints.ConstraintDividendPercentageRule1.forAccountOpeningInstructionV03,
-						com.tools20022.repository.constraints.ConstraintDividendPercentageRule2.forAccountOpeningInstructionV03, com.tools20022.repository.constraints.ConstraintDividendPercentageRule3.forAccountOpeningInstructionV03,
-						com.tools20022.repository.constraints.ConstraintDividendPercentageRule4.forAccountOpeningInstructionV03, com.tools20022.repository.constraints.ConstraintDividendPercentageRule5.forAccountOpeningInstructionV03,
-						com.tools20022.repository.constraints.ConstraintDividendPercentageRule6.forAccountOpeningInstructionV03);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestmentAccountIdentificationRule.for_acmt_AccountOpeningInstructionV03,
+						com.tools20022.repository.constraints.ConstraintUnitRule.for_acmt_AccountOpeningInstructionV03, com.tools20022.repository.constraints.ConstraintDividendPercentageRule1.for_acmt_AccountOpeningInstructionV03,
+						com.tools20022.repository.constraints.ConstraintDividendPercentageRule2.for_acmt_AccountOpeningInstructionV03,
+						com.tools20022.repository.constraints.ConstraintDividendPercentageRule3.for_acmt_AccountOpeningInstructionV03,
+						com.tools20022.repository.constraints.ConstraintDividendPercentageRule4.for_acmt_AccountOpeningInstructionV03,
+						com.tools20022.repository.constraints.ConstraintDividendPercentageRule5.for_acmt_AccountOpeningInstructionV03,
+						com.tools20022.repository.constraints.ConstraintDividendPercentageRule6.for_acmt_AccountOpeningInstructionV03);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountOpeningInstructionV03";
 				definition = "Scope\r\nAn account owner, for example, an investor or its designated agent sends the AccountOpeningInstruction message to the account servicer, for example, a registrar, transfer agent or custodian to instruct the opening of an account or the opening of an account and establishing an investment plan.\r\nUsage\r\nThe AccountOpeningInstruction is used to open an account directly or indirectly with the account servicer or an intermediary.\r\nIn some markets, for example, Australia, and for some products in the United Kingdom, a first order (also known as a deposit instruction) is placed at the same time as the account opening. To cater for this scenario, an order message can be linked (via references in the message) to the AccountOpeningInstruction message when needed.\r\nExecution of the AccountOpeningInstruction is confirmed via an AccountDetailsConfirmation message.";

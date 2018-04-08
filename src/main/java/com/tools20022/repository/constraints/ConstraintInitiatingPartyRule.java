@@ -49,7 +49,7 @@ public class ConstraintInitiatingPartyRule {
 	 * definition} = "GroupHeader/InitiatingParty is not allowed.\n\n."</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<PaymentCancellationRequestV01> forPaymentCancellationRequestV01 = new MMConstraint<PaymentCancellationRequestV01>() {
+	public static final MMConstraint<PaymentCancellationRequestV01> for_pacs_PaymentCancellationRequestV01 = new MMConstraint<PaymentCancellationRequestV01>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitiatingPartyRule";
@@ -59,7 +59,7 @@ public class ConstraintInitiatingPartyRule {
 
 		@Override
 		public void executeValidator(PaymentCancellationRequestV01 obj) throws Exception {
-			checkPaymentCancellationRequestV01(obj);
+			check_pacs_PaymentCancellationRequestV01(obj);
 		}
 	};
 	/**
@@ -81,7 +81,7 @@ public class ConstraintInitiatingPartyRule {
 	 * definition} = "GroupHeader/InitiatingParty is not allowed.\n\n."</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<PaymentStatusReportV02> forPaymentStatusReportV02 = new MMConstraint<PaymentStatusReportV02>() {
+	public static final MMConstraint<PaymentStatusReportV02> for_pacs_PaymentStatusReportV02 = new MMConstraint<PaymentStatusReportV02>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitiatingPartyRule";
@@ -91,7 +91,7 @@ public class ConstraintInitiatingPartyRule {
 
 		@Override
 		public void executeValidator(PaymentStatusReportV02 obj) throws Exception {
-			checkPaymentStatusReportV02(obj);
+			check_pacs_PaymentStatusReportV02(obj);
 		}
 	};
 
@@ -100,7 +100,7 @@ public class ConstraintInitiatingPartyRule {
 	 * 
 	 * .
 	 */
-	public static void checkPaymentCancellationRequestV01(PaymentCancellationRequestV01 obj) throws Exception {
+	public static void check_pacs_PaymentCancellationRequestV01(PaymentCancellationRequestV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -109,7 +109,7 @@ public class ConstraintInitiatingPartyRule {
 	 * 
 	 * .
 	 */
-	public static void checkPaymentStatusReportV02(PaymentStatusReportV02 obj) throws Exception {
+	public static void check_pacs_PaymentStatusReportV02(PaymentStatusReportV02 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

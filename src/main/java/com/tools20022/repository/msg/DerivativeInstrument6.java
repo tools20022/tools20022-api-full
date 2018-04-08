@@ -188,8 +188,8 @@ public class DerivativeInstrument6 {
 	 * constraint} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintMultiplierRule#forPriceMultiplier
-	 * ConstraintMultiplierRule.forPriceMultiplier}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintMultiplierRule#forDerivativeInstrument6_PriceMultiplier
+	 * ConstraintMultiplierRule.forDerivativeInstrument6_PriceMultiplier}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -211,7 +211,7 @@ public class DerivativeInstrument6 {
 			componentContext_lazy = () -> com.tools20022.repository.msg.DerivativeInstrument6.mmObject();
 			isDerived = false;
 			xmlTag = "PricMltplr";
-			constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMultiplierRule.forPriceMultiplier);
+			constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMultiplierRule.forDerivativeInstrument6_PriceMultiplier);
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceMultiplier";
 			definition = "Number of units of the underlying instrument represented by a single derivative contract.\r\n\r\nFor a future or option on an index, the amount per index point.";

@@ -147,29 +147,29 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementAmountRule#forSecuritiesSettlementTransactionAllegementNotificationV07
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementAmountRule#for_sese_SecuritiesSettlementTransactionAllegementNotificationV07
  * ConstraintSettlementAmountRule.
- * forSecuritiesSettlementTransactionAllegementNotificationV07}</li>
+ * for_sese_SecuritiesSettlementTransactionAllegementNotificationV07}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintReceivingParty1Rule#forSecuritiesSettlementTransactionAllegementNotificationV07
+ * {@linkplain com.tools20022.repository.constraints.ConstraintReceivingParty1Rule#for_sese_SecuritiesSettlementTransactionAllegementNotificationV07
  * ConstraintReceivingParty1Rule.
- * forSecuritiesSettlementTransactionAllegementNotificationV07}</li>
+ * for_sese_SecuritiesSettlementTransactionAllegementNotificationV07}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintDeliveringParty1Rule#forSecuritiesSettlementTransactionAllegementNotificationV07
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDeliveringParty1Rule#for_sese_SecuritiesSettlementTransactionAllegementNotificationV07
  * ConstraintDeliveringParty1Rule.
- * forSecuritiesSettlementTransactionAllegementNotificationV07}</li>
+ * for_sese_SecuritiesSettlementTransactionAllegementNotificationV07}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesSettlementTransactionAllegementNotificationV07
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#for_sese_SecuritiesSettlementTransactionAllegementNotificationV07
  * ConstraintSecuritiesMarketPracticeGroupGuideline.
- * forSecuritiesSettlementTransactionAllegementNotificationV07}</li>
+ * for_sese_SecuritiesSettlementTransactionAllegementNotificationV07}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing1Rule#forSecuritiesSettlementTransactionAllegementNotificationV07
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing1Rule#for_sese_SecuritiesSettlementTransactionAllegementNotificationV07
  * ConstraintTwoLegTransactionOpeningClosing1Rule.
- * forSecuritiesSettlementTransactionAllegementNotificationV07}</li>
+ * for_sese_SecuritiesSettlementTransactionAllegementNotificationV07}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule#forSecuritiesSettlementTransactionAllegementNotificationV07
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule#for_sese_SecuritiesSettlementTransactionAllegementNotificationV07
  * ConstraintTwoLegTransactionOpeningClosing2Rule.
- * forSecuritiesSettlementTransactionAllegementNotificationV07}</li>
+ * for_sese_SecuritiesSettlementTransactionAllegementNotificationV07}</li>
  * </ul>
  * </li>
  * <li>
@@ -1055,12 +1055,12 @@ public class SecuritiesSettlementTransactionAllegementNotificationV07 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementAmountRule.forSecuritiesSettlementTransactionAllegementNotificationV07,
-						com.tools20022.repository.constraints.ConstraintReceivingParty1Rule.forSecuritiesSettlementTransactionAllegementNotificationV07,
-						com.tools20022.repository.constraints.ConstraintDeliveringParty1Rule.forSecuritiesSettlementTransactionAllegementNotificationV07,
-						com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionAllegementNotificationV07,
-						com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing1Rule.forSecuritiesSettlementTransactionAllegementNotificationV07,
-						com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forSecuritiesSettlementTransactionAllegementNotificationV07);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementAmountRule.for_sese_SecuritiesSettlementTransactionAllegementNotificationV07,
+						com.tools20022.repository.constraints.ConstraintReceivingParty1Rule.for_sese_SecuritiesSettlementTransactionAllegementNotificationV07,
+						com.tools20022.repository.constraints.ConstraintDeliveringParty1Rule.for_sese_SecuritiesSettlementTransactionAllegementNotificationV07,
+						com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.for_sese_SecuritiesSettlementTransactionAllegementNotificationV07,
+						com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing1Rule.for_sese_SecuritiesSettlementTransactionAllegementNotificationV07,
+						com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.for_sese_SecuritiesSettlementTransactionAllegementNotificationV07);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesSettlementTransactionAllegementNotificationV07";
 				definition = "Scope\r\nAn account servicer sends a SecuritiesSettlementTransactionAllegementNotification to an account owner to advise the account owner that a counterparty has alleged an instruction against the account owner's account at the account servicer and that the account servicer could not find the corresponding instruction of the account owner.\r\nThe account servicer/owner relationship may be:\r\n- a central securities depository or another settlement market infrastructure acting on behalf of their participants\r\n- an agent (sub-custodian) acting on behalf of their global custodian customer, or\r\n- a custodian acting on behalf of an investment management institution or a broker/dealer.\r\n\r\nUsage\r\nThe message may also be used to:\r\n- re-send a message previously sent,\r\n- provide a third party with a copy of a message for information,\r\n- re-send to a third party a copy of a message for information\r\nusing the relevant elements in the Business Application Header.";

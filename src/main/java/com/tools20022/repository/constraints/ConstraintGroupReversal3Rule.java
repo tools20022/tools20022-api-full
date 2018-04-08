@@ -49,7 +49,7 @@ public class ConstraintGroupReversal3Rule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<CustomerPaymentReversalV01> forCustomerPaymentReversalV01 = new MMConstraint<CustomerPaymentReversalV01>() {
+	public static final MMConstraint<CustomerPaymentReversalV01> for_pain_CustomerPaymentReversalV01 = new MMConstraint<CustomerPaymentReversalV01>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupReversal3Rule";
@@ -59,7 +59,7 @@ public class ConstraintGroupReversal3Rule {
 
 		@Override
 		public void executeValidator(CustomerPaymentReversalV01 obj) throws Exception {
-			checkCustomerPaymentReversalV01(obj);
+			check_pain_CustomerPaymentReversalV01(obj);
 		}
 	};
 
@@ -67,7 +67,7 @@ public class ConstraintGroupReversal3Rule {
 	 * If GroupHeader/GroupReversal is false, then NumberOfTransactions must
 	 * equal the number of occurrences of TransactionInformation.
 	 */
-	public static void checkCustomerPaymentReversalV01(CustomerPaymentReversalV01 obj) throws Exception {
+	public static void check_pain_CustomerPaymentReversalV01(CustomerPaymentReversalV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

@@ -35,6 +35,108 @@ public class ConstraintAdditionalReasonInformationRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.AcceptedStatusReason7
+	 * AcceptedStatusReason7}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AdditionalReasonInformationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AcceptedStatusReason7> forAcceptedStatusReason7 = new MMConstraint<AcceptedStatusReason7>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AdditionalReasonInformationRule";
+			definition = "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed.";
+			owner_lazy = () -> AcceptedStatusReason7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AcceptedStatusReason7 obj) throws Exception {
+			checkAcceptedStatusReason7(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.PendingProcessingStatusReason1
+	 * PendingProcessingStatusReason1}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AdditionalReasonInformationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<PendingProcessingStatusReason1> forPendingProcessingStatusReason1 = new MMConstraint<PendingProcessingStatusReason1>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AdditionalReasonInformationRule";
+			definition = "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed.";
+			owner_lazy = () -> PendingProcessingStatusReason1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PendingProcessingStatusReason1 obj) throws Exception {
+			checkPendingProcessingStatusReason1(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.AcceptedStatusReason11
+	 * AcceptedStatusReason11}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AdditionalReasonInformationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AcceptedStatusReason11> forAcceptedStatusReason11 = new MMConstraint<AcceptedStatusReason11>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AdditionalReasonInformationRule";
+			definition = "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed.";
+			owner_lazy = () -> AcceptedStatusReason11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AcceptedStatusReason11 obj) throws Exception {
+			checkAcceptedStatusReason11(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ProprietaryReason3
 	 * ProprietaryReason3}</li>
 	 * <li>
@@ -118,6 +220,46 @@ public class ConstraintAdditionalReasonInformationRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.AcceptedStatusReason8
+	 * AcceptedStatusReason8}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AdditionalReasonInformationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalReasonInformationRule#forAcceptedStatusReason4
+	 * ConstraintAdditionalReasonInformationRule.forAcceptedStatusReason4}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AcceptedStatusReason8> forAcceptedStatusReason8 = new MMConstraint<AcceptedStatusReason8>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AdditionalReasonInformationRule";
+			definition = "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalReasonInformationRule.forAcceptedStatusReason4;
+			owner_lazy = () -> AcceptedStatusReason8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AcceptedStatusReason8 obj) throws Exception {
+			checkAcceptedStatusReason8(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AcceptedStatusReason6
 	 * AcceptedStatusReason6}</li>
 	 * <li>
@@ -144,6 +286,40 @@ public class ConstraintAdditionalReasonInformationRule {
 		@Override
 		public void executeValidator(AcceptedStatusReason6 obj) throws Exception {
 			checkAcceptedStatusReason6(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.RejectedStatusReason12
+	 * RejectedStatusReason12}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AdditionalReasonInformationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<RejectedStatusReason12> forRejectedStatusReason12 = new MMConstraint<RejectedStatusReason12>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AdditionalReasonInformationRule";
+			definition = "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed.";
+			owner_lazy = () -> RejectedStatusReason12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RejectedStatusReason12 obj) throws Exception {
+			checkRejectedStatusReason12(obj);
 		}
 	};
 	/**
@@ -214,182 +390,30 @@ public class ConstraintAdditionalReasonInformationRule {
 			checkReceivedStatusReason1(obj);
 		}
 	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.PendingProcessingStatusReason1
-	 * PendingProcessingStatusReason1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AdditionalReasonInformationRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<PendingProcessingStatusReason1> forPendingProcessingStatusReason1 = new MMConstraint<PendingProcessingStatusReason1>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "AdditionalReasonInformationRule";
-			definition = "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed.";
-			owner_lazy = () -> PendingProcessingStatusReason1.mmObject();
-		}
 
-		@Override
-		public void executeValidator(PendingProcessingStatusReason1 obj) throws Exception {
-			checkPendingProcessingStatusReason1(obj);
-		}
-	};
 	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.AcceptedStatusReason7
-	 * AcceptedStatusReason7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AdditionalReasonInformationRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
-	 * </li>
-	 * </ul>
+	 * The AdditionalReasonInformation element must not contain information that
+	 * can be provided in a structured field unless bilaterally agreed.
 	 */
-	public static final MMConstraint<AcceptedStatusReason7> forAcceptedStatusReason7 = new MMConstraint<AcceptedStatusReason7>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "AdditionalReasonInformationRule";
-			definition = "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed.";
-			owner_lazy = () -> AcceptedStatusReason7.mmObject();
-		}
+	public static void checkAcceptedStatusReason7(AcceptedStatusReason7 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
 
-		@Override
-		public void executeValidator(AcceptedStatusReason7 obj) throws Exception {
-			checkAcceptedStatusReason7(obj);
-		}
-	};
 	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.RejectedStatusReason12
-	 * RejectedStatusReason12}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AdditionalReasonInformationRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
-	 * </li>
-	 * </ul>
+	 * The AdditionalReasonInformation element must not contain information that
+	 * can be provided in a structured field unless bilaterally agreed.
 	 */
-	public static final MMConstraint<RejectedStatusReason12> forRejectedStatusReason12 = new MMConstraint<RejectedStatusReason12>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "AdditionalReasonInformationRule";
-			definition = "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed.";
-			owner_lazy = () -> RejectedStatusReason12.mmObject();
-		}
+	public static void checkPendingProcessingStatusReason1(PendingProcessingStatusReason1 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
 
-		@Override
-		public void executeValidator(RejectedStatusReason12 obj) throws Exception {
-			checkRejectedStatusReason12(obj);
-		}
-	};
 	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.AcceptedStatusReason8
-	 * AcceptedStatusReason8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AdditionalReasonInformationRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalReasonInformationRule#forAcceptedStatusReason4
-	 * ConstraintAdditionalReasonInformationRule.forAcceptedStatusReason4}</li>
-	 * </ul>
+	 * The AdditionalReasonInformation element must not contain information that
+	 * can be provided in a structured field unless bilaterally agreed.
 	 */
-	public static final MMConstraint<AcceptedStatusReason8> forAcceptedStatusReason8 = new MMConstraint<AcceptedStatusReason8>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "AdditionalReasonInformationRule";
-			definition = "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalReasonInformationRule.forAcceptedStatusReason4;
-			owner_lazy = () -> AcceptedStatusReason8.mmObject();
-		}
-
-		@Override
-		public void executeValidator(AcceptedStatusReason8 obj) throws Exception {
-			checkAcceptedStatusReason8(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.AcceptedStatusReason11
-	 * AcceptedStatusReason11}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AdditionalReasonInformationRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<AcceptedStatusReason11> forAcceptedStatusReason11 = new MMConstraint<AcceptedStatusReason11>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "AdditionalReasonInformationRule";
-			definition = "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed.";
-			owner_lazy = () -> AcceptedStatusReason11.mmObject();
-		}
-
-		@Override
-		public void executeValidator(AcceptedStatusReason11 obj) throws Exception {
-			checkAcceptedStatusReason11(obj);
-		}
-	};
+	public static void checkAcceptedStatusReason11(AcceptedStatusReason11 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
 
 	/**
 	 * The AdditionalReasonInformation element must not contain information that
@@ -411,7 +435,23 @@ public class ConstraintAdditionalReasonInformationRule {
 	 * The AdditionalReasonInformation element must not contain information that
 	 * can be provided in a structured field unless bilaterally agreed.
 	 */
+	public static void checkAcceptedStatusReason8(AcceptedStatusReason8 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The AdditionalReasonInformation element must not contain information that
+	 * can be provided in a structured field unless bilaterally agreed.
+	 */
 	public static void checkAcceptedStatusReason6(AcceptedStatusReason6 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The AdditionalReasonInformation element must not contain information that
+	 * can be provided in a structured field unless bilaterally agreed.
+	 */
+	public static void checkRejectedStatusReason12(RejectedStatusReason12 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -428,46 +468,6 @@ public class ConstraintAdditionalReasonInformationRule {
 	 * can be provided in a structured field unless bilaterally agreed.
 	 */
 	public static void checkReceivedStatusReason1(ReceivedStatusReason1 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * The AdditionalReasonInformation element must not contain information that
-	 * can be provided in a structured field unless bilaterally agreed.
-	 */
-	public static void checkPendingProcessingStatusReason1(PendingProcessingStatusReason1 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * The AdditionalReasonInformation element must not contain information that
-	 * can be provided in a structured field unless bilaterally agreed.
-	 */
-	public static void checkAcceptedStatusReason7(AcceptedStatusReason7 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * The AdditionalReasonInformation element must not contain information that
-	 * can be provided in a structured field unless bilaterally agreed.
-	 */
-	public static void checkRejectedStatusReason12(RejectedStatusReason12 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * The AdditionalReasonInformation element must not contain information that
-	 * can be provided in a structured field unless bilaterally agreed.
-	 */
-	public static void checkAcceptedStatusReason8(AcceptedStatusReason8 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * The AdditionalReasonInformation element must not contain information that
-	 * can be provided in a structured field unless bilaterally agreed.
-	 */
-	public static void checkAcceptedStatusReason11(AcceptedStatusReason11 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

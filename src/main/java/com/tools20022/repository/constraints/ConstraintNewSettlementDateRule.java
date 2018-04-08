@@ -25,12 +25,51 @@ import com.tools20022.repository.msg.TradeData8;
 import java.util.Arrays;
 
 /**
- * The New Settlement Date element is only to be used when there has been an
- * amendment to the Settlement Date. For example, when there has been a currency
- * calendar amendment or a settlement deferral event.
+ * New Settlement Date is only to be used when there has been an amendment to
+ * the settlement date. For example, when there has been a currency calendar
+ * amendment or a settlement deferral event.
  */
 public class ConstraintNewSettlementDateRule {
 
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.TradeData11 TradeData11}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NewSettlementDateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "New Settlement Date is only to be used when there has been an amendment to the settlement date. For example, when there has been a currency calendar amendment or a settlement deferral event."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNewSettlementDateRule#forTradeData8
+	 * ConstraintNewSettlementDateRule.forTradeData8}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<TradeData11> forTradeData11 = new MMConstraint<TradeData11>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NewSettlementDateRule";
+			definition = "New Settlement Date is only to be used when there has been an amendment to the settlement date. For example, when there has been a currency calendar amendment or a settlement deferral event.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNewSettlementDateRule.forTradeData8;
+			owner_lazy = () -> TradeData11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TradeData11 obj) throws Exception {
+			checkTradeData11(obj);
+		}
+	};
 	/**
 	 * 
 	 <p>
@@ -73,54 +112,6 @@ public class ConstraintNewSettlementDateRule {
 			checkTradeData8(obj);
 		}
 	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.TradeData11 TradeData11}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "NewSettlementDateRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "New Settlement Date is only to be used when there has been an amendment to the settlement date. For example, when there has been a currency calendar amendment or a settlement deferral event."
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintNewSettlementDateRule#forTradeData8
-	 * ConstraintNewSettlementDateRule.forTradeData8}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<TradeData11> forTradeData11 = new MMConstraint<TradeData11>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "NewSettlementDateRule";
-			definition = "New Settlement Date is only to be used when there has been an amendment to the settlement date. For example, when there has been a currency calendar amendment or a settlement deferral event.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNewSettlementDateRule.forTradeData8;
-			owner_lazy = () -> TradeData11.mmObject();
-		}
-
-		@Override
-		public void executeValidator(TradeData11 obj) throws Exception {
-			checkTradeData11(obj);
-		}
-	};
-
-	/**
-	 * The New Settlement Date element is only to be used when there has been an
-	 * amendment to the Settlement Date. For example, when there has been a
-	 * currency calendar amendment or a settlement deferral event.
-	 */
-	public static void checkTradeData8(TradeData8 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
 
 	/**
 	 * New Settlement Date is only to be used when there has been an amendment
@@ -128,6 +119,15 @@ public class ConstraintNewSettlementDateRule {
 	 * calendar amendment or a settlement deferral event.
 	 */
 	public static void checkTradeData11(TradeData11 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The New Settlement Date element is only to be used when there has been an
+	 * amendment to the Settlement Date. For example, when there has been a
+	 * currency calendar amendment or a settlement deferral event.
+	 */
+	public static void checkTradeData8(TradeData8 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

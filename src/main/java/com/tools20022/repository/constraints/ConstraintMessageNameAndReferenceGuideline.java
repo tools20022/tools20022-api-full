@@ -24,10 +24,9 @@ import com.tools20022.repository.area.setr.*;
 import java.util.Arrays;
 
 /**
- * If Reference/RelatedReference/MessageName or
- * Reference/OtherReference/MessageName is present, it must it must contain 502
- * or must start with setr.002, setr.005, setr.008, setr.011, setr.014 or
- * setr.018 and Reference/RelatedReference/Reference must contain the message
+ * If RelatedReference/MessageName or OtherReference/MessageName is present, it
+ * must contain 502 or must start with setr.002, setr.005, setr.008, setr.011,
+ * setr.014 or setr.018 and RelatedReference/Reference must contain the message
  * reference of a message in this list.
  */
 public class ConstraintMessageNameAndReferenceGuideline {
@@ -38,8 +37,8 @@ public class ConstraintMessageNameAndReferenceGuideline {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.setr.OrderCancellationStatusReportV04
-	 * OrderCancellationStatusReportV04}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.OrderCancellationStatusReportV03
+	 * OrderCancellationStatusReportV03}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -49,21 +48,21 @@ public class ConstraintMessageNameAndReferenceGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If Reference/RelatedReference/MessageName or Reference/OtherReference/MessageName is present, it must it must contain 502 or must start with setr.002, setr.005, setr.008, setr.011, setr.014 or setr.018 and Reference/RelatedReference/Reference must contain the message reference of a message in this list."
+	 * "If RelatedReference/MessageName or OtherReference/MessageName is present, it must contain 502 or must start with setr.002, setr.005, setr.008, setr.011, setr.014 or setr.018 and RelatedReference/Reference must contain the message reference of a message in this list."
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<OrderCancellationStatusReportV04> forOrderCancellationStatusReportV04 = new MMConstraint<OrderCancellationStatusReportV04>() {
+	public static final MMConstraint<OrderCancellationStatusReportV03> for_setr_OrderCancellationStatusReportV03 = new MMConstraint<OrderCancellationStatusReportV03>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageNameAndReferenceGuideline";
-			definition = "If Reference/RelatedReference/MessageName or Reference/OtherReference/MessageName is present, it must it must contain 502 or must start with setr.002, setr.005, setr.008, setr.011, setr.014 or setr.018 and Reference/RelatedReference/Reference must contain the message reference of a message in this list.";
-			owner_lazy = () -> OrderCancellationStatusReportV04.mmObject();
+			definition = "If RelatedReference/MessageName or OtherReference/MessageName is present, it must contain 502 or must start with setr.002, setr.005, setr.008, setr.011, setr.014 or setr.018 and RelatedReference/Reference must contain the message reference of a message in this list.";
+			owner_lazy = () -> OrderCancellationStatusReportV03.mmObject();
 		}
 
 		@Override
-		public void executeValidator(OrderCancellationStatusReportV04 obj) throws Exception {
-			checkOrderCancellationStatusReportV04(obj);
+		public void executeValidator(OrderCancellationStatusReportV03 obj) throws Exception {
+			check_setr_OrderCancellationStatusReportV03(obj);
 		}
 	};
 	/**
@@ -72,8 +71,8 @@ public class ConstraintMessageNameAndReferenceGuideline {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV04
-	 * OrderInstructionStatusReportV04}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.OrderCancellationStatusReportV02
+	 * OrderCancellationStatusReportV02}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -83,28 +82,21 @@ public class ConstraintMessageNameAndReferenceGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If Reference/RelatedReference/MessageName or Reference/OtherReference/MessageName is present, it must contain 502 or must start with setr.001, setr.004, setr.007, setr.010, setr.013, setr.019 or setr.018 and Reference/RelatedReference/Reference must contain the message reference of a message in this list."
+	 * "If MessageName is present, it must contain 502 or must start with setr.002 or setr.005 or setr.008 or setr.011 or setr.014 or setr.025 and Reference must contain the business reference of a message in this list."
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintMessageNameAndReferenceGuideline#forOrderInstructionStatusReportV03
-	 * ConstraintMessageNameAndReferenceGuideline.
-	 * forOrderInstructionStatusReportV03}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<OrderInstructionStatusReportV04> forOrderInstructionStatusReportV04 = new MMConstraint<OrderInstructionStatusReportV04>() {
+	public static final MMConstraint<OrderCancellationStatusReportV02> for_setr_OrderCancellationStatusReportV02 = new MMConstraint<OrderCancellationStatusReportV02>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageNameAndReferenceGuideline";
-			definition = "If Reference/RelatedReference/MessageName or Reference/OtherReference/MessageName is present, it must contain 502 or must start with setr.001, setr.004, setr.007, setr.010, setr.013, setr.019 or setr.018 and Reference/RelatedReference/Reference must contain the message reference of a message in this list.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMessageNameAndReferenceGuideline.forOrderInstructionStatusReportV03;
-			owner_lazy = () -> OrderInstructionStatusReportV04.mmObject();
+			definition = "If MessageName is present, it must contain 502 or must start with setr.002 or setr.005 or setr.008 or setr.011 or setr.014 or setr.025 and Reference must contain the business reference of a message in this list.";
+			owner_lazy = () -> OrderCancellationStatusReportV02.mmObject();
 		}
 
 		@Override
-		public void executeValidator(OrderInstructionStatusReportV04 obj) throws Exception {
-			checkOrderInstructionStatusReportV04(obj);
+		public void executeValidator(OrderCancellationStatusReportV02 obj) throws Exception {
+			check_setr_OrderCancellationStatusReportV02(obj);
 		}
 	};
 	/**
@@ -128,7 +120,7 @@ public class ConstraintMessageNameAndReferenceGuideline {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<OrderConfirmationStatusReportV02> forOrderConfirmationStatusReportV02 = new MMConstraint<OrderConfirmationStatusReportV02>() {
+	public static final MMConstraint<OrderConfirmationStatusReportV02> for_setr_OrderConfirmationStatusReportV02 = new MMConstraint<OrderConfirmationStatusReportV02>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageNameAndReferenceGuideline";
@@ -138,7 +130,7 @@ public class ConstraintMessageNameAndReferenceGuideline {
 
 		@Override
 		public void executeValidator(OrderConfirmationStatusReportV02 obj) throws Exception {
-			checkOrderConfirmationStatusReportV02(obj);
+			check_setr_OrderConfirmationStatusReportV02(obj);
 		}
 	};
 	/**
@@ -147,8 +139,8 @@ public class ConstraintMessageNameAndReferenceGuideline {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.setr.OrderCancellationStatusReportV03
-	 * OrderCancellationStatusReportV03}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.OrderCancellationStatusReportV04
+	 * OrderCancellationStatusReportV04}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -158,21 +150,21 @@ public class ConstraintMessageNameAndReferenceGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If RelatedReference/MessageName or OtherReference/MessageName is present, it must contain 502 or must start with setr.002, setr.005, setr.008, setr.011, setr.014 or setr.018 and RelatedReference/Reference must contain the message reference of a message in this list."
+	 * "If Reference/RelatedReference/MessageName or Reference/OtherReference/MessageName is present, it must it must contain 502 or must start with setr.002, setr.005, setr.008, setr.011, setr.014 or setr.018 and Reference/RelatedReference/Reference must contain the message reference of a message in this list."
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<OrderCancellationStatusReportV03> forOrderCancellationStatusReportV03 = new MMConstraint<OrderCancellationStatusReportV03>() {
+	public static final MMConstraint<OrderCancellationStatusReportV04> for_setr_OrderCancellationStatusReportV04 = new MMConstraint<OrderCancellationStatusReportV04>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageNameAndReferenceGuideline";
-			definition = "If RelatedReference/MessageName or OtherReference/MessageName is present, it must contain 502 or must start with setr.002, setr.005, setr.008, setr.011, setr.014 or setr.018 and RelatedReference/Reference must contain the message reference of a message in this list.";
-			owner_lazy = () -> OrderCancellationStatusReportV03.mmObject();
+			definition = "If Reference/RelatedReference/MessageName or Reference/OtherReference/MessageName is present, it must it must contain 502 or must start with setr.002, setr.005, setr.008, setr.011, setr.014 or setr.018 and Reference/RelatedReference/Reference must contain the message reference of a message in this list.";
+			owner_lazy = () -> OrderCancellationStatusReportV04.mmObject();
 		}
 
 		@Override
-		public void executeValidator(OrderCancellationStatusReportV03 obj) throws Exception {
-			checkOrderCancellationStatusReportV03(obj);
+		public void executeValidator(OrderCancellationStatusReportV04 obj) throws Exception {
+			check_setr_OrderCancellationStatusReportV04(obj);
 		}
 	};
 	/**
@@ -198,25 +190,25 @@ public class ConstraintMessageNameAndReferenceGuideline {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintMessageNameAndReferenceGuideline#forOrderInstructionStatusReportV04
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintMessageNameAndReferenceGuideline#for_setr_OrderInstructionStatusReportV04
 	 * ConstraintMessageNameAndReferenceGuideline.
-	 * forOrderInstructionStatusReportV04}</li>
+	 * for_setr_OrderInstructionStatusReportV04}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<OrderInstructionStatusReportV03> forOrderInstructionStatusReportV03 = new MMConstraint<OrderInstructionStatusReportV03>() {
+	public static final MMConstraint<OrderInstructionStatusReportV03> for_setr_OrderInstructionStatusReportV03 = new MMConstraint<OrderInstructionStatusReportV03>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageNameAndReferenceGuideline";
 			definition = "If RelatedReference/MessageName or OtherReference/MessageName is present, it must contain 502 or must start with setr.001, setr.004, setr.007, setr.010, setr.013, setr.019 or setr.018 and RelatedReference/Reference must contain the message reference of a message in this list.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMessageNameAndReferenceGuideline.forOrderInstructionStatusReportV04);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMessageNameAndReferenceGuideline.for_setr_OrderInstructionStatusReportV04);
 			owner_lazy = () -> OrderInstructionStatusReportV03.mmObject();
 		}
 
 		@Override
 		public void executeValidator(OrderInstructionStatusReportV03 obj) throws Exception {
-			checkOrderInstructionStatusReportV03(obj);
+			check_setr_OrderInstructionStatusReportV03(obj);
 		}
 	};
 	/**
@@ -225,8 +217,8 @@ public class ConstraintMessageNameAndReferenceGuideline {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.setr.OrderCancellationStatusReportV02
-	 * OrderCancellationStatusReportV02}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV04
+	 * OrderInstructionStatusReportV04}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -236,43 +228,47 @@ public class ConstraintMessageNameAndReferenceGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If MessageName is present, it must contain 502 or must start with setr.002 or setr.005 or setr.008 or setr.011 or setr.014 or setr.025 and Reference must contain the business reference of a message in this list."
+	 * "If Reference/RelatedReference/MessageName or Reference/OtherReference/MessageName is present, it must contain 502 or must start with setr.001, setr.004, setr.007, setr.010, setr.013, setr.019 or setr.018 and Reference/RelatedReference/Reference must contain the message reference of a message in this list."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintMessageNameAndReferenceGuideline#for_setr_OrderInstructionStatusReportV03
+	 * ConstraintMessageNameAndReferenceGuideline.
+	 * for_setr_OrderInstructionStatusReportV03}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<OrderCancellationStatusReportV02> forOrderCancellationStatusReportV02 = new MMConstraint<OrderCancellationStatusReportV02>() {
+	public static final MMConstraint<OrderInstructionStatusReportV04> for_setr_OrderInstructionStatusReportV04 = new MMConstraint<OrderInstructionStatusReportV04>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageNameAndReferenceGuideline";
-			definition = "If MessageName is present, it must contain 502 or must start with setr.002 or setr.005 or setr.008 or setr.011 or setr.014 or setr.025 and Reference must contain the business reference of a message in this list.";
-			owner_lazy = () -> OrderCancellationStatusReportV02.mmObject();
+			definition = "If Reference/RelatedReference/MessageName or Reference/OtherReference/MessageName is present, it must contain 502 or must start with setr.001, setr.004, setr.007, setr.010, setr.013, setr.019 or setr.018 and Reference/RelatedReference/Reference must contain the message reference of a message in this list.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMessageNameAndReferenceGuideline.for_setr_OrderInstructionStatusReportV03;
+			owner_lazy = () -> OrderInstructionStatusReportV04.mmObject();
 		}
 
 		@Override
-		public void executeValidator(OrderCancellationStatusReportV02 obj) throws Exception {
-			checkOrderCancellationStatusReportV02(obj);
+		public void executeValidator(OrderInstructionStatusReportV04 obj) throws Exception {
+			check_setr_OrderInstructionStatusReportV04(obj);
 		}
 	};
 
 	/**
-	 * If Reference/RelatedReference/MessageName or
-	 * Reference/OtherReference/MessageName is present, it must it must contain
-	 * 502 or must start with setr.002, setr.005, setr.008, setr.011, setr.014
-	 * or setr.018 and Reference/RelatedReference/Reference must contain the
-	 * message reference of a message in this list.
+	 * If RelatedReference/MessageName or OtherReference/MessageName is present,
+	 * it must contain 502 or must start with setr.002, setr.005, setr.008,
+	 * setr.011, setr.014 or setr.018 and RelatedReference/Reference must
+	 * contain the message reference of a message in this list.
 	 */
-	public static void checkOrderCancellationStatusReportV04(OrderCancellationStatusReportV04 obj) throws Exception {
+	public static void check_setr_OrderCancellationStatusReportV03(OrderCancellationStatusReportV03 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
 	/**
-	 * If Reference/RelatedReference/MessageName or
-	 * Reference/OtherReference/MessageName is present, it must contain 502 or
-	 * must start with setr.001, setr.004, setr.007, setr.010, setr.013,
-	 * setr.019 or setr.018 and Reference/RelatedReference/Reference must
-	 * contain the message reference of a message in this list.
+	 * If MessageName is present, it must contain 502 or must start with
+	 * setr.002 or setr.005 or setr.008 or setr.011 or setr.014 or setr.025 and
+	 * Reference must contain the business reference of a message in this list.
 	 */
-	public static void checkOrderInstructionStatusReportV04(OrderInstructionStatusReportV04 obj) throws Exception {
+	public static void check_setr_OrderCancellationStatusReportV02(OrderCancellationStatusReportV02 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -283,17 +279,18 @@ public class ConstraintMessageNameAndReferenceGuideline {
 	 * setr.058 and Reference/RelatedReference/Reference must contain the
 	 * message reference of a message in this list.
 	 */
-	public static void checkOrderConfirmationStatusReportV02(OrderConfirmationStatusReportV02 obj) throws Exception {
+	public static void check_setr_OrderConfirmationStatusReportV02(OrderConfirmationStatusReportV02 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
 	/**
-	 * If RelatedReference/MessageName or OtherReference/MessageName is present,
-	 * it must contain 502 or must start with setr.002, setr.005, setr.008,
-	 * setr.011, setr.014 or setr.018 and RelatedReference/Reference must
-	 * contain the message reference of a message in this list.
+	 * If Reference/RelatedReference/MessageName or
+	 * Reference/OtherReference/MessageName is present, it must it must contain
+	 * 502 or must start with setr.002, setr.005, setr.008, setr.011, setr.014
+	 * or setr.018 and Reference/RelatedReference/Reference must contain the
+	 * message reference of a message in this list.
 	 */
-	public static void checkOrderCancellationStatusReportV03(OrderCancellationStatusReportV03 obj) throws Exception {
+	public static void check_setr_OrderCancellationStatusReportV04(OrderCancellationStatusReportV04 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -303,16 +300,18 @@ public class ConstraintMessageNameAndReferenceGuideline {
 	 * setr.010, setr.013, setr.019 or setr.018 and RelatedReference/Reference
 	 * must contain the message reference of a message in this list.
 	 */
-	public static void checkOrderInstructionStatusReportV03(OrderInstructionStatusReportV03 obj) throws Exception {
+	public static void check_setr_OrderInstructionStatusReportV03(OrderInstructionStatusReportV03 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
 	/**
-	 * If MessageName is present, it must contain 502 or must start with
-	 * setr.002 or setr.005 or setr.008 or setr.011 or setr.014 or setr.025 and
-	 * Reference must contain the business reference of a message in this list.
+	 * If Reference/RelatedReference/MessageName or
+	 * Reference/OtherReference/MessageName is present, it must contain 502 or
+	 * must start with setr.001, setr.004, setr.007, setr.010, setr.013,
+	 * setr.019 or setr.018 and Reference/RelatedReference/Reference must
+	 * contain the message reference of a message in this list.
 	 */
-	public static void checkOrderCancellationStatusReportV02(OrderCancellationStatusReportV02 obj) throws Exception {
+	public static void check_setr_OrderInstructionStatusReportV04(OrderInstructionStatusReportV04 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

@@ -351,8 +351,8 @@ public class SettlementSubTotalCalculatedTax2 {
 	 * constraint} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintR7#forExemptionReasonCode
-	 * ConstraintR7.forExemptionReasonCode}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintR7#forSettlementSubTotalCalculatedTax2_ExemptionReasonCode
+	 * ConstraintR7.forSettlementSubTotalCalculatedTax2_ExemptionReasonCode}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -374,7 +374,7 @@ public class SettlementSubTotalCalculatedTax2 {
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementSubTotalCalculatedTax2.mmObject();
 			isDerived = false;
 			xmlTag = "XmptnRsnCd";
-			constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintR7.forExemptionReasonCode);
+			constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintR7.forSettlementSubTotalCalculatedTax2_ExemptionReasonCode);
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionReasonCode";
 			definition = "Reason for tax exemption expressed as a code, if invoice or card transaction is out of tax processing.";

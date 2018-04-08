@@ -52,7 +52,7 @@ public class ConstraintOptionRule2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<AgentCAMovementInstructionV01> forAgentCAMovementInstructionV01 = new MMConstraint<AgentCAMovementInstructionV01>() {
+	public static final MMConstraint<AgentCAMovementInstructionV01> for_seev_AgentCAMovementInstructionV01 = new MMConstraint<AgentCAMovementInstructionV01>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionRule2";
@@ -62,7 +62,7 @@ public class ConstraintOptionRule2 {
 
 		@Override
 		public void executeValidator(AgentCAMovementInstructionV01 obj) throws Exception {
-			checkAgentCAMovementInstructionV01(obj);
+			check_seev_AgentCAMovementInstructionV01(obj);
 		}
 	};
 
@@ -73,7 +73,7 @@ public class ConstraintOptionRule2 {
 	 * UnderlyingSecuritiesMovementDetails/CreditAccountDetails neither in
 	 * UnderlyingSecuritiesMovement/DebitAccountDetails.
 	 */
-	public static void checkAgentCAMovementInstructionV01(AgentCAMovementInstructionV01 obj) throws Exception {
+	public static void check_seev_AgentCAMovementInstructionV01(AgentCAMovementInstructionV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

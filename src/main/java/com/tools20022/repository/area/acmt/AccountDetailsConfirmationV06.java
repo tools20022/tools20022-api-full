@@ -126,11 +126,11 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintInvestmentAccountRule#forAccountDetailsConfirmationV06
- * ConstraintInvestmentAccountRule.forAccountDetailsConfirmationV06}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInvestmentAccountRule#for_acmt_AccountDetailsConfirmationV06
+ * ConstraintInvestmentAccountRule.for_acmt_AccountDetailsConfirmationV06}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintUnit1Rule#forAccountDetailsConfirmationV06
- * ConstraintUnit1Rule.forAccountDetailsConfirmationV06}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintUnit1Rule#for_acmt_AccountDetailsConfirmationV06
+ * ConstraintUnit1Rule.for_acmt_AccountDetailsConfirmationV06}</li>
  * </ul>
  * </li>
  * <li>
@@ -1154,8 +1154,8 @@ public class AccountDetailsConfirmationV06 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestmentAccountRule.forAccountDetailsConfirmationV06,
-						com.tools20022.repository.constraints.ConstraintUnit1Rule.forAccountDetailsConfirmationV06);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestmentAccountRule.for_acmt_AccountDetailsConfirmationV06,
+						com.tools20022.repository.constraints.ConstraintUnit1Rule.for_acmt_AccountDetailsConfirmationV06);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountDetailsConfirmationV06";
 				definition = "Scope\r\nAn account servicer, for example, a registrar, transfer agent, custodian bank or securities depository sends the AccountDetailsConfirmation message to the account owner, for example, an investor to confirm the opening of an account, execution of an AccountModificationInstruction or to return information requested in a GetAccountDetails message.\r\nUsage\r\nThe AccountDetailsConfirmation message is used to confirm the opening of an account, modification of an account or the provision of information requested in a previously sent GetAccountDetails message. The message contains detailed information relevant to the opened account.\r\nWhen the AccountDetailsConfirmation is used to confirm execution of an AccountModificationInstruction message, it contains the modified subsets of account details that were specified in the AccountModificationInstruction.\r\nWhen the AccountDetailsConfirmation is used to reply to a GetAccountDetails message, it returns the selected subsets of account details that were specified in the GetAccountDetails message.";

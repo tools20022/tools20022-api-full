@@ -53,7 +53,7 @@ public class ConstraintCompletePriceCancellation1Rule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<PriceReportCancellationV04> forPriceReportCancellationV04 = new MMConstraint<PriceReportCancellationV04>() {
+	public static final MMConstraint<PriceReportCancellationV04> for_reda_PriceReportCancellationV04 = new MMConstraint<PriceReportCancellationV04>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompletePriceCancellation1Rule";
@@ -64,7 +64,7 @@ public class ConstraintCompletePriceCancellation1Rule {
 
 		@Override
 		public void executeValidator(PriceReportCancellationV04 obj) throws Exception {
-			checkPriceReportCancellationV04(obj);
+			check_reda_PriceReportCancellationV04(obj);
 		}
 	};
 
@@ -72,7 +72,7 @@ public class ConstraintCompletePriceCancellation1Rule {
 	 * If CompletePriceCancellation is "false" or "0" (No), then one or more
 	 * instances of CancelledPriceValuationDetails must be present.
 	 */
-	public static void checkPriceReportCancellationV04(PriceReportCancellationV04 obj) throws Exception {
+	public static void check_reda_PriceReportCancellationV04(PriceReportCancellationV04 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

@@ -107,9 +107,9 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationRule#forRedemptionMultipleOrderConfirmationV02
- * ConstraintAccountIdentificationRule.forRedemptionMultipleOrderConfirmationV02
- * }</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationRule#for_setr_RedemptionMultipleOrderConfirmationV02
+ * ConstraintAccountIdentificationRule.
+ * for_setr_RedemptionMultipleOrderConfirmationV02}</li>
  * </ul>
  * </li>
  * <li>
@@ -513,7 +513,7 @@ public class RedemptionMultipleOrderConfirmationV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forRedemptionMultipleOrderConfirmationV02);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.for_setr_RedemptionMultipleOrderConfirmationV02);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RedemptionMultipleOrderConfirmationV02";
 				definition = "Scope\r\nThe RedemptionMultipleOrderConfirmation message is sent by an exacting party, eg, a transfer agent, to an instructing party, eg, an investment manager or its authorised representative. There may be one or more intermediary parties between the executing party and the instructing party. The intermediary party is, for example, an intermediary or a concentrator.\r\nThis message is used to confirm the details of the execution of a RedemptionMultipleOrder message.\r\nUsage\r\nThe RedemptionMultipleOrderConfirmation message is sent, after the price has been determined, to confirm the execution of all individual orders.\r\nA RedemptionMultipleOrder may be responded to by more than one RedemptionMultipleOrderConfirmation, as the valuation cycle of the financial instruments in each individual order may be different.\r\nWhen the executing party sends several confirmations, there is no specific indication in the message that it is an incomplete confirmation. Reconciliation must be based on the references.\r\nA RedemptionMultipleOrder must in all cases be responded to by a RedemptionMultipleOrderConfirmation message/s and in no circumstances by a RedemptionBulkOrderConfirmation message/s.\r\nIf the executing party needs to confirm a RedemptionBulkOrder message, then a RedemptionBulkOrderConfirmation message must be used.";

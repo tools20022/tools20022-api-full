@@ -118,13 +118,13 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#forSecuritiesTransactionStatusQueryV01
- * ConstraintCoexistenceCharacterSetXRule.forSecuritiesTransactionStatusQueryV01
- * }</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#for_sese_SecuritiesTransactionStatusQueryV01
+ * ConstraintCoexistenceCharacterSetXRule.
+ * for_sese_SecuritiesTransactionStatusQueryV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forSecuritiesTransactionStatusQueryV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#for_sese_SecuritiesTransactionStatusQueryV01
  * ConstraintCoexistenceIdentificationRule.
- * forSecuritiesTransactionStatusQueryV01}</li>
+ * for_sese_SecuritiesTransactionStatusQueryV01}</li>
  * </ul>
  * </li>
  * <li>
@@ -486,8 +486,8 @@ public class SecuritiesTransactionStatusQueryV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesTransactionStatusQueryV01,
-						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesTransactionStatusQueryV01);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.for_sese_SecuritiesTransactionStatusQueryV01,
+						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.for_sese_SecuritiesTransactionStatusQueryV01);
 				semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, "MT 549, Seq A :23G:NEWM, :13A::REQU//507, 509-10, 548, 558"));
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTransactionStatusQueryV01";

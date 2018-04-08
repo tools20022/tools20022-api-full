@@ -24,11 +24,34 @@ import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 
 /**
- * If ModificationScopeIndication is INSE, then at least one occurrence of
- * Organisation/ModifiedAddress or IndividualPerson/ModifiedAddress must be
- * present with Organisation/ModifiedAddress/ModificationScopeIndication being
- * INSE or IndividualPerson/ModifiedAddres/ModificationScopeIndication being
- * INSE respectively.
+ * If ModificationScopeIndication is INSE (InsertNewDataSet), then one of the
+ * following must be present:<br>
+ * PrincipalAccountParty/./Party/./ModifiedPostalAddress/
+ * ModificationScopeIndication/INSE (InsertNewDataSet)<br>
+ * CustodianForMinor/Party/./ModifiedPostalAddress/ModificationScopeIndication/
+ * INSE (InsertNewDataSet)<br>
+ * SecondaryOwner/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE
+ * (InsertNewDataSet)<br>
+ * Beneficiary/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE
+ * (InsertNewDataSet)<br>
+ * PowerOfAttorney/Party/./ModifiedPostalAddress/ModificationScopeIndication/
+ * INSE (InsertNewDataSet)<br>
+ * LegalGuardian/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE
+ * (InsertNewDataSet)<br>
+ * SuccessorOnDeath/Party/./ModifiedPostalAddress/ModificationScopeIndication/
+ * INSE (InsertNewDataSet)<br>
+ * Administrator/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE
+ * (InsertNewDataSet)<br>
+ * OtherParty/OtherPartyDetails/Party/./ModifiedPostalAddress/
+ * ModificationScopeIndication/INSE (InsertNewDataSet)<br>
+ * Granter/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE
+ * (InsertNewDataSet)<br>
+ * Settlor/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE
+ * (InsertNewDataSet)<br>
+ * SeniorManagingOfficial/./ModifiedPostalAddress/ModificationScopeIndication/
+ * INSE (InsertNewDataSet)<br>
+ * Protector/./ModifiedPostalAddress/ModificationScopeIndication/INSE
+ * (InsertNewDataSet).
  */
 public class ConstraintAddressRule {
 
@@ -38,8 +61,8 @@ public class ConstraintAddressRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.AccountParties3
-	 * AccountParties3}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountParties16
+	 * AccountParties16}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -49,98 +72,27 @@ public class ConstraintAddressRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If ModificationScopeIndication is INSE, then at least one occurrence of Organisation/ModifiedAddress or IndividualPerson/ModifiedAddress must be present with Organisation/ModifiedAddress/ModificationScopeIndication being INSE or IndividualPerson/ModifiedAddres/ModificationScopeIndication being INSE respectively."
+	 * "If ModificationScopeIndication is INSE (InsertNewDataSet), then one of the following must be present:\r\nPrincipalAccountParty/./Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nCustodianForMinor/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nSecondaryOwner/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nBeneficiary/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nPowerOfAttorney/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nLegalGuardian/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nSuccessorOnDeath/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nAdministrator/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nOtherParty/OtherPartyDetails/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nGranter/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nSettlor/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nSeniorManagingOfficial/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nProtector/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAddressRule#forAccountParties14
+	 * ConstraintAddressRule.forAccountParties14}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<AccountParties3> forAccountParties3 = new MMConstraint<AccountParties3>() {
+	public static final MMConstraint<AccountParties16> forAccountParties16 = new MMConstraint<AccountParties16>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AddressRule";
-			definition = "If ModificationScopeIndication is INSE, then at least one occurrence of Organisation/ModifiedAddress or IndividualPerson/ModifiedAddress must be present with Organisation/ModifiedAddress/ModificationScopeIndication being INSE or IndividualPerson/ModifiedAddres/ModificationScopeIndication being INSE respectively.";
-			owner_lazy = () -> AccountParties3.mmObject();
+			definition = "If ModificationScopeIndication is INSE (InsertNewDataSet), then one of the following must be present:\r\nPrincipalAccountParty/./Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nCustodianForMinor/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nSecondaryOwner/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nBeneficiary/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nPowerOfAttorney/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nLegalGuardian/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nSuccessorOnDeath/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nAdministrator/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nOtherParty/OtherPartyDetails/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nGranter/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nSettlor/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nSeniorManagingOfficial/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nProtector/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet).";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAddressRule.forAccountParties14;
+			owner_lazy = () -> AccountParties16.mmObject();
 		}
 
 		@Override
-		public void executeValidator(AccountParties3 obj) throws Exception {
-			checkAccountParties3(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.AccountParties4
-	 * AccountParties4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AddressRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If ModificationScopeIndication is INSE, then at least one occurrence of Organisation/ModifiedAddress or IndividualPerson/ModifiedAddress must be present with Organisation/ModifiedAddress/ModificationScopeIndication being INSE or IndividualPerson/ModifiedAddres/ModificationScopeIndication being INSE respectively."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<AccountParties4> forAccountParties4 = new MMConstraint<AccountParties4>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "AddressRule";
-			definition = "If ModificationScopeIndication is INSE, then at least one occurrence of Organisation/ModifiedAddress or IndividualPerson/ModifiedAddress must be present with Organisation/ModifiedAddress/ModificationScopeIndication being INSE or IndividualPerson/ModifiedAddres/ModificationScopeIndication being INSE respectively.";
-			owner_lazy = () -> AccountParties4.mmObject();
-		}
-
-		@Override
-		public void executeValidator(AccountParties4 obj) throws Exception {
-			checkAccountParties4(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.AccountParties7
-	 * AccountParties7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AddressRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If ModificationScopeIndication is INSE, then at least one occurrence of Organisation/ModifiedAddress or IndividualPerson/ModifiedAddress must be present with Organisation/ModifiedAddress/ModificationScopeIndication being INSE or IndividualPerson/ModifiedAddres/ModificationScopeIndication being INSE respectively."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintAddressRule#forAccountParties8
-	 * ConstraintAddressRule.forAccountParties8}</li>
-	 * </ul>
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<AccountParties7> forAccountParties7 = new MMConstraint<AccountParties7>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "AddressRule";
-			definition = "If ModificationScopeIndication is INSE, then at least one occurrence of Organisation/ModifiedAddress or IndividualPerson/ModifiedAddress must be present with Organisation/ModifiedAddress/ModificationScopeIndication being INSE or IndividualPerson/ModifiedAddres/ModificationScopeIndication being INSE respectively.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAddressRule.forAccountParties8);
-			owner_lazy = () -> AccountParties7.mmObject();
-		}
-
-		@Override
-		public void executeValidator(AccountParties7 obj) throws Exception {
-			checkAccountParties7(obj);
+		public void executeValidator(AccountParties16 obj) throws Exception {
+			checkAccountParties16(obj);
 		}
 	};
 	/**
@@ -247,6 +199,49 @@ public class ConstraintAddressRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.AccountParties7
+	 * AccountParties7}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AddressRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If ModificationScopeIndication is INSE, then at least one occurrence of Organisation/ModifiedAddress or IndividualPerson/ModifiedAddress must be present with Organisation/ModifiedAddress/ModificationScopeIndication being INSE or IndividualPerson/ModifiedAddres/ModificationScopeIndication being INSE respectively."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAddressRule#forAccountParties8
+	 * ConstraintAddressRule.forAccountParties8}</li>
+	 * </ul>
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AccountParties7> forAccountParties7 = new MMConstraint<AccountParties7>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AddressRule";
+			definition = "If ModificationScopeIndication is INSE, then at least one occurrence of Organisation/ModifiedAddress or IndividualPerson/ModifiedAddress must be present with Organisation/ModifiedAddress/ModificationScopeIndication being INSE or IndividualPerson/ModifiedAddres/ModificationScopeIndication being INSE respectively.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAddressRule.forAccountParties8);
+			owner_lazy = () -> AccountParties7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountParties7 obj) throws Exception {
+			checkAccountParties7(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountParties14
 	 * AccountParties14}</li>
 	 * <li>
@@ -296,8 +291,8 @@ public class ConstraintAddressRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.AccountParties16
-	 * AccountParties16}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountParties4
+	 * AccountParties4}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -307,60 +302,89 @@ public class ConstraintAddressRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If ModificationScopeIndication is INSE (InsertNewDataSet), then one of the following must be present:\r\nPrincipalAccountParty/./Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nCustodianForMinor/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nSecondaryOwner/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nBeneficiary/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nPowerOfAttorney/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nLegalGuardian/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nSuccessorOnDeath/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nAdministrator/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nOtherParty/OtherPartyDetails/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nGranter/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nSettlor/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nSeniorManagingOfficial/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nProtector/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)."
+	 * "If ModificationScopeIndication is INSE, then at least one occurrence of Organisation/ModifiedAddress or IndividualPerson/ModifiedAddress must be present with Organisation/ModifiedAddress/ModificationScopeIndication being INSE or IndividualPerson/ModifiedAddres/ModificationScopeIndication being INSE respectively."
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintAddressRule#forAccountParties14
-	 * ConstraintAddressRule.forAccountParties14}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<AccountParties16> forAccountParties16 = new MMConstraint<AccountParties16>() {
+	public static final MMConstraint<AccountParties4> forAccountParties4 = new MMConstraint<AccountParties4>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AddressRule";
-			definition = "If ModificationScopeIndication is INSE (InsertNewDataSet), then one of the following must be present:\r\nPrincipalAccountParty/./Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nCustodianForMinor/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nSecondaryOwner/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nBeneficiary/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nPowerOfAttorney/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nLegalGuardian/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nSuccessorOnDeath/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nAdministrator/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nOtherParty/OtherPartyDetails/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nGranter/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nSettlor/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nSeniorManagingOfficial/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nProtector/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet).";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAddressRule.forAccountParties14;
-			owner_lazy = () -> AccountParties16.mmObject();
+			definition = "If ModificationScopeIndication is INSE, then at least one occurrence of Organisation/ModifiedAddress or IndividualPerson/ModifiedAddress must be present with Organisation/ModifiedAddress/ModificationScopeIndication being INSE or IndividualPerson/ModifiedAddres/ModificationScopeIndication being INSE respectively.";
+			owner_lazy = () -> AccountParties4.mmObject();
 		}
 
 		@Override
-		public void executeValidator(AccountParties16 obj) throws Exception {
-			checkAccountParties16(obj);
+		public void executeValidator(AccountParties4 obj) throws Exception {
+			checkAccountParties4(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.AccountParties3
+	 * AccountParties3}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AddressRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If ModificationScopeIndication is INSE, then at least one occurrence of Organisation/ModifiedAddress or IndividualPerson/ModifiedAddress must be present with Organisation/ModifiedAddress/ModificationScopeIndication being INSE or IndividualPerson/ModifiedAddres/ModificationScopeIndication being INSE respectively."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AccountParties3> forAccountParties3 = new MMConstraint<AccountParties3>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AddressRule";
+			definition = "If ModificationScopeIndication is INSE, then at least one occurrence of Organisation/ModifiedAddress or IndividualPerson/ModifiedAddress must be present with Organisation/ModifiedAddress/ModificationScopeIndication being INSE or IndividualPerson/ModifiedAddres/ModificationScopeIndication being INSE respectively.";
+			owner_lazy = () -> AccountParties3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountParties3 obj) throws Exception {
+			checkAccountParties3(obj);
 		}
 	};
 
 	/**
-	 * If ModificationScopeIndication is INSE, then at least one occurrence of
-	 * Organisation/ModifiedAddress or IndividualPerson/ModifiedAddress must be
-	 * present with Organisation/ModifiedAddress/ModificationScopeIndication
-	 * being INSE or IndividualPerson/ModifiedAddres/ModificationScopeIndication
-	 * being INSE respectively.
+	 * If ModificationScopeIndication is INSE (InsertNewDataSet), then one of
+	 * the following must be present:<br>
+	 * PrincipalAccountParty/./Party/./ModifiedPostalAddress/
+	 * ModificationScopeIndication/INSE (InsertNewDataSet)<br>
+	 * CustodianForMinor/Party/./ModifiedPostalAddress/
+	 * ModificationScopeIndication/INSE (InsertNewDataSet)<br>
+	 * SecondaryOwner/Party/./ModifiedPostalAddress/ModificationScopeIndication/
+	 * INSE (InsertNewDataSet)<br>
+	 * Beneficiary/Party/./ModifiedPostalAddress/ModificationScopeIndication/
+	 * INSE (InsertNewDataSet)<br>
+	 * PowerOfAttorney/Party/./ModifiedPostalAddress/ModificationScopeIndication
+	 * /INSE (InsertNewDataSet)<br>
+	 * LegalGuardian/Party/./ModifiedPostalAddress/ModificationScopeIndication/
+	 * INSE (InsertNewDataSet)<br>
+	 * SuccessorOnDeath/Party/./ModifiedPostalAddress/
+	 * ModificationScopeIndication/INSE (InsertNewDataSet)<br>
+	 * Administrator/Party/./ModifiedPostalAddress/ModificationScopeIndication/
+	 * INSE (InsertNewDataSet)<br>
+	 * OtherParty/OtherPartyDetails/Party/./ModifiedPostalAddress/
+	 * ModificationScopeIndication/INSE (InsertNewDataSet)<br>
+	 * Granter/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE
+	 * (InsertNewDataSet)<br>
+	 * Settlor/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE
+	 * (InsertNewDataSet)<br>
+	 * SeniorManagingOfficial/./ModifiedPostalAddress/
+	 * ModificationScopeIndication/INSE (InsertNewDataSet)<br>
+	 * Protector/./ModifiedPostalAddress/ModificationScopeIndication/INSE
+	 * (InsertNewDataSet).
 	 */
-	public static void checkAccountParties3(AccountParties3 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If ModificationScopeIndication is INSE, then at least one occurrence of
-	 * Organisation/ModifiedAddress or IndividualPerson/ModifiedAddress must be
-	 * present with Organisation/ModifiedAddress/ModificationScopeIndication
-	 * being INSE or IndividualPerson/ModifiedAddres/ModificationScopeIndication
-	 * being INSE respectively.
-	 */
-	public static void checkAccountParties4(AccountParties4 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If ModificationScopeIndication is INSE, then at least one occurrence of
-	 * Organisation/ModifiedAddress or IndividualPerson/ModifiedAddress must be
-	 * present with Organisation/ModifiedAddress/ModificationScopeIndication
-	 * being INSE or IndividualPerson/ModifiedAddres/ModificationScopeIndication
-	 * being INSE respectively.
-	 */
-	public static void checkAccountParties7(AccountParties7 obj) throws Exception {
+	public static void checkAccountParties16(AccountParties16 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -493,6 +517,17 @@ public class ConstraintAddressRule {
 	}
 
 	/**
+	 * If ModificationScopeIndication is INSE, then at least one occurrence of
+	 * Organisation/ModifiedAddress or IndividualPerson/ModifiedAddress must be
+	 * present with Organisation/ModifiedAddress/ModificationScopeIndication
+	 * being INSE or IndividualPerson/ModifiedAddres/ModificationScopeIndication
+	 * being INSE respectively.
+	 */
+	public static void checkAccountParties7(AccountParties7 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
 	 * If ModificationScopeIndication is INSE, then one of the following must be
 	 * present:<br>
 	 * PrincipalAccountParty/PrimaryOwner/Party/Organisation/
@@ -557,36 +592,24 @@ public class ConstraintAddressRule {
 	}
 
 	/**
-	 * If ModificationScopeIndication is INSE (InsertNewDataSet), then one of
-	 * the following must be present:<br>
-	 * PrincipalAccountParty/./Party/./ModifiedPostalAddress/
-	 * ModificationScopeIndication/INSE (InsertNewDataSet)<br>
-	 * CustodianForMinor/Party/./ModifiedPostalAddress/
-	 * ModificationScopeIndication/INSE (InsertNewDataSet)<br>
-	 * SecondaryOwner/Party/./ModifiedPostalAddress/ModificationScopeIndication/
-	 * INSE (InsertNewDataSet)<br>
-	 * Beneficiary/Party/./ModifiedPostalAddress/ModificationScopeIndication/
-	 * INSE (InsertNewDataSet)<br>
-	 * PowerOfAttorney/Party/./ModifiedPostalAddress/ModificationScopeIndication
-	 * /INSE (InsertNewDataSet)<br>
-	 * LegalGuardian/Party/./ModifiedPostalAddress/ModificationScopeIndication/
-	 * INSE (InsertNewDataSet)<br>
-	 * SuccessorOnDeath/Party/./ModifiedPostalAddress/
-	 * ModificationScopeIndication/INSE (InsertNewDataSet)<br>
-	 * Administrator/Party/./ModifiedPostalAddress/ModificationScopeIndication/
-	 * INSE (InsertNewDataSet)<br>
-	 * OtherParty/OtherPartyDetails/Party/./ModifiedPostalAddress/
-	 * ModificationScopeIndication/INSE (InsertNewDataSet)<br>
-	 * Granter/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE
-	 * (InsertNewDataSet)<br>
-	 * Settlor/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE
-	 * (InsertNewDataSet)<br>
-	 * SeniorManagingOfficial/./ModifiedPostalAddress/
-	 * ModificationScopeIndication/INSE (InsertNewDataSet)<br>
-	 * Protector/./ModifiedPostalAddress/ModificationScopeIndication/INSE
-	 * (InsertNewDataSet).
+	 * If ModificationScopeIndication is INSE, then at least one occurrence of
+	 * Organisation/ModifiedAddress or IndividualPerson/ModifiedAddress must be
+	 * present with Organisation/ModifiedAddress/ModificationScopeIndication
+	 * being INSE or IndividualPerson/ModifiedAddres/ModificationScopeIndication
+	 * being INSE respectively.
 	 */
-	public static void checkAccountParties16(AccountParties16 obj) throws Exception {
+	public static void checkAccountParties4(AccountParties4 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If ModificationScopeIndication is INSE, then at least one occurrence of
+	 * Organisation/ModifiedAddress or IndividualPerson/ModifiedAddress must be
+	 * present with Organisation/ModifiedAddress/ModificationScopeIndication
+	 * being INSE or IndividualPerson/ModifiedAddres/ModificationScopeIndication
+	 * being INSE respectively.
+	 */
+	public static void checkAccountParties3(AccountParties3 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

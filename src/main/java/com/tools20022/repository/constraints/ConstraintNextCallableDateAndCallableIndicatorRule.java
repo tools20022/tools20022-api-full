@@ -26,10 +26,48 @@ import com.tools20022.repository.msg.Debt3;
 import java.util.Arrays;
 
 /**
- * If CallableIndicator is present, then CallDate must be present.
+ * If CallableIndicator is present, then NextCalldate must be present.
  */
 public class ConstraintNextCallableDateAndCallableIndicatorRule {
 
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.Debt3 Debt3}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NextCallableDateAndCallableIndicatorRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If CallableIndicator is present, then NextCalldate must be present."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNextCallableDateAndCallableIndicatorRule#forDebt2
+	 * ConstraintNextCallableDateAndCallableIndicatorRule.forDebt2}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<Debt3> forDebt3 = new MMConstraint<Debt3>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NextCallableDateAndCallableIndicatorRule";
+			definition = "If CallableIndicator is present, then NextCalldate must be present.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNextCallableDateAndCallableIndicatorRule.forDebt2;
+			owner_lazy = () -> Debt3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Debt3 obj) throws Exception {
+			checkDebt3(obj);
+		}
+	};
 	/**
 	 * 
 	 <p>
@@ -103,44 +141,13 @@ public class ConstraintNextCallableDateAndCallableIndicatorRule {
 			checkDebt2(obj);
 		}
 	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.Debt3 Debt3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "NextCallableDateAndCallableIndicatorRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If CallableIndicator is present, then NextCalldate must be present."</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintNextCallableDateAndCallableIndicatorRule#forDebt2
-	 * ConstraintNextCallableDateAndCallableIndicatorRule.forDebt2}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<Debt3> forDebt3 = new MMConstraint<Debt3>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "NextCallableDateAndCallableIndicatorRule";
-			definition = "If CallableIndicator is present, then NextCalldate must be present.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNextCallableDateAndCallableIndicatorRule.forDebt2;
-			owner_lazy = () -> Debt3.mmObject();
-		}
 
-		@Override
-		public void executeValidator(Debt3 obj) throws Exception {
-			checkDebt3(obj);
-		}
-	};
+	/**
+	 * If CallableIndicator is present, then NextCalldate must be present.
+	 */
+	public static void checkDebt3(Debt3 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
 
 	/**
 	 * If CallableIndicator is present, then CallDate must be present.
@@ -153,13 +160,6 @@ public class ConstraintNextCallableDateAndCallableIndicatorRule {
 	 * If CallableIndicator is present, then NextCalldate must be present.
 	 */
 	public static void checkDebt2(Debt2 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If CallableIndicator is present, then NextCalldate must be present.
-	 */
-	public static void checkDebt3(Debt3 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

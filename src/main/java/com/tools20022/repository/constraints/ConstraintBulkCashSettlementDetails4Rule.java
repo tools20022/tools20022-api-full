@@ -36,40 +36,6 @@ public class ConstraintBulkCashSettlementDetails4Rule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionBulkExecution2
-	 * SubscriptionBulkExecution2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BulkCashSettlementDetails4Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Either IndividualExecutionDetails/CashSettlementDetails or BulkCashSettlementDetails may be present, but not both."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SubscriptionBulkExecution2> forSubscriptionBulkExecution2 = new MMConstraint<SubscriptionBulkExecution2>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "BulkCashSettlementDetails4Rule";
-			definition = "Either IndividualExecutionDetails/CashSettlementDetails or BulkCashSettlementDetails may be present, but not both.";
-			owner_lazy = () -> SubscriptionBulkExecution2.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SubscriptionBulkExecution2 obj) throws Exception {
-			checkSubscriptionBulkExecution2(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubscriptionBulkExecution3
 	 * SubscriptionBulkExecution3}</li>
 	 * <li>
@@ -107,12 +73,46 @@ public class ConstraintBulkCashSettlementDetails4Rule {
 			checkSubscriptionBulkExecution3(obj);
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionBulkExecution2
+	 * SubscriptionBulkExecution2}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BulkCashSettlementDetails4Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Either IndividualExecutionDetails/CashSettlementDetails or BulkCashSettlementDetails may be present, but not both."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SubscriptionBulkExecution2> forSubscriptionBulkExecution2 = new MMConstraint<SubscriptionBulkExecution2>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "BulkCashSettlementDetails4Rule";
+			definition = "Either IndividualExecutionDetails/CashSettlementDetails or BulkCashSettlementDetails may be present, but not both.";
+			owner_lazy = () -> SubscriptionBulkExecution2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionBulkExecution2 obj) throws Exception {
+			checkSubscriptionBulkExecution2(obj);
+		}
+	};
 
 	/**
 	 * Either IndividualExecutionDetails/CashSettlementDetails or
 	 * BulkCashSettlementDetails may be present, but not both.
 	 */
-	public static void checkSubscriptionBulkExecution2(SubscriptionBulkExecution2 obj) throws Exception {
+	public static void checkSubscriptionBulkExecution3(SubscriptionBulkExecution3 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -120,7 +120,7 @@ public class ConstraintBulkCashSettlementDetails4Rule {
 	 * Either IndividualExecutionDetails/CashSettlementDetails or
 	 * BulkCashSettlementDetails may be present, but not both.
 	 */
-	public static void checkSubscriptionBulkExecution3(SubscriptionBulkExecution3 obj) throws Exception {
+	public static void checkSubscriptionBulkExecution2(SubscriptionBulkExecution2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

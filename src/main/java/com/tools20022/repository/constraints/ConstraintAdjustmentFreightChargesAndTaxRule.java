@@ -24,9 +24,8 @@ import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 
 /**
- * Either all adjustments, freight charges and taxes must be entered at this
- * level only, or all adjustments, freight charges and taxes must be entered at
- * line item level only.
+ * Adjustments, freight charges and taxes must be entered at this level, or
+ * adjustments, freight charges and taxes must be entered at line item level.
  */
 public class ConstraintAdjustmentFreightChargesAndTaxRule {
 
@@ -36,7 +35,7 @@ public class ConstraintAdjustmentFreightChargesAndTaxRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.LineItem5 LineItem5}</li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem13 LineItem13}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -46,21 +45,27 @@ public class ConstraintAdjustmentFreightChargesAndTaxRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Either all adjustments, freight charges and taxes must be entered at this level only, or all adjustments, freight charges and taxes must be entered at line item level only."
+	 * "Adjustments, freight charges and taxes must be entered at this level, or adjustments, freight charges and taxes must be entered at line item level."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdjustmentFreightChargesAndTaxRule#forLineItem11
+	 * ConstraintAdjustmentFreightChargesAndTaxRule.forLineItem11}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<LineItem5> forLineItem5 = new MMConstraint<LineItem5>() {
+	public static final MMConstraint<LineItem13> forLineItem13 = new MMConstraint<LineItem13>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdjustmentFreightChargesAndTaxRule";
-			definition = "Either all adjustments, freight charges and taxes must be entered at this level only, or all adjustments, freight charges and taxes must be entered at line item level only.";
-			owner_lazy = () -> LineItem5.mmObject();
+			definition = "Adjustments, freight charges and taxes must be entered at this level, or adjustments, freight charges and taxes must be entered at line item level.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdjustmentFreightChargesAndTaxRule.forLineItem11;
+			owner_lazy = () -> LineItem13.mmObject();
 		}
 
 		@Override
-		public void executeValidator(LineItem5 obj) throws Exception {
-			checkLineItem5(obj);
+		public void executeValidator(LineItem13 obj) throws Exception {
+			checkLineItem13(obj);
 		}
 	};
 	/**
@@ -69,7 +74,7 @@ public class ConstraintAdjustmentFreightChargesAndTaxRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.LineItem7 LineItem7}</li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem11 LineItem11}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -85,24 +90,69 @@ public class ConstraintAdjustmentFreightChargesAndTaxRule {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdjustmentFreightChargesAndTaxRule#forLineItem11
-	 * ConstraintAdjustmentFreightChargesAndTaxRule.forLineItem11}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdjustmentFreightChargesAndTaxRule#forLineItem13
+	 * ConstraintAdjustmentFreightChargesAndTaxRule.forLineItem13}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdjustmentFreightChargesAndTaxRule#forLineItem7
+	 * ConstraintAdjustmentFreightChargesAndTaxRule.forLineItem7}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<LineItem7> forLineItem7 = new MMConstraint<LineItem7>() {
+	public static final MMConstraint<LineItem11> forLineItem11 = new MMConstraint<LineItem11>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdjustmentFreightChargesAndTaxRule";
 			definition = "Adjustments, freight charges and taxes must be entered at this level, or adjustments, freight charges and taxes must be entered at line item level.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdjustmentFreightChargesAndTaxRule.forLineItem11);
-			owner_lazy = () -> LineItem7.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdjustmentFreightChargesAndTaxRule.forLineItem13);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdjustmentFreightChargesAndTaxRule.forLineItem7;
+			owner_lazy = () -> LineItem11.mmObject();
 		}
 
 		@Override
-		public void executeValidator(LineItem7 obj) throws Exception {
-			checkLineItem7(obj);
+		public void executeValidator(LineItem11 obj) throws Exception {
+			checkLineItem11(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.LineItem15 LineItem15}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AdjustmentFreightChargesAndTaxRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Either all adjustments, freight charges and taxes must be entered at this level only, or all adjustments, freight charges and taxes must be entered at line item level only."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdjustmentFreightChargesAndTaxRule#forLineItem12
+	 * ConstraintAdjustmentFreightChargesAndTaxRule.forLineItem12}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<LineItem15> forLineItem15 = new MMConstraint<LineItem15>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AdjustmentFreightChargesAndTaxRule";
+			definition = "Either all adjustments, freight charges and taxes must be entered at this level only, or all adjustments, freight charges and taxes must be entered at line item level only.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdjustmentFreightChargesAndTaxRule.forLineItem12;
+			owner_lazy = () -> LineItem15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(LineItem15 obj) throws Exception {
+			checkLineItem15(obj);
 		}
 	};
 	/**
@@ -186,7 +236,7 @@ public class ConstraintAdjustmentFreightChargesAndTaxRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.LineItem11 LineItem11}</li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem7 LineItem7}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -202,30 +252,57 @@ public class ConstraintAdjustmentFreightChargesAndTaxRule {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdjustmentFreightChargesAndTaxRule#forLineItem13
-	 * ConstraintAdjustmentFreightChargesAndTaxRule.forLineItem13}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdjustmentFreightChargesAndTaxRule#forLineItem11
+	 * ConstraintAdjustmentFreightChargesAndTaxRule.forLineItem11}</li>
 	 * </ul>
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdjustmentFreightChargesAndTaxRule#forLineItem7
-	 * ConstraintAdjustmentFreightChargesAndTaxRule.forLineItem7}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<LineItem11> forLineItem11 = new MMConstraint<LineItem11>() {
+	public static final MMConstraint<LineItem7> forLineItem7 = new MMConstraint<LineItem7>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdjustmentFreightChargesAndTaxRule";
 			definition = "Adjustments, freight charges and taxes must be entered at this level, or adjustments, freight charges and taxes must be entered at line item level.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdjustmentFreightChargesAndTaxRule.forLineItem13);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdjustmentFreightChargesAndTaxRule.forLineItem7;
-			owner_lazy = () -> LineItem11.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdjustmentFreightChargesAndTaxRule.forLineItem11);
+			owner_lazy = () -> LineItem7.mmObject();
 		}
 
 		@Override
-		public void executeValidator(LineItem11 obj) throws Exception {
-			checkLineItem11(obj);
+		public void executeValidator(LineItem7 obj) throws Exception {
+			checkLineItem7(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.LineItem5 LineItem5}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AdjustmentFreightChargesAndTaxRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Either all adjustments, freight charges and taxes must be entered at this level only, or all adjustments, freight charges and taxes must be entered at line item level only."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<LineItem5> forLineItem5 = new MMConstraint<LineItem5>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AdjustmentFreightChargesAndTaxRule";
+			definition = "Either all adjustments, freight charges and taxes must be entered at this level only, or all adjustments, freight charges and taxes must be entered at line item level only.";
+			owner_lazy = () -> LineItem5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(LineItem5 obj) throws Exception {
+			checkLineItem5(obj);
 		}
 	};
 	/**
@@ -276,91 +353,13 @@ public class ConstraintAdjustmentFreightChargesAndTaxRule {
 			checkLineItem12(obj);
 		}
 	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.LineItem13 LineItem13}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AdjustmentFreightChargesAndTaxRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Adjustments, freight charges and taxes must be entered at this level, or adjustments, freight charges and taxes must be entered at line item level."
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdjustmentFreightChargesAndTaxRule#forLineItem11
-	 * ConstraintAdjustmentFreightChargesAndTaxRule.forLineItem11}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<LineItem13> forLineItem13 = new MMConstraint<LineItem13>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "AdjustmentFreightChargesAndTaxRule";
-			definition = "Adjustments, freight charges and taxes must be entered at this level, or adjustments, freight charges and taxes must be entered at line item level.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdjustmentFreightChargesAndTaxRule.forLineItem11;
-			owner_lazy = () -> LineItem13.mmObject();
-		}
-
-		@Override
-		public void executeValidator(LineItem13 obj) throws Exception {
-			checkLineItem13(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.LineItem15 LineItem15}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AdjustmentFreightChargesAndTaxRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Either all adjustments, freight charges and taxes must be entered at this level only, or all adjustments, freight charges and taxes must be entered at line item level only."
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdjustmentFreightChargesAndTaxRule#forLineItem12
-	 * ConstraintAdjustmentFreightChargesAndTaxRule.forLineItem12}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<LineItem15> forLineItem15 = new MMConstraint<LineItem15>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "AdjustmentFreightChargesAndTaxRule";
-			definition = "Either all adjustments, freight charges and taxes must be entered at this level only, or all adjustments, freight charges and taxes must be entered at line item level only.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdjustmentFreightChargesAndTaxRule.forLineItem12;
-			owner_lazy = () -> LineItem15.mmObject();
-		}
-
-		@Override
-		public void executeValidator(LineItem15 obj) throws Exception {
-			checkLineItem15(obj);
-		}
-	};
 
 	/**
-	 * Either all adjustments, freight charges and taxes must be entered at this
-	 * level only, or all adjustments, freight charges and taxes must be entered
-	 * at line item level only.
+	 * Adjustments, freight charges and taxes must be entered at this level, or
+	 * adjustments, freight charges and taxes must be entered at line item
+	 * level.
 	 */
-	public static void checkLineItem5(LineItem5 obj) throws Exception {
+	public static void checkLineItem13(LineItem13 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -369,7 +368,16 @@ public class ConstraintAdjustmentFreightChargesAndTaxRule {
 	 * adjustments, freight charges and taxes must be entered at line item
 	 * level.
 	 */
-	public static void checkLineItem7(LineItem7 obj) throws Exception {
+	public static void checkLineItem11(LineItem11 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Either all adjustments, freight charges and taxes must be entered at this
+	 * level only, or all adjustments, freight charges and taxes must be entered
+	 * at line item level only.
+	 */
+	public static void checkLineItem15(LineItem15 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -396,7 +404,16 @@ public class ConstraintAdjustmentFreightChargesAndTaxRule {
 	 * adjustments, freight charges and taxes must be entered at line item
 	 * level.
 	 */
-	public static void checkLineItem11(LineItem11 obj) throws Exception {
+	public static void checkLineItem7(LineItem7 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Either all adjustments, freight charges and taxes must be entered at this
+	 * level only, or all adjustments, freight charges and taxes must be entered
+	 * at line item level only.
+	 */
+	public static void checkLineItem5(LineItem5 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -406,24 +423,6 @@ public class ConstraintAdjustmentFreightChargesAndTaxRule {
 	 * at line item level only.
 	 */
 	public static void checkLineItem12(LineItem12 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Adjustments, freight charges and taxes must be entered at this level, or
-	 * adjustments, freight charges and taxes must be entered at line item
-	 * level.
-	 */
-	public static void checkLineItem13(LineItem13 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Either all adjustments, freight charges and taxes must be entered at this
-	 * level only, or all adjustments, freight charges and taxes must be entered
-	 * at line item level only.
-	 */
-	public static void checkLineItem15(LineItem15 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

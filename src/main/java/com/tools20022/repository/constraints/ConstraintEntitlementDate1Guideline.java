@@ -54,22 +54,22 @@ public class ConstraintEntitlementDate1Guideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintEntitlementDate1Guideline#forMeetingNotificationV04
-	 * ConstraintEntitlementDate1Guideline.forMeetingNotificationV04}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintEntitlementDate1Guideline#for_seev_MeetingNotificationV04
+	 * ConstraintEntitlementDate1Guideline.for_seev_MeetingNotificationV04}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<MeetingNotificationV05> forMeetingNotificationV05 = new MMConstraint<MeetingNotificationV05>() {
+	public static final MMConstraint<MeetingNotificationV05> for_seev_MeetingNotificationV05 = new MMConstraint<MeetingNotificationV05>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntitlementDate1Guideline";
 			definition = "If both EntitlementSpecification/EntitlementFixingDate and Security/Position/HoldingBalance/Date are present, it is recommended that both date values be identical.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEntitlementDate1Guideline.forMeetingNotificationV04;
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEntitlementDate1Guideline.for_seev_MeetingNotificationV04;
 			owner_lazy = () -> MeetingNotificationV05.mmObject();
 		}
 
 		@Override
 		public void executeValidator(MeetingNotificationV05 obj) throws Exception {
-			checkMeetingNotificationV05(obj);
+			check_seev_MeetingNotificationV05(obj);
 		}
 	};
 	/**
@@ -95,24 +95,24 @@ public class ConstraintEntitlementDate1Guideline {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintEntitlementDate1Guideline#forMeetingNotificationV05
-	 * ConstraintEntitlementDate1Guideline.forMeetingNotificationV05}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintEntitlementDate1Guideline#for_seev_MeetingNotificationV05
+	 * ConstraintEntitlementDate1Guideline.for_seev_MeetingNotificationV05}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<MeetingNotificationV04> forMeetingNotificationV04 = new MMConstraint<MeetingNotificationV04>() {
+	public static final MMConstraint<MeetingNotificationV04> for_seev_MeetingNotificationV04 = new MMConstraint<MeetingNotificationV04>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntitlementDate1Guideline";
 			definition = "If both EntitlementSpecification/EntitlementFixingDate and Security/Position/HoldingBalance/Date are present, it is recommended that both date values be identical.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEntitlementDate1Guideline.forMeetingNotificationV05);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEntitlementDate1Guideline.for_seev_MeetingNotificationV05);
 			owner_lazy = () -> MeetingNotificationV04.mmObject();
 		}
 
 		@Override
 		public void executeValidator(MeetingNotificationV04 obj) throws Exception {
-			checkMeetingNotificationV04(obj);
+			check_seev_MeetingNotificationV04(obj);
 		}
 	};
 	/**
@@ -136,7 +136,7 @@ public class ConstraintEntitlementDate1Guideline {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<MeetingNotificationV03> forMeetingNotificationV03 = new MMConstraint<MeetingNotificationV03>() {
+	public static final MMConstraint<MeetingNotificationV03> for_seev_MeetingNotificationV03 = new MMConstraint<MeetingNotificationV03>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntitlementDate1Guideline";
@@ -146,7 +146,7 @@ public class ConstraintEntitlementDate1Guideline {
 
 		@Override
 		public void executeValidator(MeetingNotificationV03 obj) throws Exception {
-			checkMeetingNotificationV03(obj);
+			check_seev_MeetingNotificationV03(obj);
 		}
 	};
 
@@ -155,7 +155,7 @@ public class ConstraintEntitlementDate1Guideline {
 	 * Security/Position/HoldingBalance/Date are present, it is recommended that
 	 * both date values be identical.
 	 */
-	public static void checkMeetingNotificationV05(MeetingNotificationV05 obj) throws Exception {
+	public static void check_seev_MeetingNotificationV05(MeetingNotificationV05 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -164,7 +164,7 @@ public class ConstraintEntitlementDate1Guideline {
 	 * Security/Position/HoldingBalance/Date are present, it is recommended that
 	 * both date values be identical.
 	 */
-	public static void checkMeetingNotificationV04(MeetingNotificationV04 obj) throws Exception {
+	public static void check_seev_MeetingNotificationV04(MeetingNotificationV04 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -173,7 +173,7 @@ public class ConstraintEntitlementDate1Guideline {
 	 * Security/Position/HoldingBalance/Date are present, it is recommended that
 	 * both date values be identical.
 	 */
-	public static void checkMeetingNotificationV03(MeetingNotificationV03 obj) throws Exception {
+	public static void check_seev_MeetingNotificationV03(MeetingNotificationV03 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

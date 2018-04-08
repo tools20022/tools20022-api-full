@@ -114,8 +114,8 @@ public class ConstraintNonChequePaymentMethodRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction9
-	 * PaymentInstruction9}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction22
+	 * PaymentInstruction22}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
 	 * expression} =
 	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/CreditTransferTransactionInformation[*]/CreditorAccount&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"DifferentFromValue\"&gt;&lt;leftOperand&gt;/PaymentMethod&lt;/leftOperand&gt;&lt;rightOperand&gt;Cheque&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/CreditTransferTransactionInformation[*]/Creditor&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
@@ -129,31 +129,28 @@ public class ConstraintNonChequePaymentMethodRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If PaymentMethod is different from CHK and CreditTransferTransactionInformation/Creditor is not present, then CreditTransferTransactionInformation/CreditorAccount must be present."
+	 * "If PaymentMethod is different from CHK (Cheque) and CreditTransferTransactionInformation/Creditor is not present, then CreditTransferTransactionInformation/CreditorAccount must be present."
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintNonChequePaymentMethodRule#forPaymentInstruction16
-	 * ConstraintNonChequePaymentMethodRule.forPaymentInstruction16}</li>
-	 * </ul>
-	 * </li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNonChequePaymentMethodRule#forPaymentInstruction20
+	 * ConstraintNonChequePaymentMethodRule.forPaymentInstruction20}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<PaymentInstruction9> forPaymentInstruction9 = new MMConstraint<PaymentInstruction9>() {
+	public static final MMConstraint<PaymentInstruction22> forPaymentInstruction22 = new MMConstraint<PaymentInstruction22>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonChequePaymentMethodRule";
-			definition = "If PaymentMethod is different from CHK and CreditTransferTransactionInformation/Creditor is not present, then CreditTransferTransactionInformation/CreditorAccount must be present.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNonChequePaymentMethodRule.forPaymentInstruction16);
-			owner_lazy = () -> PaymentInstruction9.mmObject();
+			definition = "If PaymentMethod is different from CHK (Cheque) and CreditTransferTransactionInformation/Creditor is not present, then CreditTransferTransactionInformation/CreditorAccount must be present.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNonChequePaymentMethodRule.forPaymentInstruction20;
+			owner_lazy = () -> PaymentInstruction22.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CreditTransferTransactionInformation[*]/CreditorAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"DifferentFromValue\"><leftOperand>/PaymentMethod</leftOperand><rightOperand>Cheque</rightOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditTransferTransactionInformation[*]/Creditor</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
 
 		@Override
-		public void executeValidator(PaymentInstruction9 obj) throws Exception {
-			checkPaymentInstruction9(obj);
+		public void executeValidator(PaymentInstruction22 obj) throws Exception {
+			checkPaymentInstruction22(obj);
 		}
 	};
 	/**
@@ -274,8 +271,8 @@ public class ConstraintNonChequePaymentMethodRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction22
-	 * PaymentInstruction22}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction9
+	 * PaymentInstruction9}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
 	 * expression} =
 	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/CreditTransferTransactionInformation[*]/CreditorAccount&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"DifferentFromValue\"&gt;&lt;leftOperand&gt;/PaymentMethod&lt;/leftOperand&gt;&lt;rightOperand&gt;Cheque&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/CreditTransferTransactionInformation[*]/Creditor&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
@@ -289,28 +286,31 @@ public class ConstraintNonChequePaymentMethodRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If PaymentMethod is different from CHK (Cheque) and CreditTransferTransactionInformation/Creditor is not present, then CreditTransferTransactionInformation/CreditorAccount must be present."
+	 * "If PaymentMethod is different from CHK and CreditTransferTransactionInformation/Creditor is not present, then CreditTransferTransactionInformation/CreditorAccount must be present."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintNonChequePaymentMethodRule#forPaymentInstruction20
-	 * ConstraintNonChequePaymentMethodRule.forPaymentInstruction20}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNonChequePaymentMethodRule#forPaymentInstruction16
+	 * ConstraintNonChequePaymentMethodRule.forPaymentInstruction16}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<PaymentInstruction22> forPaymentInstruction22 = new MMConstraint<PaymentInstruction22>() {
+	public static final MMConstraint<PaymentInstruction9> forPaymentInstruction9 = new MMConstraint<PaymentInstruction9>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonChequePaymentMethodRule";
-			definition = "If PaymentMethod is different from CHK (Cheque) and CreditTransferTransactionInformation/Creditor is not present, then CreditTransferTransactionInformation/CreditorAccount must be present.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNonChequePaymentMethodRule.forPaymentInstruction20;
-			owner_lazy = () -> PaymentInstruction22.mmObject();
+			definition = "If PaymentMethod is different from CHK and CreditTransferTransactionInformation/Creditor is not present, then CreditTransferTransactionInformation/CreditorAccount must be present.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNonChequePaymentMethodRule.forPaymentInstruction16);
+			owner_lazy = () -> PaymentInstruction9.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CreditTransferTransactionInformation[*]/CreditorAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"DifferentFromValue\"><leftOperand>/PaymentMethod</leftOperand><rightOperand>Cheque</rightOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditTransferTransactionInformation[*]/Creditor</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
 
 		@Override
-		public void executeValidator(PaymentInstruction22 obj) throws Exception {
-			checkPaymentInstruction22(obj);
+		public void executeValidator(PaymentInstruction9 obj) throws Exception {
+			checkPaymentInstruction9(obj);
 		}
 	};
 	/**
@@ -378,11 +378,11 @@ public class ConstraintNonChequePaymentMethodRule {
 	}
 
 	/**
-	 * If PaymentMethod is different from CHK and
+	 * If PaymentMethod is different from CHK (Cheque) and
 	 * CreditTransferTransactionInformation/Creditor is not present, then
 	 * CreditTransferTransactionInformation/CreditorAccount must be present.
 	 */
-	public static void checkPaymentInstruction9(PaymentInstruction9 obj) throws Exception {
+	public static void checkPaymentInstruction22(PaymentInstruction22 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -405,11 +405,11 @@ public class ConstraintNonChequePaymentMethodRule {
 	}
 
 	/**
-	 * If PaymentMethod is different from CHK (Cheque) and
+	 * If PaymentMethod is different from CHK and
 	 * CreditTransferTransactionInformation/Creditor is not present, then
 	 * CreditTransferTransactionInformation/CreditorAccount must be present.
 	 */
-	public static void checkPaymentInstruction22(PaymentInstruction22 obj) throws Exception {
+	public static void checkPaymentInstruction9(PaymentInstruction9 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 

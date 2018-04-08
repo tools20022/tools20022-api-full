@@ -130,13 +130,13 @@ public class SecuritiesManagementLatestVersion {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Securities Management - Latest version - master";
 				definition = "Messages that support post-settlement processes for securities (including reporting on securities movements, trades and balances), the processes required to protect beneficial owner's rights throughout settlement, plus any exceptions and investigations related to securities transactions.";
+				code = "semt";
 				messageDefinition_lazy = () -> Arrays.asList(AccountingStatementOfHoldingsCancellationV02.mmObject(), CustodyStatementOfHoldingsCancellationV02.mmObject(), SecuritiesEndOfProcessReportV01.mmObject(),
 						TotalPortfolioValuationReportV01.mmObject(), StatementOfInvestmentFundTransactionsV03.mmObject(), SecuritiesMessageRejectionV03.mmObject(), StatementOfInvestmentFundTransactionsCancellationV03.mmObject(),
 						SecuritiesBalanceTransparencyReportStatusAdviceV01.mmObject(), SecuritiesBalanceCustodyReportV09.mmObject(), IntraPositionMovementInstructionV04.mmObject(), SecuritiesMessageCancellationAdviceV05.mmObject(),
 						SecuritiesStatementQueryV06.mmObject(), SecuritiesBalanceAccountingReportV09.mmObject(), SecuritiesSettlementTransactionAuditTrailReportV03.mmObject(), SecuritiesBalanceTransparencyReportV02.mmObject(),
 						IntraPositionMovementStatusAdviceV05.mmObject(), IntraPositionMovementConfirmationV07.mmObject(), IntraPositionMovementPostingReportV07.mmObject(), SecuritiesTransactionPendingReportV09.mmObject(),
 						SecuritiesSettlementTransactionAllegementReportV07.mmObject(), SecuritiesTransactionPostingReportV08.mmObject());
-				code = "semt";
 			}
 		});
 		return mmObject_lazy.get();

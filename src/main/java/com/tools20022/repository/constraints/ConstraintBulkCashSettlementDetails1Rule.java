@@ -35,8 +35,8 @@ public class ConstraintBulkCashSettlementDetails1Rule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder2
-	 * RedemptionMultipleOrder2}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder2
+	 * SubscriptionMultipleOrder2}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -50,17 +50,17 @@ public class ConstraintBulkCashSettlementDetails1Rule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<RedemptionMultipleOrder2> forRedemptionMultipleOrder2 = new MMConstraint<RedemptionMultipleOrder2>() {
+	public static final MMConstraint<SubscriptionMultipleOrder2> forSubscriptionMultipleOrder2 = new MMConstraint<SubscriptionMultipleOrder2>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BulkCashSettlementDetails1Rule";
 			definition = "Either IndividualOrderDetails/CashSettlementDetails or BulkCashSettlementDetails may be present, but not both.";
-			owner_lazy = () -> RedemptionMultipleOrder2.mmObject();
+			owner_lazy = () -> SubscriptionMultipleOrder2.mmObject();
 		}
 
 		@Override
-		public void executeValidator(RedemptionMultipleOrder2 obj) throws Exception {
-			checkRedemptionMultipleOrder2(obj);
+		public void executeValidator(SubscriptionMultipleOrder2 obj) throws Exception {
+			checkSubscriptionMultipleOrder2(obj);
 		}
 	};
 	/**
@@ -103,83 +103,6 @@ public class ConstraintBulkCashSettlementDetails1Rule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder4
-	 * RedemptionMultipleOrder4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BulkCashSettlementDetails1Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Either IndividualOrderDetails/CashSettlementDetails or BulkCashSettlementDetails may be present, but not both."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintBulkCashSettlementDetailsRule#forRedemptionMultipleOrder6
-	 * ConstraintBulkCashSettlementDetailsRule.forRedemptionMultipleOrder6}</li>
-	 * </ul>
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<RedemptionMultipleOrder4> forRedemptionMultipleOrder4 = new MMConstraint<RedemptionMultipleOrder4>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "BulkCashSettlementDetails1Rule";
-			definition = "Either IndividualOrderDetails/CashSettlementDetails or BulkCashSettlementDetails may be present, but not both.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBulkCashSettlementDetailsRule.forRedemptionMultipleOrder6);
-			owner_lazy = () -> RedemptionMultipleOrder4.mmObject();
-		}
-
-		@Override
-		public void executeValidator(RedemptionMultipleOrder4 obj) throws Exception {
-			checkRedemptionMultipleOrder4(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder2
-	 * SubscriptionMultipleOrder2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BulkCashSettlementDetails1Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Either IndividualOrderDetails/CashSettlementDetails or BulkCashSettlementDetails may be present, but not both."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SubscriptionMultipleOrder2> forSubscriptionMultipleOrder2 = new MMConstraint<SubscriptionMultipleOrder2>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "BulkCashSettlementDetails1Rule";
-			definition = "Either IndividualOrderDetails/CashSettlementDetails or BulkCashSettlementDetails may be present, but not both.";
-			owner_lazy = () -> SubscriptionMultipleOrder2.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SubscriptionMultipleOrder2 obj) throws Exception {
-			checkSubscriptionMultipleOrder2(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder3
 	 * SubscriptionMultipleOrder3}</li>
 	 * <li>
@@ -206,6 +129,40 @@ public class ConstraintBulkCashSettlementDetails1Rule {
 		@Override
 		public void executeValidator(SubscriptionMultipleOrder3 obj) throws Exception {
 			checkSubscriptionMultipleOrder3(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder2
+	 * RedemptionMultipleOrder2}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BulkCashSettlementDetails1Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Either IndividualOrderDetails/CashSettlementDetails or BulkCashSettlementDetails may be present, but not both."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<RedemptionMultipleOrder2> forRedemptionMultipleOrder2 = new MMConstraint<RedemptionMultipleOrder2>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "BulkCashSettlementDetails1Rule";
+			definition = "Either IndividualOrderDetails/CashSettlementDetails or BulkCashSettlementDetails may be present, but not both.";
+			owner_lazy = () -> RedemptionMultipleOrder2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionMultipleOrder2 obj) throws Exception {
+			checkRedemptionMultipleOrder2(obj);
 		}
 	};
 	/**
@@ -251,12 +208,55 @@ public class ConstraintBulkCashSettlementDetails1Rule {
 			checkSubscriptionMultipleOrder4(obj);
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder4
+	 * RedemptionMultipleOrder4}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BulkCashSettlementDetails1Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Either IndividualOrderDetails/CashSettlementDetails or BulkCashSettlementDetails may be present, but not both."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintBulkCashSettlementDetailsRule#forRedemptionMultipleOrder6
+	 * ConstraintBulkCashSettlementDetailsRule.forRedemptionMultipleOrder6}</li>
+	 * </ul>
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<RedemptionMultipleOrder4> forRedemptionMultipleOrder4 = new MMConstraint<RedemptionMultipleOrder4>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "BulkCashSettlementDetails1Rule";
+			definition = "Either IndividualOrderDetails/CashSettlementDetails or BulkCashSettlementDetails may be present, but not both.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBulkCashSettlementDetailsRule.forRedemptionMultipleOrder6);
+			owner_lazy = () -> RedemptionMultipleOrder4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionMultipleOrder4 obj) throws Exception {
+			checkRedemptionMultipleOrder4(obj);
+		}
+	};
 
 	/**
 	 * Either IndividualOrderDetails/CashSettlementDetails or
 	 * BulkCashSettlementDetails may be present, but not both.
 	 */
-	public static void checkRedemptionMultipleOrder2(RedemptionMultipleOrder2 obj) throws Exception {
+	public static void checkSubscriptionMultipleOrder2(SubscriptionMultipleOrder2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -272,22 +272,6 @@ public class ConstraintBulkCashSettlementDetails1Rule {
 	 * Either IndividualOrderDetails/CashSettlementDetails or
 	 * BulkCashSettlementDetails may be present, but not both.
 	 */
-	public static void checkRedemptionMultipleOrder4(RedemptionMultipleOrder4 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Either IndividualOrderDetails/CashSettlementDetails or
-	 * BulkCashSettlementDetails may be present, but not both.
-	 */
-	public static void checkSubscriptionMultipleOrder2(SubscriptionMultipleOrder2 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Either IndividualOrderDetails/CashSettlementDetails or
-	 * BulkCashSettlementDetails may be present, but not both.
-	 */
 	public static void checkSubscriptionMultipleOrder3(SubscriptionMultipleOrder3 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
@@ -296,7 +280,23 @@ public class ConstraintBulkCashSettlementDetails1Rule {
 	 * Either IndividualOrderDetails/CashSettlementDetails or
 	 * BulkCashSettlementDetails may be present, but not both.
 	 */
+	public static void checkRedemptionMultipleOrder2(RedemptionMultipleOrder2 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Either IndividualOrderDetails/CashSettlementDetails or
+	 * BulkCashSettlementDetails may be present, but not both.
+	 */
 	public static void checkSubscriptionMultipleOrder4(SubscriptionMultipleOrder4 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Either IndividualOrderDetails/CashSettlementDetails or
+	 * BulkCashSettlementDetails may be present, but not both.
+	 */
+	public static void checkRedemptionMultipleOrder4(RedemptionMultipleOrder4 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

@@ -96,9 +96,9 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintDepositoryOrPlaceOfListingPresenceRule#forTradeLegNotificationCancellationV03
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDepositoryOrPlaceOfListingPresenceRule#for_secl_TradeLegNotificationCancellationV03
  * ConstraintDepositoryOrPlaceOfListingPresenceRule.
- * forTradeLegNotificationCancellationV03}</li>
+ * for_secl_TradeLegNotificationCancellationV03}</li>
  * </ul>
  * </li>
  * <li>
@@ -502,7 +502,7 @@ public class TradeLegNotificationCancellationV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDepositoryOrPlaceOfListingPresenceRule.forTradeLegNotificationCancellationV03);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDepositoryOrPlaceOfListingPresenceRule.for_secl_TradeLegNotificationCancellationV03);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeLegNotificationCancellationV03";
 				definition = "Scope\r\nThe TradeLegNotificationCancellation message is sent by the central counterparty (CCP) to a clearing member to notify the cancellation of a TradeLegNotification message previously sent.\r\n\r\nThe message definition is intended for use with the ISO20022 Business Application Header.\r\n\r\nUsage\r\nThe previously sent message must be the Trade Leg Notification message.";

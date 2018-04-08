@@ -66,6 +66,39 @@ public class ConstraintIdentificationCountryOfResidenceRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount73
+	 * PartyIdentificationAndAccount73}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "IdentificationCountryOfResidenceRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Identification and/or CountryOfResidence must be present."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<PartyIdentificationAndAccount73> forPartyIdentificationAndAccount73 = new MMConstraint<PartyIdentificationAndAccount73>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "IdentificationCountryOfResidenceRule";
+			definition = "Identification and/or CountryOfResidence must be present.";
+			owner_lazy = () -> PartyIdentificationAndAccount73.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount73 obj) throws Exception {
+			checkPartyIdentificationAndAccount73(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount40
 	 * PartyIdentificationAndAccount40}</li>
 	 * <li>
@@ -91,105 +124,6 @@ public class ConstraintIdentificationCountryOfResidenceRule {
 		@Override
 		public void executeValidator(PartyIdentificationAndAccount40 obj) throws Exception {
 			checkPartyIdentificationAndAccount40(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount28
-	 * PartyIdentificationAndAccount28}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "IdentificationCountryOfResidenceRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Identification and/or CountryOfResidence must be present."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<PartyIdentificationAndAccount28> forPartyIdentificationAndAccount28 = new MMConstraint<PartyIdentificationAndAccount28>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "IdentificationCountryOfResidenceRule";
-			definition = "Identification and/or CountryOfResidence must be present.";
-			owner_lazy = () -> PartyIdentificationAndAccount28.mmObject();
-		}
-
-		@Override
-		public void executeValidator(PartyIdentificationAndAccount28 obj) throws Exception {
-			checkPartyIdentificationAndAccount28(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount36
-	 * PartyIdentificationAndAccount36}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "IdentificationCountryOfResidenceRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Identification and/or CountryOfResidence must be present."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<PartyIdentificationAndAccount36> forPartyIdentificationAndAccount36 = new MMConstraint<PartyIdentificationAndAccount36>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "IdentificationCountryOfResidenceRule";
-			definition = "Identification and/or CountryOfResidence must be present.";
-			owner_lazy = () -> PartyIdentificationAndAccount36.mmObject();
-		}
-
-		@Override
-		public void executeValidator(PartyIdentificationAndAccount36 obj) throws Exception {
-			checkPartyIdentificationAndAccount36(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount61
-	 * PartyIdentificationAndAccount61}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "IdentificationCountryOfResidenceRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Identification and/or CountryOfResidence must be present."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<PartyIdentificationAndAccount61> forPartyIdentificationAndAccount61 = new MMConstraint<PartyIdentificationAndAccount61>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "IdentificationCountryOfResidenceRule";
-			definition = "Identification and/or CountryOfResidence must be present.";
-			owner_lazy = () -> PartyIdentificationAndAccount61.mmObject();
-		}
-
-		@Override
-		public void executeValidator(PartyIdentificationAndAccount61 obj) throws Exception {
-			checkPartyIdentificationAndAccount61(obj);
 		}
 	};
 	/**
@@ -231,6 +165,72 @@ public class ConstraintIdentificationCountryOfResidenceRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount61
+	 * PartyIdentificationAndAccount61}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "IdentificationCountryOfResidenceRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Identification and/or CountryOfResidence must be present."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<PartyIdentificationAndAccount61> forPartyIdentificationAndAccount61 = new MMConstraint<PartyIdentificationAndAccount61>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "IdentificationCountryOfResidenceRule";
+			definition = "Identification and/or CountryOfResidence must be present.";
+			owner_lazy = () -> PartyIdentificationAndAccount61.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount61 obj) throws Exception {
+			checkPartyIdentificationAndAccount61(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount36
+	 * PartyIdentificationAndAccount36}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "IdentificationCountryOfResidenceRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Identification and/or CountryOfResidence must be present."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<PartyIdentificationAndAccount36> forPartyIdentificationAndAccount36 = new MMConstraint<PartyIdentificationAndAccount36>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "IdentificationCountryOfResidenceRule";
+			definition = "Identification and/or CountryOfResidence must be present.";
+			owner_lazy = () -> PartyIdentificationAndAccount36.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount36 obj) throws Exception {
+			checkPartyIdentificationAndAccount36(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount46
 	 * PartyIdentificationAndAccount46}</li>
 	 * <li>
@@ -264,8 +264,8 @@ public class ConstraintIdentificationCountryOfResidenceRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount73
-	 * PartyIdentificationAndAccount73}</li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount28
+	 * PartyIdentificationAndAccount28}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -278,17 +278,17 @@ public class ConstraintIdentificationCountryOfResidenceRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<PartyIdentificationAndAccount73> forPartyIdentificationAndAccount73 = new MMConstraint<PartyIdentificationAndAccount73>() {
+	public static final MMConstraint<PartyIdentificationAndAccount28> forPartyIdentificationAndAccount28 = new MMConstraint<PartyIdentificationAndAccount28>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationCountryOfResidenceRule";
 			definition = "Identification and/or CountryOfResidence must be present.";
-			owner_lazy = () -> PartyIdentificationAndAccount73.mmObject();
+			owner_lazy = () -> PartyIdentificationAndAccount28.mmObject();
 		}
 
 		@Override
-		public void executeValidator(PartyIdentificationAndAccount73 obj) throws Exception {
-			checkPartyIdentificationAndAccount73(obj);
+		public void executeValidator(PartyIdentificationAndAccount28 obj) throws Exception {
+			checkPartyIdentificationAndAccount28(obj);
 		}
 	};
 
@@ -302,28 +302,14 @@ public class ConstraintIdentificationCountryOfResidenceRule {
 	/**
 	 * Identification and/or CountryOfResidence must be present.
 	 */
+	public static void checkPartyIdentificationAndAccount73(PartyIdentificationAndAccount73 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Identification and/or CountryOfResidence must be present.
+	 */
 	public static void checkPartyIdentificationAndAccount40(PartyIdentificationAndAccount40 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Identification and/or CountryOfResidence must be present.
-	 */
-	public static void checkPartyIdentificationAndAccount28(PartyIdentificationAndAccount28 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Identification and/or CountryOfResidence must be present.
-	 */
-	public static void checkPartyIdentificationAndAccount36(PartyIdentificationAndAccount36 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Identification and/or CountryOfResidence must be present.
-	 */
-	public static void checkPartyIdentificationAndAccount61(PartyIdentificationAndAccount61 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -337,6 +323,20 @@ public class ConstraintIdentificationCountryOfResidenceRule {
 	/**
 	 * Identification and/or CountryOfResidence must be present.
 	 */
+	public static void checkPartyIdentificationAndAccount61(PartyIdentificationAndAccount61 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Identification and/or CountryOfResidence must be present.
+	 */
+	public static void checkPartyIdentificationAndAccount36(PartyIdentificationAndAccount36 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Identification and/or CountryOfResidence must be present.
+	 */
 	public static void checkPartyIdentificationAndAccount46(PartyIdentificationAndAccount46 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
@@ -344,7 +344,7 @@ public class ConstraintIdentificationCountryOfResidenceRule {
 	/**
 	 * Identification and/or CountryOfResidence must be present.
 	 */
-	public static void checkPartyIdentificationAndAccount73(PartyIdentificationAndAccount73 obj) throws Exception {
+	public static void checkPartyIdentificationAndAccount28(PartyIdentificationAndAccount28 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

@@ -24,8 +24,8 @@ import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 
 /**
- * If CurrentYear is not present then PreviousYears is mandatory. If CurrentYear
- * is present then PreviousYears is optional.
+ * If CurrentYear is not present, then PreviousYears is mandatory. If
+ * CurrentYear is present then PreviousYears is optional.
  */
 public class ConstraintCurrentYearRule {
 
@@ -35,8 +35,8 @@ public class ConstraintCurrentYearRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue
-	 * ISAYearsOfIssue}</li>
+	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue6
+	 * ISAYearsOfIssue6}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -46,21 +46,30 @@ public class ConstraintCurrentYearRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If CurrentYear is not present then PreviousYears is mandatory. If CurrentYear is present then PreviousYears is optional."
+	 * "If CurrentYear is not present, then PreviousYears is mandatory. If CurrentYear is present then PreviousYears is optional."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintCurrentYearRule#forISAYearsOfIssue7
+	 * ConstraintCurrentYearRule.forISAYearsOfIssue7}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<ISAYearsOfIssue> forISAYearsOfIssue = new MMConstraint<ISAYearsOfIssue>() {
+	public static final MMConstraint<ISAYearsOfIssue6> forISAYearsOfIssue6 = new MMConstraint<ISAYearsOfIssue6>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentYearRule";
-			definition = "If CurrentYear is not present then PreviousYears is mandatory. If CurrentYear is present then PreviousYears is optional.";
-			owner_lazy = () -> ISAYearsOfIssue.mmObject();
+			definition = "If CurrentYear is not present, then PreviousYears is mandatory. If CurrentYear is present then PreviousYears is optional.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCurrentYearRule.forISAYearsOfIssue7);
+			owner_lazy = () -> ISAYearsOfIssue6.mmObject();
 		}
 
 		@Override
-		public void executeValidator(ISAYearsOfIssue obj) throws Exception {
-			checkISAYearsOfIssue(obj);
+		public void executeValidator(ISAYearsOfIssue6 obj) throws Exception {
+			checkISAYearsOfIssue6(obj);
 		}
 	};
 	/**
@@ -137,83 +146,6 @@ public class ConstraintCurrentYearRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue5
-	 * ISAYearsOfIssue5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CurrentYearRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If CurrentYear is not present, then PreviousYears is mandatory. If CurrentYear is present then PreviousYears is optional."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<ISAYearsOfIssue5> forISAYearsOfIssue5 = new MMConstraint<ISAYearsOfIssue5>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "CurrentYearRule";
-			definition = "If CurrentYear is not present, then PreviousYears is mandatory. If CurrentYear is present then PreviousYears is optional.";
-			owner_lazy = () -> ISAYearsOfIssue5.mmObject();
-		}
-
-		@Override
-		public void executeValidator(ISAYearsOfIssue5 obj) throws Exception {
-			checkISAYearsOfIssue5(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue6
-	 * ISAYearsOfIssue6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CurrentYearRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If CurrentYear is not present, then PreviousYears is mandatory. If CurrentYear is present then PreviousYears is optional."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintCurrentYearRule#forISAYearsOfIssue7
-	 * ConstraintCurrentYearRule.forISAYearsOfIssue7}</li>
-	 * </ul>
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<ISAYearsOfIssue6> forISAYearsOfIssue6 = new MMConstraint<ISAYearsOfIssue6>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "CurrentYearRule";
-			definition = "If CurrentYear is not present, then PreviousYears is mandatory. If CurrentYear is present then PreviousYears is optional.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCurrentYearRule.forISAYearsOfIssue7);
-			owner_lazy = () -> ISAYearsOfIssue6.mmObject();
-		}
-
-		@Override
-		public void executeValidator(ISAYearsOfIssue6 obj) throws Exception {
-			checkISAYearsOfIssue6(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue7
 	 * ISAYearsOfIssue7}</li>
 	 * <li>
@@ -248,12 +180,80 @@ public class ConstraintCurrentYearRule {
 			checkISAYearsOfIssue7(obj);
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue
+	 * ISAYearsOfIssue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CurrentYearRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If CurrentYear is not present then PreviousYears is mandatory. If CurrentYear is present then PreviousYears is optional."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<ISAYearsOfIssue> forISAYearsOfIssue = new MMConstraint<ISAYearsOfIssue>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CurrentYearRule";
+			definition = "If CurrentYear is not present then PreviousYears is mandatory. If CurrentYear is present then PreviousYears is optional.";
+			owner_lazy = () -> ISAYearsOfIssue.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ISAYearsOfIssue obj) throws Exception {
+			checkISAYearsOfIssue(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue5
+	 * ISAYearsOfIssue5}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CurrentYearRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If CurrentYear is not present, then PreviousYears is mandatory. If CurrentYear is present then PreviousYears is optional."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<ISAYearsOfIssue5> forISAYearsOfIssue5 = new MMConstraint<ISAYearsOfIssue5>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CurrentYearRule";
+			definition = "If CurrentYear is not present, then PreviousYears is mandatory. If CurrentYear is present then PreviousYears is optional.";
+			owner_lazy = () -> ISAYearsOfIssue5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ISAYearsOfIssue5 obj) throws Exception {
+			checkISAYearsOfIssue5(obj);
+		}
+	};
 
 	/**
-	 * If CurrentYear is not present then PreviousYears is mandatory. If
+	 * If CurrentYear is not present, then PreviousYears is mandatory. If
 	 * CurrentYear is present then PreviousYears is optional.
 	 */
-	public static void checkISAYearsOfIssue(ISAYearsOfIssue obj) throws Exception {
+	public static void checkISAYearsOfIssue6(ISAYearsOfIssue6 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -278,23 +278,23 @@ public class ConstraintCurrentYearRule {
 	 * If CurrentYear is not present, then PreviousYears is mandatory. If
 	 * CurrentYear is present then PreviousYears is optional.
 	 */
-	public static void checkISAYearsOfIssue5(ISAYearsOfIssue5 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If CurrentYear is not present, then PreviousYears is mandatory. If
-	 * CurrentYear is present then PreviousYears is optional.
-	 */
-	public static void checkISAYearsOfIssue6(ISAYearsOfIssue6 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If CurrentYear is not present, then PreviousYears is mandatory. If
-	 * CurrentYear is present then PreviousYears is optional.
-	 */
 	public static void checkISAYearsOfIssue7(ISAYearsOfIssue7 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If CurrentYear is not present then PreviousYears is mandatory. If
+	 * CurrentYear is present then PreviousYears is optional.
+	 */
+	public static void checkISAYearsOfIssue(ISAYearsOfIssue obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If CurrentYear is not present, then PreviousYears is mandatory. If
+	 * CurrentYear is present then PreviousYears is optional.
+	 */
+	public static void checkISAYearsOfIssue5(ISAYearsOfIssue5 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

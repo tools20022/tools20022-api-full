@@ -114,23 +114,24 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintPEPISARule#forPEPOrISAOrPortfolioInformationV01
- * ConstraintPEPISARule.forPEPOrISAOrPortfolioInformationV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPEPISARule#for_sese_PEPOrISAOrPortfolioInformationV01
+ * ConstraintPEPISARule.for_sese_PEPOrISAOrPortfolioInformationV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintPorfolioRule#forPEPOrISAOrPortfolioInformationV01
- * ConstraintPorfolioRule.forPEPOrISAOrPortfolioInformationV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPorfolioRule#for_sese_PEPOrISAOrPortfolioInformationV01
+ * ConstraintPorfolioRule.for_sese_PEPOrISAOrPortfolioInformationV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorRule#forPEPOrISAOrPortfolioInformationV01
- * ConstraintInvestorRule.forPEPOrISAOrPortfolioInformationV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorRule#for_sese_PEPOrISAOrPortfolioInformationV01
+ * ConstraintInvestorRule.for_sese_PEPOrISAOrPortfolioInformationV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCorporateRule#forPEPOrISAOrPortfolioInformationV01
- * ConstraintCorporateRule.forPEPOrISAOrPortfolioInformationV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCorporateRule#for_sese_PEPOrISAOrPortfolioInformationV01
+ * ConstraintCorporateRule.for_sese_PEPOrISAOrPortfolioInformationV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintDesignationRule#forPEPOrISAOrPortfolioInformationV01
- * ConstraintDesignationRule.forPEPOrISAOrPortfolioInformationV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDesignationRule#for_sese_PEPOrISAOrPortfolioInformationV01
+ * ConstraintDesignationRule.for_sese_PEPOrISAOrPortfolioInformationV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule#forPEPOrISAOrPortfolioInformationV01
- * ConstraintNomineeAccountServicerRule.forPEPOrISAOrPortfolioInformationV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule#for_sese_PEPOrISAOrPortfolioInformationV01
+ * ConstraintNomineeAccountServicerRule.
+ * for_sese_PEPOrISAOrPortfolioInformationV01}</li>
  * </ul>
  * </li>
  * <li>
@@ -864,10 +865,10 @@ public class PEPOrISAOrPortfolioInformationV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPEPISARule.forPEPOrISAOrPortfolioInformationV01,
-						com.tools20022.repository.constraints.ConstraintPorfolioRule.forPEPOrISAOrPortfolioInformationV01, com.tools20022.repository.constraints.ConstraintInvestorRule.forPEPOrISAOrPortfolioInformationV01,
-						com.tools20022.repository.constraints.ConstraintCorporateRule.forPEPOrISAOrPortfolioInformationV01, com.tools20022.repository.constraints.ConstraintDesignationRule.forPEPOrISAOrPortfolioInformationV01,
-						com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule.forPEPOrISAOrPortfolioInformationV01);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPEPISARule.for_sese_PEPOrISAOrPortfolioInformationV01,
+						com.tools20022.repository.constraints.ConstraintPorfolioRule.for_sese_PEPOrISAOrPortfolioInformationV01, com.tools20022.repository.constraints.ConstraintInvestorRule.for_sese_PEPOrISAOrPortfolioInformationV01,
+						com.tools20022.repository.constraints.ConstraintCorporateRule.for_sese_PEPOrISAOrPortfolioInformationV01, com.tools20022.repository.constraints.ConstraintDesignationRule.for_sese_PEPOrISAOrPortfolioInformationV01,
+						com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule.for_sese_PEPOrISAOrPortfolioInformationV01);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PEPOrISAOrPortfolioInformationV01";
 				definition = "Scope\r\nAn executing party, eg, a (old) plan manager, sends the PEPOrISAOrPortfolioInformation message to the instructing party, eg, a (new) plan manager, to provide information about financial instruments held on behalf of a client.\r\nUsage\r\nThe PEPOrISAOrPortfolioInformation message is used to provide information about one or more PEP or ISA or portfolio products held in a client's account.";

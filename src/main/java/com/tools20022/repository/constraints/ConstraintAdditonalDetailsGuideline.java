@@ -37,40 +37,6 @@ public class ConstraintAdditonalDetailsGuideline {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.PartyTextInformation1
-	 * PartyTextInformation1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AdditonalDetailsGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Unless bilaterally agreed between the Sender and Receiver, DeclarationlDetails, RegistrationDetails and PartyContactDetails must not contain information that can be provided in a structured field."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<PartyTextInformation1> forPartyTextInformation1 = new MMConstraint<PartyTextInformation1>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "AdditonalDetailsGuideline";
-			definition = "Unless bilaterally agreed between the Sender and Receiver, DeclarationlDetails, RegistrationDetails and PartyContactDetails must not contain information that can be provided in a structured field.";
-			owner_lazy = () -> PartyTextInformation1.mmObject();
-		}
-
-		@Override
-		public void executeValidator(PartyTextInformation1 obj) throws Exception {
-			checkPartyTextInformation1(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PartyTextInformation3
 	 * PartyTextInformation3}</li>
 	 * <li>
@@ -133,15 +99,40 @@ public class ConstraintAdditonalDetailsGuideline {
 			checkPartyTextInformation5(obj);
 		}
 	};
-
 	/**
-	 * Unless bilaterally agreed between the Sender and Receiver,
-	 * DeclarationlDetails, RegistrationDetails and PartyContactDetails must not
-	 * contain information that can be provided in a structured field.
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.PartyTextInformation1
+	 * PartyTextInformation1}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AdditonalDetailsGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Unless bilaterally agreed between the Sender and Receiver, DeclarationlDetails, RegistrationDetails and PartyContactDetails must not contain information that can be provided in a structured field."
+	 * </li>
+	 * </ul>
 	 */
-	public static void checkPartyTextInformation1(PartyTextInformation1 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
+	public static final MMConstraint<PartyTextInformation1> forPartyTextInformation1 = new MMConstraint<PartyTextInformation1>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AdditonalDetailsGuideline";
+			definition = "Unless bilaterally agreed between the Sender and Receiver, DeclarationlDetails, RegistrationDetails and PartyContactDetails must not contain information that can be provided in a structured field.";
+			owner_lazy = () -> PartyTextInformation1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyTextInformation1 obj) throws Exception {
+			checkPartyTextInformation1(obj);
+		}
+	};
 
 	/**
 	 * Unless bilaterally agreed between the Sender and Receiver,
@@ -158,6 +149,15 @@ public class ConstraintAdditonalDetailsGuideline {
 	 * that can be provided in a structured field.
 	 */
 	public static void checkPartyTextInformation5(PartyTextInformation5 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Unless bilaterally agreed between the Sender and Receiver,
+	 * DeclarationlDetails, RegistrationDetails and PartyContactDetails must not
+	 * contain information that can be provided in a structured field.
+	 */
+	public static void checkPartyTextInformation1(PartyTextInformation1 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

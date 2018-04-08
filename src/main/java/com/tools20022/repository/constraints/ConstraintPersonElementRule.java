@@ -25,44 +25,10 @@ import com.tools20022.repository.msg.IndividualPerson32;
 
 /**
  * One of the elements (Name, BirthDate, CountryAndResidentialStatus,
- * OtherIdentification) must be present.
+ * BeneficiaryCertificationCompletion, OtherIdentification) must be present.
  */
 public class ConstraintPersonElementRule {
 
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson32
-	 * IndividualPerson32}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PersonElementRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "One of the elements (Name, BirthDate, CountryAndResidentialStatus, OtherIdentification) must be present."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<IndividualPerson32> forIndividualPerson32 = new MMConstraint<IndividualPerson32>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "PersonElementRule";
-			definition = "One of the elements (Name, BirthDate, CountryAndResidentialStatus, OtherIdentification) must be present.";
-			owner_lazy = () -> IndividualPerson32.mmObject();
-		}
-
-		@Override
-		public void executeValidator(IndividualPerson32 obj) throws Exception {
-			checkIndividualPerson32(obj);
-		}
-	};
 	/**
 	 * 
 	 <p>
@@ -97,20 +63,54 @@ public class ConstraintPersonElementRule {
 			checkIndividualPerson31(obj);
 		}
 	};
-
 	/**
-	 * One of the elements (Name, BirthDate, CountryAndResidentialStatus,
-	 * OtherIdentification) must be present.
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson32
+	 * IndividualPerson32}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PersonElementRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "One of the elements (Name, BirthDate, CountryAndResidentialStatus, OtherIdentification) must be present."
+	 * </li>
+	 * </ul>
 	 */
-	public static void checkIndividualPerson32(IndividualPerson32 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
+	public static final MMConstraint<IndividualPerson32> forIndividualPerson32 = new MMConstraint<IndividualPerson32>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PersonElementRule";
+			definition = "One of the elements (Name, BirthDate, CountryAndResidentialStatus, OtherIdentification) must be present.";
+			owner_lazy = () -> IndividualPerson32.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IndividualPerson32 obj) throws Exception {
+			checkIndividualPerson32(obj);
+		}
+	};
 
 	/**
 	 * One of the elements (Name, BirthDate, CountryAndResidentialStatus,
 	 * BeneficiaryCertificationCompletion, OtherIdentification) must be present.
 	 */
 	public static void checkIndividualPerson31(IndividualPerson31 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * One of the elements (Name, BirthDate, CountryAndResidentialStatus,
+	 * OtherIdentification) must be present.
+	 */
+	public static void checkIndividualPerson32(IndividualPerson32 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

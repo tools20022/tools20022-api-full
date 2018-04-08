@@ -93,12 +93,13 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrNotificationPaginationRule#forBankToCustomerDebitCreditNotificationV07
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrNotificationPaginationRule#for_camt_BankToCustomerDebitCreditNotificationV07
  * ConstraintMessageOrNotificationPaginationRule.
- * forBankToCustomerDebitCreditNotificationV07}</li>
+ * for_camt_BankToCustomerDebitCreditNotificationV07}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintSupplementaryDataRule#forBankToCustomerDebitCreditNotificationV07
- * ConstraintSupplementaryDataRule.forBankToCustomerDebitCreditNotificationV07}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSupplementaryDataRule#for_camt_BankToCustomerDebitCreditNotificationV07
+ * ConstraintSupplementaryDataRule.
+ * for_camt_BankToCustomerDebitCreditNotificationV07}</li>
  * </ul>
  * </li>
  * <li>
@@ -281,8 +282,8 @@ public class BankToCustomerDebitCreditNotificationV07 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMessageOrNotificationPaginationRule.forBankToCustomerDebitCreditNotificationV07,
-						com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forBankToCustomerDebitCreditNotificationV07);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMessageOrNotificationPaginationRule.for_camt_BankToCustomerDebitCreditNotificationV07,
+						com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.for_camt_BankToCustomerDebitCreditNotificationV07);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BankToCustomerDebitCreditNotificationV07";
 				definition = "Scope\nThe BankToCustomerDebitCreditNotification message is sent by the account servicer to an account owner or to a party authorised by the account owner to receive the message. It can be used to inform the account owner, or authorised party, of single or multiple debit and/or credit entries reported to the account.\nUsage\nThe BankToCustomerDebitCreditNotification message can contain reports for more than one account. It provides information for cash management and/or reconciliation.\nThe BankToCustomerDebitCreditNotification message can be used to: \n- report pending and booked items;\n- notify one or more debit entries;\n- notify one or more credit entries;\n- notify a combination of debit and credit entries.\nIt can include underlying details of transactions that have been included in the entry.\nIt is possible that the receiver of the message is not the account owner, but a party entitled by the account owner to receive the account information (also known as recipient).\nIt does not contain balance information.";

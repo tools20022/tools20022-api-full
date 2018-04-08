@@ -169,9 +169,9 @@ public class PEPOrISAOrPortfolioTransferCancellationRequestV02 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationByReferenceOrByTransferInstructionDetailsRule";
 			definition = "Either CancellationByTransferInstructionDetails or CancellationByReference may be present, but not both.";
-			messageDefinition_lazy = () -> com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferCancellationRequestV02.mmObject();
 			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferCancellationRequestV02.mmCancellationByTransferInstructionDetails,
 					com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferCancellationRequestV02.mmCancellationByReference);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferCancellationRequestV02.mmObject();
 		}
 	};
 	@XmlElement(name = "MsgRef", required = true)

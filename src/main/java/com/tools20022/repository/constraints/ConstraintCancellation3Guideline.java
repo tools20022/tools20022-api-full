@@ -29,13 +29,44 @@ import java.util.Arrays;
 /**
  * It is recommended to cancel an instruction message by using PreviousReference
  * only. It is recommended to avoid the repetition of optional building blocks,
- * unless otherwise specified by market practise rules and or legislation. If
- * any information is present in the optional building blocks, it must be
- * identical to the information being present into the instruction message being
- * cancelled.
+ * unless otherwise specified by market practise rules and or legislation.
  */
 public class ConstraintCancellation3Guideline {
 
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV03
+	 * MeetingInstructionCancellationRequestV03}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Cancellation3Guideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "It is recommended to cancel an instruction message by using PreviousReference only. It is recommended to avoid the repetition of optional building blocks, unless otherwise specified by market practise rules and or legislation."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<MeetingInstructionCancellationRequestV03> for_seev_MeetingInstructionCancellationRequestV03 = new MMConstraint<MeetingInstructionCancellationRequestV03>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "Cancellation3Guideline";
+			definition = "It is recommended to cancel an instruction message by using PreviousReference only. It is recommended to avoid the repetition of optional building blocks, unless otherwise specified by market practise rules and or legislation.";
+			owner_lazy = () -> MeetingInstructionCancellationRequestV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MeetingInstructionCancellationRequestV03 obj) throws Exception {
+			check_seev_MeetingInstructionCancellationRequestV03(obj);
+		}
+	};
 	/**
 	 * 
 	 <p>
@@ -58,23 +89,23 @@ public class ConstraintCancellation3Guideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintCancellation3Guideline#forMeetingInstructionCancellationRequestV04
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintCancellation3Guideline#for_seev_MeetingInstructionCancellationRequestV04
 	 * ConstraintCancellation3Guideline.
-	 * forMeetingInstructionCancellationRequestV04}</li>
+	 * for_seev_MeetingInstructionCancellationRequestV04}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<MeetingInstructionCancellationRequestV05> forMeetingInstructionCancellationRequestV05 = new MMConstraint<MeetingInstructionCancellationRequestV05>() {
+	public static final MMConstraint<MeetingInstructionCancellationRequestV05> for_seev_MeetingInstructionCancellationRequestV05 = new MMConstraint<MeetingInstructionCancellationRequestV05>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation3Guideline";
 			definition = "It is recommended to cancel an instruction message by using PreviousReference only. It is recommended to avoid the repetition of optional building blocks, unless otherwise specified by market practise rules and or legislation. If any information is present in the optional building blocks, it must be identical to the information being present into the instruction message being cancelled.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCancellation3Guideline.forMeetingInstructionCancellationRequestV04;
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCancellation3Guideline.for_seev_MeetingInstructionCancellationRequestV04;
 			owner_lazy = () -> MeetingInstructionCancellationRequestV05.mmObject();
 		}
 
 		@Override
 		public void executeValidator(MeetingInstructionCancellationRequestV05 obj) throws Exception {
-			checkMeetingInstructionCancellationRequestV05(obj);
+			check_seev_MeetingInstructionCancellationRequestV05(obj);
 		}
 	};
 	/**
@@ -100,25 +131,25 @@ public class ConstraintCancellation3Guideline {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintCancellation3Guideline#forMeetingInstructionCancellationRequestV05
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintCancellation3Guideline#for_seev_MeetingInstructionCancellationRequestV05
 	 * ConstraintCancellation3Guideline.
-	 * forMeetingInstructionCancellationRequestV05}</li>
+	 * for_seev_MeetingInstructionCancellationRequestV05}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<MeetingInstructionCancellationRequestV04> forMeetingInstructionCancellationRequestV04 = new MMConstraint<MeetingInstructionCancellationRequestV04>() {
+	public static final MMConstraint<MeetingInstructionCancellationRequestV04> for_seev_MeetingInstructionCancellationRequestV04 = new MMConstraint<MeetingInstructionCancellationRequestV04>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation3Guideline";
 			definition = "It is recommended to cancel an instruction message by using PreviousReference only. It is recommended to avoid the repetition of optional building blocks, unless otherwise specified by market practise rules and or legislation.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCancellation3Guideline.forMeetingInstructionCancellationRequestV05);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCancellation3Guideline.for_seev_MeetingInstructionCancellationRequestV05);
 			owner_lazy = () -> MeetingInstructionCancellationRequestV04.mmObject();
 		}
 
 		@Override
 		public void executeValidator(MeetingInstructionCancellationRequestV04 obj) throws Exception {
-			checkMeetingInstructionCancellationRequestV04(obj);
+			check_seev_MeetingInstructionCancellationRequestV04(obj);
 		}
 	};
 	/**
@@ -142,7 +173,7 @@ public class ConstraintCancellation3Guideline {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<MeetingInstructionCancellationRequestV02> forMeetingInstructionCancellationRequestV02 = new MMConstraint<MeetingInstructionCancellationRequestV02>() {
+	public static final MMConstraint<MeetingInstructionCancellationRequestV02> for_seev_MeetingInstructionCancellationRequestV02 = new MMConstraint<MeetingInstructionCancellationRequestV02>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation3Guideline";
@@ -152,43 +183,19 @@ public class ConstraintCancellation3Guideline {
 
 		@Override
 		public void executeValidator(MeetingInstructionCancellationRequestV02 obj) throws Exception {
-			checkMeetingInstructionCancellationRequestV02(obj);
+			check_seev_MeetingInstructionCancellationRequestV02(obj);
 		}
 	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV03
-	 * MeetingInstructionCancellationRequestV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Cancellation3Guideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "It is recommended to cancel an instruction message by using PreviousReference only. It is recommended to avoid the repetition of optional building blocks, unless otherwise specified by market practise rules and or legislation."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<MeetingInstructionCancellationRequestV03> forMeetingInstructionCancellationRequestV03 = new MMConstraint<MeetingInstructionCancellationRequestV03>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "Cancellation3Guideline";
-			definition = "It is recommended to cancel an instruction message by using PreviousReference only. It is recommended to avoid the repetition of optional building blocks, unless otherwise specified by market practise rules and or legislation.";
-			owner_lazy = () -> MeetingInstructionCancellationRequestV03.mmObject();
-		}
 
-		@Override
-		public void executeValidator(MeetingInstructionCancellationRequestV03 obj) throws Exception {
-			checkMeetingInstructionCancellationRequestV03(obj);
-		}
-	};
+	/**
+	 * It is recommended to cancel an instruction message by using
+	 * PreviousReference only. It is recommended to avoid the repetition of
+	 * optional building blocks, unless otherwise specified by market practise
+	 * rules and or legislation.
+	 */
+	public static void check_seev_MeetingInstructionCancellationRequestV03(MeetingInstructionCancellationRequestV03 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
 
 	/**
 	 * It is recommended to cancel an instruction message by using
@@ -198,7 +205,7 @@ public class ConstraintCancellation3Guideline {
 	 * building blocks, it must be identical to the information being present
 	 * into the instruction message being cancelled.
 	 */
-	public static void checkMeetingInstructionCancellationRequestV05(MeetingInstructionCancellationRequestV05 obj) throws Exception {
+	public static void check_seev_MeetingInstructionCancellationRequestV05(MeetingInstructionCancellationRequestV05 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -208,7 +215,7 @@ public class ConstraintCancellation3Guideline {
 	 * optional building blocks, unless otherwise specified by market practise
 	 * rules and or legislation.
 	 */
-	public static void checkMeetingInstructionCancellationRequestV04(MeetingInstructionCancellationRequestV04 obj) throws Exception {
+	public static void check_seev_MeetingInstructionCancellationRequestV04(MeetingInstructionCancellationRequestV04 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -218,17 +225,7 @@ public class ConstraintCancellation3Guideline {
 	 * optional building blocks, unless otherwise specified by market practise
 	 * rules and or legislation.
 	 */
-	public static void checkMeetingInstructionCancellationRequestV02(MeetingInstructionCancellationRequestV02 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * It is recommended to cancel an instruction message by using
-	 * PreviousReference only. It is recommended to avoid the repetition of
-	 * optional building blocks, unless otherwise specified by market practise
-	 * rules and or legislation.
-	 */
-	public static void checkMeetingInstructionCancellationRequestV03(MeetingInstructionCancellationRequestV03 obj) throws Exception {
+	public static void check_seev_MeetingInstructionCancellationRequestV02(MeetingInstructionCancellationRequestV02 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

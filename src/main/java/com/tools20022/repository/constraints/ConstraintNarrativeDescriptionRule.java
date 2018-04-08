@@ -37,40 +37,6 @@ public class ConstraintNarrativeDescriptionRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.choice.BeneficiaryCertificationType2Choice
-	 * BeneficiaryCertificationType2Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "NarrativeDescriptionRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Code/NarrativeDescription shall only be used when all the other code possibilities are not appropriate."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<BeneficiaryCertificationType2Choice> forBeneficiaryCertificationType2Choice = new MMConstraint<BeneficiaryCertificationType2Choice>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "NarrativeDescriptionRule";
-			definition = "Code/NarrativeDescription shall only be used when all the other code possibilities are not appropriate.";
-			owner_lazy = () -> BeneficiaryCertificationType2Choice.mmObject();
-		}
-
-		@Override
-		public void executeValidator(BeneficiaryCertificationType2Choice obj) throws Exception {
-			checkBeneficiaryCertificationType2Choice(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.BeneficiaryCertificationType4Choice
 	 * BeneficiaryCertificationType4Choice}</li>
 	 * <li>
@@ -105,8 +71,8 @@ public class ConstraintNarrativeDescriptionRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.choice.BeneficiaryCertificationType1Choice
-	 * BeneficiaryCertificationType1Choice}</li>
+	 * {@linkplain com.tools20022.repository.choice.BeneficiaryCertificationType2Choice
+	 * BeneficiaryCertificationType2Choice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -120,17 +86,17 @@ public class ConstraintNarrativeDescriptionRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<BeneficiaryCertificationType1Choice> forBeneficiaryCertificationType1Choice = new MMConstraint<BeneficiaryCertificationType1Choice>() {
+	public static final MMConstraint<BeneficiaryCertificationType2Choice> forBeneficiaryCertificationType2Choice = new MMConstraint<BeneficiaryCertificationType2Choice>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NarrativeDescriptionRule";
 			definition = "Code/NarrativeDescription shall only be used when all the other code possibilities are not appropriate.";
-			owner_lazy = () -> BeneficiaryCertificationType1Choice.mmObject();
+			owner_lazy = () -> BeneficiaryCertificationType2Choice.mmObject();
 		}
 
 		@Override
-		public void executeValidator(BeneficiaryCertificationType1Choice obj) throws Exception {
-			checkBeneficiaryCertificationType1Choice(obj);
+		public void executeValidator(BeneficiaryCertificationType2Choice obj) throws Exception {
+			checkBeneficiaryCertificationType2Choice(obj);
 		}
 	};
 	/**
@@ -167,14 +133,40 @@ public class ConstraintNarrativeDescriptionRule {
 			checkBeneficiaryCertificationType3Choice(obj);
 		}
 	};
-
 	/**
-	 * Code/NarrativeDescription shall only be used when all the other code
-	 * possibilities are not appropriate.
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.choice.BeneficiaryCertificationType1Choice
+	 * BeneficiaryCertificationType1Choice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NarrativeDescriptionRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Code/NarrativeDescription shall only be used when all the other code possibilities are not appropriate."
+	 * </li>
+	 * </ul>
 	 */
-	public static void checkBeneficiaryCertificationType2Choice(BeneficiaryCertificationType2Choice obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
+	public static final MMConstraint<BeneficiaryCertificationType1Choice> forBeneficiaryCertificationType1Choice = new MMConstraint<BeneficiaryCertificationType1Choice>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NarrativeDescriptionRule";
+			definition = "Code/NarrativeDescription shall only be used when all the other code possibilities are not appropriate.";
+			owner_lazy = () -> BeneficiaryCertificationType1Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(BeneficiaryCertificationType1Choice obj) throws Exception {
+			checkBeneficiaryCertificationType1Choice(obj);
+		}
+	};
 
 	/**
 	 * Code/NarrativeDescription shall only be used when all the other code
@@ -188,7 +180,7 @@ public class ConstraintNarrativeDescriptionRule {
 	 * Code/NarrativeDescription shall only be used when all the other code
 	 * possibilities are not appropriate.
 	 */
-	public static void checkBeneficiaryCertificationType1Choice(BeneficiaryCertificationType1Choice obj) throws Exception {
+	public static void checkBeneficiaryCertificationType2Choice(BeneficiaryCertificationType2Choice obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -197,6 +189,14 @@ public class ConstraintNarrativeDescriptionRule {
 	 * possibilities are not appropriate.
 	 */
 	public static void checkBeneficiaryCertificationType3Choice(BeneficiaryCertificationType3Choice obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Code/NarrativeDescription shall only be used when all the other code
+	 * possibilities are not appropriate.
+	 */
+	public static void checkBeneficiaryCertificationType1Choice(BeneficiaryCertificationType1Choice obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

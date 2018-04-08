@@ -125,13 +125,13 @@ public class SecuritiesEventsPreviousVersion {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Securities Events - Previous version - master";
 				definition = "Messages that support asset servicing, including proxy voting, income and corporate actions.";
+				code = "seev";
 				messageDefinition_lazy = () -> Arrays.asList(MeetingNotificationV04.mmObject(), MeetingCancellationV04.mmObject(), MeetingEntitlementNotificationV04.mmObject(), MeetingInstructionV04.mmObject(),
 						MeetingInstructionCancellationRequestV04.mmObject(), MeetingInstructionStatusV04.mmObject(), MeetingVoteExecutionConfirmationV04.mmObject(), MeetingResultDisseminationV04.mmObject(),
 						CorporateActionNarrativeV03.mmObject(), CorporateActionEventProcessingStatusAdviceV05.mmObject(), CorporateActionInstructionCancellationRequestV06.mmObject(), CorporateActionCancellationAdviceV07.mmObject(),
 						CorporateActionNotificationV07.mmObject(), CorporateActionMovementConfirmationV08.mmObject(), CorporateActionInstructionStatementReportV06.mmObject(), CorporateActionMovementPreliminaryAdviceV08.mmObject(),
 						CorporateActionMovementReversalAdviceV08.mmObject(), CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.mmObject(), CorporateActionInstructionCancellationRequestStatusAdviceV07.mmObject(),
 						CorporateActionInstructionV07.mmObject(), CorporateActionInstructionStatusAdviceV08.mmObject());
-				code = "seev";
 			}
 		});
 		return mmObject_lazy.get();

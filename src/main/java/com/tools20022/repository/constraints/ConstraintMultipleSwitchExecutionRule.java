@@ -39,8 +39,8 @@ public class ConstraintMultipleSwitchExecutionRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationAmendmentV01
-	 * SwitchOrderConfirmationAmendmentV01}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationV03
+	 * SwitchOrderConfirmationV03}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -52,19 +52,29 @@ public class ConstraintMultipleSwitchExecutionRule {
 	 * definition} =
 	 * "If SwitchExecutionDetails is present more than once, then SwitchExecutionDetails/RedemptionLegDetails and SwitchExecutionDetails/SubscriptionLegDetails may only be present once."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintMultipleSwitchExecutionRule#for_setr_SwitchOrderConfirmationV04
+	 * ConstraintMultipleSwitchExecutionRule.for_setr_SwitchOrderConfirmationV04
+	 * }</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<SwitchOrderConfirmationAmendmentV01> forSwitchOrderConfirmationAmendmentV01 = new MMConstraint<SwitchOrderConfirmationAmendmentV01>() {
+	public static final MMConstraint<SwitchOrderConfirmationV03> for_setr_SwitchOrderConfirmationV03 = new MMConstraint<SwitchOrderConfirmationV03>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultipleSwitchExecutionRule";
 			definition = "If SwitchExecutionDetails is present more than once, then SwitchExecutionDetails/RedemptionLegDetails and SwitchExecutionDetails/SubscriptionLegDetails may only be present once.";
-			owner_lazy = () -> SwitchOrderConfirmationAmendmentV01.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMultipleSwitchExecutionRule.for_setr_SwitchOrderConfirmationV04);
+			owner_lazy = () -> SwitchOrderConfirmationV03.mmObject();
 		}
 
 		@Override
-		public void executeValidator(SwitchOrderConfirmationAmendmentV01 obj) throws Exception {
-			checkSwitchOrderConfirmationAmendmentV01(obj);
+		public void executeValidator(SwitchOrderConfirmationV03 obj) throws Exception {
+			check_setr_SwitchOrderConfirmationV03(obj);
 		}
 	};
 	/**
@@ -89,22 +99,23 @@ public class ConstraintMultipleSwitchExecutionRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintMultipleSwitchExecutionRule#forSwitchOrderConfirmationV03
-	 * ConstraintMultipleSwitchExecutionRule.forSwitchOrderConfirmationV03}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintMultipleSwitchExecutionRule#for_setr_SwitchOrderConfirmationV03
+	 * ConstraintMultipleSwitchExecutionRule.for_setr_SwitchOrderConfirmationV03
+	 * }</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<SwitchOrderConfirmationV04> forSwitchOrderConfirmationV04 = new MMConstraint<SwitchOrderConfirmationV04>() {
+	public static final MMConstraint<SwitchOrderConfirmationV04> for_setr_SwitchOrderConfirmationV04 = new MMConstraint<SwitchOrderConfirmationV04>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultipleSwitchExecutionRule";
 			definition = "If SwitchExecutionDetails is present more than once, then SwitchExecutionDetails/RedemptionLegDetails and SwitchExecutionDetails/SubscriptionLegDetails must only be present once.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMultipleSwitchExecutionRule.forSwitchOrderConfirmationV03;
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMultipleSwitchExecutionRule.for_setr_SwitchOrderConfirmationV03;
 			owner_lazy = () -> SwitchOrderConfirmationV04.mmObject();
 		}
 
 		@Override
 		public void executeValidator(SwitchOrderConfirmationV04 obj) throws Exception {
-			checkSwitchOrderConfirmationV04(obj);
+			check_setr_SwitchOrderConfirmationV04(obj);
 		}
 	};
 	/**
@@ -113,8 +124,8 @@ public class ConstraintMultipleSwitchExecutionRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationV03
-	 * SwitchOrderConfirmationV03}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationAmendmentV01
+	 * SwitchOrderConfirmationAmendmentV01}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -126,28 +137,19 @@ public class ConstraintMultipleSwitchExecutionRule {
 	 * definition} =
 	 * "If SwitchExecutionDetails is present more than once, then SwitchExecutionDetails/RedemptionLegDetails and SwitchExecutionDetails/SubscriptionLegDetails may only be present once."
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintMultipleSwitchExecutionRule#forSwitchOrderConfirmationV04
-	 * ConstraintMultipleSwitchExecutionRule.forSwitchOrderConfirmationV04}</li>
-	 * </ul>
-	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<SwitchOrderConfirmationV03> forSwitchOrderConfirmationV03 = new MMConstraint<SwitchOrderConfirmationV03>() {
+	public static final MMConstraint<SwitchOrderConfirmationAmendmentV01> for_setr_SwitchOrderConfirmationAmendmentV01 = new MMConstraint<SwitchOrderConfirmationAmendmentV01>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultipleSwitchExecutionRule";
 			definition = "If SwitchExecutionDetails is present more than once, then SwitchExecutionDetails/RedemptionLegDetails and SwitchExecutionDetails/SubscriptionLegDetails may only be present once.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMultipleSwitchExecutionRule.forSwitchOrderConfirmationV04);
-			owner_lazy = () -> SwitchOrderConfirmationV03.mmObject();
+			owner_lazy = () -> SwitchOrderConfirmationAmendmentV01.mmObject();
 		}
 
 		@Override
-		public void executeValidator(SwitchOrderConfirmationV03 obj) throws Exception {
-			checkSwitchOrderConfirmationV03(obj);
+		public void executeValidator(SwitchOrderConfirmationAmendmentV01 obj) throws Exception {
+			check_setr_SwitchOrderConfirmationAmendmentV01(obj);
 		}
 	};
 	/**
@@ -190,7 +192,7 @@ public class ConstraintMultipleSwitchExecutionRule {
 	 * SwitchExecutionDetails/RedemptionLegDetails and
 	 * SwitchExecutionDetails/SubscriptionLegDetails may only be present once.
 	 */
-	public static void checkSwitchOrderConfirmationAmendmentV01(SwitchOrderConfirmationAmendmentV01 obj) throws Exception {
+	public static void check_setr_SwitchOrderConfirmationV03(SwitchOrderConfirmationV03 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -199,7 +201,7 @@ public class ConstraintMultipleSwitchExecutionRule {
 	 * SwitchExecutionDetails/RedemptionLegDetails and
 	 * SwitchExecutionDetails/SubscriptionLegDetails must only be present once.
 	 */
-	public static void checkSwitchOrderConfirmationV04(SwitchOrderConfirmationV04 obj) throws Exception {
+	public static void check_setr_SwitchOrderConfirmationV04(SwitchOrderConfirmationV04 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -208,7 +210,7 @@ public class ConstraintMultipleSwitchExecutionRule {
 	 * SwitchExecutionDetails/RedemptionLegDetails and
 	 * SwitchExecutionDetails/SubscriptionLegDetails may only be present once.
 	 */
-	public static void checkSwitchOrderConfirmationV03(SwitchOrderConfirmationV03 obj) throws Exception {
+	public static void check_setr_SwitchOrderConfirmationAmendmentV01(SwitchOrderConfirmationAmendmentV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 

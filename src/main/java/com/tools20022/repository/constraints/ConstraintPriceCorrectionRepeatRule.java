@@ -51,7 +51,7 @@ public class ConstraintPriceCorrectionRepeatRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<PriceReportCorrectionV02> forPriceReportCorrectionV02 = new MMConstraint<PriceReportCorrectionV02>() {
+	public static final MMConstraint<PriceReportCorrectionV02> for_reda_PriceReportCorrectionV02 = new MMConstraint<PriceReportCorrectionV02>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceCorrectionRepeatRule";
@@ -61,7 +61,7 @@ public class ConstraintPriceCorrectionRepeatRule {
 
 		@Override
 		public void executeValidator(PriceReportCorrectionV02 obj) throws Exception {
-			checkPriceReportCorrectionV02(obj);
+			check_reda_PriceReportCorrectionV02(obj);
 		}
 	};
 	/**
@@ -85,7 +85,7 @@ public class ConstraintPriceCorrectionRepeatRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<PriceReportCorrectionV03> forPriceReportCorrectionV03 = new MMConstraint<PriceReportCorrectionV03>() {
+	public static final MMConstraint<PriceReportCorrectionV03> for_reda_PriceReportCorrectionV03 = new MMConstraint<PriceReportCorrectionV03>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceCorrectionRepeatRule";
@@ -95,7 +95,7 @@ public class ConstraintPriceCorrectionRepeatRule {
 
 		@Override
 		public void executeValidator(PriceReportCorrectionV03 obj) throws Exception {
-			checkPriceReportCorrectionV03(obj);
+			check_reda_PriceReportCorrectionV03(obj);
 		}
 	};
 
@@ -104,7 +104,7 @@ public class ConstraintPriceCorrectionRepeatRule {
 	 * repeated in the Price Report Correction message. Only price information
 	 * that has been corrected should be quoted in CorrectedPriceDetails.
 	 */
-	public static void checkPriceReportCorrectionV02(PriceReportCorrectionV02 obj) throws Exception {
+	public static void check_reda_PriceReportCorrectionV02(PriceReportCorrectionV02 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -113,7 +113,7 @@ public class ConstraintPriceCorrectionRepeatRule {
 	 * repeated in the Price Report Correction message. Only price information
 	 * that has been corrected should be quoted in CorrectedPriceDetails.
 	 */
-	public static void checkPriceReportCorrectionV03(PriceReportCorrectionV03 obj) throws Exception {
+	public static void check_reda_PriceReportCorrectionV03(PriceReportCorrectionV03 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

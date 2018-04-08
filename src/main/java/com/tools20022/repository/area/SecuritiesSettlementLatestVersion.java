@@ -175,6 +175,7 @@ public class SecuritiesSettlementLatestVersion {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Securities Settlement - Latest version - master";
 				definition = "Messages that support the settlement process for securities and report its status and confirmation.";
+				code = "sese";
 				messageDefinition_lazy = () -> Arrays.asList(SecuritiesStatusOrStatementQueryStatusAdviceV04.mmObject(), SecuritiesSettlementTransactionModificationRequestStatusAdviceV04.mmObject(),
 						SecuritiesSettlementConditionModificationStatusAdviceV07.mmObject(), SecuritiesTransactionStatusQueryV04.mmObject(), SecuritiesSettlementAllegementRemovalAdviceV04.mmObject(),
 						SecuritiesTransactionCancellationRequestV05.mmObject(), SecuritiesTransactionCancellationRequestStatusAdviceV05.mmObject(), SecuritiesSettlementTransactionCounterpartyResponseV02.mmObject(),
@@ -186,7 +187,6 @@ public class SecuritiesSettlementLatestVersion {
 						SecuritiesSettlementTransactionAllegementNotificationV07.mmObject(), SecuritiesSettlementTransactionModificationRequestV06.mmObject(), SecuritiesSettlementTransactionConfirmationV08.mmObject(),
 						PortfolioTransferNotificationV05.mmObject(), SecuritiesFinancingInstructionV08.mmObject(), SecuritiesFinancingConfirmationV08.mmObject(), SecuritiesSettlementTransactionStatusAdviceV09.mmObject(),
 						SecuritiesSettlementTransactionReversalAdviceV07.mmObject(), SecuritiesSettlementTransactionInstructionV08.mmObject());
-				code = "sese";
 			}
 		});
 		return mmObject_lazy.get();

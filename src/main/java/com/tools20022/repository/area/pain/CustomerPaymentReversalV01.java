@@ -89,14 +89,14 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintGroupReversal1Rule#forCustomerPaymentReversalV01
- * ConstraintGroupReversal1Rule.forCustomerPaymentReversalV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupReversal1Rule#for_pain_CustomerPaymentReversalV01
+ * ConstraintGroupReversal1Rule.for_pain_CustomerPaymentReversalV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintGroupReversal2Rule#forCustomerPaymentReversalV01
- * ConstraintGroupReversal2Rule.forCustomerPaymentReversalV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupReversal2Rule#for_pain_CustomerPaymentReversalV01
+ * ConstraintGroupReversal2Rule.for_pain_CustomerPaymentReversalV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintGroupReversal3Rule#forCustomerPaymentReversalV01
- * ConstraintGroupReversal3Rule.forCustomerPaymentReversalV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupReversal3Rule#for_pain_CustomerPaymentReversalV01
+ * ConstraintGroupReversal3Rule.for_pain_CustomerPaymentReversalV01}</li>
  * </ul>
  * </li>
  * <li>
@@ -270,8 +270,8 @@ public class CustomerPaymentReversalV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupReversal1Rule.forCustomerPaymentReversalV01,
-						com.tools20022.repository.constraints.ConstraintGroupReversal2Rule.forCustomerPaymentReversalV01, com.tools20022.repository.constraints.ConstraintGroupReversal3Rule.forCustomerPaymentReversalV01);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupReversal1Rule.for_pain_CustomerPaymentReversalV01,
+						com.tools20022.repository.constraints.ConstraintGroupReversal2Rule.for_pain_CustomerPaymentReversalV01, com.tools20022.repository.constraints.ConstraintGroupReversal3Rule.for_pain_CustomerPaymentReversalV01);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CustomerPaymentReversalV01";
 				definition = "Scope\r\nThe CustomerPaymentReversal message is sent by the initiating party to the next party in the payment chain. It is used to reverse a payment previously executed.\r\nUsage\r\nThe CustomerPaymentReversal message is exchanged between a non-financial institution customer and an agent to reverse a CustomerDirectDebitInitiation message that has been settled. The result will be a credit on the debtor account.\r\nThe CustomerPaymentReversal message refers to the original CustomerDirectDebitInitiation message by means of references only or by means of references and a set of elements from the original instruction.\r\nThe CustomerPaymentReversal message can be used in domestic and cross-border scenarios.";

@@ -107,11 +107,11 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintOtherReferenceRule#forTransferInstructionStatusReportV03
- * ConstraintOtherReferenceRule.forTransferInstructionStatusReportV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOtherReferenceRule#for_sese_TransferInstructionStatusReportV03
+ * ConstraintOtherReferenceRule.for_sese_TransferInstructionStatusReportV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintRelatedReferenceRule#forTransferInstructionStatusReportV03
- * ConstraintRelatedReferenceRule.forTransferInstructionStatusReportV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintRelatedReferenceRule#for_sese_TransferInstructionStatusReportV03
+ * ConstraintRelatedReferenceRule.for_sese_TransferInstructionStatusReportV03}</li>
  * </ul>
  * </li>
  * <li>
@@ -176,9 +176,9 @@ public class TransferInstructionStatusReportV03 {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Operation1";
-			messageDefinition_lazy = () -> com.tools20022.repository.area.sese.TransferInstructionStatusReportV03.mmObject();
 			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInstructionStatusReportV03.mmRelatedReference,
 					com.tools20022.repository.area.sese.TransferInstructionStatusReportV03.mmOtherReference);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.sese.TransferInstructionStatusReportV03.mmObject();
 		}
 	};
 	@XmlElement(name = "MsgId", required = true)
@@ -504,8 +504,8 @@ public class TransferInstructionStatusReportV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOtherReferenceRule.forTransferInstructionStatusReportV03,
-						com.tools20022.repository.constraints.ConstraintRelatedReferenceRule.forTransferInstructionStatusReportV03);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOtherReferenceRule.for_sese_TransferInstructionStatusReportV03,
+						com.tools20022.repository.constraints.ConstraintRelatedReferenceRule.for_sese_TransferInstructionStatusReportV03);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransferInstructionStatusReportV03";
 				definition = "Scope\r\nAn executing party, for example, a transfer agent, sends the TransferInstructionStatusReport message to the instructing party, for example, an investment manager or one of its authorised representatives to provide the status of a previously received transfer instruction.\r\nUsage\r\nThe TransferInstructionStatusReport message is used to report on the status of a transfer in or transfer out instruction. The reference of the transfer instruction for which the status is reported is identified in TransferReference.\r\nThe message identification of the transfer instruction message in which the transfer instruction was conveyed may also be quoted in RelatedReference.\r\nOne of the following statuses can be reported:\r\n- an accepted status, or,\r\n- an already executed status, or,\r\n- a sent to next party status, or,\r\n- a matched status, or,\r\n- a settled status, or,\r\n- a pending settlement status and the reason for the status, or,\r\n- an unmatched status and the reason for the status, or,\r\n- an in-repair status and the reason for the status, or,\r\n- a rejected status and the reason for the status, or,\r\n- a failed settlement status and the reason for the status, or,\r\n- a cancelled status and the reason for the status, or,\r\n- a cancelled status and the reason for the status, or,\r\n- a cancellation pending status and the reason for the status.";

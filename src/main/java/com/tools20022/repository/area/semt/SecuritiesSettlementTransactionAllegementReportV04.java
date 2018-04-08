@@ -102,21 +102,21 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintAllegementDetailsActivityRule1#forSecuritiesSettlementTransactionAllegementReportV04
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAllegementDetailsActivityRule1#for_semt_SecuritiesSettlementTransactionAllegementReportV04
  * ConstraintAllegementDetailsActivityRule1.
- * forSecuritiesSettlementTransactionAllegementReportV04}</li>
+ * for_semt_SecuritiesSettlementTransactionAllegementReportV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintAllegementDetailsActivityRule2#forSecuritiesSettlementTransactionAllegementReportV04
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAllegementDetailsActivityRule2#for_semt_SecuritiesSettlementTransactionAllegementReportV04
  * ConstraintAllegementDetailsActivityRule2.
- * forSecuritiesSettlementTransactionAllegementReportV04}</li>
+ * for_semt_SecuritiesSettlementTransactionAllegementReportV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#forSecuritiesSettlementTransactionAllegementReportV04
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#for_semt_SecuritiesSettlementTransactionAllegementReportV04
  * ConstraintCoexistenceCharacterSetXRule.
- * forSecuritiesSettlementTransactionAllegementReportV04}</li>
+ * for_semt_SecuritiesSettlementTransactionAllegementReportV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forSecuritiesSettlementTransactionAllegementReportV04
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#for_semt_SecuritiesSettlementTransactionAllegementReportV04
  * ConstraintCoexistenceIdentificationRule.
- * forSecuritiesSettlementTransactionAllegementReportV04}</li>
+ * for_semt_SecuritiesSettlementTransactionAllegementReportV04}</li>
  * </ul>
  * </li>
  * <li>
@@ -458,10 +458,10 @@ public class SecuritiesSettlementTransactionAllegementReportV04 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAllegementDetailsActivityRule1.forSecuritiesSettlementTransactionAllegementReportV04,
-						com.tools20022.repository.constraints.ConstraintAllegementDetailsActivityRule2.forSecuritiesSettlementTransactionAllegementReportV04,
-						com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesSettlementTransactionAllegementReportV04,
-						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesSettlementTransactionAllegementReportV04);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAllegementDetailsActivityRule1.for_semt_SecuritiesSettlementTransactionAllegementReportV04,
+						com.tools20022.repository.constraints.ConstraintAllegementDetailsActivityRule2.for_semt_SecuritiesSettlementTransactionAllegementReportV04,
+						com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.for_semt_SecuritiesSettlementTransactionAllegementReportV04,
+						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.for_semt_SecuritiesSettlementTransactionAllegementReportV04);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesSettlementTransactionAllegementReportV04";
 				definition = "Scope\nAn account servicer sends a SecuritiesSettlementTransactionAllegementReport to an account owner to provide, at a specified time, the status and details of pending settlement allegements, for all or selected securities in a specified safekeeping account.\nThe account servicer/owner relationship may be:\n- a central securities depository or another settlement market infrastructure acting on behalf of their participants\n- an agent (sub-custodian) acting on behalf of their global custodian customer, or\n- a custodian acting on behalf of an investment management institution or a broker/dealer.\n\nUsage\nThe message may also be used to:\n- re-send a message previously sent,\n- provide a third party with a copy of a message for information,\n- re-send to a third party a copy of a message for information\nusing the relevant elements in the Business Application Header.\n\nISO 15022 - 20022 Coexistence\nThis ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment. The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows: “CoexistenceXxxxRule”.";

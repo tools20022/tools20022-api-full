@@ -234,6 +234,7 @@ public class AuthoritiesLatestVersion {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Authorities - Latest version - master";
 				definition = "Messages that support the provision of miscellaneous financial information to authorities, such as Regulators, Police, Customs, Tax authorities, Enforcement authorities, Ministries, etc.";
+				code = "auth";
 				messageDefinition_lazy = () -> Arrays.asList(RegulatoryTransactionReportV02.mmObject(), RegulatoryTransactionReportCancellationRequestV02.mmObject(), RegulatoryTransactionReportStatusV01.mmObject(),
 						RegulatoryTransactionReportCancellationStatusV01.mmObject(), InformationRequestOpeningV01.mmObject(), InformationRequestResponseV01.mmObject(), InformationRequestStatusChangeNotificationV01.mmObject(),
 						ContractRegistrationStatementRequestV01.mmObject(), ContractRegistrationAmendmentRequestV01.mmObject(), ContractRegistrationConfirmationV01.mmObject(), ContractRegistrationRequestV01.mmObject(),
@@ -251,7 +252,6 @@ public class AuthoritiesLatestVersion {
 						CCPAvailableFinancialResourcesReportV01.mmObject(), CCPDailyCashFlowsReportV01.mmObject(), CCPPortfolioStressTestingDefinitionReportV01.mmObject(), CCPInvestmentsReportV01.mmObject(),
 						CCPBackTestingDefinitionReportV01.mmObject(), CCPAccountPositionReportV01.mmObject(), CCPPortfolioStressTestingResultReportV01.mmObject(), CCPLiquidityStressTestingDefinitionReportV01.mmObject(),
 						CCPClearingMemberReportV01.mmObject(), CCPMemberRequirementsReportV01.mmObject(), CCPLiquidityStressTestingResultReportV01.mmObject(), CCPBackTestingResultReportV01.mmObject());
-				code = "auth";
 			}
 		});
 		return mmObject_lazy.get();

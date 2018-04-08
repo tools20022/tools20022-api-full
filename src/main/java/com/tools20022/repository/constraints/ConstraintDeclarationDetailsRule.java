@@ -35,8 +35,8 @@ public class ConstraintDeclarationDetailsRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification33
-	 * PartyIdentification33}</li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification57
+	 * PartyIdentification57}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -50,85 +50,17 @@ public class ConstraintDeclarationDetailsRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<PartyIdentification33> forPartyIdentification33 = new MMConstraint<PartyIdentification33>() {
+	public static final MMConstraint<PartyIdentification57> forPartyIdentification57 = new MMConstraint<PartyIdentification57>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclarationDetailsRule";
 			definition = "Unless bilaterally agreed, DeclarionDetails must not contain information that can be provided in a structured field.";
-			owner_lazy = () -> PartyIdentification33.mmObject();
+			owner_lazy = () -> PartyIdentification57.mmObject();
 		}
 
 		@Override
-		public void executeValidator(PartyIdentification33 obj) throws Exception {
-			checkPartyIdentification33(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification34
-	 * PartyIdentification34}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DeclarationDetailsRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Unless bilaterally agreed, DeclarionDetails must not contain information that can be provided in a structured field."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<PartyIdentification34> forPartyIdentification34 = new MMConstraint<PartyIdentification34>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "DeclarationDetailsRule";
-			definition = "Unless bilaterally agreed, DeclarionDetails must not contain information that can be provided in a structured field.";
-			owner_lazy = () -> PartyIdentification34.mmObject();
-		}
-
-		@Override
-		public void executeValidator(PartyIdentification34 obj) throws Exception {
-			checkPartyIdentification34(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification50
-	 * PartyIdentification50}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DeclarationDetailsRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Unless bilaterally agreed, DeclarionDetails must not contain information that can be provided in a structured field."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<PartyIdentification50> forPartyIdentification50 = new MMConstraint<PartyIdentification50>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "DeclarationDetailsRule";
-			definition = "Unless bilaterally agreed, DeclarionDetails must not contain information that can be provided in a structured field.";
-			owner_lazy = () -> PartyIdentification50.mmObject();
-		}
-
-		@Override
-		public void executeValidator(PartyIdentification50 obj) throws Exception {
-			checkPartyIdentification50(obj);
+		public void executeValidator(PartyIdentification57 obj) throws Exception {
+			checkPartyIdentification57(obj);
 		}
 	};
 	/**
@@ -214,8 +146,8 @@ public class ConstraintDeclarationDetailsRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification57
-	 * PartyIdentification57}</li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification50
+	 * PartyIdentification50}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -229,17 +161,17 @@ public class ConstraintDeclarationDetailsRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<PartyIdentification57> forPartyIdentification57 = new MMConstraint<PartyIdentification57>() {
+	public static final MMConstraint<PartyIdentification50> forPartyIdentification50 = new MMConstraint<PartyIdentification50>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclarationDetailsRule";
 			definition = "Unless bilaterally agreed, DeclarionDetails must not contain information that can be provided in a structured field.";
-			owner_lazy = () -> PartyIdentification57.mmObject();
+			owner_lazy = () -> PartyIdentification50.mmObject();
 		}
 
 		@Override
-		public void executeValidator(PartyIdentification57 obj) throws Exception {
-			checkPartyIdentification57(obj);
+		public void executeValidator(PartyIdentification50 obj) throws Exception {
+			checkPartyIdentification50(obj);
 		}
 	};
 	/**
@@ -316,28 +248,80 @@ public class ConstraintDeclarationDetailsRule {
 			checkPartyIdentification101(obj);
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification34
+	 * PartyIdentification34}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DeclarationDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Unless bilaterally agreed, DeclarionDetails must not contain information that can be provided in a structured field."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<PartyIdentification34> forPartyIdentification34 = new MMConstraint<PartyIdentification34>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DeclarationDetailsRule";
+			definition = "Unless bilaterally agreed, DeclarionDetails must not contain information that can be provided in a structured field.";
+			owner_lazy = () -> PartyIdentification34.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification34 obj) throws Exception {
+			checkPartyIdentification34(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification33
+	 * PartyIdentification33}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DeclarationDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Unless bilaterally agreed, DeclarionDetails must not contain information that can be provided in a structured field."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<PartyIdentification33> forPartyIdentification33 = new MMConstraint<PartyIdentification33>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DeclarationDetailsRule";
+			definition = "Unless bilaterally agreed, DeclarionDetails must not contain information that can be provided in a structured field.";
+			owner_lazy = () -> PartyIdentification33.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification33 obj) throws Exception {
+			checkPartyIdentification33(obj);
+		}
+	};
 
 	/**
 	 * Unless bilaterally agreed, DeclarionDetails must not contain information
 	 * that can be provided in a structured field.
 	 */
-	public static void checkPartyIdentification33(PartyIdentification33 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Unless bilaterally agreed, DeclarionDetails must not contain information
-	 * that can be provided in a structured field.
-	 */
-	public static void checkPartyIdentification34(PartyIdentification34 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Unless bilaterally agreed, DeclarionDetails must not contain information
-	 * that can be provided in a structured field.
-	 */
-	public static void checkPartyIdentification50(PartyIdentification50 obj) throws Exception {
+	public static void checkPartyIdentification57(PartyIdentification57 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -361,7 +345,7 @@ public class ConstraintDeclarationDetailsRule {
 	 * Unless bilaterally agreed, DeclarionDetails must not contain information
 	 * that can be provided in a structured field.
 	 */
-	public static void checkPartyIdentification57(PartyIdentification57 obj) throws Exception {
+	public static void checkPartyIdentification50(PartyIdentification50 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -378,6 +362,22 @@ public class ConstraintDeclarationDetailsRule {
 	 * that can be provided in a structured field.
 	 */
 	public static void checkPartyIdentification101(PartyIdentification101 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Unless bilaterally agreed, DeclarionDetails must not contain information
+	 * that can be provided in a structured field.
+	 */
+	public static void checkPartyIdentification34(PartyIdentification34 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Unless bilaterally agreed, DeclarionDetails must not contain information
+	 * that can be provided in a structured field.
+	 */
+	public static void checkPartyIdentification33(PartyIdentification33 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

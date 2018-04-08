@@ -155,9 +155,9 @@ public class TransferInstructionStatusReport {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReferenceOrOtherReferenceRule";
 			definition = "If OtherReference is present, then RelatedReference is not allowed. If OtherReference is not present, then RelatedReference is mandatory.";
-			messageDefinition_lazy = () -> com.tools20022.repository.area.sese.TransferInstructionStatusReport.mmObject();
 			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInstructionStatusReport.mmRelatedReference,
 					com.tools20022.repository.area.sese.TransferInstructionStatusReport.mmOtherReference);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.sese.TransferInstructionStatusReport.mmObject();
 		}
 	};
 	@XmlElement(name = "RltdRef", required = true)

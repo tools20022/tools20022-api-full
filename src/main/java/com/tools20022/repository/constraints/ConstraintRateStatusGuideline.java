@@ -37,6 +37,39 @@ public class ConstraintRateStatusGuideline {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.choice.RateStatus4Choice
+	 * RateStatus4Choice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RateStatusGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The code value ACTU is the default value for a rate status."</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<RateStatus4Choice> forRateStatus4Choice = new MMConstraint<RateStatus4Choice>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "RateStatusGuideline";
+			definition = "The code value ACTU is the default value for a rate status.";
+			owner_lazy = () -> RateStatus4Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateStatus4Choice obj) throws Exception {
+			checkRateStatus4Choice(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.RateStatus1Choice
 	 * RateStatus1Choice}</li>
 	 * <li>
@@ -145,39 +178,13 @@ public class ConstraintRateStatusGuideline {
 			checkRateStatus3Choice(obj);
 		}
 	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.choice.RateStatus4Choice
-	 * RateStatus4Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "RateStatusGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "The code value ACTU is the default value for a rate status."</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<RateStatus4Choice> forRateStatus4Choice = new MMConstraint<RateStatus4Choice>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "RateStatusGuideline";
-			definition = "The code value ACTU is the default value for a rate status.";
-			owner_lazy = () -> RateStatus4Choice.mmObject();
-		}
 
-		@Override
-		public void executeValidator(RateStatus4Choice obj) throws Exception {
-			checkRateStatus4Choice(obj);
-		}
-	};
+	/**
+	 * The code value ACTU is the default value for a rate status.
+	 */
+	public static void checkRateStatus4Choice(RateStatus4Choice obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
 
 	/**
 	 * The code value ACTU is the default value for a rate status.
@@ -197,13 +204,6 @@ public class ConstraintRateStatusGuideline {
 	 * The code value ACTU is the default value for a rate status.
 	 */
 	public static void checkRateStatus3Choice(RateStatus3Choice obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * The code value ACTU is the default value for a rate status.
-	 */
-	public static void checkRateStatus4Choice(RateStatus4Choice obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

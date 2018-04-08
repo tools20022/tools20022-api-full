@@ -121,29 +121,29 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintInvestmentAccountRule#forAccountDetailsConfirmationV04
- * ConstraintInvestmentAccountRule.forAccountDetailsConfirmationV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInvestmentAccountRule#for_acmt_AccountDetailsConfirmationV04
+ * ConstraintInvestmentAccountRule.for_acmt_AccountDetailsConfirmationV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintUnit1Rule#forAccountDetailsConfirmationV04
- * ConstraintUnit1Rule.forAccountDetailsConfirmationV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintUnit1Rule#for_acmt_AccountDetailsConfirmationV04
+ * ConstraintUnit1Rule.for_acmt_AccountDetailsConfirmationV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintDividendPercentage1Rule#forAccountDetailsConfirmationV04
- * ConstraintDividendPercentage1Rule.forAccountDetailsConfirmationV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDividendPercentage1Rule#for_acmt_AccountDetailsConfirmationV04
+ * ConstraintDividendPercentage1Rule.for_acmt_AccountDetailsConfirmationV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintDividendPercentage2Rule#forAccountDetailsConfirmationV04
- * ConstraintDividendPercentage2Rule.forAccountDetailsConfirmationV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDividendPercentage2Rule#for_acmt_AccountDetailsConfirmationV04
+ * ConstraintDividendPercentage2Rule.for_acmt_AccountDetailsConfirmationV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintDividendPercentage3Rule#forAccountDetailsConfirmationV04
- * ConstraintDividendPercentage3Rule.forAccountDetailsConfirmationV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDividendPercentage3Rule#for_acmt_AccountDetailsConfirmationV04
+ * ConstraintDividendPercentage3Rule.for_acmt_AccountDetailsConfirmationV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintDividendPercentage4Rule#forAccountDetailsConfirmationV04
- * ConstraintDividendPercentage4Rule.forAccountDetailsConfirmationV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDividendPercentage4Rule#for_acmt_AccountDetailsConfirmationV04
+ * ConstraintDividendPercentage4Rule.for_acmt_AccountDetailsConfirmationV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintDividendPercentage5Rule#forAccountDetailsConfirmationV04
- * ConstraintDividendPercentage5Rule.forAccountDetailsConfirmationV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDividendPercentage5Rule#for_acmt_AccountDetailsConfirmationV04
+ * ConstraintDividendPercentage5Rule.for_acmt_AccountDetailsConfirmationV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintDividendPercentage6Rule#forAccountDetailsConfirmationV04
- * ConstraintDividendPercentage6Rule.forAccountDetailsConfirmationV04}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDividendPercentage6Rule#for_acmt_AccountDetailsConfirmationV04
+ * ConstraintDividendPercentage6Rule.for_acmt_AccountDetailsConfirmationV04}</li>
  * </ul>
  * </li>
  * <li>
@@ -1102,11 +1102,13 @@ public class AccountDetailsConfirmationV04 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestmentAccountRule.forAccountDetailsConfirmationV04,
-						com.tools20022.repository.constraints.ConstraintUnit1Rule.forAccountDetailsConfirmationV04, com.tools20022.repository.constraints.ConstraintDividendPercentage1Rule.forAccountDetailsConfirmationV04,
-						com.tools20022.repository.constraints.ConstraintDividendPercentage2Rule.forAccountDetailsConfirmationV04, com.tools20022.repository.constraints.ConstraintDividendPercentage3Rule.forAccountDetailsConfirmationV04,
-						com.tools20022.repository.constraints.ConstraintDividendPercentage4Rule.forAccountDetailsConfirmationV04, com.tools20022.repository.constraints.ConstraintDividendPercentage5Rule.forAccountDetailsConfirmationV04,
-						com.tools20022.repository.constraints.ConstraintDividendPercentage6Rule.forAccountDetailsConfirmationV04);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestmentAccountRule.for_acmt_AccountDetailsConfirmationV04,
+						com.tools20022.repository.constraints.ConstraintUnit1Rule.for_acmt_AccountDetailsConfirmationV04, com.tools20022.repository.constraints.ConstraintDividendPercentage1Rule.for_acmt_AccountDetailsConfirmationV04,
+						com.tools20022.repository.constraints.ConstraintDividendPercentage2Rule.for_acmt_AccountDetailsConfirmationV04,
+						com.tools20022.repository.constraints.ConstraintDividendPercentage3Rule.for_acmt_AccountDetailsConfirmationV04,
+						com.tools20022.repository.constraints.ConstraintDividendPercentage4Rule.for_acmt_AccountDetailsConfirmationV04,
+						com.tools20022.repository.constraints.ConstraintDividendPercentage5Rule.for_acmt_AccountDetailsConfirmationV04,
+						com.tools20022.repository.constraints.ConstraintDividendPercentage6Rule.for_acmt_AccountDetailsConfirmationV04);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountDetailsConfirmationV04";
 				definition = "Scope\r\nAn account servicer, for example, a registrar, transfer agent or custodian bank sends the AccountDetailsConfirmation message to the account owner, for example, an investor to confirm the opening of an investment fund account, execution of an AccountModificationInstruction or to return information requested in a GetAccountDetails message.\r\nUsage\r\nThe AccountDetailsConfirmation message is used to confirm the opening of an account, modification of an account or the provision of information requested in a previously sent GetAccountDetails message. The message contains detailed information relevant to the opened account.\r\nWhen the AccountDetailsConfirmation is used to confirm execution of an AccountModificationInstruction message, it contains the modified subsets of account details that were specified in the AccountModificationInstruction.\r\nWhen the AccountDetailsConfirmation is used to reply to a GetAccountDetails message, it returns the selected subsets of account details that were specified in the GetAccountDetails message.";

@@ -30,7 +30,7 @@ import com.tools20022.repository.msg.RateDetails34;
  * DeemedRate/RateTypeAndAmountAndRateStatus/RateType/Code values and
  * DeemedRate/RateTypeAndRate/RateType/Code values must all be different in each
  * occurrence of DeemedRate. <br>
- * (MT 564 NVR C8).
+ * (MT 566 NVR C4).
  */
 public class ConstraintDeemedRate1Rule {
 
@@ -40,7 +40,7 @@ public class ConstraintDeemedRate1Rule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.RateDetails31 RateDetails31}</li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails33 RateDetails33}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -50,21 +50,21 @@ public class ConstraintDeemedRate1Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If DeemedRate is repeated, then DeemedRate/RateTypeAndAmountAndRateStatus/RateType/Code values and DeemedRate/RateTypeAndRate/RateType/Code values must all be different in each occurrence of DeemedRate. \r\n(MT 564 NVR C8)."
+	 * "If DeemedRate is repeated, then DeemedRate/RateTypeAndAmountAndRateStatus/RateType/Code values and DeemedRate/RateTypeAndRate/RateType/Code values must all be different in each occurrence of DeemedRate. \r\n(MT 566 NVR C4)."
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<RateDetails31> forRateDetails31 = new MMConstraint<RateDetails31>() {
+	public static final MMConstraint<RateDetails33> forRateDetails33 = new MMConstraint<RateDetails33>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeemedRate1Rule";
-			definition = "If DeemedRate is repeated, then DeemedRate/RateTypeAndAmountAndRateStatus/RateType/Code values and DeemedRate/RateTypeAndRate/RateType/Code values must all be different in each occurrence of DeemedRate. \r\n(MT 564 NVR C8).";
-			owner_lazy = () -> RateDetails31.mmObject();
+			definition = "If DeemedRate is repeated, then DeemedRate/RateTypeAndAmountAndRateStatus/RateType/Code values and DeemedRate/RateTypeAndRate/RateType/Code values must all be different in each occurrence of DeemedRate. \r\n(MT 566 NVR C4).";
+			owner_lazy = () -> RateDetails33.mmObject();
 		}
 
 		@Override
-		public void executeValidator(RateDetails31 obj) throws Exception {
-			checkRateDetails31(obj);
+		public void executeValidator(RateDetails33 obj) throws Exception {
+			checkRateDetails33(obj);
 		}
 	};
 	/**
@@ -106,39 +106,6 @@ public class ConstraintDeemedRate1Rule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.RateDetails33 RateDetails33}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DeemedRate1Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If DeemedRate is repeated, then DeemedRate/RateTypeAndAmountAndRateStatus/RateType/Code values and DeemedRate/RateTypeAndRate/RateType/Code values must all be different in each occurrence of DeemedRate. \r\n(MT 566 NVR C4)."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<RateDetails33> forRateDetails33 = new MMConstraint<RateDetails33>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "DeemedRate1Rule";
-			definition = "If DeemedRate is repeated, then DeemedRate/RateTypeAndAmountAndRateStatus/RateType/Code values and DeemedRate/RateTypeAndRate/RateType/Code values must all be different in each occurrence of DeemedRate. \r\n(MT 566 NVR C4).";
-			owner_lazy = () -> RateDetails33.mmObject();
-		}
-
-		@Override
-		public void executeValidator(RateDetails33 obj) throws Exception {
-			checkRateDetails33(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RateDetails34 RateDetails34}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -166,15 +133,48 @@ public class ConstraintDeemedRate1Rule {
 			checkRateDetails34(obj);
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.RateDetails31 RateDetails31}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DeemedRate1Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If DeemedRate is repeated, then DeemedRate/RateTypeAndAmountAndRateStatus/RateType/Code values and DeemedRate/RateTypeAndRate/RateType/Code values must all be different in each occurrence of DeemedRate. \r\n(MT 564 NVR C8)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<RateDetails31> forRateDetails31 = new MMConstraint<RateDetails31>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DeemedRate1Rule";
+			definition = "If DeemedRate is repeated, then DeemedRate/RateTypeAndAmountAndRateStatus/RateType/Code values and DeemedRate/RateTypeAndRate/RateType/Code values must all be different in each occurrence of DeemedRate. \r\n(MT 564 NVR C8).";
+			owner_lazy = () -> RateDetails31.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateDetails31 obj) throws Exception {
+			checkRateDetails31(obj);
+		}
+	};
 
 	/**
 	 * If DeemedRate is repeated, then
 	 * DeemedRate/RateTypeAndAmountAndRateStatus/RateType/Code values and
 	 * DeemedRate/RateTypeAndRate/RateType/Code values must all be different in
 	 * each occurrence of DeemedRate. <br>
-	 * (MT 564 NVR C8).
+	 * (MT 566 NVR C4).
 	 */
-	public static void checkRateDetails31(RateDetails31 obj) throws Exception {
+	public static void checkRateDetails33(RateDetails33 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -194,9 +194,9 @@ public class ConstraintDeemedRate1Rule {
 	 * DeemedRate/RateTypeAndAmountAndRateStatus/RateType/Code values and
 	 * DeemedRate/RateTypeAndRate/RateType/Code values must all be different in
 	 * each occurrence of DeemedRate. <br>
-	 * (MT 566 NVR C4).
+	 * (MT 564 NVR C8).
 	 */
-	public static void checkRateDetails33(RateDetails33 obj) throws Exception {
+	public static void checkRateDetails34(RateDetails34 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -207,7 +207,7 @@ public class ConstraintDeemedRate1Rule {
 	 * each occurrence of DeemedRate. <br>
 	 * (MT 564 NVR C8).
 	 */
-	public static void checkRateDetails34(RateDetails34 obj) throws Exception {
+	public static void checkRateDetails31(RateDetails31 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

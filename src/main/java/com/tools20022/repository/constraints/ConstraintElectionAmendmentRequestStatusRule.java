@@ -49,7 +49,7 @@ public class ConstraintElectionAmendmentRequestStatusRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<AgentCAElectionStatusAdviceV01> forAgentCAElectionStatusAdviceV01 = new MMConstraint<AgentCAElectionStatusAdviceV01>() {
+	public static final MMConstraint<AgentCAElectionStatusAdviceV01> for_seev_AgentCAElectionStatusAdviceV01 = new MMConstraint<AgentCAElectionStatusAdviceV01>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectionAmendmentRequestStatusRule";
@@ -59,7 +59,7 @@ public class ConstraintElectionAmendmentRequestStatusRule {
 
 		@Override
 		public void executeValidator(AgentCAElectionStatusAdviceV01 obj) throws Exception {
-			checkAgentCAElectionStatusAdviceV01(obj);
+			check_seev_AgentCAElectionStatusAdviceV01(obj);
 		}
 	};
 
@@ -67,7 +67,7 @@ public class ConstraintElectionAmendmentRequestStatusRule {
 	 * If AgentCAElectionAmendmentRequestIdentification is present, then
 	 * ElectionAmendmentRequestStatus must be present.
 	 */
-	public static void checkAgentCAElectionStatusAdviceV01(AgentCAElectionStatusAdviceV01 obj) throws Exception {
+	public static void check_seev_AgentCAElectionStatusAdviceV01(AgentCAElectionStatusAdviceV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

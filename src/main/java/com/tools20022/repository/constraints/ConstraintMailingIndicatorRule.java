@@ -36,6 +36,46 @@ public class ConstraintMailingIndicatorRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress21
+	 * PostalAddress21}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "MailingIndicatorRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If RegistrationAddressIndicator is \"true\" or \"1\" (Yes), then MailingIndicator must be \"true\" or \"1\"."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintMailingIndicatorRule#forPostalAddress3
+	 * ConstraintMailingIndicatorRule.forPostalAddress3}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<PostalAddress21> forPostalAddress21 = new MMConstraint<PostalAddress21>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "MailingIndicatorRule";
+			definition = "If RegistrationAddressIndicator is \"true\" or \"1\" (Yes), then MailingIndicator must be \"true\" or \"1\".";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMailingIndicatorRule.forPostalAddress3;
+			owner_lazy = () -> PostalAddress21.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PostalAddress21 obj) throws Exception {
+			checkPostalAddress21(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PostalAddress3 PostalAddress3}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -72,52 +112,12 @@ public class ConstraintMailingIndicatorRule {
 			checkPostalAddress3(obj);
 		}
 	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.PostalAddress21
-	 * PostalAddress21}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "MailingIndicatorRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If RegistrationAddressIndicator is \"true\" or \"1\" (Yes), then MailingIndicator must be \"true\" or \"1\"."
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintMailingIndicatorRule#forPostalAddress3
-	 * ConstraintMailingIndicatorRule.forPostalAddress3}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<PostalAddress21> forPostalAddress21 = new MMConstraint<PostalAddress21>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "MailingIndicatorRule";
-			definition = "If RegistrationAddressIndicator is \"true\" or \"1\" (Yes), then MailingIndicator must be \"true\" or \"1\".";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMailingIndicatorRule.forPostalAddress3;
-			owner_lazy = () -> PostalAddress21.mmObject();
-		}
-
-		@Override
-		public void executeValidator(PostalAddress21 obj) throws Exception {
-			checkPostalAddress21(obj);
-		}
-	};
 
 	/**
 	 * If RegistrationAddressIndicator is "true" or "1" (Yes), then
 	 * MailingIndicator must be "true" or "1".
 	 */
-	public static void checkPostalAddress3(PostalAddress3 obj) throws Exception {
+	public static void checkPostalAddress21(PostalAddress21 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -125,7 +125,7 @@ public class ConstraintMailingIndicatorRule {
 	 * If RegistrationAddressIndicator is "true" or "1" (Yes), then
 	 * MailingIndicator must be "true" or "1".
 	 */
-	public static void checkPostalAddress21(PostalAddress21 obj) throws Exception {
+	public static void checkPostalAddress3(PostalAddress3 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

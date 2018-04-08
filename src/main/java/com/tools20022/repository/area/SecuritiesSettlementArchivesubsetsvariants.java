@@ -92,11 +92,11 @@ public class SecuritiesSettlementArchivesubsetsvariants {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Securities Settlement - Archive - subsets/variants";
 				definition = "Messages that support the settlement process for securities and report its status and confirmation.";
+				code = "sese";
 				messageDefinition_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionAllegementNotification002V05.mmObject(), SecuritiesSettlementTransactionStatusAdvice002V07.mmObject(),
 						SecuritiesSettlementTransactionReversalAdvice002V05.mmObject(), SecuritiesSettlementTransactionConfirmation002V06.mmObject(), SecuritiesSettlementTransactionGenerationNotification002V06.mmObject(),
 						SecuritiesSettlementTransactionModificationRequest002V04.mmObject(), SecuritiesSettlementTransactionInstruction002V06.mmObject(), SecuritiesFinancingInstruction002V06.mmObject(),
 						SecuritiesFinancingConfirmation002V06.mmObject());
-				code = "sese";
 			}
 		});
 		return mmObject_lazy.get();

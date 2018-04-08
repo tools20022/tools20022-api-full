@@ -25,10 +25,376 @@ import java.util.Arrays;
 
 /**
  * If RequestedSettlementCurrency is present, it must be the same Currency as in
- * all occurrences of IndividualOrderDetails/SettlementAmount, if present.
+ * SettlementAmount, if present.
  */
 public class ConstraintRequestedSettlementCurrencyRule {
 
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder6
+	 * RedemptionOrder6}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RequestedSettlementCurrencyRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If RequestedSettlementCurrency is present, it must be the same Currency as in SettlementAmount, if present."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<RedemptionOrder6> forRedemptionOrder6 = new MMConstraint<RedemptionOrder6>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "RequestedSettlementCurrencyRule";
+			definition = "If RequestedSettlementCurrency is present, it must be the same Currency as in SettlementAmount, if present.";
+			owner_lazy = () -> RedemptionOrder6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionOrder6 obj) throws Exception {
+			checkRedemptionOrder6(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder11
+	 * SubscriptionOrder11}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RequestedSettlementCurrencyRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If RequestedSettlementCurrency is present, it must be the same Currency as in SettlementAmount, if present."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SubscriptionOrder11> forSubscriptionOrder11 = new MMConstraint<SubscriptionOrder11>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "RequestedSettlementCurrencyRule";
+			definition = "If RequestedSettlementCurrency is present, it must be the same Currency as in SettlementAmount, if present.";
+			owner_lazy = () -> SubscriptionOrder11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionOrder11 obj) throws Exception {
+			checkSubscriptionOrder11(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder11
+	 * RedemptionOrder11}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RequestedSettlementCurrencyRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If RequestedSettlementCurrency is present, it must be the same Currency as in SettlementAmount, if present."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<RedemptionOrder11> forRedemptionOrder11 = new MMConstraint<RedemptionOrder11>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "RequestedSettlementCurrencyRule";
+			definition = "If RequestedSettlementCurrency is present, it must be the same Currency as in SettlementAmount, if present.";
+			owner_lazy = () -> RedemptionOrder11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionOrder11 obj) throws Exception {
+			checkRedemptionOrder11(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution12
+	 * RedemptionExecution12}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RequestedSettlementCurrencyRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If RequestedSettlementCurrency is present, it must be the same Currency as in SettlementAmount."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<RedemptionExecution12> forRedemptionExecution12 = new MMConstraint<RedemptionExecution12>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "RequestedSettlementCurrencyRule";
+			definition = "If RequestedSettlementCurrency is present, it must be the same Currency as in SettlementAmount.";
+			owner_lazy = () -> RedemptionExecution12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionExecution12 obj) throws Exception {
+			checkRedemptionExecution12(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder5
+	 * SubscriptionBulkOrder5}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RequestedSettlementCurrencyRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If RequestedSettlementCurrency is present, it must be the same Currency as in all occurrences of IndividualOrderDetails/SettlementAmount, if present."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintRequestedSettlementCurrencyRule#forSubscriptionBulkOrder4
+	 * ConstraintRequestedSettlementCurrencyRule.forSubscriptionBulkOrder4}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SubscriptionBulkOrder5> forSubscriptionBulkOrder5 = new MMConstraint<SubscriptionBulkOrder5>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "RequestedSettlementCurrencyRule";
+			definition = "If RequestedSettlementCurrency is present, it must be the same Currency as in all occurrences of IndividualOrderDetails/SettlementAmount, if present.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintRequestedSettlementCurrencyRule.forSubscriptionBulkOrder4;
+			owner_lazy = () -> SubscriptionBulkOrder5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionBulkOrder5 obj) throws Exception {
+			checkSubscriptionBulkOrder5(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionBulkExecution4
+	 * SubscriptionBulkExecution4}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RequestedSettlementCurrencyRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If RequestedSettlementCurrency is present, it must be the same Currency as in all occurrences of IndividualExecutionDetails/SettlementAmount."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintRequestedSettlementCurrencyRule#forSubscriptionBulkExecution3
+	 * ConstraintRequestedSettlementCurrencyRule.forSubscriptionBulkExecution3}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SubscriptionBulkExecution4> forSubscriptionBulkExecution4 = new MMConstraint<SubscriptionBulkExecution4>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "RequestedSettlementCurrencyRule";
+			definition = "If RequestedSettlementCurrency is present, it must be the same Currency as in all occurrences of IndividualExecutionDetails/SettlementAmount.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintRequestedSettlementCurrencyRule.forSubscriptionBulkExecution3;
+			owner_lazy = () -> SubscriptionBulkExecution4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionBulkExecution4 obj) throws Exception {
+			checkSubscriptionBulkExecution4(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder8
+	 * RedemptionOrder8}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RequestedSettlementCurrencyRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If RequestedSettlementCurrency is present, it must be the same Currency as in SettlementAmount, if present."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<RedemptionOrder8> forRedemptionOrder8 = new MMConstraint<RedemptionOrder8>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "RequestedSettlementCurrencyRule";
+			definition = "If RequestedSettlementCurrency is present, it must be the same Currency as in SettlementAmount, if present.";
+			owner_lazy = () -> RedemptionOrder8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionOrder8 obj) throws Exception {
+			checkRedemptionOrder8(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder4
+	 * SubscriptionBulkOrder4}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RequestedSettlementCurrencyRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If RequestedSettlementCurrency is present, it must be the same Currency as in all occurrences of IndividualOrderDetails/SettlementAmount, if present."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintRequestedSettlementCurrencyRule#forSubscriptionBulkOrder5
+	 * ConstraintRequestedSettlementCurrencyRule.forSubscriptionBulkOrder5}</li>
+	 * </ul>
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SubscriptionBulkOrder4> forSubscriptionBulkOrder4 = new MMConstraint<SubscriptionBulkOrder4>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "RequestedSettlementCurrencyRule";
+			definition = "If RequestedSettlementCurrency is present, it must be the same Currency as in all occurrences of IndividualOrderDetails/SettlementAmount, if present.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRequestedSettlementCurrencyRule.forSubscriptionBulkOrder5);
+			owner_lazy = () -> SubscriptionBulkOrder4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionBulkOrder4 obj) throws Exception {
+			checkSubscriptionBulkOrder4(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution15
+	 * RedemptionExecution15}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToNode\"&gt;&lt;leftOperand&gt;/RequestedSettlementCurrency&lt;/leftOperand&gt;&lt;rightOperand&gt;/SettlementAmount/@Currency&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/RequestedSettlementCurrency&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/SettlementAmount&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RequestedSettlementCurrencyRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If RequestedSettlementCurrency is present, it must be the same Currency as in SettlementAmount, if present."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<RedemptionExecution15> forRedemptionExecution15 = new MMConstraint<RedemptionExecution15>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "RequestedSettlementCurrencyRule";
+			definition = "If RequestedSettlementCurrency is present, it must be the same Currency as in SettlementAmount, if present.";
+			owner_lazy = () -> RedemptionExecution15.mmObject();
+			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/RequestedSettlementCurrency</leftOperand><rightOperand>/SettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/RequestedSettlementCurrency</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/SettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(RedemptionExecution15 obj) throws Exception {
+			checkRedemptionExecution15(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder6
+	 * SubscriptionOrder6}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RequestedSettlementCurrencyRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If RequestedSettlementCurrency is present, it must be the same Currency as in SettlementAmount, if present."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SubscriptionOrder6> forSubscriptionOrder6 = new MMConstraint<SubscriptionOrder6>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "RequestedSettlementCurrencyRule";
+			definition = "If RequestedSettlementCurrency is present, it must be the same Currency as in SettlementAmount, if present.";
+			owner_lazy = () -> SubscriptionOrder6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionOrder6 obj) throws Exception {
+			checkSubscriptionOrder6(obj);
+		}
+	};
 	/**
 	 * 
 	 <p>
@@ -112,185 +478,6 @@ public class ConstraintRequestedSettlementCurrencyRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.RedemptionBulkOrder4
-	 * RedemptionBulkOrder4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "RequestedSettlementCurrencyRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If RequestedSettlementCurrency is present, it must be the same Currency as in all occurrences of IndividualOrderDetails/SettlementAmount, if present."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintRequestedSettlementCurrencyRule#forRedemptionBulkOrder6
-	 * ConstraintRequestedSettlementCurrencyRule.forRedemptionBulkOrder6}</li>
-	 * </ul>
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<RedemptionBulkOrder4> forRedemptionBulkOrder4 = new MMConstraint<RedemptionBulkOrder4>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "RequestedSettlementCurrencyRule";
-			definition = "If RequestedSettlementCurrency is present, it must be the same Currency as in all occurrences of IndividualOrderDetails/SettlementAmount, if present.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRequestedSettlementCurrencyRule.forRedemptionBulkOrder6);
-			owner_lazy = () -> RedemptionBulkOrder4.mmObject();
-		}
-
-		@Override
-		public void executeValidator(RedemptionBulkOrder4 obj) throws Exception {
-			checkRedemptionBulkOrder4(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder6
-	 * RedemptionOrder6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "RequestedSettlementCurrencyRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If RequestedSettlementCurrency is present, it must be the same Currency as in SettlementAmount, if present."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<RedemptionOrder6> forRedemptionOrder6 = new MMConstraint<RedemptionOrder6>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "RequestedSettlementCurrencyRule";
-			definition = "If RequestedSettlementCurrency is present, it must be the same Currency as in SettlementAmount, if present.";
-			owner_lazy = () -> RedemptionOrder6.mmObject();
-		}
-
-		@Override
-		public void executeValidator(RedemptionOrder6 obj) throws Exception {
-			checkRedemptionOrder6(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution6
-	 * RedemptionExecution6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "RequestedSettlementCurrencyRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If RequestedSettlementCurrency is present, it must be the same Currency as in SettlementAmount."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<RedemptionExecution6> forRedemptionExecution6 = new MMConstraint<RedemptionExecution6>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "RequestedSettlementCurrencyRule";
-			definition = "If RequestedSettlementCurrency is present, it must be the same Currency as in SettlementAmount.";
-			owner_lazy = () -> RedemptionExecution6.mmObject();
-		}
-
-		@Override
-		public void executeValidator(RedemptionExecution6 obj) throws Exception {
-			checkRedemptionExecution6(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder8
-	 * RedemptionOrder8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "RequestedSettlementCurrencyRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If RequestedSettlementCurrency is present, it must be the same Currency as in SettlementAmount, if present."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<RedemptionOrder8> forRedemptionOrder8 = new MMConstraint<RedemptionOrder8>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "RequestedSettlementCurrencyRule";
-			definition = "If RequestedSettlementCurrency is present, it must be the same Currency as in SettlementAmount, if present.";
-			owner_lazy = () -> RedemptionOrder8.mmObject();
-		}
-
-		@Override
-		public void executeValidator(RedemptionOrder8 obj) throws Exception {
-			checkRedemptionOrder8(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder3
-	 * SubscriptionBulkOrder3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "RequestedSettlementCurrencyRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If RequestedSettlementCurrency is present, it must be the same Currency as in all occurrences of IndividualOrderDetails/SettlementAmount, if present."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SubscriptionBulkOrder3> forSubscriptionBulkOrder3 = new MMConstraint<SubscriptionBulkOrder3>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "RequestedSettlementCurrencyRule";
-			definition = "If RequestedSettlementCurrency is present, it must be the same Currency as in all occurrences of IndividualOrderDetails/SettlementAmount, if present.";
-			owner_lazy = () -> SubscriptionBulkOrder3.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SubscriptionBulkOrder3 obj) throws Exception {
-			checkSubscriptionBulkOrder3(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubscriptionBulkExecution3
 	 * SubscriptionBulkExecution3}</li>
 	 * <li>
@@ -334,51 +521,12 @@ public class ConstraintRequestedSettlementCurrencyRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder4
-	 * SubscriptionBulkOrder4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "RequestedSettlementCurrencyRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If RequestedSettlementCurrency is present, it must be the same Currency as in all occurrences of IndividualOrderDetails/SettlementAmount, if present."
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13
+	 * SubscriptionExecution13}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToNode\"&gt;&lt;leftOperand&gt;/RequestedSettlementCurrency&lt;/leftOperand&gt;&lt;rightOperand&gt;/SettlementAmount/@Currency&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/RequestedSettlementCurrency&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/SettlementAmount&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintRequestedSettlementCurrencyRule#forSubscriptionBulkOrder5
-	 * ConstraintRequestedSettlementCurrencyRule.forSubscriptionBulkOrder5}</li>
-	 * </ul>
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SubscriptionBulkOrder4> forSubscriptionBulkOrder4 = new MMConstraint<SubscriptionBulkOrder4>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "RequestedSettlementCurrencyRule";
-			definition = "If RequestedSettlementCurrency is present, it must be the same Currency as in all occurrences of IndividualOrderDetails/SettlementAmount, if present.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRequestedSettlementCurrencyRule.forSubscriptionBulkOrder5);
-			owner_lazy = () -> SubscriptionBulkOrder4.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SubscriptionBulkOrder4 obj) throws Exception {
-			checkSubscriptionBulkOrder4(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder6
-	 * SubscriptionOrder6}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -392,17 +540,18 @@ public class ConstraintRequestedSettlementCurrencyRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<SubscriptionOrder6> forSubscriptionOrder6 = new MMConstraint<SubscriptionOrder6>() {
+	public static final MMConstraint<SubscriptionExecution13> forSubscriptionExecution13 = new MMConstraint<SubscriptionExecution13>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedSettlementCurrencyRule";
 			definition = "If RequestedSettlementCurrency is present, it must be the same Currency as in SettlementAmount, if present.";
-			owner_lazy = () -> SubscriptionOrder6.mmObject();
+			owner_lazy = () -> SubscriptionExecution13.mmObject();
+			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/RequestedSettlementCurrency</leftOperand><rightOperand>/SettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/RequestedSettlementCurrency</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/SettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
 		}
 
 		@Override
-		public void executeValidator(SubscriptionOrder6 obj) throws Exception {
-			checkSubscriptionOrder6(obj);
+		public void executeValidator(SubscriptionExecution13 obj) throws Exception {
+			checkSubscriptionExecution13(obj);
 		}
 	};
 	/**
@@ -437,6 +586,202 @@ public class ConstraintRequestedSettlementCurrencyRule {
 		@Override
 		public void executeValidator(SubscriptionExecution6 obj) throws Exception {
 			checkSubscriptionExecution6(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.RedemptionBulkExecution5
+	 * RedemptionBulkExecution5}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RequestedSettlementCurrencyRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If RequestedSettlementCurrency is present, it must be the same Currency as in all occurrences of IndividualExecutionDetails/SettlementAmount."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintRequestedSettlementCurrencyRule#forRedemptionBulkExecution3
+	 * ConstraintRequestedSettlementCurrencyRule.forRedemptionBulkExecution3}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<RedemptionBulkExecution5> forRedemptionBulkExecution5 = new MMConstraint<RedemptionBulkExecution5>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "RequestedSettlementCurrencyRule";
+			definition = "If RequestedSettlementCurrency is present, it must be the same Currency as in all occurrences of IndividualExecutionDetails/SettlementAmount.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintRequestedSettlementCurrencyRule.forRedemptionBulkExecution3;
+			owner_lazy = () -> RedemptionBulkExecution5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionBulkExecution5 obj) throws Exception {
+			checkRedemptionBulkExecution5(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder14
+	 * SubscriptionOrder14}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToNode\"&gt;&lt;leftOperand&gt;/RequestedSettlementCurrency&lt;/leftOperand&gt;&lt;rightOperand&gt;/SettlementAmount/@Currency&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/RequestedSettlementCurrency&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/SettlementAmount&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RequestedSettlementCurrencyRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If RequestedSettlementCurrency is present, it must be the same Currency as in SettlementAmount, if present."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintRequestedSettlementCurrencyRule#forSubscriptionOrder8
+	 * ConstraintRequestedSettlementCurrencyRule.forSubscriptionOrder8}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SubscriptionOrder14> forSubscriptionOrder14 = new MMConstraint<SubscriptionOrder14>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "RequestedSettlementCurrencyRule";
+			definition = "If RequestedSettlementCurrency is present, it must be the same Currency as in SettlementAmount, if present.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintRequestedSettlementCurrencyRule.forSubscriptionOrder8;
+			owner_lazy = () -> SubscriptionOrder14.mmObject();
+			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/RequestedSettlementCurrency</leftOperand><rightOperand>/SettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/RequestedSettlementCurrency</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/SettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SubscriptionOrder14 obj) throws Exception {
+			checkSubscriptionOrder14(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder3
+	 * SubscriptionBulkOrder3}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RequestedSettlementCurrencyRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If RequestedSettlementCurrency is present, it must be the same Currency as in all occurrences of IndividualOrderDetails/SettlementAmount, if present."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SubscriptionBulkOrder3> forSubscriptionBulkOrder3 = new MMConstraint<SubscriptionBulkOrder3>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "RequestedSettlementCurrencyRule";
+			definition = "If RequestedSettlementCurrency is present, it must be the same Currency as in all occurrences of IndividualOrderDetails/SettlementAmount, if present.";
+			owner_lazy = () -> SubscriptionBulkOrder3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionBulkOrder3 obj) throws Exception {
+			checkSubscriptionBulkOrder3(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution6
+	 * RedemptionExecution6}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RequestedSettlementCurrencyRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If RequestedSettlementCurrency is present, it must be the same Currency as in SettlementAmount."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<RedemptionExecution6> forRedemptionExecution6 = new MMConstraint<RedemptionExecution6>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "RequestedSettlementCurrencyRule";
+			definition = "If RequestedSettlementCurrency is present, it must be the same Currency as in SettlementAmount.";
+			owner_lazy = () -> RedemptionExecution6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionExecution6 obj) throws Exception {
+			checkRedemptionExecution6(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.RedemptionBulkOrder4
+	 * RedemptionBulkOrder4}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RequestedSettlementCurrencyRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If RequestedSettlementCurrency is present, it must be the same Currency as in all occurrences of IndividualOrderDetails/SettlementAmount, if present."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintRequestedSettlementCurrencyRule#forRedemptionBulkOrder6
+	 * ConstraintRequestedSettlementCurrencyRule.forRedemptionBulkOrder6}</li>
+	 * </ul>
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<RedemptionBulkOrder4> forRedemptionBulkOrder4 = new MMConstraint<RedemptionBulkOrder4>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "RequestedSettlementCurrencyRule";
+			definition = "If RequestedSettlementCurrency is present, it must be the same Currency as in all occurrences of IndividualOrderDetails/SettlementAmount, if present.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRequestedSettlementCurrencyRule.forRedemptionBulkOrder6);
+			owner_lazy = () -> RedemptionBulkOrder4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionBulkOrder4 obj) throws Exception {
+			checkRedemptionBulkOrder4(obj);
 		}
 	};
 	/**
@@ -488,108 +833,6 @@ public class ConstraintRequestedSettlementCurrencyRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder11
-	 * RedemptionOrder11}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "RequestedSettlementCurrencyRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If RequestedSettlementCurrency is present, it must be the same Currency as in SettlementAmount, if present."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<RedemptionOrder11> forRedemptionOrder11 = new MMConstraint<RedemptionOrder11>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "RequestedSettlementCurrencyRule";
-			definition = "If RequestedSettlementCurrency is present, it must be the same Currency as in SettlementAmount, if present.";
-			owner_lazy = () -> RedemptionOrder11.mmObject();
-		}
-
-		@Override
-		public void executeValidator(RedemptionOrder11 obj) throws Exception {
-			checkRedemptionOrder11(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution12
-	 * RedemptionExecution12}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "RequestedSettlementCurrencyRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If RequestedSettlementCurrency is present, it must be the same Currency as in SettlementAmount."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<RedemptionExecution12> forRedemptionExecution12 = new MMConstraint<RedemptionExecution12>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "RequestedSettlementCurrencyRule";
-			definition = "If RequestedSettlementCurrency is present, it must be the same Currency as in SettlementAmount.";
-			owner_lazy = () -> RedemptionExecution12.mmObject();
-		}
-
-		@Override
-		public void executeValidator(RedemptionExecution12 obj) throws Exception {
-			checkRedemptionExecution12(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder11
-	 * SubscriptionOrder11}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "RequestedSettlementCurrencyRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If RequestedSettlementCurrency is present, it must be the same Currency as in SettlementAmount, if present."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SubscriptionOrder11> forSubscriptionOrder11 = new MMConstraint<SubscriptionOrder11>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "RequestedSettlementCurrencyRule";
-			definition = "If RequestedSettlementCurrency is present, it must be the same Currency as in SettlementAmount, if present.";
-			owner_lazy = () -> SubscriptionOrder11.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SubscriptionOrder11 obj) throws Exception {
-			checkSubscriptionOrder11(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution9
 	 * SubscriptionExecution9}</li>
 	 * <li>
@@ -616,126 +859,6 @@ public class ConstraintRequestedSettlementCurrencyRule {
 		@Override
 		public void executeValidator(SubscriptionExecution9 obj) throws Exception {
 			checkSubscriptionExecution9(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder5
-	 * SubscriptionBulkOrder5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "RequestedSettlementCurrencyRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If RequestedSettlementCurrency is present, it must be the same Currency as in all occurrences of IndividualOrderDetails/SettlementAmount, if present."
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintRequestedSettlementCurrencyRule#forSubscriptionBulkOrder4
-	 * ConstraintRequestedSettlementCurrencyRule.forSubscriptionBulkOrder4}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SubscriptionBulkOrder5> forSubscriptionBulkOrder5 = new MMConstraint<SubscriptionBulkOrder5>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "RequestedSettlementCurrencyRule";
-			definition = "If RequestedSettlementCurrency is present, it must be the same Currency as in all occurrences of IndividualOrderDetails/SettlementAmount, if present.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintRequestedSettlementCurrencyRule.forSubscriptionBulkOrder4;
-			owner_lazy = () -> SubscriptionBulkOrder5.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SubscriptionBulkOrder5 obj) throws Exception {
-			checkSubscriptionBulkOrder5(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.RedemptionBulkExecution5
-	 * RedemptionBulkExecution5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "RequestedSettlementCurrencyRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If RequestedSettlementCurrency is present, it must be the same Currency as in all occurrences of IndividualExecutionDetails/SettlementAmount."
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintRequestedSettlementCurrencyRule#forRedemptionBulkExecution3
-	 * ConstraintRequestedSettlementCurrencyRule.forRedemptionBulkExecution3}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<RedemptionBulkExecution5> forRedemptionBulkExecution5 = new MMConstraint<RedemptionBulkExecution5>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "RequestedSettlementCurrencyRule";
-			definition = "If RequestedSettlementCurrency is present, it must be the same Currency as in all occurrences of IndividualExecutionDetails/SettlementAmount.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintRequestedSettlementCurrencyRule.forRedemptionBulkExecution3;
-			owner_lazy = () -> RedemptionBulkExecution5.mmObject();
-		}
-
-		@Override
-		public void executeValidator(RedemptionBulkExecution5 obj) throws Exception {
-			checkRedemptionBulkExecution5(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionBulkExecution4
-	 * SubscriptionBulkExecution4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "RequestedSettlementCurrencyRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If RequestedSettlementCurrency is present, it must be the same Currency as in all occurrences of IndividualExecutionDetails/SettlementAmount."
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintRequestedSettlementCurrencyRule#forSubscriptionBulkExecution3
-	 * ConstraintRequestedSettlementCurrencyRule.forSubscriptionBulkExecution3}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SubscriptionBulkExecution4> forSubscriptionBulkExecution4 = new MMConstraint<SubscriptionBulkExecution4>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "RequestedSettlementCurrencyRule";
-			definition = "If RequestedSettlementCurrency is present, it must be the same Currency as in all occurrences of IndividualExecutionDetails/SettlementAmount.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintRequestedSettlementCurrencyRule.forSubscriptionBulkExecution3;
-			owner_lazy = () -> SubscriptionBulkExecution4.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SubscriptionBulkExecution4 obj) throws Exception {
-			checkSubscriptionBulkExecution4(obj);
 		}
 	};
 	/**
@@ -817,155 +940,6 @@ public class ConstraintRequestedSettlementCurrencyRule {
 			checkRedemptionOrder14(obj);
 		}
 	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13
-	 * SubscriptionExecution13}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
-	 * expression} =
-	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToNode\"&gt;&lt;leftOperand&gt;/RequestedSettlementCurrency&lt;/leftOperand&gt;&lt;rightOperand&gt;/SettlementAmount/@Currency&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/RequestedSettlementCurrency&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/SettlementAmount&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "RequestedSettlementCurrencyRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If RequestedSettlementCurrency is present, it must be the same Currency as in SettlementAmount, if present."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SubscriptionExecution13> forSubscriptionExecution13 = new MMConstraint<SubscriptionExecution13>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "RequestedSettlementCurrencyRule";
-			definition = "If RequestedSettlementCurrency is present, it must be the same Currency as in SettlementAmount, if present.";
-			owner_lazy = () -> SubscriptionExecution13.mmObject();
-			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/RequestedSettlementCurrency</leftOperand><rightOperand>/SettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/RequestedSettlementCurrency</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/SettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
-		}
-
-		@Override
-		public void executeValidator(SubscriptionExecution13 obj) throws Exception {
-			checkSubscriptionExecution13(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder14
-	 * SubscriptionOrder14}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
-	 * expression} =
-	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToNode\"&gt;&lt;leftOperand&gt;/RequestedSettlementCurrency&lt;/leftOperand&gt;&lt;rightOperand&gt;/SettlementAmount/@Currency&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/RequestedSettlementCurrency&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/SettlementAmount&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "RequestedSettlementCurrencyRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If RequestedSettlementCurrency is present, it must be the same Currency as in SettlementAmount, if present."
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintRequestedSettlementCurrencyRule#forSubscriptionOrder8
-	 * ConstraintRequestedSettlementCurrencyRule.forSubscriptionOrder8}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SubscriptionOrder14> forSubscriptionOrder14 = new MMConstraint<SubscriptionOrder14>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "RequestedSettlementCurrencyRule";
-			definition = "If RequestedSettlementCurrency is present, it must be the same Currency as in SettlementAmount, if present.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintRequestedSettlementCurrencyRule.forSubscriptionOrder8;
-			owner_lazy = () -> SubscriptionOrder14.mmObject();
-			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/RequestedSettlementCurrency</leftOperand><rightOperand>/SettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/RequestedSettlementCurrency</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/SettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
-		}
-
-		@Override
-		public void executeValidator(SubscriptionOrder14 obj) throws Exception {
-			checkSubscriptionOrder14(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution15
-	 * RedemptionExecution15}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
-	 * expression} =
-	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToNode\"&gt;&lt;leftOperand&gt;/RequestedSettlementCurrency&lt;/leftOperand&gt;&lt;rightOperand&gt;/SettlementAmount/@Currency&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/RequestedSettlementCurrency&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/SettlementAmount&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "RequestedSettlementCurrencyRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If RequestedSettlementCurrency is present, it must be the same Currency as in SettlementAmount, if present."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<RedemptionExecution15> forRedemptionExecution15 = new MMConstraint<RedemptionExecution15>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "RequestedSettlementCurrencyRule";
-			definition = "If RequestedSettlementCurrency is present, it must be the same Currency as in SettlementAmount, if present.";
-			owner_lazy = () -> RedemptionExecution15.mmObject();
-			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/RequestedSettlementCurrency</leftOperand><rightOperand>/SettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/RequestedSettlementCurrency</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/SettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
-		}
-
-		@Override
-		public void executeValidator(RedemptionExecution15 obj) throws Exception {
-			checkRedemptionExecution15(obj);
-		}
-	};
-
-	/**
-	 * If RequestedSettlementCurrency is present, it must be the same Currency
-	 * as in all occurrences of IndividualOrderDetails/SettlementAmount, if
-	 * present.
-	 */
-	public static void checkRedemptionBulkOrder3(RedemptionBulkOrder3 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If RequestedSettlementCurrency is present, it must be the same Currency
-	 * as in all occurrences of IndividualExecutionDetails/SettlementAmount.
-	 */
-	public static void checkRedemptionBulkExecution3(RedemptionBulkExecution3 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If RequestedSettlementCurrency is present, it must be the same Currency
-	 * as in all occurrences of IndividualOrderDetails/SettlementAmount, if
-	 * present.
-	 */
-	public static void checkRedemptionBulkOrder4(RedemptionBulkOrder4 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
 
 	/**
 	 * If RequestedSettlementCurrency is present, it must be the same Currency
@@ -977,67 +951,9 @@ public class ConstraintRequestedSettlementCurrencyRule {
 
 	/**
 	 * If RequestedSettlementCurrency is present, it must be the same Currency
-	 * as in SettlementAmount.
-	 */
-	public static void checkRedemptionExecution6(RedemptionExecution6 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If RequestedSettlementCurrency is present, it must be the same Currency
 	 * as in SettlementAmount, if present.
 	 */
-	public static void checkRedemptionOrder8(RedemptionOrder8 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If RequestedSettlementCurrency is present, it must be the same Currency
-	 * as in all occurrences of IndividualOrderDetails/SettlementAmount, if
-	 * present.
-	 */
-	public static void checkSubscriptionBulkOrder3(SubscriptionBulkOrder3 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If RequestedSettlementCurrency is present, it must be the same Currency
-	 * as in all occurrences of IndividualExecutionDetails/SettlementAmount.
-	 */
-	public static void checkSubscriptionBulkExecution3(SubscriptionBulkExecution3 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If RequestedSettlementCurrency is present, it must be the same Currency
-	 * as in all occurrences of IndividualOrderDetails/SettlementAmount, if
-	 * present.
-	 */
-	public static void checkSubscriptionBulkOrder4(SubscriptionBulkOrder4 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If RequestedSettlementCurrency is present, it must be the same Currency
-	 * as in SettlementAmount, if present.
-	 */
-	public static void checkSubscriptionOrder6(SubscriptionOrder6 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If RequestedSettlementCurrency is present, it must be the same Currency
-	 * as in SettlementAmount.
-	 */
-	public static void checkSubscriptionExecution6(SubscriptionExecution6 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If RequestedSettlementCurrency is present, it must be the same Currency
-	 * as in SettlementAmount, if present.
-	 */
-	public static void checkSubscriptionOrder8(SubscriptionOrder8 obj) throws Exception {
+	public static void checkSubscriptionOrder11(SubscriptionOrder11 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1059,17 +975,26 @@ public class ConstraintRequestedSettlementCurrencyRule {
 
 	/**
 	 * If RequestedSettlementCurrency is present, it must be the same Currency
-	 * as in SettlementAmount, if present.
+	 * as in all occurrences of IndividualOrderDetails/SettlementAmount, if
+	 * present.
 	 */
-	public static void checkSubscriptionOrder11(SubscriptionOrder11 obj) throws Exception {
+	public static void checkSubscriptionBulkOrder5(SubscriptionBulkOrder5 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
 	/**
 	 * If RequestedSettlementCurrency is present, it must be the same Currency
-	 * as in SettlementAmount.
+	 * as in all occurrences of IndividualExecutionDetails/SettlementAmount.
 	 */
-	public static void checkSubscriptionExecution9(SubscriptionExecution9 obj) throws Exception {
+	public static void checkSubscriptionBulkExecution4(SubscriptionBulkExecution4 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If RequestedSettlementCurrency is present, it must be the same Currency
+	 * as in SettlementAmount, if present.
+	 */
+	public static void checkRedemptionOrder8(RedemptionOrder8 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1078,7 +1003,64 @@ public class ConstraintRequestedSettlementCurrencyRule {
 	 * as in all occurrences of IndividualOrderDetails/SettlementAmount, if
 	 * present.
 	 */
-	public static void checkSubscriptionBulkOrder5(SubscriptionBulkOrder5 obj) throws Exception {
+	public static void checkSubscriptionBulkOrder4(SubscriptionBulkOrder4 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If RequestedSettlementCurrency is present, it must be the same Currency
+	 * as in SettlementAmount, if present.
+	 */
+	public static void checkRedemptionExecution15(RedemptionExecution15 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If RequestedSettlementCurrency is present, it must be the same Currency
+	 * as in SettlementAmount, if present.
+	 */
+	public static void checkSubscriptionOrder6(SubscriptionOrder6 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If RequestedSettlementCurrency is present, it must be the same Currency
+	 * as in all occurrences of IndividualOrderDetails/SettlementAmount, if
+	 * present.
+	 */
+	public static void checkRedemptionBulkOrder3(RedemptionBulkOrder3 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If RequestedSettlementCurrency is present, it must be the same Currency
+	 * as in all occurrences of IndividualExecutionDetails/SettlementAmount.
+	 */
+	public static void checkRedemptionBulkExecution3(RedemptionBulkExecution3 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If RequestedSettlementCurrency is present, it must be the same Currency
+	 * as in all occurrences of IndividualExecutionDetails/SettlementAmount.
+	 */
+	public static void checkSubscriptionBulkExecution3(SubscriptionBulkExecution3 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If RequestedSettlementCurrency is present, it must be the same Currency
+	 * as in SettlementAmount, if present.
+	 */
+	public static void checkSubscriptionExecution13(SubscriptionExecution13 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If RequestedSettlementCurrency is present, it must be the same Currency
+	 * as in SettlementAmount.
+	 */
+	public static void checkSubscriptionExecution6(SubscriptionExecution6 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1092,9 +1074,51 @@ public class ConstraintRequestedSettlementCurrencyRule {
 
 	/**
 	 * If RequestedSettlementCurrency is present, it must be the same Currency
-	 * as in all occurrences of IndividualExecutionDetails/SettlementAmount.
+	 * as in SettlementAmount, if present.
 	 */
-	public static void checkSubscriptionBulkExecution4(SubscriptionBulkExecution4 obj) throws Exception {
+	public static void checkSubscriptionOrder14(SubscriptionOrder14 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If RequestedSettlementCurrency is present, it must be the same Currency
+	 * as in all occurrences of IndividualOrderDetails/SettlementAmount, if
+	 * present.
+	 */
+	public static void checkSubscriptionBulkOrder3(SubscriptionBulkOrder3 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If RequestedSettlementCurrency is present, it must be the same Currency
+	 * as in SettlementAmount.
+	 */
+	public static void checkRedemptionExecution6(RedemptionExecution6 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If RequestedSettlementCurrency is present, it must be the same Currency
+	 * as in all occurrences of IndividualOrderDetails/SettlementAmount, if
+	 * present.
+	 */
+	public static void checkRedemptionBulkOrder4(RedemptionBulkOrder4 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If RequestedSettlementCurrency is present, it must be the same Currency
+	 * as in SettlementAmount, if present.
+	 */
+	public static void checkSubscriptionOrder8(SubscriptionOrder8 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If RequestedSettlementCurrency is present, it must be the same Currency
+	 * as in SettlementAmount.
+	 */
+	public static void checkSubscriptionExecution9(SubscriptionExecution9 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1112,30 +1136,6 @@ public class ConstraintRequestedSettlementCurrencyRule {
 	 * as in SettlementAmount, if present.
 	 */
 	public static void checkRedemptionOrder14(RedemptionOrder14 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If RequestedSettlementCurrency is present, it must be the same Currency
-	 * as in SettlementAmount, if present.
-	 */
-	public static void checkSubscriptionExecution13(SubscriptionExecution13 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If RequestedSettlementCurrency is present, it must be the same Currency
-	 * as in SettlementAmount, if present.
-	 */
-	public static void checkSubscriptionOrder14(SubscriptionOrder14 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If RequestedSettlementCurrency is present, it must be the same Currency
-	 * as in SettlementAmount, if present.
-	 */
-	public static void checkRedemptionExecution15(RedemptionExecution15 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

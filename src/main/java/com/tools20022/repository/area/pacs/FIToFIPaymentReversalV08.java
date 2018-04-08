@@ -96,51 +96,51 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintGroupReversalAndTransactionInformationNotPresentRule#forFIToFIPaymentReversalV08
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupReversalAndTransactionInformationNotPresentRule#for_pacs_FIToFIPaymentReversalV08
  * ConstraintGroupReversalAndTransactionInformationNotPresentRule.
- * forFIToFIPaymentReversalV08}</li>
+ * for_pacs_FIToFIPaymentReversalV08}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintGroupReversalAndTransactionInformationPresentRule#forFIToFIPaymentReversalV08
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupReversalAndTransactionInformationPresentRule#for_pacs_FIToFIPaymentReversalV08
  * ConstraintGroupReversalAndTransactionInformationPresentRule.
- * forFIToFIPaymentReversalV08}</li>
+ * for_pacs_FIToFIPaymentReversalV08}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintGroupReversalAndReasonRule#forFIToFIPaymentReversalV08
- * ConstraintGroupReversalAndReasonRule.forFIToFIPaymentReversalV08}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupReversalAndReasonRule#for_pacs_FIToFIPaymentReversalV08
+ * ConstraintGroupReversalAndReasonRule.for_pacs_FIToFIPaymentReversalV08}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintInstructedAgentRule#forFIToFIPaymentReversalV08
- * ConstraintInstructedAgentRule.forFIToFIPaymentReversalV08}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInstructedAgentRule#for_pacs_FIToFIPaymentReversalV08
+ * ConstraintInstructedAgentRule.for_pacs_FIToFIPaymentReversalV08}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintInstructingAgentRule#forFIToFIPaymentReversalV08
- * ConstraintInstructingAgentRule.forFIToFIPaymentReversalV08}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInstructingAgentRule#for_pacs_FIToFIPaymentReversalV08
+ * ConstraintInstructingAgentRule.for_pacs_FIToFIPaymentReversalV08}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintGroupHeaderInterbankSettlementDateRule#forFIToFIPaymentReversalV08
- * ConstraintGroupHeaderInterbankSettlementDateRule.forFIToFIPaymentReversalV08}
- * </li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupHeaderInterbankSettlementDateRule#for_pacs_FIToFIPaymentReversalV08
+ * ConstraintGroupHeaderInterbankSettlementDateRule.
+ * for_pacs_FIToFIPaymentReversalV08}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintTransactionInterbankSettlementDateRule#forFIToFIPaymentReversalV08
- * ConstraintTransactionInterbankSettlementDateRule.forFIToFIPaymentReversalV08}
- * </li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTransactionInterbankSettlementDateRule#for_pacs_FIToFIPaymentReversalV08
+ * ConstraintTransactionInterbankSettlementDateRule.
+ * for_pacs_FIToFIPaymentReversalV08}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintGroupReversalAndNumberOfTransactionsRule#forFIToFIPaymentReversalV08
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupReversalAndNumberOfTransactionsRule#for_pacs_FIToFIPaymentReversalV08
  * ConstraintGroupReversalAndNumberOfTransactionsRule.
- * forFIToFIPaymentReversalV08}</li>
+ * for_pacs_FIToFIPaymentReversalV08}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintTotalReversedInterbankSettlementAmountRule#forFIToFIPaymentReversalV08
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTotalReversedInterbankSettlementAmountRule#for_pacs_FIToFIPaymentReversalV08
  * ConstraintTotalReversedInterbankSettlementAmountRule.
- * forFIToFIPaymentReversalV08}</li>
+ * for_pacs_FIToFIPaymentReversalV08}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintTotalReversedInterbankSettlementAmountAndSumRule#forFIToFIPaymentReversalV08
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTotalReversedInterbankSettlementAmountAndSumRule#for_pacs_FIToFIPaymentReversalV08
  * ConstraintTotalReversedInterbankSettlementAmountAndSumRule.
- * forFIToFIPaymentReversalV08}</li>
+ * for_pacs_FIToFIPaymentReversalV08}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintNoCoverSettlementMethodRule#forFIToFIPaymentReversalV08
- * ConstraintNoCoverSettlementMethodRule.forFIToFIPaymentReversalV08}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintNoCoverSettlementMethodRule#for_pacs_FIToFIPaymentReversalV08
+ * ConstraintNoCoverSettlementMethodRule.for_pacs_FIToFIPaymentReversalV08}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintSupplementaryDataRule#forFIToFIPaymentReversalV08
- * ConstraintSupplementaryDataRule.forFIToFIPaymentReversalV08}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSupplementaryDataRule#for_pacs_FIToFIPaymentReversalV08
+ * ConstraintSupplementaryDataRule.for_pacs_FIToFIPaymentReversalV08}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintOriginalGroupInformationRule#forFIToFIPaymentReversalV08
- * ConstraintOriginalGroupInformationRule.forFIToFIPaymentReversalV08}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOriginalGroupInformationRule#for_pacs_FIToFIPaymentReversalV08
+ * ConstraintOriginalGroupInformationRule.for_pacs_FIToFIPaymentReversalV08}</li>
  * </ul>
  * </li>
  * <li>
@@ -381,16 +381,17 @@ public class FIToFIPaymentReversalV08 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupReversalAndTransactionInformationNotPresentRule.forFIToFIPaymentReversalV08,
-						com.tools20022.repository.constraints.ConstraintGroupReversalAndTransactionInformationPresentRule.forFIToFIPaymentReversalV08,
-						com.tools20022.repository.constraints.ConstraintGroupReversalAndReasonRule.forFIToFIPaymentReversalV08, com.tools20022.repository.constraints.ConstraintInstructedAgentRule.forFIToFIPaymentReversalV08,
-						com.tools20022.repository.constraints.ConstraintInstructingAgentRule.forFIToFIPaymentReversalV08, com.tools20022.repository.constraints.ConstraintGroupHeaderInterbankSettlementDateRule.forFIToFIPaymentReversalV08,
-						com.tools20022.repository.constraints.ConstraintTransactionInterbankSettlementDateRule.forFIToFIPaymentReversalV08,
-						com.tools20022.repository.constraints.ConstraintGroupReversalAndNumberOfTransactionsRule.forFIToFIPaymentReversalV08,
-						com.tools20022.repository.constraints.ConstraintTotalReversedInterbankSettlementAmountRule.forFIToFIPaymentReversalV08,
-						com.tools20022.repository.constraints.ConstraintTotalReversedInterbankSettlementAmountAndSumRule.forFIToFIPaymentReversalV08,
-						com.tools20022.repository.constraints.ConstraintNoCoverSettlementMethodRule.forFIToFIPaymentReversalV08, com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFIToFIPaymentReversalV08,
-						com.tools20022.repository.constraints.ConstraintOriginalGroupInformationRule.forFIToFIPaymentReversalV08);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupReversalAndTransactionInformationNotPresentRule.for_pacs_FIToFIPaymentReversalV08,
+						com.tools20022.repository.constraints.ConstraintGroupReversalAndTransactionInformationPresentRule.for_pacs_FIToFIPaymentReversalV08,
+						com.tools20022.repository.constraints.ConstraintGroupReversalAndReasonRule.for_pacs_FIToFIPaymentReversalV08, com.tools20022.repository.constraints.ConstraintInstructedAgentRule.for_pacs_FIToFIPaymentReversalV08,
+						com.tools20022.repository.constraints.ConstraintInstructingAgentRule.for_pacs_FIToFIPaymentReversalV08,
+						com.tools20022.repository.constraints.ConstraintGroupHeaderInterbankSettlementDateRule.for_pacs_FIToFIPaymentReversalV08,
+						com.tools20022.repository.constraints.ConstraintTransactionInterbankSettlementDateRule.for_pacs_FIToFIPaymentReversalV08,
+						com.tools20022.repository.constraints.ConstraintGroupReversalAndNumberOfTransactionsRule.for_pacs_FIToFIPaymentReversalV08,
+						com.tools20022.repository.constraints.ConstraintTotalReversedInterbankSettlementAmountRule.for_pacs_FIToFIPaymentReversalV08,
+						com.tools20022.repository.constraints.ConstraintTotalReversedInterbankSettlementAmountAndSumRule.for_pacs_FIToFIPaymentReversalV08,
+						com.tools20022.repository.constraints.ConstraintNoCoverSettlementMethodRule.for_pacs_FIToFIPaymentReversalV08, com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.for_pacs_FIToFIPaymentReversalV08,
+						com.tools20022.repository.constraints.ConstraintOriginalGroupInformationRule.for_pacs_FIToFIPaymentReversalV08);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FIToFIPaymentReversalV08";
 				definition = "Scope\r\nThe FinancialInstitutionToFinancialInstitutionPaymentReversal message is sent by an agent to the next party in the payment chain. It is used to reverse a payment previously executed.\r\nUsage\r\nThe FIToFIPaymentReversal message is exchanged between agents to reverse a payment message that has been settled. The result will be a credit on the debtor account (when the reversed payment was a Direct Debit) or a debit on the creditor account (when the reversed payment was a Credit Transfer).\r\nThe FIToFIPaymentReversal message may or may not be the follow-up of a payment message.\r\nThe FIToFIPaymentReversal message refers to the original payment message by means of references only or by means of references and a set of elements from the original instruction.\r\nThe FIToFIPaymentReversal message can be used in domestic and cross-border scenarios.";

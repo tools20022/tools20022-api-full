@@ -35,76 +35,8 @@ public class ConstraintModificationRequestPresenceRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.RequestDetails1
-	 * RequestDetails1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ModificationRequestPresenceRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "At least one securities settlement conditions modification request type must be present."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<RequestDetails1> forRequestDetails1 = new MMConstraint<RequestDetails1>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ModificationRequestPresenceRule";
-			definition = "At least one securities settlement conditions modification request type must be present.";
-			owner_lazy = () -> RequestDetails1.mmObject();
-		}
-
-		@Override
-		public void executeValidator(RequestDetails1 obj) throws Exception {
-			checkRequestDetails1(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.RequestDetails2
-	 * RequestDetails2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ModificationRequestPresenceRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "At least one securities settlement conditions modification request type must be present."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<RequestDetails2> forRequestDetails2 = new MMConstraint<RequestDetails2>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ModificationRequestPresenceRule";
-			definition = "At least one securities settlement conditions modification request type must be present.";
-			owner_lazy = () -> RequestDetails2.mmObject();
-		}
-
-		@Override
-		public void executeValidator(RequestDetails2 obj) throws Exception {
-			checkRequestDetails2(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.RequestDetails6
-	 * RequestDetails6}</li>
+	 * {@linkplain com.tools20022.repository.msg.RequestDetails13
+	 * RequestDetails13}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -120,24 +52,30 @@ public class ConstraintModificationRequestPresenceRule {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintModificationRequestPresenceRule#forRequestDetails18
-	 * ConstraintModificationRequestPresenceRule.forRequestDetails18}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintModificationRequestPresenceRule#forRequestDetails15
+	 * ConstraintModificationRequestPresenceRule.forRequestDetails15}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintModificationRequestPresenceRule#forRequestDetails11
+	 * ConstraintModificationRequestPresenceRule.forRequestDetails11}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<RequestDetails6> forRequestDetails6 = new MMConstraint<RequestDetails6>() {
+	public static final MMConstraint<RequestDetails13> forRequestDetails13 = new MMConstraint<RequestDetails13>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationRequestPresenceRule";
 			definition = "At least one securities settlement conditions modification request type must be present.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintModificationRequestPresenceRule.forRequestDetails18);
-			owner_lazy = () -> RequestDetails6.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintModificationRequestPresenceRule.forRequestDetails15);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintModificationRequestPresenceRule.forRequestDetails11;
+			owner_lazy = () -> RequestDetails13.mmObject();
 		}
 
 		@Override
-		public void executeValidator(RequestDetails6 obj) throws Exception {
-			checkRequestDetails6(obj);
+		public void executeValidator(RequestDetails13 obj) throws Exception {
+			checkRequestDetails13(obj);
 		}
 	};
 	/**
@@ -146,8 +84,8 @@ public class ConstraintModificationRequestPresenceRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.RequestDetails7
-	 * RequestDetails7}</li>
+	 * {@linkplain com.tools20022.repository.msg.RequestDetails10
+	 * RequestDetails10}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -157,89 +95,29 @@ public class ConstraintModificationRequestPresenceRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "At least one securities settlement conditions modification request type must be present."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<RequestDetails7> forRequestDetails7 = new MMConstraint<RequestDetails7>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ModificationRequestPresenceRule";
-			definition = "At least one securities settlement conditions modification request type must be present.";
-			owner_lazy = () -> RequestDetails7.mmObject();
-		}
-
-		@Override
-		public void executeValidator(RequestDetails7 obj) throws Exception {
-			checkRequestDetails7(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
+	 * "At least one modification request type element must be present."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.RequestDetails8
-	 * RequestDetails8}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ModificationRequestPresenceRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "At least one securities settlement conditions modification request type must be present."
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintModificationRequestPresenceRule#forRequestDetails17
+	 * ConstraintModificationRequestPresenceRule.forRequestDetails17}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<RequestDetails8> forRequestDetails8 = new MMConstraint<RequestDetails8>() {
+	public static final MMConstraint<RequestDetails10> forRequestDetails10 = new MMConstraint<RequestDetails10>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationRequestPresenceRule";
-			definition = "At least one securities settlement conditions modification request type must be present.";
-			owner_lazy = () -> RequestDetails8.mmObject();
+			definition = "At least one modification request type element must be present.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintModificationRequestPresenceRule.forRequestDetails17);
+			owner_lazy = () -> RequestDetails10.mmObject();
 		}
 
 		@Override
-		public void executeValidator(RequestDetails8 obj) throws Exception {
-			checkRequestDetails8(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.RequestDetails9
-	 * RequestDetails9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ModificationRequestPresenceRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "At least one securities settlement conditions modification request type must be present."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<RequestDetails9> forRequestDetails9 = new MMConstraint<RequestDetails9>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ModificationRequestPresenceRule";
-			definition = "At least one securities settlement conditions modification request type must be present.";
-			owner_lazy = () -> RequestDetails9.mmObject();
-		}
-
-		@Override
-		public void executeValidator(RequestDetails9 obj) throws Exception {
-			checkRequestDetails9(obj);
+		public void executeValidator(RequestDetails10 obj) throws Exception {
+			checkRequestDetails10(obj);
 		}
 	};
 	/**
@@ -291,131 +169,6 @@ public class ConstraintModificationRequestPresenceRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.RequestDetails12
-	 * RequestDetails12}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ModificationRequestPresenceRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "At least one securities settlement conditions modification request type must be present."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<RequestDetails12> forRequestDetails12 = new MMConstraint<RequestDetails12>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ModificationRequestPresenceRule";
-			definition = "At least one securities settlement conditions modification request type must be present.";
-			owner_lazy = () -> RequestDetails12.mmObject();
-		}
-
-		@Override
-		public void executeValidator(RequestDetails12 obj) throws Exception {
-			checkRequestDetails12(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.RequestDetails10
-	 * RequestDetails10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ModificationRequestPresenceRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "At least one modification request type element must be present."</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintModificationRequestPresenceRule#forRequestDetails17
-	 * ConstraintModificationRequestPresenceRule.forRequestDetails17}</li>
-	 * </ul>
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<RequestDetails10> forRequestDetails10 = new MMConstraint<RequestDetails10>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ModificationRequestPresenceRule";
-			definition = "At least one modification request type element must be present.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintModificationRequestPresenceRule.forRequestDetails17);
-			owner_lazy = () -> RequestDetails10.mmObject();
-		}
-
-		@Override
-		public void executeValidator(RequestDetails10 obj) throws Exception {
-			checkRequestDetails10(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.RequestDetails13
-	 * RequestDetails13}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ModificationRequestPresenceRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "At least one securities settlement conditions modification request type must be present."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintModificationRequestPresenceRule#forRequestDetails15
-	 * ConstraintModificationRequestPresenceRule.forRequestDetails15}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintModificationRequestPresenceRule#forRequestDetails11
-	 * ConstraintModificationRequestPresenceRule.forRequestDetails11}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<RequestDetails13> forRequestDetails13 = new MMConstraint<RequestDetails13>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ModificationRequestPresenceRule";
-			definition = "At least one securities settlement conditions modification request type must be present.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintModificationRequestPresenceRule.forRequestDetails15);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintModificationRequestPresenceRule.forRequestDetails11;
-			owner_lazy = () -> RequestDetails13.mmObject();
-		}
-
-		@Override
-		public void executeValidator(RequestDetails13 obj) throws Exception {
-			checkRequestDetails13(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RequestDetails14
 	 * RequestDetails14}</li>
 	 * <li>
@@ -450,8 +203,42 @@ public class ConstraintModificationRequestPresenceRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.RequestDetails15
-	 * RequestDetails15}</li>
+	 * {@linkplain com.tools20022.repository.msg.RequestDetails7
+	 * RequestDetails7}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ModificationRequestPresenceRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "At least one securities settlement conditions modification request type must be present."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<RequestDetails7> forRequestDetails7 = new MMConstraint<RequestDetails7>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ModificationRequestPresenceRule";
+			definition = "At least one securities settlement conditions modification request type must be present.";
+			owner_lazy = () -> RequestDetails7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RequestDetails7 obj) throws Exception {
+			checkRequestDetails7(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.RequestDetails18
+	 * RequestDetails18}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -466,22 +253,65 @@ public class ConstraintModificationRequestPresenceRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintModificationRequestPresenceRule#forRequestDetails13
-	 * ConstraintModificationRequestPresenceRule.forRequestDetails13}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintModificationRequestPresenceRule#forRequestDetails6
+	 * ConstraintModificationRequestPresenceRule.forRequestDetails6}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<RequestDetails15> forRequestDetails15 = new MMConstraint<RequestDetails15>() {
+	public static final MMConstraint<RequestDetails18> forRequestDetails18 = new MMConstraint<RequestDetails18>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationRequestPresenceRule";
 			definition = "At least one securities settlement conditions modification request type must be present.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintModificationRequestPresenceRule.forRequestDetails13;
-			owner_lazy = () -> RequestDetails15.mmObject();
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintModificationRequestPresenceRule.forRequestDetails6;
+			owner_lazy = () -> RequestDetails18.mmObject();
 		}
 
 		@Override
-		public void executeValidator(RequestDetails15 obj) throws Exception {
-			checkRequestDetails15(obj);
+		public void executeValidator(RequestDetails18 obj) throws Exception {
+			checkRequestDetails18(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.RequestDetails6
+	 * RequestDetails6}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ModificationRequestPresenceRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "At least one securities settlement conditions modification request type must be present."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintModificationRequestPresenceRule#forRequestDetails18
+	 * ConstraintModificationRequestPresenceRule.forRequestDetails18}</li>
+	 * </ul>
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<RequestDetails6> forRequestDetails6 = new MMConstraint<RequestDetails6>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ModificationRequestPresenceRule";
+			definition = "At least one securities settlement conditions modification request type must be present.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintModificationRequestPresenceRule.forRequestDetails18);
+			owner_lazy = () -> RequestDetails6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RequestDetails6 obj) throws Exception {
+			checkRequestDetails6(obj);
 		}
 	};
 	/**
@@ -516,6 +346,108 @@ public class ConstraintModificationRequestPresenceRule {
 		@Override
 		public void executeValidator(RequestDetails16 obj) throws Exception {
 			checkRequestDetails16(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.RequestDetails8
+	 * RequestDetails8}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ModificationRequestPresenceRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "At least one securities settlement conditions modification request type must be present."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<RequestDetails8> forRequestDetails8 = new MMConstraint<RequestDetails8>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ModificationRequestPresenceRule";
+			definition = "At least one securities settlement conditions modification request type must be present.";
+			owner_lazy = () -> RequestDetails8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RequestDetails8 obj) throws Exception {
+			checkRequestDetails8(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.RequestDetails1
+	 * RequestDetails1}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ModificationRequestPresenceRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "At least one securities settlement conditions modification request type must be present."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<RequestDetails1> forRequestDetails1 = new MMConstraint<RequestDetails1>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ModificationRequestPresenceRule";
+			definition = "At least one securities settlement conditions modification request type must be present.";
+			owner_lazy = () -> RequestDetails1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RequestDetails1 obj) throws Exception {
+			checkRequestDetails1(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.RequestDetails12
+	 * RequestDetails12}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ModificationRequestPresenceRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "At least one securities settlement conditions modification request type must be present."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<RequestDetails12> forRequestDetails12 = new MMConstraint<RequestDetails12>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ModificationRequestPresenceRule";
+			definition = "At least one securities settlement conditions modification request type must be present.";
+			owner_lazy = () -> RequestDetails12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RequestDetails12 obj) throws Exception {
+			checkRequestDetails12(obj);
 		}
 	};
 	/**
@@ -563,8 +495,76 @@ public class ConstraintModificationRequestPresenceRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.RequestDetails18
-	 * RequestDetails18}</li>
+	 * {@linkplain com.tools20022.repository.msg.RequestDetails9
+	 * RequestDetails9}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ModificationRequestPresenceRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "At least one securities settlement conditions modification request type must be present."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<RequestDetails9> forRequestDetails9 = new MMConstraint<RequestDetails9>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ModificationRequestPresenceRule";
+			definition = "At least one securities settlement conditions modification request type must be present.";
+			owner_lazy = () -> RequestDetails9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RequestDetails9 obj) throws Exception {
+			checkRequestDetails9(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.RequestDetails2
+	 * RequestDetails2}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ModificationRequestPresenceRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "At least one securities settlement conditions modification request type must be present."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<RequestDetails2> forRequestDetails2 = new MMConstraint<RequestDetails2>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ModificationRequestPresenceRule";
+			definition = "At least one securities settlement conditions modification request type must be present.";
+			owner_lazy = () -> RequestDetails2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RequestDetails2 obj) throws Exception {
+			checkRequestDetails2(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.RequestDetails15
+	 * RequestDetails15}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -579,22 +579,22 @@ public class ConstraintModificationRequestPresenceRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintModificationRequestPresenceRule#forRequestDetails6
-	 * ConstraintModificationRequestPresenceRule.forRequestDetails6}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintModificationRequestPresenceRule#forRequestDetails13
+	 * ConstraintModificationRequestPresenceRule.forRequestDetails13}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<RequestDetails18> forRequestDetails18 = new MMConstraint<RequestDetails18>() {
+	public static final MMConstraint<RequestDetails15> forRequestDetails15 = new MMConstraint<RequestDetails15>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationRequestPresenceRule";
 			definition = "At least one securities settlement conditions modification request type must be present.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintModificationRequestPresenceRule.forRequestDetails6;
-			owner_lazy = () -> RequestDetails18.mmObject();
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintModificationRequestPresenceRule.forRequestDetails13;
+			owner_lazy = () -> RequestDetails15.mmObject();
 		}
 
 		@Override
-		public void executeValidator(RequestDetails18 obj) throws Exception {
-			checkRequestDetails18(obj);
+		public void executeValidator(RequestDetails15 obj) throws Exception {
+			checkRequestDetails15(obj);
 		}
 	};
 
@@ -602,47 +602,14 @@ public class ConstraintModificationRequestPresenceRule {
 	 * At least one securities settlement conditions modification request type
 	 * must be present.
 	 */
-	public static void checkRequestDetails1(RequestDetails1 obj) throws Exception {
+	public static void checkRequestDetails13(RequestDetails13 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
 	/**
-	 * At least one securities settlement conditions modification request type
-	 * must be present.
+	 * At least one modification request type element must be present.
 	 */
-	public static void checkRequestDetails2(RequestDetails2 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * At least one securities settlement conditions modification request type
-	 * must be present.
-	 */
-	public static void checkRequestDetails6(RequestDetails6 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * At least one securities settlement conditions modification request type
-	 * must be present.
-	 */
-	public static void checkRequestDetails7(RequestDetails7 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * At least one securities settlement conditions modification request type
-	 * must be present.
-	 */
-	public static void checkRequestDetails8(RequestDetails8 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * At least one securities settlement conditions modification request type
-	 * must be present.
-	 */
-	public static void checkRequestDetails9(RequestDetails9 obj) throws Exception {
+	public static void checkRequestDetails10(RequestDetails10 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -658,29 +625,6 @@ public class ConstraintModificationRequestPresenceRule {
 	 * At least one securities settlement conditions modification request type
 	 * must be present.
 	 */
-	public static void checkRequestDetails12(RequestDetails12 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * At least one modification request type element must be present.
-	 */
-	public static void checkRequestDetails10(RequestDetails10 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * At least one securities settlement conditions modification request type
-	 * must be present.
-	 */
-	public static void checkRequestDetails13(RequestDetails13 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * At least one securities settlement conditions modification request type
-	 * must be present.
-	 */
 	public static void checkRequestDetails14(RequestDetails14 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
@@ -689,7 +633,23 @@ public class ConstraintModificationRequestPresenceRule {
 	 * At least one securities settlement conditions modification request type
 	 * must be present.
 	 */
-	public static void checkRequestDetails15(RequestDetails15 obj) throws Exception {
+	public static void checkRequestDetails7(RequestDetails7 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * At least one securities settlement conditions modification request type
+	 * must be present.
+	 */
+	public static void checkRequestDetails18(RequestDetails18 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * At least one securities settlement conditions modification request type
+	 * must be present.
+	 */
+	public static void checkRequestDetails6(RequestDetails6 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -698,6 +658,30 @@ public class ConstraintModificationRequestPresenceRule {
 	 * must be present.
 	 */
 	public static void checkRequestDetails16(RequestDetails16 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * At least one securities settlement conditions modification request type
+	 * must be present.
+	 */
+	public static void checkRequestDetails8(RequestDetails8 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * At least one securities settlement conditions modification request type
+	 * must be present.
+	 */
+	public static void checkRequestDetails1(RequestDetails1 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * At least one securities settlement conditions modification request type
+	 * must be present.
+	 */
+	public static void checkRequestDetails12(RequestDetails12 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -712,7 +696,23 @@ public class ConstraintModificationRequestPresenceRule {
 	 * At least one securities settlement conditions modification request type
 	 * must be present.
 	 */
-	public static void checkRequestDetails18(RequestDetails18 obj) throws Exception {
+	public static void checkRequestDetails9(RequestDetails9 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * At least one securities settlement conditions modification request type
+	 * must be present.
+	 */
+	public static void checkRequestDetails2(RequestDetails2 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * At least one securities settlement conditions modification request type
+	 * must be present.
+	 */
+	public static void checkRequestDetails15(RequestDetails15 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

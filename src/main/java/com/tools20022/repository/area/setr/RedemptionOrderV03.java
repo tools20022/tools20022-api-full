@@ -97,11 +97,11 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationRule#forRedemptionOrderV03
- * ConstraintAccountIdentificationRule.forRedemptionOrderV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationRule#for_setr_RedemptionOrderV03
+ * ConstraintAccountIdentificationRule.for_setr_RedemptionOrderV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintRelatedPartiesDetailsRule#forRedemptionOrderV03
- * ConstraintRelatedPartiesDetailsRule.forRedemptionOrderV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintRelatedPartiesDetailsRule#for_setr_RedemptionOrderV03
+ * ConstraintRelatedPartiesDetailsRule.for_setr_RedemptionOrderV03}</li>
  * </ul>
  * </li>
  * <li>
@@ -513,8 +513,8 @@ public class RedemptionOrderV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forRedemptionOrderV03,
-						com.tools20022.repository.constraints.ConstraintRelatedPartiesDetailsRule.forRedemptionOrderV03);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.for_setr_RedemptionOrderV03,
+						com.tools20022.repository.constraints.ConstraintRelatedPartiesDetailsRule.for_setr_RedemptionOrderV03);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RedemptionOrderV03";
 				definition = "Scope\r\nAn instructing party, for example, an investment manager or its authorised representative, sends the RedemptionOrder message to the executing party, for example, a transfer agent, to instruct the redemption of one or more financial instruments for one investment fund account.\r\nUsage\r\nThe RedemptionOrder message is used to instruct single redemption orders, that is, a message containing one order for one financial instrument and related to one investment account. The RedemptionOrder message may also be used for multiple orders, that is, a message containing several orders related to the same investment account for different financial instruments.\r\nFor a single redemption order, the RedemptionOrder message, not the RedemptionBulkOrder message, must be used.\r\nIf there are redemption orders for the same financial instrument but for different accounts, then the RedemptionBulkOrder message must be used.";

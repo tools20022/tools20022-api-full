@@ -168,9 +168,9 @@ public class TransferInCancellationRequestV02 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationByReferenceOrByTransferInDetailsRule";
 			definition = "Either CancellationByTransferInDetails or CancellationByReference may be present, but not both.";
-			messageDefinition_lazy = () -> com.tools20022.repository.area.sese.TransferInCancellationRequestV02.mmObject();
 			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInCancellationRequestV02.mmCancellationByReference,
 					com.tools20022.repository.area.sese.TransferInCancellationRequestV02.mmCancellationByTransferInDetails);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.sese.TransferInCancellationRequestV02.mmObject();
 		}
 	};
 	@XmlElement(name = "MsgId", required = true)

@@ -128,24 +128,25 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule#forPEPOrISAOrPortfolioTransferInstructionV02
+ * {@linkplain com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule#for_sese_PEPOrISAOrPortfolioTransferInstructionV02
  * ConstraintNomineeAccountServicerRule.
- * forPEPOrISAOrPortfolioTransferInstructionV02}</li>
+ * for_sese_PEPOrISAOrPortfolioTransferInstructionV02}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintPEPISARule#forPEPOrISAOrPortfolioTransferInstructionV02
- * ConstraintPEPISARule.forPEPOrISAOrPortfolioTransferInstructionV02}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPEPISARule#for_sese_PEPOrISAOrPortfolioTransferInstructionV02
+ * ConstraintPEPISARule.for_sese_PEPOrISAOrPortfolioTransferInstructionV02}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintPorfolioRule#forPEPOrISAOrPortfolioTransferInstructionV02
- * ConstraintPorfolioRule.forPEPOrISAOrPortfolioTransferInstructionV02}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPorfolioRule#for_sese_PEPOrISAOrPortfolioTransferInstructionV02
+ * ConstraintPorfolioRule.for_sese_PEPOrISAOrPortfolioTransferInstructionV02}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorRule#forPEPOrISAOrPortfolioTransferInstructionV02
- * ConstraintInvestorRule.forPEPOrISAOrPortfolioTransferInstructionV02}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorRule#for_sese_PEPOrISAOrPortfolioTransferInstructionV02
+ * ConstraintInvestorRule.for_sese_PEPOrISAOrPortfolioTransferInstructionV02}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCorporateRule#forPEPOrISAOrPortfolioTransferInstructionV02
- * ConstraintCorporateRule.forPEPOrISAOrPortfolioTransferInstructionV02}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCorporateRule#for_sese_PEPOrISAOrPortfolioTransferInstructionV02
+ * ConstraintCorporateRule.for_sese_PEPOrISAOrPortfolioTransferInstructionV02}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintDesignationRule#forPEPOrISAOrPortfolioTransferInstructionV02
- * ConstraintDesignationRule.forPEPOrISAOrPortfolioTransferInstructionV02}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDesignationRule#for_sese_PEPOrISAOrPortfolioTransferInstructionV02
+ * ConstraintDesignationRule.for_sese_PEPOrISAOrPortfolioTransferInstructionV02}
+ * </li>
  * </ul>
  * </li>
  * <li>
@@ -926,10 +927,12 @@ public class PEPOrISAOrPortfolioTransferInstructionV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule.forPEPOrISAOrPortfolioTransferInstructionV02,
-						com.tools20022.repository.constraints.ConstraintPEPISARule.forPEPOrISAOrPortfolioTransferInstructionV02, com.tools20022.repository.constraints.ConstraintPorfolioRule.forPEPOrISAOrPortfolioTransferInstructionV02,
-						com.tools20022.repository.constraints.ConstraintInvestorRule.forPEPOrISAOrPortfolioTransferInstructionV02, com.tools20022.repository.constraints.ConstraintCorporateRule.forPEPOrISAOrPortfolioTransferInstructionV02,
-						com.tools20022.repository.constraints.ConstraintDesignationRule.forPEPOrISAOrPortfolioTransferInstructionV02);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule.for_sese_PEPOrISAOrPortfolioTransferInstructionV02,
+						com.tools20022.repository.constraints.ConstraintPEPISARule.for_sese_PEPOrISAOrPortfolioTransferInstructionV02,
+						com.tools20022.repository.constraints.ConstraintPorfolioRule.for_sese_PEPOrISAOrPortfolioTransferInstructionV02,
+						com.tools20022.repository.constraints.ConstraintInvestorRule.for_sese_PEPOrISAOrPortfolioTransferInstructionV02,
+						com.tools20022.repository.constraints.ConstraintCorporateRule.for_sese_PEPOrISAOrPortfolioTransferInstructionV02,
+						com.tools20022.repository.constraints.ConstraintDesignationRule.for_sese_PEPOrISAOrPortfolioTransferInstructionV02);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PEPOrISAOrPortfolioTransferInstructionV02";
 				definition = "Scope\r\nAn instructing party, eg, a (new) plan manager, sends the PEPOrISAOrPortfolioTransferInstruction message to the executing party, eg, a (old) plan manager, on behalf of the initiating party, eg, an investor (client), to instruct the transfer of financial instruments from the clients account at the old plan manager to the clients account at the new plan manager through a nominee account.\r\nUsage\r\nThe PEPOrISAOrPortfolioTransferInstruction message is used to instruct the withdrawal of one or more PEP or ISA or portfolio products from one account and deliver them to another account.\r\nThe PEPOrISAOrPortfolioTransferInstruction message is used to instruct one or more transfers for one client. Each transfer is for delivery to the same account. The account may be owned by one or more individual investors or one or more corporate investors. Each transfer is identified in TransferIdentification.\r\nIf the instructing party does not have enough information to instruct the transfer, then it must first send a RequestForPEPOrISAOrPortfolioInformation message to the executing party in order to receive a PEPOrISAOrPortfolioInformation message.";

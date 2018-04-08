@@ -93,8 +93,9 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintTransactionIdentificationPresenceRule#forBuyInNotificationV03
- * ConstraintTransactionIdentificationPresenceRule.forBuyInNotificationV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTransactionIdentificationPresenceRule#for_secl_BuyInNotificationV03
+ * ConstraintTransactionIdentificationPresenceRule.for_secl_BuyInNotificationV03
+ * }</li>
  * </ul>
  * </li>
  * <li>
@@ -354,7 +355,7 @@ public class BuyInNotificationV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTransactionIdentificationPresenceRule.forBuyInNotificationV03);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTransactionIdentificationPresenceRule.for_secl_BuyInNotificationV03);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BuyInNotificationV03";
 				definition = "Scope\r\nThe BuyInNotification message is sent by the central counterparty (CCP) to a clearing member to notify the start of the buy in process.\r\n\r\nThe message definition is intended for use with the ISO 20022 Business Application Header.\r\n\r\nUsage\r\nThe buy in process is a process by which the CCP buys in stocks to cover failed transactions; the clearing member is notified that this process has started. Depending on each CCP internal rules, this message can also be sent, as a warning, by the central counterparty to the clearing member some days before the buy in process starts.";

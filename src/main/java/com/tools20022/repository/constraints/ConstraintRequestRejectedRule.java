@@ -51,7 +51,7 @@ public class ConstraintRequestRejectedRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<ForeignExchangeTradeCaptureReportV01> forForeignExchangeTradeCaptureReportV01 = new MMConstraint<ForeignExchangeTradeCaptureReportV01>() {
+	public static final MMConstraint<ForeignExchangeTradeCaptureReportV01> for_fxtr_ForeignExchangeTradeCaptureReportV01 = new MMConstraint<ForeignExchangeTradeCaptureReportV01>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestRejectedRule";
@@ -61,7 +61,7 @@ public class ConstraintRequestRejectedRule {
 
 		@Override
 		public void executeValidator(ForeignExchangeTradeCaptureReportV01 obj) throws Exception {
-			checkForeignExchangeTradeCaptureReportV01(obj);
+			check_fxtr_ForeignExchangeTradeCaptureReportV01(obj);
 		}
 	};
 
@@ -71,7 +71,7 @@ public class ConstraintRequestRejectedRule {
 	 * If Request Rejected is "false" or "0" (No), then Total Number Trades and
 	 * Last Report Requested must be present.
 	 */
-	public static void checkForeignExchangeTradeCaptureReportV01(ForeignExchangeTradeCaptureReportV01 obj) throws Exception {
+	public static void check_fxtr_ForeignExchangeTradeCaptureReportV01(ForeignExchangeTradeCaptureReportV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

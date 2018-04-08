@@ -104,14 +104,16 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationRule#forSubscriptionBulkOrderConfirmationV03
- * ConstraintAccountIdentificationRule.forSubscriptionBulkOrderConfirmationV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationRule#for_setr_SubscriptionBulkOrderConfirmationV03
+ * ConstraintAccountIdentificationRule.
+ * for_setr_SubscriptionBulkOrderConfirmationV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintOrderReferenceRule#forSubscriptionBulkOrderConfirmationV03
- * ConstraintOrderReferenceRule.forSubscriptionBulkOrderConfirmationV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOrderReferenceRule#for_setr_SubscriptionBulkOrderConfirmationV03
+ * ConstraintOrderReferenceRule.for_setr_SubscriptionBulkOrderConfirmationV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintRelatedPartiesDetailsRule#forSubscriptionBulkOrderConfirmationV03
- * ConstraintRelatedPartiesDetailsRule.forSubscriptionBulkOrderConfirmationV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintRelatedPartiesDetailsRule#for_setr_SubscriptionBulkOrderConfirmationV03
+ * ConstraintRelatedPartiesDetailsRule.
+ * for_setr_SubscriptionBulkOrderConfirmationV03}</li>
  * </ul>
  * </li>
  * <li>
@@ -581,9 +583,9 @@ public class SubscriptionBulkOrderConfirmationV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forSubscriptionBulkOrderConfirmationV03,
-						com.tools20022.repository.constraints.ConstraintOrderReferenceRule.forSubscriptionBulkOrderConfirmationV03,
-						com.tools20022.repository.constraints.ConstraintRelatedPartiesDetailsRule.forSubscriptionBulkOrderConfirmationV03);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.for_setr_SubscriptionBulkOrderConfirmationV03,
+						com.tools20022.repository.constraints.ConstraintOrderReferenceRule.for_setr_SubscriptionBulkOrderConfirmationV03,
+						com.tools20022.repository.constraints.ConstraintRelatedPartiesDetailsRule.for_setr_SubscriptionBulkOrderConfirmationV03);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SubscriptionBulkOrderConfirmationV03";
 				definition = "Scope\r\nAn executing party, for example, a transfer agent sends the SubscriptionBulkOrderConfirmation message to the instructing party, for example, an investment manager or its authorised representative to confirm the details of the execution of a SubscriptionBulkOrder instruction.\r\nUsage\r\nThe SubscriptionBulkOrderConfirmation message is used to confirm the execution of all individual orders.\r\nThere is usually one bulk confirmation message for one bulk order message.\r\nEach individual order confirmation specified is identified in DealReference. The reference of the original individual order is specified in OrderReference. The message identification of the SubscriptionBulkOrder message in which the individual order was conveyed may also be quoted in RelatedReference.\r\nA SubscriptionBulkOrder must in all cases be responded to by a SubscriptionBulkOrderConfirmation and in no circumstances by a SubscriptionOrderConfirmation.\r\nIf the executing party needs to confirm a SubscriptionOrder instruction, then the SubscriptionOrderConfirmation must be used.";

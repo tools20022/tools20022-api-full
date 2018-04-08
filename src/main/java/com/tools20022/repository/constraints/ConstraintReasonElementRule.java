@@ -69,40 +69,6 @@ public class ConstraintReasonElementRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.RejectedStatus10
-	 * RejectedStatus10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ReasonElementRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Either Reason or AdditionalInformation must be present. Both may be present."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<RejectedStatus10> forRejectedStatus10 = new MMConstraint<RejectedStatus10>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ReasonElementRule";
-			definition = "Either Reason or AdditionalInformation must be present. Both may be present.";
-			owner_lazy = () -> RejectedStatus10.mmObject();
-		}
-
-		@Override
-		public void executeValidator(RejectedStatus10 obj) throws Exception {
-			checkRejectedStatus10(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountStatusUpdateInstructionReason1
 	 * AccountStatusUpdateInstructionReason1}</li>
 	 * <li>
@@ -131,6 +97,40 @@ public class ConstraintReasonElementRule {
 			checkAccountStatusUpdateInstructionReason1(obj);
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.RejectedStatus10
+	 * RejectedStatus10}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ReasonElementRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Either Reason or AdditionalInformation must be present. Both may be present."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<RejectedStatus10> forRejectedStatus10 = new MMConstraint<RejectedStatus10>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ReasonElementRule";
+			definition = "Either Reason or AdditionalInformation must be present. Both may be present.";
+			owner_lazy = () -> RejectedStatus10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RejectedStatus10 obj) throws Exception {
+			checkRejectedStatus10(obj);
+		}
+	};
 
 	/**
 	 * Either Reason or AdditionalInformation must be present. Both may be
@@ -141,18 +141,18 @@ public class ConstraintReasonElementRule {
 	}
 
 	/**
-	 * Either Reason or AdditionalInformation must be present. Both may be
-	 * present.
-	 */
-	public static void checkRejectedStatus10(RejectedStatus10 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
 	 * Either Code or AdditionalInformation must be present. Both may be
 	 * present.
 	 */
 	public static void checkAccountStatusUpdateInstructionReason1(AccountStatusUpdateInstructionReason1 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Either Reason or AdditionalInformation must be present. Both may be
+	 * present.
+	 */
+	public static void checkRejectedStatus10(RejectedStatus10 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

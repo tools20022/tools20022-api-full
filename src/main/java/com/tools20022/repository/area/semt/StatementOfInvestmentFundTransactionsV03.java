@@ -103,9 +103,9 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintTransactionOnAccountOrSubAccountDetailsRule#forStatementOfInvestmentFundTransactionsV03
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTransactionOnAccountOrSubAccountDetailsRule#for_semt_StatementOfInvestmentFundTransactionsV03
  * ConstraintTransactionOnAccountOrSubAccountDetailsRule.
- * forStatementOfInvestmentFundTransactionsV03}</li>
+ * for_semt_StatementOfInvestmentFundTransactionsV03}</li>
  * </ul>
  * </li>
  * <li>
@@ -604,7 +604,7 @@ public class StatementOfInvestmentFundTransactionsV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTransactionOnAccountOrSubAccountDetailsRule.forStatementOfInvestmentFundTransactionsV03);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTransactionOnAccountOrSubAccountDetailsRule.for_semt_StatementOfInvestmentFundTransactionsV03);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatementOfInvestmentFundTransactionsV03";
 				definition = "Scope\r\nAn account servicer, for example, a transfer agent sends the StatementOfInvestmentFundTransactions message to the account owner, for example, an investment manager or its authorised representative to provide detailed transactions (increases and decreases) of holdings which occurred during a specified period of time.\r\nUsage\r\nThe StatementOfInvestmentFundTransactions message is used to list the holdings transactions of a single (master) account or several sub-accounts.\r\nThis message should be used at a frequency agreed bi-laterally between the account servicer and the account owner.\r\nThis message must not be used in place of confirmation messages.";

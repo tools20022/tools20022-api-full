@@ -117,17 +117,17 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#forSecuritiesTransactionCancellationRequestStatusAdviceV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#for_sese_SecuritiesTransactionCancellationRequestStatusAdviceV01
  * ConstraintCoexistenceCharacterSetXRule.
- * forSecuritiesTransactionCancellationRequestStatusAdviceV01}</li>
+ * for_sese_SecuritiesTransactionCancellationRequestStatusAdviceV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forSecuritiesTransactionCancellationRequestStatusAdviceV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#for_sese_SecuritiesTransactionCancellationRequestStatusAdviceV01
  * ConstraintCoexistenceIdentificationRule.
- * forSecuritiesTransactionCancellationRequestStatusAdviceV01}</li>
+ * for_sese_SecuritiesTransactionCancellationRequestStatusAdviceV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesTransactionCancellationRequestStatusAdviceV01
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#for_sese_SecuritiesTransactionCancellationRequestStatusAdviceV01
  * ConstraintSecuritiesMarketPracticeGroupGuideline.
- * forSecuritiesTransactionCancellationRequestStatusAdviceV01}</li>
+ * for_sese_SecuritiesTransactionCancellationRequestStatusAdviceV01}</li>
  * </ul>
  * </li>
  * <li>
@@ -540,9 +540,9 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesTransactionCancellationRequestStatusAdviceV01,
-						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesTransactionCancellationRequestStatusAdviceV01,
-						com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionCancellationRequestStatusAdviceV01);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.for_sese_SecuritiesTransactionCancellationRequestStatusAdviceV01,
+						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.for_sese_SecuritiesTransactionCancellationRequestStatusAdviceV01,
+						com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.for_sese_SecuritiesTransactionCancellationRequestStatusAdviceV01);
 				semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, "MT 548, Seq A :23G:CAST"));
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTransactionCancellationRequestStatusAdviceV01";

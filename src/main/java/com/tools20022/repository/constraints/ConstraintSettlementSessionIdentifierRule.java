@@ -50,7 +50,7 @@ public class ConstraintSettlementSessionIdentifierRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<ForeignExchangeTradeBulkStatusNotificationV04> forForeignExchangeTradeBulkStatusNotificationV04 = new MMConstraint<ForeignExchangeTradeBulkStatusNotificationV04>() {
+	public static final MMConstraint<ForeignExchangeTradeBulkStatusNotificationV04> for_fxtr_ForeignExchangeTradeBulkStatusNotificationV04 = new MMConstraint<ForeignExchangeTradeBulkStatusNotificationV04>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementSessionIdentifierRule";
@@ -60,7 +60,7 @@ public class ConstraintSettlementSessionIdentifierRule {
 
 		@Override
 		public void executeValidator(ForeignExchangeTradeBulkStatusNotificationV04 obj) throws Exception {
-			checkForeignExchangeTradeBulkStatusNotificationV04(obj);
+			check_fxtr_ForeignExchangeTradeBulkStatusNotificationV04(obj);
 		}
 	};
 
@@ -69,7 +69,7 @@ public class ConstraintSettlementSessionIdentifierRule {
 	 * of the trades within the bulk sttaus report have been generated from a
 	 * single settlement session.
 	 */
-	public static void checkForeignExchangeTradeBulkStatusNotificationV04(ForeignExchangeTradeBulkStatusNotificationV04 obj) throws Exception {
+	public static void check_fxtr_ForeignExchangeTradeBulkStatusNotificationV04(ForeignExchangeTradeBulkStatusNotificationV04 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

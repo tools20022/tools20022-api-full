@@ -38,40 +38,6 @@ public class ConstraintOptionType1Rule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption5
-	 * CorporateActionOption5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "OptionType1Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If for an exercise of warrants or an exercise of rights, the proceeds are known, the more precise OptionType/Code values like CASH, SECU, CASE or NOAC must be used. \r\nIf the proceeds are at issuer choice, ie, the proceeds are not known upfront, then OptionType/Code EXER must be used."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CorporateActionOption5> forCorporateActionOption5 = new MMConstraint<CorporateActionOption5>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "OptionType1Rule";
-			definition = "If for an exercise of warrants or an exercise of rights, the proceeds are known, the more precise OptionType/Code values like CASH, SECU, CASE or NOAC must be used. \r\nIf the proceeds are at issuer choice, ie, the proceeds are not known upfront, then OptionType/Code EXER must be used.";
-			owner_lazy = () -> CorporateActionOption5.mmObject();
-		}
-
-		@Override
-		public void executeValidator(CorporateActionOption5 obj) throws Exception {
-			checkCorporateActionOption5(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption13
 	 * CorporateActionOption13}</li>
 	 * <li>
@@ -100,6 +66,40 @@ public class ConstraintOptionType1Rule {
 			checkCorporateActionOption13(obj);
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption5
+	 * CorporateActionOption5}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OptionType1Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If for an exercise of warrants or an exercise of rights, the proceeds are known, the more precise OptionType/Code values like CASH, SECU, CASE or NOAC must be used. \r\nIf the proceeds are at issuer choice, ie, the proceeds are not known upfront, then OptionType/Code EXER must be used."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionOption5> forCorporateActionOption5 = new MMConstraint<CorporateActionOption5>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OptionType1Rule";
+			definition = "If for an exercise of warrants or an exercise of rights, the proceeds are known, the more precise OptionType/Code values like CASH, SECU, CASE or NOAC must be used. \r\nIf the proceeds are at issuer choice, ie, the proceeds are not known upfront, then OptionType/Code EXER must be used.";
+			owner_lazy = () -> CorporateActionOption5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption5 obj) throws Exception {
+			checkCorporateActionOption5(obj);
+		}
+	};
 
 	/**
 	 * If for an exercise of warrants or an exercise of rights, the proceeds are
@@ -108,7 +108,7 @@ public class ConstraintOptionType1Rule {
 	 * If the proceeds are at issuer choice, ie, the proceeds are not known
 	 * upfront, then OptionType/Code EXER must be used.
 	 */
-	public static void checkCorporateActionOption5(CorporateActionOption5 obj) throws Exception {
+	public static void checkCorporateActionOption13(CorporateActionOption13 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -119,7 +119,7 @@ public class ConstraintOptionType1Rule {
 	 * If the proceeds are at issuer choice, ie, the proceeds are not known
 	 * upfront, then OptionType/Code EXER must be used.
 	 */
-	public static void checkCorporateActionOption13(CorporateActionOption13 obj) throws Exception {
+	public static void checkCorporateActionOption5(CorporateActionOption5 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

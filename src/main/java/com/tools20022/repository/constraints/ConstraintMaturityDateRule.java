@@ -40,74 +40,6 @@ public class ConstraintMaturityDateRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV01
-	 * CorporateActionNotificationV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "MaturityDateRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If CorporateActionDetails/DateDetails/MaturityDate is present, then CorporateActionGeneralInformation/EventType/Code is EXTM (Maturity Extension)."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CorporateActionNotificationV01> forCorporateActionNotificationV01 = new MMConstraint<CorporateActionNotificationV01>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "MaturityDateRule";
-			definition = "If CorporateActionDetails/DateDetails/MaturityDate is present, then CorporateActionGeneralInformation/EventType/Code is EXTM (Maturity Extension).";
-			owner_lazy = () -> CorporateActionNotificationV01.mmObject();
-		}
-
-		@Override
-		public void executeValidator(CorporateActionNotificationV01 obj) throws Exception {
-			checkCorporateActionNotificationV01(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV02
-	 * CorporateActionNotificationV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "MaturityDateRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If CorporateActionDetails/DateDetails/MaturityDate is present, then CorporateActionGeneralInformation/EventType/Code is EXTM (Maturity Extension)."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CorporateActionNotificationV02> forCorporateActionNotificationV02 = new MMConstraint<CorporateActionNotificationV02>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "MaturityDateRule";
-			definition = "If CorporateActionDetails/DateDetails/MaturityDate is present, then CorporateActionGeneralInformation/EventType/Code is EXTM (Maturity Extension).";
-			owner_lazy = () -> CorporateActionNotificationV02.mmObject();
-		}
-
-		@Override
-		public void executeValidator(CorporateActionNotificationV02 obj) throws Exception {
-			checkCorporateActionNotificationV02(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV03
 	 * CorporateActionNotificationV03}</li>
 	 * <li>
@@ -123,7 +55,7 @@ public class ConstraintMaturityDateRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<CorporateActionNotificationV03> forCorporateActionNotificationV03 = new MMConstraint<CorporateActionNotificationV03>() {
+	public static final MMConstraint<CorporateActionNotificationV03> for_seev_CorporateActionNotificationV03 = new MMConstraint<CorporateActionNotificationV03>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDateRule";
@@ -133,7 +65,7 @@ public class ConstraintMaturityDateRule {
 
 		@Override
 		public void executeValidator(CorporateActionNotificationV03 obj) throws Exception {
-			checkCorporateActionNotificationV03(obj);
+			check_seev_CorporateActionNotificationV03(obj);
 		}
 	};
 	/**
@@ -142,8 +74,8 @@ public class ConstraintMaturityDateRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV04
-	 * CorporateActionNotificationV04}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes85
+	 * FinancialInstrumentAttributes85}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -153,166 +85,70 @@ public class ConstraintMaturityDateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If CorporateActionDetails/DateDetails/MaturityDate is present, then CorporateActionGeneralInformation/EventType/Code is EXTM (Maturity Extension)."
+	 * "Maturity date may only provide generic information about the final maturity of the underlying instrument."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<FinancialInstrumentAttributes85> forFinancialInstrumentAttributes85 = new MMConstraint<FinancialInstrumentAttributes85>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "MaturityDateRule";
+			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
+			owner_lazy = () -> FinancialInstrumentAttributes85.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes85 obj) throws Exception {
+			checkFinancialInstrumentAttributes85(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes67
+	 * FinancialInstrumentAttributes67}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "MaturityDateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Maturity date may only provide generic information about the final maturity of the underlying instrument."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintNewMaturityDateRule#forCorporateActionNotificationV05
-	 * ConstraintNewMaturityDateRule.forCorporateActionNotificationV05}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintMaturityDateRule#forFinancialInstrumentAttributes80
+	 * ConstraintMaturityDateRule.forFinancialInstrumentAttributes80}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintMaturityDateRule#forFinancialInstrumentAttributes49
+	 * ConstraintMaturityDateRule.forFinancialInstrumentAttributes49}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<CorporateActionNotificationV04> forCorporateActionNotificationV04 = new MMConstraint<CorporateActionNotificationV04>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "MaturityDateRule";
-			definition = "If CorporateActionDetails/DateDetails/MaturityDate is present, then CorporateActionGeneralInformation/EventType/Code is EXTM (Maturity Extension).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNewMaturityDateRule.forCorporateActionNotificationV05);
-			owner_lazy = () -> CorporateActionNotificationV04.mmObject();
-		}
-
-		@Override
-		public void executeValidator(CorporateActionNotificationV04 obj) throws Exception {
-			checkCorporateActionNotificationV04(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes7
-	 * FinancialInstrumentAttributes7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "MaturityDateRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Maturity date may only provide generic information about the final maturity of the underlying instrument."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<FinancialInstrumentAttributes7> forFinancialInstrumentAttributes7 = new MMConstraint<FinancialInstrumentAttributes7>() {
+	public static final MMConstraint<FinancialInstrumentAttributes67> forFinancialInstrumentAttributes67 = new MMConstraint<FinancialInstrumentAttributes67>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDateRule";
 			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
-			owner_lazy = () -> FinancialInstrumentAttributes7.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMaturityDateRule.forFinancialInstrumentAttributes80);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMaturityDateRule.forFinancialInstrumentAttributes49;
+			owner_lazy = () -> FinancialInstrumentAttributes67.mmObject();
 		}
 
 		@Override
-		public void executeValidator(FinancialInstrumentAttributes7 obj) throws Exception {
-			checkFinancialInstrumentAttributes7(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes5
-	 * FinancialInstrumentAttributes5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "MaturityDateRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Maturity date may only provide generic information about the final maturity of the underlying instrument."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<FinancialInstrumentAttributes5> forFinancialInstrumentAttributes5 = new MMConstraint<FinancialInstrumentAttributes5>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "MaturityDateRule";
-			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
-			owner_lazy = () -> FinancialInstrumentAttributes5.mmObject();
-		}
-
-		@Override
-		public void executeValidator(FinancialInstrumentAttributes5 obj) throws Exception {
-			checkFinancialInstrumentAttributes5(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes11
-	 * FinancialInstrumentAttributes11}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "MaturityDateRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Maturity date may only provide generic information about the final maturity of the underlying instrument."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<FinancialInstrumentAttributes11> forFinancialInstrumentAttributes11 = new MMConstraint<FinancialInstrumentAttributes11>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "MaturityDateRule";
-			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
-			owner_lazy = () -> FinancialInstrumentAttributes11.mmObject();
-		}
-
-		@Override
-		public void executeValidator(FinancialInstrumentAttributes11 obj) throws Exception {
-			checkFinancialInstrumentAttributes11(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes10
-	 * FinancialInstrumentAttributes10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "MaturityDateRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Maturity date may only provide generic information about the final maturity of the underlying instrument."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<FinancialInstrumentAttributes10> forFinancialInstrumentAttributes10 = new MMConstraint<FinancialInstrumentAttributes10>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "MaturityDateRule";
-			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
-			owner_lazy = () -> FinancialInstrumentAttributes10.mmObject();
-		}
-
-		@Override
-		public void executeValidator(FinancialInstrumentAttributes10 obj) throws Exception {
-			checkFinancialInstrumentAttributes10(obj);
+		public void executeValidator(FinancialInstrumentAttributes67 obj) throws Exception {
+			checkFinancialInstrumentAttributes67(obj);
 		}
 	};
 	/**
@@ -355,8 +191,8 @@ public class ConstraintMaturityDateRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes16
-	 * FinancialInstrumentAttributes16}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes5
+	 * FinancialInstrumentAttributes5}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -370,17 +206,17 @@ public class ConstraintMaturityDateRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<FinancialInstrumentAttributes16> forFinancialInstrumentAttributes16 = new MMConstraint<FinancialInstrumentAttributes16>() {
+	public static final MMConstraint<FinancialInstrumentAttributes5> forFinancialInstrumentAttributes5 = new MMConstraint<FinancialInstrumentAttributes5>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDateRule";
 			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
-			owner_lazy = () -> FinancialInstrumentAttributes16.mmObject();
+			owner_lazy = () -> FinancialInstrumentAttributes5.mmObject();
 		}
 
 		@Override
-		public void executeValidator(FinancialInstrumentAttributes16 obj) throws Exception {
-			checkFinancialInstrumentAttributes16(obj);
+		public void executeValidator(FinancialInstrumentAttributes5 obj) throws Exception {
+			checkFinancialInstrumentAttributes5(obj);
 		}
 	};
 	/**
@@ -389,8 +225,8 @@ public class ConstraintMaturityDateRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes23
-	 * FinancialInstrumentAttributes23}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes83
+	 * FinancialInstrumentAttributes83}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -404,17 +240,17 @@ public class ConstraintMaturityDateRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<FinancialInstrumentAttributes23> forFinancialInstrumentAttributes23 = new MMConstraint<FinancialInstrumentAttributes23>() {
+	public static final MMConstraint<FinancialInstrumentAttributes83> forFinancialInstrumentAttributes83 = new MMConstraint<FinancialInstrumentAttributes83>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDateRule";
 			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
-			owner_lazy = () -> FinancialInstrumentAttributes23.mmObject();
+			owner_lazy = () -> FinancialInstrumentAttributes83.mmObject();
 		}
 
 		@Override
-		public void executeValidator(FinancialInstrumentAttributes23 obj) throws Exception {
-			checkFinancialInstrumentAttributes23(obj);
+		public void executeValidator(FinancialInstrumentAttributes83 obj) throws Exception {
+			checkFinancialInstrumentAttributes83(obj);
 		}
 	};
 	/**
@@ -423,8 +259,8 @@ public class ConstraintMaturityDateRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes24
-	 * FinancialInstrumentAttributes24}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes49
+	 * FinancialInstrumentAttributes49}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -436,53 +272,34 @@ public class ConstraintMaturityDateRule {
 	 * definition} =
 	 * "Maturity date may only provide generic information about the final maturity of the underlying instrument."
 	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<FinancialInstrumentAttributes24> forFinancialInstrumentAttributes24 = new MMConstraint<FinancialInstrumentAttributes24>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "MaturityDateRule";
-			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
-			owner_lazy = () -> FinancialInstrumentAttributes24.mmObject();
-		}
-
-		@Override
-		public void executeValidator(FinancialInstrumentAttributes24 obj) throws Exception {
-			checkFinancialInstrumentAttributes24(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes33
-	 * FinancialInstrumentAttributes33}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "MaturityDateRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Maturity date may only provide generic information about the final maturity of the underlying instrument."
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintMaturityDateRule#forFinancialInstrumentAttributes67
+	 * ConstraintMaturityDateRule.forFinancialInstrumentAttributes67}</li>
+	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintMaturityDateRule#forFinancialInstrumentAttributes34
+	 * ConstraintMaturityDateRule.forFinancialInstrumentAttributes34}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<FinancialInstrumentAttributes33> forFinancialInstrumentAttributes33 = new MMConstraint<FinancialInstrumentAttributes33>() {
+	public static final MMConstraint<FinancialInstrumentAttributes49> forFinancialInstrumentAttributes49 = new MMConstraint<FinancialInstrumentAttributes49>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDateRule";
 			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
-			owner_lazy = () -> FinancialInstrumentAttributes33.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMaturityDateRule.forFinancialInstrumentAttributes67);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMaturityDateRule.forFinancialInstrumentAttributes34;
+			owner_lazy = () -> FinancialInstrumentAttributes49.mmObject();
 		}
 
 		@Override
-		public void executeValidator(FinancialInstrumentAttributes33 obj) throws Exception {
-			checkFinancialInstrumentAttributes33(obj);
+		public void executeValidator(FinancialInstrumentAttributes49 obj) throws Exception {
+			checkFinancialInstrumentAttributes49(obj);
 		}
 	};
 	/**
@@ -568,8 +385,8 @@ public class ConstraintMaturityDateRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes40
-	 * FinancialInstrumentAttributes40}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes79
+	 * FinancialInstrumentAttributes79}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -581,19 +398,25 @@ public class ConstraintMaturityDateRule {
 	 * definition} =
 	 * "Maturity date may only provide generic information about the final maturity of the underlying instrument."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintMaturityDateRule#forFinancialInstrumentAttributes66
+	 * ConstraintMaturityDateRule.forFinancialInstrumentAttributes66}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<FinancialInstrumentAttributes40> forFinancialInstrumentAttributes40 = new MMConstraint<FinancialInstrumentAttributes40>() {
+	public static final MMConstraint<FinancialInstrumentAttributes79> forFinancialInstrumentAttributes79 = new MMConstraint<FinancialInstrumentAttributes79>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDateRule";
 			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
-			owner_lazy = () -> FinancialInstrumentAttributes40.mmObject();
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMaturityDateRule.forFinancialInstrumentAttributes66;
+			owner_lazy = () -> FinancialInstrumentAttributes79.mmObject();
 		}
 
 		@Override
-		public void executeValidator(FinancialInstrumentAttributes40 obj) throws Exception {
-			checkFinancialInstrumentAttributes40(obj);
+		public void executeValidator(FinancialInstrumentAttributes79 obj) throws Exception {
+			checkFinancialInstrumentAttributes79(obj);
 		}
 	};
 	/**
@@ -602,8 +425,8 @@ public class ConstraintMaturityDateRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes43
-	 * FinancialInstrumentAttributes43}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes7
+	 * FinancialInstrumentAttributes7}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -615,28 +438,19 @@ public class ConstraintMaturityDateRule {
 	 * definition} =
 	 * "Maturity date may only provide generic information about the final maturity of the underlying instrument."
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintMaturityDateRule#forFinancialInstrumentAttributes48
-	 * ConstraintMaturityDateRule.forFinancialInstrumentAttributes48}</li>
-	 * </ul>
-	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<FinancialInstrumentAttributes43> forFinancialInstrumentAttributes43 = new MMConstraint<FinancialInstrumentAttributes43>() {
+	public static final MMConstraint<FinancialInstrumentAttributes7> forFinancialInstrumentAttributes7 = new MMConstraint<FinancialInstrumentAttributes7>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDateRule";
 			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMaturityDateRule.forFinancialInstrumentAttributes48);
-			owner_lazy = () -> FinancialInstrumentAttributes43.mmObject();
+			owner_lazy = () -> FinancialInstrumentAttributes7.mmObject();
 		}
 
 		@Override
-		public void executeValidator(FinancialInstrumentAttributes43 obj) throws Exception {
-			checkFinancialInstrumentAttributes43(obj);
+		public void executeValidator(FinancialInstrumentAttributes7 obj) throws Exception {
+			checkFinancialInstrumentAttributes7(obj);
 		}
 	};
 	/**
@@ -645,8 +459,8 @@ public class ConstraintMaturityDateRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes45
-	 * FinancialInstrumentAttributes45}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes71
+	 * FinancialInstrumentAttributes71}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -660,17 +474,17 @@ public class ConstraintMaturityDateRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<FinancialInstrumentAttributes45> forFinancialInstrumentAttributes45 = new MMConstraint<FinancialInstrumentAttributes45>() {
+	public static final MMConstraint<FinancialInstrumentAttributes71> forFinancialInstrumentAttributes71 = new MMConstraint<FinancialInstrumentAttributes71>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDateRule";
 			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
-			owner_lazy = () -> FinancialInstrumentAttributes45.mmObject();
+			owner_lazy = () -> FinancialInstrumentAttributes71.mmObject();
 		}
 
 		@Override
-		public void executeValidator(FinancialInstrumentAttributes45 obj) throws Exception {
-			checkFinancialInstrumentAttributes45(obj);
+		public void executeValidator(FinancialInstrumentAttributes71 obj) throws Exception {
+			checkFinancialInstrumentAttributes71(obj);
 		}
 	};
 	/**
@@ -728,123 +542,6 @@ public class ConstraintMaturityDateRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes49
-	 * FinancialInstrumentAttributes49}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "MaturityDateRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Maturity date may only provide generic information about the final maturity of the underlying instrument."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintMaturityDateRule#forFinancialInstrumentAttributes67
-	 * ConstraintMaturityDateRule.forFinancialInstrumentAttributes67}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintMaturityDateRule#forFinancialInstrumentAttributes34
-	 * ConstraintMaturityDateRule.forFinancialInstrumentAttributes34}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<FinancialInstrumentAttributes49> forFinancialInstrumentAttributes49 = new MMConstraint<FinancialInstrumentAttributes49>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "MaturityDateRule";
-			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMaturityDateRule.forFinancialInstrumentAttributes67);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMaturityDateRule.forFinancialInstrumentAttributes34;
-			owner_lazy = () -> FinancialInstrumentAttributes49.mmObject();
-		}
-
-		@Override
-		public void executeValidator(FinancialInstrumentAttributes49 obj) throws Exception {
-			checkFinancialInstrumentAttributes49(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes55
-	 * FinancialInstrumentAttributes55}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "MaturityDateRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Maturity date may only provide generic information about the final maturity of the underlying instrument."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<FinancialInstrumentAttributes55> forFinancialInstrumentAttributes55 = new MMConstraint<FinancialInstrumentAttributes55>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "MaturityDateRule";
-			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
-			owner_lazy = () -> FinancialInstrumentAttributes55.mmObject();
-		}
-
-		@Override
-		public void executeValidator(FinancialInstrumentAttributes55 obj) throws Exception {
-			checkFinancialInstrumentAttributes55(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes56
-	 * FinancialInstrumentAttributes56}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "MaturityDateRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Maturity date may only provide generic information about the final maturity of the underlying instrument."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<FinancialInstrumentAttributes56> forFinancialInstrumentAttributes56 = new MMConstraint<FinancialInstrumentAttributes56>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "MaturityDateRule";
-			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
-			owner_lazy = () -> FinancialInstrumentAttributes56.mmObject();
-		}
-
-		@Override
-		public void executeValidator(FinancialInstrumentAttributes56 obj) throws Exception {
-			checkFinancialInstrumentAttributes56(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes66
 	 * FinancialInstrumentAttributes66}</li>
 	 * <li>
@@ -894,8 +591,8 @@ public class ConstraintMaturityDateRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes67
-	 * FinancialInstrumentAttributes67}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes33
+	 * FinancialInstrumentAttributes33}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -906,35 +603,165 @@ public class ConstraintMaturityDateRule {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Maturity date may only provide generic information about the final maturity of the underlying instrument."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<FinancialInstrumentAttributes33> forFinancialInstrumentAttributes33 = new MMConstraint<FinancialInstrumentAttributes33>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "MaturityDateRule";
+			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
+			owner_lazy = () -> FinancialInstrumentAttributes33.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes33 obj) throws Exception {
+			checkFinancialInstrumentAttributes33(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes40
+	 * FinancialInstrumentAttributes40}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "MaturityDateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Maturity date may only provide generic information about the final maturity of the underlying instrument."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<FinancialInstrumentAttributes40> forFinancialInstrumentAttributes40 = new MMConstraint<FinancialInstrumentAttributes40>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "MaturityDateRule";
+			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
+			owner_lazy = () -> FinancialInstrumentAttributes40.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes40 obj) throws Exception {
+			checkFinancialInstrumentAttributes40(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes55
+	 * FinancialInstrumentAttributes55}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "MaturityDateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Maturity date may only provide generic information about the final maturity of the underlying instrument."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<FinancialInstrumentAttributes55> forFinancialInstrumentAttributes55 = new MMConstraint<FinancialInstrumentAttributes55>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "MaturityDateRule";
+			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
+			owner_lazy = () -> FinancialInstrumentAttributes55.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes55 obj) throws Exception {
+			checkFinancialInstrumentAttributes55(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes23
+	 * FinancialInstrumentAttributes23}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "MaturityDateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Maturity date may only provide generic information about the final maturity of the underlying instrument."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<FinancialInstrumentAttributes23> forFinancialInstrumentAttributes23 = new MMConstraint<FinancialInstrumentAttributes23>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "MaturityDateRule";
+			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
+			owner_lazy = () -> FinancialInstrumentAttributes23.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes23 obj) throws Exception {
+			checkFinancialInstrumentAttributes23(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV04
+	 * CorporateActionNotificationV04}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "MaturityDateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If CorporateActionDetails/DateDetails/MaturityDate is present, then CorporateActionGeneralInformation/EventType/Code is EXTM (Maturity Extension)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintMaturityDateRule#forFinancialInstrumentAttributes80
-	 * ConstraintMaturityDateRule.forFinancialInstrumentAttributes80}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNewMaturityDateRule#for_seev_CorporateActionNotificationV05
+	 * ConstraintNewMaturityDateRule.for_seev_CorporateActionNotificationV05}</li>
 	 * </ul>
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintMaturityDateRule#forFinancialInstrumentAttributes49
-	 * ConstraintMaturityDateRule.forFinancialInstrumentAttributes49}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<FinancialInstrumentAttributes67> forFinancialInstrumentAttributes67 = new MMConstraint<FinancialInstrumentAttributes67>() {
+	public static final MMConstraint<CorporateActionNotificationV04> for_seev_CorporateActionNotificationV04 = new MMConstraint<CorporateActionNotificationV04>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDateRule";
-			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMaturityDateRule.forFinancialInstrumentAttributes80);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMaturityDateRule.forFinancialInstrumentAttributes49;
-			owner_lazy = () -> FinancialInstrumentAttributes67.mmObject();
+			definition = "If CorporateActionDetails/DateDetails/MaturityDate is present, then CorporateActionGeneralInformation/EventType/Code is EXTM (Maturity Extension).";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNewMaturityDateRule.for_seev_CorporateActionNotificationV05);
+			owner_lazy = () -> CorporateActionNotificationV04.mmObject();
 		}
 
 		@Override
-		public void executeValidator(FinancialInstrumentAttributes67 obj) throws Exception {
-			checkFinancialInstrumentAttributes67(obj);
+		public void executeValidator(CorporateActionNotificationV04 obj) throws Exception {
+			check_seev_CorporateActionNotificationV04(obj);
 		}
 	};
 	/**
@@ -943,8 +770,8 @@ public class ConstraintMaturityDateRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes70
-	 * FinancialInstrumentAttributes70}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV02
+	 * CorporateActionNotificationV02}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -954,95 +781,21 @@ public class ConstraintMaturityDateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Maturity date may only provide generic information about the final maturity of the underlying instrument."
+	 * "If CorporateActionDetails/DateDetails/MaturityDate is present, then CorporateActionGeneralInformation/EventType/Code is EXTM (Maturity Extension)."
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<FinancialInstrumentAttributes70> forFinancialInstrumentAttributes70 = new MMConstraint<FinancialInstrumentAttributes70>() {
+	public static final MMConstraint<CorporateActionNotificationV02> for_seev_CorporateActionNotificationV02 = new MMConstraint<CorporateActionNotificationV02>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDateRule";
-			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
-			owner_lazy = () -> FinancialInstrumentAttributes70.mmObject();
+			definition = "If CorporateActionDetails/DateDetails/MaturityDate is present, then CorporateActionGeneralInformation/EventType/Code is EXTM (Maturity Extension).";
+			owner_lazy = () -> CorporateActionNotificationV02.mmObject();
 		}
 
 		@Override
-		public void executeValidator(FinancialInstrumentAttributes70 obj) throws Exception {
-			checkFinancialInstrumentAttributes70(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes71
-	 * FinancialInstrumentAttributes71}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "MaturityDateRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Maturity date may only provide generic information about the final maturity of the underlying instrument."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<FinancialInstrumentAttributes71> forFinancialInstrumentAttributes71 = new MMConstraint<FinancialInstrumentAttributes71>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "MaturityDateRule";
-			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
-			owner_lazy = () -> FinancialInstrumentAttributes71.mmObject();
-		}
-
-		@Override
-		public void executeValidator(FinancialInstrumentAttributes71 obj) throws Exception {
-			checkFinancialInstrumentAttributes71(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes79
-	 * FinancialInstrumentAttributes79}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "MaturityDateRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Maturity date may only provide generic information about the final maturity of the underlying instrument."
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintMaturityDateRule#forFinancialInstrumentAttributes66
-	 * ConstraintMaturityDateRule.forFinancialInstrumentAttributes66}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<FinancialInstrumentAttributes79> forFinancialInstrumentAttributes79 = new MMConstraint<FinancialInstrumentAttributes79>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "MaturityDateRule";
-			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMaturityDateRule.forFinancialInstrumentAttributes66;
-			owner_lazy = () -> FinancialInstrumentAttributes79.mmObject();
-		}
-
-		@Override
-		public void executeValidator(FinancialInstrumentAttributes79 obj) throws Exception {
-			checkFinancialInstrumentAttributes79(obj);
+		public void executeValidator(CorporateActionNotificationV02 obj) throws Exception {
+			check_seev_CorporateActionNotificationV02(obj);
 		}
 	};
 	/**
@@ -1091,8 +844,8 @@ public class ConstraintMaturityDateRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes85
-	 * FinancialInstrumentAttributes85}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes24
+	 * FinancialInstrumentAttributes24}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1106,17 +859,17 @@ public class ConstraintMaturityDateRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<FinancialInstrumentAttributes85> forFinancialInstrumentAttributes85 = new MMConstraint<FinancialInstrumentAttributes85>() {
+	public static final MMConstraint<FinancialInstrumentAttributes24> forFinancialInstrumentAttributes24 = new MMConstraint<FinancialInstrumentAttributes24>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDateRule";
 			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
-			owner_lazy = () -> FinancialInstrumentAttributes85.mmObject();
+			owner_lazy = () -> FinancialInstrumentAttributes24.mmObject();
 		}
 
 		@Override
-		public void executeValidator(FinancialInstrumentAttributes85 obj) throws Exception {
-			checkFinancialInstrumentAttributes85(obj);
+		public void executeValidator(FinancialInstrumentAttributes24 obj) throws Exception {
+			checkFinancialInstrumentAttributes24(obj);
 		}
 	};
 	/**
@@ -1125,8 +878,8 @@ public class ConstraintMaturityDateRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes83
-	 * FinancialInstrumentAttributes83}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes45
+	 * FinancialInstrumentAttributes45}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1140,17 +893,264 @@ public class ConstraintMaturityDateRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<FinancialInstrumentAttributes83> forFinancialInstrumentAttributes83 = new MMConstraint<FinancialInstrumentAttributes83>() {
+	public static final MMConstraint<FinancialInstrumentAttributes45> forFinancialInstrumentAttributes45 = new MMConstraint<FinancialInstrumentAttributes45>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDateRule";
 			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
-			owner_lazy = () -> FinancialInstrumentAttributes83.mmObject();
+			owner_lazy = () -> FinancialInstrumentAttributes45.mmObject();
 		}
 
 		@Override
-		public void executeValidator(FinancialInstrumentAttributes83 obj) throws Exception {
-			checkFinancialInstrumentAttributes83(obj);
+		public void executeValidator(FinancialInstrumentAttributes45 obj) throws Exception {
+			checkFinancialInstrumentAttributes45(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes10
+	 * FinancialInstrumentAttributes10}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "MaturityDateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Maturity date may only provide generic information about the final maturity of the underlying instrument."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<FinancialInstrumentAttributes10> forFinancialInstrumentAttributes10 = new MMConstraint<FinancialInstrumentAttributes10>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "MaturityDateRule";
+			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
+			owner_lazy = () -> FinancialInstrumentAttributes10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes10 obj) throws Exception {
+			checkFinancialInstrumentAttributes10(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV01
+	 * CorporateActionNotificationV01}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "MaturityDateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If CorporateActionDetails/DateDetails/MaturityDate is present, then CorporateActionGeneralInformation/EventType/Code is EXTM (Maturity Extension)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionNotificationV01> for_seev_CorporateActionNotificationV01 = new MMConstraint<CorporateActionNotificationV01>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "MaturityDateRule";
+			definition = "If CorporateActionDetails/DateDetails/MaturityDate is present, then CorporateActionGeneralInformation/EventType/Code is EXTM (Maturity Extension).";
+			owner_lazy = () -> CorporateActionNotificationV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNotificationV01 obj) throws Exception {
+			check_seev_CorporateActionNotificationV01(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes43
+	 * FinancialInstrumentAttributes43}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "MaturityDateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Maturity date may only provide generic information about the final maturity of the underlying instrument."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintMaturityDateRule#forFinancialInstrumentAttributes48
+	 * ConstraintMaturityDateRule.forFinancialInstrumentAttributes48}</li>
+	 * </ul>
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<FinancialInstrumentAttributes43> forFinancialInstrumentAttributes43 = new MMConstraint<FinancialInstrumentAttributes43>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "MaturityDateRule";
+			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMaturityDateRule.forFinancialInstrumentAttributes48);
+			owner_lazy = () -> FinancialInstrumentAttributes43.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes43 obj) throws Exception {
+			checkFinancialInstrumentAttributes43(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes70
+	 * FinancialInstrumentAttributes70}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "MaturityDateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Maturity date may only provide generic information about the final maturity of the underlying instrument."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<FinancialInstrumentAttributes70> forFinancialInstrumentAttributes70 = new MMConstraint<FinancialInstrumentAttributes70>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "MaturityDateRule";
+			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
+			owner_lazy = () -> FinancialInstrumentAttributes70.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes70 obj) throws Exception {
+			checkFinancialInstrumentAttributes70(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes56
+	 * FinancialInstrumentAttributes56}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "MaturityDateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Maturity date may only provide generic information about the final maturity of the underlying instrument."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<FinancialInstrumentAttributes56> forFinancialInstrumentAttributes56 = new MMConstraint<FinancialInstrumentAttributes56>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "MaturityDateRule";
+			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
+			owner_lazy = () -> FinancialInstrumentAttributes56.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes56 obj) throws Exception {
+			checkFinancialInstrumentAttributes56(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes11
+	 * FinancialInstrumentAttributes11}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "MaturityDateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Maturity date may only provide generic information about the final maturity of the underlying instrument."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<FinancialInstrumentAttributes11> forFinancialInstrumentAttributes11 = new MMConstraint<FinancialInstrumentAttributes11>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "MaturityDateRule";
+			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
+			owner_lazy = () -> FinancialInstrumentAttributes11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes11 obj) throws Exception {
+			checkFinancialInstrumentAttributes11(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes16
+	 * FinancialInstrumentAttributes16}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "MaturityDateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Maturity date may only provide generic information about the final maturity of the underlying instrument."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<FinancialInstrumentAttributes16> forFinancialInstrumentAttributes16 = new MMConstraint<FinancialInstrumentAttributes16>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "MaturityDateRule";
+			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
+			owner_lazy = () -> FinancialInstrumentAttributes16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes16 obj) throws Exception {
+			checkFinancialInstrumentAttributes16(obj);
 		}
 	};
 
@@ -1159,34 +1159,7 @@ public class ConstraintMaturityDateRule {
 	 * CorporateActionGeneralInformation/EventType/Code is EXTM (Maturity
 	 * Extension).
 	 */
-	public static void checkCorporateActionNotificationV01(CorporateActionNotificationV01 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If CorporateActionDetails/DateDetails/MaturityDate is present, then
-	 * CorporateActionGeneralInformation/EventType/Code is EXTM (Maturity
-	 * Extension).
-	 */
-	public static void checkCorporateActionNotificationV02(CorporateActionNotificationV02 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If CorporateActionDetails/DateDetails/MaturityDate is present, then
-	 * CorporateActionGeneralInformation/EventType/Code is EXTM (Maturity
-	 * Extension).
-	 */
-	public static void checkCorporateActionNotificationV03(CorporateActionNotificationV03 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If CorporateActionDetails/DateDetails/MaturityDate is present, then
-	 * CorporateActionGeneralInformation/EventType/Code is EXTM (Maturity
-	 * Extension).
-	 */
-	public static void checkCorporateActionNotificationV04(CorporateActionNotificationV04 obj) throws Exception {
+	public static void check_seev_CorporateActionNotificationV03(CorporateActionNotificationV03 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1194,7 +1167,7 @@ public class ConstraintMaturityDateRule {
 	 * Maturity date may only provide generic information about the final
 	 * maturity of the underlying instrument.
 	 */
-	public static void checkFinancialInstrumentAttributes7(FinancialInstrumentAttributes7 obj) throws Exception {
+	public static void checkFinancialInstrumentAttributes85(FinancialInstrumentAttributes85 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1202,23 +1175,7 @@ public class ConstraintMaturityDateRule {
 	 * Maturity date may only provide generic information about the final
 	 * maturity of the underlying instrument.
 	 */
-	public static void checkFinancialInstrumentAttributes5(FinancialInstrumentAttributes5 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Maturity date may only provide generic information about the final
-	 * maturity of the underlying instrument.
-	 */
-	public static void checkFinancialInstrumentAttributes11(FinancialInstrumentAttributes11 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Maturity date may only provide generic information about the final
-	 * maturity of the underlying instrument.
-	 */
-	public static void checkFinancialInstrumentAttributes10(FinancialInstrumentAttributes10 obj) throws Exception {
+	public static void checkFinancialInstrumentAttributes67(FinancialInstrumentAttributes67 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1234,7 +1191,7 @@ public class ConstraintMaturityDateRule {
 	 * Maturity date may only provide generic information about the final
 	 * maturity of the underlying instrument.
 	 */
-	public static void checkFinancialInstrumentAttributes16(FinancialInstrumentAttributes16 obj) throws Exception {
+	public static void checkFinancialInstrumentAttributes5(FinancialInstrumentAttributes5 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1242,7 +1199,7 @@ public class ConstraintMaturityDateRule {
 	 * Maturity date may only provide generic information about the final
 	 * maturity of the underlying instrument.
 	 */
-	public static void checkFinancialInstrumentAttributes23(FinancialInstrumentAttributes23 obj) throws Exception {
+	public static void checkFinancialInstrumentAttributes83(FinancialInstrumentAttributes83 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1250,15 +1207,7 @@ public class ConstraintMaturityDateRule {
 	 * Maturity date may only provide generic information about the final
 	 * maturity of the underlying instrument.
 	 */
-	public static void checkFinancialInstrumentAttributes24(FinancialInstrumentAttributes24 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Maturity date may only provide generic information about the final
-	 * maturity of the underlying instrument.
-	 */
-	public static void checkFinancialInstrumentAttributes33(FinancialInstrumentAttributes33 obj) throws Exception {
+	public static void checkFinancialInstrumentAttributes49(FinancialInstrumentAttributes49 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1282,7 +1231,7 @@ public class ConstraintMaturityDateRule {
 	 * Maturity date may only provide generic information about the final
 	 * maturity of the underlying instrument.
 	 */
-	public static void checkFinancialInstrumentAttributes40(FinancialInstrumentAttributes40 obj) throws Exception {
+	public static void checkFinancialInstrumentAttributes79(FinancialInstrumentAttributes79 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1290,71 +1239,7 @@ public class ConstraintMaturityDateRule {
 	 * Maturity date may only provide generic information about the final
 	 * maturity of the underlying instrument.
 	 */
-	public static void checkFinancialInstrumentAttributes43(FinancialInstrumentAttributes43 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Maturity date may only provide generic information about the final
-	 * maturity of the underlying instrument.
-	 */
-	public static void checkFinancialInstrumentAttributes45(FinancialInstrumentAttributes45 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Maturity date may only provide generic information about the final
-	 * maturity of the underlying instrument.
-	 */
-	public static void checkFinancialInstrumentAttributes48(FinancialInstrumentAttributes48 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Maturity date may only provide generic information about the final
-	 * maturity of the underlying instrument.
-	 */
-	public static void checkFinancialInstrumentAttributes49(FinancialInstrumentAttributes49 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Maturity date may only provide generic information about the final
-	 * maturity of the underlying instrument.
-	 */
-	public static void checkFinancialInstrumentAttributes55(FinancialInstrumentAttributes55 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Maturity date may only provide generic information about the final
-	 * maturity of the underlying instrument.
-	 */
-	public static void checkFinancialInstrumentAttributes56(FinancialInstrumentAttributes56 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Maturity date may only provide generic information about the final
-	 * maturity of the underlying instrument.
-	 */
-	public static void checkFinancialInstrumentAttributes66(FinancialInstrumentAttributes66 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Maturity date may only provide generic information about the final
-	 * maturity of the underlying instrument.
-	 */
-	public static void checkFinancialInstrumentAttributes67(FinancialInstrumentAttributes67 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Maturity date may only provide generic information about the final
-	 * maturity of the underlying instrument.
-	 */
-	public static void checkFinancialInstrumentAttributes70(FinancialInstrumentAttributes70 obj) throws Exception {
+	public static void checkFinancialInstrumentAttributes7(FinancialInstrumentAttributes7 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1370,7 +1255,65 @@ public class ConstraintMaturityDateRule {
 	 * Maturity date may only provide generic information about the final
 	 * maturity of the underlying instrument.
 	 */
-	public static void checkFinancialInstrumentAttributes79(FinancialInstrumentAttributes79 obj) throws Exception {
+	public static void checkFinancialInstrumentAttributes48(FinancialInstrumentAttributes48 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Maturity date may only provide generic information about the final
+	 * maturity of the underlying instrument.
+	 */
+	public static void checkFinancialInstrumentAttributes66(FinancialInstrumentAttributes66 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Maturity date may only provide generic information about the final
+	 * maturity of the underlying instrument.
+	 */
+	public static void checkFinancialInstrumentAttributes33(FinancialInstrumentAttributes33 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Maturity date may only provide generic information about the final
+	 * maturity of the underlying instrument.
+	 */
+	public static void checkFinancialInstrumentAttributes40(FinancialInstrumentAttributes40 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Maturity date may only provide generic information about the final
+	 * maturity of the underlying instrument.
+	 */
+	public static void checkFinancialInstrumentAttributes55(FinancialInstrumentAttributes55 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Maturity date may only provide generic information about the final
+	 * maturity of the underlying instrument.
+	 */
+	public static void checkFinancialInstrumentAttributes23(FinancialInstrumentAttributes23 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If CorporateActionDetails/DateDetails/MaturityDate is present, then
+	 * CorporateActionGeneralInformation/EventType/Code is EXTM (Maturity
+	 * Extension).
+	 */
+	public static void check_seev_CorporateActionNotificationV04(CorporateActionNotificationV04 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If CorporateActionDetails/DateDetails/MaturityDate is present, then
+	 * CorporateActionGeneralInformation/EventType/Code is EXTM (Maturity
+	 * Extension).
+	 */
+	public static void check_seev_CorporateActionNotificationV02(CorporateActionNotificationV02 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1386,7 +1329,7 @@ public class ConstraintMaturityDateRule {
 	 * Maturity date may only provide generic information about the final
 	 * maturity of the underlying instrument.
 	 */
-	public static void checkFinancialInstrumentAttributes85(FinancialInstrumentAttributes85 obj) throws Exception {
+	public static void checkFinancialInstrumentAttributes24(FinancialInstrumentAttributes24 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1394,7 +1337,64 @@ public class ConstraintMaturityDateRule {
 	 * Maturity date may only provide generic information about the final
 	 * maturity of the underlying instrument.
 	 */
-	public static void checkFinancialInstrumentAttributes83(FinancialInstrumentAttributes83 obj) throws Exception {
+	public static void checkFinancialInstrumentAttributes45(FinancialInstrumentAttributes45 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Maturity date may only provide generic information about the final
+	 * maturity of the underlying instrument.
+	 */
+	public static void checkFinancialInstrumentAttributes10(FinancialInstrumentAttributes10 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If CorporateActionDetails/DateDetails/MaturityDate is present, then
+	 * CorporateActionGeneralInformation/EventType/Code is EXTM (Maturity
+	 * Extension).
+	 */
+	public static void check_seev_CorporateActionNotificationV01(CorporateActionNotificationV01 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Maturity date may only provide generic information about the final
+	 * maturity of the underlying instrument.
+	 */
+	public static void checkFinancialInstrumentAttributes43(FinancialInstrumentAttributes43 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Maturity date may only provide generic information about the final
+	 * maturity of the underlying instrument.
+	 */
+	public static void checkFinancialInstrumentAttributes70(FinancialInstrumentAttributes70 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Maturity date may only provide generic information about the final
+	 * maturity of the underlying instrument.
+	 */
+	public static void checkFinancialInstrumentAttributes56(FinancialInstrumentAttributes56 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Maturity date may only provide generic information about the final
+	 * maturity of the underlying instrument.
+	 */
+	public static void checkFinancialInstrumentAttributes11(FinancialInstrumentAttributes11 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Maturity date may only provide generic information about the final
+	 * maturity of the underlying instrument.
+	 */
+	public static void checkFinancialInstrumentAttributes16(FinancialInstrumentAttributes16 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

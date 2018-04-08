@@ -109,9 +109,9 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCashPartiesCurrencyPresenceRule#forStandingSettlementInstructionV01
- * ConstraintCashPartiesCurrencyPresenceRule.forStandingSettlementInstructionV01
- * }</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCashPartiesCurrencyPresenceRule#for_reda_StandingSettlementInstructionV01
+ * ConstraintCashPartiesCurrencyPresenceRule.
+ * for_reda_StandingSettlementInstructionV01}</li>
  * </ul>
  * </li>
  * <li>
@@ -458,7 +458,7 @@ public class StandingSettlementInstructionV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCashPartiesCurrencyPresenceRule.forStandingSettlementInstructionV01);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCashPartiesCurrencyPresenceRule.for_reda_StandingSettlementInstructionV01);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StandingSettlementInstructionV01";
 				definition = "Scope\r\nAn instructing party sends the StandingSettlementInstruction (SSI) message to the receiver to create or update a standing cash or securities settlement instruction. The message can also be used to notify a counterparty of an SSI.\r\n\r\nUsage\r\nThe instructing party (initiator) is:\r\n•\tAn account servicer, for example, a global custodian or prime broker\r\n•\tA counterparty in a transaction, for example:\r\n-\tan investment manager (executing broker),\r\n-\ta global custodian (executing broker, prime broker)\r\n•\tA vendor’s application communicating on behalf of an account servicer or counterparty\r\nThe receiver is:\r\n•\tAn account owner, for example, an investment manager, hedge fund administrator or a party to which SSI operations have been outsourced\r\n•\tA counterparty, for example:\r\n-\tan investment manager (executing broker)\r\n-\ta global custodian (executing broker, prime broker)\r\n•\tA vendor’s application communicating on behalf of the account owner or counterparty.";

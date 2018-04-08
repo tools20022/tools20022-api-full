@@ -88,9 +88,9 @@ public class TerminalManagementPreviousVersion {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Terminal Management - Previous version - master";
 				definition = "Messages that support any card related terminal management services between a Terminal Management System (TMS) and a Point of Interaction (POI) system.";
+				code = "catm";
 				messageDefinition_lazy = () -> Arrays.asList(TerminalManagementRejectionV03.mmObject(), MaintenanceDelegationResponseV02.mmObject(), CertificateManagementResponseV01.mmObject(), CertificateManagementRequestV01.mmObject(),
 						StatusReportV06.mmObject(), AcceptorConfigurationUpdateV06.mmObject(), MaintenanceDelegationRequestV03.mmObject(), ManagementPlanReplacementV06.mmObject());
-				code = "catm";
 			}
 		});
 		return mmObject_lazy.get();

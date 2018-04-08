@@ -24,7 +24,7 @@ import com.tools20022.repository.msg.*;
 
 /**
  * The AggregateQuantity should be the sum of AvailableQuantity and
- * NonAvailableQuantity if AvailableQuantityand NonAvailableQuantity are both
+ * NotAvailableQuantity if AvailableQuantity and NotAvailableQuantity are both
  * present.
  */
 public class ConstraintAggregateQuantityGuideline {
@@ -35,8 +35,8 @@ public class ConstraintAggregateQuantityGuideline {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace1
-	 * AggregateBalancePerSafekeepingPlace1}</li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation7
+	 * AggregateBalanceInformation7}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -46,21 +46,21 @@ public class ConstraintAggregateQuantityGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The AggregateQuantity should be the sum of AvailableQuantity and NonAvailableQuantity if AvailableQuantityand NonAvailableQuantity are both present."
+	 * "The AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity if AvailableQuantity and NotAvailableQuantity are both present."
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<AggregateBalancePerSafekeepingPlace1> forAggregateBalancePerSafekeepingPlace1 = new MMConstraint<AggregateBalancePerSafekeepingPlace1>() {
+	public static final MMConstraint<AggregateBalanceInformation7> forAggregateBalanceInformation7 = new MMConstraint<AggregateBalanceInformation7>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AggregateQuantityGuideline";
-			definition = "The AggregateQuantity should be the sum of AvailableQuantity and NonAvailableQuantity if AvailableQuantityand NonAvailableQuantity are both present.";
-			owner_lazy = () -> AggregateBalancePerSafekeepingPlace1.mmObject();
+			definition = "The AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity if AvailableQuantity and NotAvailableQuantity are both present.";
+			owner_lazy = () -> AggregateBalanceInformation7.mmObject();
 		}
 
 		@Override
-		public void executeValidator(AggregateBalancePerSafekeepingPlace1 obj) throws Exception {
-			checkAggregateBalancePerSafekeepingPlace1(obj);
+		public void executeValidator(AggregateBalanceInformation7 obj) throws Exception {
+			checkAggregateBalanceInformation7(obj);
 		}
 	};
 	/**
@@ -103,40 +103,6 @@ public class ConstraintAggregateQuantityGuideline {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace3
-	 * AggregateBalancePerSafekeepingPlace3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AggregateQuantityGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "The AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity if AvailableQuantityand NotAvailableQuantity are both present."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<AggregateBalancePerSafekeepingPlace3> forAggregateBalancePerSafekeepingPlace3 = new MMConstraint<AggregateBalancePerSafekeepingPlace3>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "AggregateQuantityGuideline";
-			definition = "The AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity if AvailableQuantityand NotAvailableQuantity are both present.";
-			owner_lazy = () -> AggregateBalancePerSafekeepingPlace3.mmObject();
-		}
-
-		@Override
-		public void executeValidator(AggregateBalancePerSafekeepingPlace3 obj) throws Exception {
-			checkAggregateBalancePerSafekeepingPlace3(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation4
 	 * AggregateBalanceInformation4}</li>
 	 * <li>
@@ -163,6 +129,74 @@ public class ConstraintAggregateQuantityGuideline {
 		@Override
 		public void executeValidator(AggregateBalanceInformation4 obj) throws Exception {
 			checkAggregateBalanceInformation4(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace1
+	 * AggregateBalancePerSafekeepingPlace1}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AggregateQuantityGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The AggregateQuantity should be the sum of AvailableQuantity and NonAvailableQuantity if AvailableQuantityand NonAvailableQuantity are both present."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AggregateBalancePerSafekeepingPlace1> forAggregateBalancePerSafekeepingPlace1 = new MMConstraint<AggregateBalancePerSafekeepingPlace1>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AggregateQuantityGuideline";
+			definition = "The AggregateQuantity should be the sum of AvailableQuantity and NonAvailableQuantity if AvailableQuantityand NonAvailableQuantity are both present.";
+			owner_lazy = () -> AggregateBalancePerSafekeepingPlace1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace1 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace1(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace3
+	 * AggregateBalancePerSafekeepingPlace3}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AggregateQuantityGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity if AvailableQuantityand NotAvailableQuantity are both present."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AggregateBalancePerSafekeepingPlace3> forAggregateBalancePerSafekeepingPlace3 = new MMConstraint<AggregateBalancePerSafekeepingPlace3>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AggregateQuantityGuideline";
+			definition = "The AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity if AvailableQuantityand NotAvailableQuantity are both present.";
+			owner_lazy = () -> AggregateBalancePerSafekeepingPlace3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace3 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace3(obj);
 		}
 	};
 	/**
@@ -199,47 +233,13 @@ public class ConstraintAggregateQuantityGuideline {
 			checkAggregateBalanceInformation5(obj);
 		}
 	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation7
-	 * AggregateBalanceInformation7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AggregateQuantityGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "The AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity if AvailableQuantity and NotAvailableQuantity are both present."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<AggregateBalanceInformation7> forAggregateBalanceInformation7 = new MMConstraint<AggregateBalanceInformation7>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "AggregateQuantityGuideline";
-			definition = "The AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity if AvailableQuantity and NotAvailableQuantity are both present.";
-			owner_lazy = () -> AggregateBalanceInformation7.mmObject();
-		}
-
-		@Override
-		public void executeValidator(AggregateBalanceInformation7 obj) throws Exception {
-			checkAggregateBalanceInformation7(obj);
-		}
-	};
 
 	/**
 	 * The AggregateQuantity should be the sum of AvailableQuantity and
-	 * NonAvailableQuantity if AvailableQuantityand NonAvailableQuantity are
+	 * NotAvailableQuantity if AvailableQuantity and NotAvailableQuantity are
 	 * both present.
 	 */
-	public static void checkAggregateBalancePerSafekeepingPlace1(AggregateBalancePerSafekeepingPlace1 obj) throws Exception {
+	public static void checkAggregateBalanceInformation7(AggregateBalanceInformation7 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -249,6 +249,24 @@ public class ConstraintAggregateQuantityGuideline {
 	 * both present.
 	 */
 	public static void checkAggregateBalanceInformation1(AggregateBalanceInformation1 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The AggregateQuantity should be the sum of AvailableQuantity and
+	 * NotAvailableQuantity if AvailableQuantity and NotAvailableQuantity are
+	 * both present.
+	 */
+	public static void checkAggregateBalanceInformation4(AggregateBalanceInformation4 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The AggregateQuantity should be the sum of AvailableQuantity and
+	 * NonAvailableQuantity if AvailableQuantityand NonAvailableQuantity are
+	 * both present.
+	 */
+	public static void checkAggregateBalancePerSafekeepingPlace1(AggregateBalancePerSafekeepingPlace1 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -266,25 +284,7 @@ public class ConstraintAggregateQuantityGuideline {
 	 * NotAvailableQuantity if AvailableQuantity and NotAvailableQuantity are
 	 * both present.
 	 */
-	public static void checkAggregateBalanceInformation4(AggregateBalanceInformation4 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * The AggregateQuantity should be the sum of AvailableQuantity and
-	 * NotAvailableQuantity if AvailableQuantity and NotAvailableQuantity are
-	 * both present.
-	 */
 	public static void checkAggregateBalanceInformation5(AggregateBalanceInformation5 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * The AggregateQuantity should be the sum of AvailableQuantity and
-	 * NotAvailableQuantity if AvailableQuantity and NotAvailableQuantity are
-	 * both present.
-	 */
-	public static void checkAggregateBalanceInformation7(AggregateBalanceInformation7 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

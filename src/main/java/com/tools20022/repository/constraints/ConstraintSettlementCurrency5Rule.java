@@ -37,8 +37,8 @@ public class ConstraintSettlementCurrency5Rule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder2
-	 * RedemptionMultipleOrder2}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder2
+	 * SubscriptionMultipleOrder2}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -52,17 +52,17 @@ public class ConstraintSettlementCurrency5Rule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<RedemptionMultipleOrder2> forRedemptionMultipleOrder2 = new MMConstraint<RedemptionMultipleOrder2>() {
+	public static final MMConstraint<SubscriptionMultipleOrder2> forSubscriptionMultipleOrder2 = new MMConstraint<SubscriptionMultipleOrder2>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementCurrency5Rule";
 			definition = "If BulkCashSettlementDetails is present, then Currency in IndividualOrderDetails/NetAmount and GrossAmount must be the same as IndividualOrderDetails/RequestedSettlementCurrency in all occurrences of IndividualOrderDetails.";
-			owner_lazy = () -> RedemptionMultipleOrder2.mmObject();
+			owner_lazy = () -> SubscriptionMultipleOrder2.mmObject();
 		}
 
 		@Override
-		public void executeValidator(RedemptionMultipleOrder2 obj) throws Exception {
-			checkRedemptionMultipleOrder2(obj);
+		public void executeValidator(SubscriptionMultipleOrder2 obj) throws Exception {
+			checkSubscriptionMultipleOrder2(obj);
 		}
 	};
 	/**
@@ -105,83 +105,6 @@ public class ConstraintSettlementCurrency5Rule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder4
-	 * RedemptionMultipleOrder4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementCurrency5Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If BulkCashSettlementDetails is present, then Currency in IndividualOrderDetails/SettlementAmount, if present, must be the same in all occurrences of IndividualOrderDetails."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementCurrencyRule#forRedemptionMultipleOrder6
-	 * ConstraintSettlementCurrencyRule.forRedemptionMultipleOrder6}</li>
-	 * </ul>
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<RedemptionMultipleOrder4> forRedemptionMultipleOrder4 = new MMConstraint<RedemptionMultipleOrder4>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementCurrency5Rule";
-			definition = "If BulkCashSettlementDetails is present, then Currency in IndividualOrderDetails/SettlementAmount, if present, must be the same in all occurrences of IndividualOrderDetails.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementCurrencyRule.forRedemptionMultipleOrder6);
-			owner_lazy = () -> RedemptionMultipleOrder4.mmObject();
-		}
-
-		@Override
-		public void executeValidator(RedemptionMultipleOrder4 obj) throws Exception {
-			checkRedemptionMultipleOrder4(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder2
-	 * SubscriptionMultipleOrder2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementCurrency5Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If BulkCashSettlementDetails is present, then Currency in IndividualOrderDetails/NetAmount and GrossAmount must be the same as IndividualOrderDetails/RequestedSettlementCurrency in all occurrences of IndividualOrderDetails."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SubscriptionMultipleOrder2> forSubscriptionMultipleOrder2 = new MMConstraint<SubscriptionMultipleOrder2>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SettlementCurrency5Rule";
-			definition = "If BulkCashSettlementDetails is present, then Currency in IndividualOrderDetails/NetAmount and GrossAmount must be the same as IndividualOrderDetails/RequestedSettlementCurrency in all occurrences of IndividualOrderDetails.";
-			owner_lazy = () -> SubscriptionMultipleOrder2.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SubscriptionMultipleOrder2 obj) throws Exception {
-			checkSubscriptionMultipleOrder2(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder3
 	 * SubscriptionMultipleOrder3}</li>
 	 * <li>
@@ -208,6 +131,40 @@ public class ConstraintSettlementCurrency5Rule {
 		@Override
 		public void executeValidator(SubscriptionMultipleOrder3 obj) throws Exception {
 			checkSubscriptionMultipleOrder3(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder2
+	 * RedemptionMultipleOrder2}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementCurrency5Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If BulkCashSettlementDetails is present, then Currency in IndividualOrderDetails/NetAmount and GrossAmount must be the same as IndividualOrderDetails/RequestedSettlementCurrency in all occurrences of IndividualOrderDetails."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<RedemptionMultipleOrder2> forRedemptionMultipleOrder2 = new MMConstraint<RedemptionMultipleOrder2>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementCurrency5Rule";
+			definition = "If BulkCashSettlementDetails is present, then Currency in IndividualOrderDetails/NetAmount and GrossAmount must be the same as IndividualOrderDetails/RequestedSettlementCurrency in all occurrences of IndividualOrderDetails.";
+			owner_lazy = () -> RedemptionMultipleOrder2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionMultipleOrder2 obj) throws Exception {
+			checkRedemptionMultipleOrder2(obj);
 		}
 	};
 	/**
@@ -253,6 +210,49 @@ public class ConstraintSettlementCurrency5Rule {
 			checkSubscriptionMultipleOrder4(obj);
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder4
+	 * RedemptionMultipleOrder4}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementCurrency5Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If BulkCashSettlementDetails is present, then Currency in IndividualOrderDetails/SettlementAmount, if present, must be the same in all occurrences of IndividualOrderDetails."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementCurrencyRule#forRedemptionMultipleOrder6
+	 * ConstraintSettlementCurrencyRule.forRedemptionMultipleOrder6}</li>
+	 * </ul>
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<RedemptionMultipleOrder4> forRedemptionMultipleOrder4 = new MMConstraint<RedemptionMultipleOrder4>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementCurrency5Rule";
+			definition = "If BulkCashSettlementDetails is present, then Currency in IndividualOrderDetails/SettlementAmount, if present, must be the same in all occurrences of IndividualOrderDetails.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementCurrencyRule.forRedemptionMultipleOrder6);
+			owner_lazy = () -> RedemptionMultipleOrder4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionMultipleOrder4 obj) throws Exception {
+			checkRedemptionMultipleOrder4(obj);
+		}
+	};
 
 	/**
 	 * If BulkCashSettlementDetails is present, then Currency in
@@ -260,7 +260,7 @@ public class ConstraintSettlementCurrency5Rule {
 	 * IndividualOrderDetails/RequestedSettlementCurrency in all occurrences of
 	 * IndividualOrderDetails.
 	 */
-	public static void checkRedemptionMultipleOrder2(RedemptionMultipleOrder2 obj) throws Exception {
+	public static void checkSubscriptionMultipleOrder2(SubscriptionMultipleOrder2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -278,7 +278,7 @@ public class ConstraintSettlementCurrency5Rule {
 	 * IndividualOrderDetails/SettlementAmount, if present, must be the same in
 	 * all occurrences of IndividualOrderDetails.
 	 */
-	public static void checkRedemptionMultipleOrder4(RedemptionMultipleOrder4 obj) throws Exception {
+	public static void checkSubscriptionMultipleOrder3(SubscriptionMultipleOrder3 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -288,16 +288,7 @@ public class ConstraintSettlementCurrency5Rule {
 	 * IndividualOrderDetails/RequestedSettlementCurrency in all occurrences of
 	 * IndividualOrderDetails.
 	 */
-	public static void checkSubscriptionMultipleOrder2(SubscriptionMultipleOrder2 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If BulkCashSettlementDetails is present, then Currency in
-	 * IndividualOrderDetails/SettlementAmount, if present, must be the same in
-	 * all occurrences of IndividualOrderDetails.
-	 */
-	public static void checkSubscriptionMultipleOrder3(SubscriptionMultipleOrder3 obj) throws Exception {
+	public static void checkRedemptionMultipleOrder2(RedemptionMultipleOrder2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -307,6 +298,15 @@ public class ConstraintSettlementCurrency5Rule {
 	 * all occurrences of IndividualOrderDetails.
 	 */
 	public static void checkSubscriptionMultipleOrder4(SubscriptionMultipleOrder4 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If BulkCashSettlementDetails is present, then Currency in
+	 * IndividualOrderDetails/SettlementAmount, if present, must be the same in
+	 * all occurrences of IndividualOrderDetails.
+	 */
+	public static void checkRedemptionMultipleOrder4(RedemptionMultipleOrder4 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

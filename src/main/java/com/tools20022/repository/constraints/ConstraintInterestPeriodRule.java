@@ -35,40 +35,6 @@ public class ConstraintInterestPeriodRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod3
-	 * CorporateActionPeriod3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "InterestPeriodRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "InterestPeriod must be used only if it is different from a normal accrued interest period."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CorporateActionPeriod3> forCorporateActionPeriod3 = new MMConstraint<CorporateActionPeriod3>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "InterestPeriodRule";
-			definition = "InterestPeriod must be used only if it is different from a normal accrued interest period.";
-			owner_lazy = () -> CorporateActionPeriod3.mmObject();
-		}
-
-		@Override
-		public void executeValidator(CorporateActionPeriod3 obj) throws Exception {
-			checkCorporateActionPeriod3(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod6
 	 * CorporateActionPeriod6}</li>
 	 * <li>
@@ -95,6 +61,46 @@ public class ConstraintInterestPeriodRule {
 		@Override
 		public void executeValidator(CorporateActionPeriod6 obj) throws Exception {
 			checkCorporateActionPeriod6(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod14
+	 * CorporateActionPeriod14}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InterestPeriodRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "InterestPeriod must be used only if it is different from a normal accrued interest period."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintInterestPeriodRule#forCorporateActionPeriod10
+	 * ConstraintInterestPeriodRule.forCorporateActionPeriod10}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionPeriod14> forCorporateActionPeriod14 = new MMConstraint<CorporateActionPeriod14>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "InterestPeriodRule";
+			definition = "InterestPeriod must be used only if it is different from a normal accrued interest period.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInterestPeriodRule.forCorporateActionPeriod10;
+			owner_lazy = () -> CorporateActionPeriod14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionPeriod14 obj) throws Exception {
+			checkCorporateActionPeriod14(obj);
 		}
 	};
 	/**
@@ -146,6 +152,40 @@ public class ConstraintInterestPeriodRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod3
+	 * CorporateActionPeriod3}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InterestPeriodRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "InterestPeriod must be used only if it is different from a normal accrued interest period."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionPeriod3> forCorporateActionPeriod3 = new MMConstraint<CorporateActionPeriod3>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "InterestPeriodRule";
+			definition = "InterestPeriod must be used only if it is different from a normal accrued interest period.";
+			owner_lazy = () -> CorporateActionPeriod3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionPeriod3 obj) throws Exception {
+			checkCorporateActionPeriod3(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod10
 	 * CorporateActionPeriod10}</li>
 	 * <li>
@@ -189,52 +229,12 @@ public class ConstraintInterestPeriodRule {
 			checkCorporateActionPeriod10(obj);
 		}
 	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod14
-	 * CorporateActionPeriod14}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "InterestPeriodRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "InterestPeriod must be used only if it is different from a normal accrued interest period."
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintInterestPeriodRule#forCorporateActionPeriod10
-	 * ConstraintInterestPeriodRule.forCorporateActionPeriod10}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CorporateActionPeriod14> forCorporateActionPeriod14 = new MMConstraint<CorporateActionPeriod14>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "InterestPeriodRule";
-			definition = "InterestPeriod must be used only if it is different from a normal accrued interest period.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInterestPeriodRule.forCorporateActionPeriod10;
-			owner_lazy = () -> CorporateActionPeriod14.mmObject();
-		}
-
-		@Override
-		public void executeValidator(CorporateActionPeriod14 obj) throws Exception {
-			checkCorporateActionPeriod14(obj);
-		}
-	};
 
 	/**
 	 * InterestPeriod must be used only if it is different from a normal accrued
 	 * interest period.
 	 */
-	public static void checkCorporateActionPeriod3(CorporateActionPeriod3 obj) throws Exception {
+	public static void checkCorporateActionPeriod6(CorporateActionPeriod6 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -242,7 +242,7 @@ public class ConstraintInterestPeriodRule {
 	 * InterestPeriod must be used only if it is different from a normal accrued
 	 * interest period.
 	 */
-	public static void checkCorporateActionPeriod6(CorporateActionPeriod6 obj) throws Exception {
+	public static void checkCorporateActionPeriod14(CorporateActionPeriod14 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -258,7 +258,7 @@ public class ConstraintInterestPeriodRule {
 	 * InterestPeriod must be used only if it is different from a normal accrued
 	 * interest period.
 	 */
-	public static void checkCorporateActionPeriod10(CorporateActionPeriod10 obj) throws Exception {
+	public static void checkCorporateActionPeriod3(CorporateActionPeriod3 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -266,7 +266,7 @@ public class ConstraintInterestPeriodRule {
 	 * InterestPeriod must be used only if it is different from a normal accrued
 	 * interest period.
 	 */
-	public static void checkCorporateActionPeriod14(CorporateActionPeriod14 obj) throws Exception {
+	public static void checkCorporateActionPeriod10(CorporateActionPeriod10 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

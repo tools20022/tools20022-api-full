@@ -49,7 +49,7 @@ public class ConstraintMovementCancellationStatusDetailsRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<AgentCAMovementStatusAdviceV01> forAgentCAMovementStatusAdviceV01 = new MMConstraint<AgentCAMovementStatusAdviceV01>() {
+	public static final MMConstraint<AgentCAMovementStatusAdviceV01> for_seev_AgentCAMovementStatusAdviceV01 = new MMConstraint<AgentCAMovementStatusAdviceV01>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MovementCancellationStatusDetailsRule";
@@ -59,7 +59,7 @@ public class ConstraintMovementCancellationStatusDetailsRule {
 
 		@Override
 		public void executeValidator(AgentCAMovementStatusAdviceV01 obj) throws Exception {
-			checkAgentCAMovementStatusAdviceV01(obj);
+			check_seev_AgentCAMovementStatusAdviceV01(obj);
 		}
 	};
 
@@ -67,7 +67,7 @@ public class ConstraintMovementCancellationStatusDetailsRule {
 	 * If AgentCAMovementCancellationRequestIdentification is present then
 	 * MovementCancellationStatusDetails must be present.
 	 */
-	public static void checkAgentCAMovementStatusAdviceV01(AgentCAMovementStatusAdviceV01 obj) throws Exception {
+	public static void check_seev_AgentCAMovementStatusAdviceV01(AgentCAMovementStatusAdviceV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

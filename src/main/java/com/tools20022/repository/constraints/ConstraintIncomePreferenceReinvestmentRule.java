@@ -26,7 +26,7 @@ import com.tools20022.repository.msg.InvestmentAccount63;
 import java.util.Arrays;
 
 /**
- * If IncomePreference is CASH, then ReinvestmentDetails is not allowed.
+ * If IncomePreference is CASH (Cash), then ReinvestmentDetails is not allowed.
  */
 public class ConstraintIncomePreferenceReinvestmentRule {
 
@@ -36,8 +36,8 @@ public class ConstraintIncomePreferenceReinvestmentRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount47
-	 * InvestmentAccount47}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount63
+	 * InvestmentAccount63}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
 	 * expression} =
 	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/ReinvestmentDetails[*]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/IncomePreference&lt;/leftOperand&gt;&lt;rightOperand&gt;Cash&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
@@ -51,36 +51,28 @@ public class ConstraintIncomePreferenceReinvestmentRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If IncomePreference is CASH, then ReinvestmentDetails is not allowed."</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintIncomePreferenceReinvestmentRule#forInvestmentAccount51
-	 * ConstraintIncomePreferenceReinvestmentRule.forInvestmentAccount51}</li>
-	 * </ul>
+	 * "If IncomePreference is CASH (Cash), then ReinvestmentDetails is not allowed."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintIncomePreferenceReinvestment1Rule#forInvestmentAccount39
-	 * ConstraintIncomePreferenceReinvestment1Rule.forInvestmentAccount39}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintIncomePreferenceReinvestmentRule#forInvestmentAccount51
+	 * ConstraintIncomePreferenceReinvestmentRule.forInvestmentAccount51}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<InvestmentAccount47> forInvestmentAccount47 = new MMConstraint<InvestmentAccount47>() {
+	public static final MMConstraint<InvestmentAccount63> forInvestmentAccount63 = new MMConstraint<InvestmentAccount63>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncomePreferenceReinvestmentRule";
-			definition = "If IncomePreference is CASH, then ReinvestmentDetails is not allowed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintIncomePreferenceReinvestmentRule.forInvestmentAccount51);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintIncomePreferenceReinvestment1Rule.forInvestmentAccount39;
-			owner_lazy = () -> InvestmentAccount47.mmObject();
+			definition = "If IncomePreference is CASH (Cash), then ReinvestmentDetails is not allowed.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintIncomePreferenceReinvestmentRule.forInvestmentAccount51;
+			owner_lazy = () -> InvestmentAccount63.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ReinvestmentDetails[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/IncomePreference</leftOperand><rightOperand>Cash</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
 		}
 
 		@Override
-		public void executeValidator(InvestmentAccount47 obj) throws Exception {
-			checkInvestmentAccount47(obj);
+		public void executeValidator(InvestmentAccount63 obj) throws Exception {
+			checkInvestmentAccount63(obj);
 		}
 	};
 	/**
@@ -143,8 +135,8 @@ public class ConstraintIncomePreferenceReinvestmentRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount63
-	 * InvestmentAccount63}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount47
+	 * InvestmentAccount47}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
 	 * expression} =
 	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/ReinvestmentDetails[*]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/IncomePreference&lt;/leftOperand&gt;&lt;rightOperand&gt;Cash&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
@@ -158,35 +150,44 @@ public class ConstraintIncomePreferenceReinvestmentRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If IncomePreference is CASH (Cash), then ReinvestmentDetails is not allowed."
+	 * "If IncomePreference is CASH, then ReinvestmentDetails is not allowed."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintIncomePreferenceReinvestmentRule#forInvestmentAccount51
+	 * ConstraintIncomePreferenceReinvestmentRule.forInvestmentAccount51}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintIncomePreferenceReinvestmentRule#forInvestmentAccount51
-	 * ConstraintIncomePreferenceReinvestmentRule.forInvestmentAccount51}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintIncomePreferenceReinvestment1Rule#forInvestmentAccount39
+	 * ConstraintIncomePreferenceReinvestment1Rule.forInvestmentAccount39}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<InvestmentAccount63> forInvestmentAccount63 = new MMConstraint<InvestmentAccount63>() {
+	public static final MMConstraint<InvestmentAccount47> forInvestmentAccount47 = new MMConstraint<InvestmentAccount47>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncomePreferenceReinvestmentRule";
-			definition = "If IncomePreference is CASH (Cash), then ReinvestmentDetails is not allowed.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintIncomePreferenceReinvestmentRule.forInvestmentAccount51;
-			owner_lazy = () -> InvestmentAccount63.mmObject();
+			definition = "If IncomePreference is CASH, then ReinvestmentDetails is not allowed.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintIncomePreferenceReinvestmentRule.forInvestmentAccount51);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintIncomePreferenceReinvestment1Rule.forInvestmentAccount39;
+			owner_lazy = () -> InvestmentAccount47.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ReinvestmentDetails[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/IncomePreference</leftOperand><rightOperand>Cash</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
 		}
 
 		@Override
-		public void executeValidator(InvestmentAccount63 obj) throws Exception {
-			checkInvestmentAccount63(obj);
+		public void executeValidator(InvestmentAccount47 obj) throws Exception {
+			checkInvestmentAccount47(obj);
 		}
 	};
 
 	/**
-	 * If IncomePreference is CASH, then ReinvestmentDetails is not allowed.
+	 * If IncomePreference is CASH (Cash), then ReinvestmentDetails is not
+	 * allowed.
 	 */
-	public static void checkInvestmentAccount47(InvestmentAccount47 obj) throws Exception {
+	public static void checkInvestmentAccount63(InvestmentAccount63 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -199,10 +200,9 @@ public class ConstraintIncomePreferenceReinvestmentRule {
 	}
 
 	/**
-	 * If IncomePreference is CASH (Cash), then ReinvestmentDetails is not
-	 * allowed.
+	 * If IncomePreference is CASH, then ReinvestmentDetails is not allowed.
 	 */
-	public static void checkInvestmentAccount63(InvestmentAccount63 obj) throws Exception {
+	public static void checkInvestmentAccount47(InvestmentAccount47 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

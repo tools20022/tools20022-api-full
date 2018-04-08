@@ -26,10 +26,48 @@ import com.tools20022.repository.msg.Debt3;
 import java.util.Arrays;
 
 /**
- * If PutableIndicator is present, then PutDate must be present.
+ * If PutableIndicator is present, then PutableDate must be present.
  */
 public class ConstraintPutableDateAndPutableIndicatorRule {
 
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.Debt3 Debt3}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PutableDateAndPutableIndicatorRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PutableIndicator is present, then PutableDate must be present."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPutableDateAndPutableIndicatorRule#forDebt2
+	 * ConstraintPutableDateAndPutableIndicatorRule.forDebt2}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<Debt3> forDebt3 = new MMConstraint<Debt3>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PutableDateAndPutableIndicatorRule";
+			definition = "If PutableIndicator is present, then PutableDate must be present.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPutableDateAndPutableIndicatorRule.forDebt2;
+			owner_lazy = () -> Debt3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Debt3 obj) throws Exception {
+			checkDebt3(obj);
+		}
+	};
 	/**
 	 * 
 	 <p>
@@ -103,44 +141,13 @@ public class ConstraintPutableDateAndPutableIndicatorRule {
 			checkDebt2(obj);
 		}
 	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.Debt3 Debt3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PutableDateAndPutableIndicatorRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If PutableIndicator is present, then PutableDate must be present."</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintPutableDateAndPutableIndicatorRule#forDebt2
-	 * ConstraintPutableDateAndPutableIndicatorRule.forDebt2}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<Debt3> forDebt3 = new MMConstraint<Debt3>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "PutableDateAndPutableIndicatorRule";
-			definition = "If PutableIndicator is present, then PutableDate must be present.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPutableDateAndPutableIndicatorRule.forDebt2;
-			owner_lazy = () -> Debt3.mmObject();
-		}
 
-		@Override
-		public void executeValidator(Debt3 obj) throws Exception {
-			checkDebt3(obj);
-		}
-	};
+	/**
+	 * If PutableIndicator is present, then PutableDate must be present.
+	 */
+	public static void checkDebt3(Debt3 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
 
 	/**
 	 * If PutableIndicator is present, then PutDate must be present.
@@ -153,13 +160,6 @@ public class ConstraintPutableDateAndPutableIndicatorRule {
 	 * If PutableIndicator is present, then PutableDate must be present.
 	 */
 	public static void checkDebt2(Debt2 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If PutableIndicator is present, then PutableDate must be present.
-	 */
-	public static void checkDebt3(Debt3 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

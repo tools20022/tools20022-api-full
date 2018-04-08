@@ -175,9 +175,9 @@ public class ReversalOfTransferOutConfirmationV02 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversalByReferenceOrByTransferOutConfirmationDetailsRule";
 			definition = "Either ReversalByReference or ReversalByTransferOutConfirmationDetails may be present, but not both.";
-			messageDefinition_lazy = () -> com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV02.mmObject();
 			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV02.mmReversalByReference,
 					com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV02.mmReversalByTransferOutConfirmationDetails);
+			messageDefinition_lazy = () -> com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV02.mmObject();
 		}
 	};
 	@XmlElement(name = "MsgId", required = true)

@@ -101,10 +101,10 @@ public class PaymentsInitiationLatestVersion {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Payments Initiation - Latest version - master";
 				definition = "Messages that support the initiation of a payment from the ordering customer to a financial institution that services a cash account and reporting its status.";
+				code = "pain";
 				messageDefinition_lazy = () -> Arrays.asList(MandateAcceptanceReportV05.mmObject(), MandateAmendmentRequestV05.mmObject(), MandateInitiationRequestV05.mmObject(), CustomerCreditTransferInitiationV08.mmObject(),
 						MandateCancellationRequestV05.mmObject(), CustomerDirectDebitInitiationV07.mmObject(), CreditorPaymentActivationRequestStatusReportV06.mmObject(), CreditorPaymentActivationRequestV06.mmObject(),
 						MandateSuspensionRequestV01.mmObject(), MandateCopyRequestV01.mmObject(), CustomerPaymentStatusReportV09.mmObject(), CustomerPaymentReversalV08.mmObject());
-				code = "pain";
 			}
 		});
 		return mmObject_lazy.get();

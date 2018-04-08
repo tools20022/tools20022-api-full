@@ -24,8 +24,8 @@ import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 
 /**
- * If ReceiversIntermediaryDetails is present, then ReceiversCustodianDetails
- * must also be present in the same occurrence of ReceivingPartiesAndAccount1.
+ * If PhysicalTransferDetails is present, then
+ * SettlementPartiesDetails/ReceiversCustodianDetails is not allowed.
  */
 public class ConstraintReceiversCustodianDetailsRule {
 
@@ -35,42 +35,8 @@ public class ConstraintReceiversCustodianDetailsRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount1
-	 * ReceivingPartiesAndAccount1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ReceiversCustodianDetailsRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If ReceiversIntermediaryDetails is present, then ReceiversCustodianDetails must also be present in the same occurrence of ReceivingPartiesAndAccount1."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<ReceivingPartiesAndAccount1> forReceivingPartiesAndAccount1 = new MMConstraint<ReceivingPartiesAndAccount1>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ReceiversCustodianDetailsRule";
-			definition = "If ReceiversIntermediaryDetails is present, then ReceiversCustodianDetails must also be present in the same occurrence of ReceivingPartiesAndAccount1.";
-			owner_lazy = () -> ReceivingPartiesAndAccount1.mmObject();
-		}
-
-		@Override
-		public void executeValidator(ReceivingPartiesAndAccount1 obj) throws Exception {
-			checkReceivingPartiesAndAccount1(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation2
-	 * ReceiveInformation2}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation7
+	 * ReceiveInformation7}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -84,128 +50,17 @@ public class ConstraintReceiversCustodianDetailsRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<ReceiveInformation2> forReceiveInformation2 = new MMConstraint<ReceiveInformation2>() {
+	public static final MMConstraint<ReceiveInformation7> forReceiveInformation7 = new MMConstraint<ReceiveInformation7>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiversCustodianDetailsRule";
 			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversCustodianDetails is not allowed.";
-			owner_lazy = () -> ReceiveInformation2.mmObject();
+			owner_lazy = () -> ReceiveInformation7.mmObject();
 		}
 
 		@Override
-		public void executeValidator(ReceiveInformation2 obj) throws Exception {
-			checkReceiveInformation2(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount4
-	 * ReceivingPartiesAndAccount4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ReceiversCustodianDetailsRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If ReceiversIntermediaryDetails is present, then ReceiversCustodianDetails must also be present."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<ReceivingPartiesAndAccount4> forReceivingPartiesAndAccount4 = new MMConstraint<ReceivingPartiesAndAccount4>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ReceiversCustodianDetailsRule";
-			definition = "If ReceiversIntermediaryDetails is present, then ReceiversCustodianDetails must also be present.";
-			owner_lazy = () -> ReceivingPartiesAndAccount4.mmObject();
-		}
-
-		@Override
-		public void executeValidator(ReceivingPartiesAndAccount4 obj) throws Exception {
-			checkReceivingPartiesAndAccount4(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation4
-	 * ReceiveInformation4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ReceiversCustodianDetailsRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversCustodianDetails is not allowed."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<ReceiveInformation4> forReceiveInformation4 = new MMConstraint<ReceiveInformation4>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ReceiversCustodianDetailsRule";
-			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversCustodianDetails is not allowed.";
-			owner_lazy = () -> ReceiveInformation4.mmObject();
-		}
-
-		@Override
-		public void executeValidator(ReceiveInformation4 obj) throws Exception {
-			checkReceiveInformation4(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount8
-	 * ReceivingPartiesAndAccount8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ReceiversCustodianDetailsRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If ReceiversIntermediaryDetails is present, then ReceiversCustodianDetails must also be present."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule#forReceivingPartiesAndAccount9
-	 * ConstraintReceiversCustodianDetailsRule.forReceivingPartiesAndAccount9}</li>
-	 * </ul>
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<ReceivingPartiesAndAccount8> forReceivingPartiesAndAccount8 = new MMConstraint<ReceivingPartiesAndAccount8>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ReceiversCustodianDetailsRule";
-			definition = "If ReceiversIntermediaryDetails is present, then ReceiversCustodianDetails must also be present.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule.forReceivingPartiesAndAccount9);
-			owner_lazy = () -> ReceivingPartiesAndAccount8.mmObject();
-		}
-
-		@Override
-		public void executeValidator(ReceivingPartiesAndAccount8 obj) throws Exception {
-			checkReceivingPartiesAndAccount8(obj);
+		public void executeValidator(ReceiveInformation7 obj) throws Exception {
+			checkReceiveInformation7(obj);
 		}
 	};
 	/**
@@ -248,8 +103,12 @@ public class ConstraintReceiversCustodianDetailsRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation6
-	 * ReceiveInformation6}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount18
+	 * ReceivingPartiesAndAccount18}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/ReceiversCustodianDetails&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/ReceiversIntermediary1Details&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -259,166 +118,28 @@ public class ConstraintReceiversCustodianDetailsRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversCustodianDetails is not allowed."
+	 * "If ReceiversIntermediary1Details is present, then ReceiversCustodianDetails must also be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule#forReceivingPartiesAndAccount14
+	 * ConstraintReceiversCustodianDetailsRule.forReceivingPartiesAndAccount14}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<ReceiveInformation6> forReceiveInformation6 = new MMConstraint<ReceiveInformation6>() {
+	public static final MMConstraint<ReceivingPartiesAndAccount18> forReceivingPartiesAndAccount18 = new MMConstraint<ReceivingPartiesAndAccount18>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiversCustodianDetailsRule";
-			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversCustodianDetails is not allowed.";
-			owner_lazy = () -> ReceiveInformation6.mmObject();
+			definition = "If ReceiversIntermediary1Details is present, then ReceiversCustodianDetails must also be present.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule.forReceivingPartiesAndAccount14;
+			owner_lazy = () -> ReceivingPartiesAndAccount18.mmObject();
+			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ReceiversCustodianDetails</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ReceiversIntermediary1Details</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
 		}
 
 		@Override
-		public void executeValidator(ReceiveInformation6 obj) throws Exception {
-			checkReceiveInformation6(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation11
-	 * ReceiveInformation11}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ReceiversCustodianDetailsRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversCustodianDetails is not allowed."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule#forReceiveInformation12
-	 * ConstraintReceiversCustodianDetailsRule.forReceiveInformation12}</li>
-	 * </ul>
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<ReceiveInformation11> forReceiveInformation11 = new MMConstraint<ReceiveInformation11>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ReceiversCustodianDetailsRule";
-			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversCustodianDetails is not allowed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule.forReceiveInformation12);
-			owner_lazy = () -> ReceiveInformation11.mmObject();
-		}
-
-		@Override
-		public void executeValidator(ReceiveInformation11 obj) throws Exception {
-			checkReceiveInformation11(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation1
-	 * ReceiveInformation1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ReceiversCustodianDetailsRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversCustodianDetails is not allowed."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<ReceiveInformation1> forReceiveInformation1 = new MMConstraint<ReceiveInformation1>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ReceiversCustodianDetailsRule";
-			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversCustodianDetails is not allowed.";
-			owner_lazy = () -> ReceiveInformation1.mmObject();
-		}
-
-		@Override
-		public void executeValidator(ReceiveInformation1 obj) throws Exception {
-			checkReceiveInformation1(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation3
-	 * ReceiveInformation3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ReceiversCustodianDetailsRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversCustodianDetails is not allowed."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<ReceiveInformation3> forReceiveInformation3 = new MMConstraint<ReceiveInformation3>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ReceiversCustodianDetailsRule";
-			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversCustodianDetails is not allowed.";
-			owner_lazy = () -> ReceiveInformation3.mmObject();
-		}
-
-		@Override
-		public void executeValidator(ReceiveInformation3 obj) throws Exception {
-			checkReceiveInformation3(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation7
-	 * ReceiveInformation7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ReceiversCustodianDetailsRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversCustodianDetails is not allowed."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<ReceiveInformation7> forReceiveInformation7 = new MMConstraint<ReceiveInformation7>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ReceiversCustodianDetailsRule";
-			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversCustodianDetails is not allowed.";
-			owner_lazy = () -> ReceiveInformation7.mmObject();
-		}
-
-		@Override
-		public void executeValidator(ReceiveInformation7 obj) throws Exception {
-			checkReceiveInformation7(obj);
+		public void executeValidator(ReceivingPartiesAndAccount18 obj) throws Exception {
+			checkReceivingPartiesAndAccount18(obj);
 		}
 	};
 	/**
@@ -461,8 +182,145 @@ public class ConstraintReceiversCustodianDetailsRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation9
-	 * ReceiveInformation9}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount17
+	 * ReceivingPartiesAndAccount17}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/ReceiversCustodianDetails&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/ReceiversIntermediary1Details&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ReceiversCustodianDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If ReceiversIntermediary1Details is present, then ReceiversCustodianDetails must also be present."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule#forReceivingPartiesAndAccount13
+	 * ConstraintReceiversCustodianDetailsRule.forReceivingPartiesAndAccount13}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<ReceivingPartiesAndAccount17> forReceivingPartiesAndAccount17 = new MMConstraint<ReceivingPartiesAndAccount17>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ReceiversCustodianDetailsRule";
+			definition = "If ReceiversIntermediary1Details is present, then ReceiversCustodianDetails must also be present.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule.forReceivingPartiesAndAccount13;
+			owner_lazy = () -> ReceivingPartiesAndAccount17.mmObject();
+			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ReceiversCustodianDetails</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ReceiversIntermediary1Details</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(ReceivingPartiesAndAccount17 obj) throws Exception {
+			checkReceivingPartiesAndAccount17(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation4
+	 * ReceiveInformation4}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ReceiversCustodianDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversCustodianDetails is not allowed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<ReceiveInformation4> forReceiveInformation4 = new MMConstraint<ReceiveInformation4>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ReceiversCustodianDetailsRule";
+			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversCustodianDetails is not allowed.";
+			owner_lazy = () -> ReceiveInformation4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ReceiveInformation4 obj) throws Exception {
+			checkReceiveInformation4(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount13
+	 * ReceivingPartiesAndAccount13}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/ReceiversCustodianDetails&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/ReceiversIntermediary1Details&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ReceiversCustodianDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If ReceiversIntermediary1Details is present, then ReceiversCustodianDetails must also be present."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule#forReceivingPartiesAndAccount14
+	 * ConstraintReceiversCustodianDetailsRule.forReceivingPartiesAndAccount14}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule#forReceivingPartiesAndAccount17
+	 * ConstraintReceiversCustodianDetailsRule.forReceivingPartiesAndAccount17}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule#forReceivingPartiesAndAccount9
+	 * ConstraintReceiversCustodianDetailsRule.forReceivingPartiesAndAccount9}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<ReceivingPartiesAndAccount13> forReceivingPartiesAndAccount13 = new MMConstraint<ReceivingPartiesAndAccount13>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ReceiversCustodianDetailsRule";
+			definition = "If ReceiversIntermediary1Details is present, then ReceiversCustodianDetails must also be present.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule.forReceivingPartiesAndAccount14,
+					com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule.forReceivingPartiesAndAccount17);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule.forReceivingPartiesAndAccount9;
+			owner_lazy = () -> ReceivingPartiesAndAccount13.mmObject();
+			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ReceiversCustodianDetails</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ReceiversIntermediary1Details</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(ReceivingPartiesAndAccount13 obj) throws Exception {
+			checkReceivingPartiesAndAccount13(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation14
+	 * ReceiveInformation14}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -478,24 +336,30 @@ public class ConstraintReceiversCustodianDetailsRule {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule#forReceiveInformation13
-	 * ConstraintReceiversCustodianDetailsRule.forReceiveInformation13}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule#forReceiveInformation17
+	 * ConstraintReceiversCustodianDetailsRule.forReceiveInformation17}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule#forReceiveInformation12
+	 * ConstraintReceiversCustodianDetailsRule.forReceiveInformation12}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<ReceiveInformation9> forReceiveInformation9 = new MMConstraint<ReceiveInformation9>() {
+	public static final MMConstraint<ReceiveInformation14> forReceiveInformation14 = new MMConstraint<ReceiveInformation14>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiversCustodianDetailsRule";
 			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversCustodianDetails is not allowed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule.forReceiveInformation13);
-			owner_lazy = () -> ReceiveInformation9.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule.forReceiveInformation17);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule.forReceiveInformation12;
+			owner_lazy = () -> ReceiveInformation14.mmObject();
 		}
 
 		@Override
-		public void executeValidator(ReceiveInformation9 obj) throws Exception {
-			checkReceiveInformation9(obj);
+		public void executeValidator(ReceiveInformation14 obj) throws Exception {
+			checkReceiveInformation14(obj);
 		}
 	};
 	/**
@@ -602,6 +466,46 @@ public class ConstraintReceiversCustodianDetailsRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation18
+	 * ReceiveInformation18}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ReceiversCustodianDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversCustodianDetails is not allowed."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule#forReceiveInformation17
+	 * ConstraintReceiversCustodianDetailsRule.forReceiveInformation17}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<ReceiveInformation18> forReceiveInformation18 = new MMConstraint<ReceiveInformation18>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ReceiversCustodianDetailsRule";
+			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversCustodianDetails is not allowed.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule.forReceiveInformation17;
+			owner_lazy = () -> ReceiveInformation18.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ReceiveInformation18 obj) throws Exception {
+			checkReceiveInformation18(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount9
 	 * ReceivingPartiesAndAccount9}</li>
 	 * <li>
@@ -643,6 +547,117 @@ public class ConstraintReceiversCustodianDetailsRule {
 		@Override
 		public void executeValidator(ReceivingPartiesAndAccount9 obj) throws Exception {
 			checkReceivingPartiesAndAccount9(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation6
+	 * ReceiveInformation6}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ReceiversCustodianDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversCustodianDetails is not allowed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<ReceiveInformation6> forReceiveInformation6 = new MMConstraint<ReceiveInformation6>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ReceiversCustodianDetailsRule";
+			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversCustodianDetails is not allowed.";
+			owner_lazy = () -> ReceiveInformation6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ReceiveInformation6 obj) throws Exception {
+			checkReceiveInformation6(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation9
+	 * ReceiveInformation9}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ReceiversCustodianDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversCustodianDetails is not allowed."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule#forReceiveInformation13
+	 * ConstraintReceiversCustodianDetailsRule.forReceiveInformation13}</li>
+	 * </ul>
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<ReceiveInformation9> forReceiveInformation9 = new MMConstraint<ReceiveInformation9>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ReceiversCustodianDetailsRule";
+			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversCustodianDetails is not allowed.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule.forReceiveInformation13);
+			owner_lazy = () -> ReceiveInformation9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ReceiveInformation9 obj) throws Exception {
+			checkReceiveInformation9(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation1
+	 * ReceiveInformation1}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ReceiversCustodianDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversCustodianDetails is not allowed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<ReceiveInformation1> forReceiveInformation1 = new MMConstraint<ReceiveInformation1>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ReceiversCustodianDetailsRule";
+			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversCustodianDetails is not allowed.";
+			owner_lazy = () -> ReceiveInformation1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ReceiveInformation1 obj) throws Exception {
+			checkReceiveInformation1(obj);
 		}
 	};
 	/**
@@ -700,8 +715,8 @@ public class ConstraintReceiversCustodianDetailsRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation14
-	 * ReceiveInformation14}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation3
+	 * ReceiveInformation3}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -713,34 +728,19 @@ public class ConstraintReceiversCustodianDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversCustodianDetails is not allowed."
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule#forReceiveInformation17
-	 * ConstraintReceiversCustodianDetailsRule.forReceiveInformation17}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule#forReceiveInformation12
-	 * ConstraintReceiversCustodianDetailsRule.forReceiveInformation12}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<ReceiveInformation14> forReceiveInformation14 = new MMConstraint<ReceiveInformation14>() {
+	public static final MMConstraint<ReceiveInformation3> forReceiveInformation3 = new MMConstraint<ReceiveInformation3>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiversCustodianDetailsRule";
 			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversCustodianDetails is not allowed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule.forReceiveInformation17);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule.forReceiveInformation12;
-			owner_lazy = () -> ReceiveInformation14.mmObject();
+			owner_lazy = () -> ReceiveInformation3.mmObject();
 		}
 
 		@Override
-		public void executeValidator(ReceiveInformation14 obj) throws Exception {
-			checkReceiveInformation14(obj);
+		public void executeValidator(ReceiveInformation3 obj) throws Exception {
+			checkReceiveInformation3(obj);
 		}
 	};
 	/**
@@ -749,8 +749,8 @@ public class ConstraintReceiversCustodianDetailsRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation17
-	 * ReceiveInformation17}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount4
+	 * ReceivingPartiesAndAccount4}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -760,36 +760,21 @@ public class ConstraintReceiversCustodianDetailsRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversCustodianDetails is not allowed."
+	 * "If ReceiversIntermediaryDetails is present, then ReceiversCustodianDetails must also be present."
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule#forReceiveInformation18
-	 * ConstraintReceiversCustodianDetailsRule.forReceiveInformation18}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule#forReceiveInformation14
-	 * ConstraintReceiversCustodianDetailsRule.forReceiveInformation14}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<ReceiveInformation17> forReceiveInformation17 = new MMConstraint<ReceiveInformation17>() {
+	public static final MMConstraint<ReceivingPartiesAndAccount4> forReceivingPartiesAndAccount4 = new MMConstraint<ReceivingPartiesAndAccount4>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiversCustodianDetailsRule";
-			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversCustodianDetails is not allowed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule.forReceiveInformation18);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule.forReceiveInformation14;
-			owner_lazy = () -> ReceiveInformation17.mmObject();
+			definition = "If ReceiversIntermediaryDetails is present, then ReceiversCustodianDetails must also be present.";
+			owner_lazy = () -> ReceivingPartiesAndAccount4.mmObject();
 		}
 
 		@Override
-		public void executeValidator(ReceiveInformation17 obj) throws Exception {
-			checkReceiveInformation17(obj);
+		public void executeValidator(ReceivingPartiesAndAccount4 obj) throws Exception {
+			checkReceivingPartiesAndAccount4(obj);
 		}
 	};
 	/**
@@ -798,8 +783,8 @@ public class ConstraintReceiversCustodianDetailsRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation16
-	 * ReceiveInformation16}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation19
+	 * ReceiveInformation19}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -811,34 +796,59 @@ public class ConstraintReceiversCustodianDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversCustodianDetails is not allowed."
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule#forReceiveInformation19
-	 * ConstraintReceiversCustodianDetailsRule.forReceiveInformation19}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule#forReceiveInformation15
-	 * ConstraintReceiversCustodianDetailsRule.forReceiveInformation15}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule#forReceiveInformation16
+	 * ConstraintReceiversCustodianDetailsRule.forReceiveInformation16}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<ReceiveInformation16> forReceiveInformation16 = new MMConstraint<ReceiveInformation16>() {
+	public static final MMConstraint<ReceiveInformation19> forReceiveInformation19 = new MMConstraint<ReceiveInformation19>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiversCustodianDetailsRule";
 			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversCustodianDetails is not allowed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule.forReceiveInformation19);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule.forReceiveInformation15;
-			owner_lazy = () -> ReceiveInformation16.mmObject();
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule.forReceiveInformation16;
+			owner_lazy = () -> ReceiveInformation19.mmObject();
 		}
 
 		@Override
-		public void executeValidator(ReceiveInformation16 obj) throws Exception {
-			checkReceiveInformation16(obj);
+		public void executeValidator(ReceiveInformation19 obj) throws Exception {
+			checkReceiveInformation19(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation2
+	 * ReceiveInformation2}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ReceiversCustodianDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversCustodianDetails is not allowed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<ReceiveInformation2> forReceiveInformation2 = new MMConstraint<ReceiveInformation2>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ReceiversCustodianDetailsRule";
+			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversCustodianDetails is not allowed.";
+			owner_lazy = () -> ReceiveInformation2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ReceiveInformation2 obj) throws Exception {
+			checkReceiveInformation2(obj);
 		}
 	};
 	/**
@@ -901,12 +911,8 @@ public class ConstraintReceiversCustodianDetailsRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount13
-	 * ReceivingPartiesAndAccount13}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
-	 * expression} =
-	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/ReceiversCustodianDetails&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/ReceiversIntermediary1Details&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
-	 * </li>
+	 * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount8
+	 * ReceivingPartiesAndAccount8}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -916,41 +922,30 @@ public class ConstraintReceiversCustodianDetailsRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If ReceiversIntermediary1Details is present, then ReceiversCustodianDetails must also be present."
+	 * "If ReceiversIntermediaryDetails is present, then ReceiversCustodianDetails must also be present."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule#forReceivingPartiesAndAccount14
-	 * ConstraintReceiversCustodianDetailsRule.forReceivingPartiesAndAccount14}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule#forReceivingPartiesAndAccount17
-	 * ConstraintReceiversCustodianDetailsRule.forReceivingPartiesAndAccount17}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
 	 * {@linkplain com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule#forReceivingPartiesAndAccount9
 	 * ConstraintReceiversCustodianDetailsRule.forReceivingPartiesAndAccount9}</li>
 	 * </ul>
+	 * </li>
+	 * </ul>
 	 */
-	public static final MMConstraint<ReceivingPartiesAndAccount13> forReceivingPartiesAndAccount13 = new MMConstraint<ReceivingPartiesAndAccount13>() {
+	public static final MMConstraint<ReceivingPartiesAndAccount8> forReceivingPartiesAndAccount8 = new MMConstraint<ReceivingPartiesAndAccount8>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiversCustodianDetailsRule";
-			definition = "If ReceiversIntermediary1Details is present, then ReceiversCustodianDetails must also be present.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule.forReceivingPartiesAndAccount14,
-					com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule.forReceivingPartiesAndAccount17);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule.forReceivingPartiesAndAccount9;
-			owner_lazy = () -> ReceivingPartiesAndAccount13.mmObject();
-			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ReceiversCustodianDetails</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ReceiversIntermediary1Details</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+			definition = "If ReceiversIntermediaryDetails is present, then ReceiversCustodianDetails must also be present.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule.forReceivingPartiesAndAccount9);
+			owner_lazy = () -> ReceivingPartiesAndAccount8.mmObject();
 		}
 
 		@Override
-		public void executeValidator(ReceivingPartiesAndAccount13 obj) throws Exception {
-			checkReceivingPartiesAndAccount13(obj);
+		public void executeValidator(ReceivingPartiesAndAccount8 obj) throws Exception {
+			checkReceivingPartiesAndAccount8(obj);
 		}
 	};
 	/**
@@ -959,8 +954,8 @@ public class ConstraintReceiversCustodianDetailsRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation18
-	 * ReceiveInformation18}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation11
+	 * ReceiveInformation11}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -972,25 +967,28 @@ public class ConstraintReceiversCustodianDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversCustodianDetails is not allowed."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule#forReceiveInformation17
-	 * ConstraintReceiversCustodianDetailsRule.forReceiveInformation17}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule#forReceiveInformation12
+	 * ConstraintReceiversCustodianDetailsRule.forReceiveInformation12}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<ReceiveInformation18> forReceiveInformation18 = new MMConstraint<ReceiveInformation18>() {
+	public static final MMConstraint<ReceiveInformation11> forReceiveInformation11 = new MMConstraint<ReceiveInformation11>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiversCustodianDetailsRule";
 			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversCustodianDetails is not allowed.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule.forReceiveInformation17;
-			owner_lazy = () -> ReceiveInformation18.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule.forReceiveInformation12);
+			owner_lazy = () -> ReceiveInformation11.mmObject();
 		}
 
 		@Override
-		public void executeValidator(ReceiveInformation18 obj) throws Exception {
-			checkReceiveInformation18(obj);
+		public void executeValidator(ReceiveInformation11 obj) throws Exception {
+			checkReceiveInformation11(obj);
 		}
 	};
 	/**
@@ -999,8 +997,8 @@ public class ConstraintReceiversCustodianDetailsRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation19
-	 * ReceiveInformation19}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation16
+	 * ReceiveInformation16}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1012,25 +1010,34 @@ public class ConstraintReceiversCustodianDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversCustodianDetails is not allowed."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule#forReceiveInformation19
+	 * ConstraintReceiversCustodianDetailsRule.forReceiveInformation19}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule#forReceiveInformation16
-	 * ConstraintReceiversCustodianDetailsRule.forReceiveInformation16}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule#forReceiveInformation15
+	 * ConstraintReceiversCustodianDetailsRule.forReceiveInformation15}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<ReceiveInformation19> forReceiveInformation19 = new MMConstraint<ReceiveInformation19>() {
+	public static final MMConstraint<ReceiveInformation16> forReceiveInformation16 = new MMConstraint<ReceiveInformation16>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiversCustodianDetailsRule";
 			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversCustodianDetails is not allowed.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule.forReceiveInformation16;
-			owner_lazy = () -> ReceiveInformation19.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule.forReceiveInformation19);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule.forReceiveInformation15;
+			owner_lazy = () -> ReceiveInformation16.mmObject();
 		}
 
 		@Override
-		public void executeValidator(ReceiveInformation19 obj) throws Exception {
-			checkReceiveInformation19(obj);
+		public void executeValidator(ReceiveInformation16 obj) throws Exception {
+			checkReceiveInformation16(obj);
 		}
 	};
 	/**
@@ -1039,12 +1046,8 @@ public class ConstraintReceiversCustodianDetailsRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount17
-	 * ReceivingPartiesAndAccount17}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
-	 * expression} =
-	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/ReceiversCustodianDetails&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/ReceiversIntermediary1Details&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
-	 * </li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation17
+	 * ReceiveInformation17}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1054,28 +1057,36 @@ public class ConstraintReceiversCustodianDetailsRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If ReceiversIntermediary1Details is present, then ReceiversCustodianDetails must also be present."
+	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversCustodianDetails is not allowed."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule#forReceiveInformation18
+	 * ConstraintReceiversCustodianDetailsRule.forReceiveInformation18}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule#forReceivingPartiesAndAccount13
-	 * ConstraintReceiversCustodianDetailsRule.forReceivingPartiesAndAccount13}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule#forReceiveInformation14
+	 * ConstraintReceiversCustodianDetailsRule.forReceiveInformation14}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<ReceivingPartiesAndAccount17> forReceivingPartiesAndAccount17 = new MMConstraint<ReceivingPartiesAndAccount17>() {
+	public static final MMConstraint<ReceiveInformation17> forReceiveInformation17 = new MMConstraint<ReceiveInformation17>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiversCustodianDetailsRule";
-			definition = "If ReceiversIntermediary1Details is present, then ReceiversCustodianDetails must also be present.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule.forReceivingPartiesAndAccount13;
-			owner_lazy = () -> ReceivingPartiesAndAccount17.mmObject();
-			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ReceiversCustodianDetails</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ReceiversIntermediary1Details</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversCustodianDetails is not allowed.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule.forReceiveInformation18);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule.forReceiveInformation14;
+			owner_lazy = () -> ReceiveInformation17.mmObject();
 		}
 
 		@Override
-		public void executeValidator(ReceivingPartiesAndAccount17 obj) throws Exception {
-			checkReceivingPartiesAndAccount17(obj);
+		public void executeValidator(ReceiveInformation17 obj) throws Exception {
+			checkReceiveInformation17(obj);
 		}
 	};
 	/**
@@ -1084,12 +1095,8 @@ public class ConstraintReceiversCustodianDetailsRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount18
-	 * ReceivingPartiesAndAccount18}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
-	 * expression} =
-	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/ReceiversCustodianDetails&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/ReceiversIntermediary1Details&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
-	 * </li>
+	 * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount1
+	 * ReceivingPartiesAndAccount1}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1099,111 +1106,23 @@ public class ConstraintReceiversCustodianDetailsRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If ReceiversIntermediary1Details is present, then ReceiversCustodianDetails must also be present."
+	 * "If ReceiversIntermediaryDetails is present, then ReceiversCustodianDetails must also be present in the same occurrence of ReceivingPartiesAndAccount1."
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule#forReceivingPartiesAndAccount14
-	 * ConstraintReceiversCustodianDetailsRule.forReceivingPartiesAndAccount14}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<ReceivingPartiesAndAccount18> forReceivingPartiesAndAccount18 = new MMConstraint<ReceivingPartiesAndAccount18>() {
+	public static final MMConstraint<ReceivingPartiesAndAccount1> forReceivingPartiesAndAccount1 = new MMConstraint<ReceivingPartiesAndAccount1>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiversCustodianDetailsRule";
-			definition = "If ReceiversIntermediary1Details is present, then ReceiversCustodianDetails must also be present.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule.forReceivingPartiesAndAccount14;
-			owner_lazy = () -> ReceivingPartiesAndAccount18.mmObject();
-			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ReceiversCustodianDetails</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ReceiversIntermediary1Details</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+			definition = "If ReceiversIntermediaryDetails is present, then ReceiversCustodianDetails must also be present in the same occurrence of ReceivingPartiesAndAccount1.";
+			owner_lazy = () -> ReceivingPartiesAndAccount1.mmObject();
 		}
 
 		@Override
-		public void executeValidator(ReceivingPartiesAndAccount18 obj) throws Exception {
-			checkReceivingPartiesAndAccount18(obj);
+		public void executeValidator(ReceivingPartiesAndAccount1 obj) throws Exception {
+			checkReceivingPartiesAndAccount1(obj);
 		}
 	};
-
-	/**
-	 * If ReceiversIntermediaryDetails is present, then
-	 * ReceiversCustodianDetails must also be present in the same occurrence of
-	 * ReceivingPartiesAndAccount1.
-	 */
-	public static void checkReceivingPartiesAndAccount1(ReceivingPartiesAndAccount1 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If PhysicalTransferDetails is present, then
-	 * SettlementPartiesDetails/ReceiversCustodianDetails is not allowed.
-	 */
-	public static void checkReceiveInformation2(ReceiveInformation2 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If ReceiversIntermediaryDetails is present, then
-	 * ReceiversCustodianDetails must also be present.
-	 */
-	public static void checkReceivingPartiesAndAccount4(ReceivingPartiesAndAccount4 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If PhysicalTransferDetails is present, then
-	 * SettlementPartiesDetails/ReceiversCustodianDetails is not allowed.
-	 */
-	public static void checkReceiveInformation4(ReceiveInformation4 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If ReceiversIntermediaryDetails is present, then
-	 * ReceiversCustodianDetails must also be present.
-	 */
-	public static void checkReceivingPartiesAndAccount8(ReceivingPartiesAndAccount8 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If PhysicalTransferDetails is present, then
-	 * SettlementPartiesDetails/ReceiversCustodianDetails is not allowed.
-	 */
-	public static void checkReceiveInformation8(ReceiveInformation8 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If PhysicalTransferDetails is present, then
-	 * SettlementPartiesDetails/ReceiversCustodianDetails is not allowed.
-	 */
-	public static void checkReceiveInformation6(ReceiveInformation6 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If PhysicalTransferDetails is present, then
-	 * SettlementPartiesDetails/ReceiversCustodianDetails is not allowed.
-	 */
-	public static void checkReceiveInformation11(ReceiveInformation11 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If PhysicalTransferDetails is present, then
-	 * SettlementPartiesDetails/ReceiversCustodianDetails is not allowed.
-	 */
-	public static void checkReceiveInformation1(ReceiveInformation1 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If PhysicalTransferDetails is present, then
-	 * SettlementPartiesDetails/ReceiversCustodianDetails is not allowed.
-	 */
-	public static void checkReceiveInformation3(ReceiveInformation3 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
 
 	/**
 	 * If PhysicalTransferDetails is present, then
@@ -1217,7 +1136,15 @@ public class ConstraintReceiversCustodianDetailsRule {
 	 * If PhysicalTransferDetails is present, then
 	 * SettlementPartiesDetails/ReceiversCustodianDetails is not allowed.
 	 */
-	public static void checkReceiveInformation5(ReceiveInformation5 obj) throws Exception {
+	public static void checkReceiveInformation8(ReceiveInformation8 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If ReceiversIntermediary1Details is present, then
+	 * ReceiversCustodianDetails must also be present.
+	 */
+	public static void checkReceivingPartiesAndAccount18(ReceivingPartiesAndAccount18 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1225,7 +1152,39 @@ public class ConstraintReceiversCustodianDetailsRule {
 	 * If PhysicalTransferDetails is present, then
 	 * SettlementPartiesDetails/ReceiversCustodianDetails is not allowed.
 	 */
-	public static void checkReceiveInformation9(ReceiveInformation9 obj) throws Exception {
+	public static void checkReceiveInformation5(ReceiveInformation5 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If ReceiversIntermediary1Details is present, then
+	 * ReceiversCustodianDetails must also be present.
+	 */
+	public static void checkReceivingPartiesAndAccount17(ReceivingPartiesAndAccount17 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PhysicalTransferDetails is present, then
+	 * SettlementPartiesDetails/ReceiversCustodianDetails is not allowed.
+	 */
+	public static void checkReceiveInformation4(ReceiveInformation4 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If ReceiversIntermediary1Details is present, then
+	 * ReceiversCustodianDetails must also be present.
+	 */
+	public static void checkReceivingPartiesAndAccount13(ReceivingPartiesAndAccount13 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PhysicalTransferDetails is present, then
+	 * SettlementPartiesDetails/ReceiversCustodianDetails is not allowed.
+	 */
+	public static void checkReceiveInformation14(ReceiveInformation14 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1246,10 +1205,42 @@ public class ConstraintReceiversCustodianDetailsRule {
 	}
 
 	/**
+	 * If PhysicalTransferDetails is present, then
+	 * SettlementPartiesDetails/ReceiversCustodianDetails is not allowed.
+	 */
+	public static void checkReceiveInformation18(ReceiveInformation18 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
 	 * If ReceiversIntermediaryDetails is present, then
 	 * ReceiversCustodianDetails must also be present.
 	 */
 	public static void checkReceivingPartiesAndAccount9(ReceivingPartiesAndAccount9 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PhysicalTransferDetails is present, then
+	 * SettlementPartiesDetails/ReceiversCustodianDetails is not allowed.
+	 */
+	public static void checkReceiveInformation6(ReceiveInformation6 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PhysicalTransferDetails is present, then
+	 * SettlementPartiesDetails/ReceiversCustodianDetails is not allowed.
+	 */
+	public static void checkReceiveInformation9(ReceiveInformation9 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PhysicalTransferDetails is present, then
+	 * SettlementPartiesDetails/ReceiversCustodianDetails is not allowed.
+	 */
+	public static void checkReceiveInformation1(ReceiveInformation1 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1265,47 +1256,15 @@ public class ConstraintReceiversCustodianDetailsRule {
 	 * If PhysicalTransferDetails is present, then
 	 * SettlementPartiesDetails/ReceiversCustodianDetails is not allowed.
 	 */
-	public static void checkReceiveInformation14(ReceiveInformation14 obj) throws Exception {
+	public static void checkReceiveInformation3(ReceiveInformation3 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
 	/**
-	 * If PhysicalTransferDetails is present, then
-	 * SettlementPartiesDetails/ReceiversCustodianDetails is not allowed.
-	 */
-	public static void checkReceiveInformation17(ReceiveInformation17 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If PhysicalTransferDetails is present, then
-	 * SettlementPartiesDetails/ReceiversCustodianDetails is not allowed.
-	 */
-	public static void checkReceiveInformation16(ReceiveInformation16 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If ReceiversIntermediary1Details is present, then
+	 * If ReceiversIntermediaryDetails is present, then
 	 * ReceiversCustodianDetails must also be present.
 	 */
-	public static void checkReceivingPartiesAndAccount14(ReceivingPartiesAndAccount14 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If ReceiversIntermediary1Details is present, then
-	 * ReceiversCustodianDetails must also be present.
-	 */
-	public static void checkReceivingPartiesAndAccount13(ReceivingPartiesAndAccount13 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If PhysicalTransferDetails is present, then
-	 * SettlementPartiesDetails/ReceiversCustodianDetails is not allowed.
-	 */
-	public static void checkReceiveInformation18(ReceiveInformation18 obj) throws Exception {
+	public static void checkReceivingPartiesAndAccount4(ReceivingPartiesAndAccount4 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1318,10 +1277,10 @@ public class ConstraintReceiversCustodianDetailsRule {
 	}
 
 	/**
-	 * If ReceiversIntermediary1Details is present, then
-	 * ReceiversCustodianDetails must also be present.
+	 * If PhysicalTransferDetails is present, then
+	 * SettlementPartiesDetails/ReceiversCustodianDetails is not allowed.
 	 */
-	public static void checkReceivingPartiesAndAccount17(ReceivingPartiesAndAccount17 obj) throws Exception {
+	public static void checkReceiveInformation2(ReceiveInformation2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1329,7 +1288,48 @@ public class ConstraintReceiversCustodianDetailsRule {
 	 * If ReceiversIntermediary1Details is present, then
 	 * ReceiversCustodianDetails must also be present.
 	 */
-	public static void checkReceivingPartiesAndAccount18(ReceivingPartiesAndAccount18 obj) throws Exception {
+	public static void checkReceivingPartiesAndAccount14(ReceivingPartiesAndAccount14 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If ReceiversIntermediaryDetails is present, then
+	 * ReceiversCustodianDetails must also be present.
+	 */
+	public static void checkReceivingPartiesAndAccount8(ReceivingPartiesAndAccount8 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PhysicalTransferDetails is present, then
+	 * SettlementPartiesDetails/ReceiversCustodianDetails is not allowed.
+	 */
+	public static void checkReceiveInformation11(ReceiveInformation11 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PhysicalTransferDetails is present, then
+	 * SettlementPartiesDetails/ReceiversCustodianDetails is not allowed.
+	 */
+	public static void checkReceiveInformation16(ReceiveInformation16 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PhysicalTransferDetails is present, then
+	 * SettlementPartiesDetails/ReceiversCustodianDetails is not allowed.
+	 */
+	public static void checkReceiveInformation17(ReceiveInformation17 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If ReceiversIntermediaryDetails is present, then
+	 * ReceiversCustodianDetails must also be present in the same occurrence of
+	 * ReceivingPartiesAndAccount1.
+	 */
+	public static void checkReceivingPartiesAndAccount1(ReceivingPartiesAndAccount1 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

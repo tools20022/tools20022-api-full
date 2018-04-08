@@ -97,11 +97,11 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationRule#forSubscriptionOrderV03
- * ConstraintAccountIdentificationRule.forSubscriptionOrderV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationRule#for_setr_SubscriptionOrderV03
+ * ConstraintAccountIdentificationRule.for_setr_SubscriptionOrderV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintRelatedPartiesDetailsRule#forSubscriptionOrderV03
- * ConstraintRelatedPartiesDetailsRule.forSubscriptionOrderV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintRelatedPartiesDetailsRule#for_setr_SubscriptionOrderV03
+ * ConstraintRelatedPartiesDetailsRule.for_setr_SubscriptionOrderV03}</li>
  * </ul>
  * </li>
  * <li>
@@ -513,8 +513,8 @@ public class SubscriptionOrderV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forSubscriptionOrderV03,
-						com.tools20022.repository.constraints.ConstraintRelatedPartiesDetailsRule.forSubscriptionOrderV03);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.for_setr_SubscriptionOrderV03,
+						com.tools20022.repository.constraints.ConstraintRelatedPartiesDetailsRule.for_setr_SubscriptionOrderV03);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SubscriptionOrderV03";
 				definition = "Scope\r\nAn instructing party, for example, an investment manager or its authorised representative, sends the SubscriptionOrder message to the executing party, for example, a transfer agent, to instruct the subscription of one or more financial instruments for one investment fund account.\r\nUsage\r\nThe SubscriptionOrder message is used to instruct single subscription orders, that is, a message containing one order for one financial instrument and related to one investment account. The SubscriptionOrder message may also be used for multiple orders, that is, a message containing several orders related to the same investment account for different financial instruments.\r\nFor a single subscription order, the SubscriptionOrder message, not the SubscriptionBulkOrder message, must be used.\r\nIf there are subscription orders for the same financial instrument but for different accounts, then the SubscriptionBulkOrder message must be used.";

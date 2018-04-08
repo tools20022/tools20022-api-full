@@ -37,50 +37,8 @@ public class ConstraintIdentificationNationalityOfInvestorRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount81
-	 * PartyIdentificationAndAccount81}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "IdentificationNationalityOfInvestorRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Identification and/or Nationality must be present."</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintIdentificationNationalityOfInvestorRule#forPartyIdentificationAndAccount108
-	 * ConstraintIdentificationNationalityOfInvestorRule.
-	 * forPartyIdentificationAndAccount108}</li>
-	 * </ul>
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<PartyIdentificationAndAccount81> forPartyIdentificationAndAccount81 = new MMConstraint<PartyIdentificationAndAccount81>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "IdentificationNationalityOfInvestorRule";
-			definition = "Identification and/or Nationality must be present.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintIdentificationNationalityOfInvestorRule.forPartyIdentificationAndAccount108);
-			owner_lazy = () -> PartyIdentificationAndAccount81.mmObject();
-		}
-
-		@Override
-		public void executeValidator(PartyIdentificationAndAccount81 obj) throws Exception {
-			checkPartyIdentificationAndAccount81(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount88
-	 * PartyIdentificationAndAccount88}</li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount135
+	 * PartyIdentificationAndAccount135}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -92,17 +50,17 @@ public class ConstraintIdentificationNationalityOfInvestorRule {
 	 * definition} = "Identification and/or Nationality must be present."</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<PartyIdentificationAndAccount88> forPartyIdentificationAndAccount88 = new MMConstraint<PartyIdentificationAndAccount88>() {
+	public static final MMConstraint<PartyIdentificationAndAccount135> forPartyIdentificationAndAccount135 = new MMConstraint<PartyIdentificationAndAccount135>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationNationalityOfInvestorRule";
 			definition = "Identification and/or Nationality must be present.";
-			owner_lazy = () -> PartyIdentificationAndAccount88.mmObject();
+			owner_lazy = () -> PartyIdentificationAndAccount135.mmObject();
 		}
 
 		@Override
-		public void executeValidator(PartyIdentificationAndAccount88 obj) throws Exception {
-			checkPartyIdentificationAndAccount88(obj);
+		public void executeValidator(PartyIdentificationAndAccount135 obj) throws Exception {
+			checkPartyIdentificationAndAccount135(obj);
 		}
 	};
 	/**
@@ -150,8 +108,8 @@ public class ConstraintIdentificationNationalityOfInvestorRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount135
-	 * PartyIdentificationAndAccount135}</li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount88
+	 * PartyIdentificationAndAccount88}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -163,31 +121,66 @@ public class ConstraintIdentificationNationalityOfInvestorRule {
 	 * definition} = "Identification and/or Nationality must be present."</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<PartyIdentificationAndAccount135> forPartyIdentificationAndAccount135 = new MMConstraint<PartyIdentificationAndAccount135>() {
+	public static final MMConstraint<PartyIdentificationAndAccount88> forPartyIdentificationAndAccount88 = new MMConstraint<PartyIdentificationAndAccount88>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationNationalityOfInvestorRule";
 			definition = "Identification and/or Nationality must be present.";
-			owner_lazy = () -> PartyIdentificationAndAccount135.mmObject();
+			owner_lazy = () -> PartyIdentificationAndAccount88.mmObject();
 		}
 
 		@Override
-		public void executeValidator(PartyIdentificationAndAccount135 obj) throws Exception {
-			checkPartyIdentificationAndAccount135(obj);
+		public void executeValidator(PartyIdentificationAndAccount88 obj) throws Exception {
+			checkPartyIdentificationAndAccount88(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount81
+	 * PartyIdentificationAndAccount81}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "IdentificationNationalityOfInvestorRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Identification and/or Nationality must be present."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintIdentificationNationalityOfInvestorRule#forPartyIdentificationAndAccount108
+	 * ConstraintIdentificationNationalityOfInvestorRule.
+	 * forPartyIdentificationAndAccount108}</li>
+	 * </ul>
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<PartyIdentificationAndAccount81> forPartyIdentificationAndAccount81 = new MMConstraint<PartyIdentificationAndAccount81>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "IdentificationNationalityOfInvestorRule";
+			definition = "Identification and/or Nationality must be present.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintIdentificationNationalityOfInvestorRule.forPartyIdentificationAndAccount108);
+			owner_lazy = () -> PartyIdentificationAndAccount81.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount81 obj) throws Exception {
+			checkPartyIdentificationAndAccount81(obj);
 		}
 	};
 
 	/**
 	 * Identification and/or Nationality must be present.
 	 */
-	public static void checkPartyIdentificationAndAccount81(PartyIdentificationAndAccount81 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Identification and/or Nationality must be present.
-	 */
-	public static void checkPartyIdentificationAndAccount88(PartyIdentificationAndAccount88 obj) throws Exception {
+	public static void checkPartyIdentificationAndAccount135(PartyIdentificationAndAccount135 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -201,7 +194,14 @@ public class ConstraintIdentificationNationalityOfInvestorRule {
 	/**
 	 * Identification and/or Nationality must be present.
 	 */
-	public static void checkPartyIdentificationAndAccount135(PartyIdentificationAndAccount135 obj) throws Exception {
+	public static void checkPartyIdentificationAndAccount88(PartyIdentificationAndAccount88 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Identification and/or Nationality must be present.
+	 */
+	public static void checkPartyIdentificationAndAccount81(PartyIdentificationAndAccount81 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

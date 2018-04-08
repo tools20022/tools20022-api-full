@@ -37,40 +37,6 @@ public class ConstraintCurrencyAmount {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
-	 * ActiveCurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CurrencyAmount"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "The number of fractional digits (or minor unit of currency) must comply with ISO 4217.\nNote: The decimal separator is a dot."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<ActiveCurrencyAndAmount> forActiveCurrencyAndAmount = new MMConstraint<ActiveCurrencyAndAmount>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "CurrencyAmount";
-			definition = "The number of fractional digits (or minor unit of currency) must comply with ISO 4217.\nNote: The decimal separator is a dot.";
-			owner_lazy = () -> ActiveCurrencyAndAmount.mmObject();
-		}
-
-		@Override
-		public void executeValidator(ActiveCurrencyAndAmount obj) throws Exception {
-			checkActiveCurrencyAndAmount(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount
 	 * ActiveOrHistoricCurrencyAndAmount}</li>
 	 * <li>
@@ -105,8 +71,8 @@ public class ConstraintCurrencyAmount {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.datatype.RestrictedFINActiveCurrencyAndAmount
-	 * RestrictedFINActiveCurrencyAndAmount}</li>
+	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
+	 * ActiveCurrencyAndAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -120,17 +86,17 @@ public class ConstraintCurrencyAmount {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<RestrictedFINActiveCurrencyAndAmount> forRestrictedFINActiveCurrencyAndAmount = new MMConstraint<RestrictedFINActiveCurrencyAndAmount>() {
+	public static final MMConstraint<ActiveCurrencyAndAmount> forActiveCurrencyAndAmount = new MMConstraint<ActiveCurrencyAndAmount>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyAmount";
 			definition = "The number of fractional digits (or minor unit of currency) must comply with ISO 4217.\nNote: The decimal separator is a dot.";
-			owner_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+			owner_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 
 		@Override
-		public void executeValidator(RestrictedFINActiveCurrencyAndAmount obj) throws Exception {
-			checkRestrictedFINActiveCurrencyAndAmount(obj);
+		public void executeValidator(ActiveCurrencyAndAmount obj) throws Exception {
+			checkActiveCurrencyAndAmount(obj);
 		}
 	};
 	/**
@@ -167,14 +133,40 @@ public class ConstraintCurrencyAmount {
 			checkRestrictedFINActiveOrHistoricCurrencyAndAmount(obj);
 		}
 	};
-
 	/**
-	 * The number of fractional digits (or minor unit of currency) must comply
-	 * with ISO 4217. Note: The decimal separator is a dot.
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.datatype.RestrictedFINActiveCurrencyAndAmount
+	 * RestrictedFINActiveCurrencyAndAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CurrencyAmount"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The number of fractional digits (or minor unit of currency) must comply with ISO 4217.\nNote: The decimal separator is a dot."
+	 * </li>
+	 * </ul>
 	 */
-	public static void checkActiveCurrencyAndAmount(ActiveCurrencyAndAmount obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
+	public static final MMConstraint<RestrictedFINActiveCurrencyAndAmount> forRestrictedFINActiveCurrencyAndAmount = new MMConstraint<RestrictedFINActiveCurrencyAndAmount>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CurrencyAmount";
+			definition = "The number of fractional digits (or minor unit of currency) must comply with ISO 4217.\nNote: The decimal separator is a dot.";
+			owner_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RestrictedFINActiveCurrencyAndAmount obj) throws Exception {
+			checkRestrictedFINActiveCurrencyAndAmount(obj);
+		}
+	};
 
 	/**
 	 * The number of fractional digits (or minor unit of currency) must comply
@@ -188,7 +180,7 @@ public class ConstraintCurrencyAmount {
 	 * The number of fractional digits (or minor unit of currency) must comply
 	 * with ISO 4217. Note: The decimal separator is a dot.
 	 */
-	public static void checkRestrictedFINActiveCurrencyAndAmount(RestrictedFINActiveCurrencyAndAmount obj) throws Exception {
+	public static void checkActiveCurrencyAndAmount(ActiveCurrencyAndAmount obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -197,6 +189,14 @@ public class ConstraintCurrencyAmount {
 	 * with ISO 4217. Note: The decimal separator is a dot.
 	 */
 	public static void checkRestrictedFINActiveOrHistoricCurrencyAndAmount(RestrictedFINActiveOrHistoricCurrencyAndAmount obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The number of fractional digits (or minor unit of currency) must comply
+	 * with ISO 4217. Note: The decimal separator is a dot.
+	 */
+	public static void checkRestrictedFINActiveCurrencyAndAmount(RestrictedFINActiveCurrencyAndAmount obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

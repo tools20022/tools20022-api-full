@@ -50,7 +50,7 @@ public class ConstraintCancellation1Rule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<InvoiceFinancingRequestStatusV01> forInvoiceFinancingRequestStatusV01 = new MMConstraint<InvoiceFinancingRequestStatusV01>() {
+	public static final MMConstraint<InvoiceFinancingRequestStatusV01> for_tsin_InvoiceFinancingRequestStatusV01 = new MMConstraint<InvoiceFinancingRequestStatusV01>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation1Rule";
@@ -60,7 +60,7 @@ public class ConstraintCancellation1Rule {
 
 		@Override
 		public void executeValidator(InvoiceFinancingRequestStatusV01 obj) throws Exception {
-			checkInvoiceFinancingRequestStatusV01(obj);
+			check_tsin_InvoiceFinancingRequestStatusV01(obj);
 		}
 	};
 
@@ -69,7 +69,7 @@ public class ConstraintCancellation1Rule {
 	 * request, then only Status Identification and Original Request Information
 	 * must be present.
 	 */
-	public static void checkInvoiceFinancingRequestStatusV01(InvoiceFinancingRequestStatusV01 obj) throws Exception {
+	public static void check_tsin_InvoiceFinancingRequestStatusV01(InvoiceFinancingRequestStatusV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

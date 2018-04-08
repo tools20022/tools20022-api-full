@@ -35,6 +35,45 @@ public class ConstraintPartialOrRejectedCancellationRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV03
+	 * ResolutionOfInvestigationV03}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/CancellationDetails[*]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/Status/Confirmation&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"WithInList\"&gt;&lt;leftOperand&gt;/Status/Confirmation&lt;/leftOperand&gt;&lt;rightOperand&gt;InvestigationExecutionConfirmation4Code&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PartialOrRejectedCancellationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If Status/Confirmation is present and equal to PECR or RJCR then CancellationDetails must be present."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<ResolutionOfInvestigationV03> for_camt_ResolutionOfInvestigationV03 = new MMConstraint<ResolutionOfInvestigationV03>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PartialOrRejectedCancellationRule";
+			definition = "If Status/Confirmation is present and equal to PECR or RJCR then CancellationDetails must be present.";
+			owner_lazy = () -> ResolutionOfInvestigationV03.mmObject();
+			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationDetails[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Status/Confirmation</leftOperand></BooleanRule><BooleanRule xsi:type=\"WithInList\"><leftOperand>/Status/Confirmation</leftOperand><rightOperand>InvestigationExecutionConfirmation4Code</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(ResolutionOfInvestigationV03 obj) throws Exception {
+			check_camt_ResolutionOfInvestigationV03(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV08
 	 * ResolutionOfInvestigationV08}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
@@ -55,24 +94,24 @@ public class ConstraintPartialOrRejectedCancellationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintPartialOrRejectedCancellationRule#forResolutionOfInvestigationV07
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPartialOrRejectedCancellationRule#for_camt_ResolutionOfInvestigationV07
 	 * ConstraintPartialOrRejectedCancellationRule.
-	 * forResolutionOfInvestigationV07}</li>
+	 * for_camt_ResolutionOfInvestigationV07}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<ResolutionOfInvestigationV08> forResolutionOfInvestigationV08 = new MMConstraint<ResolutionOfInvestigationV08>() {
+	public static final MMConstraint<ResolutionOfInvestigationV08> for_camt_ResolutionOfInvestigationV08 = new MMConstraint<ResolutionOfInvestigationV08>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialOrRejectedCancellationRule";
 			definition = "If Status/Confirmation is present and equal to PECR or RJCR then CancellationDetails must be present.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPartialOrRejectedCancellationRule.forResolutionOfInvestigationV07;
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPartialOrRejectedCancellationRule.for_camt_ResolutionOfInvestigationV07;
 			owner_lazy = () -> ResolutionOfInvestigationV08.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationDetails[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Status/Confirmation</leftOperand></BooleanRule><BooleanRule xsi:type=\"WithInList\"><leftOperand>/Status/Confirmation</leftOperand><rightOperand>InvestigationExecutionConfirmation4Code</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
 
 		@Override
 		public void executeValidator(ResolutionOfInvestigationV08 obj) throws Exception {
-			checkResolutionOfInvestigationV08(obj);
+			check_camt_ResolutionOfInvestigationV08(obj);
 		}
 	};
 	/**
@@ -102,121 +141,33 @@ public class ConstraintPartialOrRejectedCancellationRule {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintPartialOrRejectedCancellationRule#forResolutionOfInvestigationV08
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPartialOrRejectedCancellationRule#for_camt_ResolutionOfInvestigationV08
 	 * ConstraintPartialOrRejectedCancellationRule.
-	 * forResolutionOfInvestigationV08}</li>
+	 * for_camt_ResolutionOfInvestigationV08}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintPartialOrRejectedCancellationRule#forResolutionOfInvestigationV06
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPartialOrRejectedCancellationRule#for_camt_ResolutionOfInvestigationV06
 	 * ConstraintPartialOrRejectedCancellationRule.
-	 * forResolutionOfInvestigationV06}</li>
+	 * for_camt_ResolutionOfInvestigationV06}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<ResolutionOfInvestigationV07> forResolutionOfInvestigationV07 = new MMConstraint<ResolutionOfInvestigationV07>() {
+	public static final MMConstraint<ResolutionOfInvestigationV07> for_camt_ResolutionOfInvestigationV07 = new MMConstraint<ResolutionOfInvestigationV07>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialOrRejectedCancellationRule";
 			definition = "If Status/Confirmation is present and equal to PECR or RJCR then CancellationDetails must be present.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPartialOrRejectedCancellationRule.forResolutionOfInvestigationV08);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPartialOrRejectedCancellationRule.forResolutionOfInvestigationV06;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPartialOrRejectedCancellationRule.for_camt_ResolutionOfInvestigationV08);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPartialOrRejectedCancellationRule.for_camt_ResolutionOfInvestigationV06;
 			owner_lazy = () -> ResolutionOfInvestigationV07.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationDetails[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Status/Confirmation</leftOperand></BooleanRule><BooleanRule xsi:type=\"WithInList\"><leftOperand>/Status/Confirmation</leftOperand><rightOperand>InvestigationExecutionConfirmation4Code</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
 
 		@Override
 		public void executeValidator(ResolutionOfInvestigationV07 obj) throws Exception {
-			checkResolutionOfInvestigationV07(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV03
-	 * ResolutionOfInvestigationV03}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
-	 * expression} =
-	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/CancellationDetails[*]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/Status/Confirmation&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"WithInList\"&gt;&lt;leftOperand&gt;/Status/Confirmation&lt;/leftOperand&gt;&lt;rightOperand&gt;InvestigationExecutionConfirmation4Code&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PartialOrRejectedCancellationRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If Status/Confirmation is present and equal to PECR or RJCR then CancellationDetails must be present."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<ResolutionOfInvestigationV03> forResolutionOfInvestigationV03 = new MMConstraint<ResolutionOfInvestigationV03>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "PartialOrRejectedCancellationRule";
-			definition = "If Status/Confirmation is present and equal to PECR or RJCR then CancellationDetails must be present.";
-			owner_lazy = () -> ResolutionOfInvestigationV03.mmObject();
-			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationDetails[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Status/Confirmation</leftOperand></BooleanRule><BooleanRule xsi:type=\"WithInList\"><leftOperand>/Status/Confirmation</leftOperand><rightOperand>InvestigationExecutionConfirmation4Code</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
-		}
-
-		@Override
-		public void executeValidator(ResolutionOfInvestigationV03 obj) throws Exception {
-			checkResolutionOfInvestigationV03(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV04
-	 * ResolutionOfInvestigationV04}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
-	 * expression} =
-	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/CancellationDetails[*]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/Status/Confirmation&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"WithInList\"&gt;&lt;leftOperand&gt;/Status/Confirmation&lt;/leftOperand&gt;&lt;rightOperand&gt;InvestigationExecutionConfirmation4Code&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PartialOrRejectedCancellationRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If Status/Confirmation is present and equal to PECR or RJCR then CancellationDetails must be present."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintPartialOrRejectedCancellationRule#forResolutionOfInvestigationV05
-	 * ConstraintPartialOrRejectedCancellationRule.
-	 * forResolutionOfInvestigationV05}</li>
-	 * </ul>
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<ResolutionOfInvestigationV04> forResolutionOfInvestigationV04 = new MMConstraint<ResolutionOfInvestigationV04>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "PartialOrRejectedCancellationRule";
-			definition = "If Status/Confirmation is present and equal to PECR or RJCR then CancellationDetails must be present.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPartialOrRejectedCancellationRule.forResolutionOfInvestigationV05);
-			owner_lazy = () -> ResolutionOfInvestigationV04.mmObject();
-			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationDetails[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Status/Confirmation</leftOperand></BooleanRule><BooleanRule xsi:type=\"WithInList\"><leftOperand>/Status/Confirmation</leftOperand><rightOperand>InvestigationExecutionConfirmation4Code</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
-		}
-
-		@Override
-		public void executeValidator(ResolutionOfInvestigationV04 obj) throws Exception {
-			checkResolutionOfInvestigationV04(obj);
+			check_camt_ResolutionOfInvestigationV07(obj);
 		}
 	};
 	/**
@@ -246,33 +197,33 @@ public class ConstraintPartialOrRejectedCancellationRule {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintPartialOrRejectedCancellationRule#forResolutionOfInvestigationV06
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPartialOrRejectedCancellationRule#for_camt_ResolutionOfInvestigationV06
 	 * ConstraintPartialOrRejectedCancellationRule.
-	 * forResolutionOfInvestigationV06}</li>
+	 * for_camt_ResolutionOfInvestigationV06}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintPartialOrRejectedCancellationRule#forResolutionOfInvestigationV04
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPartialOrRejectedCancellationRule#for_camt_ResolutionOfInvestigationV04
 	 * ConstraintPartialOrRejectedCancellationRule.
-	 * forResolutionOfInvestigationV04}</li>
+	 * for_camt_ResolutionOfInvestigationV04}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<ResolutionOfInvestigationV05> forResolutionOfInvestigationV05 = new MMConstraint<ResolutionOfInvestigationV05>() {
+	public static final MMConstraint<ResolutionOfInvestigationV05> for_camt_ResolutionOfInvestigationV05 = new MMConstraint<ResolutionOfInvestigationV05>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialOrRejectedCancellationRule";
 			definition = "If Status/Confirmation is present and equal to PECR or RJCR then CancellationDetails must be present.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPartialOrRejectedCancellationRule.forResolutionOfInvestigationV06);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPartialOrRejectedCancellationRule.forResolutionOfInvestigationV04;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPartialOrRejectedCancellationRule.for_camt_ResolutionOfInvestigationV06);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPartialOrRejectedCancellationRule.for_camt_ResolutionOfInvestigationV04;
 			owner_lazy = () -> ResolutionOfInvestigationV05.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationDetails[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Status/Confirmation</leftOperand></BooleanRule><BooleanRule xsi:type=\"WithInList\"><leftOperand>/Status/Confirmation</leftOperand><rightOperand>InvestigationExecutionConfirmation4Code</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
 
 		@Override
 		public void executeValidator(ResolutionOfInvestigationV05 obj) throws Exception {
-			checkResolutionOfInvestigationV05(obj);
+			check_camt_ResolutionOfInvestigationV05(obj);
 		}
 	};
 	/**
@@ -302,33 +253,82 @@ public class ConstraintPartialOrRejectedCancellationRule {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintPartialOrRejectedCancellationRule#forResolutionOfInvestigationV07
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPartialOrRejectedCancellationRule#for_camt_ResolutionOfInvestigationV07
 	 * ConstraintPartialOrRejectedCancellationRule.
-	 * forResolutionOfInvestigationV07}</li>
+	 * for_camt_ResolutionOfInvestigationV07}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintPartialOrRejectedCancellationRule#forResolutionOfInvestigationV05
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPartialOrRejectedCancellationRule#for_camt_ResolutionOfInvestigationV05
 	 * ConstraintPartialOrRejectedCancellationRule.
-	 * forResolutionOfInvestigationV05}</li>
+	 * for_camt_ResolutionOfInvestigationV05}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<ResolutionOfInvestigationV06> forResolutionOfInvestigationV06 = new MMConstraint<ResolutionOfInvestigationV06>() {
+	public static final MMConstraint<ResolutionOfInvestigationV06> for_camt_ResolutionOfInvestigationV06 = new MMConstraint<ResolutionOfInvestigationV06>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialOrRejectedCancellationRule";
 			definition = "If Status/Confirmation is present and equal to PECR or RJCR then CancellationDetails must be present.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPartialOrRejectedCancellationRule.forResolutionOfInvestigationV07);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPartialOrRejectedCancellationRule.forResolutionOfInvestigationV05;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPartialOrRejectedCancellationRule.for_camt_ResolutionOfInvestigationV07);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPartialOrRejectedCancellationRule.for_camt_ResolutionOfInvestigationV05;
 			owner_lazy = () -> ResolutionOfInvestigationV06.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationDetails[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Status/Confirmation</leftOperand></BooleanRule><BooleanRule xsi:type=\"WithInList\"><leftOperand>/Status/Confirmation</leftOperand><rightOperand>InvestigationExecutionConfirmation4Code</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
 
 		@Override
 		public void executeValidator(ResolutionOfInvestigationV06 obj) throws Exception {
-			checkResolutionOfInvestigationV06(obj);
+			check_camt_ResolutionOfInvestigationV06(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV04
+	 * ResolutionOfInvestigationV04}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/CancellationDetails[*]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/Status/Confirmation&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"WithInList\"&gt;&lt;leftOperand&gt;/Status/Confirmation&lt;/leftOperand&gt;&lt;rightOperand&gt;InvestigationExecutionConfirmation4Code&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PartialOrRejectedCancellationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If Status/Confirmation is present and equal to PECR or RJCR then CancellationDetails must be present."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPartialOrRejectedCancellationRule#for_camt_ResolutionOfInvestigationV05
+	 * ConstraintPartialOrRejectedCancellationRule.
+	 * for_camt_ResolutionOfInvestigationV05}</li>
+	 * </ul>
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<ResolutionOfInvestigationV04> for_camt_ResolutionOfInvestigationV04 = new MMConstraint<ResolutionOfInvestigationV04>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PartialOrRejectedCancellationRule";
+			definition = "If Status/Confirmation is present and equal to PECR or RJCR then CancellationDetails must be present.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPartialOrRejectedCancellationRule.for_camt_ResolutionOfInvestigationV05);
+			owner_lazy = () -> ResolutionOfInvestigationV04.mmObject();
+			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationDetails[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Status/Confirmation</leftOperand></BooleanRule><BooleanRule xsi:type=\"WithInList\"><leftOperand>/Status/Confirmation</leftOperand><rightOperand>InvestigationExecutionConfirmation4Code</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(ResolutionOfInvestigationV04 obj) throws Exception {
+			check_camt_ResolutionOfInvestigationV04(obj);
 		}
 	};
 
@@ -336,7 +336,7 @@ public class ConstraintPartialOrRejectedCancellationRule {
 	 * If Status/Confirmation is present and equal to PECR or RJCR then
 	 * CancellationDetails must be present.
 	 */
-	public static void checkResolutionOfInvestigationV08(ResolutionOfInvestigationV08 obj) throws Exception {
+	public static void check_camt_ResolutionOfInvestigationV03(ResolutionOfInvestigationV03 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -344,7 +344,7 @@ public class ConstraintPartialOrRejectedCancellationRule {
 	 * If Status/Confirmation is present and equal to PECR or RJCR then
 	 * CancellationDetails must be present.
 	 */
-	public static void checkResolutionOfInvestigationV07(ResolutionOfInvestigationV07 obj) throws Exception {
+	public static void check_camt_ResolutionOfInvestigationV08(ResolutionOfInvestigationV08 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -352,7 +352,7 @@ public class ConstraintPartialOrRejectedCancellationRule {
 	 * If Status/Confirmation is present and equal to PECR or RJCR then
 	 * CancellationDetails must be present.
 	 */
-	public static void checkResolutionOfInvestigationV03(ResolutionOfInvestigationV03 obj) throws Exception {
+	public static void check_camt_ResolutionOfInvestigationV07(ResolutionOfInvestigationV07 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -360,7 +360,7 @@ public class ConstraintPartialOrRejectedCancellationRule {
 	 * If Status/Confirmation is present and equal to PECR or RJCR then
 	 * CancellationDetails must be present.
 	 */
-	public static void checkResolutionOfInvestigationV04(ResolutionOfInvestigationV04 obj) throws Exception {
+	public static void check_camt_ResolutionOfInvestigationV05(ResolutionOfInvestigationV05 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -368,7 +368,7 @@ public class ConstraintPartialOrRejectedCancellationRule {
 	 * If Status/Confirmation is present and equal to PECR or RJCR then
 	 * CancellationDetails must be present.
 	 */
-	public static void checkResolutionOfInvestigationV05(ResolutionOfInvestigationV05 obj) throws Exception {
+	public static void check_camt_ResolutionOfInvestigationV06(ResolutionOfInvestigationV06 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -376,7 +376,7 @@ public class ConstraintPartialOrRejectedCancellationRule {
 	 * If Status/Confirmation is present and equal to PECR or RJCR then
 	 * CancellationDetails must be present.
 	 */
-	public static void checkResolutionOfInvestigationV06(ResolutionOfInvestigationV06 obj) throws Exception {
+	public static void check_camt_ResolutionOfInvestigationV04(ResolutionOfInvestigationV04 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

@@ -99,8 +99,9 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintDepositoryOrPlaceOfListingPresenceRule#forTradeLegNotificationV03
- * ConstraintDepositoryOrPlaceOfListingPresenceRule.forTradeLegNotificationV03}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDepositoryOrPlaceOfListingPresenceRule#for_secl_TradeLegNotificationV03
+ * ConstraintDepositoryOrPlaceOfListingPresenceRule.
+ * for_secl_TradeLegNotificationV03}</li>
  * </ul>
  * </li>
  * <li>
@@ -504,7 +505,7 @@ public class TradeLegNotificationV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDepositoryOrPlaceOfListingPresenceRule.forTradeLegNotificationV03);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDepositoryOrPlaceOfListingPresenceRule.for_secl_TradeLegNotificationV03);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeLegNotificationV03";
 				definition = "Scope\r\nThe TradeLegNotification message is sent by the central counterparty (CCP) to a clearing member to report the trade that has been executed by the trading platform.\r\n\r\nThe message definition is intended for use with the ISO20022 Business Application Header.\r\n\r\nUsage\r\nThe CCP reports both sides of the trade from the clearing member perspective. The CCP sends a message to the global clearing member of the seller and a message to the global clearing member of the buyer. Note: An individual clearing member only clear its own trades.";

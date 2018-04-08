@@ -53,7 +53,7 @@ public class ConstraintCashPartiesCurrencyPresenceRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<StandingSettlementInstructionV01> forStandingSettlementInstructionV01 = new MMConstraint<StandingSettlementInstructionV01>() {
+	public static final MMConstraint<StandingSettlementInstructionV01> for_reda_StandingSettlementInstructionV01 = new MMConstraint<StandingSettlementInstructionV01>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashPartiesCurrencyPresenceRule";
@@ -64,7 +64,7 @@ public class ConstraintCashPartiesCurrencyPresenceRule {
 
 		@Override
 		public void executeValidator(StandingSettlementInstructionV01 obj) throws Exception {
-			checkStandingSettlementInstructionV01(obj);
+			check_reda_StandingSettlementInstructionV01(obj);
 		}
 	};
 
@@ -72,7 +72,7 @@ public class ConstraintCashPartiesCurrencyPresenceRule {
 	 * If SettlementDetails/CashPartiesDetails is present then
 	 * SettlementCurrency must be present.
 	 */
-	public static void checkStandingSettlementInstructionV01(StandingSettlementInstructionV01 obj) throws Exception {
+	public static void check_reda_StandingSettlementInstructionV01(StandingSettlementInstructionV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

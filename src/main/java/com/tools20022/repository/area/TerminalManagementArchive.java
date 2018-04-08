@@ -120,12 +120,12 @@ public class TerminalManagementArchive {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Terminal Management - Archive - master";
 				definition = "Messages that support any card related terminal management services between a Terminal Management System (TMS) and a Point of Interaction (POI) system.";
+				code = "catm";
 				messageDefinition_lazy = () -> Arrays.asList(ManagementPlanReplacementV01.mmObject(), ManagementPlanReplacementV02.mmObject(), StatusReportV01.mmObject(), StatusReportV02.mmObject(),
 						AcceptorConfigurationUpdateV01.mmObject(), AcceptorConfigurationUpdateV02.mmObject(), TerminalManagementRejectionV01.mmObject(), TerminalManagementRejectionV02.mmObject(), AcceptorConfigurationUpdateV03.mmObject(),
 						ManagementPlanReplacementV03.mmObject(), StatusReportV03.mmObject(), AcceptorConfigurationUpdateV04.mmObject(), ManagementPlanReplacementV04.mmObject(), StatusReportV04.mmObject(),
 						MaintenanceDelegationResponseV01.mmObject(), MaintenanceDelegationRequestV01.mmObject(), MaintenanceDelegationRequestV02.mmObject(), AcceptorConfigurationUpdateV05.mmObject(), StatusReportV05.mmObject(),
 						ManagementPlanReplacementV05.mmObject());
-				code = "catm";
 			}
 		});
 		return mmObject_lazy.get();

@@ -527,8 +527,8 @@ public class TradeSettlement2 {
 	 * constraint} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintR6#forExemptionReasonCode
-	 * ConstraintR6.forExemptionReasonCode}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintR6#forTradeSettlement2_ExemptionReasonCode
+	 * ConstraintR6.forTradeSettlement2_ExemptionReasonCode}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -549,7 +549,7 @@ public class TradeSettlement2 {
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeSettlement2.mmObject();
 			isDerived = false;
 			xmlTag = "XmptnRsnCd";
-			constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintR6.forExemptionReasonCode);
+			constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintR6.forTradeSettlement2_ExemptionReasonCode);
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionReasonCode";
 			definition = "Reason for tax exemption expressed as a code, if invoice or card transaction is out of tax processing.";

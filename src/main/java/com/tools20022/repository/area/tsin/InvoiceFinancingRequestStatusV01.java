@@ -108,14 +108,14 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintRequest1Rule#forInvoiceFinancingRequestStatusV01
- * ConstraintRequest1Rule.forInvoiceFinancingRequestStatusV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintRequest1Rule#for_tsin_InvoiceFinancingRequestStatusV01
+ * ConstraintRequest1Rule.for_tsin_InvoiceFinancingRequestStatusV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintCancellation1Rule#forInvoiceFinancingRequestStatusV01
- * ConstraintCancellation1Rule.forInvoiceFinancingRequestStatusV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCancellation1Rule#for_tsin_InvoiceFinancingRequestStatusV01
+ * ConstraintCancellation1Rule.for_tsin_InvoiceFinancingRequestStatusV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintMultiplicity1Rule#forInvoiceFinancingRequestStatusV01
- * ConstraintMultiplicity1Rule.forInvoiceFinancingRequestStatusV01}</li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMultiplicity1Rule#for_tsin_InvoiceFinancingRequestStatusV01
+ * ConstraintMultiplicity1Rule.for_tsin_InvoiceFinancingRequestStatusV01}</li>
  * </ul>
  * </li>
  * <li>
@@ -282,8 +282,9 @@ public class InvoiceFinancingRequestStatusV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRequest1Rule.forInvoiceFinancingRequestStatusV01,
-						com.tools20022.repository.constraints.ConstraintCancellation1Rule.forInvoiceFinancingRequestStatusV01, com.tools20022.repository.constraints.ConstraintMultiplicity1Rule.forInvoiceFinancingRequestStatusV01);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRequest1Rule.for_tsin_InvoiceFinancingRequestStatusV01,
+						com.tools20022.repository.constraints.ConstraintCancellation1Rule.for_tsin_InvoiceFinancingRequestStatusV01,
+						com.tools20022.repository.constraints.ConstraintMultiplicity1Rule.for_tsin_InvoiceFinancingRequestStatusV01);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvoiceFinancingRequestStatusV01";
 				definition = "Scope\r\nThe InvoiceFinancingRequestStatus message is sent by the First Agent to the Financing Requestor, alternatively through an Intermediary Agent (relay scenario). It is used to inform the Financing Requestor about the positive or negative status of a financing request or a financing cancellation request.\r\nUsage\r\nThe InvoiceFinancingRequestStatus message flows from the First Agent to the Financing Requestor (alternatively through an Intermediary Agent) to provide status information about a request previously sent.\r\nIts usage will always be governed by a bilateral agreement between the First Agent and the Financing Requestor.\r\nThe InvoiceFinancingRequestStatus message can be used two fold:\r\n- to provide information about the reception status (eg rejection, acceptance) of a request message. In this case the status message is the result of a technical validation performed by the First Agent on the request message received;\r\n- to inform the Financing Requestor about the business status of the financing process initiated. In this case the First Agent can:\r\n* communicate that a single financing request has been granted, is pending or has not been granted at all;\r\n* inform that a financing cancellation request has been allowed or denied.\r\nNote.\r\nIf the Financing Requestor requests financing for more than one instalment related to the same invoice, the First Agent can decide to finance only some of the instalments. In such case the status message contains details and status of every single instalment (financed, not financed).\r\nThe message can be used in a direct or in a relay scenario:\r\n- In a direct scenario, the message is sent directly by the First Agent to the Financing Requestor;\r\n- In a relay scenario, the message is sent first by the First Agent to the Intermediary Agent, who forwards it to the Financing Requestor.\r\nThe InvoiceFinancingRequestStatus message refers to the original request(s) by means of references and a set of data elements included into the original request.";

@@ -20,8 +20,8 @@ package com.tools20022.repository.constraints;
 import com.tools20022.core.repo.NotImplementedConstraintException;
 import com.tools20022.metamodel.MMConstraint;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.ExternalDocumentType1Code;
 import com.tools20022.repository.msg.GroupHeader69;
-import com.tools20022.repository.msg.GroupHeader69.ReportCategory;
 
 /**
  * Value according to external codelist.
@@ -47,7 +47,7 @@ public class ConstraintR3 {
 	 * definition} = "Value according to external codelist."</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<ReportCategory> forReportCategory = new MMConstraint<ReportCategory>() {
+	public static final MMConstraint<ExternalDocumentType1Code> forGroupHeader69_ReportCategory = new MMConstraint<ExternalDocumentType1Code>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "R3";
@@ -56,15 +56,15 @@ public class ConstraintR3 {
 		}
 
 		@Override
-		public void executeValidator(ReportCategory obj) throws Exception {
-			checkGroupHeader69(obj);
+		public void executeValidator(ExternalDocumentType1Code obj) throws Exception {
+			checkGroupHeader69_ReportCategory(obj);
 		}
 	};
 
 	/**
 	 * Value according to external codelist.
 	 */
-	public static void checkGroupHeader69(ReportCategory obj) throws Exception {
+	public static void checkGroupHeader69_ReportCategory(ExternalDocumentType1Code obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

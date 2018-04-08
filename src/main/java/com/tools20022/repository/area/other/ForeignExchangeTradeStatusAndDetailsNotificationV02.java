@@ -105,13 +105,13 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintSplitTradeFalsePresenceRule#forForeignExchangeTradeStatusAndDetailsNotificationV02
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSplitTradeFalsePresenceRule#for_OtherMessages_ForeignExchangeTradeStatusAndDetailsNotificationV02
  * ConstraintSplitTradeFalsePresenceRule.
- * forForeignExchangeTradeStatusAndDetailsNotificationV02}</li>
+ * for_OtherMessages_ForeignExchangeTradeStatusAndDetailsNotificationV02}</li>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintSplitTradeTruePresenceRule#forForeignExchangeTradeStatusAndDetailsNotificationV02
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSplitTradeTruePresenceRule#for_OtherMessages_ForeignExchangeTradeStatusAndDetailsNotificationV02
  * ConstraintSplitTradeTruePresenceRule.
- * forForeignExchangeTradeStatusAndDetailsNotificationV02}</li>
+ * for_OtherMessages_ForeignExchangeTradeStatusAndDetailsNotificationV02}</li>
  * </ul>
  * </li>
  * <li>
@@ -694,8 +694,8 @@ public class ForeignExchangeTradeStatusAndDetailsNotificationV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSplitTradeFalsePresenceRule.forForeignExchangeTradeStatusAndDetailsNotificationV02,
-						com.tools20022.repository.constraints.ConstraintSplitTradeTruePresenceRule.forForeignExchangeTradeStatusAndDetailsNotificationV02);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSplitTradeFalsePresenceRule.for_OtherMessages_ForeignExchangeTradeStatusAndDetailsNotificationV02,
+						com.tools20022.repository.constraints.ConstraintSplitTradeTruePresenceRule.for_OtherMessages_ForeignExchangeTradeStatusAndDetailsNotificationV02);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ForeignExchangeTradeStatusAndDetailsNotificationV02";
 				definition = "Scope\r\r\nThe ForeignExchangeTradeStatusAndDetails message is sent by a central system to the participant to provide notification of the status and details of a foreign exchange trade.\r\r\nUsage\r\r\nThe notification is sent by a central settlement system to the two trading parties after it has received foreign exchange trade instructions from both.";

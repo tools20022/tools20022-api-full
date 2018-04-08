@@ -36,40 +36,6 @@ public class ConstraintNameAndAddress1Rule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.DeliveryParameters2
-	 * DeliveryParameters2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "NameAndAddress1Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If RegisteredAddressIndicator is \"true\" or \"1\" (Yes), then NameAndAddress is not allowed.\nIf RegisteredAddressIndicator is \"false\" or \"0\" (No), then NameAndAddress must be present."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<DeliveryParameters2> forDeliveryParameters2 = new MMConstraint<DeliveryParameters2>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "NameAndAddress1Rule";
-			definition = "If RegisteredAddressIndicator is \"true\" or \"1\" (Yes), then NameAndAddress is not allowed.\nIf RegisteredAddressIndicator is \"false\" or \"0\" (No), then NameAndAddress must be present.";
-			owner_lazy = () -> DeliveryParameters2.mmObject();
-		}
-
-		@Override
-		public void executeValidator(DeliveryParameters2 obj) throws Exception {
-			checkDeliveryParameters2(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DeliveryParameters4
 	 * DeliveryParameters4}</li>
 	 * <li>
@@ -98,13 +64,47 @@ public class ConstraintNameAndAddress1Rule {
 			checkDeliveryParameters4(obj);
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.DeliveryParameters2
+	 * DeliveryParameters2}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NameAndAddress1Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If RegisteredAddressIndicator is \"true\" or \"1\" (Yes), then NameAndAddress is not allowed.\nIf RegisteredAddressIndicator is \"false\" or \"0\" (No), then NameAndAddress must be present."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<DeliveryParameters2> forDeliveryParameters2 = new MMConstraint<DeliveryParameters2>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NameAndAddress1Rule";
+			definition = "If RegisteredAddressIndicator is \"true\" or \"1\" (Yes), then NameAndAddress is not allowed.\nIf RegisteredAddressIndicator is \"false\" or \"0\" (No), then NameAndAddress must be present.";
+			owner_lazy = () -> DeliveryParameters2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DeliveryParameters2 obj) throws Exception {
+			checkDeliveryParameters2(obj);
+		}
+	};
 
 	/**
 	 * If RegisteredAddressIndicator is "true" or "1" (Yes), then NameAndAddress
 	 * is not allowed. If RegisteredAddressIndicator is "false" or "0" (No),
 	 * then NameAndAddress must be present.
 	 */
-	public static void checkDeliveryParameters2(DeliveryParameters2 obj) throws Exception {
+	public static void checkDeliveryParameters4(DeliveryParameters4 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -113,7 +113,7 @@ public class ConstraintNameAndAddress1Rule {
 	 * is not allowed. If RegisteredAddressIndicator is "false" or "0" (No),
 	 * then NameAndAddress must be present.
 	 */
-	public static void checkDeliveryParameters4(DeliveryParameters4 obj) throws Exception {
+	public static void checkDeliveryParameters2(DeliveryParameters2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

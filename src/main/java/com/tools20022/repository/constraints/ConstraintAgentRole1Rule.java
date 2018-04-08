@@ -35,6 +35,43 @@ public class ConstraintAgentRole1Rule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.IssuerAgent2 IssuerAgent2}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AgentRole1Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "PRIN can only be present in a single occurrence of Role."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAgentRole1Rule#forIssuerAgent1
+	 * ConstraintAgentRole1Rule.forIssuerAgent1}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<IssuerAgent2> forIssuerAgent2 = new MMConstraint<IssuerAgent2>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AgentRole1Rule";
+			definition = "PRIN can only be present in a single occurrence of Role.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAgentRole1Rule.forIssuerAgent1;
+			owner_lazy = () -> IssuerAgent2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IssuerAgent2 obj) throws Exception {
+			checkIssuerAgent2(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.IssuerAgent1 IssuerAgent1}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -69,55 +106,18 @@ public class ConstraintAgentRole1Rule {
 			checkIssuerAgent1(obj);
 		}
 	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.IssuerAgent2 IssuerAgent2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AgentRole1Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "PRIN can only be present in a single occurrence of Role."</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintAgentRole1Rule#forIssuerAgent1
-	 * ConstraintAgentRole1Rule.forIssuerAgent1}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<IssuerAgent2> forIssuerAgent2 = new MMConstraint<IssuerAgent2>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "AgentRole1Rule";
-			definition = "PRIN can only be present in a single occurrence of Role.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAgentRole1Rule.forIssuerAgent1;
-			owner_lazy = () -> IssuerAgent2.mmObject();
-		}
-
-		@Override
-		public void executeValidator(IssuerAgent2 obj) throws Exception {
-			checkIssuerAgent2(obj);
-		}
-	};
 
 	/**
 	 * PRIN can only be present in a single occurrence of Role.
 	 */
-	public static void checkIssuerAgent1(IssuerAgent1 obj) throws Exception {
+	public static void checkIssuerAgent2(IssuerAgent2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
 	/**
 	 * PRIN can only be present in a single occurrence of Role.
 	 */
-	public static void checkIssuerAgent2(IssuerAgent2 obj) throws Exception {
+	public static void checkIssuerAgent1(IssuerAgent1 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

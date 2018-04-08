@@ -119,9 +119,9 @@ import javax.xml.bind.annotation.*;
  * constraint} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.constraints.ConstraintBalanceForAccountOrSubAccountDetailsRule#forAccountingStatementOfHoldings
+ * {@linkplain com.tools20022.repository.constraints.ConstraintBalanceForAccountOrSubAccountDetailsRule#for_semt_AccountingStatementOfHoldings
  * ConstraintBalanceForAccountOrSubAccountDetailsRule.
- * forAccountingStatementOfHoldings}</li>
+ * for_semt_AccountingStatementOfHoldings}</li>
  * </ul>
  * </li>
  * <li>
@@ -566,7 +566,7 @@ public class AccountingStatementOfHoldings {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBalanceForAccountOrSubAccountDetailsRule.forAccountingStatementOfHoldings);
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBalanceForAccountOrSubAccountDetailsRule.for_semt_AccountingStatementOfHoldings);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountingStatementOfHoldings";
 				definition = "Scope\r\nThe AccountingStatementOfHoldings message is sent by an account servicer to the account owner or the account owner's designated agent. The account servicer may be a local agent acting on behalf of its global custodian customer, a custodian acting on behalf of an investment management institution or a broker/dealer, a fund administrator or fund intermediary, trustee or registrar, etc.\r\nThis message provides, at a specified moment in time, valuations of the portfolio together with details of each financial instrument holding.\r\nThe information in the message can be audited or un-audited.\r\nUsage\r\nThe AccountingStatementOfHoldings message can be sent:\r\n- At a frequency agreed bi-laterally between the Sender and the Receiver\r\n- As a response to a request for statement sent by the account owner. The request for statement message will be developed at a later stage.\r\nThis message can only be used to list the holdings of a single (master) account. However, it is possible to break down these holdings into one or several sub-accounts. Therefore, the message can be used to either specify holdings at\r\n- the main account level, or\r\n- the sub-account level.\r\nThis message can be used to report where the securities are safe-kept, physically or notionally. If a security is held in more than one safekeeping place, this can also be indicated.\r\nThe AccountingStatementOfHoldings message must not be used to reconcile the books of the account owner and the account servicer. The CustodyStatementOfHoldings message is used for reconciliation purposes.\r\nThe AccountingStatementOfHoldings message must not be used for trading purposes.\r\nSince a SWIFT message as sent is restricted to the maximum input message length, several messages may be needed to accommodate all the information.";

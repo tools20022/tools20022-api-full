@@ -82,6 +82,44 @@ public class ConstraintForwardBalanceAndAvailabilityRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CashBalance8 CashBalance8}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ForwardBalanceAndAvailabilityRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If Type is equal to ForwardAvailable, Availability is not allowed."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintForwardBalanceAndAvailabilityRule#forCashBalance7
+	 * ConstraintForwardBalanceAndAvailabilityRule.forCashBalance7}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CashBalance8> forCashBalance8 = new MMConstraint<CashBalance8>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ForwardBalanceAndAvailabilityRule";
+			definition = "If Type is equal to ForwardAvailable, Availability is not allowed.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintForwardBalanceAndAvailabilityRule.forCashBalance7;
+			owner_lazy = () -> CashBalance8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashBalance8 obj) throws Exception {
+			checkCashBalance8(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CashBalance7 CashBalance7}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
 	 * expression} =
@@ -128,44 +166,6 @@ public class ConstraintForwardBalanceAndAvailabilityRule {
 			checkCashBalance7(obj);
 		}
 	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.CashBalance8 CashBalance8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ForwardBalanceAndAvailabilityRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If Type is equal to ForwardAvailable, Availability is not allowed."</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintForwardBalanceAndAvailabilityRule#forCashBalance7
-	 * ConstraintForwardBalanceAndAvailabilityRule.forCashBalance7}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CashBalance8> forCashBalance8 = new MMConstraint<CashBalance8>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ForwardBalanceAndAvailabilityRule";
-			definition = "If Type is equal to ForwardAvailable, Availability is not allowed.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintForwardBalanceAndAvailabilityRule.forCashBalance7;
-			owner_lazy = () -> CashBalance8.mmObject();
-		}
-
-		@Override
-		public void executeValidator(CashBalance8 obj) throws Exception {
-			checkCashBalance8(obj);
-		}
-	};
 
 	/**
 	 * If Type is equal to ForwardAvailable, Availability is not allowed.
@@ -177,14 +177,14 @@ public class ConstraintForwardBalanceAndAvailabilityRule {
 	/**
 	 * If Type is equal to ForwardAvailable, Availability is not allowed.
 	 */
-	public static void checkCashBalance7(CashBalance7 obj) throws Exception {
+	public static void checkCashBalance8(CashBalance8 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
 	/**
 	 * If Type is equal to ForwardAvailable, Availability is not allowed.
 	 */
-	public static void checkCashBalance8(CashBalance8 obj) throws Exception {
+	public static void checkCashBalance7(CashBalance7 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

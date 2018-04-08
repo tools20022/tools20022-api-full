@@ -41,40 +41,6 @@ public class ConstraintOrderOriginatorEligibility4Rule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationAmendmentV01
-	 * SwitchOrderConfirmationAmendmentV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "OrderOriginatorEligibility4Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Either SwitchExecutionDetails/InvestmentAccountDetails/OrderOriginatorEligibility or (one or more instances of SwitchExecutionDetails/RelatedPartyDetails/OrderOriginatorEligibility) may be present, but not both."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SwitchOrderConfirmationAmendmentV01> forSwitchOrderConfirmationAmendmentV01 = new MMConstraint<SwitchOrderConfirmationAmendmentV01>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "OrderOriginatorEligibility4Rule";
-			definition = "Either SwitchExecutionDetails/InvestmentAccountDetails/OrderOriginatorEligibility or (one or more instances of SwitchExecutionDetails/RelatedPartyDetails/OrderOriginatorEligibility) may be present, but not both.";
-			owner_lazy = () -> SwitchOrderConfirmationAmendmentV01.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SwitchOrderConfirmationAmendmentV01 obj) throws Exception {
-			checkSwitchOrderConfirmationAmendmentV01(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationV03
 	 * SwitchOrderConfirmationV03}</li>
 	 * <li>
@@ -90,7 +56,7 @@ public class ConstraintOrderOriginatorEligibility4Rule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<SwitchOrderConfirmationV03> forSwitchOrderConfirmationV03 = new MMConstraint<SwitchOrderConfirmationV03>() {
+	public static final MMConstraint<SwitchOrderConfirmationV03> for_setr_SwitchOrderConfirmationV03 = new MMConstraint<SwitchOrderConfirmationV03>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginatorEligibility4Rule";
@@ -100,41 +66,7 @@ public class ConstraintOrderOriginatorEligibility4Rule {
 
 		@Override
 		public void executeValidator(SwitchOrderConfirmationV03 obj) throws Exception {
-			checkSwitchOrderConfirmationV03(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV03
-	 * SwitchOrderV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "OrderOriginatorEligibility4Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Either SwitchOrderDetails/InvestmentAccountDetails/OrderOriginatorEligibility or (one or more instances of SwitchOrderDetails/RelatedPartyDetails/OrderOriginatorEligibility) may be present, but not both."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SwitchOrderV03> forSwitchOrderV03 = new MMConstraint<SwitchOrderV03>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "OrderOriginatorEligibility4Rule";
-			definition = "Either SwitchOrderDetails/InvestmentAccountDetails/OrderOriginatorEligibility or (one or more instances of SwitchOrderDetails/RelatedPartyDetails/OrderOriginatorEligibility) may be present, but not both.";
-			owner_lazy = () -> SwitchOrderV03.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SwitchOrderV03 obj) throws Exception {
-			checkSwitchOrderV03(obj);
+			check_setr_SwitchOrderConfirmationV03(obj);
 		}
 	};
 	/**
@@ -169,6 +101,74 @@ public class ConstraintOrderOriginatorEligibility4Rule {
 		@Override
 		public void executeValidator(SwitchOrderInstruction2 obj) throws Exception {
 			checkSwitchOrderInstruction2(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationAmendmentV01
+	 * SwitchOrderConfirmationAmendmentV01}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OrderOriginatorEligibility4Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Either SwitchExecutionDetails/InvestmentAccountDetails/OrderOriginatorEligibility or (one or more instances of SwitchExecutionDetails/RelatedPartyDetails/OrderOriginatorEligibility) may be present, but not both."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SwitchOrderConfirmationAmendmentV01> for_setr_SwitchOrderConfirmationAmendmentV01 = new MMConstraint<SwitchOrderConfirmationAmendmentV01>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OrderOriginatorEligibility4Rule";
+			definition = "Either SwitchExecutionDetails/InvestmentAccountDetails/OrderOriginatorEligibility or (one or more instances of SwitchExecutionDetails/RelatedPartyDetails/OrderOriginatorEligibility) may be present, but not both.";
+			owner_lazy = () -> SwitchOrderConfirmationAmendmentV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchOrderConfirmationAmendmentV01 obj) throws Exception {
+			check_setr_SwitchOrderConfirmationAmendmentV01(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV03
+	 * SwitchOrderV03}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OrderOriginatorEligibility4Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Either SwitchOrderDetails/InvestmentAccountDetails/OrderOriginatorEligibility or (one or more instances of SwitchOrderDetails/RelatedPartyDetails/OrderOriginatorEligibility) may be present, but not both."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SwitchOrderV03> for_setr_SwitchOrderV03 = new MMConstraint<SwitchOrderV03>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OrderOriginatorEligibility4Rule";
+			definition = "Either SwitchOrderDetails/InvestmentAccountDetails/OrderOriginatorEligibility or (one or more instances of SwitchOrderDetails/RelatedPartyDetails/OrderOriginatorEligibility) may be present, but not both.";
+			owner_lazy = () -> SwitchOrderV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchOrderV03 obj) throws Exception {
+			check_setr_SwitchOrderV03(obj);
 		}
 	};
 	/**
@@ -212,28 +212,7 @@ public class ConstraintOrderOriginatorEligibility4Rule {
 	 * SwitchExecutionDetails/RelatedPartyDetails/OrderOriginatorEligibility)
 	 * may be present, but not both.
 	 */
-	public static void checkSwitchOrderConfirmationAmendmentV01(SwitchOrderConfirmationAmendmentV01 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Either SwitchExecutionDetails/InvestmentAccountDetails/
-	 * OrderOriginatorEligibility or (one or more instances of
-	 * SwitchExecutionDetails/RelatedPartyDetails/OrderOriginatorEligibility)
-	 * may be present, but not both.
-	 */
-	public static void checkSwitchOrderConfirmationV03(SwitchOrderConfirmationV03 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Either
-	 * SwitchOrderDetails/InvestmentAccountDetails/OrderOriginatorEligibility or
-	 * (one or more instances of
-	 * SwitchOrderDetails/RelatedPartyDetails/OrderOriginatorEligibility) may be
-	 * present, but not both.
-	 */
-	public static void checkSwitchOrderV03(SwitchOrderV03 obj) throws Exception {
+	public static void check_setr_SwitchOrderConfirmationV03(SwitchOrderConfirmationV03 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -245,6 +224,27 @@ public class ConstraintOrderOriginatorEligibility4Rule {
 	 * present, but not both.
 	 */
 	public static void checkSwitchOrderInstruction2(SwitchOrderInstruction2 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Either SwitchExecutionDetails/InvestmentAccountDetails/
+	 * OrderOriginatorEligibility or (one or more instances of
+	 * SwitchExecutionDetails/RelatedPartyDetails/OrderOriginatorEligibility)
+	 * may be present, but not both.
+	 */
+	public static void check_setr_SwitchOrderConfirmationAmendmentV01(SwitchOrderConfirmationAmendmentV01 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Either
+	 * SwitchOrderDetails/InvestmentAccountDetails/OrderOriginatorEligibility or
+	 * (one or more instances of
+	 * SwitchOrderDetails/RelatedPartyDetails/OrderOriginatorEligibility) may be
+	 * present, but not both.
+	 */
+	public static void check_setr_SwitchOrderV03(SwitchOrderV03 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 

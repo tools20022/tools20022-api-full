@@ -27,50 +27,10 @@ import java.util.Arrays;
 
 /**
  * The cancellation of a switch order must be a full cancellation. Partial
- * cancellations are not allowed, for example, the cancellation of a given leg.
+ * cancellations are not allowed e.g. cancellation of a given leg.
  */
 public class ConstraintSwitchRule {
 
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV04
-	 * SwitchOrderCancellationRequestV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SwitchRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "The cancellation of a switch order must be a full cancellation. Partial cancellations are not allowed, for example, the cancellation of a given leg."
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSwitchRule#forSwitchOrderCancellationRequestV03
-	 * ConstraintSwitchRule.forSwitchOrderCancellationRequestV03}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SwitchOrderCancellationRequestV04> forSwitchOrderCancellationRequestV04 = new MMConstraint<SwitchOrderCancellationRequestV04>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SwitchRule";
-			definition = "The cancellation of a switch order must be a full cancellation. Partial cancellations are not allowed, for example, the cancellation of a given leg.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSwitchRule.forSwitchOrderCancellationRequestV03;
-			owner_lazy = () -> SwitchOrderCancellationRequestV04.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SwitchOrderCancellationRequestV04 obj) throws Exception {
-			checkSwitchOrderCancellationRequestV04(obj);
-		}
-	};
 	/**
 	 * 
 	 <p>
@@ -94,24 +54,24 @@ public class ConstraintSwitchRule {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSwitchRule#forSwitchOrderCancellationRequestV04
-	 * ConstraintSwitchRule.forSwitchOrderCancellationRequestV04}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSwitchRule#for_setr_SwitchOrderCancellationRequestV04
+	 * ConstraintSwitchRule.for_setr_SwitchOrderCancellationRequestV04}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<SwitchOrderCancellationRequestV03> forSwitchOrderCancellationRequestV03 = new MMConstraint<SwitchOrderCancellationRequestV03>() {
+	public static final MMConstraint<SwitchOrderCancellationRequestV03> for_setr_SwitchOrderCancellationRequestV03 = new MMConstraint<SwitchOrderCancellationRequestV03>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwitchRule";
 			definition = "The cancellation of a switch order must be a full cancellation. Partial cancellations are not allowed e.g. cancellation of a given leg.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSwitchRule.forSwitchOrderCancellationRequestV04);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSwitchRule.for_setr_SwitchOrderCancellationRequestV04);
 			owner_lazy = () -> SwitchOrderCancellationRequestV03.mmObject();
 		}
 
 		@Override
 		public void executeValidator(SwitchOrderCancellationRequestV03 obj) throws Exception {
-			checkSwitchOrderCancellationRequestV03(obj);
+			check_setr_SwitchOrderCancellationRequestV03(obj);
 		}
 	};
 	/**
@@ -135,7 +95,7 @@ public class ConstraintSwitchRule {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<SwitchOrderCancellationInstructionV02> forSwitchOrderCancellationInstructionV02 = new MMConstraint<SwitchOrderCancellationInstructionV02>() {
+	public static final MMConstraint<SwitchOrderCancellationInstructionV02> for_setr_SwitchOrderCancellationInstructionV02 = new MMConstraint<SwitchOrderCancellationInstructionV02>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwitchRule";
@@ -145,32 +105,72 @@ public class ConstraintSwitchRule {
 
 		@Override
 		public void executeValidator(SwitchOrderCancellationInstructionV02 obj) throws Exception {
-			checkSwitchOrderCancellationInstructionV02(obj);
+			check_setr_SwitchOrderCancellationInstructionV02(obj);
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV04
+	 * SwitchOrderCancellationRequestV04}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SwitchRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The cancellation of a switch order must be a full cancellation. Partial cancellations are not allowed, for example, the cancellation of a given leg."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSwitchRule#for_setr_SwitchOrderCancellationRequestV03
+	 * ConstraintSwitchRule.for_setr_SwitchOrderCancellationRequestV03}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SwitchOrderCancellationRequestV04> for_setr_SwitchOrderCancellationRequestV04 = new MMConstraint<SwitchOrderCancellationRequestV04>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SwitchRule";
+			definition = "The cancellation of a switch order must be a full cancellation. Partial cancellations are not allowed, for example, the cancellation of a given leg.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSwitchRule.for_setr_SwitchOrderCancellationRequestV03;
+			owner_lazy = () -> SwitchOrderCancellationRequestV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchOrderCancellationRequestV04 obj) throws Exception {
+			check_setr_SwitchOrderCancellationRequestV04(obj);
+		}
+	};
+
+	/**
+	 * The cancellation of a switch order must be a full cancellation. Partial
+	 * cancellations are not allowed e.g. cancellation of a given leg.
+	 */
+	public static void check_setr_SwitchOrderCancellationRequestV03(SwitchOrderCancellationRequestV03 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The cancellation of a switch order must be a full cancellation. Partial
+	 * cancellations are not allowed e.g. cancellation of a given leg.
+	 */
+	public static void check_setr_SwitchOrderCancellationInstructionV02(SwitchOrderCancellationInstructionV02 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
 
 	/**
 	 * The cancellation of a switch order must be a full cancellation. Partial
 	 * cancellations are not allowed, for example, the cancellation of a given
 	 * leg.
 	 */
-	public static void checkSwitchOrderCancellationRequestV04(SwitchOrderCancellationRequestV04 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * The cancellation of a switch order must be a full cancellation. Partial
-	 * cancellations are not allowed e.g. cancellation of a given leg.
-	 */
-	public static void checkSwitchOrderCancellationRequestV03(SwitchOrderCancellationRequestV03 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * The cancellation of a switch order must be a full cancellation. Partial
-	 * cancellations are not allowed e.g. cancellation of a given leg.
-	 */
-	public static void checkSwitchOrderCancellationInstructionV02(SwitchOrderCancellationInstructionV02 obj) throws Exception {
+	public static void check_setr_SwitchOrderCancellationRequestV04(SwitchOrderCancellationRequestV04 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

@@ -200,6 +200,7 @@ public class TradeServicesManagementLatestVersion {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Trade Services Management - Latest version - master";
 				definition = "Messages that support ancillary commercial trade services functions, including checking, matching and reporting, plus any exceptions and investigations related to trade services transactions.";
+				code = "tsmt";
 				messageDefinition_lazy = () -> Arrays.asList(AcknowledgementV03.mmObject(), ActivityReportRequestV03.mmObject(), ActivityReportSetUpRequestV02.mmObject(), AmendmentAcceptanceV02.mmObject(),
 						AmendmentAcceptanceNotificationV03.mmObject(), AmendmentRejectionV02.mmObject(), AmendmentRejectionNotificationV03.mmObject(), BaselineMatchReportV03.mmObject(), DataSetMatchReportV03.mmObject(),
 						DeltaReportV03.mmObject(), ErrorReportV03.mmObject(), MisMatchAcceptanceV02.mmObject(), MisMatchAcceptanceNotificationV03.mmObject(), MisMatchRejectionV02.mmObject(), MisMatchRejectionNotificationV03.mmObject(),
@@ -211,7 +212,6 @@ public class TradeServicesManagementLatestVersion {
 						RoleAndBaselineRejectionNotificationV01.mmObject(), ActivityReportV04.mmObject(), IntentToPayNotificationV02.mmObject(), ForwardIntentToPayNotificationV02.mmObject(), BaselineReportV04.mmObject(),
 						InitialBaselineSubmissionV05.mmObject(), BaselineAmendmentRequestV05.mmObject(), FullPushThroughReportV05.mmObject(), ForwardDataSetSubmissionReportV05.mmObject(), DataSetSubmissionV05.mmObject(),
 						BaselineReSubmissionV05.mmObject(), InvoicePaymentReconciliationAdviceV01.mmObject(), PartyEventAdviceV01.mmObject(), InvoicePaymentReconciliationStatusV01.mmObject());
-				code = "tsmt";
 			}
 		});
 		return mmObject_lazy.get();

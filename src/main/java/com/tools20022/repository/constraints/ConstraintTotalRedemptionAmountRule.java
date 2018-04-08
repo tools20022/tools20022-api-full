@@ -72,39 +72,6 @@ public class ConstraintTotalRedemptionAmountRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.SwitchOrder3 SwitchOrder3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "TotalRedemptionAmountRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If SubscriptionLegDetails/FinancialInstrumentQuantityChoice/PercentageOfTotalRedemptionAmount is present, then TotalRedemptionAmount must also be present. If SubscriptionLegDetails/FinancialInstrumentQuantityChoice/PercentageOfTotalRedemptionAmount is not present, then TotalRedemptionAmount is optional."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SwitchOrder3> forSwitchOrder3 = new MMConstraint<SwitchOrder3>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "TotalRedemptionAmountRule";
-			definition = "If SubscriptionLegDetails/FinancialInstrumentQuantityChoice/PercentageOfTotalRedemptionAmount is present, then TotalRedemptionAmount must also be present. If SubscriptionLegDetails/FinancialInstrumentQuantityChoice/PercentageOfTotalRedemptionAmount is not present, then TotalRedemptionAmount is optional.";
-			owner_lazy = () -> SwitchOrder3.mmObject();
-		}
-
-		@Override
-		public void executeValidator(SwitchOrder3 obj) throws Exception {
-			checkSwitchOrder3(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SwitchOrder4 SwitchOrder4}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -132,6 +99,39 @@ public class ConstraintTotalRedemptionAmountRule {
 			checkSwitchOrder4(obj);
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SwitchOrder3 SwitchOrder3}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TotalRedemptionAmountRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SubscriptionLegDetails/FinancialInstrumentQuantityChoice/PercentageOfTotalRedemptionAmount is present, then TotalRedemptionAmount must also be present. If SubscriptionLegDetails/FinancialInstrumentQuantityChoice/PercentageOfTotalRedemptionAmount is not present, then TotalRedemptionAmount is optional."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SwitchOrder3> forSwitchOrder3 = new MMConstraint<SwitchOrder3>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "TotalRedemptionAmountRule";
+			definition = "If SubscriptionLegDetails/FinancialInstrumentQuantityChoice/PercentageOfTotalRedemptionAmount is present, then TotalRedemptionAmount must also be present. If SubscriptionLegDetails/FinancialInstrumentQuantityChoice/PercentageOfTotalRedemptionAmount is not present, then TotalRedemptionAmount is optional.";
+			owner_lazy = () -> SwitchOrder3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchOrder3 obj) throws Exception {
+			checkSwitchOrder3(obj);
+		}
+	};
 
 	/**
 	 * If SubscriptionLegDetails/FinancialInstrumentQuantityChoice/
@@ -153,7 +153,7 @@ public class ConstraintTotalRedemptionAmountRule {
 	 * /PercentageOfTotalRedemptionAmount is not present, then
 	 * TotalRedemptionAmount is optional.
 	 */
-	public static void checkSwitchOrder3(SwitchOrder3 obj) throws Exception {
+	public static void checkSwitchOrder4(SwitchOrder4 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -165,7 +165,7 @@ public class ConstraintTotalRedemptionAmountRule {
 	 * /PercentageOfTotalRedemptionAmount is not present, then
 	 * TotalRedemptionAmount is optional.
 	 */
-	public static void checkSwitchOrder4(SwitchOrder4 obj) throws Exception {
+	public static void checkSwitchOrder3(SwitchOrder3 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

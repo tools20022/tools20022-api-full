@@ -27,11 +27,50 @@ import com.tools20022.repository.msg.CorrectivePaymentInitiation3;
 import java.util.Arrays;
 
 /**
- * Either InstructionIdentification or EndToEndIdentification or both must be
- * present.
+ * Either InstructionIdentification, EndToEndIdentification,
+ * TransactionIdentification or any combination of the three must be present.
  */
 public class ConstraintIdentificationRule {
 
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorrectiveInterbankTransaction1
+	 * CorrectiveInterbankTransaction1}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;SimpleRule xsi:type=\"SimpleRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/InstructionIdentification&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/EndToEndIdentification&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/TransactionIdentification&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;/SimpleRule&gt;&lt;/RuleDefinition&gt;\n"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "IdentificationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Either InstructionIdentification, EndToEndIdentification, TransactionIdentification or any combination of the three must be present."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorrectiveInterbankTransaction1> forCorrectiveInterbankTransaction1 = new MMConstraint<CorrectiveInterbankTransaction1>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "IdentificationRule";
+			definition = "Either InstructionIdentification, EndToEndIdentification, TransactionIdentification or any combination of the three must be present.";
+			owner_lazy = () -> CorrectiveInterbankTransaction1.mmObject();
+			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><SimpleRule xsi:type=\"SimpleRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InstructionIdentification</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/EndToEndIdentification</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionIdentification</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(CorrectiveInterbankTransaction1 obj) throws Exception {
+			checkCorrectiveInterbankTransaction1(obj);
+		}
+	};
 	/**
 	 * 
 	 <p>
@@ -78,45 +117,6 @@ public class ConstraintIdentificationRule {
 		@Override
 		public void executeValidator(CorrectivePaymentInitiation1 obj) throws Exception {
 			checkCorrectivePaymentInitiation1(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.CorrectiveInterbankTransaction1
-	 * CorrectiveInterbankTransaction1}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
-	 * expression} =
-	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;SimpleRule xsi:type=\"SimpleRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/InstructionIdentification&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/EndToEndIdentification&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/TransactionIdentification&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;/SimpleRule&gt;&lt;/RuleDefinition&gt;\n"
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "IdentificationRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Either InstructionIdentification, EndToEndIdentification, TransactionIdentification or any combination of the three must be present."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CorrectiveInterbankTransaction1> forCorrectiveInterbankTransaction1 = new MMConstraint<CorrectiveInterbankTransaction1>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "IdentificationRule";
-			definition = "Either InstructionIdentification, EndToEndIdentification, TransactionIdentification or any combination of the three must be present.";
-			owner_lazy = () -> CorrectiveInterbankTransaction1.mmObject();
-			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><SimpleRule xsi:type=\"SimpleRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InstructionIdentification</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/EndToEndIdentification</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionIdentification</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>\n";
-		}
-
-		@Override
-		public void executeValidator(CorrectiveInterbankTransaction1 obj) throws Exception {
-			checkCorrectiveInterbankTransaction1(obj);
 		}
 	};
 	/**
@@ -220,19 +220,19 @@ public class ConstraintIdentificationRule {
 	};
 
 	/**
-	 * Either InstructionIdentification or EndToEndIdentification or both must
-	 * be present.
-	 */
-	public static void checkCorrectivePaymentInitiation1(CorrectivePaymentInitiation1 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
 	 * Either InstructionIdentification, EndToEndIdentification,
 	 * TransactionIdentification or any combination of the three must be
 	 * present.
 	 */
 	public static void checkCorrectiveInterbankTransaction1(CorrectiveInterbankTransaction1 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Either InstructionIdentification or EndToEndIdentification or both must
+	 * be present.
+	 */
+	public static void checkCorrectivePaymentInitiation1(CorrectivePaymentInitiation1 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 

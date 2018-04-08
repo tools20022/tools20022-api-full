@@ -25,9 +25,8 @@ import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 
 /**
- * Either TransferDetails/EffectiveSettlementDate may be present in one or more
- * occurrences of TransferDetails or SettlementDetails/Effective Settlement Date
- * may be present, but not both.
+ * Either TransferDetails\EffectiveSettlementDate or SettlementDetails\Effective
+ * Settlement Date may be present, but not both.
  */
 public class ConstraintEffectiveSettlementDateRule {
 
@@ -37,8 +36,8 @@ public class ConstraintEffectiveSettlementDateRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV08
-	 * TransferInConfirmationV08}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV04
+	 * TransferInConfirmationV04}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -48,67 +47,31 @@ public class ConstraintEffectiveSettlementDateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Either TransferDetails/EffectiveSettlementDate may be present in one or more occurrences of TransferDetails or SettlementDetails/Effective Settlement Date may be present, but not both."
+	 * "Either TransferDetails\\EffectiveSettlementDate or SettlementDetails\\Effective Settlement Date may be present, but not both."
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#forTransferInConfirmationV07
-	 * ConstraintEffectiveSettlementDateRule.forTransferInConfirmationV07}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<TransferInConfirmationV08> forTransferInConfirmationV08 = new MMConstraint<TransferInConfirmationV08>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "EffectiveSettlementDateRule";
-			definition = "Either TransferDetails/EffectiveSettlementDate may be present in one or more occurrences of TransferDetails or SettlementDetails/Effective Settlement Date may be present, but not both.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferInConfirmationV07;
-			owner_lazy = () -> TransferInConfirmationV08.mmObject();
-		}
-
-		@Override
-		public void executeValidator(TransferInConfirmationV08 obj) throws Exception {
-			checkTransferInConfirmationV08(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV08
-	 * TransferOutConfirmationV08}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "EffectiveSettlementDateRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Either TransferDetails/EffectiveSettlementDate may be present in one or more occurrences of TransferDetails or SettlementDetails/EffectiveSettlementDate may be present, but not both."
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#for_sese_TransferInConfirmationV05
+	 * ConstraintEffectiveSettlementDateRule.for_sese_TransferInConfirmationV05}
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#forTransferOutConfirmationV07
-	 * ConstraintEffectiveSettlementDateRule.forTransferOutConfirmationV07}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<TransferOutConfirmationV08> forTransferOutConfirmationV08 = new MMConstraint<TransferOutConfirmationV08>() {
+	public static final MMConstraint<TransferInConfirmationV04> for_sese_TransferInConfirmationV04 = new MMConstraint<TransferInConfirmationV04>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveSettlementDateRule";
-			definition = "Either TransferDetails/EffectiveSettlementDate may be present in one or more occurrences of TransferDetails or SettlementDetails/EffectiveSettlementDate may be present, but not both.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferOutConfirmationV07;
-			owner_lazy = () -> TransferOutConfirmationV08.mmObject();
+			definition = "Either TransferDetails\\EffectiveSettlementDate or SettlementDetails\\Effective Settlement Date may be present, but not both.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.for_sese_TransferInConfirmationV05);
+			owner_lazy = () -> TransferInConfirmationV04.mmObject();
 		}
 
 		@Override
-		public void executeValidator(TransferOutConfirmationV08 obj) throws Exception {
-			checkTransferOutConfirmationV08(obj);
+		public void executeValidator(TransferInConfirmationV04 obj) throws Exception {
+			check_sese_TransferInConfirmationV04(obj);
 		}
 	};
 	/**
@@ -134,165 +97,32 @@ public class ConstraintEffectiveSettlementDateRule {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#forTransferInConfirmationV08
-	 * ConstraintEffectiveSettlementDateRule.forTransferInConfirmationV08}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#for_sese_TransferInConfirmationV08
+	 * ConstraintEffectiveSettlementDateRule.for_sese_TransferInConfirmationV08}
+	 * </li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#forTransferInConfirmationV06
-	 * ConstraintEffectiveSettlementDateRule.forTransferInConfirmationV06}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#for_sese_TransferInConfirmationV06
+	 * ConstraintEffectiveSettlementDateRule.for_sese_TransferInConfirmationV06}
+	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<TransferInConfirmationV07> forTransferInConfirmationV07 = new MMConstraint<TransferInConfirmationV07>() {
+	public static final MMConstraint<TransferInConfirmationV07> for_sese_TransferInConfirmationV07 = new MMConstraint<TransferInConfirmationV07>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveSettlementDateRule";
 			definition = "Either TransferDetails/EffectiveSettlementDate may be present in one or more occurrences of TransferDetails or SettlementDetails/Effective Settlement Date may be present, but not both.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferInConfirmationV08);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferInConfirmationV06;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.for_sese_TransferInConfirmationV08);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.for_sese_TransferInConfirmationV06;
 			owner_lazy = () -> TransferInConfirmationV07.mmObject();
 		}
 
 		@Override
 		public void executeValidator(TransferInConfirmationV07 obj) throws Exception {
-			checkTransferInConfirmationV07(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV07
-	 * TransferOutConfirmationV07}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "EffectiveSettlementDateRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Either TransferDetails/EffectiveSettlementDate may be present in one or more occurrences of TransferDetails or SettlementDetails/EffectiveSettlementDate may be present, but not both."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#forTransferOutConfirmationV08
-	 * ConstraintEffectiveSettlementDateRule.forTransferOutConfirmationV08}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#forTransferOutConfirmationV06
-	 * ConstraintEffectiveSettlementDateRule.forTransferOutConfirmationV06}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<TransferOutConfirmationV07> forTransferOutConfirmationV07 = new MMConstraint<TransferOutConfirmationV07>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "EffectiveSettlementDateRule";
-			definition = "Either TransferDetails/EffectiveSettlementDate may be present in one or more occurrences of TransferDetails or SettlementDetails/EffectiveSettlementDate may be present, but not both.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferOutConfirmationV08);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferOutConfirmationV06;
-			owner_lazy = () -> TransferOutConfirmationV07.mmObject();
-		}
-
-		@Override
-		public void executeValidator(TransferOutConfirmationV07 obj) throws Exception {
-			checkTransferOutConfirmationV07(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV04
-	 * TransferInConfirmationV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "EffectiveSettlementDateRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Either TransferDetails\\EffectiveSettlementDate or SettlementDetails\\Effective Settlement Date may be present, but not both."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#forTransferInConfirmationV05
-	 * ConstraintEffectiveSettlementDateRule.forTransferInConfirmationV05}</li>
-	 * </ul>
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<TransferInConfirmationV04> forTransferInConfirmationV04 = new MMConstraint<TransferInConfirmationV04>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "EffectiveSettlementDateRule";
-			definition = "Either TransferDetails\\EffectiveSettlementDate or SettlementDetails\\Effective Settlement Date may be present, but not both.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferInConfirmationV05);
-			owner_lazy = () -> TransferInConfirmationV04.mmObject();
-		}
-
-		@Override
-		public void executeValidator(TransferInConfirmationV04 obj) throws Exception {
-			checkTransferInConfirmationV04(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV04
-	 * TransferOutConfirmationV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "EffectiveSettlementDateRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Either TransferDetails\\EffectiveSettlementDate or SettlementDetails\\Effective Settlement Date may be present, but not both."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#forTransferOutConfirmationV05
-	 * ConstraintEffectiveSettlementDateRule.forTransferOutConfirmationV05}</li>
-	 * </ul>
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<TransferOutConfirmationV04> forTransferOutConfirmationV04 = new MMConstraint<TransferOutConfirmationV04>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "EffectiveSettlementDateRule";
-			definition = "Either TransferDetails\\EffectiveSettlementDate or SettlementDetails\\Effective Settlement Date may be present, but not both.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferOutConfirmationV05);
-			owner_lazy = () -> TransferOutConfirmationV04.mmObject();
-		}
-
-		@Override
-		public void executeValidator(TransferOutConfirmationV04 obj) throws Exception {
-			checkTransferOutConfirmationV04(obj);
+			check_sese_TransferInConfirmationV07(obj);
 		}
 	};
 	/**
@@ -318,357 +148,32 @@ public class ConstraintEffectiveSettlementDateRule {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#forTransferInConfirmationV06
-	 * ConstraintEffectiveSettlementDateRule.forTransferInConfirmationV06}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#for_sese_TransferInConfirmationV06
+	 * ConstraintEffectiveSettlementDateRule.for_sese_TransferInConfirmationV06}
+	 * </li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#forTransferInConfirmationV04
-	 * ConstraintEffectiveSettlementDateRule.forTransferInConfirmationV04}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#for_sese_TransferInConfirmationV04
+	 * ConstraintEffectiveSettlementDateRule.for_sese_TransferInConfirmationV04}
+	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<TransferInConfirmationV05> forTransferInConfirmationV05 = new MMConstraint<TransferInConfirmationV05>() {
+	public static final MMConstraint<TransferInConfirmationV05> for_sese_TransferInConfirmationV05 = new MMConstraint<TransferInConfirmationV05>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveSettlementDateRule";
 			definition = "Either TransferDetails\\EffectiveSettlementDate or SettlementDetails\\Effective Settlement Date may be present, but not both.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferInConfirmationV06);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferInConfirmationV04;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.for_sese_TransferInConfirmationV06);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.for_sese_TransferInConfirmationV04;
 			owner_lazy = () -> TransferInConfirmationV05.mmObject();
 		}
 
 		@Override
 		public void executeValidator(TransferInConfirmationV05 obj) throws Exception {
-			checkTransferInConfirmationV05(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV05
-	 * TransferOutConfirmationV05}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "EffectiveSettlementDateRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Either TransferDetails/EffectiveSettlementDate or SettlementDetails/EffectiveSettlementDate may be present, but not both."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#forTransferOutConfirmationV06
-	 * ConstraintEffectiveSettlementDateRule.forTransferOutConfirmationV06}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#forTransferOutConfirmationV04
-	 * ConstraintEffectiveSettlementDateRule.forTransferOutConfirmationV04}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<TransferOutConfirmationV05> forTransferOutConfirmationV05 = new MMConstraint<TransferOutConfirmationV05>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "EffectiveSettlementDateRule";
-			definition = "Either TransferDetails/EffectiveSettlementDate or SettlementDetails/EffectiveSettlementDate may be present, but not both.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferOutConfirmationV06);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferOutConfirmationV04;
-			owner_lazy = () -> TransferOutConfirmationV05.mmObject();
-		}
-
-		@Override
-		public void executeValidator(TransferOutConfirmationV05 obj) throws Exception {
-			checkTransferOutConfirmationV05(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV06
-	 * TransferOutConfirmationV06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "EffectiveSettlementDateRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Either TransferDetails/EffectiveSettlementDate may be present in one or more occurrences of TransferDetails or SettlementDetails/EffectiveSettlementDate may be present, but not both."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#forTransferOutConfirmationV07
-	 * ConstraintEffectiveSettlementDateRule.forTransferOutConfirmationV07}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#forTransferOutConfirmationV05
-	 * ConstraintEffectiveSettlementDateRule.forTransferOutConfirmationV05}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<TransferOutConfirmationV06> forTransferOutConfirmationV06 = new MMConstraint<TransferOutConfirmationV06>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "EffectiveSettlementDateRule";
-			definition = "Either TransferDetails/EffectiveSettlementDate may be present in one or more occurrences of TransferDetails or SettlementDetails/EffectiveSettlementDate may be present, but not both.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferOutConfirmationV07);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferOutConfirmationV05;
-			owner_lazy = () -> TransferOutConfirmationV06.mmObject();
-		}
-
-		@Override
-		public void executeValidator(TransferOutConfirmationV06 obj) throws Exception {
-			checkTransferOutConfirmationV06(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV06
-	 * TransferInConfirmationV06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "EffectiveSettlementDateRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Either TransferDetails/EffectiveSettlementDate may be present in one or more occurrences of TransferDetails or SettlementDetails/Effective Settlement Date may be present, but not both."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#forTransferInConfirmationV07
-	 * ConstraintEffectiveSettlementDateRule.forTransferInConfirmationV07}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#forTransferInConfirmationV05
-	 * ConstraintEffectiveSettlementDateRule.forTransferInConfirmationV05}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<TransferInConfirmationV06> forTransferInConfirmationV06 = new MMConstraint<TransferInConfirmationV06>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "EffectiveSettlementDateRule";
-			definition = "Either TransferDetails/EffectiveSettlementDate may be present in one or more occurrences of TransferDetails or SettlementDetails/Effective Settlement Date may be present, but not both.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferInConfirmationV07);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferInConfirmationV05;
-			owner_lazy = () -> TransferInConfirmationV06.mmObject();
-		}
-
-		@Override
-		public void executeValidator(TransferInConfirmationV06 obj) throws Exception {
-			checkTransferInConfirmationV06(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.TransferOut10 TransferOut10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "EffectiveSettlementDateRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Either TransferDetails\\EffectiveSettlementDate or SettlementDetails\\EffectiveSettlementDate may be present, but not both."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#forTransferOut12
-	 * ConstraintEffectiveSettlementDateRule.forTransferOut12}</li>
-	 * </ul>
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<TransferOut10> forTransferOut10 = new MMConstraint<TransferOut10>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "EffectiveSettlementDateRule";
-			definition = "Either TransferDetails\\EffectiveSettlementDate or SettlementDetails\\EffectiveSettlementDate may be present, but not both.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferOut12);
-			owner_lazy = () -> TransferOut10.mmObject();
-		}
-
-		@Override
-		public void executeValidator(TransferOut10 obj) throws Exception {
-			checkTransferOut10(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.TransferIn8 TransferIn8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "EffectiveSettlementDateRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Either TransferDetails\\EffectiveSettlementDate or SettlementDetails\\EffectiveSettlementDate may be present, but not both."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#forTransferIn9
-	 * ConstraintEffectiveSettlementDateRule.forTransferIn9}</li>
-	 * </ul>
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<TransferIn8> forTransferIn8 = new MMConstraint<TransferIn8>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "EffectiveSettlementDateRule";
-			definition = "Either TransferDetails\\EffectiveSettlementDate or SettlementDetails\\EffectiveSettlementDate may be present, but not both.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferIn9);
-			owner_lazy = () -> TransferIn8.mmObject();
-		}
-
-		@Override
-		public void executeValidator(TransferIn8 obj) throws Exception {
-			checkTransferIn8(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.TransferIn9 TransferIn9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "EffectiveSettlementDateRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Either TransferDetails/EffectiveSettlementDate or SettlementDetails/EffectiveSettlementDate may be present, but not both."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#forTransferIn12
-	 * ConstraintEffectiveSettlementDateRule.forTransferIn12}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#forTransferIn8
-	 * ConstraintEffectiveSettlementDateRule.forTransferIn8}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<TransferIn9> forTransferIn9 = new MMConstraint<TransferIn9>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "EffectiveSettlementDateRule";
-			definition = "Either TransferDetails/EffectiveSettlementDate or SettlementDetails/EffectiveSettlementDate may be present, but not both.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferIn12);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferIn8;
-			owner_lazy = () -> TransferIn9.mmObject();
-		}
-
-		@Override
-		public void executeValidator(TransferIn9 obj) throws Exception {
-			checkTransferIn9(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.TransferOut12 TransferOut12}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "EffectiveSettlementDateRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Either TransferDetails/EffectiveSettlementDate or SettlementDetails/EffectiveSettlementDate may be present, but not both."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#forTransferOut14
-	 * ConstraintEffectiveSettlementDateRule.forTransferOut14}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#forTransferOut10
-	 * ConstraintEffectiveSettlementDateRule.forTransferOut10}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<TransferOut12> forTransferOut12 = new MMConstraint<TransferOut12>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "EffectiveSettlementDateRule";
-			definition = "Either TransferDetails/EffectiveSettlementDate or SettlementDetails/EffectiveSettlementDate may be present, but not both.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferOut14);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferOut10;
-			owner_lazy = () -> TransferOut12.mmObject();
-		}
-
-		@Override
-		public void executeValidator(TransferOut12 obj) throws Exception {
-			checkTransferOut12(obj);
+			check_sese_TransferInConfirmationV05(obj);
 		}
 	};
 	/**
@@ -725,7 +230,8 @@ public class ConstraintEffectiveSettlementDateRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.TransferIn12 TransferIn12}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV05
+	 * TransferOutConfirmationV05}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -735,36 +241,123 @@ public class ConstraintEffectiveSettlementDateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Either TransferDetails/EffectiveSettlementDate may be present in one or more occurrences of TransferDetails or SettlementDetails/EffectiveSettlementDate may be present, but not both."
+	 * "Either TransferDetails/EffectiveSettlementDate or SettlementDetails/EffectiveSettlementDate may be present, but not both."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#forTransferIn14
-	 * ConstraintEffectiveSettlementDateRule.forTransferIn14}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#for_sese_TransferOutConfirmationV06
+	 * ConstraintEffectiveSettlementDateRule.for_sese_TransferOutConfirmationV06
+	 * }</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#forTransferIn9
-	 * ConstraintEffectiveSettlementDateRule.forTransferIn9}</li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#for_sese_TransferOutConfirmationV04
+	 * ConstraintEffectiveSettlementDateRule.for_sese_TransferOutConfirmationV04
+	 * }</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<TransferIn12> forTransferIn12 = new MMConstraint<TransferIn12>() {
+	public static final MMConstraint<TransferOutConfirmationV05> for_sese_TransferOutConfirmationV05 = new MMConstraint<TransferOutConfirmationV05>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveSettlementDateRule";
-			definition = "Either TransferDetails/EffectiveSettlementDate may be present in one or more occurrences of TransferDetails or SettlementDetails/EffectiveSettlementDate may be present, but not both.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferIn14);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferIn9;
-			owner_lazy = () -> TransferIn12.mmObject();
+			definition = "Either TransferDetails/EffectiveSettlementDate or SettlementDetails/EffectiveSettlementDate may be present, but not both.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.for_sese_TransferOutConfirmationV06);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.for_sese_TransferOutConfirmationV04;
+			owner_lazy = () -> TransferOutConfirmationV05.mmObject();
 		}
 
 		@Override
-		public void executeValidator(TransferIn12 obj) throws Exception {
-			checkTransferIn12(obj);
+		public void executeValidator(TransferOutConfirmationV05 obj) throws Exception {
+			check_sese_TransferOutConfirmationV05(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV08
+	 * TransferInConfirmationV08}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "EffectiveSettlementDateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Either TransferDetails/EffectiveSettlementDate may be present in one or more occurrences of TransferDetails or SettlementDetails/Effective Settlement Date may be present, but not both."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#for_sese_TransferInConfirmationV07
+	 * ConstraintEffectiveSettlementDateRule.for_sese_TransferInConfirmationV07}
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<TransferInConfirmationV08> for_sese_TransferInConfirmationV08 = new MMConstraint<TransferInConfirmationV08>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "EffectiveSettlementDateRule";
+			definition = "Either TransferDetails/EffectiveSettlementDate may be present in one or more occurrences of TransferDetails or SettlementDetails/Effective Settlement Date may be present, but not both.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.for_sese_TransferInConfirmationV07;
+			owner_lazy = () -> TransferInConfirmationV08.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferInConfirmationV08 obj) throws Exception {
+			check_sese_TransferInConfirmationV08(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV04
+	 * TransferOutConfirmationV04}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "EffectiveSettlementDateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Either TransferDetails\\EffectiveSettlementDate or SettlementDetails\\Effective Settlement Date may be present, but not both."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#for_sese_TransferOutConfirmationV05
+	 * ConstraintEffectiveSettlementDateRule.for_sese_TransferOutConfirmationV05
+	 * }</li>
+	 * </ul>
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<TransferOutConfirmationV04> for_sese_TransferOutConfirmationV04 = new MMConstraint<TransferOutConfirmationV04>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "EffectiveSettlementDateRule";
+			definition = "Either TransferDetails\\EffectiveSettlementDate or SettlementDetails\\Effective Settlement Date may be present, but not both.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.for_sese_TransferOutConfirmationV05);
+			owner_lazy = () -> TransferOutConfirmationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferOutConfirmationV04 obj) throws Exception {
+			check_sese_TransferOutConfirmationV04(obj);
 		}
 	};
 	/**
@@ -845,40 +438,443 @@ public class ConstraintEffectiveSettlementDateRule {
 			checkTransferOut16(obj);
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV06
+	 * TransferInConfirmationV06}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "EffectiveSettlementDateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Either TransferDetails/EffectiveSettlementDate may be present in one or more occurrences of TransferDetails or SettlementDetails/Effective Settlement Date may be present, but not both."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#for_sese_TransferInConfirmationV07
+	 * ConstraintEffectiveSettlementDateRule.for_sese_TransferInConfirmationV07}
+	 * </li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#for_sese_TransferInConfirmationV05
+	 * ConstraintEffectiveSettlementDateRule.for_sese_TransferInConfirmationV05}
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<TransferInConfirmationV06> for_sese_TransferInConfirmationV06 = new MMConstraint<TransferInConfirmationV06>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "EffectiveSettlementDateRule";
+			definition = "Either TransferDetails/EffectiveSettlementDate may be present in one or more occurrences of TransferDetails or SettlementDetails/Effective Settlement Date may be present, but not both.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.for_sese_TransferInConfirmationV07);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.for_sese_TransferInConfirmationV05;
+			owner_lazy = () -> TransferInConfirmationV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferInConfirmationV06 obj) throws Exception {
+			check_sese_TransferInConfirmationV06(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.TransferIn9 TransferIn9}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "EffectiveSettlementDateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Either TransferDetails/EffectiveSettlementDate or SettlementDetails/EffectiveSettlementDate may be present, but not both."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#forTransferIn12
+	 * ConstraintEffectiveSettlementDateRule.forTransferIn12}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#forTransferIn8
+	 * ConstraintEffectiveSettlementDateRule.forTransferIn8}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<TransferIn9> forTransferIn9 = new MMConstraint<TransferIn9>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "EffectiveSettlementDateRule";
+			definition = "Either TransferDetails/EffectiveSettlementDate or SettlementDetails/EffectiveSettlementDate may be present, but not both.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferIn12);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferIn8;
+			owner_lazy = () -> TransferIn9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferIn9 obj) throws Exception {
+			checkTransferIn9(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.TransferIn8 TransferIn8}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "EffectiveSettlementDateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Either TransferDetails\\EffectiveSettlementDate or SettlementDetails\\EffectiveSettlementDate may be present, but not both."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#forTransferIn9
+	 * ConstraintEffectiveSettlementDateRule.forTransferIn9}</li>
+	 * </ul>
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<TransferIn8> forTransferIn8 = new MMConstraint<TransferIn8>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "EffectiveSettlementDateRule";
+			definition = "Either TransferDetails\\EffectiveSettlementDate or SettlementDetails\\EffectiveSettlementDate may be present, but not both.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferIn9);
+			owner_lazy = () -> TransferIn8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferIn8 obj) throws Exception {
+			checkTransferIn8(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV06
+	 * TransferOutConfirmationV06}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "EffectiveSettlementDateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Either TransferDetails/EffectiveSettlementDate may be present in one or more occurrences of TransferDetails or SettlementDetails/EffectiveSettlementDate may be present, but not both."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#for_sese_TransferOutConfirmationV07
+	 * ConstraintEffectiveSettlementDateRule.for_sese_TransferOutConfirmationV07
+	 * }</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#for_sese_TransferOutConfirmationV05
+	 * ConstraintEffectiveSettlementDateRule.for_sese_TransferOutConfirmationV05
+	 * }</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<TransferOutConfirmationV06> for_sese_TransferOutConfirmationV06 = new MMConstraint<TransferOutConfirmationV06>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "EffectiveSettlementDateRule";
+			definition = "Either TransferDetails/EffectiveSettlementDate may be present in one or more occurrences of TransferDetails or SettlementDetails/EffectiveSettlementDate may be present, but not both.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.for_sese_TransferOutConfirmationV07);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.for_sese_TransferOutConfirmationV05;
+			owner_lazy = () -> TransferOutConfirmationV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferOutConfirmationV06 obj) throws Exception {
+			check_sese_TransferOutConfirmationV06(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.TransferOut10 TransferOut10}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "EffectiveSettlementDateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Either TransferDetails\\EffectiveSettlementDate or SettlementDetails\\EffectiveSettlementDate may be present, but not both."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#forTransferOut12
+	 * ConstraintEffectiveSettlementDateRule.forTransferOut12}</li>
+	 * </ul>
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<TransferOut10> forTransferOut10 = new MMConstraint<TransferOut10>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "EffectiveSettlementDateRule";
+			definition = "Either TransferDetails\\EffectiveSettlementDate or SettlementDetails\\EffectiveSettlementDate may be present, but not both.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferOut12);
+			owner_lazy = () -> TransferOut10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferOut10 obj) throws Exception {
+			checkTransferOut10(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.TransferIn12 TransferIn12}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "EffectiveSettlementDateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Either TransferDetails/EffectiveSettlementDate may be present in one or more occurrences of TransferDetails or SettlementDetails/EffectiveSettlementDate may be present, but not both."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#forTransferIn14
+	 * ConstraintEffectiveSettlementDateRule.forTransferIn14}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#forTransferIn9
+	 * ConstraintEffectiveSettlementDateRule.forTransferIn9}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<TransferIn12> forTransferIn12 = new MMConstraint<TransferIn12>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "EffectiveSettlementDateRule";
+			definition = "Either TransferDetails/EffectiveSettlementDate may be present in one or more occurrences of TransferDetails or SettlementDetails/EffectiveSettlementDate may be present, but not both.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferIn14);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferIn9;
+			owner_lazy = () -> TransferIn12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferIn12 obj) throws Exception {
+			checkTransferIn12(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV08
+	 * TransferOutConfirmationV08}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "EffectiveSettlementDateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Either TransferDetails/EffectiveSettlementDate may be present in one or more occurrences of TransferDetails or SettlementDetails/EffectiveSettlementDate may be present, but not both."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#for_sese_TransferOutConfirmationV07
+	 * ConstraintEffectiveSettlementDateRule.for_sese_TransferOutConfirmationV07
+	 * }</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<TransferOutConfirmationV08> for_sese_TransferOutConfirmationV08 = new MMConstraint<TransferOutConfirmationV08>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "EffectiveSettlementDateRule";
+			definition = "Either TransferDetails/EffectiveSettlementDate may be present in one or more occurrences of TransferDetails or SettlementDetails/EffectiveSettlementDate may be present, but not both.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.for_sese_TransferOutConfirmationV07;
+			owner_lazy = () -> TransferOutConfirmationV08.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferOutConfirmationV08 obj) throws Exception {
+			check_sese_TransferOutConfirmationV08(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.TransferOut12 TransferOut12}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "EffectiveSettlementDateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Either TransferDetails/EffectiveSettlementDate or SettlementDetails/EffectiveSettlementDate may be present, but not both."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#forTransferOut14
+	 * ConstraintEffectiveSettlementDateRule.forTransferOut14}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#forTransferOut10
+	 * ConstraintEffectiveSettlementDateRule.forTransferOut10}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<TransferOut12> forTransferOut12 = new MMConstraint<TransferOut12>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "EffectiveSettlementDateRule";
+			definition = "Either TransferDetails/EffectiveSettlementDate or SettlementDetails/EffectiveSettlementDate may be present, but not both.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferOut14);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferOut10;
+			owner_lazy = () -> TransferOut12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferOut12 obj) throws Exception {
+			checkTransferOut12(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV07
+	 * TransferOutConfirmationV07}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "EffectiveSettlementDateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Either TransferDetails/EffectiveSettlementDate may be present in one or more occurrences of TransferDetails or SettlementDetails/EffectiveSettlementDate may be present, but not both."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#for_sese_TransferOutConfirmationV08
+	 * ConstraintEffectiveSettlementDateRule.for_sese_TransferOutConfirmationV08
+	 * }</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#for_sese_TransferOutConfirmationV06
+	 * ConstraintEffectiveSettlementDateRule.for_sese_TransferOutConfirmationV06
+	 * }</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<TransferOutConfirmationV07> for_sese_TransferOutConfirmationV07 = new MMConstraint<TransferOutConfirmationV07>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "EffectiveSettlementDateRule";
+			definition = "Either TransferDetails/EffectiveSettlementDate may be present in one or more occurrences of TransferDetails or SettlementDetails/EffectiveSettlementDate may be present, but not both.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.for_sese_TransferOutConfirmationV08);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.for_sese_TransferOutConfirmationV06;
+			owner_lazy = () -> TransferOutConfirmationV07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferOutConfirmationV07 obj) throws Exception {
+			check_sese_TransferOutConfirmationV07(obj);
+		}
+	};
+
+	/**
+	 * Either TransferDetails\EffectiveSettlementDate or
+	 * SettlementDetails\Effective Settlement Date may be present, but not both.
+	 */
+	public static void check_sese_TransferInConfirmationV04(TransferInConfirmationV04 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
 
 	/**
 	 * Either TransferDetails/EffectiveSettlementDate may be present in one or
 	 * more occurrences of TransferDetails or SettlementDetails/Effective
 	 * Settlement Date may be present, but not both.
 	 */
-	public static void checkTransferInConfirmationV08(TransferInConfirmationV08 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Either TransferDetails/EffectiveSettlementDate may be present in one or
-	 * more occurrences of TransferDetails or
-	 * SettlementDetails/EffectiveSettlementDate may be present, but not both.
-	 */
-	public static void checkTransferOutConfirmationV08(TransferOutConfirmationV08 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Either TransferDetails/EffectiveSettlementDate may be present in one or
-	 * more occurrences of TransferDetails or SettlementDetails/Effective
-	 * Settlement Date may be present, but not both.
-	 */
-	public static void checkTransferInConfirmationV07(TransferInConfirmationV07 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Either TransferDetails/EffectiveSettlementDate may be present in one or
-	 * more occurrences of TransferDetails or
-	 * SettlementDetails/EffectiveSettlementDate may be present, but not both.
-	 */
-	public static void checkTransferOutConfirmationV07(TransferOutConfirmationV07 obj) throws Exception {
+	public static void check_sese_TransferInConfirmationV07(TransferInConfirmationV07 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -886,81 +882,7 @@ public class ConstraintEffectiveSettlementDateRule {
 	 * Either TransferDetails\EffectiveSettlementDate or
 	 * SettlementDetails\Effective Settlement Date may be present, but not both.
 	 */
-	public static void checkTransferInConfirmationV04(TransferInConfirmationV04 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Either TransferDetails\EffectiveSettlementDate or
-	 * SettlementDetails\Effective Settlement Date may be present, but not both.
-	 */
-	public static void checkTransferOutConfirmationV04(TransferOutConfirmationV04 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Either TransferDetails\EffectiveSettlementDate or
-	 * SettlementDetails\Effective Settlement Date may be present, but not both.
-	 */
-	public static void checkTransferInConfirmationV05(TransferInConfirmationV05 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Either TransferDetails/EffectiveSettlementDate or
-	 * SettlementDetails/EffectiveSettlementDate may be present, but not both.
-	 */
-	public static void checkTransferOutConfirmationV05(TransferOutConfirmationV05 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Either TransferDetails/EffectiveSettlementDate may be present in one or
-	 * more occurrences of TransferDetails or
-	 * SettlementDetails/EffectiveSettlementDate may be present, but not both.
-	 */
-	public static void checkTransferOutConfirmationV06(TransferOutConfirmationV06 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Either TransferDetails/EffectiveSettlementDate may be present in one or
-	 * more occurrences of TransferDetails or SettlementDetails/Effective
-	 * Settlement Date may be present, but not both.
-	 */
-	public static void checkTransferInConfirmationV06(TransferInConfirmationV06 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Either TransferDetails\EffectiveSettlementDate or
-	 * SettlementDetails\EffectiveSettlementDate may be present, but not both.
-	 */
-	public static void checkTransferOut10(TransferOut10 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Either TransferDetails\EffectiveSettlementDate or
-	 * SettlementDetails\EffectiveSettlementDate may be present, but not both.
-	 */
-	public static void checkTransferIn8(TransferIn8 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Either TransferDetails/EffectiveSettlementDate or
-	 * SettlementDetails/EffectiveSettlementDate may be present, but not both.
-	 */
-	public static void checkTransferIn9(TransferIn9 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Either TransferDetails/EffectiveSettlementDate or
-	 * SettlementDetails/EffectiveSettlementDate may be present, but not both.
-	 */
-	public static void checkTransferOut12(TransferOut12 obj) throws Exception {
+	public static void check_sese_TransferInConfirmationV05(TransferInConfirmationV05 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -974,11 +896,27 @@ public class ConstraintEffectiveSettlementDateRule {
 	}
 
 	/**
-	 * Either TransferDetails/EffectiveSettlementDate may be present in one or
-	 * more occurrences of TransferDetails or
+	 * Either TransferDetails/EffectiveSettlementDate or
 	 * SettlementDetails/EffectiveSettlementDate may be present, but not both.
 	 */
-	public static void checkTransferIn12(TransferIn12 obj) throws Exception {
+	public static void check_sese_TransferOutConfirmationV05(TransferOutConfirmationV05 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Either TransferDetails/EffectiveSettlementDate may be present in one or
+	 * more occurrences of TransferDetails or SettlementDetails/Effective
+	 * Settlement Date may be present, but not both.
+	 */
+	public static void check_sese_TransferInConfirmationV08(TransferInConfirmationV08 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Either TransferDetails\EffectiveSettlementDate or
+	 * SettlementDetails\Effective Settlement Date may be present, but not both.
+	 */
+	public static void check_sese_TransferOutConfirmationV04(TransferOutConfirmationV04 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -997,6 +935,83 @@ public class ConstraintEffectiveSettlementDateRule {
 	 * SettlementDetails/EffectiveSettlementDate may be present, but not both.
 	 */
 	public static void checkTransferOut16(TransferOut16 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Either TransferDetails/EffectiveSettlementDate may be present in one or
+	 * more occurrences of TransferDetails or SettlementDetails/Effective
+	 * Settlement Date may be present, but not both.
+	 */
+	public static void check_sese_TransferInConfirmationV06(TransferInConfirmationV06 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Either TransferDetails/EffectiveSettlementDate or
+	 * SettlementDetails/EffectiveSettlementDate may be present, but not both.
+	 */
+	public static void checkTransferIn9(TransferIn9 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Either TransferDetails\EffectiveSettlementDate or
+	 * SettlementDetails\EffectiveSettlementDate may be present, but not both.
+	 */
+	public static void checkTransferIn8(TransferIn8 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Either TransferDetails/EffectiveSettlementDate may be present in one or
+	 * more occurrences of TransferDetails or
+	 * SettlementDetails/EffectiveSettlementDate may be present, but not both.
+	 */
+	public static void check_sese_TransferOutConfirmationV06(TransferOutConfirmationV06 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Either TransferDetails\EffectiveSettlementDate or
+	 * SettlementDetails\EffectiveSettlementDate may be present, but not both.
+	 */
+	public static void checkTransferOut10(TransferOut10 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Either TransferDetails/EffectiveSettlementDate may be present in one or
+	 * more occurrences of TransferDetails or
+	 * SettlementDetails/EffectiveSettlementDate may be present, but not both.
+	 */
+	public static void checkTransferIn12(TransferIn12 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Either TransferDetails/EffectiveSettlementDate may be present in one or
+	 * more occurrences of TransferDetails or
+	 * SettlementDetails/EffectiveSettlementDate may be present, but not both.
+	 */
+	public static void check_sese_TransferOutConfirmationV08(TransferOutConfirmationV08 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Either TransferDetails/EffectiveSettlementDate or
+	 * SettlementDetails/EffectiveSettlementDate may be present, but not both.
+	 */
+	public static void checkTransferOut12(TransferOut12 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Either TransferDetails/EffectiveSettlementDate may be present in one or
+	 * more occurrences of TransferDetails or
+	 * SettlementDetails/EffectiveSettlementDate may be present, but not both.
+	 */
+	public static void check_sese_TransferOutConfirmationV07(TransferOutConfirmationV07 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

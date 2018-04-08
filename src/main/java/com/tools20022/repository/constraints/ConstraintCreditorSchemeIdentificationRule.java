@@ -39,8 +39,8 @@ public class ConstraintCreditorSchemeIdentificationRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionInformation4
-	 * PaymentInstructionInformation4}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction18
+	 * PaymentInstruction18}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
 	 * expression} =
 	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;SimpleRule xsi:type=\"SimpleRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;OR&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/CreditorSchemeIdentification&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/DirectDebitTransactionInformation[*]/DirectDebitTransaction/CreditorSchemeIdentification&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;/SimpleRule&gt;&lt;/RuleDefinition&gt;\n"
@@ -56,59 +56,35 @@ public class ConstraintCreditorSchemeIdentificationRule {
 	 * definition} =
 	 * "If CreditorSchemeIdentification is present, then DirectDebitTransactionInformation/CreditorSchemeIdentification is not allowed.\nIf DirectDebitTransactionInformation/CreditorSchemeIdentification is present, then CreditorSchemeIdentification is not allowed.\nDirectDebitTransactionInformation/CreditorSchemeIdentification and CreditorSchemeIdentification may both be absent."
 	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<PaymentInstructionInformation4> forPaymentInstructionInformation4 = new MMConstraint<PaymentInstructionInformation4>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "CreditorSchemeIdentificationRule";
-			definition = "If CreditorSchemeIdentification is present, then DirectDebitTransactionInformation/CreditorSchemeIdentification is not allowed.\nIf DirectDebitTransactionInformation/CreditorSchemeIdentification is present, then CreditorSchemeIdentification is not allowed.\nDirectDebitTransactionInformation/CreditorSchemeIdentification and CreditorSchemeIdentification may both be absent.";
-			owner_lazy = () -> PaymentInstructionInformation4.mmObject();
-			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><SimpleRule xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditorSchemeIdentification</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/DirectDebitTransactionInformation[*]/DirectDebitTransaction/CreditorSchemeIdentification</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>\n";
-		}
-
-		@Override
-		public void executeValidator(PaymentInstructionInformation4 obj) throws Exception {
-			checkPaymentInstructionInformation4(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction7
-	 * PaymentInstruction7}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
-	 * expression} =
-	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;SimpleRule xsi:type=\"SimpleRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;OR&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/CreditorSchemeIdentification&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/DirectDebitTransactionInformation[*]/DirectDebitTransaction/CreditorSchemeIdentification&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;/SimpleRule&gt;&lt;/RuleDefinition&gt;\n"
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintCreditorSchemeIdentificationRule#forPaymentInstruction21
+	 * ConstraintCreditorSchemeIdentificationRule.forPaymentInstruction21}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CreditorSchemeIdentificationRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If CreditorSchemeIdentification is present, then DirectDebitTransactionInformation/CreditorSchemeIdentification is not allowed.\nIf DirectDebitTransactionInformation/CreditorSchemeIdentification is present, then CreditorSchemeIdentification is not allowed.\nDirectDebitTransactionInformation/CreditorSchemeIdentification and CreditorSchemeIdentification may both be absent."
-	 * </li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintCreditorSchemeIdentificationRule#forPaymentInstruction15
+	 * ConstraintCreditorSchemeIdentificationRule.forPaymentInstruction15}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<PaymentInstruction7> forPaymentInstruction7 = new MMConstraint<PaymentInstruction7>() {
+	public static final MMConstraint<PaymentInstruction18> forPaymentInstruction18 = new MMConstraint<PaymentInstruction18>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorSchemeIdentificationRule";
 			definition = "If CreditorSchemeIdentification is present, then DirectDebitTransactionInformation/CreditorSchemeIdentification is not allowed.\nIf DirectDebitTransactionInformation/CreditorSchemeIdentification is present, then CreditorSchemeIdentification is not allowed.\nDirectDebitTransactionInformation/CreditorSchemeIdentification and CreditorSchemeIdentification may both be absent.";
-			owner_lazy = () -> PaymentInstruction7.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCreditorSchemeIdentificationRule.forPaymentInstruction21);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCreditorSchemeIdentificationRule.forPaymentInstruction15;
+			owner_lazy = () -> PaymentInstruction18.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><SimpleRule xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditorSchemeIdentification</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/DirectDebitTransactionInformation[*]/DirectDebitTransaction/CreditorSchemeIdentification</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>\n";
 		}
 
 		@Override
-		public void executeValidator(PaymentInstruction7 obj) throws Exception {
-			checkPaymentInstruction7(obj);
+		public void executeValidator(PaymentInstruction18 obj) throws Exception {
+			checkPaymentInstruction18(obj);
 		}
 	};
 	/**
@@ -165,6 +141,129 @@ public class ConstraintCreditorSchemeIdentificationRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionInformation4
+	 * PaymentInstructionInformation4}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;SimpleRule xsi:type=\"SimpleRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;OR&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/CreditorSchemeIdentification&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/DirectDebitTransactionInformation[*]/DirectDebitTransaction/CreditorSchemeIdentification&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;/SimpleRule&gt;&lt;/RuleDefinition&gt;\n"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CreditorSchemeIdentificationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If CreditorSchemeIdentification is present, then DirectDebitTransactionInformation/CreditorSchemeIdentification is not allowed.\nIf DirectDebitTransactionInformation/CreditorSchemeIdentification is present, then CreditorSchemeIdentification is not allowed.\nDirectDebitTransactionInformation/CreditorSchemeIdentification and CreditorSchemeIdentification may both be absent."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<PaymentInstructionInformation4> forPaymentInstructionInformation4 = new MMConstraint<PaymentInstructionInformation4>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CreditorSchemeIdentificationRule";
+			definition = "If CreditorSchemeIdentification is present, then DirectDebitTransactionInformation/CreditorSchemeIdentification is not allowed.\nIf DirectDebitTransactionInformation/CreditorSchemeIdentification is present, then CreditorSchemeIdentification is not allowed.\nDirectDebitTransactionInformation/CreditorSchemeIdentification and CreditorSchemeIdentification may both be absent.";
+			owner_lazy = () -> PaymentInstructionInformation4.mmObject();
+			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><SimpleRule xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditorSchemeIdentification</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/DirectDebitTransactionInformation[*]/DirectDebitTransaction/CreditorSchemeIdentification</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentInstructionInformation4 obj) throws Exception {
+			checkPaymentInstructionInformation4(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction21
+	 * PaymentInstruction21}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;SimpleRule xsi:type=\"SimpleRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;OR&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/CreditorSchemeIdentification&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/DirectDebitTransactionInformation[*]/DirectDebitTransaction/CreditorSchemeIdentification&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;/SimpleRule&gt;&lt;/RuleDefinition&gt;\n"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CreditorSchemeIdentificationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If CreditorSchemeIdentification is present, then DirectDebitTransactionInformation/CreditorSchemeIdentification is not allowed.\nIf DirectDebitTransactionInformation/CreditorSchemeIdentification is present, then CreditorSchemeIdentification is not allowed.\nDirectDebitTransactionInformation/CreditorSchemeIdentification and CreditorSchemeIdentification may both be absent."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintCreditorSchemeIdentificationRule#forPaymentInstruction18
+	 * ConstraintCreditorSchemeIdentificationRule.forPaymentInstruction18}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<PaymentInstruction21> forPaymentInstruction21 = new MMConstraint<PaymentInstruction21>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CreditorSchemeIdentificationRule";
+			definition = "If CreditorSchemeIdentification is present, then DirectDebitTransactionInformation/CreditorSchemeIdentification is not allowed.\nIf DirectDebitTransactionInformation/CreditorSchemeIdentification is present, then CreditorSchemeIdentification is not allowed.\nDirectDebitTransactionInformation/CreditorSchemeIdentification and CreditorSchemeIdentification may both be absent.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCreditorSchemeIdentificationRule.forPaymentInstruction18;
+			owner_lazy = () -> PaymentInstruction21.mmObject();
+			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><SimpleRule xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditorSchemeIdentification</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/DirectDebitTransactionInformation[*]/DirectDebitTransaction/CreditorSchemeIdentification</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction21 obj) throws Exception {
+			checkPaymentInstruction21(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction7
+	 * PaymentInstruction7}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;SimpleRule xsi:type=\"SimpleRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;OR&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/CreditorSchemeIdentification&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/DirectDebitTransactionInformation[*]/DirectDebitTransaction/CreditorSchemeIdentification&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;/SimpleRule&gt;&lt;/RuleDefinition&gt;\n"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CreditorSchemeIdentificationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If CreditorSchemeIdentification is present, then DirectDebitTransactionInformation/CreditorSchemeIdentification is not allowed.\nIf DirectDebitTransactionInformation/CreditorSchemeIdentification is present, then CreditorSchemeIdentification is not allowed.\nDirectDebitTransactionInformation/CreditorSchemeIdentification and CreditorSchemeIdentification may both be absent."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<PaymentInstruction7> forPaymentInstruction7 = new MMConstraint<PaymentInstruction7>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CreditorSchemeIdentificationRule";
+			definition = "If CreditorSchemeIdentification is present, then DirectDebitTransactionInformation/CreditorSchemeIdentification is not allowed.\nIf DirectDebitTransactionInformation/CreditorSchemeIdentification is present, then CreditorSchemeIdentification is not allowed.\nDirectDebitTransactionInformation/CreditorSchemeIdentification and CreditorSchemeIdentification may both be absent.";
+			owner_lazy = () -> PaymentInstruction7.mmObject();
+			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><SimpleRule xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditorSchemeIdentification</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/DirectDebitTransactionInformation[*]/DirectDebitTransaction/CreditorSchemeIdentification</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction7 obj) throws Exception {
+			checkPaymentInstruction7(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction15
 	 * PaymentInstruction15}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
@@ -213,105 +312,6 @@ public class ConstraintCreditorSchemeIdentificationRule {
 			checkPaymentInstruction15(obj);
 		}
 	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction18
-	 * PaymentInstruction18}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
-	 * expression} =
-	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;SimpleRule xsi:type=\"SimpleRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;OR&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/CreditorSchemeIdentification&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/DirectDebitTransactionInformation[*]/DirectDebitTransaction/CreditorSchemeIdentification&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;/SimpleRule&gt;&lt;/RuleDefinition&gt;\n"
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CreditorSchemeIdentificationRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If CreditorSchemeIdentification is present, then DirectDebitTransactionInformation/CreditorSchemeIdentification is not allowed.\nIf DirectDebitTransactionInformation/CreditorSchemeIdentification is present, then CreditorSchemeIdentification is not allowed.\nDirectDebitTransactionInformation/CreditorSchemeIdentification and CreditorSchemeIdentification may both be absent."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintCreditorSchemeIdentificationRule#forPaymentInstruction21
-	 * ConstraintCreditorSchemeIdentificationRule.forPaymentInstruction21}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintCreditorSchemeIdentificationRule#forPaymentInstruction15
-	 * ConstraintCreditorSchemeIdentificationRule.forPaymentInstruction15}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<PaymentInstruction18> forPaymentInstruction18 = new MMConstraint<PaymentInstruction18>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "CreditorSchemeIdentificationRule";
-			definition = "If CreditorSchemeIdentification is present, then DirectDebitTransactionInformation/CreditorSchemeIdentification is not allowed.\nIf DirectDebitTransactionInformation/CreditorSchemeIdentification is present, then CreditorSchemeIdentification is not allowed.\nDirectDebitTransactionInformation/CreditorSchemeIdentification and CreditorSchemeIdentification may both be absent.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCreditorSchemeIdentificationRule.forPaymentInstruction21);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCreditorSchemeIdentificationRule.forPaymentInstruction15;
-			owner_lazy = () -> PaymentInstruction18.mmObject();
-			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><SimpleRule xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditorSchemeIdentification</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/DirectDebitTransactionInformation[*]/DirectDebitTransaction/CreditorSchemeIdentification</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>\n";
-		}
-
-		@Override
-		public void executeValidator(PaymentInstruction18 obj) throws Exception {
-			checkPaymentInstruction18(obj);
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction21
-	 * PaymentInstruction21}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
-	 * expression} =
-	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;SimpleRule xsi:type=\"SimpleRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;OR&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/CreditorSchemeIdentification&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/DirectDebitTransactionInformation[*]/DirectDebitTransaction/CreditorSchemeIdentification&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;/SimpleRule&gt;&lt;/RuleDefinition&gt;\n"
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CreditorSchemeIdentificationRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If CreditorSchemeIdentification is present, then DirectDebitTransactionInformation/CreditorSchemeIdentification is not allowed.\nIf DirectDebitTransactionInformation/CreditorSchemeIdentification is present, then CreditorSchemeIdentification is not allowed.\nDirectDebitTransactionInformation/CreditorSchemeIdentification and CreditorSchemeIdentification may both be absent."
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintCreditorSchemeIdentificationRule#forPaymentInstruction18
-	 * ConstraintCreditorSchemeIdentificationRule.forPaymentInstruction18}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<PaymentInstruction21> forPaymentInstruction21 = new MMConstraint<PaymentInstruction21>() {
-		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "CreditorSchemeIdentificationRule";
-			definition = "If CreditorSchemeIdentification is present, then DirectDebitTransactionInformation/CreditorSchemeIdentification is not allowed.\nIf DirectDebitTransactionInformation/CreditorSchemeIdentification is present, then CreditorSchemeIdentification is not allowed.\nDirectDebitTransactionInformation/CreditorSchemeIdentification and CreditorSchemeIdentification may both be absent.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCreditorSchemeIdentificationRule.forPaymentInstruction18;
-			owner_lazy = () -> PaymentInstruction21.mmObject();
-			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><SimpleRule xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditorSchemeIdentification</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/DirectDebitTransactionInformation[*]/DirectDebitTransaction/CreditorSchemeIdentification</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>\n";
-		}
-
-		@Override
-		public void executeValidator(PaymentInstruction21 obj) throws Exception {
-			checkPaymentInstruction21(obj);
-		}
-	};
 
 	/**
 	 * If CreditorSchemeIdentification is present, then
@@ -322,20 +322,7 @@ public class ConstraintCreditorSchemeIdentificationRule {
 	 * DirectDebitTransactionInformation/CreditorSchemeIdentification and
 	 * CreditorSchemeIdentification may both be absent.
 	 */
-	public static void checkPaymentInstructionInformation4(PaymentInstructionInformation4 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If CreditorSchemeIdentification is present, then
-	 * DirectDebitTransactionInformation/CreditorSchemeIdentification is not
-	 * allowed. If
-	 * DirectDebitTransactionInformation/CreditorSchemeIdentification is
-	 * present, then CreditorSchemeIdentification is not allowed.
-	 * DirectDebitTransactionInformation/CreditorSchemeIdentification and
-	 * CreditorSchemeIdentification may both be absent.
-	 */
-	public static void checkPaymentInstruction7(PaymentInstruction7 obj) throws Exception {
+	public static void checkPaymentInstruction18(PaymentInstruction18 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -361,20 +348,7 @@ public class ConstraintCreditorSchemeIdentificationRule {
 	 * DirectDebitTransactionInformation/CreditorSchemeIdentification and
 	 * CreditorSchemeIdentification may both be absent.
 	 */
-	public static void checkPaymentInstruction15(PaymentInstruction15 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If CreditorSchemeIdentification is present, then
-	 * DirectDebitTransactionInformation/CreditorSchemeIdentification is not
-	 * allowed. If
-	 * DirectDebitTransactionInformation/CreditorSchemeIdentification is
-	 * present, then CreditorSchemeIdentification is not allowed.
-	 * DirectDebitTransactionInformation/CreditorSchemeIdentification and
-	 * CreditorSchemeIdentification may both be absent.
-	 */
-	public static void checkPaymentInstruction18(PaymentInstruction18 obj) throws Exception {
+	public static void checkPaymentInstructionInformation4(PaymentInstructionInformation4 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -388,6 +362,32 @@ public class ConstraintCreditorSchemeIdentificationRule {
 	 * CreditorSchemeIdentification may both be absent.
 	 */
 	public static void checkPaymentInstruction21(PaymentInstruction21 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If CreditorSchemeIdentification is present, then
+	 * DirectDebitTransactionInformation/CreditorSchemeIdentification is not
+	 * allowed. If
+	 * DirectDebitTransactionInformation/CreditorSchemeIdentification is
+	 * present, then CreditorSchemeIdentification is not allowed.
+	 * DirectDebitTransactionInformation/CreditorSchemeIdentification and
+	 * CreditorSchemeIdentification may both be absent.
+	 */
+	public static void checkPaymentInstruction7(PaymentInstruction7 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If CreditorSchemeIdentification is present, then
+	 * DirectDebitTransactionInformation/CreditorSchemeIdentification is not
+	 * allowed. If
+	 * DirectDebitTransactionInformation/CreditorSchemeIdentification is
+	 * present, then CreditorSchemeIdentification is not allowed.
+	 * DirectDebitTransactionInformation/CreditorSchemeIdentification and
+	 * CreditorSchemeIdentification may both be absent.
+	 */
+	public static void checkPaymentInstruction15(PaymentInstruction15 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

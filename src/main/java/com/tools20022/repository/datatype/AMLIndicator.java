@@ -61,7 +61,7 @@ public class AMLIndicator {
 
 	final static private AtomicReference<MMIndicator> mmObject_lazy = new AtomicReference<>();
 	@XmlValue
-	protected String value;
+	protected Boolean value;
 
 	final static public MMIndicator mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMIndicator() {
@@ -80,15 +80,15 @@ public class AMLIndicator {
 	public AMLIndicator() {
 	}
 
-	public AMLIndicator(String value) {
+	public AMLIndicator(Boolean value) {
 		this.value = value;
 	}
 
-	public String getValue() {
+	public Boolean getValue() {
 		return value;
 	}
 
-	public void setValue(String value) {
+	public void setValue(Boolean value) {
 		this.value = value;
 	}
 

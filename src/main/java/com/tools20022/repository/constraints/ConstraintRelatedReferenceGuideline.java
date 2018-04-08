@@ -53,7 +53,7 @@ public class ConstraintRelatedReferenceGuideline {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<OrderConfirmationStatusReportV01> forOrderConfirmationStatusReportV01 = new MMConstraint<OrderConfirmationStatusReportV01>() {
+	public static final MMConstraint<OrderConfirmationStatusReportV01> for_setr_OrderConfirmationStatusReportV01 = new MMConstraint<OrderConfirmationStatusReportV01>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReferenceGuideline";
@@ -63,7 +63,7 @@ public class ConstraintRelatedReferenceGuideline {
 
 		@Override
 		public void executeValidator(OrderConfirmationStatusReportV01 obj) throws Exception {
-			checkOrderConfirmationStatusReportV01(obj);
+			check_setr_OrderConfirmationStatusReportV01(obj);
 		}
 	};
 	/**
@@ -87,7 +87,7 @@ public class ConstraintRelatedReferenceGuideline {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<OrderInstructionStatusReportV02> forOrderInstructionStatusReportV02 = new MMConstraint<OrderInstructionStatusReportV02>() {
+	public static final MMConstraint<OrderInstructionStatusReportV02> for_setr_OrderInstructionStatusReportV02 = new MMConstraint<OrderInstructionStatusReportV02>() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReferenceGuideline";
@@ -97,7 +97,7 @@ public class ConstraintRelatedReferenceGuideline {
 
 		@Override
 		public void executeValidator(OrderInstructionStatusReportV02 obj) throws Exception {
-			checkOrderInstructionStatusReportV02(obj);
+			check_setr_OrderInstructionStatusReportV02(obj);
 		}
 	};
 
@@ -108,7 +108,7 @@ public class ConstraintRelatedReferenceGuideline {
 	 * setr.055,setr.056 or setr.058 and RelatedReference/Reference must contain
 	 * the reference of a message in this list.
 	 */
-	public static void checkOrderConfirmationStatusReportV01(OrderConfirmationStatusReportV01 obj) throws Exception {
+	public static void check_setr_OrderConfirmationStatusReportV01(OrderConfirmationStatusReportV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -118,7 +118,7 @@ public class ConstraintRelatedReferenceGuideline {
 	 * setr.025 and Reference must contain the business reference of a message
 	 * in this list.
 	 */
-	public static void checkOrderInstructionStatusReportV02(OrderInstructionStatusReportV02 obj) throws Exception {
+	public static void check_setr_OrderInstructionStatusReportV02(OrderInstructionStatusReportV02 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }
