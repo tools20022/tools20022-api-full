@@ -162,6 +162,12 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "SettlementTransactionConditionCode"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} =
+ * "Collateral position is available for other purposes (for example, onwards delivery)."
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -172,12 +178,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "SettlementTransactionConditionCode"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} =
- * "Collateral position is available for other purposes (for example, onwards delivery)."
- * </li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -194,6 +194,11 @@ public class SettlementTransactionConditionCode extends MMCode {
 	 * SettlementTransactionConditionCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "PART"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PartialAllowed"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Partial settlement is allowed."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = ISO15022Synonym: :22F::STCO//PART</li>
@@ -201,11 +206,6 @@ public class SettlementTransactionConditionCode extends MMCode {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PartialAllowed"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Partial settlement is allowed."</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionConditionCode PartialAllowed = new SettlementTransactionConditionCode() {
@@ -228,6 +228,11 @@ public class SettlementTransactionConditionCode extends MMCode {
 	 * SettlementTransactionConditionCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "NPAR"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PartialNotAllowed"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Partial settlement is not allowed."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = ISO15022Synonym: :22F::STCO//NPAR</li>
@@ -235,11 +240,6 @@ public class SettlementTransactionConditionCode extends MMCode {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PartialNotAllowed"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Partial settlement is not allowed."</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionConditionCode PartialNotAllowed = new SettlementTransactionConditionCode() {
@@ -263,10 +263,6 @@ public class SettlementTransactionConditionCode extends MMCode {
 	 * SettlementTransactionConditionCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "PARC"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PartialSettlementCashThresholdAllowed"</li>
 	 * <li>
@@ -274,6 +270,10 @@ public class SettlementTransactionConditionCode extends MMCode {
 	 * definition} =
 	 * "Partial settlement is allowed but must satisfy a cash value minimum (value defined in static data)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionConditionCode PartialSettlementCashThresholdAllowed = new SettlementTransactionConditionCode() {
@@ -296,10 +296,6 @@ public class SettlementTransactionConditionCode extends MMCode {
 	 * SettlementTransactionConditionCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "PARQ"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PartialSettlementQuantityThresholdAllowed"</li>
 	 * <li>
@@ -307,6 +303,10 @@ public class SettlementTransactionConditionCode extends MMCode {
 	 * definition} =
 	 * "Partial settlement is allowed but must satisfy a minimum quantity of securities (quantity defined in static data)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionConditionCode PartialSettlementQuantityThresholdAllowed = new SettlementTransactionConditionCode() {
@@ -329,10 +329,6 @@ public class SettlementTransactionConditionCode extends MMCode {
 	 * SettlementTransactionConditionCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "ASGN"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Assignement"</li>
 	 * <li>
@@ -340,6 +336,10 @@ public class SettlementTransactionConditionCode extends MMCode {
 	 * definition} =
 	 * "Transfer of ownership of the asset to another party during the closing of an option."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionConditionCode Assignement = new SettlementTransactionConditionCode() {
@@ -361,15 +361,15 @@ public class SettlementTransactionConditionCode extends MMCode {
 	 * SettlementTransactionConditionCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "BUTC"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BuytoCover"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Transaction is a buy to cover."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionConditionCode BuytoCover = new SettlementTransactionConditionCode() {
@@ -391,15 +391,15 @@ public class SettlementTransactionConditionCode extends MMCode {
 	 * SettlementTransactionConditionCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "CLEN"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Clean"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Tax-exempt financial instruments are to be settled."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionConditionCode Clean = new SettlementTransactionConditionCode() {
@@ -421,15 +421,15 @@ public class SettlementTransactionConditionCode extends MMCode {
 	 * SettlementTransactionConditionCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "DIRT"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Dirty"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Taxable financial instruments are to be settled."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionConditionCode Dirty = new SettlementTransactionConditionCode() {
@@ -452,10 +452,6 @@ public class SettlementTransactionConditionCode extends MMCode {
 	 * SettlementTransactionConditionCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "DLWM"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DeliveryWithoutMatching"</li>
 	 * <li>
@@ -463,6 +459,10 @@ public class SettlementTransactionConditionCode extends MMCode {
 	 * definition} =
 	 * "Matching receipt instruction not required (only for concerned international or national central securities depositories)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionConditionCode DeliveryWithoutMatching = new SettlementTransactionConditionCode() {
@@ -484,15 +484,15 @@ public class SettlementTransactionConditionCode extends MMCode {
 	 * SettlementTransactionConditionCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "DRAW"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Drawn"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Settlement transactions relates to drawn securities."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionConditionCode Drawn = new SettlementTransactionConditionCode() {
@@ -515,10 +515,6 @@ public class SettlementTransactionConditionCode extends MMCode {
 	 * SettlementTransactionConditionCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "EXER"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Exercised"</li>
 	 * <li>
@@ -526,6 +522,10 @@ public class SettlementTransactionConditionCode extends MMCode {
 	 * definition} =
 	 * "Settlement transaction relates to options, futures or derivatives that are exercised."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionConditionCode Exercised = new SettlementTransactionConditionCode() {
@@ -548,10 +548,6 @@ public class SettlementTransactionConditionCode extends MMCode {
 	 * SettlementTransactionConditionCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "FRCL"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FreeCleanSettlement"</li>
 	 * <li>
@@ -559,6 +555,10 @@ public class SettlementTransactionConditionCode extends MMCode {
 	 * definition} =
 	 * "Delivery will be made free of payment but a clean payment order will be sent."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionConditionCode FreeCleanSettlement = new SettlementTransactionConditionCode() {
@@ -581,10 +581,6 @@ public class SettlementTransactionConditionCode extends MMCode {
 	 * SettlementTransactionConditionCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "KNOC"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "KnockedOut"</li>
 	 * <li>
@@ -592,6 +588,10 @@ public class SettlementTransactionConditionCode extends MMCode {
 	 * definition} =
 	 * "Settlement transaction relates to options, futures or derivatives that are expired worthless."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionConditionCode KnockedOut = new SettlementTransactionConditionCode() {
@@ -613,15 +613,15 @@ public class SettlementTransactionConditionCode extends MMCode {
 	 * SettlementTransactionConditionCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "PHYS"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Physical"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Securities are to be physically settled."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionConditionCode Physical = new SettlementTransactionConditionCode() {
@@ -645,10 +645,6 @@ public class SettlementTransactionConditionCode extends MMCode {
 	 * SettlementTransactionConditionCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "RESI"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Residual"</li>
 	 * <li>
@@ -656,6 +652,10 @@ public class SettlementTransactionConditionCode extends MMCode {
 	 * definition} =
 	 * "Relates to transaction on a security that is not eligible at the Central Security Depository (CSD) but for which the payment will be enacted by the central securities depository."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionConditionCode Residual = new SettlementTransactionConditionCode() {
@@ -677,15 +677,15 @@ public class SettlementTransactionConditionCode extends MMCode {
 	 * SettlementTransactionConditionCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "SHOR"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ShortSell"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Account is used for short sale orders."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionConditionCode ShortSell = new SettlementTransactionConditionCode() {
@@ -707,15 +707,15 @@ public class SettlementTransactionConditionCode extends MMCode {
 	 * SettlementTransactionConditionCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "SPCS"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SplitCurrencySettlement"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Settlement is in two different currencies."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionConditionCode SplitCurrencySettlement = new SettlementTransactionConditionCode() {
@@ -737,16 +737,16 @@ public class SettlementTransactionConditionCode extends MMCode {
 	 * SettlementTransactionConditionCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "SPDL"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SpecialDelivery"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Settlement transactions to be settled with special delivery."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionConditionCode SpecialDelivery = new SettlementTransactionConditionCode() {
@@ -768,16 +768,16 @@ public class SettlementTransactionConditionCode extends MMCode {
 	 * SettlementTransactionConditionCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "SPST"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SplitSettlement"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Money and financial instruments settle in different locations."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionConditionCode SplitSettlement = new SettlementTransactionConditionCode() {
@@ -799,15 +799,15 @@ public class SettlementTransactionConditionCode extends MMCode {
 	 * SettlementTransactionConditionCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "UNEX"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Unexposed"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Delivery cannot be performed until money is received."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionConditionCode Unexposed = new SettlementTransactionConditionCode() {
@@ -830,10 +830,6 @@ public class SettlementTransactionConditionCode extends MMCode {
 	 * SettlementTransactionConditionCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "EXPI"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Expired"</li>
 	 * <li>
@@ -841,6 +837,10 @@ public class SettlementTransactionConditionCode extends MMCode {
 	 * definition} =
 	 * "Settlement transaction relates to options, futures or derivatives that have expired."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionConditionCode Expired = new SettlementTransactionConditionCode() {
@@ -863,10 +863,6 @@ public class SettlementTransactionConditionCode extends MMCode {
 	 * SettlementTransactionConditionCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "PENS"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PendingSale"</li>
 	 * <li>
@@ -874,6 +870,10 @@ public class SettlementTransactionConditionCode extends MMCode {
 	 * definition} =
 	 * "Position to cover the pending sale will be available by contractual settlement date (accounting information)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionConditionCode PendingSale = new SettlementTransactionConditionCode() {
@@ -896,10 +896,6 @@ public class SettlementTransactionConditionCode extends MMCode {
 	 * SettlementTransactionConditionCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "TRIP"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TripartySegregation"</li>
 	 * <li>
@@ -907,6 +903,10 @@ public class SettlementTransactionConditionCode extends MMCode {
 	 * definition} =
 	 * "Securities are not be delivered but segregated following triparty collateral transaction."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionConditionCode TripartySegregation = new SettlementTransactionConditionCode() {
@@ -928,15 +928,15 @@ public class SettlementTransactionConditionCode extends MMCode {
 	 * SettlementTransactionConditionCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "NOMC"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NoAutomaticMarketClaim"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "No market claim should be automatically generated."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionConditionCode NoAutomaticMarketClaim = new SettlementTransactionConditionCode() {
@@ -958,15 +958,15 @@ public class SettlementTransactionConditionCode extends MMCode {
 	 * SettlementTransactionConditionCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "TRAN"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Transformation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Transaction resulting from a transformation."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionConditionCode Transformation = new SettlementTransactionConditionCode() {
@@ -989,10 +989,6 @@ public class SettlementTransactionConditionCode extends MMCode {
 	 * SettlementTransactionConditionCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "RHYP"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Rehypothecation"</li>
 	 * <li>
@@ -1000,6 +996,10 @@ public class SettlementTransactionConditionCode extends MMCode {
 	 * definition} =
 	 * "Collateral position is available for other purposes (for example, onwards delivery)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionConditionCode Rehypothecation = new SettlementTransactionConditionCode() {
@@ -1022,10 +1022,6 @@ public class SettlementTransactionConditionCode extends MMCode {
 	 * SettlementTransactionConditionCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "ADEA"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AcceptAfterRegularSettlementDeadline"</li>
 	 * <li>
@@ -1033,6 +1029,10 @@ public class SettlementTransactionConditionCode extends MMCode {
 	 * definition} =
 	 * "Settlement is on a bilaterally accepted transaction that is to be accepted beyond the regular settlement deadline."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionConditionCode AcceptAfterRegularSettlementDeadline = new SettlementTransactionConditionCode() {
@@ -1054,16 +1054,16 @@ public class SettlementTransactionConditionCode extends MMCode {
 	 * SettlementTransactionConditionCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "RPTO"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Reporting"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Relates to a transaction that is for reporting purposes only."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionConditionCode Reporting = new SettlementTransactionConditionCode() {
@@ -1085,15 +1085,15 @@ public class SettlementTransactionConditionCode extends MMCode {
 	 * SettlementTransactionConditionCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "NACT"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NotAccountingRelated"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Security transaction is not for accounting."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionConditionCode NotAccountingRelated = new SettlementTransactionConditionCode() {

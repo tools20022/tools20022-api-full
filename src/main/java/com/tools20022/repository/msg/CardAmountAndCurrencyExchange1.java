@@ -65,15 +65,15 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CardAmountAndCurrencyExchange1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Provides details on the detailed or original amount and currency."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -105,10 +105,6 @@ public class CardAmountAndCurrencyExchange1 {
 	 * CardAmountAndCurrencyExchange1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Amt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Amount"</li>
 	 * <li>
@@ -116,6 +112,10 @@ public class CardAmountAndCurrencyExchange1 {
 	 * definition} =
 	 * "Amount of money to be moved between the debtor and creditor, before deduction of charges, expressed in the currency as ordered by the initiating party."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CardAmountAndCurrencyExchange1, ActiveCurrencyAndAmount> mmAmount = new MMMessageAttribute<CardAmountAndCurrencyExchange1, ActiveCurrencyAndAmount>() {
@@ -164,15 +164,15 @@ public class CardAmountAndCurrencyExchange1 {
 	 * CardAmountAndCurrencyExchange1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CcyXchg"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyExchange"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Reports on currency exchange information."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<CardAmountAndCurrencyExchange1, Optional<CurrencyExchange3>> mmCurrencyExchange = new MMMessageAssociationEnd<CardAmountAndCurrencyExchange1, Optional<CurrencyExchange3>>() {
@@ -224,15 +224,15 @@ public class CardAmountAndCurrencyExchange1 {
 	 * CardAmountAndCurrencyExchange1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Tp"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Type"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identification or qualification of the type of amount."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CardAmountAndCurrencyExchange1, Optional<TypeOfAmount3Code>> mmType = new MMMessageAttribute<CardAmountAndCurrencyExchange1, Optional<TypeOfAmount3Code>>() {

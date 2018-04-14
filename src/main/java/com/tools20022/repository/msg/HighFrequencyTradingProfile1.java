@@ -58,14 +58,14 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "HighFrequencyTradingProfile1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Information about a high frequency trading profile."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -91,16 +91,16 @@ public class HighFrequencyTradingProfile1 {
 	 * HighFrequencyTradingProfile1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Dt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Date"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date on which the investor starts high frequency trading."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<HighFrequencyTradingProfile1, Optional<ISODate>> mmDate = new MMMessageAttribute<HighFrequencyTradingProfile1, Optional<ISODate>>() {
@@ -144,15 +144,15 @@ public class HighFrequencyTradingProfile1 {
 	 * HighFrequencyTradingProfile1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SttlmFrqcy"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SettlementFrequency"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Frequency of settlement."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<HighFrequencyTradingProfile1, Optional<SettlementFrequency1Choice>> mmSettlementFrequency = new MMMessageAssociationEnd<HighFrequencyTradingProfile1, Optional<SettlementFrequency1Choice>>() {
@@ -197,10 +197,6 @@ public class HighFrequencyTradingProfile1 {
 	 * HighFrequencyTradingProfile1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CnsldtnTp"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ConsolidationType"</li>
 	 * <li>
@@ -208,6 +204,10 @@ public class HighFrequencyTradingProfile1 {
 	 * definition} =
 	 * "Specifies whether consolidation is done generally or at the level of segregated account."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<HighFrequencyTradingProfile1, Optional<ConsolidationType1Choice>> mmConsolidationType = new MMMessageAssociationEnd<HighFrequencyTradingProfile1, Optional<ConsolidationType1Choice>>() {

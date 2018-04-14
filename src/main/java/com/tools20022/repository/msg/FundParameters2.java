@@ -68,6 +68,10 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "FundParameters2"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} = "Fund parameters."</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
  * constraint} =
  * <ul>
@@ -80,10 +84,6 @@ import javax.xml.bind.annotation.XmlType;
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "FundParameters2"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Fund parameters."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -113,10 +113,6 @@ public class FundParameters2 {
 	 * FundParameters2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "FinInstrmDtls"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FinancialInstrumentDetails"</li>
 	 * <li>
@@ -124,6 +120,10 @@ public class FundParameters2 {
 	 * definition} =
 	 * "Financial instrument for which the fund processing passport report report is requested."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<FundParameters2, List<FinancialInstrument17>> mmFinancialInstrumentDetails = new MMMessageAssociationEnd<FundParameters2, List<FinancialInstrument17>>() {
@@ -174,16 +174,16 @@ public class FundParameters2 {
 	 * FundParameters2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "FndMgmtCpny"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FundManagementCompany"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Fund management company for which the report is requested."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<FundParameters2, Optional<PartyIdentification2Choice>> mmFundManagementCompany = new MMMessageAttribute<FundParameters2, Optional<PartyIdentification2Choice>>() {
@@ -228,10 +228,6 @@ public class FundParameters2 {
 	 * FundParameters2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DtFr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DateFrom"</li>
 	 * <li>
@@ -239,6 +235,10 @@ public class FundParameters2 {
 	 * definition} =
 	 * "Specifies the start date of the period for which the report is requested."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<FundParameters2, Optional<ISODate>> mmDateFrom = new MMMessageAttribute<FundParameters2, Optional<ISODate>>() {
@@ -287,10 +287,6 @@ public class FundParameters2 {
 	 * FundParameters2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CtryOfDmcl"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CountryOfDomicile"</li>
 	 * <li>
@@ -298,6 +294,10 @@ public class FundParameters2 {
 	 * definition} =
 	 * "Country where the fund has legal domicile as reflected in the ISIN classification."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<FundParameters2, Optional<CountryCode>> mmCountryOfDomicile = new MMMessageAttribute<FundParameters2, Optional<CountryCode>>() {
@@ -342,15 +342,15 @@ public class FundParameters2 {
 	 * FundParameters2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RegdDstrbtnCtry"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RegisteredDistributionCountry"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Countries where the fund is registered for distribution."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<FundParameters2, Optional<CountryCode>> mmRegisteredDistributionCountry = new MMMessageAttribute<FundParameters2, Optional<CountryCode>>() {

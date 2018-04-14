@@ -67,14 +67,14 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "SafekeepingPlaceFormat1Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice of formats for the place of safekeeping."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -105,10 +105,6 @@ public class SafekeepingPlaceFormat1Choice {
 	 * SafekeepingPlaceFormat1Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TpAndId"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TypeAndIdentification"</li>
 	 * <li>
@@ -116,6 +112,10 @@ public class SafekeepingPlaceFormat1Choice {
 	 * definition} =
 	 * "Identification of the place of safekeeping expressed as a code and a BIC."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<SafekeepingPlaceFormat1Choice, SafekeepingPlaceTypeAndAnyBICIdentifier1> mmTypeAndIdentification = new MMMessageAssociationEnd<SafekeepingPlaceFormat1Choice, SafekeepingPlaceTypeAndAnyBICIdentifier1>() {
@@ -166,10 +166,6 @@ public class SafekeepingPlaceFormat1Choice {
 	 * SafekeepingPlaceFormat1Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Tp"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Type"</li>
 	 * <li>
@@ -177,6 +173,10 @@ public class SafekeepingPlaceFormat1Choice {
 	 * definition} =
 	 * "Place identification of the place of safekeeping expressed as a code and a narrative description."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<SafekeepingPlaceFormat1Choice, SafekeepingPlaceTypeAndText1> mmType = new MMMessageAssociationEnd<SafekeepingPlaceFormat1Choice, SafekeepingPlaceTypeAndText1>() {
@@ -227,10 +227,6 @@ public class SafekeepingPlaceFormat1Choice {
 	 * SafekeepingPlaceFormat1Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Prtry"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Proprietary"</li>
 	 * <li>
@@ -238,6 +234,10 @@ public class SafekeepingPlaceFormat1Choice {
 	 * definition} =
 	 * "Place identification expressed as a proprietary type and narrative description."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<SafekeepingPlaceFormat1Choice, GenericIdentification14> mmProprietary = new MMMessageAssociationEnd<SafekeepingPlaceFormat1Choice, GenericIdentification14>() {
@@ -288,15 +288,15 @@ public class SafekeepingPlaceFormat1Choice {
 	 * SafekeepingPlaceFormat1Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Ctry"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Country"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Place of safekeeping expressed with a country code."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SafekeepingPlaceFormat1Choice, CountryCode> mmCountry = new MMMessageAttribute<SafekeepingPlaceFormat1Choice, CountryCode>() {

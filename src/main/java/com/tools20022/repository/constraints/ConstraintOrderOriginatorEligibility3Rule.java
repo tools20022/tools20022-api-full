@@ -39,10 +39,6 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleExecution3
 	 * SubscriptionMultipleExecution3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OrderOriginatorEligibility3Rule"</li>
 	 * <li>
@@ -50,6 +46,10 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 * definition} =
 	 * "Either InvestmentAccountDetails/OrderOriginatorEligibility or (one or more instances of IndividualExecutionDetails/RelatedPartiesDetails/OrderOriginatorEligibility) may be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -83,10 +83,6 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleExecution3
 	 * RedemptionMultipleExecution3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OrderOriginatorEligibility3Rule"</li>
 	 * <li>
@@ -94,6 +90,10 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 * definition} =
 	 * "Either InvestmentAccountDetails/OrderOriginatorEligibility or (one or more instances of \nIndividualExecutionDetails/RelatedPartiesDetails/OrderOriginatorEligibility) may be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -127,10 +127,6 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder15
 	 * RedemptionOrder15}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OrderOriginatorEligibility3Rule"</li>
 	 * <li>
@@ -138,6 +134,10 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 * definition} =
 	 * "Either InvestmentAccountDetails/OrderOriginatorEligibility or one or more occurrences of RelatedPartyDetails/OrderOriginatorEligibility may be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -167,10 +167,6 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder5
 	 * SubscriptionOrder5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OrderOriginatorEligibility3Rule"</li>
 	 * <li>
@@ -178,6 +174,10 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 * definition} =
 	 * "Either InvestmentAccountDetails/OrderOriginatorEligibility or (one or more instances of RelatedPartiesDetails/OrderOriginatorEligibility) may be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubscriptionOrder5> forSubscriptionOrder5 = new MMConstraint<SubscriptionOrder5>() {
@@ -200,10 +200,6 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SwitchOrder7 SwitchOrder7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OrderOriginatorEligibility3Rule"</li>
 	 * <li>
@@ -211,6 +207,10 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 * definition} =
 	 * "Either InvestmentAccountDetails/OrderOriginatorEligibility or a single occurrence of RedemptionLegDetails/InvestmentAccountDetails/OrderOriginatorEligibility or a single occurrence of SubscriptionLegDetails/InvestmentAccountDetails/OrderOriginatorEligibility should be only present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -240,10 +240,6 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution12
 	 * SubscriptionExecution12}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OrderOriginatorEligibility3Rule"</li>
 	 * <li>
@@ -251,6 +247,10 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 * definition} =
 	 * "Either InvestmentAccountDetails/OrderOriginatorEligibility or one or more occurrences of RelatedPartyDetails/OrderOriginatorEligibility may be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -280,10 +280,6 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder6
 	 * SubscriptionMultipleOrder6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OrderOriginatorEligibility3Rule"</li>
 	 * <li>
@@ -291,6 +287,10 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 * definition} =
 	 * "Either one or more occurrences of IndividualOrderDetails/RelatedPartyDetails/OrderOriginatorEligibility or InvestmentAccountDetails/OrderOriginatorEligibility may be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -320,10 +320,6 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder7
 	 * SubscriptionOrder7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OrderOriginatorEligibility3Rule"</li>
 	 * <li>
@@ -331,6 +327,10 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 * definition} =
 	 * "Either InvestmentAccountDetails/OrderOriginatorEligibility or (one or more instances of RelatedPartiesDetails/OrderOriginatorEligibility) may be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -363,10 +363,6 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder6
 	 * RedemptionMultipleOrder6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OrderOriginatorEligibility3Rule"</li>
 	 * <li>
@@ -374,6 +370,10 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 * definition} =
 	 * "Either InvestmentAccountDetails/OrderOriginatorEligibility or one or more occurrences of IndividualOrderDetails/RelatedPartyDetails/OrderOriginatorEligibility may be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -403,10 +403,6 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder3
 	 * RedemptionMultipleOrder3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OrderOriginatorEligibility3Rule"</li>
 	 * <li>
@@ -414,6 +410,10 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 * definition} =
 	 * "Either InvestmentAccountDetails/OrderOriginatorEligibility or (one or more instances of IndividualOrderDetails/RelatedPartiesDetails/OrderOriginatorEligibility) may be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RedemptionMultipleOrder3> forRedemptionMultipleOrder3 = new MMConstraint<RedemptionMultipleOrder3>() {
@@ -437,10 +437,6 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder5
 	 * RedemptionOrder5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OrderOriginatorEligibility3Rule"</li>
 	 * <li>
@@ -448,6 +444,10 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 * definition} =
 	 * "Either InvestmentAccountDetails/OrderOriginatorEligibility or (one or more instances of RelatedPartiesDetails/OrderOriginatorEligibility) may be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RedemptionOrder5> forRedemptionOrder5 = new MMConstraint<RedemptionOrder5>() {
@@ -471,10 +471,6 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution5
 	 * RedemptionExecution5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OrderOriginatorEligibility3Rule"</li>
 	 * <li>
@@ -482,6 +478,10 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 * definition} =
 	 * "Either InvestmentAccountDetails/OrderOriginatorEligibility or (one or more instances of RelatedPartiesDetails/OrderOriginatorEligibility) may be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -514,10 +514,6 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution16
 	 * RedemptionExecution16}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OrderOriginatorEligibility3Rule"</li>
 	 * <li>
@@ -525,6 +521,10 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 * definition} =
 	 * "Either InvestmentAccountDetails/OrderOriginatorEligibility or one or more occurrences of RelatedPartyDetails/OrderOriginatorEligibility may be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -554,10 +554,6 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SwitchExecution7
 	 * SwitchExecution7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OrderOriginatorEligibility3Rule"</li>
 	 * <li>
@@ -565,6 +561,10 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 * definition} =
 	 * "Either InvestmentAccountDetails/OrderOriginatorEligibility or a single occurrence of RedemptionLegDetails/InvestmentAccountDetails/OrderOriginatorEligibility or a single occurrence of SubscriptionLegDetails/InvestmentAccountDetails/OrderOriginatorEligibility should be only present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -594,10 +594,6 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7
 	 * RedemptionOrder7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OrderOriginatorEligibility3Rule"</li>
 	 * <li>
@@ -605,6 +601,10 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 * definition} =
 	 * "Either InvestmentAccountDetails/OrderOriginatorEligibility or (one or more instances of RelatedPartiesDetails/OrderOriginatorEligibility) may be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -637,10 +637,6 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder15
 	 * SubscriptionOrder15}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OrderOriginatorEligibility3Rule"</li>
 	 * <li>
@@ -648,6 +644,10 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 * definition} =
 	 * "Either InvestmentAccountDetails/OrderOriginatorEligibility or one or more occurrences of RelatedPartyDetails/OrderOriginatorEligibility may be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -677,10 +677,6 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleExecution5
 	 * RedemptionMultipleExecution5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OrderOriginatorEligibility3Rule"</li>
 	 * <li>
@@ -688,6 +684,10 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 * definition} =
 	 * "Either InvestmentAccountDetails/OrderOriginatorEligibility or one or more occurrences of IndividualExecutionDetails/RelatedPartyDetails/OrderOriginatorEligibility may be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -718,10 +718,6 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder3
 	 * SubscriptionMultipleOrder3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OrderOriginatorEligibility3Rule"</li>
 	 * <li>
@@ -729,6 +725,10 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 * definition} =
 	 * "Either InvestmentAccountDetails/OrderOriginatorEligibility or (one or more instances of IndividualOrderDetails/RelatedPartiesDetails/OrderOriginatorEligibility) may be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubscriptionMultipleOrder3> forSubscriptionMultipleOrder3 = new MMConstraint<SubscriptionMultipleOrder3>() {
@@ -752,10 +752,6 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleExecution5
 	 * SubscriptionMultipleExecution5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OrderOriginatorEligibility3Rule"</li>
 	 * <li>
@@ -763,6 +759,10 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 * definition} =
 	 * "Either InvestmentAccountDetails/OrderOriginatorEligibility or one or more occurrences of IndividualExecutionDetails/RelatedPartyDetails/OrderOriginatorEligibility may be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -793,10 +793,6 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution5
 	 * SubscriptionExecution5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OrderOriginatorEligibility3Rule"</li>
 	 * <li>
@@ -804,6 +800,10 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 * definition} =
 	 * "Either InvestmentAccountDetails/OrderOriginatorEligibility or (one or more instances of RelatedPartiesDetails/OrderOriginatorEligibility) may be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -836,10 +836,6 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder4
 	 * SubscriptionMultipleOrder4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OrderOriginatorEligibility3Rule"</li>
 	 * <li>
@@ -847,6 +843,10 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 * definition} =
 	 * "Either IndividualOrderDetails/RelatedPartiesDetails/OrderOriginatorEligibility or (one or more instances of InvestmentAccountDetails/OrderOriginatorEligibility) may be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -879,10 +879,6 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder4
 	 * RedemptionMultipleOrder4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OrderOriginatorEligibility3Rule"</li>
 	 * <li>
@@ -890,6 +886,10 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 * definition} =
 	 * "Either InvestmentAccountDetails/OrderOriginatorEligibility or (one or more instances of IndividualOrderDetails/RelatedPartiesDetails/OrderOriginatorEligibility) may be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>

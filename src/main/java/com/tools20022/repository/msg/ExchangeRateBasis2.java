@@ -56,15 +56,15 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "ExchangeRateBasis2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Provides information about the terms of the foreign exchange transaction."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -96,10 +96,6 @@ public class ExchangeRateBasis2 {
 	 * ExchangeRateBasis2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "BaseCcy"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BaseCurrency"</li>
 	 * <li>
@@ -107,6 +103,10 @@ public class ExchangeRateBasis2 {
 	 * definition} =
 	 * "Currency in which the rate of exchange is expressed in a currency exchange.\r\n\r\nUsage: In the example one GBP equals xxxUSD, the unit currency is GBP."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ExchangeRateBasis2, ActiveOrHistoricCurrencyCode> mmBaseCurrency = new MMMessageAttribute<ExchangeRateBasis2, ActiveOrHistoricCurrencyCode>() {
@@ -157,10 +157,6 @@ public class ExchangeRateBasis2 {
 	 * ExchangeRateBasis2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "QtdCcy"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "QuotedCurrency"</li>
 	 * <li>
@@ -168,6 +164,10 @@ public class ExchangeRateBasis2 {
 	 * definition} =
 	 * "Currency into which the base currency is converted, in a currency exchange."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ExchangeRateBasis2, ActiveOrHistoricCurrencyCode> mmQuotedCurrency = new MMMessageAttribute<ExchangeRateBasis2, ActiveOrHistoricCurrencyCode>() {

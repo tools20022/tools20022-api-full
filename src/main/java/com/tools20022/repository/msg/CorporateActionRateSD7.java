@@ -64,16 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CorporateActionRateSD7"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Provides additional information regarding corporate action option securities movement rate details."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -99,15 +99,15 @@ public class CorporateActionRateSD7 {
 	 * CorporateActionRateSD7}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PlcAndNm"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PlaceAndName"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "xPath to the element that is being extended."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionRateSD7, Max350Text> mmPlaceAndName = new MMMessageAttribute<CorporateActionRateSD7, Max350Text>() {
@@ -152,13 +152,6 @@ public class CorporateActionRateSD7 {
 	 * CorporateActionRateSD7}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CSDSctyRate"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = DTCCSynonym: DTC Security Rate</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CSDSecurityRate"</li>
 	 * <li>
@@ -166,6 +159,13 @@ public class CorporateActionRateSD7 {
 	 * definition} =
 	 * "Corresponding rate of the security disbursed by CSD (for an example in US, DTC The Depository Trust Corporation)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: DTC Security Rate</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionRateSD7, Optional<CorporateActionRateSD6Choice>> mmCSDSecurityRate = new MMMessageAttribute<CorporateActionRateSD7, Optional<CorporateActionRateSD6Choice>>() {
@@ -211,6 +211,11 @@ public class CorporateActionRateSD7 {
 	 * CorporateActionRateSD7}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "EstmtdRateFlg"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "EstimatedRateFlag"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Denotes whether the rate is approximate."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = DTCCSynonym: Estimated Rate Flag</li>
@@ -218,11 +223,6 @@ public class CorporateActionRateSD7 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "EstimatedRateFlag"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Denotes whether the rate is approximate."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionRateSD7, Optional<YesNoIndicator>> mmEstimatedRateFlag = new MMMessageAttribute<CorporateActionRateSD7, Optional<YesNoIndicator>>() {
@@ -268,6 +268,13 @@ public class CorporateActionRateSD7 {
 	 * CorporateActionRateSD7}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DTCFeeRate"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DTCFeeRate"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Rate at which a fee will be charged to a DTC (The Depository Trust Corporation) participant."
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = DTCCSynonym: DTC Fee Rate, DTCCSynonym: Currency (DTC
@@ -276,13 +283,6 @@ public class CorporateActionRateSD7 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DTCFeeRate"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Rate at which a fee will be charged to a DTC (The Depository Trust Corporation) participant."
-	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionRateSD7, Optional<PriceFormatSD1Choice>> mmDTCFeeRate = new MMMessageAttribute<CorporateActionRateSD7, Optional<PriceFormatSD1Choice>>() {

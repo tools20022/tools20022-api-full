@@ -78,14 +78,14 @@ import java.util.Objects;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "BaselineStatus"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Indicates the status of a baseline."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class BaselineStatus extends Status {
@@ -133,15 +133,15 @@ public class BaselineStatus extends Status {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.BaselineStatus
 	 * BaselineStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Status"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the status of the processing of a baseline."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<BaselineStatus, BaselineStatusCode> mmStatus = new MMBusinessAttribute<BaselineStatus, BaselineStatusCode>() {
@@ -175,6 +175,10 @@ public class BaselineStatus extends Status {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.CommercialTrade
+	 * CommercialTrade}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.CommercialTrade#mmTransactionStatus
@@ -183,23 +187,19 @@ public class BaselineStatus extends Status {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.CommercialTrade
-	 * CommercialTrade}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.BaselineStatus
 	 * BaselineStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CommercialTrade"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Commercial trade for which a status is provided."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<BaselineStatus, com.tools20022.repository.entity.CommercialTrade> mmCommercialTrade = new MMBusinessAssociationEnd<BaselineStatus, com.tools20022.repository.entity.CommercialTrade>() {

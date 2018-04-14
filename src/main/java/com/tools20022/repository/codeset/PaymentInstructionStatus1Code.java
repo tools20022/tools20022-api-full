@@ -106,6 +106,10 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "PaymentInstructionStatus1Code"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} = "Specifies the state of a payment."</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -116,10 +120,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "PaymentInstructionStatus1Code"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Specifies the state of a payment."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -134,12 +134,12 @@ public class PaymentInstructionStatus1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code
 	 * PaymentInstructionStatus1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Accepted"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Accepted"</li>
 	 * </ul>
 	 */
 	public static final PaymentInstructionStatus1Code Accepted = new PaymentInstructionStatus1Code() {
@@ -158,12 +158,12 @@ public class PaymentInstructionStatus1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code
 	 * PaymentInstructionStatus1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Validated"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Validated"</li>
 	 * </ul>
 	 */
 	public static final PaymentInstructionStatus1Code Validated = new PaymentInstructionStatus1Code() {
@@ -182,12 +182,12 @@ public class PaymentInstructionStatus1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code
 	 * PaymentInstructionStatus1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Authorised"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Authorised"</li>
 	 * </ul>
 	 */
 	public static final PaymentInstructionStatus1Code Authorised = new PaymentInstructionStatus1Code() {
@@ -206,12 +206,12 @@ public class PaymentInstructionStatus1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code
 	 * PaymentInstructionStatus1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Invalid"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Invalid"</li>
 	 * </ul>
 	 */
 	public static final PaymentInstructionStatus1Code Invalid = new PaymentInstructionStatus1Code() {
@@ -230,12 +230,12 @@ public class PaymentInstructionStatus1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code
 	 * PaymentInstructionStatus1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Matched"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Matched"</li>
 	 * </ul>
 	 */
 	public static final PaymentInstructionStatus1Code Matched = new PaymentInstructionStatus1Code() {
@@ -254,12 +254,12 @@ public class PaymentInstructionStatus1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code
 	 * PaymentInstructionStatus1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Unmatched"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Unmatched"</li>
 	 * </ul>
 	 */
 	public static final PaymentInstructionStatus1Code Unmatched = new PaymentInstructionStatus1Code() {
@@ -278,12 +278,12 @@ public class PaymentInstructionStatus1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code
 	 * PaymentInstructionStatus1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Mismatched"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Mismatched"</li>
 	 * </ul>
 	 */
 	public static final PaymentInstructionStatus1Code Mismatched = new PaymentInstructionStatus1Code() {
@@ -302,12 +302,12 @@ public class PaymentInstructionStatus1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code
 	 * PaymentInstructionStatus1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementEligible"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementEligible"</li>
 	 * </ul>
 	 */
 	public static final PaymentInstructionStatus1Code SettlementEligible = new PaymentInstructionStatus1Code() {
@@ -326,12 +326,12 @@ public class PaymentInstructionStatus1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code
 	 * PaymentInstructionStatus1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementMature"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementMature"</li>
 	 * </ul>
 	 */
 	public static final PaymentInstructionStatus1Code SettlementMature = new PaymentInstructionStatus1Code() {
@@ -350,12 +350,12 @@ public class PaymentInstructionStatus1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code
 	 * PaymentInstructionStatus1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Suspended"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Suspended"</li>
 	 * </ul>
 	 */
 	public static final PaymentInstructionStatus1Code Suspended = new PaymentInstructionStatus1Code() {
@@ -374,12 +374,12 @@ public class PaymentInstructionStatus1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code
 	 * PaymentInstructionStatus1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PendingCancellation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PendingCancellation"</li>
 	 * </ul>
 	 */
 	public static final PaymentInstructionStatus1Code PendingCancellation = new PaymentInstructionStatus1Code() {
@@ -398,12 +398,12 @@ public class PaymentInstructionStatus1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code
 	 * PaymentInstructionStatus1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PendingSettlement"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PendingSettlement"</li>
 	 * </ul>
 	 */
 	public static final PaymentInstructionStatus1Code PendingSettlement = new PaymentInstructionStatus1Code() {
@@ -422,12 +422,12 @@ public class PaymentInstructionStatus1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code
 	 * PaymentInstructionStatus1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PendingFailingSettlement"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PendingFailingSettlement"</li>
 	 * </ul>
 	 */
 	public static final PaymentInstructionStatus1Code PendingFailingSettlement = new PaymentInstructionStatus1Code() {
@@ -446,12 +446,12 @@ public class PaymentInstructionStatus1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code
 	 * PaymentInstructionStatus1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SenderMultilateralLimitRelated"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SenderMultilateralLimitRelated"</li>
 	 * </ul>
 	 */
 	public static final PaymentInstructionStatus1Code SenderMultilateralLimitRelated = new PaymentInstructionStatus1Code() {
@@ -470,12 +470,12 @@ public class PaymentInstructionStatus1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code
 	 * PaymentInstructionStatus1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ReceiverMultilateralLimitRelated"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ReceiverMultilateralLimitRelated"</li>
 	 * </ul>
 	 */
 	public static final PaymentInstructionStatus1Code ReceiverMultilateralLimitRelated = new PaymentInstructionStatus1Code() {
@@ -494,12 +494,12 @@ public class PaymentInstructionStatus1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code
 	 * PaymentInstructionStatus1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SenderReceiverBilateralLimitRelated"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SenderReceiverBilateralLimitRelated"</li>
 	 * </ul>
 	 */
 	public static final PaymentInstructionStatus1Code SenderReceiverBilateralLimitRelated = new PaymentInstructionStatus1Code() {
@@ -518,12 +518,12 @@ public class PaymentInstructionStatus1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code
 	 * PaymentInstructionStatus1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Settled"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Settled"</li>
 	 * </ul>
 	 */
 	public static final PaymentInstructionStatus1Code Settled = new PaymentInstructionStatus1Code() {
@@ -542,12 +542,12 @@ public class PaymentInstructionStatus1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code
 	 * PaymentInstructionStatus1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Rejected"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Rejected"</li>
 	 * </ul>
 	 */
 	public static final PaymentInstructionStatus1Code Rejected = new PaymentInstructionStatus1Code() {
@@ -566,12 +566,12 @@ public class PaymentInstructionStatus1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code
 	 * PaymentInstructionStatus1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Cancelled"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Cancelled"</li>
 	 * </ul>
 	 */
 	public static final PaymentInstructionStatus1Code Cancelled = new PaymentInstructionStatus1Code() {
@@ -590,12 +590,12 @@ public class PaymentInstructionStatus1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code
 	 * PaymentInstructionStatus1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Finalised"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Finalised"</li>
 	 * </ul>
 	 */
 	public static final PaymentInstructionStatus1Code Finalised = new PaymentInstructionStatus1Code() {

@@ -43,6 +43,13 @@ import javax.xml.bind.annotation.*;
  * <strong>Constant fields:</strong>
  * <ul>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code reda.015.001.01}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.ReferenceDataLatestVersion
+ * ReferenceDataLatestVersion}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
  * <ul>
@@ -78,13 +85,12 @@ import javax.xml.bind.annotation.*;
  * rootElement} = "Document"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
  * xmlTag} = "PtyQry"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.ReferenceDataLatestVersion
- * ReferenceDataLatestVersion}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code reda.015.001.01}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "PartyQueryV01"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} =
+ * "Scope: \nThe PartyQuery message is sent by a central securities depository, a national central bank, a central securities depository participant, a central counter party, a payment bank, a trading party or a stock exchange to the executing party to query for the party reference data of a party defined in the system."
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
  * semanticMarkup} = type=prefix, prefix=DRAFT5</li>
@@ -92,12 +98,6 @@ import javax.xml.bind.annotation.*;
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "PartyQueryV01"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} =
- * "Scope: \nThe PartyQuery message is sent by a central securities depository, a national central bank, a central securities depository participant, a central counter party, a payment bank, a trading party or a stock exchange to the executing party to query for the party reference data of a party defined in the system."
- * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -118,10 +118,6 @@ public class PartyQueryV01 {
 	 * MessageHeader2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MsgId"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MessageIdentification"</li>
 	 * <li>
@@ -129,6 +125,10 @@ public class PartyQueryV01 {
 	 * definition} =
 	 * "Point to point reference elements, as assigned by the instructing party, to unambiguously identify the query message."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock<PartyQueryV01, MessageHeader2> mmMessageIdentification = new MMMessageBuildingBlock<PartyQueryV01, MessageHeader2>() {
@@ -166,16 +166,16 @@ public class PartyQueryV01 {
 	 * PartyIdentification71Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MsgOrgtr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MessageOriginator"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Party that originated the query message, if other than the sender."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock<PartyQueryV01, Optional<PartyIdentification71Choice>> mmMessageOriginator = new MMMessageBuildingBlock<PartyQueryV01, Optional<PartyIdentification71Choice>>() {
@@ -213,10 +213,6 @@ public class PartyQueryV01 {
 	 * PartyIdentification71Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MsgRcpt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MessageRecipient"</li>
 	 * <li>
@@ -224,6 +220,10 @@ public class PartyQueryV01 {
 	 * definition} =
 	 * "Party that is the final destination of the query message, if other than the receiver."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock<PartyQueryV01, Optional<PartyIdentification71Choice>> mmMessageRecipient = new MMMessageBuildingBlock<PartyQueryV01, Optional<PartyIdentification71Choice>>() {
@@ -261,10 +261,6 @@ public class PartyQueryV01 {
 	 * PartyDataSearchCriteria2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SchCrit"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SearchCriteria"</li>
 	 * <li>
@@ -272,6 +268,10 @@ public class PartyQueryV01 {
 	 * definition} =
 	 * "Defines the criteria to be used to query the party reference data by the executing system."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock<PartyQueryV01, PartyDataSearchCriteria2> mmSearchCriteria = new MMMessageBuildingBlock<PartyQueryV01, PartyDataSearchCriteria2>() {
@@ -309,16 +309,16 @@ public class PartyQueryV01 {
 	 * PartyDataReturnCriteria1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RtrCrit"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReturnCriteria"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Defines the expected party reference data to be returned."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock<PartyQueryV01, Optional<PartyDataReturnCriteria1>> mmReturnCriteria = new MMMessageBuildingBlock<PartyQueryV01, Optional<PartyDataReturnCriteria1>>() {
@@ -356,10 +356,6 @@ public class PartyQueryV01 {
 	 * SupplementaryData1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SplmtryData"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SupplementaryData"</li>
 	 * <li>
@@ -367,6 +363,10 @@ public class PartyQueryV01 {
 	 * definition} =
 	 * "Additional information that cannot be captured in the structured elements and/or any other specific block."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock<PartyQueryV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<PartyQueryV01, List<SupplementaryData1>>() {

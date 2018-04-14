@@ -40,10 +40,6 @@ public class ConstraintIssuanceTypeRule {
 	 * expression} =
 	 * "&lt;RuleDefinition&gt;&lt;SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;OR&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/UndertakingIssuanceMessage/UndertakingDetails/IssuanceType&lt;/leftOperand&gt;&lt;rightOperand&gt;UndertakingViaAdvisingParty&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/UndertakingIssuanceMessage/UndertakingDetails/IssuanceType&lt;/leftOperand&gt;&lt;rightOperand&gt;UndertakingIssuedViaConfirmingParty&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;/SimpleRule&gt;&lt;/RuleDefinition&gt;"
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IssuanceTypeRule"</li>
 	 * <li>
@@ -51,6 +47,10 @@ public class ConstraintIssuanceTypeRule {
 	 * definition} =
 	 * "Issuance type must be for either 'UndertakingIssuedViaAdvisingParty' (ISAD) or 'UndertakingIsuuedViaConfirmingParty' (ISCO)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<UndertakingAdvice1> forUndertakingAdvice1 = new MMConstraint<UndertakingAdvice1>() {

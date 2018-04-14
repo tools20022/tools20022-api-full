@@ -81,6 +81,10 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "PartyIdentificationAndAccount45"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} = "Party and account details."</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
  * constraint} =
  * <ul>
@@ -94,10 +98,6 @@ import javax.xml.bind.annotation.XmlType;
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRemovalDate
  * removalDate} = May 5, 2016</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "PartyIdentificationAndAccount45"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Party and account details."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -128,6 +128,11 @@ public class PartyIdentificationAndAccount45 {
 	 * PartyIdentificationAndAccount45}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Id"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Identification"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Identification of the party."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = ISO15022Synonym: :95a:</li>
@@ -135,11 +140,6 @@ public class PartyIdentificationAndAccount45 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Identification"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Identification of the party."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<PartyIdentificationAndAccount45, PartyIdentification45Choice> mmIdentification = new MMMessageAssociationEnd<PartyIdentificationAndAccount45, PartyIdentification45Choice>() {
@@ -191,6 +191,11 @@ public class PartyIdentificationAndAccount45 {
 	 * PartyIdentificationAndAccount45}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AltrnId"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AlternateIdentification"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Alternate identification for a party."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = ISO15022Synonym: :95S::ALTE</li>
@@ -198,11 +203,6 @@ public class PartyIdentificationAndAccount45 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AlternateIdentification"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Alternate identification for a party."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<PartyIdentificationAndAccount45, Optional<AlternatePartyIdentification2>> mmAlternateIdentification = new MMMessageAssociationEnd<PartyIdentificationAndAccount45, Optional<AlternatePartyIdentification2>>() {
@@ -253,6 +253,11 @@ public class PartyIdentificationAndAccount45 {
 	 * PartyIdentificationAndAccount45}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SfkpgAcct"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SafekeepingAccount"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Account to or from which a securities entry is made."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = ISO15022Synonym: :97A::SAFE</li>
@@ -260,11 +265,6 @@ public class PartyIdentificationAndAccount45 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SafekeepingAccount"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Account to or from which a securities entry is made."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<PartyIdentificationAndAccount45, Optional<SecuritiesAccount13>> mmSafekeepingAccount = new MMMessageAssociationEnd<PartyIdentificationAndAccount45, Optional<SecuritiesAccount13>>() {
@@ -311,13 +311,6 @@ public class PartyIdentificationAndAccount45 {
 	 * PartyIdentificationAndAccount45}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrcgDt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = ISO15022Synonym: :98a::PROC</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ProcessingDate"</li>
 	 * <li>
@@ -325,6 +318,13 @@ public class PartyIdentificationAndAccount45 {
 	 * definition} =
 	 * "Date/time at which the instruction was processed by the specified party."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::PROC</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<PartyIdentificationAndAccount45, Optional<DateAndDateTimeChoice>> mmProcessingDate = new MMMessageAssociationEnd<PartyIdentificationAndAccount45, Optional<DateAndDateTimeChoice>>() {
@@ -370,13 +370,6 @@ public class PartyIdentificationAndAccount45 {
 	 * PartyIdentificationAndAccount45}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrcgId"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = ISO15022Synonym: :20C::PROC</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ProcessingIdentification"</li>
 	 * <li>
@@ -384,6 +377,13 @@ public class PartyIdentificationAndAccount45 {
 	 * definition} =
 	 * "Unambiguous identification of the transaction for the party identified."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C::PROC</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<PartyIdentificationAndAccount45, Optional<Max35Text>> mmProcessingIdentification = new MMMessageAttribute<PartyIdentificationAndAccount45, Optional<Max35Text>>() {
@@ -427,6 +427,12 @@ public class PartyIdentificationAndAccount45 {
 	 * PartyIdentificationAndAccount45}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AddtlInf"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AdditionalInformation"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Provides additional information to a party identification."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = ISO15022Synonym: :70a:</li>
@@ -434,12 +440,6 @@ public class PartyIdentificationAndAccount45 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AdditionalInformation"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Provides additional information to a party identification."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<PartyIdentificationAndAccount45, Optional<PartyTextInformation1>> mmAdditionalInformation = new MMMessageAssociationEnd<PartyIdentificationAndAccount45, Optional<PartyTextInformation1>>() {

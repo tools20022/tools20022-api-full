@@ -89,16 +89,16 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "TriggeringInstructions"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Specifies the conditions under which an order will be triggered/activated by market events as well as it specifies the order's behavior in the market once it has been triggered."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -125,13 +125,6 @@ public class TriggeringInstructions {
 	 * TriggeringInstructions}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Tp"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = FIXSynonym: 1100</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Type"</li>
 	 * <li>
@@ -139,6 +132,13 @@ public class TriggeringInstructions {
 	 * definition} =
 	 * "Defines when the trigger will hit, i.e. the action specified by the trigger instructions will come into effect."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 1100</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<TriggeringInstructions, Optional<TriggerType1Code>> mmType = new MMMessageAttribute<TriggeringInstructions, Optional<TriggerType1Code>>() {
@@ -184,6 +184,12 @@ public class TriggeringInstructions {
 	 * TriggeringInstructions}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Actn"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Action"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Defines the type of action to take when the trigger hits."
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = FIXSynonym: 1101</li>
@@ -191,12 +197,6 @@ public class TriggeringInstructions {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Action"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Defines the type of action to take when the trigger hits."
-	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<TriggeringInstructions, Optional<TriggerAction1Code>> mmAction = new MMMessageAttribute<TriggeringInstructions, Optional<TriggerAction1Code>>() {
@@ -240,6 +240,11 @@ public class TriggeringInstructions {
 	 * TriggeringInstructions}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Pric"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Price"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "The price at which the trigger should hit."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = FIXSynonym: 1102</li>
@@ -247,11 +252,6 @@ public class TriggeringInstructions {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Price"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "The price at which the trigger should hit."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<TriggeringInstructions, Optional<Price1>> mmPrice = new MMMessageAttribute<TriggeringInstructions, Optional<Price1>>() {
@@ -297,13 +297,6 @@ public class TriggeringInstructions {
 	 * TriggeringInstructions}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PricPrtcnScp"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = FIXSynonym: 1108</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PriceProtectionScope"</li>
 	 * <li>
@@ -311,6 +304,13 @@ public class TriggeringInstructions {
 	 * definition} =
 	 * "Defines the type of price protection the customer requires on their order."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 1108</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<TriggeringInstructions, Optional<PriceProtectionScope2Code>> mmPriceProtectionScope = new MMMessageAttribute<TriggeringInstructions, Optional<PriceProtectionScope2Code>>() {
@@ -356,13 +356,6 @@ public class TriggeringInstructions {
 	 * TriggeringInstructions}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PricDrctn"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = FIXSynonym: 1109</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PriceDirection"</li>
 	 * <li>
@@ -370,6 +363,13 @@ public class TriggeringInstructions {
 	 * definition} =
 	 * "Indicates the side from which the trigger price is reached.\n\nUp -Trigger if the price of the specified type goes up to or through the specified trigger price.\n\nDown - Trigger if the price of the specified type goes down to or through the specified trigger price."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 1109</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<TriggeringInstructions, Optional<DirectionIndicator>> mmPriceDirection = new MMMessageAttribute<TriggeringInstructions, Optional<DirectionIndicator>>() {
@@ -413,13 +413,6 @@ public class TriggeringInstructions {
 	 * TriggeringInstructions}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NewPric"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = FIXSynonym: 1110</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NewPrice"</li>
 	 * <li>
@@ -427,6 +420,13 @@ public class TriggeringInstructions {
 	 * definition} =
 	 * "The price that the order should have after the trigger has hit. Could be applicable for any trigger type, but must be specified for Trigger Type = PAEX."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 1110</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<TriggeringInstructions, Optional<Price1>> mmNewPrice = new MMMessageAttribute<TriggeringInstructions, Optional<Price1>>() {
@@ -477,13 +477,6 @@ public class TriggeringInstructions {
 	 * TriggeringInstructions}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OrdrTp"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = FIXSynonym: 1111</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OrderType"</li>
 	 * <li>
@@ -491,6 +484,13 @@ public class TriggeringInstructions {
 	 * definition} =
 	 * "The order type that the order should have after the trigger has hit. Required to express orders that change from limit to market."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 1111</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<TriggeringInstructions, Optional<OrderType2Code>> mmOrderType = new MMMessageAttribute<TriggeringInstructions, Optional<OrderType2Code>>() {
@@ -542,6 +542,12 @@ public class TriggeringInstructions {
 	 * TriggeringInstructions}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NewQty"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NewQuantity"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The quantity the order should have after the trigger has hit."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = FIXSynonym: 1112</li>
@@ -549,12 +555,6 @@ public class TriggeringInstructions {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "NewQuantity"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "The quantity the order should have after the trigger has hit."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<TriggeringInstructions, Optional<FinancialInstrumentQuantityChoice>> mmNewQuantity = new MMMessageAttribute<TriggeringInstructions, Optional<FinancialInstrumentQuantityChoice>>() {
@@ -601,6 +601,11 @@ public class TriggeringInstructions {
 	 * TriggeringInstructions}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PricTp"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PriceType"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Type of price that the trigger is compared to."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = FIXSynonym: 1107</li>
@@ -608,11 +613,6 @@ public class TriggeringInstructions {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PriceType"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Type of price that the trigger is compared to."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<TriggeringInstructions, Optional<TriggerPriceType1Code>> mmPriceType = new MMMessageAttribute<TriggeringInstructions, Optional<TriggerPriceType1Code>>() {
@@ -662,6 +662,13 @@ public class TriggeringInstructions {
 	 * TriggeringInstructions}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TrggrSctyDtls"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TriggerSecurityDetails"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Defines the identification of the security whose prices will be tracked by the trigger logic."
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = FIXSynonym: 1103, FIXSynonym: 1104, FIXSynonym: 1105,
@@ -670,13 +677,6 @@ public class TriggeringInstructions {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "TriggerSecurityDetails"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Defines the identification of the security whose prices will be tracked by the trigger logic."
-	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<TriggeringInstructions, Optional<SecurityIdentification7>> mmTriggerSecurityDetails = new MMMessageAssociationEnd<TriggeringInstructions, Optional<SecurityIdentification7>>() {
@@ -727,6 +727,11 @@ public class TriggeringInstructions {
 	 * TriggeringInstructions}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TradgSsnDtls"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TradingSessionDetails"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Provides details about the trading session."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = FIXSynonym: 1113, FIXSynonym: 1114</li>
@@ -734,11 +739,6 @@ public class TriggeringInstructions {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "TradingSessionDetails"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Provides details about the trading session."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<TriggeringInstructions, Optional<TradingSession1>> mmTradingSessionDetails = new MMMessageAssociationEnd<TriggeringInstructions, Optional<TradingSession1>>() {

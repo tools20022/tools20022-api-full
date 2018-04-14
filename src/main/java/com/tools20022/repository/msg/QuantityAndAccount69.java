@@ -99,6 +99,12 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "QuantityAndAccount69"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} =
+ * "Details on the quantity, account and other related information involved in a transaction."
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
  * constraint} =
  * <ul>
@@ -117,12 +123,6 @@ import javax.xml.bind.annotation.XmlType;
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "QuantityAndAccount69"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} =
- * "Details on the quantity, account and other related information involved in a transaction."
- * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -152,6 +152,11 @@ public class QuantityAndAccount69 {
 	 * QuantityAndAccount69}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SttlmQty"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementQuantity"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Total quantity of securities to be settled."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = ISO15022Synonym: :36B::SETT</li>
@@ -159,11 +164,6 @@ public class QuantityAndAccount69 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementQuantity"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Total quantity of securities to be settled."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<QuantityAndAccount69, Quantity10Choice> mmSettlementQuantity = new MMMessageAssociationEnd<QuantityAndAccount69, Quantity10Choice>() {
@@ -216,6 +216,12 @@ public class QuantityAndAccount69 {
 	 * QuantityAndAccount69}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DnmtnChc"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DenominationChoice"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Denomination of the security to be received or delivered."
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = ISO15022Synonym: :70D::DENC</li>
@@ -223,12 +229,6 @@ public class QuantityAndAccount69 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DenominationChoice"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Denomination of the security to be received or delivered."
-	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<QuantityAndAccount69, Optional<RestrictedFINXMax210Text>> mmDenominationChoice = new MMMessageAttribute<QuantityAndAccount69, Optional<RestrictedFINXMax210Text>>() {
@@ -278,6 +278,11 @@ public class QuantityAndAccount69 {
 	 * QuantityAndAccount69}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AcctOwnr"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AccountOwner"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Party that legally owns the account."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = ISO15022Synonym: :95a::ACOW</li>
@@ -285,11 +290,6 @@ public class QuantityAndAccount69 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AccountOwner"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Party that legally owns the account."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<QuantityAndAccount69, Optional<PartyIdentification119>> mmAccountOwner = new MMMessageAssociationEnd<QuantityAndAccount69, Optional<PartyIdentification119>>() {
@@ -340,6 +340,11 @@ public class QuantityAndAccount69 {
 	 * QuantityAndAccount69}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SfkpgAcct"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SafekeepingAccount"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Account to or from which a securities entry is made."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = ISO15022Synonym: :97A::SAFE</li>
@@ -347,11 +352,6 @@ public class QuantityAndAccount69 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SafekeepingAccount"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Account to or from which a securities entry is made."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<QuantityAndAccount69, SecuritiesAccount30> mmSafekeepingAccount = new MMMessageAssociationEnd<QuantityAndAccount69, SecuritiesAccount30>() {
@@ -403,6 +403,11 @@ public class QuantityAndAccount69 {
 	 * QuantityAndAccount69}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CshAcct"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CashAccount"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Account to or from which a cash entry is made."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = ISO15022Synonym: :97a::CASH</li>
@@ -410,11 +415,6 @@ public class QuantityAndAccount69 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CashAccount"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Account to or from which a cash entry is made."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<QuantityAndAccount69, Optional<CashAccountIdentification6Choice>> mmCashAccount = new MMMessageAssociationEnd<QuantityAndAccount69, Optional<CashAccountIdentification6Choice>>() {
@@ -465,13 +465,6 @@ public class QuantityAndAccount69 {
 	 * QuantityAndAccount69}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SfkpgPlc"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = ISO15022Synonym: :94a::SAFE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlace"</li>
 	 * <li>
@@ -479,6 +472,13 @@ public class QuantityAndAccount69 {
 	 * definition} =
 	 * "Place where the securities are safe-kept, physically or notionally. This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :94a::SAFE</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<QuantityAndAccount69, Optional<SafeKeepingPlace2>> mmSafekeepingPlace = new MMMessageAssociationEnd<QuantityAndAccount69, Optional<SafeKeepingPlace2>>() {
@@ -529,6 +529,12 @@ public class QuantityAndAccount69 {
 	 * QuantityAndAccount69}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "QtyBrkdwn"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "QuantityBreakdown"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Breakdown of a quantity into lots such as tax lots, instrument series."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = ISO15022Synonym: :16R:BREAK</li>
@@ -536,12 +542,6 @@ public class QuantityAndAccount69 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "QuantityBreakdown"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Breakdown of a quantity into lots such as tax lots, instrument series."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<QuantityAndAccount69, List<QuantityBreakdown48>> mmQuantityBreakdown = new MMMessageAssociationEnd<QuantityAndAccount69, List<QuantityBreakdown48>>() {

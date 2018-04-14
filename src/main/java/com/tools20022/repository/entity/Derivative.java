@@ -224,16 +224,16 @@ import java.util.Objects;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "Derivative"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Specifies the parameters of a derivative instrument based on a specific asset."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class Derivative extends Asset {
@@ -246,6 +246,9 @@ public class Derivative extends Asset {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.Asset Asset}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.Asset#mmDerivative
@@ -253,9 +256,6 @@ public class Derivative extends Asset {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.Asset Asset}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -310,15 +310,15 @@ public class Derivative extends Asset {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.Derivative Derivative}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnderlyingAsset"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the underlying asset of the derivative."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<Derivative, List<Asset>> mmUnderlyingAsset = new MMBusinessAssociationEnd<Derivative, List<Asset>>() {
@@ -392,10 +392,6 @@ public class Derivative extends Asset {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.Derivative Derivative}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NotionalCurrencyAndAmount"</li>
 	 * <li>
@@ -403,6 +399,10 @@ public class Derivative extends Asset {
 	 * definition} =
 	 * "Amount underlying a financial derivatives contract necessary for calculating payments or receipts."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<Derivative, CurrencyAndAmount> mmNotionalCurrencyAndAmount = new MMBusinessAttribute<Derivative, CurrencyAndAmount>() {
@@ -479,13 +479,6 @@ public class Derivative extends Asset {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.Derivative Derivative}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = FIXSynonym: 203</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DerivativeCovered"</li>
 	 * <li>
@@ -493,6 +486,13 @@ public class Derivative extends Asset {
 	 * definition} =
 	 * "Indicates whether the derivative product is covered or not by an underlying financial instrument position."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 203</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<Derivative, YesNoIndicator> mmDerivativeCovered = new MMBusinessAttribute<Derivative, YesNoIndicator>() {
@@ -551,15 +551,15 @@ public class Derivative extends Asset {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.Derivative Derivative}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ExerciseDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date on which the derivative is exercised."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<Derivative, ISODateTime> mmExerciseDate = new MMBusinessAttribute<Derivative, ISODateTime>() {
@@ -600,10 +600,6 @@ public class Derivative extends Asset {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.Derivative Derivative}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InterestIncludedInPrice"</li>
 	 * <li>
@@ -611,6 +607,10 @@ public class Derivative extends Asset {
 	 * definition} =
 	 * "Indicates whether the given derivative price includes a prorated accrued interest component."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<Derivative, YesNoIndicator> mmInterestIncludedInPrice = new MMBusinessAttribute<Derivative, YesNoIndicator>() {
@@ -642,6 +642,10 @@ public class Derivative extends Asset {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesPricing
+	 * SecuritiesPricing}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmRelatedFuture
@@ -650,23 +654,19 @@ public class Derivative extends Asset {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesPricing
-	 * SecuritiesPricing}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.Derivative Derivative}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Tick"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Minimum price increment with which the contract may be traded."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<Derivative, SecuritiesPricing> mmTick = new MMBusinessAssociationEnd<Derivative, SecuritiesPricing>() {
@@ -700,6 +700,10 @@ public class Derivative extends Asset {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesPricing
+	 * SecuritiesPricing}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmDerivative
@@ -707,10 +711,6 @@ public class Derivative extends Asset {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesPricing
-	 * SecuritiesPricing}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -819,10 +819,6 @@ public class Derivative extends Asset {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.Derivative Derivative}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ExercisePrice"</li>
 	 * <li>
@@ -830,6 +826,10 @@ public class Derivative extends Asset {
 	 * definition} =
 	 * "Predetermined price at which the holder of a derivative will have to buy or sell the underlying instrument."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<Derivative, SecuritiesPricing> mmExercisePrice = new MMBusinessAssociationEnd<Derivative, SecuritiesPricing>() {
@@ -912,10 +912,6 @@ public class Derivative extends Asset {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.Derivative Derivative}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NotionalCurrency"</li>
 	 * <li>
@@ -923,6 +919,10 @@ public class Derivative extends Asset {
 	 * definition} =
 	 * "Currency of the underlying a financial derivatives contract necessary for calculating payments or receipts."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<Derivative, CurrencyCode> mmNotionalCurrency = new MMBusinessAttribute<Derivative, CurrencyCode>() {
@@ -983,10 +983,6 @@ public class Derivative extends Asset {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.Derivative Derivative}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "VersionNumber"</li>
 	 * <li>
@@ -994,6 +990,10 @@ public class Derivative extends Asset {
 	 * definition} =
 	 * "Number allocated by options exchanges to record that an option has undergone a change in its contract specifications (particularly adjustment of the strike price)"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<Derivative, Number> mmVersionNumber = new MMBusinessAttribute<Derivative, Number>() {

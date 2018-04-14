@@ -71,16 +71,16 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CorporateSectorIdentifier1Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Identifies the corporate sector of the counterparty for reporting to trade repositories."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -95,12 +95,12 @@ public class CorporateSectorIdentifier1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateSectorIdentifier1Code
 	 * CorporateSectorIdentifier1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AlternativeInvestmentFund"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AlternativeInvestmentFund"</li>
 	 * </ul>
 	 */
 	public static final CorporateSectorIdentifier1Code AlternativeInvestmentFund = new CorporateSectorIdentifier1Code() {
@@ -119,12 +119,12 @@ public class CorporateSectorIdentifier1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateSectorIdentifier1Code
 	 * CorporateSectorIdentifier1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Assurance"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Assurance"</li>
 	 * </ul>
 	 */
 	public static final CorporateSectorIdentifier1Code Assurance = new CorporateSectorIdentifier1Code() {
@@ -143,12 +143,12 @@ public class CorporateSectorIdentifier1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateSectorIdentifier1Code
 	 * CorporateSectorIdentifier1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CreditInstitution"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CreditInstitution"</li>
 	 * </ul>
 	 */
 	public static final CorporateSectorIdentifier1Code CreditInstitution = new CorporateSectorIdentifier1Code() {
@@ -167,12 +167,12 @@ public class CorporateSectorIdentifier1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateSectorIdentifier1Code
 	 * CorporateSectorIdentifier1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Insurance"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Insurance"</li>
 	 * </ul>
 	 */
 	public static final CorporateSectorIdentifier1Code Insurance = new CorporateSectorIdentifier1Code() {
@@ -191,12 +191,12 @@ public class CorporateSectorIdentifier1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateSectorIdentifier1Code
 	 * CorporateSectorIdentifier1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InvestmentFirm"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "InvestmentFirm"</li>
 	 * </ul>
 	 */
 	public static final CorporateSectorIdentifier1Code InvestmentFirm = new CorporateSectorIdentifier1Code() {
@@ -215,12 +215,12 @@ public class CorporateSectorIdentifier1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateSectorIdentifier1Code
 	 * CorporateSectorIdentifier1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OccupationalRetirementProvision"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "OccupationalRetirementProvision"</li>
 	 * </ul>
 	 */
 	public static final CorporateSectorIdentifier1Code OccupationalRetirementProvision = new CorporateSectorIdentifier1Code() {
@@ -239,12 +239,12 @@ public class CorporateSectorIdentifier1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateSectorIdentifier1Code
 	 * CorporateSectorIdentifier1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Reinsurance"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Reinsurance"</li>
 	 * </ul>
 	 */
 	public static final CorporateSectorIdentifier1Code Reinsurance = new CorporateSectorIdentifier1Code() {
@@ -263,12 +263,12 @@ public class CorporateSectorIdentifier1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateSectorIdentifier1Code
 	 * CorporateSectorIdentifier1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "UCITS"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "UCITS"</li>
 	 * </ul>
 	 */
 	public static final CorporateSectorIdentifier1Code UCITS = new CorporateSectorIdentifier1Code() {

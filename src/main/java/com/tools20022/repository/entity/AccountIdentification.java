@@ -582,15 +582,15 @@ import java.util.Optional;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "AccountIdentification"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Unique identifier of an account, as assigned by the account servicer."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class AccountIdentification {
@@ -603,6 +603,9 @@ public class AccountIdentification {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.Account Account}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.Account#mmIdentification
@@ -611,22 +614,19 @@ public class AccountIdentification {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.Account Account}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AccountIdentification
 	 * AccountIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Account"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Account for which an identification is provided."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<AccountIdentification, Optional<Account>> mmAccount = new MMBusinessAssociationEnd<AccountIdentification, Optional<Account>>() {
@@ -716,10 +716,6 @@ public class AccountIdentification {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AccountIdentification
 	 * AccountIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IBAN"</li>
 	 * <li>
@@ -727,6 +723,10 @@ public class AccountIdentification {
 	 * definition} =
 	 * "International Bank Account Number (IBAN) - identifier used internationally by financial institutions to uniquely identify the account of a customer. Further specifications of the format and content of the IBAN can be found in the standard ISO 13616 \"Banking and related financial services - International Bank Account Number (IBAN)\" version 1997-10-01, or later revisions."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<AccountIdentification, IBAN2007Identifier> mmIBAN = new MMBusinessAttribute<AccountIdentification, IBAN2007Identifier>() {
@@ -799,10 +799,6 @@ public class AccountIdentification {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AccountIdentification
 	 * AccountIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BBAN"</li>
 	 * <li>
@@ -810,6 +806,10 @@ public class AccountIdentification {
 	 * definition} =
 	 * "Basic Bank Account Number (BBAN) - identifier used nationally by financial institutions, ie, in individual countries, generally as part of a National Account Numbering Scheme(s), to uniquely identify the account of a customer."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<AccountIdentification, BBANIdentifier> mmBBAN = new MMBusinessAttribute<AccountIdentification, BBANIdentifier>() {
@@ -878,10 +878,6 @@ public class AccountIdentification {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AccountIdentification
 	 * AccountIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UPIC"</li>
 	 * <li>
@@ -889,6 +885,10 @@ public class AccountIdentification {
 	 * definition} =
 	 * "Universal Payment Identification Code (UPIC) - identifier used by the New York Clearing House to mask confidential data, such as bank accounts and bank routing numbers. UPIC numbers remain with business customers, regardless of banking relationship changes."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<AccountIdentification, UPICIdentifier> mmUPIC = new MMBusinessAttribute<AccountIdentification, UPICIdentifier>() {
@@ -922,6 +922,11 @@ public class AccountIdentification {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} =
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification
+	 * GenericIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentificationForAccount
@@ -929,11 +934,6 @@ public class AccountIdentification {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification
-	 * GenericIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1001,6 +1001,13 @@ public class AccountIdentification {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AccountIdentification
 	 * AccountIdentification}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ProprietaryIdentification"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Unique identifier for an account. It is assigned by the account servicer using a proprietary identification scheme."
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = type=AdminComment, AdminComment=|Former definition of
@@ -1012,13 +1019,6 @@ public class AccountIdentification {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ProprietaryIdentification"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Unique identifier for an account. It is assigned by the account servicer using a proprietary identification scheme."
-	 * </li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<AccountIdentification, GenericIdentification> mmProprietaryIdentification = new MMBusinessAssociationEnd<AccountIdentification, GenericIdentification>() {
@@ -1364,10 +1364,6 @@ public class AccountIdentification {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AccountIdentification
 	 * AccountIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Name"</li>
 	 * <li>
@@ -1375,6 +1371,10 @@ public class AccountIdentification {
 	 * definition} =
 	 * "Name of the account. It provides an additional means of identification, and is designated by the account servicer in agreement with the account owner."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<AccountIdentification, Max70Text> mmName = new MMBusinessAttribute<AccountIdentification, Max70Text>() {
@@ -1424,6 +1424,11 @@ public class AccountIdentification {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} =
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification
+	 * GenericIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentificationForAccountCostReferencePattern
@@ -1431,11 +1436,6 @@ public class AccountIdentification {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification
-	 * GenericIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1449,10 +1449,6 @@ public class AccountIdentification {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AccountIdentification
 	 * AccountIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CostReferencePattern"</li>
 	 * <li>
@@ -1460,6 +1456,10 @@ public class AccountIdentification {
 	 * definition} =
 	 * "Template describing the mask of the structure for the format of the accounting account identifier; for example \"AABBBBCC\" where AA represents the country, BBBB the service classification, CC the sales area."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<AccountIdentification, GenericIdentification> mmCostReferencePattern = new MMBusinessAssociationEnd<AccountIdentification, GenericIdentification>() {
@@ -1522,16 +1522,16 @@ public class AccountIdentification {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AccountIdentification
 	 * AccountIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Number"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "String of characters (mainly numbers) used to identify an account."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<AccountIdentification, Max35Text> mmNumber = new MMBusinessAttribute<AccountIdentification, Max35Text>() {

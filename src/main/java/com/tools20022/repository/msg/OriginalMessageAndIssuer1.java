@@ -60,16 +60,16 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "OriginalMessageAndIssuer1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Business reference(s) to one or more relevant messages previously sent by other parties, or by the same party issuing this message.\n\n."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -95,10 +95,6 @@ public class OriginalMessageAndIssuer1 {
 	 * OriginalMessageAndIssuer1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MsgId"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MessageIdentification"</li>
 	 * <li>
@@ -106,6 +102,10 @@ public class OriginalMessageAndIssuer1 {
 	 * definition} =
 	 * "Unambiguous identification of the original message to which the message refers."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<OriginalMessageAndIssuer1, Max35Text> mmMessageIdentification = new MMMessageAttribute<OriginalMessageAndIssuer1, Max35Text>() {
@@ -149,10 +149,6 @@ public class OriginalMessageAndIssuer1 {
 	 * OriginalMessageAndIssuer1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MsgNmId"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MessageNameIdentification"</li>
 	 * <li>
@@ -160,6 +156,10 @@ public class OriginalMessageAndIssuer1 {
 	 * definition} =
 	 * "Specifies the original message name identifier to which the message refers."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<OriginalMessageAndIssuer1, Optional<Max35Text>> mmMessageNameIdentification = new MMMessageAttribute<OriginalMessageAndIssuer1, Optional<Max35Text>>() {
@@ -203,10 +203,6 @@ public class OriginalMessageAndIssuer1 {
 	 * OriginalMessageAndIssuer1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OrgtrNm"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OriginatorName"</li>
 	 * <li>
@@ -214,6 +210,10 @@ public class OriginalMessageAndIssuer1 {
 	 * definition} =
 	 * "Name of the original party that assigned the original message identification."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<OriginalMessageAndIssuer1, Optional<Max70Text>> mmOriginatorName = new MMMessageAttribute<OriginalMessageAndIssuer1, Optional<Max70Text>>() {

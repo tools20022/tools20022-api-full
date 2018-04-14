@@ -326,16 +326,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "SecuritiesTransfer"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Completion of a securities settlement instruction, wherein securities are delivered/debited from a securities account and received/credited to the designated securities account."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class SecuritiesTransfer extends ObligationFulfilment {
@@ -511,10 +511,6 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer
 	 * SecuritiesTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Identification"</li>
 	 * <li>
@@ -522,6 +518,10 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * definition} =
 	 * "Unique and unambiguous identification of a transfer, as assigned by the instructing party."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTransfer, Max35Text> mmIdentification = new MMBusinessAttribute<SecuritiesTransfer, Max35Text>() {
@@ -563,6 +563,10 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
+	 * SecuritiesQuantity}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmSecuritiesTransfer
@@ -570,10 +574,6 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
-	 * SecuritiesQuantity}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1069,6 +1069,11 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer
 	 * SecuritiesTransfer}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TransferredQuantity"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Total quantity of securities settled."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = ISO15022Synonym: :36B::ESTT</li>
@@ -1076,11 +1081,6 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "TransferredQuantity"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Total quantity of securities settled."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesTransfer, SecuritiesQuantity> mmTransferredQuantity = new MMBusinessAssociationEnd<SecuritiesTransfer, SecuritiesQuantity>() {
@@ -1150,6 +1150,10 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesAccount
+	 * SecuritiesAccount}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmRelatedTransfer
@@ -1157,10 +1161,6 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesAccount
-	 * SecuritiesAccount}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1246,16 +1246,16 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer
 	 * SecuritiesTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Account"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies the account from/to which the securities are transferred."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesTransfer, List<SecuritiesAccount>> mmAccount = new MMBusinessAssociationEnd<SecuritiesTransfer, List<SecuritiesAccount>>() {
@@ -1353,10 +1353,6 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer
 	 * SecuritiesTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TransferType"</li>
 	 * <li>
@@ -1364,6 +1360,10 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * definition} =
 	 * "Specifies whether the financial instrument is transferred as an asset or as cash."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTransfer, TransferTypeCode> mmTransferType = new MMBusinessAttribute<SecuritiesTransfer, TransferTypeCode>() {
@@ -1398,6 +1398,11 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
+	 * SecuritiesSettlement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmTransferOperation
@@ -1405,11 +1410,6 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
-	 * SecuritiesSettlement}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1561,16 +1561,16 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer
 	 * SecuritiesTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RelatedSettlement"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Settlement process which is the source of the transfer operation."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesTransfer, Optional<SecuritiesSettlement>> mmRelatedSettlement = new MMBusinessAssociationEnd<SecuritiesTransfer, Optional<SecuritiesSettlement>>() {
@@ -1734,10 +1734,6 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer
 	 * SecuritiesTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OwnAccountTransferIndicator"</li>
 	 * <li>
@@ -1745,6 +1741,10 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * definition} =
 	 * "Indicates whether the transfer results in a change of beneficial owner."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTransfer, YesNoIndicator> mmOwnAccountTransferIndicator = new MMBusinessAttribute<SecuritiesTransfer, YesNoIndicator>() {
@@ -1784,6 +1784,10 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.PhysicalDelivery
+	 * PhysicalDelivery}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.PhysicalDelivery#mmRelatedTransfer
@@ -1791,10 +1795,6 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.PhysicalDelivery
-	 * PhysicalDelivery}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2033,16 +2033,16 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer
 	 * SecuritiesTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PhysicalDelivery"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Information related to physical delivery of the securities."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesTransfer, com.tools20022.repository.entity.PhysicalDelivery> mmPhysicalDelivery = new MMBusinessAssociationEnd<SecuritiesTransfer, com.tools20022.repository.entity.PhysicalDelivery>() {
@@ -2367,13 +2367,6 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer
 	 * SecuritiesTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = ISO15022Synonym: :98a::ADEL</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LateDeliveryDate"</li>
 	 * <li>
@@ -2381,6 +2374,13 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * definition} =
 	 * "Date and time after the settlement date specified in the trade, used for pool trades resulting from the original To Be Assigned (TBA) securities."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::ADEL</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTransfer, ISODateTime> mmLateDeliveryDate = new MMBusinessAttribute<SecuritiesTransfer, ISODateTime>() {
@@ -2433,6 +2433,9 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.Tax#mmSecuritiesTransfer
@@ -2440,9 +2443,6 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2558,15 +2558,15 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer
 	 * SecuritiesTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TransferTax"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Tax related to the transfer of a financial instrument."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesTransfer, Tax> mmTransferTax = new MMBusinessAssociationEnd<SecuritiesTransfer, Tax>() {
@@ -2682,15 +2682,15 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer
 	 * SecuritiesTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TransferReason"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identifies the transfer reason."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTransfer, TransferReasonCode> mmTransferReason = new MMBusinessAttribute<SecuritiesTransfer, TransferReasonCode>() {
@@ -2833,6 +2833,11 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer
 	 * SecuritiesTransfer}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PartialSettlementType"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Information about partial settlement."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = ISO15022Synonym: :22F::PARS</li>
@@ -2840,11 +2845,6 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PartialSettlementType"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Information about partial settlement."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTransfer, PartialSettlementCode> mmPartialSettlementType = new MMBusinessAttribute<SecuritiesTransfer, PartialSettlementCode>() {
@@ -2884,6 +2884,11 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesDeliveryObligation
+	 * SecuritiesDeliveryObligation}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesDeliveryObligation#mmSecuritiesTransfer
@@ -2892,25 +2897,20 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesDeliveryObligation
-	 * SecuritiesDeliveryObligation}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer
 	 * SecuritiesTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SecuritiesDeliveryObligation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Obligation for one party to deliver securities to another party."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesTransfer, List<SecuritiesDeliveryObligation>> mmSecuritiesDeliveryObligation = new MMBusinessAssociationEnd<SecuritiesTransfer, List<SecuritiesDeliveryObligation>>() {
@@ -2943,6 +2943,10 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesEntry
+	 * SecuritiesEntry}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesEntry#mmTriggeringSecuritiesTransfer
@@ -2951,18 +2955,10 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesEntry
-	 * SecuritiesEntry}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer
 	 * SecuritiesTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BookEntry"</li>
 	 * <li>
@@ -2970,6 +2966,10 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * definition} =
 	 * "Record in a securities account resulting from the transfer of a security."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesTransfer, List<SecuritiesEntry>> mmBookEntry = new MMBusinessAssociationEnd<SecuritiesTransfer, List<SecuritiesEntry>>() {
@@ -3010,15 +3010,15 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer
 	 * SecuritiesTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TransactionIdentification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Unambiguous identification of a securities transfer."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTransfer, Max35Text> mmTransactionIdentification = new MMBusinessAttribute<SecuritiesTransfer, Max35Text>() {
@@ -3050,6 +3050,9 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.Security Security}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.Security#mmSecuritiesTransfer
@@ -3058,22 +3061,19 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.Security Security}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer
 	 * SecuritiesTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Security"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Security which is transferred."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesTransfer, List<Security>> mmSecurity = new MMBusinessAssociationEnd<SecuritiesTransfer, List<Security>>() {
@@ -3106,6 +3106,11 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus
+	 * SecuritiesTradeStatus}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#mmRelatedSecuritiesTransfer
@@ -3113,11 +3118,6 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus
-	 * SecuritiesTradeStatus}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -3140,15 +3140,15 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer
 	 * SecuritiesTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Status"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Status of a securities transfer."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesTransfer, SecuritiesTradeStatus> mmStatus = new MMBusinessAssociationEnd<SecuritiesTransfer, SecuritiesTradeStatus>() {

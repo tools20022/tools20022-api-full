@@ -46,6 +46,13 @@ import javax.xml.bind.annotation.*;
  * <strong>Constant fields:</strong>
  * <ul>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsmt.023.001.03}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
+ * TradeServicesManagementLatestVersion}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
  * <ul>
@@ -90,23 +97,16 @@ import javax.xml.bind.annotation.*;
  * rootElement} = "Document"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
  * xmlTag} = "MisMtchRjctnNtfctn"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
- * TradeServicesManagementLatestVersion}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsmt.023.001.03}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "MisMatchRejectionNotificationV03"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Scope\r\nThe MisMatchRejectionNotification message is sent by the matching application to the parties involved in the transaction.\r\nThis message is used to notify the rejection of mis-matched data sets.\r\nUsage\r\nThe MisMatchRejectionNotification message can be sent by the matching application to pass on the information about the rejection of mis-matched data sets that it has obtained through the receipt of an MisMatchRejection message.\r\nIn order to pass on information about the acceptance of mis-matched data sets the matching application sends an MisMatchAcceptanceNotification message."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -129,15 +129,15 @@ public class MisMatchRejectionNotificationV03 {
 	 * MessageIdentification1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NtfctnId"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NotificationIdentification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identifies the notification message."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock<MisMatchRejectionNotificationV03, MessageIdentification1> mmNotificationIdentification = new MMMessageBuildingBlock<MisMatchRejectionNotificationV03, MessageIdentification1>() {
@@ -175,10 +175,6 @@ public class MisMatchRejectionNotificationV03 {
 	 * SimpleIdentificationInformation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TxId"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TransactionIdentification"</li>
 	 * <li>
@@ -186,6 +182,10 @@ public class MisMatchRejectionNotificationV03 {
 	 * definition} =
 	 * "Unique identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.\n."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock<MisMatchRejectionNotificationV03, SimpleIdentificationInformation> mmTransactionIdentification = new MMMessageBuildingBlock<MisMatchRejectionNotificationV03, SimpleIdentificationInformation>() {
@@ -223,10 +223,6 @@ public class MisMatchRejectionNotificationV03 {
 	 * DocumentIdentification3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "EstblishdBaselnId"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EstablishedBaselineIdentification"</li>
 	 * <li>
@@ -234,6 +230,10 @@ public class MisMatchRejectionNotificationV03 {
 	 * definition} =
 	 * "Unique identification assigned by the matching application to the baseline when it is established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock<MisMatchRejectionNotificationV03, DocumentIdentification3> mmEstablishedBaselineIdentification = new MMMessageBuildingBlock<MisMatchRejectionNotificationV03, DocumentIdentification3>() {
@@ -271,16 +271,16 @@ public class MisMatchRejectionNotificationV03 {
 	 * TransactionStatus4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TxSts"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TransactionStatus"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Identifies the status of the transaction by means of a code."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock<MisMatchRejectionNotificationV03, TransactionStatus4> mmTransactionStatus = new MMMessageBuildingBlock<MisMatchRejectionNotificationV03, TransactionStatus4>() {
@@ -318,10 +318,6 @@ public class MisMatchRejectionNotificationV03 {
 	 * DocumentIdentification5}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "UsrTxRef"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UserTransactionReference"</li>
 	 * <li>
@@ -329,6 +325,10 @@ public class MisMatchRejectionNotificationV03 {
 	 * definition} =
 	 * "Reference to the transaction for each financial institution which is a party to the transaction."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock<MisMatchRejectionNotificationV03, List<DocumentIdentification5>> mmUserTransactionReference = new MMMessageBuildingBlock<MisMatchRejectionNotificationV03, List<DocumentIdentification5>>() {
@@ -366,10 +366,6 @@ public class MisMatchRejectionNotificationV03 {
 	 * MessageIdentification1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DataSetMtchRptRef"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DataSetMatchReportReference"</li>
 	 * <li>
@@ -377,6 +373,10 @@ public class MisMatchRejectionNotificationV03 {
 	 * definition} =
 	 * "Reference to the identification of the report that contained the difference."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock<MisMatchRejectionNotificationV03, MessageIdentification1> mmDataSetMatchReportReference = new MMMessageBuildingBlock<MisMatchRejectionNotificationV03, MessageIdentification1>() {
@@ -414,15 +414,15 @@ public class MisMatchRejectionNotificationV03 {
 	 * RejectionReason1Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RjctnRsn"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RejectionReason"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the reaons for rejecting the mismatch."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock<MisMatchRejectionNotificationV03, RejectionReason1Choice> mmRejectionReason = new MMMessageBuildingBlock<MisMatchRejectionNotificationV03, RejectionReason1Choice>() {
@@ -460,15 +460,15 @@ public class MisMatchRejectionNotificationV03 {
 	 * PendingActivity2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ReqForActn"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RequestForAction"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Information on the next processing step required."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock<MisMatchRejectionNotificationV03, Optional<PendingActivity2>> mmRequestForAction = new MMMessageBuildingBlock<MisMatchRejectionNotificationV03, Optional<PendingActivity2>>() {

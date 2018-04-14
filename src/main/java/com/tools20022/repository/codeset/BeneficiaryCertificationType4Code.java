@@ -76,6 +76,10 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "BeneficiaryCertificationType4Code"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} = "Specifies the type of certification required."</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -86,10 +90,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "BeneficiaryCertificationType4Code"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Specifies the type of certification required."</li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.codeset.BeneficiaryCertificationType2Code
@@ -108,12 +108,12 @@ public class BeneficiaryCertificationType4Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.BeneficiaryCertificationType4Code
 	 * BeneficiaryCertificationType4Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AccreditedInvestor"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AccreditedInvestor"</li>
 	 * </ul>
 	 */
 	public static final BeneficiaryCertificationType4Code AccreditedInvestor = new BeneficiaryCertificationType4Code() {
@@ -132,12 +132,12 @@ public class BeneficiaryCertificationType4Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.BeneficiaryCertificationType4Code
 	 * BeneficiaryCertificationType4Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DomicileCountry"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DomicileCountry"</li>
 	 * </ul>
 	 */
 	public static final BeneficiaryCertificationType4Code DomicileCountry = new BeneficiaryCertificationType4Code() {
@@ -156,12 +156,12 @@ public class BeneficiaryCertificationType4Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.BeneficiaryCertificationType4Code
 	 * BeneficiaryCertificationType4Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NonDomicileCountry"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "NonDomicileCountry"</li>
 	 * </ul>
 	 */
 	public static final BeneficiaryCertificationType4Code NonDomicileCountry = new BeneficiaryCertificationType4Code() {
@@ -180,12 +180,12 @@ public class BeneficiaryCertificationType4Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.BeneficiaryCertificationType4Code
 	 * BeneficiaryCertificationType4Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "FullBeneficialOwnerBreakdown"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "FullBeneficialOwnerBreakdown"</li>
 	 * </ul>
 	 */
 	public static final BeneficiaryCertificationType4Code FullBeneficialOwnerBreakdown = new BeneficiaryCertificationType4Code() {
@@ -204,12 +204,12 @@ public class BeneficiaryCertificationType4Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.BeneficiaryCertificationType4Code
 	 * BeneficiaryCertificationType4Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NonCompany"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "NonCompany"</li>
 	 * </ul>
 	 */
 	public static final BeneficiaryCertificationType4Code NonCompany = new BeneficiaryCertificationType4Code() {
@@ -228,12 +228,12 @@ public class BeneficiaryCertificationType4Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.BeneficiaryCertificationType4Code
 	 * BeneficiaryCertificationType4Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "QIBCertification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "QIBCertification"</li>
 	 * </ul>
 	 */
 	public static final BeneficiaryCertificationType4Code QIBCertification = new BeneficiaryCertificationType4Code() {
@@ -252,12 +252,12 @@ public class BeneficiaryCertificationType4Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.BeneficiaryCertificationType4Code
 	 * BeneficiaryCertificationType4Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TaxRateBreakdown"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "TaxRateBreakdown"</li>
 	 * </ul>
 	 */
 	public static final BeneficiaryCertificationType4Code TaxRateBreakdown = new BeneficiaryCertificationType4Code() {
@@ -276,12 +276,12 @@ public class BeneficiaryCertificationType4Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.BeneficiaryCertificationType4Code
 	 * BeneficiaryCertificationType4Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BeneficialOwnerPaperwork"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BeneficialOwnerPaperwork"</li>
 	 * </ul>
 	 */
 	public static final BeneficiaryCertificationType4Code BeneficialOwnerPaperwork = new BeneficiaryCertificationType4Code() {
@@ -300,12 +300,12 @@ public class BeneficiaryCertificationType4Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.BeneficiaryCertificationType4Code
 	 * BeneficiaryCertificationType4Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ICSDParticipantBreakdown"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ICSDParticipantBreakdown"</li>
 	 * </ul>
 	 */
 	public static final BeneficiaryCertificationType4Code ICSDParticipantBreakdown = new BeneficiaryCertificationType4Code() {
@@ -324,12 +324,12 @@ public class BeneficiaryCertificationType4Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.BeneficiaryCertificationType4Code
 	 * BeneficiaryCertificationType4Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "FractionBreakdown"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "FractionBreakdown"</li>
 	 * </ul>
 	 */
 	public static final BeneficiaryCertificationType4Code FractionBreakdown = new BeneficiaryCertificationType4Code() {

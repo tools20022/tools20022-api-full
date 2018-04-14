@@ -37,10 +37,6 @@ public class ConstraintLinkedQuantityRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Linkages37 Linkages37}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LinkedQuantityRule"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintLinkedQuantityRule {
 	 * definition} =
 	 * "If linked quantity for partial pair-off and turned quantity for partial turns is used, then its usage must be pre-agreed between the message account owner and account servicer."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -76,10 +76,6 @@ public class ConstraintLinkedQuantityRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Linkages1 Linkages1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LinkedQuantityRule"</li>
 	 * <li>
@@ -87,6 +83,10 @@ public class ConstraintLinkedQuantityRule {
 	 * definition} =
 	 * "If linked quantity for partial pair-off and turned quantity for partial turns is used, then its usage must be pre-agreed between the message account owner and account servicer."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -118,10 +118,6 @@ public class ConstraintLinkedQuantityRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Linkages38 Linkages38}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LinkedQuantityRule"</li>
 	 * <li>
@@ -129,6 +125,10 @@ public class ConstraintLinkedQuantityRule {
 	 * definition} =
 	 * "If linked quantity for partial pair-off and turned quantity for partial turns is used, then its usage must be pre-agreed between the message account owner and account servicer."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -157,10 +157,6 @@ public class ConstraintLinkedQuantityRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Linkages43 Linkages43}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LinkedQuantityRule"</li>
 	 * <li>
@@ -168,6 +164,10 @@ public class ConstraintLinkedQuantityRule {
 	 * definition} =
 	 * "If linked quantity for partial pair-off and turned quantity for partial turns is used, then its usage must be pre-agreed between the message account owner and account servicer."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Linkages43> forLinkages43 = new MMConstraint<Linkages43>() {
@@ -190,10 +190,6 @@ public class ConstraintLinkedQuantityRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Linkages4 Linkages4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LinkedQuantityRule"</li>
 	 * <li>
@@ -201,6 +197,10 @@ public class ConstraintLinkedQuantityRule {
 	 * definition} =
 	 * "If linked quantity for partial pair-off and turned quantity for partial turns is used, then its usage must be pre-agreed between the message account owner and account servicer."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Linkages4> forLinkages4 = new MMConstraint<Linkages4>() {
@@ -223,10 +223,6 @@ public class ConstraintLinkedQuantityRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Linkages12 Linkages12}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LinkedQuantityRule"</li>
 	 * <li>
@@ -234,6 +230,10 @@ public class ConstraintLinkedQuantityRule {
 	 * definition} =
 	 * "If linked quantity for partial pair-off and turned quantity for partial turns is used, then its usage must be pre-agreed between the message account owner and account servicer."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Linkages12> forLinkages12 = new MMConstraint<Linkages12>() {
@@ -256,10 +256,6 @@ public class ConstraintLinkedQuantityRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Linkages7 Linkages7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LinkedQuantityRule"</li>
 	 * <li>
@@ -267,6 +263,10 @@ public class ConstraintLinkedQuantityRule {
 	 * definition} =
 	 * "If linked quantity for partial pair-off and turned quantity for partial turns is used, then its usage must be pre-agreed between the message account owner and account servicer."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Linkages7> forLinkages7 = new MMConstraint<Linkages7>() {
@@ -289,10 +289,6 @@ public class ConstraintLinkedQuantityRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Linkages9 Linkages9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LinkedQuantityRule"</li>
 	 * <li>
@@ -300,6 +296,10 @@ public class ConstraintLinkedQuantityRule {
 	 * definition} =
 	 * "If linked quantity for partial pair-off and turned quantity for partial turns is used, then its usage must be pre-agreed between the message account owner and account servicer."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Linkages9> forLinkages9 = new MMConstraint<Linkages9>() {
@@ -322,10 +322,6 @@ public class ConstraintLinkedQuantityRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Linkages24 Linkages24}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LinkedQuantityRule"</li>
 	 * <li>
@@ -333,6 +329,10 @@ public class ConstraintLinkedQuantityRule {
 	 * definition} =
 	 * "If linked quantity for partial pair-off and turned quantity for partial turns is used, then its usage must be pre-agreed between the message account owner and account servicer."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Linkages24> forLinkages24 = new MMConstraint<Linkages24>() {
@@ -355,10 +355,6 @@ public class ConstraintLinkedQuantityRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Linkages14 Linkages14}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LinkedQuantityRule"</li>
 	 * <li>
@@ -366,6 +362,10 @@ public class ConstraintLinkedQuantityRule {
 	 * definition} =
 	 * "If linked quantity for partial pair-off and turned quantity for partial turns is used, then its usage must be pre-agreed between the message account owner and account servicer."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Linkages14> forLinkages14 = new MMConstraint<Linkages14>() {
@@ -388,10 +388,6 @@ public class ConstraintLinkedQuantityRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Linkages48 Linkages48}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LinkedQuantityRule"</li>
 	 * <li>
@@ -399,6 +395,10 @@ public class ConstraintLinkedQuantityRule {
 	 * definition} =
 	 * "If linked quantity for partial pair-off and turned quantity for partial turns is used, then its usage must be pre-agreed between the message account owner and account servicer."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Linkages48> forLinkages48 = new MMConstraint<Linkages48>() {
@@ -421,10 +421,6 @@ public class ConstraintLinkedQuantityRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Linkages17 Linkages17}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LinkedQuantityRule"</li>
 	 * <li>
@@ -432,6 +428,10 @@ public class ConstraintLinkedQuantityRule {
 	 * definition} =
 	 * "If linked quantity for partial pair-off and turned quantity for partial turns is used, then its usage must be pre-agreed between the message account owner and account servicer."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>

@@ -37,10 +37,6 @@ public class ConstraintDateAndDateCodeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlement1
 	 * SecuritiesSettlement1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DateAndDateCodeRule"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintDateAndDateCodeRule {
 	 * definition} =
 	 * "Date must only be present if DateCode is not present or if DateCode contains the value FUTU (Future) or WHIF (WhenAndIfIssued) or SELL (SellersOption)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesSettlement1> forSecuritiesSettlement1 = new MMConstraint<SecuritiesSettlement1>() {
@@ -71,10 +71,6 @@ public class ConstraintDateAndDateCodeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlement2
 	 * SecuritiesSettlement2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DateAndDateCodeRule"</li>
 	 * <li>
@@ -82,6 +78,10 @@ public class ConstraintDateAndDateCodeRule {
 	 * definition} =
 	 * "Date must only be present if DateCode is not present or if DateCode contains the value FUTU (Future) or WHIF (WhenAndIfIssued) or SELL (SellersOption)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesSettlement2> forSecuritiesSettlement2 = new MMConstraint<SecuritiesSettlement2>() {

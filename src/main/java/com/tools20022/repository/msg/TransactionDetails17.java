@@ -113,6 +113,10 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "TransactionDetails17"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} = "Identifies the details of the transaction."</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
  * constraint} =
  * <ul>
@@ -144,10 +148,6 @@ import javax.xml.bind.annotation.XmlType;
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRemovalDate
  * removalDate} = May 5, 2016</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "TransactionDetails17"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Identifies the details of the transaction."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -180,6 +180,12 @@ public class TransactionDetails17 {
 	 * TransactionDetails17}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TxActvty"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TransactionActivity"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Specifies the type of activity to which this instruction relates."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = ISO15022Synonym: :22F::TRAN</li>
@@ -187,12 +193,6 @@ public class TransactionDetails17 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "TransactionActivity"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Specifies the type of activity to which this instruction relates."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<TransactionDetails17, TransactionActivity2Choice> mmTransactionActivity = new MMMessageAssociationEnd<TransactionDetails17, TransactionActivity2Choice>() {
@@ -239,6 +239,11 @@ public class TransactionDetails17 {
 	 * TransactionDetails17}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SttlmTxOrCorpActnEvtTp"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementTransactionOrCorporateActionEventType"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Choice of type for the transaction reported."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = ISO15022Synonym: :22F::SETR or :22F::CAEV</li>
@@ -246,11 +251,6 @@ public class TransactionDetails17 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementTransactionOrCorporateActionEventType"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Choice of type for the transaction reported."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<TransactionDetails17, Optional<SettlementOrCorporateActionEvent3Choice>> mmSettlementTransactionOrCorporateActionEventType = new MMMessageAssociationEnd<TransactionDetails17, Optional<SettlementOrCorporateActionEvent3Choice>>() {
@@ -302,13 +302,6 @@ public class TransactionDetails17 {
 	 * TransactionDetails17}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SctiesMvmntTp"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = ISO15022Synonym: :22H::REDE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SecuritiesMovementType"</li>
 	 * <li>
@@ -316,6 +309,13 @@ public class TransactionDetails17 {
 	 * definition} =
 	 * "Specifies if the movement on a securities account results from a deliver or a receive instruction."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22H::REDE</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<TransactionDetails17, ReceiveDelivery1Code> mmSecuritiesMovementType = new MMMessageAttribute<TransactionDetails17, ReceiveDelivery1Code>() {
@@ -367,13 +367,6 @@ public class TransactionDetails17 {
 	 * TransactionDetails17}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Pmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = ISO15022Synonym: :22H::PAYM</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Payment"</li>
 	 * <li>
@@ -381,6 +374,13 @@ public class TransactionDetails17 {
 	 * definition} =
 	 * "Specifies how the transaction is to be settled, for example, against payment."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22H::PAYM</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<TransactionDetails17, DeliveryReceiptType2Code> mmPayment = new MMMessageAttribute<TransactionDetails17, DeliveryReceiptType2Code>() {
@@ -430,6 +430,12 @@ public class TransactionDetails17 {
 	 * TransactionDetails17}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SttlmParams"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementParameters"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Parameters applied to the settlement of a security transfer."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = ISO15022Synonym: :16R:SETDET</li>
@@ -437,12 +443,6 @@ public class TransactionDetails17 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementParameters"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Parameters applied to the settlement of a security transfer."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<TransactionDetails17, Optional<SettlementDetails12>> mmSettlementParameters = new MMMessageAssociationEnd<TransactionDetails17, Optional<SettlementDetails12>>() {
@@ -493,6 +493,11 @@ public class TransactionDetails17 {
 	 * TransactionDetails17}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PlcOfTrad"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PlaceOfTrade"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Market in which a trade transaction has been executed."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = ISO15022Synonym: :94B::TRAD</li>
@@ -500,11 +505,6 @@ public class TransactionDetails17 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PlaceOfTrade"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Market in which a trade transaction has been executed."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<TransactionDetails17, Optional<MarketIdentification8>> mmPlaceOfTrade = new MMMessageAssociationEnd<TransactionDetails17, Optional<MarketIdentification8>>() {
@@ -556,13 +556,6 @@ public class TransactionDetails17 {
 	 * TransactionDetails17}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SfkpgPlc"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = ISO15022Synonym: :94a::SAFE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlace"</li>
 	 * <li>
@@ -570,6 +563,13 @@ public class TransactionDetails17 {
 	 * definition} =
 	 * "Place where the securities are safe-kept, physically or notionally. This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :94a::SAFE</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<TransactionDetails17, Optional<SafekeepingPlaceFormat4Choice>> mmSafekeepingPlace = new MMMessageAssociationEnd<TransactionDetails17, Optional<SafekeepingPlaceFormat4Choice>>() {
@@ -621,13 +621,6 @@ public class TransactionDetails17 {
 	 * TransactionDetails17}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "FinInstrmId"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = ISO15022Synonym: :35B:</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FinancialInstrumentIdentification"</li>
 	 * <li>
@@ -635,6 +628,13 @@ public class TransactionDetails17 {
 	 * definition} =
 	 * "Financial instruments representing a sum of rights of the investor vis-a-vis the issuer."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :35B:</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<TransactionDetails17, SecurityIdentification12> mmFinancialInstrumentIdentification = new MMMessageAssociationEnd<TransactionDetails17, SecurityIdentification12>() {
@@ -685,13 +685,6 @@ public class TransactionDetails17 {
 	 * TransactionDetails17}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PstngQty"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = ISO15022Synonym: :36B::PSTA</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PostingQuantity"</li>
 	 * <li>
@@ -699,6 +692,13 @@ public class TransactionDetails17 {
 	 * definition} =
 	 * "Quantity of financial instrument (to be) posted to the safekeeping account."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :36B::PSTA</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<TransactionDetails17, Quantity10Choice> mmPostingQuantity = new MMMessageAssociationEnd<TransactionDetails17, Quantity10Choice>() {
@@ -749,6 +749,11 @@ public class TransactionDetails17 {
 	 * TransactionDetails17}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PstngAmt"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PostingAmount"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Amount of money that is to be/was posted to the account."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = ISO15022Synonym: :19A::PSTA</li>
@@ -756,11 +761,6 @@ public class TransactionDetails17 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PostingAmount"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Amount of money that is to be/was posted to the account."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<TransactionDetails17, AmountAndDirection12> mmPostingAmount = new MMMessageAssociationEnd<TransactionDetails17, AmountAndDirection12>() {
@@ -811,6 +811,11 @@ public class TransactionDetails17 {
 	 * TransactionDetails17}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TradDt"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TradeDate"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Specifies the date/time on which the trade was executed."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = ISO15022Synonym: :98a::TRAD</li>
@@ -818,11 +823,6 @@ public class TransactionDetails17 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "TradeDate"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Specifies the date/time on which the trade was executed."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<TransactionDetails17, Optional<TradeDate2Choice>> mmTradeDate = new MMMessageAssociationEnd<TransactionDetails17, Optional<TradeDate2Choice>>() {
@@ -874,6 +874,12 @@ public class TransactionDetails17 {
 	 * TransactionDetails17}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "XpctdSttlmDt"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ExpectedSettlementDate"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Date and time at which the securities are to be delivered or received."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = ISO15022Synonym: :98a::EXSE</li>
@@ -881,12 +887,6 @@ public class TransactionDetails17 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ExpectedSettlementDate"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Date and time at which the securities are to be delivered or received."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<TransactionDetails17, Optional<DateAndDateTimeChoice>> mmExpectedSettlementDate = new MMMessageAssociationEnd<TransactionDetails17, Optional<DateAndDateTimeChoice>>() {
@@ -938,6 +938,12 @@ public class TransactionDetails17 {
 	 * TransactionDetails17}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SttlmDt"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementDate"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Date and time at which the securities are to be delivered or received."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = ISO15022Synonym: :98a::SETT</li>
@@ -945,12 +951,6 @@ public class TransactionDetails17 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementDate"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Date and time at which the securities are to be delivered or received."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<TransactionDetails17, SettlementDate6Choice> mmSettlementDate = new MMMessageAssociationEnd<TransactionDetails17, SettlementDate6Choice>() {
@@ -1002,13 +1002,6 @@ public class TransactionDetails17 {
 	 * TransactionDetails17}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "LateDlvryDt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = ISO15022Synonym: :98a::ADEL</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LateDeliveryDate"</li>
 	 * <li>
@@ -1016,6 +1009,13 @@ public class TransactionDetails17 {
 	 * definition} =
 	 * "Date and time after the settlement date specified in the trade, used for pool trades resulting from the original To Be Assigned (TBA) securities."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::ADEL</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<TransactionDetails17, Optional<DateAndDateTimeChoice>> mmLateDeliveryDate = new MMMessageAssociationEnd<TransactionDetails17, Optional<DateAndDateTimeChoice>>() {
@@ -1067,13 +1067,6 @@ public class TransactionDetails17 {
 	 * TransactionDetails17}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "XpctdValDt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = ISO15022Synonym: :98a::EXVA</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ExpectedValueDate"</li>
 	 * <li>
@@ -1081,6 +1074,13 @@ public class TransactionDetails17 {
 	 * definition} =
 	 * "For against payment transactions, the value date/time at which the account servicer expects the settlement amount to be credited or debited."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::EXVA</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<TransactionDetails17, Optional<DateAndDateTimeChoice>> mmExpectedValueDate = new MMMessageAssociationEnd<TransactionDetails17, Optional<DateAndDateTimeChoice>>() {
@@ -1131,6 +1131,11 @@ public class TransactionDetails17 {
 	 * TransactionDetails17}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DlvrgSttlmPties"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DeliveringSettlementParties"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Identifies the chain of delivering settlement parties."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = ISO15022Synonym: :16R:SETPRTY</li>
@@ -1138,11 +1143,6 @@ public class TransactionDetails17 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DeliveringSettlementParties"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Identifies the chain of delivering settlement parties."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<TransactionDetails17, Optional<SettlementParties6>> mmDeliveringSettlementParties = new MMMessageAssociationEnd<TransactionDetails17, Optional<SettlementParties6>>() {
@@ -1193,6 +1193,11 @@ public class TransactionDetails17 {
 	 * TransactionDetails17}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RcvgSttlmPties"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ReceivingSettlementParties"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Identifies the chain of receiving settlement parties."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = ISO15022Synonym: :16R:SETPRTY</li>
@@ -1200,11 +1205,6 @@ public class TransactionDetails17 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ReceivingSettlementParties"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Identifies the chain of receiving settlement parties."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<TransactionDetails17, Optional<SettlementParties6>> mmReceivingSettlementParties = new MMMessageAssociationEnd<TransactionDetails17, Optional<SettlementParties6>>() {
@@ -1252,13 +1252,6 @@ public class TransactionDetails17 {
 	 * TransactionDetails17}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TxAddtlDtls"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = ISO15022Synonym: :70E::TRDE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TransactionAdditionalDetails"</li>
 	 * <li>
@@ -1266,6 +1259,13 @@ public class TransactionDetails17 {
 	 * definition} =
 	 * "Provides additional details on the transaction which can not be included within the structured fields of the message."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :70E::TRDE</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<TransactionDetails17, Optional<RestrictedFINXMax350Text>> mmTransactionAdditionalDetails = new MMMessageAttribute<TransactionDetails17, Optional<RestrictedFINXMax350Text>>() {
@@ -1308,10 +1308,6 @@ public class TransactionDetails17 {
 	 * TransactionDetails17}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Xtnsn"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Extension"</li>
 	 * <li>
@@ -1319,6 +1315,10 @@ public class TransactionDetails17 {
 	 * definition} =
 	 * "Additional information that cannot be captured in the structured elements and/or any other specific block."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<TransactionDetails17, List<Extension2>> mmExtension = new MMMessageAssociationEnd<TransactionDetails17, List<Extension2>>() {

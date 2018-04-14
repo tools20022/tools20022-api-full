@@ -39,10 +39,6 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate64
 	 * CorporateActionRate64}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxRelatedRateRule"</li>
 	 * <li>
@@ -50,6 +46,10 @@ public class ConstraintTaxRelatedRateRule {
 	 * definition} =
 	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionRate64> forCorporateActionRate64 = new MMConstraint<CorporateActionRate64>() {
@@ -73,10 +73,6 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate37
 	 * CorporateActionRate37}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxRelatedRateRule"</li>
 	 * <li>
@@ -84,6 +80,10 @@ public class ConstraintTaxRelatedRateRule {
 	 * definition} =
 	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -116,10 +116,6 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate20
 	 * CorporateActionRate20}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxRelatedRateRule"</li>
 	 * <li>
@@ -127,6 +123,10 @@ public class ConstraintTaxRelatedRateRule {
 	 * definition} =
 	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionRate20> forCorporateActionRate20 = new MMConstraint<CorporateActionRate20>() {
@@ -150,10 +150,6 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate60
 	 * CorporateActionRate60}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxRelatedRateRule"</li>
 	 * <li>
@@ -161,6 +157,10 @@ public class ConstraintTaxRelatedRateRule {
 	 * definition} =
 	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionRate60> forCorporateActionRate60 = new MMConstraint<CorporateActionRate60>() {
@@ -184,10 +184,6 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate15
 	 * CorporateActionRate15}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxRelatedRateRule"</li>
 	 * <li>
@@ -195,6 +191,10 @@ public class ConstraintTaxRelatedRateRule {
 	 * definition} =
 	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionRate15> forCorporateActionRate15 = new MMConstraint<CorporateActionRate15>() {
@@ -217,10 +217,6 @@ public class ConstraintTaxRelatedRateRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RateDetails3 RateDetails3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxRelatedRateRule"</li>
 	 * <li>
@@ -228,6 +224,10 @@ public class ConstraintTaxRelatedRateRule {
 	 * definition} =
 	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RateDetails3> forRateDetails3 = new MMConstraint<RateDetails3>() {
@@ -251,10 +251,6 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate12
 	 * CorporateActionRate12}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxRelatedRateRule"</li>
 	 * <li>
@@ -262,6 +258,10 @@ public class ConstraintTaxRelatedRateRule {
 	 * definition} =
 	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionRate12> forCorporateActionRate12 = new MMConstraint<CorporateActionRate12>() {
@@ -284,10 +284,6 @@ public class ConstraintTaxRelatedRateRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RateDetails11 RateDetails11}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxRelatedRateRule"</li>
 	 * <li>
@@ -295,6 +291,10 @@ public class ConstraintTaxRelatedRateRule {
 	 * definition} =
 	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -327,10 +327,6 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate31
 	 * CorporateActionRate31}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxRelatedRateRule"</li>
 	 * <li>
@@ -338,6 +334,10 @@ public class ConstraintTaxRelatedRateRule {
 	 * definition} =
 	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionRate31> forCorporateActionRate31 = new MMConstraint<CorporateActionRate31>() {
@@ -360,10 +360,6 @@ public class ConstraintTaxRelatedRateRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RateDetails14 RateDetails14}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxRelatedRateRule"</li>
 	 * <li>
@@ -371,6 +367,10 @@ public class ConstraintTaxRelatedRateRule {
 	 * definition} =
 	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -400,10 +400,6 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate26
 	 * CorporateActionRate26}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxRelatedRateRule"</li>
 	 * <li>
@@ -411,6 +407,10 @@ public class ConstraintTaxRelatedRateRule {
 	 * definition} =
 	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionRate26> forCorporateActionRate26 = new MMConstraint<CorporateActionRate26>() {
@@ -433,10 +433,6 @@ public class ConstraintTaxRelatedRateRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RateDetails18 RateDetails18}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxRelatedRateRule"</li>
 	 * <li>
@@ -444,6 +440,10 @@ public class ConstraintTaxRelatedRateRule {
 	 * definition} =
 	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RateDetails18> forRateDetails18 = new MMConstraint<RateDetails18>() {
@@ -467,10 +467,6 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate25
 	 * CorporateActionRate25}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxRelatedRateRule"</li>
 	 * <li>
@@ -478,6 +474,10 @@ public class ConstraintTaxRelatedRateRule {
 	 * definition} =
 	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionRate25> forCorporateActionRate25 = new MMConstraint<CorporateActionRate25>() {
@@ -500,10 +500,6 @@ public class ConstraintTaxRelatedRateRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RateDetails7 RateDetails7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxRelatedRateRule"</li>
 	 * <li>
@@ -511,6 +507,10 @@ public class ConstraintTaxRelatedRateRule {
 	 * definition} =
 	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RateDetails7> forRateDetails7 = new MMConstraint<RateDetails7>() {
@@ -533,10 +533,6 @@ public class ConstraintTaxRelatedRateRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RateDetails10 RateDetails10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxRelatedRateRule"</li>
 	 * <li>
@@ -544,6 +540,10 @@ public class ConstraintTaxRelatedRateRule {
 	 * definition} =
 	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -576,10 +576,6 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate46
 	 * CorporateActionRate46}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxRelatedRateRule"</li>
 	 * <li>
@@ -587,6 +583,10 @@ public class ConstraintTaxRelatedRateRule {
 	 * definition} =
 	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -616,10 +616,6 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate18
 	 * CorporateActionRate18}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxRelatedRateRule"</li>
 	 * <li>
@@ -627,6 +623,10 @@ public class ConstraintTaxRelatedRateRule {
 	 * definition} =
 	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionRate18> forCorporateActionRate18 = new MMConstraint<CorporateActionRate18>() {
@@ -650,10 +650,6 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate30
 	 * CorporateActionRate30}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxRelatedRateRule"</li>
 	 * <li>
@@ -661,6 +657,10 @@ public class ConstraintTaxRelatedRateRule {
 	 * definition} =
 	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionRate30> forCorporateActionRate30 = new MMConstraint<CorporateActionRate30>() {
@@ -684,10 +684,6 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate38
 	 * CorporateActionRate38}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxRelatedRateRule"</li>
 	 * <li>
@@ -695,6 +691,10 @@ public class ConstraintTaxRelatedRateRule {
 	 * definition} =
 	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -727,10 +727,6 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate42
 	 * CorporateActionRate42}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxRelatedRateRule"</li>
 	 * <li>
@@ -738,6 +734,10 @@ public class ConstraintTaxRelatedRateRule {
 	 * definition} =
 	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionRate42> forCorporateActionRate42 = new MMConstraint<CorporateActionRate42>() {
@@ -760,10 +760,6 @@ public class ConstraintTaxRelatedRateRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RateDetails2 RateDetails2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxRelatedRateRule"</li>
 	 * <li>
@@ -771,6 +767,10 @@ public class ConstraintTaxRelatedRateRule {
 	 * definition} =
 	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RateDetails2> forRateDetails2 = new MMConstraint<RateDetails2>() {
@@ -793,10 +793,6 @@ public class ConstraintTaxRelatedRateRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RateDetails21 RateDetails21}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxRelatedRateRule"</li>
 	 * <li>
@@ -804,6 +800,10 @@ public class ConstraintTaxRelatedRateRule {
 	 * definition} =
 	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RateDetails21> forRateDetails21 = new MMConstraint<RateDetails21>() {
@@ -827,10 +827,6 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate22
 	 * CorporateActionRate22}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxRelatedRateRule"</li>
 	 * <li>
@@ -838,6 +834,10 @@ public class ConstraintTaxRelatedRateRule {
 	 * definition} =
 	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionRate22> forCorporateActionRate22 = new MMConstraint<CorporateActionRate22>() {
@@ -860,10 +860,6 @@ public class ConstraintTaxRelatedRateRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RateDetails15 RateDetails15}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxRelatedRateRule"</li>
 	 * <li>
@@ -871,6 +867,10 @@ public class ConstraintTaxRelatedRateRule {
 	 * definition} =
 	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -899,10 +899,6 @@ public class ConstraintTaxRelatedRateRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RateDetails4 RateDetails4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxRelatedRateRule"</li>
 	 * <li>
@@ -910,6 +906,10 @@ public class ConstraintTaxRelatedRateRule {
 	 * definition} =
 	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RateDetails4> forRateDetails4 = new MMConstraint<RateDetails4>() {
@@ -933,10 +933,6 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate36
 	 * CorporateActionRate36}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxRelatedRateRule"</li>
 	 * <li>
@@ -944,6 +940,10 @@ public class ConstraintTaxRelatedRateRule {
 	 * definition} =
 	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -976,10 +976,6 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate40
 	 * CorporateActionRate40}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxRelatedRateRule"</li>
 	 * <li>
@@ -987,6 +983,10 @@ public class ConstraintTaxRelatedRateRule {
 	 * definition} =
 	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionRate40> forCorporateActionRate40 = new MMConstraint<CorporateActionRate40>() {
@@ -1010,10 +1010,6 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate57
 	 * CorporateActionRate57}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxRelatedRateRule"</li>
 	 * <li>
@@ -1021,6 +1017,10 @@ public class ConstraintTaxRelatedRateRule {
 	 * definition} =
 	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionRate57> forCorporateActionRate57 = new MMConstraint<CorporateActionRate57>() {
@@ -1043,10 +1043,6 @@ public class ConstraintTaxRelatedRateRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RateDetails13 RateDetails13}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxRelatedRateRule"</li>
 	 * <li>
@@ -1054,6 +1050,10 @@ public class ConstraintTaxRelatedRateRule {
 	 * definition} =
 	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RateDetails13> forRateDetails13 = new MMConstraint<RateDetails13>() {
@@ -1076,10 +1076,6 @@ public class ConstraintTaxRelatedRateRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RateDetails9 RateDetails9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxRelatedRateRule"</li>
 	 * <li>
@@ -1087,6 +1083,10 @@ public class ConstraintTaxRelatedRateRule {
 	 * definition} =
 	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RateDetails9> forRateDetails9 = new MMConstraint<RateDetails9>() {
@@ -1110,10 +1110,6 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate39
 	 * CorporateActionRate39}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxRelatedRateRule"</li>
 	 * <li>
@@ -1121,6 +1117,10 @@ public class ConstraintTaxRelatedRateRule {
 	 * definition} =
 	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionRate39> forCorporateActionRate39 = new MMConstraint<CorporateActionRate39>() {
@@ -1143,10 +1143,6 @@ public class ConstraintTaxRelatedRateRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RateDetails5 RateDetails5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxRelatedRateRule"</li>
 	 * <li>
@@ -1154,6 +1150,10 @@ public class ConstraintTaxRelatedRateRule {
 	 * definition} =
 	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RateDetails5> forRateDetails5 = new MMConstraint<RateDetails5>() {
@@ -1177,10 +1177,6 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate44
 	 * CorporateActionRate44}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxRelatedRateRule"</li>
 	 * <li>
@@ -1188,6 +1184,10 @@ public class ConstraintTaxRelatedRateRule {
 	 * definition} =
 	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1216,10 +1216,6 @@ public class ConstraintTaxRelatedRateRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RateDetails12 RateDetails12}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxRelatedRateRule"</li>
 	 * <li>
@@ -1227,6 +1223,10 @@ public class ConstraintTaxRelatedRateRule {
 	 * definition} =
 	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RateDetails12> forRateDetails12 = new MMConstraint<RateDetails12>() {
@@ -1250,10 +1250,6 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate4
 	 * CorporateActionRate4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxRelatedRateRule"</li>
 	 * <li>
@@ -1261,6 +1257,10 @@ public class ConstraintTaxRelatedRateRule {
 	 * definition} =
 	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C3 and C4)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionRate4> forCorporateActionRate4 = new MMConstraint<CorporateActionRate4>() {
@@ -1284,10 +1284,6 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate45
 	 * CorporateActionRate45}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxRelatedRateRule"</li>
 	 * <li>
@@ -1295,6 +1291,10 @@ public class ConstraintTaxRelatedRateRule {
 	 * definition} =
 	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1324,10 +1324,6 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate5
 	 * CorporateActionRate5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxRelatedRateRule"</li>
 	 * <li>
@@ -1335,6 +1331,10 @@ public class ConstraintTaxRelatedRateRule {
 	 * definition} =
 	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionRate5> forCorporateActionRate5 = new MMConstraint<CorporateActionRate5>() {
@@ -1358,10 +1358,6 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate10
 	 * CorporateActionRate10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxRelatedRateRule"</li>
 	 * <li>
@@ -1369,6 +1365,10 @@ public class ConstraintTaxRelatedRateRule {
 	 * definition} =
 	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C3 and C4)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionRate10> forCorporateActionRate10 = new MMConstraint<CorporateActionRate10>() {

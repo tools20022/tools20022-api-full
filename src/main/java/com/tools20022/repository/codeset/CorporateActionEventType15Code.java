@@ -243,14 +243,14 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CorporateActionEventType15Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Specifies the corporate action event type."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -265,12 +265,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ActiveTradingStatus"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ActiveTradingStatus"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code ActiveTradingStatus = new CorporateActionEventType15Code() {
@@ -289,12 +289,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Attachment"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Attachment"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code Attachment = new CorporateActionEventType15Code() {
@@ -313,12 +313,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Bankruptcy"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Bankruptcy"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code Bankruptcy = new CorporateActionEventType15Code() {
@@ -337,12 +337,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BondDefault"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BondDefault"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code BondDefault = new CorporateActionEventType15Code() {
@@ -361,12 +361,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BonusIssue"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BonusIssue"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code BonusIssue = new CorporateActionEventType15Code() {
@@ -385,12 +385,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CallOnIntermediateSecurities"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CallOnIntermediateSecurities"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code CallOnIntermediateSecurities = new CorporateActionEventType15Code() {
@@ -409,12 +409,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CapitalDistribution"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CapitalDistribution"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code CapitalDistribution = new CorporateActionEventType15Code() {
@@ -433,12 +433,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CapitalGainsDistribution"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CapitalGainsDistribution"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code CapitalGainsDistribution = new CorporateActionEventType15Code() {
@@ -457,12 +457,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Capitalisation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Capitalisation"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code Capitalisation = new CorporateActionEventType15Code() {
@@ -481,12 +481,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CashDistributionFromNonEligibleSecuritiesSales"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CashDistributionFromNonEligibleSecuritiesSales"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code CashDistributionFromNonEligibleSecuritiesSales = new CorporateActionEventType15Code() {
@@ -505,12 +505,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CashDividend"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CashDividend"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code CashDividend = new CorporateActionEventType15Code() {
@@ -529,12 +529,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Change"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Change"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code Change = new CorporateActionEventType15Code() {
@@ -553,12 +553,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ClassActionProposedSettlement"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ClassActionProposedSettlement"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code ClassActionProposedSettlement = new CorporateActionEventType15Code() {
@@ -577,12 +577,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CompanyOption"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CompanyOption"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code CompanyOption = new CorporateActionEventType15Code() {
@@ -601,12 +601,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Consent"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Consent"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code Consent = new CorporateActionEventType15Code() {
@@ -625,12 +625,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Conversion"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Conversion"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code Conversion = new CorporateActionEventType15Code() {
@@ -649,12 +649,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CreditEvent"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CreditEvent"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code CreditEvent = new CorporateActionEventType15Code() {
@@ -673,12 +673,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DecreaseInValue"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DecreaseInValue"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code DecreaseInValue = new CorporateActionEventType15Code() {
@@ -697,12 +697,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Detachment"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Detachment"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code Detachment = new CorporateActionEventType15Code() {
@@ -721,12 +721,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Disclosure"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Disclosure"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code Disclosure = new CorporateActionEventType15Code() {
@@ -745,12 +745,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DividendOption"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DividendOption"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code DividendOption = new CorporateActionEventType15Code() {
@@ -769,12 +769,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DividendReinvestment"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DividendReinvestment"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code DividendReinvestment = new CorporateActionEventType15Code() {
@@ -793,12 +793,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Drawing"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Drawing"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code Drawing = new CorporateActionEventType15Code() {
@@ -817,12 +817,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DutchAuction"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DutchAuction"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code DutchAuction = new CorporateActionEventType15Code() {
@@ -841,12 +841,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Exchange"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Exchange"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code Exchange = new CorporateActionEventType15Code() {
@@ -865,12 +865,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "FinalMaturity"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "FinalMaturity"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code FinalMaturity = new CorporateActionEventType15Code() {
@@ -889,12 +889,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "FullCall"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "FullCall"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code FullCall = new CorporateActionEventType15Code() {
@@ -913,12 +913,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "IncreaseInValue"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "IncreaseInValue"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code IncreaseInValue = new CorporateActionEventType15Code() {
@@ -937,12 +937,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InstalmentCall"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "InstalmentCall"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code InstalmentCall = new CorporateActionEventType15Code() {
@@ -961,12 +961,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InterestPayment"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "InterestPayment"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code InterestPayment = new CorporateActionEventType15Code() {
@@ -985,12 +985,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InterestPaymentWithPrincipal"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "InterestPaymentWithPrincipal"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code InterestPaymentWithPrincipal = new CorporateActionEventType15Code() {
@@ -1009,12 +1009,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "IntermediateSecuritiesDistribution"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "IntermediateSecuritiesDistribution"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code IntermediateSecuritiesDistribution = new CorporateActionEventType15Code() {
@@ -1033,12 +1033,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "LiquidationDividend"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "LiquidationDividend"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code LiquidationDividend = new CorporateActionEventType15Code() {
@@ -1057,12 +1057,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "MaturityExtension"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "MaturityExtension"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code MaturityExtension = new CorporateActionEventType15Code() {
@@ -1081,12 +1081,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Merger"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Merger"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code Merger = new CorporateActionEventType15Code() {
@@ -1105,12 +1105,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NonOfficialOffer"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "NonOfficialOffer"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code NonOfficialOffer = new CorporateActionEventType15Code() {
@@ -1129,12 +1129,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NonUSTEFRADCertification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "NonUSTEFRADCertification"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code NonUSTEFRADCertification = new CorporateActionEventType15Code() {
@@ -1153,12 +1153,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OddLotSalePurchase"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "OddLotSalePurchase"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code OddLotSalePurchase = new CorporateActionEventType15Code() {
@@ -1177,12 +1177,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OtherEvent"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "OtherEvent"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code OtherEvent = new CorporateActionEventType15Code() {
@@ -1201,12 +1201,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PariPassu"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PariPassu"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code PariPassu = new CorporateActionEventType15Code() {
@@ -1225,12 +1225,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PartialRedemptionWithNominalValueReduction"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PartialRedemptionWithNominalValueReduction"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code PartialRedemptionWithNominalValueReduction = new CorporateActionEventType15Code() {
@@ -1249,12 +1249,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PartialRedemptionWithoutNominalValueReduction"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PartialRedemptionWithoutNominalValueReduction"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code PartialRedemptionWithoutNominalValueReduction = new CorporateActionEventType15Code() {
@@ -1273,12 +1273,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PayInKind"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PayInKind"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code PayInKind = new CorporateActionEventType15Code() {
@@ -1297,12 +1297,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PlaceOfIncorporation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PlaceOfIncorporation"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code PlaceOfIncorporation = new CorporateActionEventType15Code() {
@@ -1321,12 +1321,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Prefunding"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Prefunding"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code Prefunding = new CorporateActionEventType15Code() {
@@ -1345,12 +1345,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PriorityIssue"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PriorityIssue"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code PriorityIssue = new CorporateActionEventType15Code() {
@@ -1369,12 +1369,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PutRedemption"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PutRedemption"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code PutRedemption = new CorporateActionEventType15Code() {
@@ -1393,12 +1393,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Redenomination"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Redenomination"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code Redenomination = new CorporateActionEventType15Code() {
@@ -1417,12 +1417,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RemarketingAgreement"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "RemarketingAgreement"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code RemarketingAgreement = new CorporateActionEventType15Code() {
@@ -1441,12 +1441,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RepurchaseOffer"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "RepurchaseOffer"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code RepurchaseOffer = new CorporateActionEventType15Code() {
@@ -1465,12 +1465,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ReverseStockSplit"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ReverseStockSplit"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code ReverseStockSplit = new CorporateActionEventType15Code() {
@@ -1489,12 +1489,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RightsIssue"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "RightsIssue"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code RightsIssue = new CorporateActionEventType15Code() {
@@ -1513,12 +1513,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ScripDividend"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ScripDividend"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code ScripDividend = new CorporateActionEventType15Code() {
@@ -1537,12 +1537,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SharesPremiumDividend"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SharesPremiumDividend"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code SharesPremiumDividend = new CorporateActionEventType15Code() {
@@ -1561,12 +1561,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SmallestNegotiableUnit"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SmallestNegotiableUnit"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code SmallestNegotiableUnit = new CorporateActionEventType15Code() {
@@ -1585,12 +1585,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SpinOff"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SpinOff"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code SpinOff = new CorporateActionEventType15Code() {
@@ -1609,12 +1609,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "StockDividend"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "StockDividend"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code StockDividend = new CorporateActionEventType15Code() {
@@ -1633,12 +1633,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "StockSplit"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "StockSplit"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code StockSplit = new CorporateActionEventType15Code() {
@@ -1657,12 +1657,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TaxReclaim"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "TaxReclaim"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code TaxReclaim = new CorporateActionEventType15Code() {
@@ -1681,12 +1681,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Tender"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Tender"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code Tender = new CorporateActionEventType15Code() {
@@ -1705,12 +1705,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TradingStatusDelisted"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "TradingStatusDelisted"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code TradingStatusDelisted = new CorporateActionEventType15Code() {
@@ -1729,12 +1729,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TradingStatusSuspended"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "TradingStatusSuspended"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code TradingStatusSuspended = new CorporateActionEventType15Code() {
@@ -1753,12 +1753,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "WarrantExercise"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "WarrantExercise"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code WarrantExercise = new CorporateActionEventType15Code() {
@@ -1777,12 +1777,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "WithholdingTaxReliefCertification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "WithholdingTaxReliefCertification"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code WithholdingTaxReliefCertification = new CorporateActionEventType15Code() {
@@ -1801,12 +1801,12 @@ public class CorporateActionEventType15Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType15Code
 	 * CorporateActionEventType15Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Worthless"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Worthless"</li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType15Code Worthless = new CorporateActionEventType15Code() {

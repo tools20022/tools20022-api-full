@@ -69,6 +69,12 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "AdditionalBalanceInformation7"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} =
+ * "Subbalances providing additional information on a specific position but that is not to be accounted for in the building of the aggregate balance, for example, registered."
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
  * constraint} =
  * <ul>
@@ -89,12 +95,6 @@ import javax.xml.bind.annotation.XmlType;
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRemovalDate
  * removalDate} = May 5, 2016</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "AdditionalBalanceInformation7"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} =
- * "Subbalances providing additional information on a specific position but that is not to be accounted for in the building of the aggregate balance, for example, registered."
- * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -125,6 +125,11 @@ public class AdditionalBalanceInformation7 {
 	 * AdditionalBalanceInformation7}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SubBalTp"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SubBalanceType"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Reason for the sub-balance."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = ISO15022Synonym: :93a::4!c</li>
@@ -132,11 +137,6 @@ public class AdditionalBalanceInformation7 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SubBalanceType"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Reason for the sub-balance."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<AdditionalBalanceInformation7, SubBalanceType8Choice> mmSubBalanceType = new MMMessageAssociationEnd<AdditionalBalanceInformation7, SubBalanceType8Choice>() {
@@ -188,6 +188,11 @@ public class AdditionalBalanceInformation7 {
 	 * AdditionalBalanceInformation7}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Qty"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Quantity"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Quantity of securities in the sub-balance."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = ISO15022Synonym: :93a:</li>
@@ -195,11 +200,6 @@ public class AdditionalBalanceInformation7 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Quantity"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Quantity of securities in the sub-balance."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<AdditionalBalanceInformation7, SubBalanceQuantity4Choice> mmQuantity = new MMMessageAssociationEnd<AdditionalBalanceInformation7, SubBalanceQuantity4Choice>() {
@@ -247,6 +247,11 @@ public class AdditionalBalanceInformation7 {
 	 * AdditionalBalanceInformation7}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SubBalAddtlDtls"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SubBalanceAdditionalDetails"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Provides additional subbalance information."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = ISO15022Synonym: :70C::SUBB</li>
@@ -254,11 +259,6 @@ public class AdditionalBalanceInformation7 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SubBalanceAdditionalDetails"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Provides additional subbalance information."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<AdditionalBalanceInformation7, Optional<RestrictedFINXMax140Text>> mmSubBalanceAdditionalDetails = new MMMessageAttribute<AdditionalBalanceInformation7, Optional<RestrictedFINXMax140Text>>() {

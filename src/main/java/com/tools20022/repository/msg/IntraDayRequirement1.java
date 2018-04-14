@@ -74,16 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "IntraDayRequirement1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Obligations of a clearing member with respect to a central counterparty that are calculated based on intraday positions."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -110,10 +110,6 @@ public class IntraDayRequirement1 {
 	 * IntraDayRequirement1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "IntraDayMrgnCall"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IntraDayMarginCall"</li>
 	 * <li>
@@ -121,6 +117,10 @@ public class IntraDayRequirement1 {
 	 * definition} =
 	 * "Total aggregate value of collateral called intraday, excluding repayments.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<IntraDayRequirement1, ActiveCurrencyAndAmount> mmIntraDayMarginCall = new MMMessageAttribute<IntraDayRequirement1, ActiveCurrencyAndAmount>() {
@@ -165,10 +165,6 @@ public class IntraDayRequirement1 {
 	 * IntraDayRequirement1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PeakInitlMrgnLblty"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PeakInitialMarginLiability"</li>
 	 * <li>
@@ -176,6 +172,10 @@ public class IntraDayRequirement1 {
 	 * definition} =
 	 * "Peak increase in initial margin liability for the account during the day."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<IntraDayRequirement1, ActiveCurrencyAndAmount> mmPeakInitialMarginLiability = new MMMessageAttribute<IntraDayRequirement1, ActiveCurrencyAndAmount>() {
@@ -220,10 +220,6 @@ public class IntraDayRequirement1 {
 	 * IntraDayRequirement1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PeakVartnMrgnLblty"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PeakVariationMarginLiability"</li>
 	 * <li>
@@ -231,6 +227,10 @@ public class IntraDayRequirement1 {
 	 * definition} =
 	 * "Peak loss uncollateralised variation margin liability on the margin account during the day.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<IntraDayRequirement1, ActiveCurrencyAndAmount> mmPeakVariationMarginLiability = new MMMessageAttribute<IntraDayRequirement1, ActiveCurrencyAndAmount>() {
@@ -275,10 +275,6 @@ public class IntraDayRequirement1 {
 	 * IntraDayRequirement1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AggtPeakLblty"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AggregatePeakLiability"</li>
 	 * <li>
@@ -286,6 +282,10 @@ public class IntraDayRequirement1 {
 	 * definition} =
 	 * "Peak intraday liability (sum of increase in initial margin relative to end of day plus sum of decrease in variation margin relative to end of day) for a margin account during the day. Liabilities are shown as positive integers.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<IntraDayRequirement1, ActiveCurrencyAndAmount> mmAggregatePeakLiability = new MMMessageAttribute<IntraDayRequirement1, ActiveCurrencyAndAmount>() {
@@ -329,10 +329,6 @@ public class IntraDayRequirement1 {
 	 * IntraDayRequirement1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MrgnAcctId"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MarginAccountIdentification"</li>
 	 * <li>
@@ -340,6 +336,10 @@ public class IntraDayRequirement1 {
 	 * definition} =
 	 * "Identification of the account used to calculate margin requirements and determine intraday calls.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<IntraDayRequirement1, GenericIdentification165> mmMarginAccountIdentification = new MMMessageAssociationEnd<IntraDayRequirement1, GenericIdentification165>() {

@@ -44,6 +44,13 @@ import javax.xml.bind.annotation.*;
  * <strong>Constant fields:</strong>
  * <ul>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code auth.055.001.01}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
+ * AuthoritiesLatestVersion}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
  * <ul>
@@ -73,13 +80,12 @@ import javax.xml.bind.annotation.*;
  * rootElement} = "Document"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
  * xmlTag} = "CCPMmbRqrmntsRpt"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
- * AuthoritiesLatestVersion}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code auth.055.001.01}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "CCPMemberRequirementsReportV01"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} =
+ * "The CCPMemberRequirementsReport is sent from the central counterparty to the national competent authority. It is used to inform the national competent authority about the collateral requirements that a central counterparty obligates a clearing member post at the central counterparty."
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
  * semanticMarkup} = type=prefix, prefix=DRAFT5</li>
@@ -87,12 +93,6 @@ import javax.xml.bind.annotation.*;
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "CCPMemberRequirementsReportV01"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} =
- * "The CCPMemberRequirementsReport is sent from the central counterparty to the national competent authority. It is used to inform the national competent authority about the collateral requirements that a central counterparty obligates a clearing member post at the central counterparty."
- * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -114,10 +114,6 @@ public class CCPMemberRequirementsReportV01 {
 	 * IntraDayRequirement1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "IntraDayRqrmntAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IntraDayRequirementAmount"</li>
 	 * <li>
@@ -125,6 +121,10 @@ public class CCPMemberRequirementsReportV01 {
 	 * definition} =
 	 * "Obligations of a clearing member with respect to a central counterparty that are calculated based on intraday positions."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock<CCPMemberRequirementsReportV01, List<IntraDayRequirement1>> mmIntraDayRequirementAmount = new MMMessageBuildingBlock<CCPMemberRequirementsReportV01, List<IntraDayRequirement1>>() {
@@ -161,10 +161,6 @@ public class CCPMemberRequirementsReportV01 {
 	 * EndOfDayRequirement2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "EndOfDayRqrmnt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EndOfDayRequirement"</li>
 	 * <li>
@@ -172,6 +168,10 @@ public class CCPMemberRequirementsReportV01 {
 	 * definition} =
 	 * "Obligations of a clearing member with respect to a central counterparty that are calculated based on end of day positions."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock<CCPMemberRequirementsReportV01, List<EndOfDayRequirement2>> mmEndOfDayRequirement = new MMMessageBuildingBlock<CCPMemberRequirementsReportV01, List<EndOfDayRequirement2>>() {
@@ -208,10 +208,6 @@ public class CCPMemberRequirementsReportV01 {
 	 * DefaultFundRequirement1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DfltFndRqrmnt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DefaultFundRequirement"</li>
 	 * <li>
@@ -219,6 +215,10 @@ public class CCPMemberRequirementsReportV01 {
 	 * definition} =
 	 * "Requirement for a clearing member to post collateral at a central counterparty with respect to a default fund."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock<CCPMemberRequirementsReportV01, List<DefaultFundRequirement1>> mmDefaultFundRequirement = new MMMessageBuildingBlock<CCPMemberRequirementsReportV01, List<DefaultFundRequirement1>>() {
@@ -255,10 +255,6 @@ public class CCPMemberRequirementsReportV01 {
 	 * SupplementaryData1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SplmtryData"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SupplementaryData"</li>
 	 * <li>
@@ -266,6 +262,10 @@ public class CCPMemberRequirementsReportV01 {
 	 * definition} =
 	 * "Additional information that cannot be captured in the structured elements and/or any other specific block."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock<CCPMemberRequirementsReportV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<CCPMemberRequirementsReportV01, List<SupplementaryData1>>() {

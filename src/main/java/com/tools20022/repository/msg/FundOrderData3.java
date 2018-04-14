@@ -67,14 +67,14 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "FundOrderData3"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Extract of trade data for an investment fund order."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -104,16 +104,16 @@ public class FundOrderData3 {
 	 * {@linkplain com.tools20022.repository.msg.FundOrderData3 FundOrderData3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ReqdTradDt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RequestedTradeDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Date on which the investor requests the order to be executed."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<FundOrderData3, Optional<ISODate>> mmRequestedTradeDate = new MMMessageAttribute<FundOrderData3, Optional<ISODate>>() {
@@ -161,10 +161,6 @@ public class FundOrderData3 {
 	 * {@linkplain com.tools20022.repository.msg.FundOrderData3 FundOrderData3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "InvstmtAcctDtls"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InvestmentAccountDetails"</li>
 	 * <li>
@@ -172,6 +168,10 @@ public class FundOrderData3 {
 	 * definition} =
 	 * "Account information of the order instruction for which the status is given."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<FundOrderData3, Optional<InvestmentAccount30>> mmInvestmentAccountDetails = new MMMessageAssociationEnd<FundOrderData3, Optional<InvestmentAccount30>>() {
@@ -220,10 +220,6 @@ public class FundOrderData3 {
 	 * {@linkplain com.tools20022.repository.msg.FundOrderData3 FundOrderData3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "FinInstrmDtls"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FinancialInstrumentDetails"</li>
 	 * <li>
@@ -231,6 +227,10 @@ public class FundOrderData3 {
 	 * definition} =
 	 * "Financial instrument information of the order instruction for which the status is given."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<FundOrderData3, Optional<FinancialInstrument18>> mmFinancialInstrumentDetails = new MMMessageAssociationEnd<FundOrderData3, Optional<FinancialInstrument18>>() {
@@ -280,10 +280,6 @@ public class FundOrderData3 {
 	 * {@linkplain com.tools20022.repository.msg.FundOrderData3 FundOrderData3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "FinInstrmQty"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FinancialInstrumentQuantity"</li>
 	 * <li>
@@ -291,6 +287,10 @@ public class FundOrderData3 {
 	 * definition} =
 	 * "Quantity of financial instrument of the order instruction for which the status is given."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<FundOrderData3, Optional<FinancialInstrumentQuantity11Choice>> mmFinancialInstrumentQuantity = new MMMessageAssociationEnd<FundOrderData3, Optional<FinancialInstrumentQuantity11Choice>>() {

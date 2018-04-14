@@ -90,6 +90,12 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "InterestComputationMethod1Code"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} =
+ * "Specifies the method used to compute accruing interest of a financial instrument."
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
  * semanticMarkup} = ISO15022Synonym: :22F::MICO</li>
@@ -103,12 +109,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "InterestComputationMethod1Code"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} =
- * "Specifies the method used to compute accruing interest of a financial instrument."
- * </li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -123,12 +123,12 @@ public class InterestComputationMethod1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InterestComputationMethod1Code
 	 * InterestComputationMethod1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "IC30360ISDAor30360AmericanBasicRule"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "IC30360ISDAor30360AmericanBasicRule"</li>
 	 * </ul>
 	 */
 	public static final InterestComputationMethod1Code IC30360ISDAor30360AmericanBasicRule = new InterestComputationMethod1Code() {
@@ -147,12 +147,12 @@ public class InterestComputationMethod1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InterestComputationMethod1Code
 	 * InterestComputationMethod1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "IC30365"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "IC30365"</li>
 	 * </ul>
 	 */
 	public static final InterestComputationMethod1Code IC30365 = new InterestComputationMethod1Code() {
@@ -171,12 +171,12 @@ public class InterestComputationMethod1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InterestComputationMethod1Code
 	 * InterestComputationMethod1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "IC30Actual"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "IC30Actual"</li>
 	 * </ul>
 	 */
 	public static final InterestComputationMethod1Code IC30Actual = new InterestComputationMethod1Code() {
@@ -195,12 +195,12 @@ public class InterestComputationMethod1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InterestComputationMethod1Code
 	 * InterestComputationMethod1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Actual360"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Actual360"</li>
 	 * </ul>
 	 */
 	public static final InterestComputationMethod1Code Actual360 = new InterestComputationMethod1Code() {
@@ -219,12 +219,12 @@ public class InterestComputationMethod1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InterestComputationMethod1Code
 	 * InterestComputationMethod1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Actual365Fixed"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Actual365Fixed"</li>
 	 * </ul>
 	 */
 	public static final InterestComputationMethod1Code Actual365Fixed = new InterestComputationMethod1Code() {
@@ -243,12 +243,12 @@ public class InterestComputationMethod1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InterestComputationMethod1Code
 	 * InterestComputationMethod1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ActualActualICMA"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ActualActualICMA"</li>
 	 * </ul>
 	 */
 	public static final InterestComputationMethod1Code ActualActualICMA = new InterestComputationMethod1Code() {
@@ -267,12 +267,12 @@ public class InterestComputationMethod1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InterestComputationMethod1Code
 	 * InterestComputationMethod1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "IC30E360orEuroBondBasismodel1"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "IC30E360orEuroBondBasismodel1"</li>
 	 * </ul>
 	 */
 	public static final InterestComputationMethod1Code IC30E360orEuroBondBasismodel1 = new InterestComputationMethod1Code() {
@@ -291,12 +291,12 @@ public class InterestComputationMethod1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InterestComputationMethod1Code
 	 * InterestComputationMethod1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ActualActualISDA"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ActualActualISDA"</li>
 	 * </ul>
 	 */
 	public static final InterestComputationMethod1Code ActualActualISDA = new InterestComputationMethod1Code() {
@@ -315,12 +315,12 @@ public class InterestComputationMethod1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InterestComputationMethod1Code
 	 * InterestComputationMethod1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Actual365LorActuActubasisRule"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Actual365LorActuActubasisRule"</li>
 	 * </ul>
 	 */
 	public static final InterestComputationMethod1Code Actual365LorActuActubasisRule = new InterestComputationMethod1Code() {
@@ -339,12 +339,12 @@ public class InterestComputationMethod1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InterestComputationMethod1Code
 	 * InterestComputationMethod1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ActualActualAFB"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ActualActualAFB"</li>
 	 * </ul>
 	 */
 	public static final InterestComputationMethod1Code ActualActualAFB = new InterestComputationMethod1Code() {
@@ -363,12 +363,12 @@ public class InterestComputationMethod1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InterestComputationMethod1Code
 	 * InterestComputationMethod1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "IC30360ICMAor30360basicrule"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "IC30360ICMAor30360basicrule"</li>
 	 * </ul>
 	 */
 	public static final InterestComputationMethod1Code IC30360ICMAor30360basicrule = new InterestComputationMethod1Code() {
@@ -387,12 +387,12 @@ public class InterestComputationMethod1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InterestComputationMethod1Code
 	 * InterestComputationMethod1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "IC30E2360orEurobondbasismodel2"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "IC30E2360orEurobondbasismodel2"</li>
 	 * </ul>
 	 */
 	public static final InterestComputationMethod1Code IC30E2360orEurobondbasismodel2 = new InterestComputationMethod1Code() {
@@ -411,12 +411,12 @@ public class InterestComputationMethod1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InterestComputationMethod1Code
 	 * InterestComputationMethod1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "IC30E3360orEurobondbasismodel3"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "IC30E3360orEurobondbasismodel3"</li>
 	 * </ul>
 	 */
 	public static final InterestComputationMethod1Code IC30E3360orEurobondbasismodel3 = new InterestComputationMethod1Code() {
@@ -435,12 +435,12 @@ public class InterestComputationMethod1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InterestComputationMethod1Code
 	 * InterestComputationMethod1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Actual365NL"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Actual365NL"</li>
 	 * </ul>
 	 */
 	public static final InterestComputationMethod1Code Actual365NL = new InterestComputationMethod1Code() {

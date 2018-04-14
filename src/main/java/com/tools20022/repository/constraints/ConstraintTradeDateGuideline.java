@@ -39,10 +39,6 @@ public class ConstraintTradeDateGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails62
 	 * SecuritiesTradeDetails62}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradeDateGuideline"</li>
 	 * <li>
@@ -50,6 +46,10 @@ public class ConstraintTradeDateGuideline {
 	 * definition} =
 	 * "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails62> forSecuritiesTradeDetails62 = new MMConstraint<SecuritiesTradeDetails62>() {
@@ -73,10 +73,6 @@ public class ConstraintTradeDateGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails73
 	 * SecuritiesTradeDetails73}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradeDateGuideline"</li>
 	 * <li>
@@ -84,6 +80,10 @@ public class ConstraintTradeDateGuideline {
 	 * definition} =
 	 * "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -113,10 +113,6 @@ public class ConstraintTradeDateGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails88
 	 * SecuritiesTradeDetails88}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradeDateGuideline"</li>
 	 * <li>
@@ -124,6 +120,10 @@ public class ConstraintTradeDateGuideline {
 	 * definition} =
 	 * "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails88> forSecuritiesTradeDetails88 = new MMConstraint<SecuritiesTradeDetails88>() {
@@ -147,10 +147,6 @@ public class ConstraintTradeDateGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails67
 	 * SecuritiesTradeDetails67}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradeDateGuideline"</li>
 	 * <li>
@@ -158,6 +154,10 @@ public class ConstraintTradeDateGuideline {
 	 * definition} =
 	 * "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -196,10 +196,6 @@ public class ConstraintTradeDateGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails65
 	 * SecuritiesTradeDetails65}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradeDateGuideline"</li>
 	 * <li>
@@ -207,6 +203,10 @@ public class ConstraintTradeDateGuideline {
 	 * definition} =
 	 * "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails65> forSecuritiesTradeDetails65 = new MMConstraint<SecuritiesTradeDetails65>() {
@@ -230,10 +230,6 @@ public class ConstraintTradeDateGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails26
 	 * SecuritiesTradeDetails26}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradeDateGuideline"</li>
 	 * <li>
@@ -241,6 +237,10 @@ public class ConstraintTradeDateGuideline {
 	 * definition} =
 	 * "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -273,10 +273,6 @@ public class ConstraintTradeDateGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails47
 	 * SecuritiesTradeDetails47}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradeDateGuideline"</li>
 	 * <li>
@@ -284,6 +280,10 @@ public class ConstraintTradeDateGuideline {
 	 * definition} =
 	 * "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails47> forSecuritiesTradeDetails47 = new MMConstraint<SecuritiesTradeDetails47>() {
@@ -307,10 +307,6 @@ public class ConstraintTradeDateGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails34
 	 * SecuritiesTradeDetails34}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradeDateGuideline"</li>
 	 * <li>
@@ -318,6 +314,10 @@ public class ConstraintTradeDateGuideline {
 	 * definition} =
 	 * "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -356,10 +356,6 @@ public class ConstraintTradeDateGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails87
 	 * SecuritiesTradeDetails87}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradeDateGuideline"</li>
 	 * <li>
@@ -367,6 +363,10 @@ public class ConstraintTradeDateGuideline {
 	 * definition} =
 	 * "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails87> forSecuritiesTradeDetails87 = new MMConstraint<SecuritiesTradeDetails87>() {
@@ -390,10 +390,6 @@ public class ConstraintTradeDateGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails51
 	 * SecuritiesTradeDetails51}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradeDateGuideline"</li>
 	 * <li>
@@ -401,6 +397,10 @@ public class ConstraintTradeDateGuideline {
 	 * definition} =
 	 * "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -443,10 +443,6 @@ public class ConstraintTradeDateGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails25
 	 * SecuritiesTradeDetails25}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradeDateGuideline"</li>
 	 * <li>
@@ -454,6 +450,10 @@ public class ConstraintTradeDateGuideline {
 	 * definition} =
 	 * "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -486,10 +486,6 @@ public class ConstraintTradeDateGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails66
 	 * SecuritiesTradeDetails66}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradeDateGuideline"</li>
 	 * <li>
@@ -497,6 +493,10 @@ public class ConstraintTradeDateGuideline {
 	 * definition} =
 	 * "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails66> forSecuritiesTradeDetails66 = new MMConstraint<SecuritiesTradeDetails66>() {
@@ -520,10 +520,6 @@ public class ConstraintTradeDateGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails15
 	 * SecuritiesTradeDetails15}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradeDateGuideline"</li>
 	 * <li>
@@ -531,6 +527,10 @@ public class ConstraintTradeDateGuideline {
 	 * definition} =
 	 * "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails15> forSecuritiesTradeDetails15 = new MMConstraint<SecuritiesTradeDetails15>() {
@@ -554,10 +554,6 @@ public class ConstraintTradeDateGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails50
 	 * SecuritiesTradeDetails50}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradeDateGuideline"</li>
 	 * <li>
@@ -565,6 +561,10 @@ public class ConstraintTradeDateGuideline {
 	 * definition} =
 	 * "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -603,10 +603,6 @@ public class ConstraintTradeDateGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails44
 	 * SecuritiesTradeDetails44}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradeDateGuideline"</li>
 	 * <li>
@@ -614,6 +610,10 @@ public class ConstraintTradeDateGuideline {
 	 * definition} =
 	 * "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails44> forSecuritiesTradeDetails44 = new MMConstraint<SecuritiesTradeDetails44>() {
@@ -637,10 +637,6 @@ public class ConstraintTradeDateGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails46
 	 * SecuritiesTradeDetails46}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradeDateGuideline"</li>
 	 * <li>
@@ -648,6 +644,10 @@ public class ConstraintTradeDateGuideline {
 	 * definition} =
 	 * "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails46> forSecuritiesTradeDetails46 = new MMConstraint<SecuritiesTradeDetails46>() {
@@ -671,10 +671,6 @@ public class ConstraintTradeDateGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails52
 	 * SecuritiesTradeDetails52}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradeDateGuideline"</li>
 	 * <li>
@@ -682,6 +678,10 @@ public class ConstraintTradeDateGuideline {
 	 * definition} =
 	 * "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -720,10 +720,6 @@ public class ConstraintTradeDateGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails89
 	 * SecuritiesTradeDetails89}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradeDateGuideline"</li>
 	 * <li>
@@ -731,6 +727,10 @@ public class ConstraintTradeDateGuideline {
 	 * definition} =
 	 * "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails89> forSecuritiesTradeDetails89 = new MMConstraint<SecuritiesTradeDetails89>() {
@@ -754,10 +754,6 @@ public class ConstraintTradeDateGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails1
 	 * SecuritiesTradeDetails1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradeDateGuideline"</li>
 	 * <li>
@@ -765,6 +761,10 @@ public class ConstraintTradeDateGuideline {
 	 * definition} =
 	 * "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -797,10 +797,6 @@ public class ConstraintTradeDateGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails2
 	 * SecuritiesTradeDetails2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradeDateGuideline"</li>
 	 * <li>
@@ -808,6 +804,10 @@ public class ConstraintTradeDateGuideline {
 	 * definition} =
 	 * "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -840,10 +840,6 @@ public class ConstraintTradeDateGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails16
 	 * SecuritiesTradeDetails16}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradeDateGuideline"</li>
 	 * <li>
@@ -851,6 +847,10 @@ public class ConstraintTradeDateGuideline {
 	 * definition} =
 	 * "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails16> forSecuritiesTradeDetails16 = new MMConstraint<SecuritiesTradeDetails16>() {
@@ -874,10 +874,6 @@ public class ConstraintTradeDateGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails79
 	 * SecuritiesTradeDetails79}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradeDateGuideline"</li>
 	 * <li>
@@ -885,6 +881,10 @@ public class ConstraintTradeDateGuideline {
 	 * definition} =
 	 * "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -914,10 +914,6 @@ public class ConstraintTradeDateGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails76
 	 * SecuritiesTradeDetails76}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradeDateGuideline"</li>
 	 * <li>
@@ -925,6 +921,10 @@ public class ConstraintTradeDateGuideline {
 	 * definition} =
 	 * "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -954,10 +954,6 @@ public class ConstraintTradeDateGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails75
 	 * SecuritiesTradeDetails75}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradeDateGuideline"</li>
 	 * <li>
@@ -965,6 +961,10 @@ public class ConstraintTradeDateGuideline {
 	 * definition} =
 	 * "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -994,10 +994,6 @@ public class ConstraintTradeDateGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails63
 	 * SecuritiesTradeDetails63}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradeDateGuideline"</li>
 	 * <li>
@@ -1005,6 +1001,10 @@ public class ConstraintTradeDateGuideline {
 	 * definition} =
 	 * "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails63> forSecuritiesTradeDetails63 = new MMConstraint<SecuritiesTradeDetails63>() {
@@ -1028,10 +1028,6 @@ public class ConstraintTradeDateGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails70
 	 * SecuritiesTradeDetails70}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradeDateGuideline"</li>
 	 * <li>
@@ -1039,6 +1035,10 @@ public class ConstraintTradeDateGuideline {
 	 * definition} =
 	 * "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails70> forSecuritiesTradeDetails70 = new MMConstraint<SecuritiesTradeDetails70>() {
@@ -1062,10 +1062,6 @@ public class ConstraintTradeDateGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails78
 	 * SecuritiesTradeDetails78}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradeDateGuideline"</li>
 	 * <li>
@@ -1073,6 +1069,10 @@ public class ConstraintTradeDateGuideline {
 	 * definition} =
 	 * "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1102,10 +1102,6 @@ public class ConstraintTradeDateGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails27
 	 * SecuritiesTradeDetails27}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradeDateGuideline"</li>
 	 * <li>
@@ -1113,6 +1109,10 @@ public class ConstraintTradeDateGuideline {
 	 * definition} =
 	 * "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails27> forSecuritiesTradeDetails27 = new MMConstraint<SecuritiesTradeDetails27>() {
@@ -1136,10 +1136,6 @@ public class ConstraintTradeDateGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails31
 	 * SecuritiesTradeDetails31}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradeDateGuideline"</li>
 	 * <li>
@@ -1147,6 +1143,10 @@ public class ConstraintTradeDateGuideline {
 	 * definition} =
 	 * "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1185,10 +1185,6 @@ public class ConstraintTradeDateGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails53
 	 * SecuritiesTradeDetails53}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradeDateGuideline"</li>
 	 * <li>
@@ -1196,6 +1192,10 @@ public class ConstraintTradeDateGuideline {
 	 * definition} =
 	 * "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1234,10 +1234,6 @@ public class ConstraintTradeDateGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails43
 	 * SecuritiesTradeDetails43}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradeDateGuideline"</li>
 	 * <li>
@@ -1245,6 +1241,10 @@ public class ConstraintTradeDateGuideline {
 	 * definition} =
 	 * "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails43> forSecuritiesTradeDetails43 = new MMConstraint<SecuritiesTradeDetails43>() {
@@ -1268,10 +1268,6 @@ public class ConstraintTradeDateGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails28
 	 * SecuritiesTradeDetails28}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradeDateGuideline"</li>
 	 * <li>
@@ -1279,6 +1275,10 @@ public class ConstraintTradeDateGuideline {
 	 * definition} =
 	 * "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails28> forSecuritiesTradeDetails28 = new MMConstraint<SecuritiesTradeDetails28>() {
@@ -1302,10 +1302,6 @@ public class ConstraintTradeDateGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails33
 	 * SecuritiesTradeDetails33}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradeDateGuideline"</li>
 	 * <li>
@@ -1313,6 +1309,10 @@ public class ConstraintTradeDateGuideline {
 	 * definition} =
 	 * "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1351,10 +1351,6 @@ public class ConstraintTradeDateGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails86
 	 * SecuritiesTradeDetails86}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradeDateGuideline"</li>
 	 * <li>
@@ -1362,6 +1358,10 @@ public class ConstraintTradeDateGuideline {
 	 * definition} =
 	 * "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails86> forSecuritiesTradeDetails86 = new MMConstraint<SecuritiesTradeDetails86>() {
@@ -1385,10 +1385,6 @@ public class ConstraintTradeDateGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails32
 	 * SecuritiesTradeDetails32}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradeDateGuideline"</li>
 	 * <li>
@@ -1396,6 +1392,10 @@ public class ConstraintTradeDateGuideline {
 	 * definition} =
 	 * "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1434,10 +1434,6 @@ public class ConstraintTradeDateGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails90
 	 * SecuritiesTradeDetails90}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradeDateGuideline"</li>
 	 * <li>
@@ -1445,6 +1441,10 @@ public class ConstraintTradeDateGuideline {
 	 * definition} =
 	 * "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails90> forSecuritiesTradeDetails90 = new MMConstraint<SecuritiesTradeDetails90>() {

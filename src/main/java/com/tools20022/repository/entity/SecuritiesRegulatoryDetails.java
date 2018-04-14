@@ -68,15 +68,15 @@ import java.util.Optional;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "SecuritiesRegulatoryDetails"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Information related to order and required for regulatory purposes."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class SecuritiesRegulatoryDetails {
@@ -107,10 +107,6 @@ public class SecuritiesRegulatoryDetails {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesRegulatoryDetails
 	 * SecuritiesRegulatoryDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OrderRestrictions"</li>
 	 * <li>
@@ -118,6 +114,10 @@ public class SecuritiesRegulatoryDetails {
 	 * definition} =
 	 * "Classification and restrictions linked to an order (for regulatory purpose)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesRegulatoryDetails, OrderClassificationCode> mmOrderRestrictions = new MMBusinessAttribute<SecuritiesRegulatoryDetails, OrderClassificationCode>() {
@@ -159,13 +159,6 @@ public class SecuritiesRegulatoryDetails {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesRegulatoryDetails
 	 * SecuritiesRegulatoryDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = ISO15022Synonym: :22a::TRCN</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BrokerSolicitedTrade"</li>
 	 * <li>
@@ -173,6 +166,13 @@ public class SecuritiesRegulatoryDetails {
 	 * definition} =
 	 * "Indicates whether the trading party has suggested to his client to buy/sell a financial instrument or whether the investor acts on its own without advice from its trading party."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22a::TRCN</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesRegulatoryDetails, YesNoIndicator> mmBrokerSolicitedTrade = new MMBusinessAttribute<SecuritiesRegulatoryDetails, YesNoIndicator>() {
@@ -205,6 +205,10 @@ public class SecuritiesRegulatoryDetails {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesOrder
+	 * SecuritiesOrder}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmLegalParameters
@@ -213,23 +217,19 @@ public class SecuritiesRegulatoryDetails {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesOrder
-	 * SecuritiesOrder}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesRegulatoryDetails
 	 * SecuritiesRegulatoryDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RelatedOrder"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Order for which legal parameters are provided."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesRegulatoryDetails, Optional<SecuritiesOrder>> mmRelatedOrder = new MMBusinessAssociationEnd<SecuritiesRegulatoryDetails, Optional<SecuritiesOrder>>() {

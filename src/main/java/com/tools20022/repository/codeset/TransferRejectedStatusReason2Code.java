@@ -125,6 +125,12 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "TransferRejectedStatusReason2Code"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} =
+ * "Specifies the reason for a transfer or settlement instruction rejected status."
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -135,12 +141,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "TransferRejectedStatusReason2Code"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} =
- * "Specifies the reason for a transfer or settlement instruction rejected status."
- * </li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -155,12 +155,12 @@ public class TransferRejectedStatusReason2Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code
 	 * TransferRejectedStatusReason2Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementDate"</li>
 	 * </ul>
 	 */
 	public static final TransferRejectedStatusReason2Code SettlementDate = new TransferRejectedStatusReason2Code() {
@@ -179,12 +179,12 @@ public class TransferRejectedStatusReason2Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code
 	 * TransferRejectedStatusReason2Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementPlace"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementPlace"</li>
 	 * </ul>
 	 */
 	public static final TransferRejectedStatusReason2Code SettlementPlace = new TransferRejectedStatusReason2Code() {
@@ -203,12 +203,12 @@ public class TransferRejectedStatusReason2Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code
 	 * TransferRejectedStatusReason2Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "FinancialInstrumentIdentification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "FinancialInstrumentIdentification"</li>
 	 * </ul>
 	 */
 	public static final TransferRejectedStatusReason2Code FinancialInstrumentIdentification = new TransferRejectedStatusReason2Code() {
@@ -227,12 +227,12 @@ public class TransferRejectedStatusReason2Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code
 	 * TransferRejectedStatusReason2Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NotEnoughFinancialInstrument"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "NotEnoughFinancialInstrument"</li>
 	 * </ul>
 	 */
 	public static final TransferRejectedStatusReason2Code NotEnoughFinancialInstrument = new TransferRejectedStatusReason2Code() {
@@ -251,12 +251,12 @@ public class TransferRejectedStatusReason2Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code
 	 * TransferRejectedStatusReason2Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementParties"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementParties"</li>
 	 * </ul>
 	 */
 	public static final TransferRejectedStatusReason2Code SettlementParties = new TransferRejectedStatusReason2Code() {
@@ -275,12 +275,12 @@ public class TransferRejectedStatusReason2Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code
 	 * TransferRejectedStatusReason2Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CertificateNumber"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CertificateNumber"</li>
 	 * </ul>
 	 */
 	public static final TransferRejectedStatusReason2Code CertificateNumber = new TransferRejectedStatusReason2Code() {
@@ -299,12 +299,12 @@ public class TransferRejectedStatusReason2Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code
 	 * TransferRejectedStatusReason2Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InvestmentAccount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "InvestmentAccount"</li>
 	 * </ul>
 	 */
 	public static final TransferRejectedStatusReason2Code InvestmentAccount = new TransferRejectedStatusReason2Code() {
@@ -323,12 +323,12 @@ public class TransferRejectedStatusReason2Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code
 	 * TransferRejectedStatusReason2Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AcquisitionDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AcquisitionDate"</li>
 	 * </ul>
 	 */
 	public static final TransferRejectedStatusReason2Code AcquisitionDate = new TransferRejectedStatusReason2Code() {
@@ -347,12 +347,12 @@ public class TransferRejectedStatusReason2Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code
 	 * TransferRejectedStatusReason2Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AccountBlockedForCorporateAction"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AccountBlockedForCorporateAction"</li>
 	 * </ul>
 	 */
 	public static final TransferRejectedStatusReason2Code AccountBlockedForCorporateAction = new TransferRejectedStatusReason2Code() {
@@ -371,12 +371,12 @@ public class TransferRejectedStatusReason2Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code
 	 * TransferRejectedStatusReason2Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AccountBlockedMissingDocuments"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AccountBlockedMissingDocuments"</li>
 	 * </ul>
 	 */
 	public static final TransferRejectedStatusReason2Code AccountBlockedMissingDocuments = new TransferRejectedStatusReason2Code() {
@@ -395,12 +395,12 @@ public class TransferRejectedStatusReason2Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code
 	 * TransferRejectedStatusReason2Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "FinancialInstrumentIdentificationAndName"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "FinancialInstrumentIdentificationAndName"</li>
 	 * </ul>
 	 */
 	public static final TransferRejectedStatusReason2Code FinancialInstrumentIdentificationAndName = new TransferRejectedStatusReason2Code() {
@@ -419,12 +419,12 @@ public class TransferRejectedStatusReason2Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code
 	 * TransferRejectedStatusReason2Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PhysicalDeliveryImpossible"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PhysicalDeliveryImpossible"</li>
 	 * </ul>
 	 */
 	public static final TransferRejectedStatusReason2Code PhysicalDeliveryImpossible = new TransferRejectedStatusReason2Code() {
@@ -443,12 +443,12 @@ public class TransferRejectedStatusReason2Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code
 	 * TransferRejectedStatusReason2Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "LegallyImpossible"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "LegallyImpossible"</li>
 	 * </ul>
 	 */
 	public static final TransferRejectedStatusReason2Code LegallyImpossible = new TransferRejectedStatusReason2Code() {
@@ -467,12 +467,12 @@ public class TransferRejectedStatusReason2Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code
 	 * TransferRejectedStatusReason2Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NotCompliantWithSLA"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "NotCompliantWithSLA"</li>
 	 * </ul>
 	 */
 	public static final TransferRejectedStatusReason2Code NotCompliantWithSLA = new TransferRejectedStatusReason2Code() {
@@ -491,12 +491,12 @@ public class TransferRejectedStatusReason2Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code
 	 * TransferRejectedStatusReason2Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "FinancialInstrumentQuantity"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "FinancialInstrumentQuantity"</li>
 	 * </ul>
 	 */
 	public static final TransferRejectedStatusReason2Code FinancialInstrumentQuantity = new TransferRejectedStatusReason2Code() {
@@ -515,12 +515,12 @@ public class TransferRejectedStatusReason2Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code
 	 * TransferRejectedStatusReason2Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InvestorNameAddressUnknown"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "InvestorNameAddressUnknown"</li>
 	 * </ul>
 	 */
 	public static final TransferRejectedStatusReason2Code InvestorNameAddressUnknown = new TransferRejectedStatusReason2Code() {
@@ -539,12 +539,12 @@ public class TransferRejectedStatusReason2Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code
 	 * TransferRejectedStatusReason2Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InsufficientInvestorData"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "InsufficientInvestorData"</li>
 	 * </ul>
 	 */
 	public static final TransferRejectedStatusReason2Code InsufficientInvestorData = new TransferRejectedStatusReason2Code() {
@@ -563,12 +563,12 @@ public class TransferRejectedStatusReason2Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code
 	 * TransferRejectedStatusReason2Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InvalidAccountServicer"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "InvalidAccountServicer"</li>
 	 * </ul>
 	 */
 	public static final TransferRejectedStatusReason2Code InvalidAccountServicer = new TransferRejectedStatusReason2Code() {
@@ -587,12 +587,12 @@ public class TransferRejectedStatusReason2Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code
 	 * TransferRejectedStatusReason2Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InvalidNomineeAccount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "InvalidNomineeAccount"</li>
 	 * </ul>
 	 */
 	public static final TransferRejectedStatusReason2Code InvalidNomineeAccount = new TransferRejectedStatusReason2Code() {
@@ -611,12 +611,12 @@ public class TransferRejectedStatusReason2Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code
 	 * TransferRejectedStatusReason2Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InvalidNewPlanManager"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "InvalidNewPlanManager"</li>
 	 * </ul>
 	 */
 	public static final TransferRejectedStatusReason2Code InvalidNewPlanManager = new TransferRejectedStatusReason2Code() {
@@ -635,12 +635,12 @@ public class TransferRejectedStatusReason2Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code
 	 * TransferRejectedStatusReason2Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CurrentYearPartial"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CurrentYearPartial"</li>
 	 * </ul>
 	 */
 	public static final TransferRejectedStatusReason2Code CurrentYearPartial = new TransferRejectedStatusReason2Code() {
@@ -659,12 +659,12 @@ public class TransferRejectedStatusReason2Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code
 	 * TransferRejectedStatusReason2Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PartialNotSupported"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PartialNotSupported"</li>
 	 * </ul>
 	 */
 	public static final TransferRejectedStatusReason2Code PartialNotSupported = new TransferRejectedStatusReason2Code() {
@@ -683,12 +683,12 @@ public class TransferRejectedStatusReason2Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code
 	 * TransferRejectedStatusReason2Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "FinancialInstrumentTaxYear"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "FinancialInstrumentTaxYear"</li>
 	 * </ul>
 	 */
 	public static final TransferRejectedStatusReason2Code FinancialInstrumentTaxYear = new TransferRejectedStatusReason2Code() {
@@ -707,12 +707,12 @@ public class TransferRejectedStatusReason2Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code
 	 * TransferRejectedStatusReason2Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InvalidISAType"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "InvalidISAType"</li>
 	 * </ul>
 	 */
 	public static final TransferRejectedStatusReason2Code InvalidISAType = new TransferRejectedStatusReason2Code() {
@@ -731,12 +731,12 @@ public class TransferRejectedStatusReason2Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code
 	 * TransferRejectedStatusReason2Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InvalidCashAccount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "InvalidCashAccount"</li>
 	 * </ul>
 	 */
 	public static final TransferRejectedStatusReason2Code InvalidCashAccount = new TransferRejectedStatusReason2Code() {
@@ -755,12 +755,12 @@ public class TransferRejectedStatusReason2Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code
 	 * TransferRejectedStatusReason2Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DuplicateTransferReference"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DuplicateTransferReference"</li>
 	 * </ul>
 	 */
 	public static final TransferRejectedStatusReason2Code DuplicateTransferReference = new TransferRejectedStatusReason2Code() {

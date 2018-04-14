@@ -53,10 +53,6 @@ public class ConstraintSearchAndReturnCriteriaAndStatementReportRule {
 	 * expression} =
 	 * "&lt;RuleDefinition&gt;&lt;SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;OR&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/SearchCriteria[1]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/StatementReport&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/ReturnCriteria&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;/SimpleRule&gt;&lt;/RuleDefinition&gt;"
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SearchAndReturnCriteriaAndStatementReportRule"</li>
 	 * <li>
@@ -64,6 +60,10 @@ public class ConstraintSearchAndReturnCriteriaAndStatementReportRule {
 	 * definition} =
 	 * "The following combinations are allowed: only Search Criteria, or only Return Criteria, or only a Statement Report, or a combination of Search and Return criteria, or a combination of Search criteria and a Statement Report.\r\nRule rationale: \r\n- If ReturnCriteria are present, they define the expected report.\r\n- If StatementReport is present, it indicates that a statement-type report needs to be returned. In this case, the return message will contain information equivalent to that present in field 61 (Statement Line) of FIN standards, eg, value date, entry date, debit/credit indicator, amount, transaction type identification code, reference for the account owner, reference of the account servicing institution and supplementary details.\r\n- If the StatementReportIndicator equals \"false\" or \"0\" (No), this means that the report type is pre-defined between the transaction administrator and the member."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -99,10 +99,6 @@ public class ConstraintSearchAndReturnCriteriaAndStatementReportRule {
 	 * expression} =
 	 * "&lt;RuleDefinition&gt;&lt;SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;OR&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/SearchCriteria[1]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/StatementReport&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/ReturnCriteria&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;/SimpleRule&gt;&lt;/RuleDefinition&gt;"
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SearchAndReturnCriteriaAndStatementReportRule"</li>
 	 * <li>
@@ -110,6 +106,10 @@ public class ConstraintSearchAndReturnCriteriaAndStatementReportRule {
 	 * definition} =
 	 * "The following combinations are allowed: only Search Criteria, or only Return Criteria, or only a Statement Report, or a combination of Search and Return criteria, or a combination of Search criteria and a Statement Report.\r\nRule rationale: \r\n- If ReturnCriteria are present, they define the expected report.\r\n- If StatementReport is present, it indicates that a statement-type report needs to be returned. In this case, the return message will contain information equivalent to that present in field 61 (Statement Line) of FIN standards, eg, value date, entry date, debit/credit indicator, amount, transaction type identification code, reference for the account owner, reference of the account servicing institution and supplementary details.\r\n- If the StatementReportIndicator equals \"false\" or \"0\" (No), this means that the report type is pre-defined between the transaction administrator and the member."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -155,10 +155,6 @@ public class ConstraintSearchAndReturnCriteriaAndStatementReportRule {
 	 * expression} =
 	 * "&lt;RuleDefinition&gt;&lt;SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;OR&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/SearchCriteria[1]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/StatementReport&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/ReturnCriteria&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;/SimpleRule&gt;&lt;/RuleDefinition&gt;"
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SearchAndReturnCriteriaAndStatementReportRule"</li>
 	 * <li>
@@ -166,6 +162,10 @@ public class ConstraintSearchAndReturnCriteriaAndStatementReportRule {
 	 * definition} =
 	 * "The following combinations are allowed: only Search Criteria, or only Return Criteria, or only a Statement Report, or a combination of Search and Return criteria, or a combination of Search criteria and a Statement Report.\r\nRule rationale: \r\n- If ReturnCriteria are present, they define the expected report.\r\n- If StatementReport is present, it indicates that a statement-type report needs to be returned. In this case, the return message will contain information equivalent to that present in field 61 (Statement Line) of FIN standards, eg, value date, entry date, debit/credit indicator, amount, transaction type identification code, reference for the account owner, reference of the account servicing institution and supplementary details.\r\n- If the StatementReportIndicator equals \"false\" or \"0\" (No), this means that the report type is pre-defined between the transaction administrator and the member."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -204,10 +204,6 @@ public class ConstraintSearchAndReturnCriteriaAndStatementReportRule {
 	 * expression} =
 	 * "&lt;RuleDefinition&gt;&lt;SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;OR&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/SearchCriteria[1]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/StatementReport&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/ReturnCriteria&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;/SimpleRule&gt;&lt;/RuleDefinition&gt;"
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SearchAndReturnCriteriaAndStatementReportRule"</li>
 	 * <li>
@@ -215,6 +211,10 @@ public class ConstraintSearchAndReturnCriteriaAndStatementReportRule {
 	 * definition} =
 	 * "The following combinations are allowed: only Search Criteria, or only Return Criteria, or only a Statement Report, or a combination of Search and Return criteria, or a combination of Search criteria and a Statement Report.\r\nRule rationale: \r\n- If ReturnCriteria are present, they define the expected report.\r\n- If StatementReport is present, it indicates that a statement-type report needs to be returned. In this case, the return message will contain information equivalent to that present in field 61 (Statement Line) of FIN standards, eg, value date, entry date, debit/credit indicator, amount, transaction type identification code, reference for the account owner, reference of the account servicing institution and supplementary details.\r\n- If the StatementReportIndicator equals \"false\" or \"0\" (No), this means that the report type is pre-defined between the transaction administrator and the member."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -256,10 +256,6 @@ public class ConstraintSearchAndReturnCriteriaAndStatementReportRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionCriteria2
 	 * TransactionCriteria2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SearchAndReturnCriteriaAndStatementReportRule"</li>
 	 * <li>
@@ -267,6 +263,10 @@ public class ConstraintSearchAndReturnCriteriaAndStatementReportRule {
 	 * definition} =
 	 * "The following combinations are allowed: only Search Criteria, or only Return Criteria, or only a Statement Report, or a combination of Search and Return criteria, or\na combination of Search criteria and a Statement Report.\nRule rationale: \n- If ReturnCriteria are present, they define the expected report.\n- If StatementReport is present, it indicates that a statement-type report needs to be returned. In this case, the return message will contain information equivalent to that present in field 61 (Statement Line) of FIN standards, eg, value date, entry date, debit/credit indicator, amount, transaction type identification code, reference for the account owner, reference of the account servicing institution and supplementary details.\n- If the StatementReportIndicator equals \"false\" or \"0\" (No), this means that the report type is pre-defined between the transaction administrator and the member."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionCriteria2> forTransactionCriteria2 = new MMConstraint<TransactionCriteria2>() {
@@ -290,10 +290,6 @@ public class ConstraintSearchAndReturnCriteriaAndStatementReportRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionCriteria3
 	 * TransactionCriteria3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SearchAndReturnCriteriaAndStatementReportRule"</li>
 	 * <li>
@@ -301,6 +297,10 @@ public class ConstraintSearchAndReturnCriteriaAndStatementReportRule {
 	 * definition} =
 	 * "The following combinations are allowed: only Search Criteria, or only Return Criteria, or only a Statement Report, or a combination of Search and Return criteria, or\na combination of Search criteria and a Statement Report.\nRule rationale: \n- If ReturnCriteria are present, they define the expected report.\n- If StatementReport is present, it indicates that a statement-type report needs to be returned. In this case, the return message will contain information equivalent to that present in field 61 (Statement Line) of FIN standards, eg, value date, entry date, debit/credit indicator, amount, transaction type identification code, reference for the account owner, reference of the account servicing institution and supplementary details.\n- If the StatementReportIndicator equals \"false\" or \"0\" (No), this means that the report type is pre-defined between the transaction administrator and the member."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionCriteria3> forTransactionCriteria3 = new MMConstraint<TransactionCriteria3>() {

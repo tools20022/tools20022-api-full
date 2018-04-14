@@ -37,10 +37,6 @@ public class ConstraintUnitizedRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution7
 	 * SubscriptionExecution7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnitizedRule"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintUnitizedRule {
 	 * definition} =
 	 * "If HedgeFundOrderType is not present or is not \"NUNI\" in at least one occurrence, then DealingPriceDetails must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubscriptionExecution7> forSubscriptionExecution7 = new MMConstraint<SubscriptionExecution7>() {
@@ -71,10 +71,6 @@ public class ConstraintUnitizedRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution10
 	 * RedemptionExecution10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnitizedRule"</li>
 	 * <li>
@@ -82,6 +78,10 @@ public class ConstraintUnitizedRule {
 	 * definition} =
 	 * "If HedgeFundOrderType is not present or is not \"NUNI\" in at least one occurrence, then DealingPriceDetails must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RedemptionExecution10> forRedemptionExecution10 = new MMConstraint<RedemptionExecution10>() {

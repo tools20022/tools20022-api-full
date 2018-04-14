@@ -200,6 +200,12 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "TradeTransactionCondition1Code"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} =
+ * "Indicates the conditions under which the order/trade is to be/was executed."
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
  * semanticMarkup} = ISO15022Synonym: :22a::TTCO</li>
@@ -213,12 +219,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "TradeTransactionCondition1Code"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} =
- * "Indicates the conditions under which the order/trade is to be/was executed."
- * </li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -233,12 +233,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CumBonus"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CumBonus"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code CumBonus = new TradeTransactionCondition1Code() {
@@ -257,12 +257,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ExBonus"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ExBonus"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code ExBonus = new TradeTransactionCondition1Code() {
@@ -281,12 +281,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CumCoupon"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CumCoupon"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code CumCoupon = new TradeTransactionCondition1Code() {
@@ -305,12 +305,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ExCoupon"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ExCoupon"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code ExCoupon = new TradeTransactionCondition1Code() {
@@ -329,12 +329,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CumDividend"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CumDividend"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code CumDividend = new TradeTransactionCondition1Code() {
@@ -353,12 +353,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ExDividend"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ExDividend"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code ExDividend = new TradeTransactionCondition1Code() {
@@ -377,12 +377,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CumRights"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CumRights"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code CumRights = new TradeTransactionCondition1Code() {
@@ -401,12 +401,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ExRights"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ExRights"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code ExRights = new TradeTransactionCondition1Code() {
@@ -425,12 +425,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CumWarrant"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CumWarrant"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code CumWarrant = new TradeTransactionCondition1Code() {
@@ -449,12 +449,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ExWarrant"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ExWarrant"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code ExWarrant = new TradeTransactionCondition1Code() {
@@ -473,12 +473,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SpecialCumDividend"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SpecialCumDividend"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code SpecialCumDividend = new TradeTransactionCondition1Code() {
@@ -497,12 +497,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SpecialExDividend"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SpecialExDividend"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code SpecialExDividend = new TradeTransactionCondition1Code() {
@@ -521,12 +521,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BrokerDueBill"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BrokerDueBill"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code BrokerDueBill = new TradeTransactionCondition1Code() {
@@ -545,12 +545,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SoldShort"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SoldShort"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code SoldShort = new TradeTransactionCondition1Code() {
@@ -569,12 +569,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Dirty"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Dirty"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code Dirty = new TradeTransactionCondition1Code() {
@@ -593,12 +593,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Clean"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Clean"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code Clean = new TradeTransactionCondition1Code() {
@@ -617,12 +617,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Block"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Block"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code Block = new TradeTransactionCondition1Code() {
@@ -641,12 +641,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "GuaranteedDelivery"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "GuaranteedDelivery"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code GuaranteedDelivery = new TradeTransactionCondition1Code() {
@@ -665,12 +665,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Fractions"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Fractions"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code Fractions = new TradeTransactionCondition1Code() {
@@ -689,12 +689,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CrossTrade"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CrossTrade"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code CrossTrade = new TradeTransactionCondition1Code() {
@@ -713,12 +713,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NoCrossTrade"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "NoCrossTrade"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code NoCrossTrade = new TradeTransactionCondition1Code() {
@@ -737,12 +737,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DirectOrder"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DirectOrder"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code DirectOrder = new TradeTransactionCondition1Code() {
@@ -761,12 +761,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DirectedOrder"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DirectedOrder"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code DirectedOrder = new TradeTransactionCondition1Code() {
@@ -785,12 +785,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "WarehouseTrade"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "WarehouseTrade"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code WarehouseTrade = new TradeTransactionCondition1Code() {
@@ -809,12 +809,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NotIncrease"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "NotIncrease"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code NotIncrease = new TradeTransactionCondition1Code() {
@@ -833,12 +833,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NotReduce"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "NotReduce"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code NotReduce = new TradeTransactionCondition1Code() {
@@ -857,12 +857,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ForwardPriceTrade"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ForwardPriceTrade"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code ForwardPriceTrade = new TradeTransactionCondition1Code() {
@@ -881,12 +881,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "HistoricPriceTrade"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "HistoricPriceTrade"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code HistoricPriceTrade = new TradeTransactionCondition1Code() {
@@ -905,12 +905,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ResultOption"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ResultOption"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code ResultOption = new TradeTransactionCondition1Code() {
@@ -929,12 +929,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ResultRepo"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ResultRepo"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code ResultRepo = new TradeTransactionCondition1Code() {
@@ -953,12 +953,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DeliverCountryIncorporation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DeliverCountryIncorporation"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code DeliverCountryIncorporation = new TradeTransactionCondition1Code() {
@@ -977,12 +977,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DeliveryForm"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DeliveryForm"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code DeliveryForm = new TradeTransactionCondition1Code() {
@@ -1001,12 +1001,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BoardLot"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BoardLot"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code BoardLot = new TradeTransactionCondition1Code() {
@@ -1025,12 +1025,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BadName"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BadName"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code BadName = new TradeTransactionCondition1Code() {
@@ -1049,12 +1049,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BestExecution"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BestExecution"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code BestExecution = new TradeTransactionCondition1Code() {
@@ -1073,12 +1073,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Call"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Call"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code Call = new TradeTransactionCondition1Code() {
@@ -1097,12 +1097,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ClosureBeforeRollOver"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ClosureBeforeRollOver"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code ClosureBeforeRollOver = new TradeTransactionCondition1Code() {
@@ -1121,12 +1121,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Monthly"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Monthly"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code Monthly = new TradeTransactionCondition1Code() {
@@ -1145,12 +1145,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NewTradeFollowingRollover"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "NewTradeFollowingRollover"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code NewTradeFollowingRollover = new TradeTransactionCondition1Code() {
@@ -1169,12 +1169,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TradeFollowingRollover"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "TradeFollowingRollover"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code TradeFollowingRollover = new TradeTransactionCondition1Code() {
@@ -1193,12 +1193,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Putt"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Putt"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code Putt = new TradeTransactionCondition1Code() {
@@ -1217,12 +1217,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SpecialCumCoupon"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SpecialCumCoupon"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code SpecialCumCoupon = new TradeTransactionCondition1Code() {
@@ -1241,12 +1241,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SpecialExCoupon"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SpecialExCoupon"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code SpecialExCoupon = new TradeTransactionCondition1Code() {
@@ -1265,12 +1265,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SpecialExBonus"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SpecialExBonus"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code SpecialExBonus = new TradeTransactionCondition1Code() {
@@ -1289,12 +1289,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SpecialCumBonus"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SpecialCumBonus"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code SpecialCumBonus = new TradeTransactionCondition1Code() {
@@ -1313,12 +1313,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SpecialCumRights"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SpecialCumRights"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code SpecialCumRights = new TradeTransactionCondition1Code() {
@@ -1337,12 +1337,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SpecialExRights"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SpecialExRights"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code SpecialExRights = new TradeTransactionCondition1Code() {
@@ -1361,12 +1361,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SpecialCumCapitalRepayments"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SpecialCumCapitalRepayments"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code SpecialCumCapitalRepayments = new TradeTransactionCondition1Code() {
@@ -1385,12 +1385,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SpecialExCapitalRepayments"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SpecialExCapitalRepayments"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code SpecialExCapitalRepayments = new TradeTransactionCondition1Code() {
@@ -1409,12 +1409,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CashSettlement"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CashSettlement"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code CashSettlement = new TradeTransactionCondition1Code() {
@@ -1433,12 +1433,12 @@ public class TradeTransactionCondition1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
 	 * TradeTransactionCondition1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SpecialPrice"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SpecialPrice"</li>
 	 * </ul>
 	 */
 	public static final TradeTransactionCondition1Code SpecialPrice = new TradeTransactionCondition1Code() {

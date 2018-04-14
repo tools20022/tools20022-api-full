@@ -85,6 +85,10 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "IntermediateSecurityDistributionType3Code"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} = "Specifies the type of intermediate security distribution."</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -95,10 +99,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "IntermediateSecurityDistributionType3Code"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Specifies the type of intermediate security distribution."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -113,12 +113,12 @@ public class IntermediateSecurityDistributionType3Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType3Code
 	 * IntermediateSecurityDistributionType3Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ReverseRights"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ReverseRights"</li>
 	 * </ul>
 	 */
 	public static final IntermediateSecurityDistributionType3Code ReverseRights = new IntermediateSecurityDistributionType3Code() {
@@ -137,12 +137,12 @@ public class IntermediateSecurityDistributionType3Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType3Code
 	 * IntermediateSecurityDistributionType3Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BonusRights"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BonusRights"</li>
 	 * </ul>
 	 */
 	public static final IntermediateSecurityDistributionType3Code BonusRights = new IntermediateSecurityDistributionType3Code() {
@@ -161,12 +161,12 @@ public class IntermediateSecurityDistributionType3Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType3Code
 	 * IntermediateSecurityDistributionType3Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DividendReinvestment"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DividendReinvestment"</li>
 	 * </ul>
 	 */
 	public static final IntermediateSecurityDistributionType3Code DividendReinvestment = new IntermediateSecurityDistributionType3Code() {
@@ -185,12 +185,12 @@ public class IntermediateSecurityDistributionType3Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType3Code
 	 * IntermediateSecurityDistributionType3Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CashDividend"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CashDividend"</li>
 	 * </ul>
 	 */
 	public static final IntermediateSecurityDistributionType3Code CashDividend = new IntermediateSecurityDistributionType3Code() {
@@ -209,12 +209,12 @@ public class IntermediateSecurityDistributionType3Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType3Code
 	 * IntermediateSecurityDistributionType3Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DividendOption"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DividendOption"</li>
 	 * </ul>
 	 */
 	public static final IntermediateSecurityDistributionType3Code DividendOption = new IntermediateSecurityDistributionType3Code() {
@@ -233,12 +233,12 @@ public class IntermediateSecurityDistributionType3Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType3Code
 	 * IntermediateSecurityDistributionType3Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SubscriptionRights"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SubscriptionRights"</li>
 	 * </ul>
 	 */
 	public static final IntermediateSecurityDistributionType3Code SubscriptionRights = new IntermediateSecurityDistributionType3Code() {
@@ -257,12 +257,12 @@ public class IntermediateSecurityDistributionType3Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType3Code
 	 * IntermediateSecurityDistributionType3Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OpenOfferRights"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "OpenOfferRights"</li>
 	 * </ul>
 	 */
 	public static final IntermediateSecurityDistributionType3Code OpenOfferRights = new IntermediateSecurityDistributionType3Code() {
@@ -281,12 +281,12 @@ public class IntermediateSecurityDistributionType3Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType3Code
 	 * IntermediateSecurityDistributionType3Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ScripDividendOrPayment"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ScripDividendOrPayment"</li>
 	 * </ul>
 	 */
 	public static final IntermediateSecurityDistributionType3Code ScripDividendOrPayment = new IntermediateSecurityDistributionType3Code() {
@@ -305,12 +305,12 @@ public class IntermediateSecurityDistributionType3Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType3Code
 	 * IntermediateSecurityDistributionType3Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "StockDividend"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "StockDividend"</li>
 	 * </ul>
 	 */
 	public static final IntermediateSecurityDistributionType3Code StockDividend = new IntermediateSecurityDistributionType3Code() {
@@ -329,12 +329,12 @@ public class IntermediateSecurityDistributionType3Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType3Code
 	 * IntermediateSecurityDistributionType3Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InterestPayment"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "InterestPayment"</li>
 	 * </ul>
 	 */
 	public static final IntermediateSecurityDistributionType3Code InterestPayment = new IntermediateSecurityDistributionType3Code() {
@@ -353,12 +353,12 @@ public class IntermediateSecurityDistributionType3Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType3Code
 	 * IntermediateSecurityDistributionType3Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "LiquidationDividendOrPayment"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "LiquidationDividendOrPayment"</li>
 	 * </ul>
 	 */
 	public static final IntermediateSecurityDistributionType3Code LiquidationDividendOrPayment = new IntermediateSecurityDistributionType3Code() {
@@ -377,12 +377,12 @@ public class IntermediateSecurityDistributionType3Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType3Code
 	 * IntermediateSecurityDistributionType3Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SpinOff"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SpinOff"</li>
 	 * </ul>
 	 */
 	public static final IntermediateSecurityDistributionType3Code SpinOff = new IntermediateSecurityDistributionType3Code() {
@@ -401,12 +401,12 @@ public class IntermediateSecurityDistributionType3Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType3Code
 	 * IntermediateSecurityDistributionType3Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "StockSplit"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "StockSplit"</li>
 	 * </ul>
 	 */
 	public static final IntermediateSecurityDistributionType3Code StockSplit = new IntermediateSecurityDistributionType3Code() {

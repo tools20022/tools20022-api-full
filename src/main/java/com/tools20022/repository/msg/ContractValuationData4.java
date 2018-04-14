@@ -61,6 +61,10 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "ContractValuationData4"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} = "Information related to contract valuation."</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
  * constraint} =
  * <ul>
@@ -73,10 +77,6 @@ import javax.xml.bind.annotation.XmlType;
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "ContractValuationData4"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Information related to contract valuation."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -106,10 +106,6 @@ public class ContractValuationData4 {
 	 * ContractValuationData4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Val"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Value"</li>
 	 * <li>
@@ -117,6 +113,10 @@ public class ContractValuationData4 {
 	 * definition} =
 	 * "Mark to market valuation of the contract, or mark to model valuation. The CCP’s valuation to be used for a cleared trade."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<ContractValuationData4, Optional<AmountAndDirection54>> mmValue = new MMMessageAssociationEnd<ContractValuationData4, Optional<AmountAndDirection54>>() {
@@ -167,10 +167,6 @@ public class ContractValuationData4 {
 	 * ContractValuationData4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TmStmp"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TimeStamp"</li>
 	 * <li>
@@ -178,6 +174,10 @@ public class ContractValuationData4 {
 	 * definition} =
 	 * "Date and time of the last valuation.\r\n\r\nUsage: For mark-to-market valuation the date and time of publishing of reference prices shall be reported."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ContractValuationData4, Optional<ISODateTime>> mmTimeStamp = new MMMessageAttribute<ContractValuationData4, Optional<ISODateTime>>() {
@@ -223,10 +223,6 @@ public class ContractValuationData4 {
 	 * ContractValuationData4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Tp"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Type"</li>
 	 * <li>
@@ -234,6 +230,10 @@ public class ContractValuationData4 {
 	 * definition} =
 	 * "Indicate whether valuation was performed mark to market, mark to model or provided by the CCP."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ContractValuationData4, Optional<ValuationType1Code>> mmType = new MMMessageAttribute<ContractValuationData4, Optional<ValuationType1Code>>() {

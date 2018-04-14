@@ -37,10 +37,6 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification28
 	 * SubAccountIdentification28}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SubSafekeepingReportingRule"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * definition} =
 	 * "Use of consolidated reports on a sub-safekeeping accounts must be bilaterally agreed between sender and receiver."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -80,10 +80,6 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification13
 	 * SubAccountIdentification13}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SubSafekeepingReportingRule"</li>
 	 * <li>
@@ -91,6 +87,10 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * definition} =
 	 * "Use of consolidated reports on a sub-safekeeping accounts must be bilaterally agreed between sender and receiver."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubAccountIdentification13> forSubAccountIdentification13 = new MMConstraint<SubAccountIdentification13>() {
@@ -114,10 +114,6 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification40
 	 * SubAccountIdentification40}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SubSafekeepingReportingRule"</li>
 	 * <li>
@@ -125,6 +121,10 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * definition} =
 	 * "Use of consolidated reports on a sub-safekeeping accounts must be bilaterally agreed between sender and receiver."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubAccountIdentification40> forSubAccountIdentification40 = new MMConstraint<SubAccountIdentification40>() {
@@ -148,10 +148,6 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification16
 	 * SubAccountIdentification16}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SubSafekeepingReportingRule"</li>
 	 * <li>
@@ -159,6 +155,10 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * definition} =
 	 * "Use of consolidated reports on a sub-safekeeping accounts must be bilaterally agreed between sender and receiver."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubAccountIdentification16> forSubAccountIdentification16 = new MMConstraint<SubAccountIdentification16>() {
@@ -182,10 +182,6 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification32
 	 * SubAccountIdentification32}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SubSafekeepingReportingRule"</li>
 	 * <li>
@@ -193,6 +189,10 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * definition} =
 	 * "Use of consolidated reports on a sub-safekeeping accounts must be bilaterally agreed between sender and receiver."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubAccountIdentification32> forSubAccountIdentification32 = new MMConstraint<SubAccountIdentification32>() {
@@ -216,10 +216,6 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification22
 	 * SubAccountIdentification22}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SubSafekeepingReportingRule"</li>
 	 * <li>
@@ -227,6 +223,10 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * definition} =
 	 * "Use of consolidated reports on a sub-safekeeping accounts must be bilaterally agreed between sender and receiver."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubAccountIdentification22> forSubAccountIdentification22 = new MMConstraint<SubAccountIdentification22>() {
@@ -250,10 +250,6 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification48
 	 * SubAccountIdentification48}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SubSafekeepingReportingRule"</li>
 	 * <li>
@@ -261,6 +257,10 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * definition} =
 	 * "Use of consolidated reports on a sub-safekeeping account must be bilaterally agreed between sender and receiver."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -290,10 +290,6 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification25
 	 * SubAccountIdentification25}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SubSafekeepingReportingRule"</li>
 	 * <li>
@@ -301,6 +297,10 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * definition} =
 	 * "Use of consolidated reports on a sub-safekeeping accounts must be bilaterally agreed between sender and receiver."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubAccountIdentification25> forSubAccountIdentification25 = new MMConstraint<SubAccountIdentification25>() {
@@ -324,10 +324,6 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification10
 	 * SubAccountIdentification10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SubSafekeepingReportingRule"</li>
 	 * <li>
@@ -335,6 +331,10 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * definition} =
 	 * "Use of consolidated reports on a sub-safekeeping accounts must be bilaterally agreed between sender and receiver."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubAccountIdentification10> forSubAccountIdentification10 = new MMConstraint<SubAccountIdentification10>() {
@@ -358,10 +358,6 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubaccountIdentification7
 	 * SubaccountIdentification7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SubSafekeepingReportingRule"</li>
 	 * <li>
@@ -369,6 +365,10 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * definition} =
 	 * "Use of consolidated reports on a sub-safekeeping accounts must be bilaterally agreed between sender and receiver."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubaccountIdentification7> forSubaccountIdentification7 = new MMConstraint<SubaccountIdentification7>() {
@@ -392,10 +392,6 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification11
 	 * SubAccountIdentification11}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SubSafekeepingReportingRule"</li>
 	 * <li>
@@ -403,6 +399,10 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * definition} =
 	 * "Use of consolidated reports on a sub-safekeeping accounts must be bilaterally agreed between sender and receiver."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubAccountIdentification11> forSubAccountIdentification11 = new MMConstraint<SubAccountIdentification11>() {
@@ -426,10 +426,6 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification46
 	 * SubAccountIdentification46}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SubSafekeepingReportingRule"</li>
 	 * <li>
@@ -437,6 +433,10 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * definition} =
 	 * "Use of consolidated reports on a sub-safekeeping accounts must be bilaterally agreed between sender and receiver."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubAccountIdentification46> forSubAccountIdentification46 = new MMConstraint<SubAccountIdentification46>() {
@@ -460,10 +460,6 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification23
 	 * SubAccountIdentification23}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SubSafekeepingReportingRule"</li>
 	 * <li>
@@ -471,6 +467,10 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * definition} =
 	 * "Use of consolidated reports on a sub-safekeeping accounts must be bilaterally agreed between sender and receiver."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubAccountIdentification23> forSubAccountIdentification23 = new MMConstraint<SubAccountIdentification23>() {
@@ -494,10 +494,6 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubaccountIdentification8
 	 * SubaccountIdentification8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SubSafekeepingReportingRule"</li>
 	 * <li>
@@ -505,6 +501,10 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * definition} =
 	 * "Use of consolidated reports on a sub-safekeeping accounts must be bilaterally agreed between sender and receiver."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubaccountIdentification8> forSubaccountIdentification8 = new MMConstraint<SubaccountIdentification8>() {
@@ -528,10 +528,6 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification20
 	 * SubAccountIdentification20}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SubSafekeepingReportingRule"</li>
 	 * <li>
@@ -539,6 +535,10 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * definition} =
 	 * "Use of consolidated reports on a sub-safekeeping accounts must be bilaterally agreed between sender and receiver."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubAccountIdentification20> forSubAccountIdentification20 = new MMConstraint<SubAccountIdentification20>() {
@@ -562,10 +562,6 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification37
 	 * SubAccountIdentification37}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SubSafekeepingReportingRule"</li>
 	 * <li>
@@ -573,6 +569,10 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * definition} =
 	 * "Use of consolidated reports on a sub-safekeeping accounts must be bilaterally agreed between sender and receiver."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -611,10 +611,6 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification12
 	 * SubAccountIdentification12}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SubSafekeepingReportingRule"</li>
 	 * <li>
@@ -622,6 +618,10 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * definition} =
 	 * "Use of consolidated reports on a sub-safekeeping accounts must be bilaterally agreed between sender and receiver."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubAccountIdentification12> forSubAccountIdentification12 = new MMConstraint<SubAccountIdentification12>() {
@@ -645,10 +645,6 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification45
 	 * SubAccountIdentification45}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SubSafekeepingReportingRule"</li>
 	 * <li>
@@ -656,6 +652,10 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * definition} =
 	 * "Use of consolidated reports on a sub-safekeeping accounts must be bilaterally agreed between sender and receiver."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubAccountIdentification45> forSubAccountIdentification45 = new MMConstraint<SubAccountIdentification45>() {
@@ -679,10 +679,6 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification42
 	 * SubAccountIdentification42}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SubSafekeepingReportingRule"</li>
 	 * <li>
@@ -690,6 +686,10 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * definition} =
 	 * "Use of consolidated reports on a sub-safekeeping accounts must be bilaterally agreed between sender and receiver."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -719,10 +719,6 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification17
 	 * SubAccountIdentification17}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SubSafekeepingReportingRule"</li>
 	 * <li>
@@ -730,6 +726,10 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * definition} =
 	 * "Use of consolidated reports on a sub-safekeeping accounts must be bilaterally agreed between sender and receiver."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubAccountIdentification17> forSubAccountIdentification17 = new MMConstraint<SubAccountIdentification17>() {
@@ -753,10 +753,6 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification43
 	 * SubAccountIdentification43}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SubSafekeepingReportingRule"</li>
 	 * <li>
@@ -764,6 +760,10 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * definition} =
 	 * "Use of consolidated reports on a sub-safekeeping accounts must be bilaterally agreed between sender and receiver."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -793,10 +793,6 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification39
 	 * SubAccountIdentification39}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SubSafekeepingReportingRule"</li>
 	 * <li>
@@ -804,6 +800,10 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * definition} =
 	 * "Use of consolidated reports on a sub-safekeeping accounts must be bilaterally agreed between sender and receiver."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubAccountIdentification39> forSubAccountIdentification39 = new MMConstraint<SubAccountIdentification39>() {
@@ -827,10 +827,6 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification29
 	 * SubAccountIdentification29}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SubSafekeepingReportingRule"</li>
 	 * <li>
@@ -838,6 +834,10 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * definition} =
 	 * "Use of consolidated reports on a sub-safekeeping accounts must be bilaterally agreed between sender and receiver."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -870,10 +870,6 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification26
 	 * SubAccountIdentification26}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SubSafekeepingReportingRule"</li>
 	 * <li>
@@ -881,6 +877,10 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * definition} =
 	 * "Use of consolidated reports on a sub-safekeeping accounts must be bilaterally agreed between sender and receiver."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubAccountIdentification26> forSubAccountIdentification26 = new MMConstraint<SubAccountIdentification26>() {
@@ -904,10 +904,6 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification27
 	 * SubAccountIdentification27}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SubSafekeepingReportingRule"</li>
 	 * <li>
@@ -915,6 +911,10 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * definition} =
 	 * "Use of consolidated reports on a sub-safekeeping account must be bilaterally agreed between sender and receiver."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -947,10 +947,6 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification38
 	 * SubAccountIdentification38}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SubSafekeepingReportingRule"</li>
 	 * <li>
@@ -958,6 +954,10 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * definition} =
 	 * "Use of consolidated reports on a sub-safekeeping accounts must be bilaterally agreed between sender and receiver."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -996,10 +996,6 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification31
 	 * SubAccountIdentification31}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SubSafekeepingReportingRule"</li>
 	 * <li>
@@ -1007,6 +1003,10 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * definition} =
 	 * "Use of consolidated reports on a sub-safekeeping accounts must be bilaterally agreed between sender and receiver."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubAccountIdentification31> forSubAccountIdentification31 = new MMConstraint<SubAccountIdentification31>() {
@@ -1030,10 +1030,6 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification19
 	 * SubAccountIdentification19}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SubSafekeepingReportingRule"</li>
 	 * <li>
@@ -1041,6 +1037,10 @@ public class ConstraintSubSafekeepingReportingRule {
 	 * definition} =
 	 * "Use of consolidated reports on a sub-safekeeping accounts must be bilaterally agreed between sender and receiver."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubAccountIdentification19> forSubAccountIdentification19 = new MMConstraint<SubAccountIdentification19>() {

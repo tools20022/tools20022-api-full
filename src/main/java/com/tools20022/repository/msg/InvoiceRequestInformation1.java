@@ -91,16 +91,16 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "InvoiceRequestInformation1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Set of characteristics that unambiguously identify the single invoice financing request."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -132,10 +132,6 @@ public class InvoiceRequestInformation1 {
 	 * InvoiceRequestInformation1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "InvcGnlInf"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InvoiceGeneralInformation"</li>
 	 * <li>
@@ -143,6 +139,10 @@ public class InvoiceRequestInformation1 {
 	 * definition} =
 	 * "General information that unambiguously identify the invoice to be financed, such as invoice type, invoice number and issue date."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<InvoiceRequestInformation1, DocumentGeneralInformation1> mmInvoiceGeneralInformation = new MMMessageAssociationEnd<InvoiceRequestInformation1, DocumentGeneralInformation1>() {
@@ -192,10 +192,6 @@ public class InvoiceRequestInformation1 {
 	 * InvoiceRequestInformation1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "InvcTtlsInf"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InvoiceTotalsInformation"</li>
 	 * <li>
@@ -203,6 +199,10 @@ public class InvoiceRequestInformation1 {
 	 * definition} =
 	 * "Specifies totals related to the invoice, such as total invoice amount and total tax amount."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<InvoiceRequestInformation1, InvoiceTotals1> mmInvoiceTotalsInformation = new MMMessageAssociationEnd<InvoiceRequestInformation1, InvoiceTotals1>() {
@@ -254,16 +254,16 @@ public class InvoiceRequestInformation1 {
 	 * InvoiceRequestInformation1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CdtDbtNoteAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CreditDebitNoteAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Amount of credit/debit note related to the invoice to be financed."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<InvoiceRequestInformation1, Optional<ActiveCurrencyAndAmount>> mmCreditDebitNoteAmount = new MMMessageAttribute<InvoiceRequestInformation1, Optional<ActiveCurrencyAndAmount>>() {
@@ -311,10 +311,6 @@ public class InvoiceRequestInformation1 {
 	 * InvoiceRequestInformation1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "InstlmtInf"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InstalmentInformation"</li>
 	 * <li>
@@ -322,6 +318,10 @@ public class InvoiceRequestInformation1 {
 	 * definition} =
 	 * "Details of a single instalment to be financed, related to an invoice settlement (amount, payment due date)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<InvoiceRequestInformation1, List<Instalment1>> mmInstalmentInformation = new MMMessageAssociationEnd<InvoiceRequestInformation1, List<Instalment1>>() {
@@ -371,10 +371,6 @@ public class InvoiceRequestInformation1 {
 	 * InvoiceRequestInformation1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ReqdAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RequestedAmount"</li>
 	 * <li>
@@ -382,6 +378,10 @@ public class InvoiceRequestInformation1 {
 	 * definition} =
 	 * "Amount requested by the requestor party, related to a single invoice to be financed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<InvoiceRequestInformation1, Optional<FinancingRateOrAmountChoice>> mmRequestedAmount = new MMMessageAssociationEnd<InvoiceRequestInformation1, Optional<FinancingRateOrAmountChoice>>() {
@@ -432,10 +432,6 @@ public class InvoiceRequestInformation1 {
 	 * InvoiceRequestInformation1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Spplr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Supplier"</li>
 	 * <li>
@@ -443,6 +439,10 @@ public class InvoiceRequestInformation1 {
 	 * definition} =
 	 * "Person or organization that represents the creditor for the invoice to be financed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<InvoiceRequestInformation1, PartyAndAccountIdentificationAndContactInformation1> mmSupplier = new MMMessageAssociationEnd<InvoiceRequestInformation1, PartyAndAccountIdentificationAndContactInformation1>() {
@@ -493,10 +493,6 @@ public class InvoiceRequestInformation1 {
 	 * InvoiceRequestInformation1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Buyr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Buyer"</li>
 	 * <li>
@@ -504,6 +500,10 @@ public class InvoiceRequestInformation1 {
 	 * definition} =
 	 * "Person or organization that represents the debtor for the invoice to be financed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<InvoiceRequestInformation1, PartyIdentificationAndContactInformation1> mmBuyer = new MMMessageAssociationEnd<InvoiceRequestInformation1, PartyIdentificationAndContactInformation1>() {
@@ -548,10 +548,6 @@ public class InvoiceRequestInformation1 {
 	 * InvoiceRequestInformation1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "InvcPmtInf"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InvoicePaymentInformation"</li>
 	 * <li>
@@ -559,6 +555,10 @@ public class InvoiceRequestInformation1 {
 	 * definition} =
 	 * "Specifies payment terms and conditions related to a single invoice to be financed, including identifier of possible account used for payment."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<InvoiceRequestInformation1, PaymentInformation15> mmInvoicePaymentInformation = new MMMessageAssociationEnd<InvoiceRequestInformation1, PaymentInformation15>() {
@@ -608,10 +608,6 @@ public class InvoiceRequestInformation1 {
 	 * InvoiceRequestInformation1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RfrdDoc"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReferredDocument"</li>
 	 * <li>
@@ -619,6 +615,10 @@ public class InvoiceRequestInformation1 {
 	 * definition} =
 	 * "Information about a document related to the invoice to be financed, in structured form."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<InvoiceRequestInformation1, List<ReferredDocumentInformation2>> mmReferredDocument = new MMMessageAssociationEnd<InvoiceRequestInformation1, List<ReferredDocumentInformation2>>() {

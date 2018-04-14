@@ -44,10 +44,6 @@ public class ConstraintEntitlementAssesment1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.EntitlementAssessment2
 	 * EntitlementAssessment2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EntitlementAssesment1Rule"</li>
 	 * <li>
@@ -55,6 +51,10 @@ public class ConstraintEntitlementAssesment1Rule {
 	 * definition} =
 	 * "At least one message element in the list SecuritiesBlockingDeadline, SecuritiesBlockingMarketDeadline, SecuritiesBlockingSTPDeadline, SecuritiesBlockingPeriodEndDate, EntitlementFixingDate, RegistrationSecuritiesDeadline, RegistrationSecuritiesSTPDeadline, RegistrationSecuritiesMarketDeadline, RegistrationParticipationDeadline, RegistrationParticipationSTPDeadline, RegistrationParticipationMarketDeadline must be present. More than one message element in the list may be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -87,10 +87,6 @@ public class ConstraintEntitlementAssesment1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.EntitlementAssessment1
 	 * EntitlementAssessment1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EntitlementAssesment1Rule"</li>
 	 * <li>
@@ -98,6 +94,10 @@ public class ConstraintEntitlementAssesment1Rule {
 	 * definition} =
 	 * "At least one message element in the list SecuritiesBlockingDeadline, SecuritiesBlockingMarketDeadline, SecuritiesBlockingSTPDeadline, SecuritiesBlockingPeriodEndDate, EntitlementFixingDate, RegistrationSecuritiesDeadline, RegistrationSecuritiesSTPDeadline, RegistrationSecuritiesMarketDeadline, RegistrationParticipationDeadline, RegistrationParticipationSTPDeadline, RegistrationParticipationMarketDeadline must be present. More than one message element in the list may be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<EntitlementAssessment1> forEntitlementAssessment1 = new MMConstraint<EntitlementAssessment1>() {
@@ -121,10 +121,6 @@ public class ConstraintEntitlementAssesment1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.EntitlementAssessment3
 	 * EntitlementAssessment3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EntitlementAssesment1Rule"</li>
 	 * <li>
@@ -132,6 +128,10 @@ public class ConstraintEntitlementAssesment1Rule {
 	 * definition} =
 	 * "At least one message element in the list SecuritiesBlockingDeadline, SecuritiesBlockingMarketDeadline, SecuritiesBlockingSTPDeadline, SecuritiesBlockingPeriodEndDate, EntitlementFixingDate, RegistrationSecuritiesDeadline, RegistrationSecuritiesSTPDeadline, RegistrationSecuritiesMarketDeadline, RegistrationParticipationDeadline, RegistrationParticipationSTPDeadline, RegistrationParticipationMarketDeadline must be present. More than one message element in the list may be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =

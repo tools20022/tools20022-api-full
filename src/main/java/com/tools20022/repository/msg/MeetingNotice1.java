@@ -136,16 +136,16 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "MeetingNotice1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Information about the general meeting, specifying the participation requirements and the voting procedures. Alternatively, it may indicate where such information may be obtained."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -178,10 +178,6 @@ public class MeetingNotice1 {
 	 * {@linkplain com.tools20022.repository.msg.MeetingNotice1 MeetingNotice1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MtgId"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MeetingIdentification"</li>
 	 * <li>
@@ -189,6 +185,10 @@ public class MeetingNotice1 {
 	 * definition} =
 	 * "Identification assigned to a general meeting by the party notifying the meeting. It must be unique for the party notifying the meeting."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<MeetingNotice1, Optional<Max35Text>> mmMeetingIdentification = new MMMessageAttribute<MeetingNotice1, Optional<Max35Text>>() {
@@ -237,10 +237,6 @@ public class MeetingNotice1 {
 	 * {@linkplain com.tools20022.repository.msg.MeetingNotice1 MeetingNotice1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "IssrMtgId"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IssuerMeetingIdentification"</li>
 	 * <li>
@@ -248,6 +244,10 @@ public class MeetingNotice1 {
 	 * definition} =
 	 * "Identification assigned to a general meeting by the issuer. It must be unique for the issuer."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<MeetingNotice1, Optional<Max35Text>> mmIssuerMeetingIdentification = new MMMessageAttribute<MeetingNotice1, Optional<Max35Text>>() {
@@ -297,16 +297,16 @@ public class MeetingNotice1 {
 	 * {@linkplain com.tools20022.repository.msg.MeetingNotice1 MeetingNotice1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Tp"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Type"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies the type of meeting for which instructions are sent."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<MeetingNotice1, MeetingType1Code> mmType = new MMMessageAttribute<MeetingNotice1, MeetingType1Code>() {
@@ -355,15 +355,15 @@ public class MeetingNotice1 {
 	 * {@linkplain com.tools20022.repository.msg.MeetingNotice1 MeetingNotice1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AnncmntDt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AnnouncementDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Official meeting announcement date."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<MeetingNotice1, Optional<ISODate>> mmAnnouncementDate = new MMMessageAttribute<MeetingNotice1, Optional<ISODate>>() {
@@ -413,10 +413,6 @@ public class MeetingNotice1 {
 	 * {@linkplain com.tools20022.repository.msg.MeetingNotice1 MeetingNotice1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AttndncReqrd"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AttendanceRequired"</li>
 	 * <li>
@@ -424,6 +420,10 @@ public class MeetingNotice1 {
 	 * definition} =
 	 * "Indicates whether physical participation to a general meeting is required in order to be allowed to vote."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<MeetingNotice1, Optional<YesNoIndicator>> mmAttendanceRequired = new MMMessageAttribute<MeetingNotice1, Optional<YesNoIndicator>>() {
@@ -472,10 +472,6 @@ public class MeetingNotice1 {
 	 * {@linkplain com.tools20022.repository.msg.MeetingNotice1 MeetingNotice1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AttndncConfInf"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AttendanceConfirmationInformation"</li>
 	 * <li>
@@ -483,6 +479,10 @@ public class MeetingNotice1 {
 	 * definition} =
 	 * "Indicates how to order the attendance card or to give notice of attendance."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<MeetingNotice1, Optional<Max350Text>> mmAttendanceConfirmationInformation = new MMMessageAttribute<MeetingNotice1, Optional<Max350Text>>() {
@@ -531,10 +531,6 @@ public class MeetingNotice1 {
 	 * {@linkplain com.tools20022.repository.msg.MeetingNotice1 MeetingNotice1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AttndncConfDdln"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AttendanceConfirmationDeadline"</li>
 	 * <li>
@@ -542,6 +538,10 @@ public class MeetingNotice1 {
 	 * definition} =
 	 * "Date and time by which the beneficial owner or agent must notify of their intention to participate in a meeting. This deadline is set by an intermediary."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<MeetingNotice1, Optional<ISODateTime>> mmAttendanceConfirmationDeadline = new MMMessageAttribute<MeetingNotice1, Optional<ISODateTime>>() {
@@ -590,10 +590,6 @@ public class MeetingNotice1 {
 	 * {@linkplain com.tools20022.repository.msg.MeetingNotice1 MeetingNotice1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AttndncConfElctrncDdln"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AttendanceConfirmationElectronicDeadline"</li>
 	 * <li>
@@ -601,6 +597,10 @@ public class MeetingNotice1 {
 	 * definition} =
 	 * "Date and time by which the beneficial owner or agent must notify of their intention to participate in a meeting (STP mode). This deadline is set by an intermediary."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<MeetingNotice1, Optional<ISODateTime>> mmAttendanceConfirmationElectronicDeadline = new MMMessageAttribute<MeetingNotice1, Optional<ISODateTime>>() {
@@ -649,10 +649,6 @@ public class MeetingNotice1 {
 	 * {@linkplain com.tools20022.repository.msg.MeetingNotice1 MeetingNotice1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AttndncConfMktDdln"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AttendanceConfirmationMarketDeadline"</li>
 	 * <li>
@@ -660,6 +656,10 @@ public class MeetingNotice1 {
 	 * definition} =
 	 * "Date and time by which the attendance to the meeting should be confirmed. This deadline is set by the issuer."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<MeetingNotice1, Optional<ISODateTime>> mmAttendanceConfirmationMarketDeadline = new MMMessageAttribute<MeetingNotice1, Optional<ISODateTime>>() {
@@ -708,10 +708,6 @@ public class MeetingNotice1 {
 	 * {@linkplain com.tools20022.repository.msg.MeetingNotice1 MeetingNotice1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AddtlDcmnttnURLAdr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalDocumentationURLAddress"</li>
 	 * <li>
@@ -719,6 +715,10 @@ public class MeetingNotice1 {
 	 * definition} =
 	 * "Address to use over the www (HTTP) service where addtional information on the meeting may be found."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<MeetingNotice1, Optional<Max256Text>> mmAdditionalDocumentationURLAddress = new MMMessageAttribute<MeetingNotice1, Optional<Max256Text>>() {
@@ -767,10 +767,6 @@ public class MeetingNotice1 {
 	 * {@linkplain com.tools20022.repository.msg.MeetingNotice1 MeetingNotice1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RsltnPrpslDdln"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ResolutionProposalDeadline"</li>
 	 * <li>
@@ -778,6 +774,10 @@ public class MeetingNotice1 {
 	 * definition} =
 	 * "Date and time by which security holders can propose amendments or new resolutions. This deadline is set by an intermediary."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<MeetingNotice1, Optional<ISODate>> mmResolutionProposalDeadline = new MMMessageAttribute<MeetingNotice1, Optional<ISODate>>() {
@@ -826,10 +826,6 @@ public class MeetingNotice1 {
 	 * {@linkplain com.tools20022.repository.msg.MeetingNotice1 MeetingNotice1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RsltnPrpslMktDdln"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ResolutionProposalMarketDeadline"</li>
 	 * <li>
@@ -837,6 +833,10 @@ public class MeetingNotice1 {
 	 * definition} =
 	 * "Date and time by which security holders can propose amendments or new resolutions. This deadline is set by the issuer."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<MeetingNotice1, Optional<ISODate>> mmResolutionProposalMarketDeadline = new MMMessageAttribute<MeetingNotice1, Optional<ISODate>>() {
@@ -884,16 +884,16 @@ public class MeetingNotice1 {
 	 * {@linkplain com.tools20022.repository.msg.MeetingNotice1 MeetingNotice1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrxyAppntmntNtfctnAdr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ProxyAppointmentNotificationAddress"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Address where the information on the proxy should be sent."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<MeetingNotice1, Optional<PostalAddress1>> mmProxyAppointmentNotificationAddress = new MMMessageAssociationEnd<MeetingNotice1, Optional<PostalAddress1>>() {
@@ -944,10 +944,6 @@ public class MeetingNotice1 {
 	 * {@linkplain com.tools20022.repository.msg.MeetingNotice1 MeetingNotice1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TtlNbOfSctiesOutsdng"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TotalNumberOfSecuritiesOutstanding"</li>
 	 * <li>
@@ -955,6 +951,10 @@ public class MeetingNotice1 {
 	 * definition} =
 	 * "Number of securities admitted to the vote, expressed as an amount and a currency."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<MeetingNotice1, Optional<CurrencyAndAmount>> mmTotalNumberOfSecuritiesOutstanding = new MMMessageAttribute<MeetingNotice1, Optional<CurrencyAndAmount>>() {
@@ -1003,15 +1003,15 @@ public class MeetingNotice1 {
 	 * {@linkplain com.tools20022.repository.msg.MeetingNotice1 MeetingNotice1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TtlNbOfVtngRghts"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TotalNumberOfVotingRights"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Number of rights admitted to the vote."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<MeetingNotice1, Optional<Number>> mmTotalNumberOfVotingRights = new MMMessageAttribute<MeetingNotice1, Optional<Number>>() {
@@ -1058,10 +1058,6 @@ public class MeetingNotice1 {
 	 * {@linkplain com.tools20022.repository.msg.MeetingNotice1 MeetingNotice1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CtctPrsnDtls"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ContactPersonDetails"</li>
 	 * <li>
@@ -1069,6 +1065,10 @@ public class MeetingNotice1 {
 	 * definition} =
 	 * "Contact person at the party organising the meeting, at the issuer or at an intermediary."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<MeetingNotice1, List<MeetingContactPerson>> mmContactPersonDetails = new MMMessageAssociationEnd<MeetingNotice1, List<MeetingContactPerson>>() {
@@ -1118,16 +1118,16 @@ public class MeetingNotice1 {
 	 * {@linkplain com.tools20022.repository.msg.MeetingNotice1 MeetingNotice1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RsltPblctnDt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ResultPublicationDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Date on which a company publishes the results of its meeting."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<MeetingNotice1, Optional<ISODate>> mmResultPublicationDate = new MMMessageAttribute<MeetingNotice1, Optional<ISODate>>() {
@@ -1175,10 +1175,6 @@ public class MeetingNotice1 {
 	 * {@linkplain com.tools20022.repository.msg.MeetingNotice1 MeetingNotice1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "InittdByHldr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InitiatedByHolder"</li>
 	 * <li>
@@ -1186,6 +1182,10 @@ public class MeetingNotice1 {
 	 * definition} =
 	 * "Identifies the security holder or the association of security holders which initiated the meeting."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<MeetingNotice1, Optional<NameAndAddress5>> mmInitiatedByHolder = new MMMessageAssociationEnd<MeetingNotice1, Optional<NameAndAddress5>>() {
@@ -1234,10 +1234,6 @@ public class MeetingNotice1 {
 	 * {@linkplain com.tools20022.repository.msg.MeetingNotice1 MeetingNotice1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "InittdByCrt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InitiatedByCourt"</li>
 	 * <li>
@@ -1245,6 +1241,10 @@ public class MeetingNotice1 {
 	 * definition} =
 	 * "Identifies the court of justice which requested that the meeting take place."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<MeetingNotice1, Optional<NameAndAddress5>> mmInitiatedByCourt = new MMMessageAssociationEnd<MeetingNotice1, Optional<NameAndAddress5>>() {
@@ -1290,15 +1290,15 @@ public class MeetingNotice1 {
 	 * {@linkplain com.tools20022.repository.msg.MeetingNotice1 MeetingNotice1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrxyNotAllwd"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ProxyNotAllowed"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates that no proxy is allowed for a meeting."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<MeetingNotice1, Optional<ProxyNotAllowedCode>> mmProxyNotAllowed = new MMMessageAttribute<MeetingNotice1, Optional<ProxyNotAllowedCode>>() {
@@ -1345,15 +1345,15 @@ public class MeetingNotice1 {
 	 * {@linkplain com.tools20022.repository.msg.MeetingNotice1 MeetingNotice1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Prxy"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Proxy"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the elements required to assign a proxy."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<MeetingNotice1, Optional<ProxyParameters>> mmProxy = new MMMessageAssociationEnd<MeetingNotice1, Optional<ProxyParameters>>() {
@@ -1403,10 +1403,6 @@ public class MeetingNotice1 {
 	 * {@linkplain com.tools20022.repository.msg.MeetingNotice1 MeetingNotice1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RsltnPrpslThrshld"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ResolutionProposalThreshold"</li>
 	 * <li>
@@ -1414,6 +1410,10 @@ public class MeetingNotice1 {
 	 * definition} =
 	 * "Specifies the minimum stake in share capital or cash value or number of security holders required to table resolutions."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<MeetingNotice1, Optional<Max350Text>> mmResolutionProposalThreshold = new MMMessageAttribute<MeetingNotice1, Optional<Max350Text>>() {
@@ -1463,10 +1463,6 @@ public class MeetingNotice1 {
 	 * {@linkplain com.tools20022.repository.msg.MeetingNotice1 MeetingNotice1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RsltnPrpslThrshldPctg"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ResolutionProposalThresholdPercentage"</li>
 	 * <li>
@@ -1474,6 +1470,10 @@ public class MeetingNotice1 {
 	 * definition} =
 	 * "Specifies the minimum stake in share capital or cash value or number of security holders required to table resolutions. This minimum is expressed as a percentage."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<MeetingNotice1, Optional<PercentageRate>> mmResolutionProposalThresholdPercentage = new MMMessageAttribute<MeetingNotice1, Optional<PercentageRate>>() {
@@ -1519,12 +1519,12 @@ public class MeetingNotice1 {
 	 * MeetingNotice1.mmInitiatedByCourt}</li>
 	 * </ul>
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InitiatedByHolderOrInitiatedByCourt"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "InitiatedByHolderOrInitiatedByCourt"</li>
 	 * </ul>
 	 */
 	public static final MMXor InitiatedByHolderOrInitiatedByCourt = new MMXor() {
@@ -1553,12 +1553,12 @@ public class MeetingNotice1 {
 	 * MeetingNotice1.mmProxy}</li>
 	 * </ul>
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ProxyAuthorisedOrNot"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ProxyAuthorisedOrNot"</li>
 	 * </ul>
 	 */
 	public static final MMXor ProxyAuthorisedOrNot = new MMXor() {
@@ -1588,12 +1588,12 @@ public class MeetingNotice1 {
 	 * MeetingNotice1.mmResolutionProposalThresholdPercentage}</li>
 	 * </ul>
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ResolutionProposalThresholdOrPercentage"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ResolutionProposalThresholdOrPercentage"</li>
 	 * </ul>
 	 */
 	public static final MMXor ResolutionProposalThresholdOrPercentage = new MMXor() {

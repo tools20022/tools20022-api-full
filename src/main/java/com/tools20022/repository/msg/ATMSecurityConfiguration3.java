@@ -71,16 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "ATMSecurityConfiguration3"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Configuration of the encryption or digital envelope, if the security module is able to perform encryption."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
  * nextVersions} =
  * <ul>
@@ -119,10 +119,6 @@ public class ATMSecurityConfiguration3 {
 	 * ATMSecurityConfiguration3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AsmmtrcNcrptn"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AsymmetricEncryption"</li>
 	 * <li>
@@ -130,6 +126,10 @@ public class ATMSecurityConfiguration3 {
 	 * definition} =
 	 * "True if the security module is able to perform encryption with an asymmetric key."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ATMSecurityConfiguration3, Optional<TrueFalseIndicator>> mmAsymmetricEncryption = new MMMessageAttribute<ATMSecurityConfiguration3, Optional<TrueFalseIndicator>>() {
@@ -174,10 +174,6 @@ public class ATMSecurityConfiguration3 {
 	 * ATMSecurityConfiguration3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AsmmtrcKeyStdId"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AsymmetricKeyStandardIdentification"</li>
 	 * <li>
@@ -185,6 +181,10 @@ public class ATMSecurityConfiguration3 {
 	 * definition} =
 	 * "True if the security module is able to identify an asymmetric key with certificate issuer X.500 name and certificate serial number. False if a proprietary asymmetric key identifier is required."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ATMSecurityConfiguration3, Optional<TrueFalseIndicator>> mmAsymmetricKeyStandardIdentification = new MMMessageAttribute<ATMSecurityConfiguration3, Optional<TrueFalseIndicator>>() {
@@ -229,16 +229,16 @@ public class ATMSecurityConfiguration3 {
 	 * ATMSecurityConfiguration3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AsmmtrcNcrptnAlgo"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AsymmetricEncryptionAlgorithm"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Asymmetric encryption algorithm the security module is able to manage."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ATMSecurityConfiguration3, List<Algorithm7Code>> mmAsymmetricEncryptionAlgorithm = new MMMessageAttribute<ATMSecurityConfiguration3, List<Algorithm7Code>>() {
@@ -282,10 +282,6 @@ public class ATMSecurityConfiguration3 {
 	 * ATMSecurityConfiguration3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SmmtrcTrnsprtKey"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SymmetricTransportKey"</li>
 	 * <li>
@@ -293,6 +289,10 @@ public class ATMSecurityConfiguration3 {
 	 * definition} =
 	 * "True if the security module is able to manage a symmetric transport session key to protect cryptographic keys and data. False if only a previously exchanged symmetric key must be used; a proprietary symmetric key identifier is then used."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ATMSecurityConfiguration3, Optional<TrueFalseIndicator>> mmSymmetricTransportKey = new MMMessageAttribute<ATMSecurityConfiguration3, Optional<TrueFalseIndicator>>() {
@@ -337,10 +337,6 @@ public class ATMSecurityConfiguration3 {
 	 * ATMSecurityConfiguration3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SmmtrcTrnsprtKeyAlgo"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SymmetricTransportKeyAlgorithm"</li>
 	 * <li>
@@ -348,6 +344,10 @@ public class ATMSecurityConfiguration3 {
 	 * definition} =
 	 * "Symmetric transport session key algorithm the security module is able to manage."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -400,16 +400,16 @@ public class ATMSecurityConfiguration3 {
 	 * ATMSecurityConfiguration3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SmmtrcNcrptnAlgo"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SymmetricEncryptionAlgorithm"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Symmetric encryption algorithm the security module is able to manage."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ATMSecurityConfiguration3, List<Algorithm15Code>> mmSymmetricEncryptionAlgorithm = new MMMessageAttribute<ATMSecurityConfiguration3, List<Algorithm15Code>>() {
@@ -453,10 +453,6 @@ public class ATMSecurityConfiguration3 {
 	 * ATMSecurityConfiguration3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NcrptnFrmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EncryptionFormat"</li>
 	 * <li>
@@ -464,6 +460,10 @@ public class ATMSecurityConfiguration3 {
 	 * definition} =
 	 * "Format of data before encryption, if the format is not plaintext or implicit."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ATMSecurityConfiguration3, List<EncryptionFormat1Code>> mmEncryptionFormat = new MMMessageAttribute<ATMSecurityConfiguration3, List<EncryptionFormat1Code>>() {

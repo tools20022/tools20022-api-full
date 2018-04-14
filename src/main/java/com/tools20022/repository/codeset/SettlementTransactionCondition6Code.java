@@ -112,6 +112,11 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "SettlementTransactionCondition6Code"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} =
+ * "Specifies the conditions under which the order/trade is to be settled."</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -122,11 +127,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "SettlementTransactionCondition6Code"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} =
- * "Specifies the conditions under which the order/trade is to be settled."</li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
  * nextVersions} =
  * <ul>
@@ -149,12 +149,12 @@ public class SettlementTransactionCondition6Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition6Code
 	 * SettlementTransactionCondition6Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Assignement"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Assignement"</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionCondition6Code Assignement = new SettlementTransactionCondition6Code() {
@@ -173,12 +173,12 @@ public class SettlementTransactionCondition6Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition6Code
 	 * SettlementTransactionCondition6Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BuytoCover"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BuytoCover"</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionCondition6Code BuytoCover = new SettlementTransactionCondition6Code() {
@@ -197,12 +197,12 @@ public class SettlementTransactionCondition6Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition6Code
 	 * SettlementTransactionCondition6Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Clean"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Clean"</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionCondition6Code Clean = new SettlementTransactionCondition6Code() {
@@ -221,12 +221,12 @@ public class SettlementTransactionCondition6Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition6Code
 	 * SettlementTransactionCondition6Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Dirty"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Dirty"</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionCondition6Code Dirty = new SettlementTransactionCondition6Code() {
@@ -245,12 +245,12 @@ public class SettlementTransactionCondition6Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition6Code
 	 * SettlementTransactionCondition6Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DeliveryWithoutMatching"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DeliveryWithoutMatching"</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionCondition6Code DeliveryWithoutMatching = new SettlementTransactionCondition6Code() {
@@ -269,12 +269,12 @@ public class SettlementTransactionCondition6Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition6Code
 	 * SettlementTransactionCondition6Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Drawn"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Drawn"</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionCondition6Code Drawn = new SettlementTransactionCondition6Code() {
@@ -293,12 +293,12 @@ public class SettlementTransactionCondition6Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition6Code
 	 * SettlementTransactionCondition6Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Exercised"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Exercised"</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionCondition6Code Exercised = new SettlementTransactionCondition6Code() {
@@ -317,12 +317,12 @@ public class SettlementTransactionCondition6Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition6Code
 	 * SettlementTransactionCondition6Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "FreeCleanSettlement"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "FreeCleanSettlement"</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionCondition6Code FreeCleanSettlement = new SettlementTransactionCondition6Code() {
@@ -341,12 +341,12 @@ public class SettlementTransactionCondition6Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition6Code
 	 * SettlementTransactionCondition6Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "KnockedOut"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "KnockedOut"</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionCondition6Code KnockedOut = new SettlementTransactionCondition6Code() {
@@ -365,12 +365,12 @@ public class SettlementTransactionCondition6Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition6Code
 	 * SettlementTransactionCondition6Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Physical"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Physical"</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionCondition6Code Physical = new SettlementTransactionCondition6Code() {
@@ -389,12 +389,12 @@ public class SettlementTransactionCondition6Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition6Code
 	 * SettlementTransactionCondition6Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Residual"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Residual"</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionCondition6Code Residual = new SettlementTransactionCondition6Code() {
@@ -413,12 +413,12 @@ public class SettlementTransactionCondition6Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition6Code
 	 * SettlementTransactionCondition6Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ShortSell"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ShortSell"</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionCondition6Code ShortSell = new SettlementTransactionCondition6Code() {
@@ -437,12 +437,12 @@ public class SettlementTransactionCondition6Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition6Code
 	 * SettlementTransactionCondition6Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SpecialDelivery"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SpecialDelivery"</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionCondition6Code SpecialDelivery = new SettlementTransactionCondition6Code() {
@@ -461,12 +461,12 @@ public class SettlementTransactionCondition6Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition6Code
 	 * SettlementTransactionCondition6Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SplitSettlement"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SplitSettlement"</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionCondition6Code SplitSettlement = new SettlementTransactionCondition6Code() {
@@ -485,12 +485,12 @@ public class SettlementTransactionCondition6Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition6Code
 	 * SettlementTransactionCondition6Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Expired"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Expired"</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionCondition6Code Expired = new SettlementTransactionCondition6Code() {
@@ -509,12 +509,12 @@ public class SettlementTransactionCondition6Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition6Code
 	 * SettlementTransactionCondition6Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PendingSale"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PendingSale"</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionCondition6Code PendingSale = new SettlementTransactionCondition6Code() {
@@ -533,12 +533,12 @@ public class SettlementTransactionCondition6Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition6Code
 	 * SettlementTransactionCondition6Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Unexposed"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Unexposed"</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionCondition6Code Unexposed = new SettlementTransactionCondition6Code() {
@@ -557,12 +557,12 @@ public class SettlementTransactionCondition6Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition6Code
 	 * SettlementTransactionCondition6Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TripartySegregation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "TripartySegregation"</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionCondition6Code TripartySegregation = new SettlementTransactionCondition6Code() {
@@ -581,12 +581,12 @@ public class SettlementTransactionCondition6Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition6Code
 	 * SettlementTransactionCondition6Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NoAutomaticMarketClaim"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "NoAutomaticMarketClaim"</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionCondition6Code NoAutomaticMarketClaim = new SettlementTransactionCondition6Code() {
@@ -605,12 +605,12 @@ public class SettlementTransactionCondition6Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition6Code
 	 * SettlementTransactionCondition6Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Transformation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Transformation"</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionCondition6Code Transformation = new SettlementTransactionCondition6Code() {
@@ -629,12 +629,12 @@ public class SettlementTransactionCondition6Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition6Code
 	 * SettlementTransactionCondition6Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Rehypothecation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Rehypothecation"</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionCondition6Code Rehypothecation = new SettlementTransactionCondition6Code() {
@@ -653,12 +653,12 @@ public class SettlementTransactionCondition6Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition6Code
 	 * SettlementTransactionCondition6Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AcceptAfterRegularSettlementDeadline"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AcceptAfterRegularSettlementDeadline"</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionCondition6Code AcceptAfterRegularSettlementDeadline = new SettlementTransactionCondition6Code() {

@@ -36,10 +36,6 @@ public class ConstraintStockLocateRequiredRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.OrderParameters1
 	 * OrderParameters1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "StockLocateRequiredRule"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintStockLocateRequiredRule {
 	 * definition} =
 	 * "If Type contains the value SSHO (SellShort), then StockLocatedRequired must be present and must contain the value \"true\" or \"1\" (Yes)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<OrderParameters1> forOrderParameters1 = new MMConstraint<OrderParameters1>() {

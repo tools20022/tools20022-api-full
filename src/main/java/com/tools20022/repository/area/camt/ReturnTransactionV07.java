@@ -113,6 +113,13 @@ import javax.xml.bind.annotation.*;
  * <strong>Constant fields:</strong>
  * <ul>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code camt.006.001.07}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.CashManagementLatestVersion
+ * CashManagementLatestVersion}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
  * <ul>
@@ -139,13 +146,12 @@ import javax.xml.bind.annotation.*;
  * rootElement} = "Document"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
  * xmlTag} = "RtrTx"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.CashManagementLatestVersion
- * CashManagementLatestVersion}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code camt.006.001.07}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "ReturnTransactionV07"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} =
+ * "Scope\r\nThe ReturnTransaction message is sent by the transaction administrator to a member of the system.\r\nIt is used to provide information on transactions and booked entries held at the transaction administrator.\r\nThe Return Transaction message can be sent as a response to a related GetTransaction message (pull mode) or initiated by the transaction administrator (push mode). The push of information can take place either at prearranged times or as a warning or alarm when a problem has occurred.\r\nUsage\r\nFollowing normal business flows, transactions registered by the transaction administrator may be queued for later settlement (because of insufficient funds available, because of risk or liquidity limits, etc.). A transaction may have a series of statuses. These can be transient (such as pending or related types) and final (such as rejected or settled).\r\nMembers of a system need to receive information about the payments queue(s) and must have the ability to take action (that is, cancel or modify the transaction(s) to be settled). Note, however, that actions by a member will always concern transactions in a transient status.\r\nAt any time during operating hours of the system, the member can query the transaction administrator to get information about transactions, whatever their status.\r\nThese requests will concern either all transactions, all transactions within a particular status or a specific transaction.\r\nThe member can request information about transactions through a series of criteria, corresponding to the known information stored within the transaction administrator. Based on the criteria received within the request, the transaction administrator will select items that match the request and report them to the requester.\r\nThe transaction administrator may also send a ReturnTransaction message with pre-defined information at times previously agreed with the member or to warn the member about a particular problem that may have arisen and which needs attention.\r\nThe message from the transaction administrator can contain information based on the following elements:\r\n- provenance or destination of the payment (payment to/payment from)\r\n- transaction reference\r\n- transfer value date\r\n- payment instruction reference\r\n- payment instruction status, as registered at the transaction administrator\r\n- instructed amount and/or currency\r\n- interbank settlement amount and/or currency\r\n- credit/debit indicator of the payment instruction/transaction\r\n- message used for the payment instruction\r\n- priority of the payment transaction\r\n- period in which the payment instruction should be processed (processing validity time)\r\n- instructions given, related to the processing of the transaction\r\n- type of payment instructed\r\n- account identification (entries booked to a specific account)\r\n- entry amount and/or currency\r\n- entry debit/credit indicator (if absent, all entries should be reported)\r\n- status of the entry (pending, booked.)\r\n- entry date and time\r\n- currency of the account\r\n- type of the account\r\n- entry reference\r\n- entry date\r\n- transfer reason\r\n- details related to the status of the payment instruction\r\nAn element that is particular to the Get/Return Transaction pair is the Statement Report. When a GetTransaction message is sent requesting a statement report, the related ReturnTransaction message will provide a pre-defined set of return criteria per transaction. The information returned contains the following details for each transaction:\r\n- value date\r\n- entry date\r\n- debit/credit code\r\n- entry amount\r\n- method of payment (payment instrument or message type)\r\n- entry reference\r\n- transaction reference\r\n- supplementary details\r\nAdditional information on the generic design of the Get/Return messages can be found in the section How to Use the Cash Management Messages."
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
  * constraint} =
  * <ul>
@@ -158,12 +164,6 @@ import javax.xml.bind.annotation.*;
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "ReturnTransactionV07"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} =
- * "Scope\r\nThe ReturnTransaction message is sent by the transaction administrator to a member of the system.\r\nIt is used to provide information on transactions and booked entries held at the transaction administrator.\r\nThe Return Transaction message can be sent as a response to a related GetTransaction message (pull mode) or initiated by the transaction administrator (push mode). The push of information can take place either at prearranged times or as a warning or alarm when a problem has occurred.\r\nUsage\r\nFollowing normal business flows, transactions registered by the transaction administrator may be queued for later settlement (because of insufficient funds available, because of risk or liquidity limits, etc.). A transaction may have a series of statuses. These can be transient (such as pending or related types) and final (such as rejected or settled).\r\nMembers of a system need to receive information about the payments queue(s) and must have the ability to take action (that is, cancel or modify the transaction(s) to be settled). Note, however, that actions by a member will always concern transactions in a transient status.\r\nAt any time during operating hours of the system, the member can query the transaction administrator to get information about transactions, whatever their status.\r\nThese requests will concern either all transactions, all transactions within a particular status or a specific transaction.\r\nThe member can request information about transactions through a series of criteria, corresponding to the known information stored within the transaction administrator. Based on the criteria received within the request, the transaction administrator will select items that match the request and report them to the requester.\r\nThe transaction administrator may also send a ReturnTransaction message with pre-defined information at times previously agreed with the member or to warn the member about a particular problem that may have arisen and which needs attention.\r\nThe message from the transaction administrator can contain information based on the following elements:\r\n- provenance or destination of the payment (payment to/payment from)\r\n- transaction reference\r\n- transfer value date\r\n- payment instruction reference\r\n- payment instruction status, as registered at the transaction administrator\r\n- instructed amount and/or currency\r\n- interbank settlement amount and/or currency\r\n- credit/debit indicator of the payment instruction/transaction\r\n- message used for the payment instruction\r\n- priority of the payment transaction\r\n- period in which the payment instruction should be processed (processing validity time)\r\n- instructions given, related to the processing of the transaction\r\n- type of payment instructed\r\n- account identification (entries booked to a specific account)\r\n- entry amount and/or currency\r\n- entry debit/credit indicator (if absent, all entries should be reported)\r\n- status of the entry (pending, booked.)\r\n- entry date and time\r\n- currency of the account\r\n- type of the account\r\n- entry reference\r\n- entry date\r\n- transfer reason\r\n- details related to the status of the payment instruction\r\nAn element that is particular to the Get/Return Transaction pair is the Statement Report. When a GetTransaction message is sent requesting a statement report, the related ReturnTransaction message will provide a pre-defined set of return criteria per transaction. The information returned contains the following details for each transaction:\r\n- value date\r\n- entry date\r\n- debit/credit code\r\n- entry amount\r\n- method of payment (payment instrument or message type)\r\n- entry reference\r\n- transaction reference\r\n- supplementary details\r\nAdditional information on the generic design of the Get/Return messages can be found in the section How to Use the Cash Management Messages."
- * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -184,15 +184,15 @@ public class ReturnTransactionV07 {
 	 * MessageHeader8}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MsgHdr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MessageHeader"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Common business identification for the message."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock<ReturnTransactionV07, MessageHeader8> mmMessageHeader = new MMMessageBuildingBlock<ReturnTransactionV07, MessageHeader8>() {
@@ -230,15 +230,15 @@ public class ReturnTransactionV07 {
 	 * TransactionReportOrError3Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RptOrErr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReportOrError"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Reports on transactions."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock<ReturnTransactionV07, TransactionReportOrError3Choice> mmReportOrError = new MMMessageBuildingBlock<ReturnTransactionV07, TransactionReportOrError3Choice>() {
@@ -276,10 +276,6 @@ public class ReturnTransactionV07 {
 	 * SupplementaryData1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SplmtryData"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SupplementaryData"</li>
 	 * <li>
@@ -287,6 +283,10 @@ public class ReturnTransactionV07 {
 	 * definition} =
 	 * "Additional information that cannot be captured in the structured elements and/or any other specific block."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock<ReturnTransactionV07, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<ReturnTransactionV07, List<SupplementaryData1>>() {

@@ -76,16 +76,16 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "QuoteCancellation1Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Choice between the type of quote to be cancelled. Not required when cancelling all quotes."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -116,10 +116,6 @@ public class QuoteCancellation1Choice {
 	 * QuoteCancellation1Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "FinInstrmDtls"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FinancialInstrumentDetails"</li>
 	 * <li>
@@ -127,6 +123,10 @@ public class QuoteCancellation1Choice {
 	 * definition} =
 	 * "Provides details related to the financial instrument whose quotes are to be cancelled."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<QuoteCancellation1Choice, List<SecurityIdentification7>> mmFinancialInstrumentDetails = new MMMessageAssociationEnd<QuoteCancellation1Choice, List<SecurityIdentification7>>() {
@@ -175,10 +175,6 @@ public class QuoteCancellation1Choice {
 	 * QuoteCancellation1Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "FinInstrmAttrbts"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FinancialInstrumentAttributes"</li>
 	 * <li>
@@ -186,6 +182,10 @@ public class QuoteCancellation1Choice {
 	 * definition} =
 	 * "Provides details about the financial instrument attributes whose quotes are to be cancelled."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<QuoteCancellation1Choice, List<FinancialInstrumentAttributes1>> mmFinancialInstrumentAttributes = new MMMessageAssociationEnd<QuoteCancellation1Choice, List<FinancialInstrumentAttributes1>>() {
@@ -234,10 +234,6 @@ public class QuoteCancellation1Choice {
 	 * QuoteCancellation1Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Stiptns"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Stipulations"</li>
 	 * <li>
@@ -245,6 +241,10 @@ public class QuoteCancellation1Choice {
 	 * definition} =
 	 * "Provides details about the financial instrument stipulations whose quotes are to be cancelled."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<QuoteCancellation1Choice, List<FinancialInstrumentStipulations>> mmStipulations = new MMMessageAssociationEnd<QuoteCancellation1Choice, List<FinancialInstrumentStipulations>>() {
@@ -293,10 +293,6 @@ public class QuoteCancellation1Choice {
 	 * QuoteCancellation1Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "UndrlygFinInstrmDtls"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnderlyingFinancialInstrumentDetails"</li>
 	 * <li>
@@ -304,6 +300,10 @@ public class QuoteCancellation1Choice {
 	 * definition} =
 	 * "Provides details related to the underlying financial instrument whose quotes are to be cancelled."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<QuoteCancellation1Choice, List<SecurityIdentification7>> mmUnderlyingFinancialInstrumentDetails = new MMMessageAssociationEnd<QuoteCancellation1Choice, List<SecurityIdentification7>>() {
@@ -352,10 +352,6 @@ public class QuoteCancellation1Choice {
 	 * QuoteCancellation1Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "UndrlygFinInstrmAttrbts"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnderlyingFinancialInstrumentAttributes"</li>
 	 * <li>
@@ -363,6 +359,10 @@ public class QuoteCancellation1Choice {
 	 * definition} =
 	 * "Provides details about the underlying financial instrument attributes whose quotes are to be cancelled."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<QuoteCancellation1Choice, List<FinancialInstrumentAttributes1>> mmUnderlyingFinancialInstrumentAttributes = new MMMessageAssociationEnd<QuoteCancellation1Choice, List<FinancialInstrumentAttributes1>>() {
@@ -411,10 +411,6 @@ public class QuoteCancellation1Choice {
 	 * QuoteCancellation1Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "UndrlygStiptns"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnderlyingStipulations"</li>
 	 * <li>
@@ -422,6 +418,10 @@ public class QuoteCancellation1Choice {
 	 * definition} =
 	 * "Provides details about the underlying financial instrument stipulations whose quotes are to be cancelled."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<QuoteCancellation1Choice, List<FinancialInstrumentStipulations>> mmUnderlyingStipulations = new MMMessageAssociationEnd<QuoteCancellation1Choice, List<FinancialInstrumentStipulations>>() {
@@ -469,10 +469,6 @@ public class QuoteCancellation1Choice {
 	 * QuoteCancellation1Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "InstrmLegGrpDtls"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InstrumentLegGroupDetails"</li>
 	 * <li>
@@ -480,6 +476,10 @@ public class QuoteCancellation1Choice {
 	 * definition} =
 	 * "Provides details about each intrument leg whose quotes are to be canceled."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<QuoteCancellation1Choice, List<InstrumentLeg2>> mmInstrumentLegGroupDetails = new MMMessageAssociationEnd<QuoteCancellation1Choice, List<InstrumentLeg2>>() {

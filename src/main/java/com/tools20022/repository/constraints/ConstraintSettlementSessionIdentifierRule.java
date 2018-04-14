@@ -37,10 +37,6 @@ public class ConstraintSettlementSessionIdentifierRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeBulkStatusNotificationV04
 	 * ForeignExchangeTradeBulkStatusNotificationV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SettlementSessionIdentifierRule"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintSettlementSessionIdentifierRule {
 	 * definition} =
 	 * "SettlementSessionIdentifer must only be present in StatusDetails if all of the trades within the bulk sttaus report have been generated from a single settlement session."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ForeignExchangeTradeBulkStatusNotificationV04> for_fxtr_ForeignExchangeTradeBulkStatusNotificationV04 = new MMConstraint<ForeignExchangeTradeBulkStatusNotificationV04>() {

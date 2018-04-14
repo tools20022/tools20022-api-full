@@ -64,14 +64,14 @@ import java.util.Objects;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "QuoteOriginator"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Originator of the quote."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class QuoteOriginator extends InformationPartyRole {
@@ -107,10 +107,6 @@ public class QuoteOriginator extends InformationPartyRole {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.QuoteOriginator
 	 * QuoteOriginator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "QuoteOriginatorType"</li>
 	 * <li>
@@ -118,6 +114,10 @@ public class QuoteOriginator extends InformationPartyRole {
 	 * definition} =
 	 * "Identifies in what capacity(role) the originator of the quote is acting."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<QuoteOriginator, OriginatorRoleCode> mmQuoteOriginatorType = new MMBusinessAttribute<QuoteOriginator, OriginatorRoleCode>() {

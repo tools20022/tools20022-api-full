@@ -37,10 +37,6 @@ public class ConstraintTotalAmountYearToDateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubscriptionInformation
 	 * SubscriptionInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TotalAmountYearToDateRule"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintTotalAmountYearToDateRule {
 	 * definition} =
 	 * "TotalAmountYearToDate must be equal to the sum of EquityComponent and CashComponent."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubscriptionInformation> forSubscriptionInformation = new MMConstraint<SubscriptionInformation>() {
@@ -71,10 +71,6 @@ public class ConstraintTotalAmountYearToDateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubscriptionInformation1
 	 * SubscriptionInformation1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TotalAmountYearToDateRule"</li>
 	 * <li>
@@ -82,6 +78,10 @@ public class ConstraintTotalAmountYearToDateRule {
 	 * definition} =
 	 * "TotalAmountYearToDate must be equal to the sum of EquityComponent and CashComponent if present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubscriptionInformation1> forSubscriptionInformation1 = new MMConstraint<SubscriptionInformation1>() {

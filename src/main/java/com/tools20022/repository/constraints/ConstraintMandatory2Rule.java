@@ -36,10 +36,6 @@ public class ConstraintMandatory2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.tsin.InvoiceFinancingRequestV01
 	 * InvoiceFinancingRequestV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Mandatory2Rule"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintMandatory2Rule {
 	 * definition} =
 	 * "If RequestGroupInformation/FinancingRequester/IBAN\nis not present, then InvoiceRequestInformation/Supplier/IBAN must be present.\n."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<InvoiceFinancingRequestV01> for_tsin_InvoiceFinancingRequestV01 = new MMConstraint<InvoiceFinancingRequestV01>() {

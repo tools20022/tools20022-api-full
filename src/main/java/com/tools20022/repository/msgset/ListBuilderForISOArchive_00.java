@@ -468,7 +468,7 @@ class ListBuilderForISOArchive_00 {
 		list.add((T) NotificationToReceiveV02.mmObject());
 		list.add((T) NotificationToReceiveCancellationAdviceV02.mmObject());
 		list.add((T) NotificationToReceiveStatusReportV02.mmObject());
-		list.add((T) RequestToModifyPaymentV03.mmObject());
+		list.add((T) RequestToModifyPaymentV03_replaced.mmObject());
 		list.add((T) UnableToApplyV03.mmObject());
 		list.add((T) ClaimNonReceiptV03.mmObject());
 		list.add((T) AdditionalPaymentInformationV03.mmObject());

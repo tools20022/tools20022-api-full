@@ -59,16 +59,16 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "NumberOfCancellationsPerStatus1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Set of elements used to provide detailed information on the number of transactions that are reported with a specific cancellation status."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -95,10 +95,6 @@ public class NumberOfCancellationsPerStatus1 {
 	 * NumberOfCancellationsPerStatus1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DtldNbOfTxs"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DetailedNumberOfTransactions"</li>
 	 * <li>
@@ -106,6 +102,10 @@ public class NumberOfCancellationsPerStatus1 {
 	 * definition} =
 	 * "Number of individual cancellation requests contained in the message, detailed per status."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<NumberOfCancellationsPerStatus1, Max15NumericText> mmDetailedNumberOfTransactions = new MMMessageAttribute<NumberOfCancellationsPerStatus1, Max15NumericText>() {
@@ -150,10 +150,6 @@ public class NumberOfCancellationsPerStatus1 {
 	 * NumberOfCancellationsPerStatus1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DtldSts"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DetailedStatus"</li>
 	 * <li>
@@ -161,6 +157,10 @@ public class NumberOfCancellationsPerStatus1 {
 	 * definition} =
 	 * "Common cancellation request status for all individual cancellation requests reported."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<NumberOfCancellationsPerStatus1, CancellationIndividualStatus1Code> mmDetailedStatus = new MMMessageAttribute<NumberOfCancellationsPerStatus1, CancellationIndividualStatus1Code>() {
@@ -205,10 +205,6 @@ public class NumberOfCancellationsPerStatus1 {
 	 * NumberOfCancellationsPerStatus1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DtldCtrlSum"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DetailedControlSum"</li>
 	 * <li>
@@ -216,6 +212,10 @@ public class NumberOfCancellationsPerStatus1 {
 	 * definition} =
 	 * "Total of all individual amounts included in the message, irrespective of currencies, detailed per status."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<NumberOfCancellationsPerStatus1, Optional<DecimalNumber>> mmDetailedControlSum = new MMMessageAttribute<NumberOfCancellationsPerStatus1, Optional<DecimalNumber>>() {

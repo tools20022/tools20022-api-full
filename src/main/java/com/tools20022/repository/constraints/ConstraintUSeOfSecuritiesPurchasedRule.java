@@ -36,10 +36,6 @@ public class ConstraintUSeOfSecuritiesPurchasedRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionEventStageFormat4SD1
 	 * CorporateActionEventStageFormat4SD1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "USeOfSecuritiesPurchasedRule"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintUSeOfSecuritiesPurchasedRule {
 	 * definition} =
 	 * "The value of SecuritiesPurchased should be the actual number, or 0 (if, as a result, TEND or BIDS will not take place)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionEventStageFormat4SD1> forCorporateActionEventStageFormat4SD1 = new MMConstraint<CorporateActionEventStageFormat4SD1>() {

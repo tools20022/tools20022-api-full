@@ -76,14 +76,14 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "SecuritiesOption56"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Specifies the security option of a corporate event."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -115,6 +115,12 @@ public class SecuritiesOption56 {
 	 * SecuritiesOption56}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MaxQtyToInst"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "MaximumQuantityToInstruct"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Maximum quantity of financial instrument that may be instructed."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = ISO15022Synonym: :36B:MAEX</li>
@@ -122,12 +128,6 @@ public class SecuritiesOption56 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "MaximumQuantityToInstruct"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Maximum quantity of financial instrument that may be instructed."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<SecuritiesOption56, Optional<FinancialInstrumentQuantity21Choice>> mmMaximumQuantityToInstruct = new MMMessageAssociationEnd<SecuritiesOption56, Optional<FinancialInstrumentQuantity21Choice>>() {
@@ -179,6 +179,12 @@ public class SecuritiesOption56 {
 	 * SecuritiesOption56}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MinQtyToInst"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "MinimumQuantityToInstruct"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Minimum quantity of financial instrument that may be instructed."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = ISO15022Synonym: :36B::MIEX</li>
@@ -186,12 +192,6 @@ public class SecuritiesOption56 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "MinimumQuantityToInstruct"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Minimum quantity of financial instrument that may be instructed."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<SecuritiesOption56, Optional<FinancialInstrumentQuantity21Choice>> mmMinimumQuantityToInstruct = new MMMessageAssociationEnd<SecuritiesOption56, Optional<FinancialInstrumentQuantity21Choice>>() {
@@ -243,13 +243,6 @@ public class SecuritiesOption56 {
 	 * SecuritiesOption56}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MinMltplQtyToInst"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = ISO15022Synonym: :36B::MILT</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MinimumMultipleQuantityToInstruct"</li>
 	 * <li>
@@ -257,6 +250,13 @@ public class SecuritiesOption56 {
 	 * definition} =
 	 * "Minimum multiple quantity of financial instrument that may be instructed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :36B::MILT</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<SecuritiesOption56, Optional<FinancialInstrumentQuantity22Choice>> mmMinimumMultipleQuantityToInstruct = new MMMessageAssociationEnd<SecuritiesOption56, Optional<FinancialInstrumentQuantity22Choice>>() {
@@ -308,6 +308,11 @@ public class SecuritiesOption56 {
 	 * SecuritiesOption56}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NewBrdLotQty"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NewBoardLotQuantity"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Quantity of equity that makes up the new board lot."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = ISO15022Synonym: :36B::NBLT</li>
@@ -315,11 +320,6 @@ public class SecuritiesOption56 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "NewBoardLotQuantity"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Quantity of equity that makes up the new board lot."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<SecuritiesOption56, Optional<FinancialInstrumentQuantity22Choice>> mmNewBoardLotQuantity = new MMMessageAssociationEnd<SecuritiesOption56, Optional<FinancialInstrumentQuantity22Choice>>() {
@@ -371,13 +371,6 @@ public class SecuritiesOption56 {
 	 * SecuritiesOption56}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NewDnmtnQty"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = ISO15022Synonym: :36B::NEWD</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NewDenominationQuantity"</li>
 	 * <li>
@@ -385,6 +378,13 @@ public class SecuritiesOption56 {
 	 * definition} =
 	 * "New denomination of the equity following, for example, an increase or decrease in nominal value."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :36B::NEWD</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<SecuritiesOption56, Optional<FinancialInstrumentQuantity22Choice>> mmNewDenominationQuantity = new MMMessageAssociationEnd<SecuritiesOption56, Optional<FinancialInstrumentQuantity22Choice>>() {
@@ -436,13 +436,6 @@ public class SecuritiesOption56 {
 	 * SecuritiesOption56}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "FrntEndOddLotQty"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = ISO15022Synonym: :36B::FOLQ</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FrontEndOddLotQuantity"</li>
 	 * <li>
@@ -450,6 +443,13 @@ public class SecuritiesOption56 {
 	 * definition} =
 	 * "Specifies that if an order is prorated holders of odd lots who tender their full position will not have tendered position prorated but rather accepted in full."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :36B::FOLQ</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<SecuritiesOption56, Optional<FinancialInstrumentQuantity22Choice>> mmFrontEndOddLotQuantity = new MMMessageAssociationEnd<SecuritiesOption56, Optional<FinancialInstrumentQuantity22Choice>>() {
@@ -501,13 +501,6 @@ public class SecuritiesOption56 {
 	 * SecuritiesOption56}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "BckEndOddLotQty"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = ISO15022Synonym: :36B::BOLQ</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BackEndOddLotQuantity"</li>
 	 * <li>
@@ -515,6 +508,13 @@ public class SecuritiesOption56 {
 	 * definition} =
 	 * "Represents the presence of a back end odd lot provision and the quantity of equity required after proration to be eligible for this privilege."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :36B::BOLQ</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<SecuritiesOption56, Optional<FinancialInstrumentQuantity22Choice>> mmBackEndOddLotQuantity = new MMMessageAssociationEnd<SecuritiesOption56, Optional<FinancialInstrumentQuantity22Choice>>() {

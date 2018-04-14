@@ -64,14 +64,14 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "SidePocketUnitsOrAmountOrRate1Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice of side pocket units, or amount, or rate."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -103,10 +103,6 @@ public class SidePocketUnitsOrAmountOrRate1Choice {
 	 * SidePocketUnitsOrAmountOrRate1Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "UnitsNb"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnitsNumber"</li>
 	 * <li>
@@ -114,6 +110,10 @@ public class SidePocketUnitsOrAmountOrRate1Choice {
 	 * definition} =
 	 * "Total quantity of units to be subscribed or redeemed in the side pocket."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SidePocketUnitsOrAmountOrRate1Choice, FinancialInstrumentQuantity1> mmUnitsNumber = new MMMessageAttribute<SidePocketUnitsOrAmountOrRate1Choice, FinancialInstrumentQuantity1>() {
@@ -164,16 +164,16 @@ public class SidePocketUnitsOrAmountOrRate1Choice {
 	 * SidePocketUnitsOrAmountOrRate1Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OrdrdAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OrderedAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Amount of money to be invested or redeemed into the side pocket."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SidePocketUnitsOrAmountOrRate1Choice, ActiveCurrencyAndAmount> mmOrderedAmount = new MMMessageAttribute<SidePocketUnitsOrAmountOrRate1Choice, ActiveCurrencyAndAmount>() {
@@ -224,10 +224,6 @@ public class SidePocketUnitsOrAmountOrRate1Choice {
 	 * SidePocketUnitsOrAmountOrRate1Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "HldgsRate"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "HoldingsRate"</li>
 	 * <li>
@@ -235,6 +231,10 @@ public class SidePocketUnitsOrAmountOrRate1Choice {
 	 * definition} =
 	 * "Percentage of the financial instrument quantity to be invested or redeemed in the side pocket or lot."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SidePocketUnitsOrAmountOrRate1Choice, PercentageRate> mmHoldingsRate = new MMMessageAttribute<SidePocketUnitsOrAmountOrRate1Choice, PercentageRate>() {

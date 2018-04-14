@@ -35,10 +35,6 @@ public class ConstraintOptionSettlementCurrency {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Option5 Option5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionSettlementCurrency"</li>
 	 * <li>
@@ -46,6 +42,10 @@ public class ConstraintOptionSettlementCurrency {
 	 * definition} =
 	 * "If Option/SettlementType is NETO, then OptionAmounts/OptionSettlementCurrency must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Option5> forOption5 = new MMConstraint<Option5>() {

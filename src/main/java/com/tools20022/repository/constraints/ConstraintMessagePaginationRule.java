@@ -35,10 +35,6 @@ public class ConstraintMessagePaginationRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ReportHeader3 ReportHeader3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MessagePaginationRule"</li>
 	 * <li>
@@ -46,6 +42,10 @@ public class ConstraintMessagePaginationRule {
 	 * definition} =
 	 * "If MessagePagination is present, then ReportIdentification must be identical for all pages."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ReportHeader3> forReportHeader3 = new MMConstraint<ReportHeader3>() {

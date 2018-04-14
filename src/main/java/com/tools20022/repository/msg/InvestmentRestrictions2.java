@@ -87,14 +87,14 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "InvestmentRestrictions2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Investment restrictions linked to the instrument."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -128,10 +128,6 @@ public class InvestmentRestrictions2 {
 	 * InvestmentRestrictions2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MinInitlSbcptAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MinimumInitialSubscriptionAmount"</li>
 	 * <li>
@@ -139,6 +135,10 @@ public class InvestmentRestrictions2 {
 	 * definition} =
 	 * "Minimum initial quantity of securities, expressed as an amount that must be purchased at subscription."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<InvestmentRestrictions2, Optional<ActiveCurrencyAndAmount>> mmMinimumInitialSubscriptionAmount = new MMMessageAttribute<InvestmentRestrictions2, Optional<ActiveCurrencyAndAmount>>() {
@@ -189,16 +189,16 @@ public class InvestmentRestrictions2 {
 	 * InvestmentRestrictions2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MinInitlSbcptUnits"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MinimumInitialSubscriptionUnits"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Minimum initial number of units/shares that must be purchased."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<InvestmentRestrictions2, Optional<Number>> mmMinimumInitialSubscriptionUnits = new MMMessageAttribute<InvestmentRestrictions2, Optional<Number>>() {
@@ -250,10 +250,6 @@ public class InvestmentRestrictions2 {
 	 * InvestmentRestrictions2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MinSbsqntSbcptAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MinimumSubsequentSubscriptionAmount"</li>
 	 * <li>
@@ -261,6 +257,10 @@ public class InvestmentRestrictions2 {
 	 * definition} =
 	 * "Minimum quantity of securities, expressed as an amount that must be purchased."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<InvestmentRestrictions2, Optional<ActiveCurrencyAndAmount>> mmMinimumSubsequentSubscriptionAmount = new MMMessageAttribute<InvestmentRestrictions2, Optional<ActiveCurrencyAndAmount>>() {
@@ -310,10 +310,6 @@ public class InvestmentRestrictions2 {
 	 * InvestmentRestrictions2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MinSbsqntSbcptUnits"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MinimumSubsequentSubscriptionUnits"</li>
 	 * <li>
@@ -321,6 +317,10 @@ public class InvestmentRestrictions2 {
 	 * definition} =
 	 * "Minimum quantity of securities, expressed as number of units/shares that must be purchased."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<InvestmentRestrictions2, Optional<Number>> mmMinimumSubsequentSubscriptionUnits = new MMMessageAttribute<InvestmentRestrictions2, Optional<Number>>() {
@@ -371,10 +371,6 @@ public class InvestmentRestrictions2 {
 	 * InvestmentRestrictions2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MaxRedAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MaximumRedemptionAmount"</li>
 	 * <li>
@@ -382,6 +378,10 @@ public class InvestmentRestrictions2 {
 	 * definition} =
 	 * "Maximum quantity of securities, expressed as an amount that can be sold."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<InvestmentRestrictions2, Optional<ActiveCurrencyAndAmount>> mmMaximumRedemptionAmount = new MMMessageAttribute<InvestmentRestrictions2, Optional<ActiveCurrencyAndAmount>>() {
@@ -431,10 +431,6 @@ public class InvestmentRestrictions2 {
 	 * InvestmentRestrictions2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MaxRedUnits"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MaximumRedemptionUnits"</li>
 	 * <li>
@@ -442,6 +438,10 @@ public class InvestmentRestrictions2 {
 	 * definition} =
 	 * "Maximum number of shares/units that may be redeemed on a single dealing day."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<InvestmentRestrictions2, Optional<Number>> mmMaximumRedemptionUnits = new MMMessageAttribute<InvestmentRestrictions2, Optional<Number>>() {
@@ -486,10 +486,6 @@ public class InvestmentRestrictions2 {
 	 * InvestmentRestrictions2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OthrRedRstrctns"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OtherRedemptionRestrictions"</li>
 	 * <li>
@@ -497,6 +493,10 @@ public class InvestmentRestrictions2 {
 	 * definition} =
 	 * "Specifies any other restrictions that may limit an investor's ability to redeem."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<InvestmentRestrictions2, Optional<Max350Text>> mmOtherRedemptionRestrictions = new MMMessageAttribute<InvestmentRestrictions2, Optional<Max350Text>>() {
@@ -546,10 +546,6 @@ public class InvestmentRestrictions2 {
 	 * InvestmentRestrictions2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MinHldgAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MinimumHoldingAmount"</li>
 	 * <li>
@@ -557,6 +553,10 @@ public class InvestmentRestrictions2 {
 	 * definition} =
 	 * "Minimum value of units that must be maintained to avoid automatic redemption."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<InvestmentRestrictions2, Optional<ActiveCurrencyAndAmount>> mmMinimumHoldingAmount = new MMMessageAttribute<InvestmentRestrictions2, Optional<ActiveCurrencyAndAmount>>() {
@@ -607,10 +607,6 @@ public class InvestmentRestrictions2 {
 	 * InvestmentRestrictions2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MinHldgUnits"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MinimumHoldingUnits"</li>
 	 * <li>
@@ -618,6 +614,10 @@ public class InvestmentRestrictions2 {
 	 * definition} =
 	 * "Minimum number of units that must be maintained to avoid automatic redemption."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<InvestmentRestrictions2, Optional<DecimalNumber>> mmMinimumHoldingUnits = new MMMessageAttribute<InvestmentRestrictions2, Optional<DecimalNumber>>() {
@@ -667,10 +667,6 @@ public class InvestmentRestrictions2 {
 	 * InvestmentRestrictions2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MinHldgPrd"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MinimumHoldingPeriod"</li>
 	 * <li>
@@ -678,6 +674,10 @@ public class InvestmentRestrictions2 {
 	 * definition} =
 	 * "Description of a period, that may be a number of days, weeks or descriptive period during which the units/shares must be held following their issue before redemption will be permitted."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<InvestmentRestrictions2, Optional<Max70Text>> mmMinimumHoldingPeriod = new MMMessageAttribute<InvestmentRestrictions2, Optional<Max70Text>>() {
@@ -728,10 +728,6 @@ public class InvestmentRestrictions2 {
 	 * InvestmentRestrictions2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "HldgTrfbl"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "HoldingTransferable"</li>
 	 * <li>
@@ -739,6 +735,10 @@ public class InvestmentRestrictions2 {
 	 * definition} =
 	 * "Indicates whether registered investors are able to transfer some or all of their holdings to third parties."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<InvestmentRestrictions2, HoldingTransferable1Code> mmHoldingTransferable = new MMMessageAttribute<InvestmentRestrictions2, HoldingTransferable1Code>() {

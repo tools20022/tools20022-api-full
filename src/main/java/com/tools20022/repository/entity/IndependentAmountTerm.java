@@ -79,15 +79,15 @@ import java.util.Objects;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "IndependentAmountTerm"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Defines the specific terms used to calculate an independent amount."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * </ul>
  */
 public class IndependentAmountTerm extends ExposureTerm {
@@ -120,10 +120,6 @@ public class IndependentAmountTerm extends ExposureTerm {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.IndependentAmountTerm
 	 * IndependentAmountTerm}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Convention"</li>
 	 * <li>
@@ -131,6 +127,10 @@ public class IndependentAmountTerm extends ExposureTerm {
 	 * definition} =
 	 * "Determines how the independent amount was applied in the calculation. \r\r\nIt is either:\r\r\n- Before threshold, effectively acting as an add on to exposure, \r\r\n- After threshold where the amount is an add on to the credit support amount and forms part of the variation margin requirement,\r\r\n- Segregated where it is treated independently of variation margin for segregation purposes.Defines the specific terms used to calculate an independent amount."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<IndependentAmountTerm, IndependentAmountConventionTypeCode> mmConvention = new MMBusinessAttribute<IndependentAmountTerm, IndependentAmountConventionTypeCode>() {

@@ -36,10 +36,6 @@ public class ConstraintStreetNameAndOrPostOfficeBoxRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.StructuredLongPostalAddress1
 	 * StructuredLongPostalAddress1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "StreetNameAndOrPostOfficeBoxRule"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintStreetNameAndOrPostOfficeBoxRule {
 	 * definition} =
 	 * "If StreetName is not present, then PostOfficeBox is mandatory. If StreetName is present, then PostOfficeBox is optional."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<StructuredLongPostalAddress1> forStructuredLongPostalAddress1 = new MMConstraint<StructuredLongPostalAddress1>() {

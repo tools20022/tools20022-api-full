@@ -99,15 +99,15 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CorporateActionInstructionExtension3"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Provides additional information regarding corporate action instruction."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -134,15 +134,15 @@ public class CorporateActionInstructionExtension3 {
 	 * CorporateActionInstructionExtension3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PlcAndNm"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PlaceAndName"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "xPath to the element that is being extended."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionInstructionExtension3, Max350Text> mmPlaceAndName = new MMMessageAttribute<CorporateActionInstructionExtension3, Max350Text>() {
@@ -187,6 +187,12 @@ public class CorporateActionInstructionExtension3 {
 	 * CorporateActionInstructionExtension3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Sts"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Status"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Instruction status at DTC (The Depository Trust Corporation)."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = DTCCSynonym: Status</li>
@@ -194,12 +200,6 @@ public class CorporateActionInstructionExtension3 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Status"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Instruction status at DTC (The Depository Trust Corporation)."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionInstructionExtension3, Optional<DTCInstructionStatus1Code>> mmStatus = new MMMessageAttribute<CorporateActionInstructionExtension3, Optional<DTCInstructionStatus1Code>>() {
@@ -245,6 +245,11 @@ public class CorporateActionInstructionExtension3 {
 	 * CorporateActionInstructionExtension3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "InstrTp"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InstructionType"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Type of instruction."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = DTCCSynonym: Instruction Type</li>
@@ -252,11 +257,6 @@ public class CorporateActionInstructionExtension3 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "InstructionType"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Type of instruction."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionInstructionExtension3, Optional<DTCCorporateActionInstructionType1Code>> mmInstructionType = new MMMessageAttribute<CorporateActionInstructionExtension3, Optional<DTCCorporateActionInstructionType1Code>>() {
@@ -302,6 +302,11 @@ public class CorporateActionInstructionExtension3 {
 	 * CorporateActionInstructionExtension3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SvcTpInd"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ServiceTypeIndicator"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Type of specific DTC service."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = DTCCSynonym: DTC Service Type</li>
@@ -309,11 +314,6 @@ public class CorporateActionInstructionExtension3 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ServiceTypeIndicator"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Type of specific DTC service."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionInstructionExtension3, Optional<DTCServiceType1Code>> mmServiceTypeIndicator = new MMMessageAttribute<CorporateActionInstructionExtension3, Optional<DTCServiceType1Code>>() {
@@ -358,13 +358,6 @@ public class CorporateActionInstructionExtension3 {
 	 * CorporateActionInstructionExtension3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrtctId"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = DTCCSynonym: Protect Identification</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ProtectIdentification"</li>
 	 * <li>
@@ -372,6 +365,13 @@ public class CorporateActionInstructionExtension3 {
 	 * definition} =
 	 * "Identifies the protect that was submitted. Required when instruction type is Cover Protect. This identification is either from DTC system which was assigned upon the submission of the protect instruction or is an identification that pertains to a cover protect submitted directly to the agent (indicated by instruction type)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Protect Identification</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionInstructionExtension3, Optional<Max16Text>> mmProtectIdentification = new MMMessageAttribute<CorporateActionInstructionExtension3, Optional<Max16Text>>() {
@@ -416,6 +416,11 @@ public class CorporateActionInstructionExtension3 {
 	 * CorporateActionInstructionExtension3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrtctDt"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ProtectDate"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Date at which the protect was created."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = DTCCSynonym: Protect Date</li>
@@ -423,11 +428,6 @@ public class CorporateActionInstructionExtension3 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ProtectDate"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Date at which the protect was created."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionInstructionExtension3, Optional<ISODate>> mmProtectDate = new MMMessageAttribute<CorporateActionInstructionExtension3, Optional<ISODate>>() {
@@ -472,13 +472,6 @@ public class CorporateActionInstructionExtension3 {
 	 * CorporateActionInstructionExtension3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AcctTxPrcrRltvBlckNb"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = DTCCSynonym: ATP RBN Number</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountTransactionProcessorRelativeBlockNumber"</li>
 	 * <li>
@@ -486,6 +479,13 @@ public class CorporateActionInstructionExtension3 {
 	 * definition} =
 	 * "Account Transaction Processor Relative Block Number. DTCC (The Depository Trust and Clearing Corporation). reference identification to the share movement on an instruction."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: ATP RBN Number</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionInstructionExtension3, Optional<Number>> mmAccountTransactionProcessorRelativeBlockNumber = new MMMessageAttribute<CorporateActionInstructionExtension3, Optional<Number>>() {
@@ -531,13 +531,6 @@ public class CorporateActionInstructionExtension3 {
 	 * CorporateActionInstructionExtension3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CondlQty"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = DTCCSynonym: Conditional Quantity</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ConditionalQuantity"</li>
 	 * <li>
@@ -545,6 +538,13 @@ public class CorporateActionInstructionExtension3 {
 	 * definition} =
 	 * "Minimum quantity of securities to be accepted (used in the framework of conditional privilege on election).\nIn case of proration, if this minimum quantity is not reached then the instruction is void."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Conditional Quantity</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionInstructionExtension3, Optional<RestrictedFINDecimalNumber>> mmConditionalQuantity = new MMMessageAttribute<CorporateActionInstructionExtension3, Optional<RestrictedFINDecimalNumber>>() {
@@ -590,13 +590,6 @@ public class CorporateActionInstructionExtension3 {
 	 * CorporateActionInstructionExtension3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TndrBidPric"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = DTCCSynonym: Tender Bid Price</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TenderBidPrice"</li>
 	 * <li>
@@ -604,6 +597,13 @@ public class CorporateActionInstructionExtension3 {
 	 * definition} =
 	 * "Required only if tender offer accepts bid prices; price must fall between the maximum and minimum price acceptable to the offer."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Tender Bid Price</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionInstructionExtension3, Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount>> mmTenderBidPrice = new MMMessageAttribute<CorporateActionInstructionExtension3, Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount>>() {
@@ -649,6 +649,12 @@ public class CorporateActionInstructionExtension3 {
 	 * CorporateActionInstructionExtension3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OddLotFlg"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OddLotFlag"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Indicates whether the odd lot is accepted for tender offers."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = DTCCSynonym: Odd Lot Flag</li>
@@ -656,12 +662,6 @@ public class CorporateActionInstructionExtension3 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "OddLotFlag"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Indicates whether the odd lot is accepted for tender offers."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionInstructionExtension3, Optional<YesNoIndicator>> mmOddLotFlag = new MMMessageAttribute<CorporateActionInstructionExtension3, Optional<YesNoIndicator>>() {
@@ -707,6 +707,12 @@ public class CorporateActionInstructionExtension3 {
 	 * CorporateActionInstructionExtension3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AckFlg"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AcknowledgementFlag"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Indicates that submitter has agreed to all terms and conditions."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = DTCCSynonym: Acknowledgement Flag</li>
@@ -714,12 +720,6 @@ public class CorporateActionInstructionExtension3 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AcknowledgementFlag"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Indicates that submitter has agreed to all terms and conditions."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionInstructionExtension3, Optional<YesNoIndicator>> mmAcknowledgementFlag = new MMMessageAttribute<CorporateActionInstructionExtension3, Optional<YesNoIndicator>>() {
@@ -763,6 +763,12 @@ public class CorporateActionInstructionExtension3 {
 	 * CorporateActionInstructionExtension3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CondsAccptnc"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ConditionsAcceptance"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Provides an acceptance flag for the identified conditions."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = DTCCSynonym: Conditions Acceptance</li>
@@ -770,12 +776,6 @@ public class CorporateActionInstructionExtension3 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ConditionsAcceptance"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Provides an acceptance flag for the identified conditions."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<CorporateActionInstructionExtension3, List<ConditionAcceptance1>> mmConditionsAcceptance = new MMMessageAssociationEnd<CorporateActionInstructionExtension3, List<ConditionAcceptance1>>() {
@@ -822,13 +822,6 @@ public class CorporateActionInstructionExtension3 {
 	 * CorporateActionInstructionExtension3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DTCDsbrsdScty"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = DTCCSynonym: DTC Disbursed Security ID</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DTCDisbursedSecurity"</li>
 	 * <li>
@@ -836,6 +829,13 @@ public class CorporateActionInstructionExtension3 {
 	 * definition} =
 	 * "Security identification that DTC (The Depository Trust Corporation) will distribute as part of the entitlement. This can be the DTC contra CUSIP in cases where the payout security is a contra CUSIP."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: DTC Disbursed Security ID</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionInstructionExtension3, Optional<CUSIPIdentification1>> mmDTCDisbursedSecurity = new MMMessageAttribute<CorporateActionInstructionExtension3, Optional<CUSIPIdentification1>>() {
@@ -881,6 +881,13 @@ public class CorporateActionInstructionExtension3 {
 	 * CorporateActionInstructionExtension3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DTCDsbrsdSctyDesc"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DTCDisbursedSecurityDescription"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Description of the security that will be disbursed by DTC (The Depository Trust Corporation) as entitlement for the corporate action event."
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = DTCCSynonym: Security Description (DTC Disbursed
@@ -889,13 +896,6 @@ public class CorporateActionInstructionExtension3 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DTCDisbursedSecurityDescription"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Description of the security that will be disbursed by DTC (The Depository Trust Corporation) as entitlement for the corporate action event."
-	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionInstructionExtension3, Optional<RestrictedFINMax31Text>> mmDTCDisbursedSecurityDescription = new MMMessageAttribute<CorporateActionInstructionExtension3, Optional<RestrictedFINMax31Text>>() {
@@ -940,6 +940,11 @@ public class CorporateActionInstructionExtension3 {
 	 * CorporateActionInstructionExtension3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PngAgt"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PayingAgent"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Paying agent for this corporate action event."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = DTCCSynonym: Paying Agent</li>
@@ -947,11 +952,6 @@ public class CorporateActionInstructionExtension3 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PayingAgent"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Paying agent for this corporate action event."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionInstructionExtension3, Optional<Max8Text>> mmPayingAgent = new MMMessageAttribute<CorporateActionInstructionExtension3, Optional<Max8Text>>() {

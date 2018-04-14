@@ -46,10 +46,6 @@ public class ConstraintMinimumExercisableQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity2
 	 * CorporateActionQuantity2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MinimumExercisableQuantityRule"</li>
 	 * <li>
@@ -57,6 +53,10 @@ public class ConstraintMinimumExercisableQuantityRule {
 	 * definition} =
 	 * "MinimumExercisableQuantity and MinimumExercisableMultipleQuantity are different from MinimumExercisableQuantity and MinimumExercisableMultipleQuantity used in the CorporateActionNotificationV01/CorporateActionGeneralIndformation/UnderlyingSecurity financial instrument attributes as they give indication on quantity of financial instrument in the precise context of the described corporate actions for a given account servicer. In CorporateActionNotificationV01/CorporateActionGeneralIndformation/UnderlyingSecurity, the quantity given are the quantity pertaining to the financial instrument in general, not specifics to the corporate action processing."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionQuantity2> forCorporateActionQuantity2 = new MMConstraint<CorporateActionQuantity2>() {
@@ -80,10 +80,6 @@ public class ConstraintMinimumExercisableQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity4
 	 * CorporateActionQuantity4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MinimumExercisableQuantityRule"</li>
 	 * <li>
@@ -91,6 +87,10 @@ public class ConstraintMinimumExercisableQuantityRule {
 	 * definition} =
 	 * "MinimumExercisableQuantity and MinimumExercisableMultipleQuantity are different from MinimumExercisableQuantity and MinimumExercisableMultipleQuantity used in the CorporateActionNotificationV01/CorporateActionGeneralIndformation/UnderlyingSecurity financial instrument attributes as they give indication on quantity of financial instrument in the precise context of the described corporate actions for a given account servicer. In CorporateActionNotificationV01/CorporateActionGeneralIndformation/UnderlyingSecurity, the quantity given are the quantity pertaining to the financial instrument in general, not specifics to the corporate action processing."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionQuantity4> forCorporateActionQuantity4 = new MMConstraint<CorporateActionQuantity4>() {
@@ -114,10 +114,6 @@ public class ConstraintMinimumExercisableQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity5
 	 * CorporateActionQuantity5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MinimumExercisableQuantityRule"</li>
 	 * <li>
@@ -125,6 +121,10 @@ public class ConstraintMinimumExercisableQuantityRule {
 	 * definition} =
 	 * "MinimumExercisableQuantity and MinimumExercisableMultipleQuantity are different from MinimumExercisableQuantity and MinimumExercisableMultipleQuantity used in the CorporateActionGeneralIndformation/UnderlyingSecurity financial instrument attributes as they give indication on quantity of financial instrument in the precise context of the described corporate actions for a given account servicer. In CorporateActionGeneralIndformation/UnderlyingSecurity, the quantity given are the quantity pertaining to the financial instrument in general, not specifics to the corporate action processing."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionQuantity5> forCorporateActionQuantity5 = new MMConstraint<CorporateActionQuantity5>() {
@@ -148,10 +148,6 @@ public class ConstraintMinimumExercisableQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity3
 	 * CorporateActionQuantity3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MinimumExercisableQuantityRule"</li>
 	 * <li>
@@ -159,6 +155,10 @@ public class ConstraintMinimumExercisableQuantityRule {
 	 * definition} =
 	 * "MinimumExercisableQuantity and MinimumExercisableMultipleQuantity are different from MinimumExercisableQuantity and MinimumExercisableMultipleQuantity used in the CorporateActionNotificationV01/CorporateActionGeneralIndformation/UnderlyingSecurity financial instrument attributes as they give indication on quantity of financial instrument in the precise context of the described corporate actions for a given account servicer. In CorporateActionNotificationV01/CorporateActionGeneralIndformation/UnderlyingSecurity, the quantity given are the quantity pertaining to the financial instrument in general, not specifics to the corporate action processing."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionQuantity3> forCorporateActionQuantity3 = new MMConstraint<CorporateActionQuantity3>() {
@@ -182,10 +182,6 @@ public class ConstraintMinimumExercisableQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity6
 	 * CorporateActionQuantity6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MinimumExercisableQuantityRule"</li>
 	 * <li>
@@ -193,6 +189,10 @@ public class ConstraintMinimumExercisableQuantityRule {
 	 * definition} =
 	 * "MinimumExercisableQuantity and MinimumExercisableMultipleQuantity are different from MinimumExercisableQuantity and MinimumExercisableMultipleQuantity used in the CorporateActionGeneralIndformation/UnderlyingSecurity financial instrument attributes as they give indication on quantity of financial instrument in the precise context of the described corporate actions for a given account servicer. In CorporateActionGeneralIndformation/UnderlyingSecurity, the quantity given are the quantity pertaining to the financial instrument in general, not specifics to the corporate action processing."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionQuantity6> forCorporateActionQuantity6 = new MMConstraint<CorporateActionQuantity6>() {
@@ -216,10 +216,6 @@ public class ConstraintMinimumExercisableQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity1
 	 * CorporateActionQuantity1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MinimumExercisableQuantityRule"</li>
 	 * <li>
@@ -227,6 +223,10 @@ public class ConstraintMinimumExercisableQuantityRule {
 	 * definition} =
 	 * "MinimumExercisableQuantity and MinimumExercisableMultipleQuantity are different from MinimumExercisableQuantity and MinimumExercisableMultipleQuantity used in the CorporateActionNotificationV01/CorporateActionGeneralIndformation/UnderlyingSecurity financial instrument attributes as they give indication on quantity of financial instrument in the precise context of the described corporate actions for a given account servicer. In CorporateActionNotificationV01/CorporateActionGeneralIndformation/UnderlyingSecurity, the quantity given are the quantity pertaining to the financial instrument in general, not specifics to the corporate action processing."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionQuantity1> forCorporateActionQuantity1 = new MMConstraint<CorporateActionQuantity1>() {

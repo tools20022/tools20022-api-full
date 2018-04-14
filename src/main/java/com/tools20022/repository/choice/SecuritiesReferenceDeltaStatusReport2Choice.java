@@ -67,16 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "SecuritiesReferenceDeltaStatusReport2Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Choice defining financial instruments that are either new or have been modified."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -102,16 +102,16 @@ public class SecuritiesReferenceDeltaStatusReport2Choice {
 	 * SecuritiesReferenceDeltaStatusReport2Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ModfdRcrd"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ModifiedRecord"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies data that has been modified since the previous report."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<SecuritiesReferenceDeltaStatusReport2Choice, SecuritiesReferenceDataReport5> mmModifiedRecord = new MMMessageAssociationEnd<SecuritiesReferenceDeltaStatusReport2Choice, SecuritiesReferenceDataReport5>() {
@@ -156,10 +156,6 @@ public class SecuritiesReferenceDeltaStatusReport2Choice {
 	 * SecuritiesReferenceDeltaStatusReport2Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NewRcrd"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NewRecord"</li>
 	 * <li>
@@ -167,6 +163,10 @@ public class SecuritiesReferenceDeltaStatusReport2Choice {
 	 * definition} =
 	 * "Specifies new instruments that have been added since the previous report."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<SecuritiesReferenceDeltaStatusReport2Choice, SecuritiesReferenceDataReport5> mmNewRecord = new MMMessageAssociationEnd<SecuritiesReferenceDeltaStatusReport2Choice, SecuritiesReferenceDataReport5>() {
@@ -211,10 +211,6 @@ public class SecuritiesReferenceDeltaStatusReport2Choice {
 	 * SecuritiesReferenceDeltaStatusReport2Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TermntdRcrd"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TerminatedRecord"</li>
 	 * <li>
@@ -222,6 +218,10 @@ public class SecuritiesReferenceDeltaStatusReport2Choice {
 	 * definition} =
 	 * "Specifies instruments which have been terminated / have reached there pre-set termination data and are no longer valid instruments."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<SecuritiesReferenceDeltaStatusReport2Choice, SecuritiesReferenceDataReport5> mmTerminatedRecord = new MMMessageAssociationEnd<SecuritiesReferenceDeltaStatusReport2Choice, SecuritiesReferenceDataReport5>() {

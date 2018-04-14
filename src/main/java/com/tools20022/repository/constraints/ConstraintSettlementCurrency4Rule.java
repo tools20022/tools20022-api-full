@@ -41,10 +41,6 @@ public class ConstraintSettlementCurrency4Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleExecution3
 	 * SubscriptionMultipleExecution3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SettlementCurrency4Rule"</li>
 	 * <li>
@@ -52,6 +48,10 @@ public class ConstraintSettlementCurrency4Rule {
 	 * definition} =
 	 * "If BulkCashSettlementDetails is present, then Currency in IndividualExecutionDetails/SettlementAmount must be the same in all occurrences of IndividualOrderDetails."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -84,10 +84,6 @@ public class ConstraintSettlementCurrency4Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleExecution3
 	 * RedemptionMultipleExecution3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SettlementCurrency4Rule"</li>
 	 * <li>
@@ -95,6 +91,10 @@ public class ConstraintSettlementCurrency4Rule {
 	 * definition} =
 	 * "If BulkCashSettlementDetails is present, then Currency in IndividualExecutionDetails/SettlementAmount must be the same in all occurrences of IndividualOrderDetails."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -127,10 +127,6 @@ public class ConstraintSettlementCurrency4Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleExecution2
 	 * RedemptionMultipleExecution2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SettlementCurrency4Rule"</li>
 	 * <li>
@@ -138,6 +134,10 @@ public class ConstraintSettlementCurrency4Rule {
 	 * definition} =
 	 * "If BulkCashSettlementDetails is present, then Currency in IndividualExecutionDetails/Amount must be the same as IndividualExecutionDetails/RequestedSettlementCurrency in all occurrences of IndividualExecutionDetails."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RedemptionMultipleExecution2> forRedemptionMultipleExecution2 = new MMConstraint<RedemptionMultipleExecution2>() {
@@ -161,10 +161,6 @@ public class ConstraintSettlementCurrency4Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleExecution2
 	 * SubscriptionMultipleExecution2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SettlementCurrency4Rule"</li>
 	 * <li>
@@ -172,6 +168,10 @@ public class ConstraintSettlementCurrency4Rule {
 	 * definition} =
 	 * "If BulkCashSettlementDetails is present, then Currency in IndividualExecutionDetails/NetAmount and GrossAmount must be the same as IndividualExecutionDetails/RequestedSettlementCurrency in all occurrences of IndividualExecutionDetails."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubscriptionMultipleExecution2> forSubscriptionMultipleExecution2 = new MMConstraint<SubscriptionMultipleExecution2>() {

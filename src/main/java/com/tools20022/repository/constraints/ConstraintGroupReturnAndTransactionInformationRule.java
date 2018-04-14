@@ -37,10 +37,6 @@ public class ConstraintGroupReturnAndTransactionInformationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.pacs.PaymentReturnV01
 	 * PaymentReturnV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GroupReturnAndTransactionInformationRule"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintGroupReturnAndTransactionInformationRule {
 	 * definition} =
 	 * "If GroupHeader/GroupReturn is true, then TransactionInformation is not allowed.\nIf GroupHeader/GroupReturn is false, then at least one occurrence of TransactionInformation must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PaymentReturnV01> for_pacs_PaymentReturnV01 = new MMConstraint<PaymentReturnV01>() {

@@ -38,10 +38,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails26
 	 * TransactionDetails26}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -49,6 +45,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails26> forTransactionDetails26 = new MMConstraint<TransactionDetails26>() {
@@ -72,10 +72,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails4
 	 * IntraPositionDetails4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -83,6 +79,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IntraPositionDetails4> forIntraPositionDetails4 = new MMConstraint<IntraPositionDetails4>() {
@@ -106,10 +106,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity2
 	 * CorporateActionQuantity2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -117,6 +113,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionQuantity2> forCorporateActionQuantity2 = new MMConstraint<CorporateActionQuantity2>() {
@@ -140,10 +140,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount7
 	 * QuantityAndAccount7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -151,6 +147,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount7> forQuantityAndAccount7 = new MMConstraint<QuantityAndAccount7>() {
@@ -174,10 +174,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption39
 	 * SecuritiesOption39}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -185,6 +181,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesOption39> forSecuritiesOption39 = new MMConstraint<SecuritiesOption39>() {
@@ -208,10 +208,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ProprietaryQuantity5
 	 * ProprietaryQuantity5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -219,6 +215,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ProprietaryQuantity5> forProprietaryQuantity5 = new MMConstraint<ProprietaryQuantity5>() {
@@ -242,10 +242,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption42
 	 * SecuritiesOption42}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -253,6 +249,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -282,10 +282,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption19
 	 * CorporateActionOption19}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -293,6 +289,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption19> forCorporateActionOption19 = new MMConstraint<CorporateActionOption19>() {
@@ -316,10 +316,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails5
 	 * TransactionDetails5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -327,6 +323,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails5> forTransactionDetails5 = new MMConstraint<TransactionDetails5>() {
@@ -350,10 +350,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PriceFormatSD2Choice
 	 * PriceFormatSD2Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -361,6 +357,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -390,10 +390,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.BalanceQuantity5Choice
 	 * BalanceQuantity5Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -401,6 +397,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<BalanceQuantity5Choice> forBalanceQuantity5Choice = new MMConstraint<BalanceQuantity5Choice>() {
@@ -424,10 +424,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount33
 	 * QuantityAndAccount33}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -435,6 +431,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount33> forQuantityAndAccount33 = new MMConstraint<QuantityAndAccount33>() {
@@ -458,10 +458,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes32
 	 * FinancialInstrumentAttributes32}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -469,6 +465,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -501,10 +501,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails22
 	 * IntraPositionDetails22}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -512,6 +508,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IntraPositionDetails22> forIntraPositionDetails22 = new MMConstraint<IntraPositionDetails22>() {
@@ -535,10 +535,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails8
 	 * TransactionDetails8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -546,6 +542,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails8> forTransactionDetails8 = new MMConstraint<TransactionDetails8>() {
@@ -569,10 +569,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails4
 	 * IntraPositionMovementDetails4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -580,6 +576,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IntraPositionMovementDetails4> forIntraPositionMovementDetails4 = new MMConstraint<IntraPositionMovementDetails4>() {
@@ -603,10 +603,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount14
 	 * QuantityAndAccount14}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -614,6 +610,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount14> forQuantityAndAccount14 = new MMConstraint<QuantityAndAccount14>() {
@@ -637,10 +637,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes3
 	 * FinancialInstrumentAttributes3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -648,6 +644,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes3> forFinancialInstrumentAttributes3 = new MMConstraint<FinancialInstrumentAttributes3>() {
@@ -671,10 +671,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubBalanceInformation10
 	 * SubBalanceInformation10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -682,6 +678,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubBalanceInformation10> forSubBalanceInformation10 = new MMConstraint<SubBalanceInformation10>() {
@@ -704,10 +704,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Linkages1 Linkages1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -715,6 +711,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Linkages1> forLinkages1 = new MMConstraint<Linkages1>() {
@@ -738,10 +738,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity4
 	 * AmountPricePerFinancialInstrumentQuantity4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -749,6 +745,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AmountPricePerFinancialInstrumentQuantity4> forAmountPricePerFinancialInstrumentQuantity4 = new MMConstraint<AmountPricePerFinancialInstrumentQuantity4>() {
@@ -772,10 +772,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption56
 	 * CorporateActionOption56}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -783,6 +779,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption56> forCorporateActionOption56 = new MMConstraint<CorporateActionOption56>() {
@@ -806,10 +806,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails18
 	 * TransactionDetails18}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -817,6 +813,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails18> forTransactionDetails18 = new MMConstraint<TransactionDetails18>() {
@@ -840,10 +840,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes13
 	 * FinancialInstrumentAttributes13}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -851,6 +847,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes13> forFinancialInstrumentAttributes13 = new MMConstraint<FinancialInstrumentAttributes13>() {
@@ -874,10 +874,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption14
 	 * SecuritiesOption14}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -885,6 +881,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesOption14> forSecuritiesOption14 = new MMConstraint<SecuritiesOption14>() {
@@ -908,10 +908,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown7
 	 * QuantityBreakdown7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -919,6 +915,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityBreakdown7> forQuantityBreakdown7 = new MMConstraint<QuantityBreakdown7>() {
@@ -942,10 +942,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity4
 	 * CorporateActionQuantity4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -953,6 +949,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionQuantity4> forCorporateActionQuantity4 = new MMConstraint<CorporateActionQuantity4>() {
@@ -976,10 +976,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24
 	 * SecuritiesFinancingTransactionDetails24}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -987,6 +983,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1017,10 +1017,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails63
 	 * TransactionDetails63}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -1028,6 +1024,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1056,10 +1056,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Balance2 Balance2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -1067,6 +1063,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Balance2> forBalance2 = new MMConstraint<Balance2>() {
@@ -1090,10 +1090,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption51
 	 * CorporateActionOption51}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -1101,6 +1097,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1133,10 +1133,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails27
 	 * TransactionDetails27}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -1144,6 +1140,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails27> forTransactionDetails27 = new MMConstraint<TransactionDetails27>() {
@@ -1167,10 +1167,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AmountAndQuantityRatio3
 	 * AmountAndQuantityRatio3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -1178,6 +1174,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AmountAndQuantityRatio3> forAmountAndQuantityRatio3 = new MMConstraint<AmountAndQuantityRatio3>() {
@@ -1201,10 +1201,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails13
 	 * IntraPositionDetails13}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -1212,6 +1208,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IntraPositionDetails13> forIntraPositionDetails13 = new MMConstraint<IntraPositionDetails13>() {
@@ -1235,10 +1235,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateAction10
 	 * CorporateAction10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -1246,6 +1242,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1278,10 +1278,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount6
 	 * QuantityAndAccount6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -1289,6 +1285,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount6> forQuantityAndAccount6 = new MMConstraint<QuantityAndAccount6>() {
@@ -1312,10 +1312,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails25
 	 * TransactionDetails25}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -1323,6 +1319,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails25> forTransactionDetails25 = new MMConstraint<TransactionDetails25>() {
@@ -1346,10 +1346,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubBalanceInformation11
 	 * SubBalanceInformation11}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -1357,6 +1353,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubBalanceInformation11> forSubBalanceInformation11 = new MMConstraint<SubBalanceInformation11>() {
@@ -1380,10 +1380,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateAction4
 	 * CorporateAction4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -1391,6 +1387,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateAction4> forCorporateAction4 = new MMConstraint<CorporateAction4>() {
@@ -1414,10 +1414,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails66
 	 * TransactionDetails66}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -1425,6 +1421,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails66> forTransactionDetails66 = new MMConstraint<TransactionDetails66>() {
@@ -1448,10 +1448,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails72
 	 * TransactionDetails72}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -1459,6 +1455,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails72> forTransactionDetails72 = new MMConstraint<TransactionDetails72>() {
@@ -1481,10 +1481,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Quantity7 Quantity7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -1492,6 +1488,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Quantity7> forQuantity7 = new MMConstraint<Quantity7>() {
@@ -1515,10 +1515,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.Quantity16Choice
 	 * Quantity16Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -1526,6 +1522,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Quantity16Choice> forQuantity16Choice = new MMConstraint<Quantity16Choice>() {
@@ -1549,10 +1549,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails23
 	 * IntraPositionDetails23}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -1560,6 +1556,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IntraPositionDetails23> forIntraPositionDetails23 = new MMConstraint<IntraPositionDetails23>() {
@@ -1583,10 +1583,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ProprietaryQuantity3
 	 * ProprietaryQuantity3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -1594,6 +1590,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ProprietaryQuantity3> forProprietaryQuantity3 = new MMConstraint<ProprietaryQuantity3>() {
@@ -1617,10 +1617,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails42
 	 * TransactionDetails42}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -1628,6 +1624,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails42> forTransactionDetails42 = new MMConstraint<TransactionDetails42>() {
@@ -1651,10 +1651,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount30
 	 * QuantityAndAccount30}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -1662,6 +1658,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount30> forQuantityAndAccount30 = new MMConstraint<QuantityAndAccount30>() {
@@ -1685,10 +1685,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity5
 	 * CorporateActionQuantity5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -1696,6 +1692,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionQuantity5> forCorporateActionQuantity5 = new MMConstraint<CorporateActionQuantity5>() {
@@ -1719,10 +1719,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption17
 	 * SecuritiesOption17}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -1730,6 +1726,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesOption17> forSecuritiesOption17 = new MMConstraint<SecuritiesOption17>() {
@@ -1753,10 +1753,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption57
 	 * CorporateActionOption57}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -1764,6 +1760,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1796,10 +1796,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.SubBalanceQuantity3Choice
 	 * SubBalanceQuantity3Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -1807,6 +1803,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubBalanceQuantity3Choice> forSubBalanceQuantity3Choice = new MMConstraint<SubBalanceQuantity3Choice>() {
@@ -1830,10 +1830,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateAction11
 	 * CorporateAction11}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -1841,6 +1837,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateAction11> forCorporateAction11 = new MMConstraint<CorporateAction11>() {
@@ -1864,10 +1864,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption13
 	 * CorporateActionOption13}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -1875,6 +1871,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption13> forCorporateActionOption13 = new MMConstraint<CorporateActionOption13>() {
@@ -1898,10 +1898,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubBalanceInformation6
 	 * SubBalanceInformation6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -1909,6 +1905,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubBalanceInformation6> forSubBalanceInformation6 = new MMConstraint<SubBalanceInformation6>() {
@@ -1932,10 +1932,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes12
 	 * FinancialInstrumentAttributes12}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -1943,6 +1939,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes12> forFinancialInstrumentAttributes12 = new MMConstraint<FinancialInstrumentAttributes12>() {
@@ -1966,10 +1966,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown21
 	 * QuantityBreakdown21}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -1977,6 +1973,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityBreakdown21> forQuantityBreakdown21 = new MMConstraint<QuantityBreakdown21>() {
@@ -2000,10 +2000,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption38
 	 * CorporateActionOption38}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -2011,6 +2007,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption38> forCorporateActionOption38 = new MMConstraint<CorporateActionOption38>() {
@@ -2034,10 +2034,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.RatioFormat7Choice
 	 * RatioFormat7Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -2045,6 +2041,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RatioFormat7Choice> forRatioFormat7Choice = new MMConstraint<RatioFormat7Choice>() {
@@ -2068,10 +2068,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount12
 	 * QuantityAndAccount12}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -2079,6 +2075,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount12> forQuantityAndAccount12 = new MMConstraint<QuantityAndAccount12>() {
@@ -2102,10 +2102,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails1
 	 * IntraPositionMovementDetails1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -2113,6 +2109,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IntraPositionMovementDetails1> forIntraPositionMovementDetails1 = new MMConstraint<IntraPositionMovementDetails1>() {
@@ -2136,10 +2136,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PriceFormat28Choice
 	 * PriceFormat28Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -2147,6 +2143,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PriceFormat28Choice> forPriceFormat28Choice = new MMConstraint<PriceFormat28Choice>() {
@@ -2170,10 +2170,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AdditionalBalanceInformation9
 	 * AdditionalBalanceInformation9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -2181,6 +2177,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AdditionalBalanceInformation9> forAdditionalBalanceInformation9 = new MMConstraint<AdditionalBalanceInformation9>() {
@@ -2204,10 +2204,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails51
 	 * TransactionDetails51}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -2215,6 +2211,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails51> forTransactionDetails51 = new MMConstraint<TransactionDetails51>() {
@@ -2238,10 +2238,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateAction7
 	 * CorporateAction7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -2249,6 +2245,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateAction7> forCorporateAction7 = new MMConstraint<CorporateAction7>() {
@@ -2272,10 +2272,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.Quantity15Choice
 	 * Quantity15Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -2283,6 +2279,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Quantity15Choice> forQuantity15Choice = new MMConstraint<Quantity15Choice>() {
@@ -2306,10 +2306,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PriceFormat9Choice
 	 * PriceFormat9Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -2317,6 +2313,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PriceFormat9Choice> forPriceFormat9Choice = new MMConstraint<PriceFormat9Choice>() {
@@ -2340,10 +2340,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.SolicitationFeeRateFormat6Choice
 	 * SolicitationFeeRateFormat6Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -2351,6 +2347,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SolicitationFeeRateFormat6Choice> forSolicitationFeeRateFormat6Choice = new MMConstraint<SolicitationFeeRateFormat6Choice>() {
@@ -2374,10 +2374,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails4
 	 * TransactionDetails4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -2385,6 +2381,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails4> forTransactionDetails4 = new MMConstraint<TransactionDetails4>() {
@@ -2408,10 +2408,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails8
 	 * IntraPositionMovementDetails8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -2419,6 +2415,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IntraPositionMovementDetails8> forIntraPositionMovementDetails8 = new MMConstraint<IntraPositionMovementDetails8>() {
@@ -2442,10 +2442,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.RatioFormat6Choice
 	 * RatioFormat6Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -2453,6 +2449,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RatioFormat6Choice> forRatioFormat6Choice = new MMConstraint<RatioFormat6Choice>() {
@@ -2476,10 +2476,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails20
 	 * TransactionDetails20}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -2487,6 +2483,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails20> forTransactionDetails20 = new MMConstraint<TransactionDetails20>() {
@@ -2510,10 +2510,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount5
 	 * QuantityAndAccount5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -2521,6 +2517,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount5> forQuantityAndAccount5 = new MMConstraint<QuantityAndAccount5>() {
@@ -2544,10 +2544,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes19
 	 * FinancialInstrumentAttributes19}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -2555,6 +2551,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes19> forFinancialInstrumentAttributes19 = new MMConstraint<FinancialInstrumentAttributes19>() {
@@ -2578,10 +2578,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.RatioFormat16Choice
 	 * RatioFormat16Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -2589,6 +2585,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RatioFormat16Choice> forRatioFormat16Choice = new MMConstraint<RatioFormat16Choice>() {
@@ -2612,10 +2612,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails29
 	 * IntraPositionDetails29}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -2623,6 +2619,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IntraPositionDetails29> forIntraPositionDetails29 = new MMConstraint<IntraPositionDetails29>() {
@@ -2646,10 +2646,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PriceFormat22Choice
 	 * PriceFormat22Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -2657,6 +2653,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PriceFormat22Choice> forPriceFormat22Choice = new MMConstraint<PriceFormat22Choice>() {
@@ -2680,10 +2680,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes5
 	 * FinancialInstrumentAttributes5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -2691,6 +2687,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes5> forFinancialInstrumentAttributes5 = new MMConstraint<FinancialInstrumentAttributes5>() {
@@ -2714,10 +2714,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails11
 	 * IntraPositionDetails11}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -2725,6 +2721,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IntraPositionDetails11> forIntraPositionDetails11 = new MMConstraint<IntraPositionDetails11>() {
@@ -2747,10 +2747,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Balance5 Balance5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -2758,6 +2754,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Balance5> forBalance5 = new MMConstraint<Balance5>() {
@@ -2781,10 +2781,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails25
 	 * IntraPositionDetails25}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -2792,6 +2788,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IntraPositionDetails25> forIntraPositionDetails25 = new MMConstraint<IntraPositionDetails25>() {
@@ -2815,10 +2815,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption101
 	 * CorporateActionOption101}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -2826,6 +2822,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2855,10 +2855,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails16
 	 * TransactionDetails16}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -2866,6 +2862,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails16> forTransactionDetails16 = new MMConstraint<TransactionDetails16>() {
@@ -2889,10 +2889,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.Quantity3Choice
 	 * Quantity3Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -2900,6 +2896,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Quantity3Choice> forQuantity3Choice = new MMConstraint<Quantity3Choice>() {
@@ -2923,10 +2923,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PairedOrTurnedQuantity2Choice
 	 * PairedOrTurnedQuantity2Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -2934,6 +2930,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PairedOrTurnedQuantity2Choice> forPairedOrTurnedQuantity2Choice = new MMConstraint<PairedOrTurnedQuantity2Choice>() {
@@ -2957,10 +2957,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity3
 	 * CorporateActionQuantity3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -2968,6 +2964,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionQuantity3> forCorporateActionQuantity3 = new MMConstraint<CorporateActionQuantity3>() {
@@ -2991,10 +2991,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22
 	 * SecuritiesFinancingTransactionDetails22}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -3002,6 +2998,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails22> forSecuritiesFinancingTransactionDetails22 = new MMConstraint<SecuritiesFinancingTransactionDetails22>() {
@@ -3025,10 +3025,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PriceFormatSD1Choice
 	 * PriceFormatSD1Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -3036,6 +3032,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -3068,10 +3068,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails58
 	 * TransactionDetails58}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -3079,6 +3075,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails58> forTransactionDetails58 = new MMConstraint<TransactionDetails58>() {
@@ -3102,10 +3102,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown5
 	 * QuantityBreakdown5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -3113,6 +3109,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityBreakdown5> forQuantityBreakdown5 = new MMConstraint<QuantityBreakdown5>() {
@@ -3136,10 +3136,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown6
 	 * QuantityBreakdown6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -3147,6 +3143,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityBreakdown6> forQuantityBreakdown6 = new MMConstraint<QuantityBreakdown6>() {
@@ -3170,10 +3170,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PriceFormat10Choice
 	 * PriceFormat10Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -3181,6 +3177,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PriceFormat10Choice> forPriceFormat10Choice = new MMConstraint<PriceFormat10Choice>() {
@@ -3204,10 +3204,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14
 	 * FinancialInstrumentAttributes14}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -3215,6 +3211,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes14> forFinancialInstrumentAttributes14 = new MMConstraint<FinancialInstrumentAttributes14>() {
@@ -3238,10 +3238,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails6
 	 * TransactionDetails6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -3249,6 +3245,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails6> forTransactionDetails6 = new MMConstraint<TransactionDetails6>() {
@@ -3271,10 +3271,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Quantity5 Quantity5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -3282,6 +3278,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Quantity5> forQuantity5 = new MMConstraint<Quantity5>() {
@@ -3305,10 +3305,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails45
 	 * TransactionDetails45}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -3316,6 +3312,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails45> forTransactionDetails45 = new MMConstraint<TransactionDetails45>() {
@@ -3339,10 +3339,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.RatioFormat8Choice
 	 * RatioFormat8Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -3350,6 +3346,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RatioFormat8Choice> forRatioFormat8Choice = new MMConstraint<RatioFormat8Choice>() {
@@ -3373,10 +3373,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown13
 	 * QuantityBreakdown13}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -3384,6 +3380,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityBreakdown13> forQuantityBreakdown13 = new MMConstraint<QuantityBreakdown13>() {
@@ -3407,10 +3407,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes38
 	 * FinancialInstrumentAttributes38}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -3418,6 +3414,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes38> forFinancialInstrumentAttributes38 = new MMConstraint<FinancialInstrumentAttributes38>() {
@@ -3441,10 +3441,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount11
 	 * QuantityAndAccount11}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -3452,6 +3448,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount11> forQuantityAndAccount11 = new MMConstraint<QuantityAndAccount11>() {
@@ -3475,10 +3475,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails26
 	 * IntraPositionDetails26}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -3486,6 +3482,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IntraPositionDetails26> forIntraPositionDetails26 = new MMConstraint<IntraPositionDetails26>() {
@@ -3509,10 +3509,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails34
 	 * TransactionDetails34}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -3520,6 +3516,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails34> forTransactionDetails34 = new MMConstraint<TransactionDetails34>() {
@@ -3543,10 +3543,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption6
 	 * SecuritiesOption6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -3554,6 +3550,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesOption6> forSecuritiesOption6 = new MMConstraint<SecuritiesOption6>() {
@@ -3577,10 +3577,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption103
 	 * CorporateActionOption103}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -3588,6 +3584,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -3617,10 +3617,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails17
 	 * TransactionDetails17}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -3628,6 +3624,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails17> forTransactionDetails17 = new MMConstraint<TransactionDetails17>() {
@@ -3651,10 +3651,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails6
 	 * IntraPositionMovementDetails6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -3662,6 +3658,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IntraPositionMovementDetails6> forIntraPositionMovementDetails6 = new MMConstraint<IntraPositionMovementDetails6>() {
@@ -3685,10 +3685,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption31
 	 * SecuritiesOption31}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -3696,6 +3692,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesOption31> forSecuritiesOption31 = new MMConstraint<SecuritiesOption31>() {
@@ -3719,10 +3719,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes47
 	 * FinancialInstrumentAttributes47}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -3730,6 +3726,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes47> forFinancialInstrumentAttributes47 = new MMConstraint<FinancialInstrumentAttributes47>() {
@@ -3753,10 +3753,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails31
 	 * TransactionDetails31}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -3764,6 +3760,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails31> forTransactionDetails31 = new MMConstraint<TransactionDetails31>() {
@@ -3787,10 +3787,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount17
 	 * QuantityAndAccount17}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -3798,6 +3794,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount17> forQuantityAndAccount17 = new MMConstraint<QuantityAndAccount17>() {
@@ -3821,10 +3821,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown17
 	 * QuantityBreakdown17}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -3832,6 +3828,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityBreakdown17> forQuantityBreakdown17 = new MMConstraint<QuantityBreakdown17>() {
@@ -3855,10 +3855,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption38
 	 * SecuritiesOption38}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -3866,6 +3862,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -3898,10 +3898,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.SolicitationFeeRateFormat5Choice
 	 * SolicitationFeeRateFormat5Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -3909,6 +3905,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SolicitationFeeRateFormat5Choice> forSolicitationFeeRateFormat5Choice = new MMConstraint<SolicitationFeeRateFormat5Choice>() {
@@ -3932,10 +3932,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails7
 	 * IntraPositionMovementDetails7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -3943,6 +3939,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IntraPositionMovementDetails7> forIntraPositionMovementDetails7 = new MMConstraint<IntraPositionMovementDetails7>() {
@@ -3966,10 +3966,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.RatioFormat4Choice
 	 * RatioFormat4Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -3977,6 +3973,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RatioFormat4Choice> forRatioFormat4Choice = new MMConstraint<RatioFormat4Choice>() {
@@ -4000,10 +4000,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AdditionalBalanceInformation10
 	 * AdditionalBalanceInformation10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -4011,6 +4007,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AdditionalBalanceInformation10> forAdditionalBalanceInformation10 = new MMConstraint<AdditionalBalanceInformation10>() {
@@ -4034,10 +4034,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption19
 	 * SecuritiesOption19}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -4045,6 +4041,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesOption19> forSecuritiesOption19 = new MMConstraint<SecuritiesOption19>() {
@@ -4068,10 +4068,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount32
 	 * QuantityAndAccount32}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -4079,6 +4075,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount32> forQuantityAndAccount32 = new MMConstraint<QuantityAndAccount32>() {
@@ -4102,10 +4102,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails40
 	 * TransactionDetails40}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -4113,6 +4109,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails40> forTransactionDetails40 = new MMConstraint<TransactionDetails40>() {
@@ -4136,10 +4136,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption25
 	 * SecuritiesOption25}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -4147,6 +4143,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesOption25> forSecuritiesOption25 = new MMConstraint<SecuritiesOption25>() {
@@ -4170,10 +4170,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.Quantity2Choice
 	 * Quantity2Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -4181,6 +4177,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Quantity2Choice> forQuantity2Choice = new MMConstraint<Quantity2Choice>() {
@@ -4204,10 +4204,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount28
 	 * QuantityAndAccount28}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -4215,6 +4211,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount28> forQuantityAndAccount28 = new MMConstraint<QuantityAndAccount28>() {
@@ -4238,10 +4238,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption15
 	 * CorporateActionOption15}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -4249,6 +4245,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption15> forCorporateActionOption15 = new MMConstraint<CorporateActionOption15>() {
@@ -4272,10 +4272,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown4
 	 * QuantityBreakdown4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -4283,6 +4279,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityBreakdown4> forQuantityBreakdown4 = new MMConstraint<QuantityBreakdown4>() {
@@ -4306,10 +4306,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption11
 	 * SecuritiesOption11}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -4317,6 +4313,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesOption11> forSecuritiesOption11 = new MMConstraint<SecuritiesOption11>() {
@@ -4340,10 +4340,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubBalanceInformation5
 	 * SubBalanceInformation5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -4351,6 +4347,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubBalanceInformation5> forSubBalanceInformation5 = new MMConstraint<SubBalanceInformation5>() {
@@ -4374,10 +4374,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails29
 	 * TransactionDetails29}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -4385,6 +4381,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails29> forTransactionDetails29 = new MMConstraint<TransactionDetails29>() {
@@ -4408,10 +4408,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount3
 	 * QuantityAndAccount3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -4419,6 +4415,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount3> forQuantityAndAccount3 = new MMConstraint<QuantityAndAccount3>() {
@@ -4442,10 +4442,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails70
 	 * TransactionDetails70}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -4453,6 +4449,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -4482,10 +4482,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes49
 	 * FinancialInstrumentAttributes49}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -4493,6 +4489,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -4522,10 +4522,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails33
 	 * TransactionDetails33}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -4533,6 +4529,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails33> forTransactionDetails33 = new MMConstraint<TransactionDetails33>() {
@@ -4556,10 +4556,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption5
 	 * CorporateActionOption5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -4567,6 +4563,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption5> forCorporateActionOption5 = new MMConstraint<CorporateActionOption5>() {
@@ -4590,10 +4590,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails10
 	 * IntraPositionMovementDetails10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -4601,6 +4597,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IntraPositionMovementDetails10> forIntraPositionMovementDetails10 = new MMConstraint<IntraPositionMovementDetails10>() {
@@ -4624,10 +4624,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PriceFormat32Choice
 	 * PriceFormat32Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -4635,6 +4631,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -4664,10 +4664,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ProprietaryQuantity6
 	 * ProprietaryQuantity6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -4675,6 +4671,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ProprietaryQuantity6> forProprietaryQuantity6 = new MMConstraint<ProprietaryQuantity6>() {
@@ -4698,10 +4698,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails23
 	 * TransactionDetails23}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -4709,6 +4705,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails23> forTransactionDetails23 = new MMConstraint<TransactionDetails23>() {
@@ -4732,10 +4732,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes34
 	 * FinancialInstrumentAttributes34}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -4743,6 +4739,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -4775,10 +4775,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown15
 	 * QuantityBreakdown15}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -4786,6 +4782,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityBreakdown15> forQuantityBreakdown15 = new MMConstraint<QuantityBreakdown15>() {
@@ -4809,10 +4809,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.RatioFormat3Choice
 	 * RatioFormat3Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -4820,6 +4816,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RatioFormat3Choice> forRatioFormat3Choice = new MMConstraint<RatioFormat3Choice>() {
@@ -4843,10 +4843,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.RatioFormat11Choice
 	 * RatioFormat11Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -4854,6 +4850,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RatioFormat11Choice> forRatioFormat11Choice = new MMConstraint<RatioFormat11Choice>() {
@@ -4876,10 +4876,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Linkages4 Linkages4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -4887,6 +4883,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Linkages4> forLinkages4 = new MMConstraint<Linkages4>() {
@@ -4910,10 +4910,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AdditionalBalanceInformation8
 	 * AdditionalBalanceInformation8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -4921,6 +4917,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AdditionalBalanceInformation8> forAdditionalBalanceInformation8 = new MMConstraint<AdditionalBalanceInformation8>() {
@@ -4944,10 +4944,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes39
 	 * FinancialInstrumentAttributes39}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -4955,6 +4951,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes39> forFinancialInstrumentAttributes39 = new MMConstraint<FinancialInstrumentAttributes39>() {
@@ -4978,10 +4978,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubBalanceInformation12
 	 * SubBalanceInformation12}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -4989,6 +4985,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubBalanceInformation12> forSubBalanceInformation12 = new MMConstraint<SubBalanceInformation12>() {
@@ -5011,10 +5011,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Linkages12 Linkages12}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -5022,6 +5018,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Linkages12> forLinkages12 = new MMConstraint<Linkages12>() {
@@ -5045,10 +5045,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.RatioFormat12Choice
 	 * RatioFormat12Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -5056,6 +5052,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RatioFormat12Choice> forRatioFormat12Choice = new MMConstraint<RatioFormat12Choice>() {
@@ -5078,10 +5078,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Linkages7 Linkages7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -5089,6 +5085,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Linkages7> forLinkages7 = new MMConstraint<Linkages7>() {
@@ -5112,10 +5112,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown24
 	 * QuantityBreakdown24}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -5123,6 +5119,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityBreakdown24> forQuantityBreakdown24 = new MMConstraint<QuantityBreakdown24>() {
@@ -5146,10 +5146,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes18
 	 * FinancialInstrumentAttributes18}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -5157,6 +5153,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes18> forFinancialInstrumentAttributes18 = new MMConstraint<FinancialInstrumentAttributes18>() {
@@ -5180,10 +5180,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes22
 	 * FinancialInstrumentAttributes22}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -5191,6 +5187,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes22> forFinancialInstrumentAttributes22 = new MMConstraint<FinancialInstrumentAttributes22>() {
@@ -5214,10 +5214,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AdditionalBalanceInformation11
 	 * AdditionalBalanceInformation11}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -5225,6 +5221,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AdditionalBalanceInformation11> forAdditionalBalanceInformation11 = new MMConstraint<AdditionalBalanceInformation11>() {
@@ -5248,10 +5248,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption48
 	 * SecuritiesOption48}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -5259,6 +5255,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesOption48> forSecuritiesOption48 = new MMConstraint<SecuritiesOption48>() {
@@ -5281,10 +5281,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Linkages9 Linkages9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -5292,6 +5288,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Linkages9> forLinkages9 = new MMConstraint<Linkages9>() {
@@ -5315,10 +5315,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails30
 	 * TransactionDetails30}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -5326,6 +5322,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails30> forTransactionDetails30 = new MMConstraint<TransactionDetails30>() {
@@ -5349,10 +5349,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption35
 	 * SecuritiesOption35}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -5360,6 +5356,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -5392,10 +5392,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown26
 	 * QuantityBreakdown26}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -5403,6 +5399,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityBreakdown26> forQuantityBreakdown26 = new MMConstraint<QuantityBreakdown26>() {
@@ -5426,10 +5426,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption1
 	 * SecuritiesOption1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -5437,6 +5433,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesOption1> forSecuritiesOption1 = new MMConstraint<SecuritiesOption1>() {
@@ -5460,10 +5460,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.Quantity11Choice
 	 * Quantity11Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -5471,6 +5467,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Quantity11Choice> forQuantity11Choice = new MMConstraint<Quantity11Choice>() {
@@ -5494,10 +5494,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption13
 	 * SecuritiesOption13}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -5505,6 +5501,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesOption13> forSecuritiesOption13 = new MMConstraint<SecuritiesOption13>() {
@@ -5528,10 +5528,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.SolicitationFeeRateFormat1Choice
 	 * SolicitationFeeRateFormat1Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -5539,6 +5535,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SolicitationFeeRateFormat1Choice> forSolicitationFeeRateFormat1Choice = new MMConstraint<SolicitationFeeRateFormat1Choice>() {
@@ -5562,10 +5562,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes7
 	 * FinancialInstrumentAttributes7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -5573,6 +5569,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes7> forFinancialInstrumentAttributes7 = new MMConstraint<FinancialInstrumentAttributes7>() {
@@ -5596,10 +5596,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption17
 	 * CorporateActionOption17}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -5607,6 +5603,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption17> forCorporateActionOption17 = new MMConstraint<CorporateActionOption17>() {
@@ -5630,10 +5630,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AdditionalInformation9
 	 * AdditionalInformation9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -5641,6 +5637,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -5670,10 +5670,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption44
 	 * CorporateActionOption44}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -5681,6 +5677,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption44> forCorporateActionOption44 = new MMConstraint<CorporateActionOption44>() {
@@ -5704,10 +5704,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount4
 	 * QuantityAndAccount4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -5715,6 +5711,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount4> forQuantityAndAccount4 = new MMConstraint<QuantityAndAccount4>() {
@@ -5738,10 +5738,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes6
 	 * FinancialInstrumentAttributes6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -5749,6 +5745,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes6> forFinancialInstrumentAttributes6 = new MMConstraint<FinancialInstrumentAttributes6>() {
@@ -5772,10 +5772,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes48
 	 * FinancialInstrumentAttributes48}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -5783,6 +5779,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -5812,10 +5812,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PairedOrTurnedQuantity1Choice
 	 * PairedOrTurnedQuantity1Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -5823,6 +5819,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PairedOrTurnedQuantity1Choice> forPairedOrTurnedQuantity1Choice = new MMConstraint<PairedOrTurnedQuantity1Choice>() {
@@ -5846,10 +5846,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown8
 	 * QuantityBreakdown8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -5857,6 +5853,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityBreakdown8> forQuantityBreakdown8 = new MMConstraint<QuantityBreakdown8>() {
@@ -5880,10 +5880,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes27
 	 * FinancialInstrumentAttributes27}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -5891,6 +5887,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes27> forFinancialInstrumentAttributes27 = new MMConstraint<FinancialInstrumentAttributes27>() {
@@ -5914,10 +5914,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount22
 	 * QuantityAndAccount22}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -5925,6 +5921,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount22> forQuantityAndAccount22 = new MMConstraint<QuantityAndAccount22>() {
@@ -5948,10 +5948,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity6
 	 * CorporateActionQuantity6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -5959,6 +5955,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionQuantity6> forCorporateActionQuantity6 = new MMConstraint<CorporateActionQuantity6>() {
@@ -5981,10 +5981,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Balance1 Balance1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -5992,6 +5988,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Balance1> forBalance1 = new MMConstraint<Balance1>() {
@@ -6015,10 +6015,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount19
 	 * QuantityAndAccount19}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -6026,6 +6022,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount19> forQuantityAndAccount19 = new MMConstraint<QuantityAndAccount19>() {
@@ -6049,10 +6049,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AdditionalInformation4
 	 * AdditionalInformation4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -6060,6 +6056,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AdditionalInformation4> forAdditionalInformation4 = new MMConstraint<AdditionalInformation4>() {
@@ -6083,10 +6083,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.InstructedOrQuantityToReceive2Choice
 	 * InstructedOrQuantityToReceive2Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -6094,6 +6090,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<InstructedOrQuantityToReceive2Choice> forInstructedOrQuantityToReceive2Choice = new MMConstraint<InstructedOrQuantityToReceive2Choice>() {
@@ -6117,10 +6117,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PriceFormat20Choice
 	 * PriceFormat20Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -6128,6 +6124,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -6160,10 +6160,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails7
 	 * IntraPositionDetails7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -6171,6 +6167,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IntraPositionDetails7> forIntraPositionDetails7 = new MMConstraint<IntraPositionDetails7>() {
@@ -6194,10 +6194,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails71
 	 * TransactionDetails71}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -6205,6 +6201,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails71> forTransactionDetails71 = new MMConstraint<TransactionDetails71>() {
@@ -6228,10 +6228,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SignedQuantityFormat1
 	 * SignedQuantityFormat1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -6239,6 +6235,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SignedQuantityFormat1> forSignedQuantityFormat1 = new MMConstraint<SignedQuantityFormat1>() {
@@ -6262,10 +6262,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails59
 	 * TransactionDetails59}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -6273,6 +6269,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails59> forTransactionDetails59 = new MMConstraint<TransactionDetails59>() {
@@ -6296,10 +6296,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption3
 	 * CorporateActionOption3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -6307,6 +6303,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption3> forCorporateActionOption3 = new MMConstraint<CorporateActionOption3>() {
@@ -6330,10 +6330,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10
 	 * SecuritiesFinancingTransactionDetails10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -6341,6 +6337,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails10> forSecuritiesFinancingTransactionDetails10 = new MMConstraint<SecuritiesFinancingTransactionDetails10>() {
@@ -6364,10 +6364,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails52
 	 * TransactionDetails52}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -6375,6 +6371,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails52> forTransactionDetails52 = new MMConstraint<TransactionDetails52>() {
@@ -6397,10 +6397,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Balance4 Balance4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -6408,6 +6404,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Balance4> forBalance4 = new MMConstraint<Balance4>() {
@@ -6431,10 +6431,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails19
 	 * IntraPositionDetails19}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -6442,6 +6438,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IntraPositionDetails19> forIntraPositionDetails19 = new MMConstraint<IntraPositionDetails19>() {
@@ -6465,10 +6465,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes17
 	 * FinancialInstrumentAttributes17}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -6476,6 +6472,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes17> forFinancialInstrumentAttributes17 = new MMConstraint<FinancialInstrumentAttributes17>() {
@@ -6499,10 +6499,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.RatioFormat15Choice
 	 * RatioFormat15Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -6510,6 +6506,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RatioFormat15Choice> forRatioFormat15Choice = new MMConstraint<RatioFormat15Choice>() {
@@ -6533,10 +6533,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SignedQuantityFormat2
 	 * SignedQuantityFormat2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -6544,6 +6540,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SignedQuantityFormat2> forSignedQuantityFormat2 = new MMConstraint<SignedQuantityFormat2>() {
@@ -6567,10 +6567,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption52
 	 * CorporateActionOption52}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -6578,6 +6574,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -6610,10 +6610,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.BalanceQuantity6Choice
 	 * BalanceQuantity6Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -6621,6 +6617,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<BalanceQuantity6Choice> forBalanceQuantity6Choice = new MMConstraint<BalanceQuantity6Choice>() {
@@ -6644,10 +6644,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails60
 	 * TransactionDetails60}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -6655,6 +6651,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails60> forTransactionDetails60 = new MMConstraint<TransactionDetails60>() {
@@ -6678,10 +6678,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PriceFormat7Choice
 	 * PriceFormat7Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -6689,6 +6685,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -6721,10 +6721,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption23
 	 * SecuritiesOption23}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -6732,6 +6728,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesOption23> forSecuritiesOption23 = new MMConstraint<SecuritiesOption23>() {
@@ -6755,10 +6755,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SignedQuantityFormat3
 	 * SignedQuantityFormat3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -6766,6 +6762,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SignedQuantityFormat3> forSignedQuantityFormat3 = new MMConstraint<SignedQuantityFormat3>() {
@@ -6789,10 +6789,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails68
 	 * TransactionDetails68}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -6800,6 +6796,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails68> forTransactionDetails68 = new MMConstraint<TransactionDetails68>() {
@@ -6823,10 +6823,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption58
 	 * CorporateActionOption58}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -6834,6 +6830,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption58> forCorporateActionOption58 = new MMConstraint<CorporateActionOption58>() {
@@ -6857,10 +6857,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AdditionalInformation3
 	 * AdditionalInformation3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -6868,6 +6864,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AdditionalInformation3> forAdditionalInformation3 = new MMConstraint<AdditionalInformation3>() {
@@ -6891,10 +6891,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes33
 	 * FinancialInstrumentAttributes33}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -6902,6 +6898,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes33> forFinancialInstrumentAttributes33 = new MMConstraint<FinancialInstrumentAttributes33>() {
@@ -6925,10 +6925,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption4
 	 * SecuritiesOption4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -6936,6 +6932,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesOption4> forSecuritiesOption4 = new MMConstraint<SecuritiesOption4>() {
@@ -6959,10 +6959,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption34
 	 * CorporateActionOption34}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -6970,6 +6966,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption34> forCorporateActionOption34 = new MMConstraint<CorporateActionOption34>() {
@@ -6992,10 +6992,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Quantity6 Quantity6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -7003,6 +6999,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Quantity6> forQuantity6 = new MMConstraint<Quantity6>() {
@@ -7026,10 +7026,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown12
 	 * QuantityBreakdown12}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -7037,6 +7033,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityBreakdown12> forQuantityBreakdown12 = new MMConstraint<QuantityBreakdown12>() {
@@ -7060,10 +7060,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption45
 	 * SecuritiesOption45}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -7071,6 +7067,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesOption45> forSecuritiesOption45 = new MMConstraint<SecuritiesOption45>() {
@@ -7094,10 +7094,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails46
 	 * TransactionDetails46}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -7105,6 +7101,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails46> forTransactionDetails46 = new MMConstraint<TransactionDetails46>() {
@@ -7128,10 +7128,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17
 	 * SecuritiesFinancingTransactionDetails17}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -7139,6 +7135,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -7172,10 +7172,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption55
 	 * CorporateActionOption55}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -7183,6 +7179,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption55> forCorporateActionOption55 = new MMConstraint<CorporateActionOption55>() {
@@ -7206,10 +7206,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption3
 	 * SecuritiesOption3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -7217,6 +7213,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesOption3> forSecuritiesOption3 = new MMConstraint<SecuritiesOption3>() {
@@ -7240,10 +7240,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption36
 	 * CorporateActionOption36}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -7251,6 +7247,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption36> forCorporateActionOption36 = new MMConstraint<CorporateActionOption36>() {
@@ -7274,10 +7274,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown10
 	 * QuantityBreakdown10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -7285,6 +7281,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityBreakdown10> forQuantityBreakdown10 = new MMConstraint<QuantityBreakdown10>() {
@@ -7308,10 +7308,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ProprietaryQuantity2
 	 * ProprietaryQuantity2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -7319,6 +7315,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ProprietaryQuantity2> forProprietaryQuantity2 = new MMConstraint<ProprietaryQuantity2>() {
@@ -7342,10 +7342,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.SolicitationFeeRateFormat2Choice
 	 * SolicitationFeeRateFormat2Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -7353,6 +7349,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SolicitationFeeRateFormat2Choice> forSolicitationFeeRateFormat2Choice = new MMConstraint<SolicitationFeeRateFormat2Choice>() {
@@ -7376,10 +7376,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption26
 	 * SecuritiesOption26}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -7387,6 +7383,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesOption26> forSecuritiesOption26 = new MMConstraint<SecuritiesOption26>() {
@@ -7410,10 +7410,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ProprietaryQuantity4
 	 * ProprietaryQuantity4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -7421,6 +7417,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ProprietaryQuantity4> forProprietaryQuantity4 = new MMConstraint<ProprietaryQuantity4>() {
@@ -7444,10 +7444,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubBalanceInformation7
 	 * SubBalanceInformation7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -7455,6 +7451,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubBalanceInformation7> forSubBalanceInformation7 = new MMConstraint<SubBalanceInformation7>() {
@@ -7478,10 +7478,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PriceFormat40Choice
 	 * PriceFormat40Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -7489,6 +7485,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PriceFormat40Choice> forPriceFormat40Choice = new MMConstraint<PriceFormat40Choice>() {
@@ -7512,10 +7512,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails7
 	 * TransactionDetails7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -7523,6 +7519,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails7> forTransactionDetails7 = new MMConstraint<TransactionDetails7>() {
@@ -7546,10 +7546,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption9
 	 * SecuritiesOption9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -7557,6 +7553,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesOption9> forSecuritiesOption9 = new MMConstraint<SecuritiesOption9>() {
@@ -7580,10 +7580,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AdditionalBalanceInformation6
 	 * AdditionalBalanceInformation6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -7591,6 +7587,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AdditionalBalanceInformation6> forAdditionalBalanceInformation6 = new MMConstraint<AdditionalBalanceInformation6>() {
@@ -7614,10 +7614,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PriceFormat21Choice
 	 * PriceFormat21Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -7625,6 +7621,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -7657,10 +7657,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails15
 	 * IntraPositionDetails15}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -7668,6 +7664,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IntraPositionDetails15> forIntraPositionDetails15 = new MMConstraint<IntraPositionDetails15>() {
@@ -7691,10 +7691,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PriceFormat18Choice
 	 * PriceFormat18Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -7702,6 +7698,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PriceFormat18Choice> forPriceFormat18Choice = new MMConstraint<PriceFormat18Choice>() {
@@ -7725,10 +7725,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount25
 	 * QuantityAndAccount25}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -7736,6 +7732,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount25> forQuantityAndAccount25 = new MMConstraint<QuantityAndAccount25>() {
@@ -7759,10 +7759,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails5
 	 * IntraPositionDetails5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -7770,6 +7766,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IntraPositionDetails5> forIntraPositionDetails5 = new MMConstraint<IntraPositionDetails5>() {
@@ -7793,10 +7793,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails44
 	 * TransactionDetails44}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -7804,6 +7800,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails44> forTransactionDetails44 = new MMConstraint<TransactionDetails44>() {
@@ -7827,10 +7827,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity5
 	 * AmountPricePerFinancialInstrumentQuantity5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -7838,6 +7834,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AmountPricePerFinancialInstrumentQuantity5> forAmountPricePerFinancialInstrumentQuantity5 = new MMConstraint<AmountPricePerFinancialInstrumentQuantity5>() {
@@ -7860,10 +7860,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Linkages24 Linkages24}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -7871,6 +7867,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Linkages24> forLinkages24 = new MMConstraint<Linkages24>() {
@@ -7894,10 +7894,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption107
 	 * CorporateActionOption107}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -7905,6 +7901,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption107> forCorporateActionOption107 = new MMConstraint<CorporateActionOption107>() {
@@ -7928,10 +7928,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption22
 	 * SecuritiesOption22}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -7939,6 +7935,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesOption22> forSecuritiesOption22 = new MMConstraint<SecuritiesOption22>() {
@@ -7962,10 +7962,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes40
 	 * FinancialInstrumentAttributes40}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -7973,6 +7969,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes40> forFinancialInstrumentAttributes40 = new MMConstraint<FinancialInstrumentAttributes40>() {
@@ -7996,10 +7996,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails2
 	 * IntraPositionMovementDetails2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -8007,6 +8003,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IntraPositionMovementDetails2> forIntraPositionMovementDetails2 = new MMConstraint<IntraPositionMovementDetails2>() {
@@ -8029,10 +8029,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Quantity8 Quantity8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -8040,6 +8036,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Quantity8> forQuantity8 = new MMConstraint<Quantity8>() {
@@ -8062,10 +8062,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Linkages14 Linkages14}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -8073,6 +8069,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Linkages14> forLinkages14 = new MMConstraint<Linkages14>() {
@@ -8096,10 +8096,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes55
 	 * FinancialInstrumentAttributes55}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -8107,6 +8103,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes55> forFinancialInstrumentAttributes55 = new MMConstraint<FinancialInstrumentAttributes55>() {
@@ -8130,10 +8130,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PriceFormat13Choice
 	 * PriceFormat13Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -8141,6 +8137,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PriceFormat13Choice> forPriceFormat13Choice = new MMConstraint<PriceFormat13Choice>() {
@@ -8164,10 +8164,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption30
 	 * SecuritiesOption30}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -8175,6 +8171,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesOption30> forSecuritiesOption30 = new MMConstraint<SecuritiesOption30>() {
@@ -8198,10 +8198,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails39
 	 * TransactionDetails39}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -8209,6 +8205,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails39> forTransactionDetails39 = new MMConstraint<TransactionDetails39>() {
@@ -8232,10 +8232,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount34
 	 * QuantityAndAccount34}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -8243,6 +8239,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount34> forQuantityAndAccount34 = new MMConstraint<QuantityAndAccount34>() {
@@ -8266,10 +8266,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes23
 	 * FinancialInstrumentAttributes23}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -8277,6 +8273,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes23> forFinancialInstrumentAttributes23 = new MMConstraint<FinancialInstrumentAttributes23>() {
@@ -8300,10 +8300,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AdditionalInformation7
 	 * AdditionalInformation7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -8311,6 +8307,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -8343,10 +8343,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption35
 	 * CorporateActionOption35}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -8354,6 +8350,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption35> forCorporateActionOption35 = new MMConstraint<CorporateActionOption35>() {
@@ -8377,10 +8377,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails16
 	 * IntraPositionDetails16}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -8388,6 +8384,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IntraPositionDetails16> forIntraPositionDetails16 = new MMConstraint<IntraPositionDetails16>() {
@@ -8411,10 +8411,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount15
 	 * QuantityAndAccount15}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -8422,6 +8418,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount15> forQuantityAndAccount15 = new MMConstraint<QuantityAndAccount15>() {
@@ -8445,10 +8445,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount8
 	 * QuantityAndAccount8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -8456,6 +8452,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount8> forQuantityAndAccount8 = new MMConstraint<QuantityAndAccount8>() {
@@ -8479,10 +8479,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption2
 	 * SecuritiesOption2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -8490,6 +8486,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesOption2> forSecuritiesOption2 = new MMConstraint<SecuritiesOption2>() {
@@ -8513,10 +8513,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails48
 	 * TransactionDetails48}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -8524,6 +8520,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails48> forTransactionDetails48 = new MMConstraint<TransactionDetails48>() {
@@ -8547,10 +8547,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.Quantity4Choice
 	 * Quantity4Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -8558,6 +8554,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Quantity4Choice> forQuantity4Choice = new MMConstraint<Quantity4Choice>() {
@@ -8581,10 +8581,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption27
 	 * SecuritiesOption27}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -8592,6 +8588,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesOption27> forSecuritiesOption27 = new MMConstraint<SecuritiesOption27>() {
@@ -8615,10 +8615,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption20
 	 * SecuritiesOption20}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -8626,6 +8622,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesOption20> forSecuritiesOption20 = new MMConstraint<SecuritiesOption20>() {
@@ -8649,10 +8649,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails56
 	 * TransactionDetails56}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -8660,6 +8656,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -8692,10 +8692,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount1
 	 * QuantityAndAccount1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -8703,6 +8699,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount1> forQuantityAndAccount1 = new MMConstraint<QuantityAndAccount1>() {
@@ -8726,10 +8726,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubBalanceInformation8
 	 * SubBalanceInformation8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -8737,6 +8733,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubBalanceInformation8> forSubBalanceInformation8 = new MMConstraint<SubBalanceInformation8>() {
@@ -8760,10 +8760,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption10
 	 * SecuritiesOption10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -8771,6 +8767,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesOption10> forSecuritiesOption10 = new MMConstraint<SecuritiesOption10>() {
@@ -8794,10 +8794,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AdditionalBalanceInformation7
 	 * AdditionalBalanceInformation7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -8805,6 +8801,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AdditionalBalanceInformation7> forAdditionalBalanceInformation7 = new MMConstraint<AdditionalBalanceInformation7>() {
@@ -8828,10 +8828,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption108
 	 * CorporateActionOption108}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -8839,6 +8835,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption108> forCorporateActionOption108 = new MMConstraint<CorporateActionOption108>() {
@@ -8862,10 +8862,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails35
 	 * TransactionDetails35}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -8873,6 +8869,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails35> forTransactionDetails35 = new MMConstraint<TransactionDetails35>() {
@@ -8896,10 +8896,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption8
 	 * SecuritiesOption8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -8907,6 +8903,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesOption8> forSecuritiesOption8 = new MMConstraint<SecuritiesOption8>() {
@@ -8930,10 +8930,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown3
 	 * QuantityBreakdown3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -8941,6 +8937,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityBreakdown3> forQuantityBreakdown3 = new MMConstraint<QuantityBreakdown3>() {
@@ -8964,10 +8964,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.InstructedOrQuantityToReceive1Choice
 	 * InstructedOrQuantityToReceive1Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -8975,6 +8971,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<InstructedOrQuantityToReceive1Choice> forInstructedOrQuantityToReceive1Choice = new MMConstraint<InstructedOrQuantityToReceive1Choice>() {
@@ -8998,10 +8998,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity3
 	 * AmountPricePerFinancialInstrumentQuantity3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -9009,6 +9005,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AmountPricePerFinancialInstrumentQuantity3> forAmountPricePerFinancialInstrumentQuantity3 = new MMConstraint<AmountPricePerFinancialInstrumentQuantity3>() {
@@ -9032,10 +9032,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails8
 	 * IntraPositionDetails8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -9043,6 +9039,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IntraPositionDetails8> forIntraPositionDetails8 = new MMConstraint<IntraPositionDetails8>() {
@@ -9066,10 +9066,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PriceFormat34Choice
 	 * PriceFormat34Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -9077,6 +9073,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -9106,10 +9106,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25
 	 * SecuritiesFinancingTransactionDetails25}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -9117,6 +9113,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails25> forSecuritiesFinancingTransactionDetails25 = new MMConstraint<SecuritiesFinancingTransactionDetails25>() {
@@ -9140,10 +9140,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.SolicitationFeeRateFormat4Choice
 	 * SolicitationFeeRateFormat4Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -9151,6 +9147,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SolicitationFeeRateFormat4Choice> forSolicitationFeeRateFormat4Choice = new MMConstraint<SolicitationFeeRateFormat4Choice>() {
@@ -9174,10 +9174,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails61
 	 * TransactionDetails61}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -9185,6 +9181,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -9223,10 +9223,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption24
 	 * SecuritiesOption24}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -9234,6 +9230,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesOption24> forSecuritiesOption24 = new MMConstraint<SecuritiesOption24>() {
@@ -9257,10 +9257,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption45
 	 * CorporateActionOption45}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -9268,6 +9264,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption45> forCorporateActionOption45 = new MMConstraint<CorporateActionOption45>() {
@@ -9291,10 +9291,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes20
 	 * FinancialInstrumentAttributes20}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -9302,6 +9298,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes20> forFinancialInstrumentAttributes20 = new MMConstraint<FinancialInstrumentAttributes20>() {
@@ -9325,10 +9325,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes28
 	 * FinancialInstrumentAttributes28}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -9336,6 +9332,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes28> forFinancialInstrumentAttributes28 = new MMConstraint<FinancialInstrumentAttributes28>() {
@@ -9359,10 +9359,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption15
 	 * SecuritiesOption15}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -9370,6 +9366,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesOption15> forSecuritiesOption15 = new MMConstraint<SecuritiesOption15>() {
@@ -9393,10 +9393,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption30
 	 * CorporateActionOption30}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -9404,6 +9400,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption30> forCorporateActionOption30 = new MMConstraint<CorporateActionOption30>() {
@@ -9427,10 +9427,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes57
 	 * FinancialInstrumentAttributes57}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -9438,6 +9434,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes57> forFinancialInstrumentAttributes57 = new MMConstraint<FinancialInstrumentAttributes57>() {
@@ -9461,10 +9461,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption106
 	 * CorporateActionOption106}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -9472,6 +9468,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption106> forCorporateActionOption106 = new MMConstraint<CorporateActionOption106>() {
@@ -9495,10 +9495,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption20
 	 * CorporateActionOption20}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -9506,6 +9502,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption20> forCorporateActionOption20 = new MMConstraint<CorporateActionOption20>() {
@@ -9529,10 +9529,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails14
 	 * TransactionDetails14}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -9540,6 +9536,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails14> forTransactionDetails14 = new MMConstraint<TransactionDetails14>() {
@@ -9563,10 +9563,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes24
 	 * FinancialInstrumentAttributes24}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -9574,6 +9570,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes24> forFinancialInstrumentAttributes24 = new MMConstraint<FinancialInstrumentAttributes24>() {
@@ -9597,10 +9597,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount13
 	 * QuantityAndAccount13}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -9608,6 +9604,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount13> forQuantityAndAccount13 = new MMConstraint<QuantityAndAccount13>() {
@@ -9631,10 +9631,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes26
 	 * FinancialInstrumentAttributes26}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -9642,6 +9638,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes26> forFinancialInstrumentAttributes26 = new MMConstraint<FinancialInstrumentAttributes26>() {
@@ -9665,10 +9665,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption12
 	 * SecuritiesOption12}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -9676,6 +9672,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesOption12> forSecuritiesOption12 = new MMConstraint<SecuritiesOption12>() {
@@ -9699,10 +9699,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount16
 	 * QuantityAndAccount16}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -9710,6 +9706,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount16> forQuantityAndAccount16 = new MMConstraint<QuantityAndAccount16>() {
@@ -9733,10 +9733,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails1
 	 * IntraPositionDetails1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -9744,6 +9740,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IntraPositionDetails1> forIntraPositionDetails1 = new MMConstraint<IntraPositionDetails1>() {
@@ -9767,10 +9767,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption40
 	 * SecuritiesOption40}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -9778,6 +9774,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -9807,10 +9807,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PriceFormat14Choice
 	 * PriceFormat14Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -9818,6 +9814,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PriceFormat14Choice> forPriceFormat14Choice = new MMConstraint<PriceFormat14Choice>() {
@@ -9841,10 +9841,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes45
 	 * FinancialInstrumentAttributes45}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -9852,6 +9848,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes45> forFinancialInstrumentAttributes45 = new MMConstraint<FinancialInstrumentAttributes45>() {
@@ -9875,10 +9875,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.StatusOrQuantityToReceive2Choice
 	 * StatusOrQuantityToReceive2Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -9886,6 +9882,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<StatusOrQuantityToReceive2Choice> forStatusOrQuantityToReceive2Choice = new MMConstraint<StatusOrQuantityToReceive2Choice>() {
@@ -9909,10 +9909,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails57
 	 * TransactionDetails57}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -9920,6 +9916,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -9952,10 +9952,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8
 	 * SecuritiesFinancingTransactionDetails8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -9963,6 +9959,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails8> forSecuritiesFinancingTransactionDetails8 = new MMConstraint<SecuritiesFinancingTransactionDetails8>() {
@@ -9986,10 +9986,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes50
 	 * FinancialInstrumentAttributes50}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -9997,6 +9993,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -10026,10 +10026,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount27
 	 * QuantityAndAccount27}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -10037,6 +10033,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount27> forQuantityAndAccount27 = new MMConstraint<QuantityAndAccount27>() {
@@ -10060,10 +10060,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateAction3
 	 * CorporateAction3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -10071,6 +10067,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateAction3> forCorporateAction3 = new MMConstraint<CorporateAction3>() {
@@ -10094,10 +10094,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails53
 	 * TransactionDetails53}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -10105,6 +10101,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -10137,10 +10137,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes21
 	 * FinancialInstrumentAttributes21}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -10148,6 +10144,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes21> forFinancialInstrumentAttributes21 = new MMConstraint<FinancialInstrumentAttributes21>() {
@@ -10171,10 +10171,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.RatioFormat5Choice
 	 * RatioFormat5Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -10182,6 +10178,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RatioFormat5Choice> forRatioFormat5Choice = new MMConstraint<RatioFormat5Choice>() {
@@ -10205,10 +10205,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown20
 	 * QuantityBreakdown20}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -10216,6 +10212,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityBreakdown20> forQuantityBreakdown20 = new MMConstraint<QuantityBreakdown20>() {
@@ -10238,10 +10238,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Linkages17 Linkages17}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -10249,6 +10245,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Linkages17> forLinkages17 = new MMConstraint<Linkages17>() {
@@ -10272,10 +10272,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.Quantity8Choice
 	 * Quantity8Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -10283,6 +10279,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Quantity8Choice> forQuantity8Choice = new MMConstraint<Quantity8Choice>() {
@@ -10306,10 +10306,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption25
 	 * CorporateActionOption25}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -10317,6 +10313,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption25> forCorporateActionOption25 = new MMConstraint<CorporateActionOption25>() {
@@ -10340,10 +10340,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption47
 	 * CorporateActionOption47}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -10351,6 +10347,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption47> forCorporateActionOption47 = new MMConstraint<CorporateActionOption47>() {
@@ -10374,10 +10374,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18
 	 * SecuritiesFinancingTransactionDetails18}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -10385,6 +10381,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails18> forSecuritiesFinancingTransactionDetails18 = new MMConstraint<SecuritiesFinancingTransactionDetails18>() {
@@ -10408,10 +10408,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AdditionalInformation8
 	 * AdditionalInformation8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -10419,6 +10415,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AdditionalInformation8> forAdditionalInformation8 = new MMConstraint<AdditionalInformation8>() {
@@ -10442,10 +10442,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption32
 	 * SecuritiesOption32}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -10453,6 +10449,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesOption32> forSecuritiesOption32 = new MMConstraint<SecuritiesOption32>() {
@@ -10476,10 +10476,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.BalanceQuantity4Choice
 	 * BalanceQuantity4Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -10487,6 +10483,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<BalanceQuantity4Choice> forBalanceQuantity4Choice = new MMConstraint<BalanceQuantity4Choice>() {
@@ -10510,10 +10510,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes10
 	 * FinancialInstrumentAttributes10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -10521,6 +10517,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes10> forFinancialInstrumentAttributes10 = new MMConstraint<FinancialInstrumentAttributes10>() {
@@ -10544,10 +10544,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption36
 	 * SecuritiesOption36}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -10555,6 +10551,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesOption36> forSecuritiesOption36 = new MMConstraint<SecuritiesOption36>() {
@@ -10578,10 +10578,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails47
 	 * TransactionDetails47}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -10589,6 +10585,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails47> forTransactionDetails47 = new MMConstraint<TransactionDetails47>() {
@@ -10612,10 +10612,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.SubBalanceQuantity4Choice
 	 * SubBalanceQuantity4Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -10623,6 +10619,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubBalanceQuantity4Choice> forSubBalanceQuantity4Choice = new MMConstraint<SubBalanceQuantity4Choice>() {
@@ -10646,10 +10646,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails67
 	 * TransactionDetails67}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -10657,6 +10653,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails67> forTransactionDetails67 = new MMConstraint<TransactionDetails67>() {
@@ -10680,10 +10680,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes35
 	 * FinancialInstrumentAttributes35}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -10691,6 +10687,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes35> forFinancialInstrumentAttributes35 = new MMConstraint<FinancialInstrumentAttributes35>() {
@@ -10714,10 +10714,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails28
 	 * TransactionDetails28}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -10725,6 +10721,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails28> forTransactionDetails28 = new MMConstraint<TransactionDetails28>() {
@@ -10748,10 +10748,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails24
 	 * TransactionDetails24}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -10759,6 +10755,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails24> forTransactionDetails24 = new MMConstraint<TransactionDetails24>() {
@@ -10782,10 +10782,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails22
 	 * TransactionDetails22}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -10793,6 +10789,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails22> forTransactionDetails22 = new MMConstraint<TransactionDetails22>() {
@@ -10816,10 +10816,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails5
 	 * IntraPositionMovementDetails5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -10827,6 +10823,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IntraPositionMovementDetails5> forIntraPositionMovementDetails5 = new MMConstraint<IntraPositionMovementDetails5>() {
@@ -10850,10 +10850,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6
 	 * SecuritiesFinancingTransactionDetails6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -10861,6 +10857,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails6> forSecuritiesFinancingTransactionDetails6 = new MMConstraint<SecuritiesFinancingTransactionDetails6>() {
@@ -10884,10 +10884,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails10
 	 * TransactionDetails10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -10895,6 +10891,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails10> forTransactionDetails10 = new MMConstraint<TransactionDetails10>() {
@@ -10918,10 +10918,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes30
 	 * FinancialInstrumentAttributes30}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -10929,6 +10925,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes30> forFinancialInstrumentAttributes30 = new MMConstraint<FinancialInstrumentAttributes30>() {
@@ -10952,10 +10952,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PriceFormat24Choice
 	 * PriceFormat24Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -10963,6 +10959,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PriceFormat24Choice> forPriceFormat24Choice = new MMConstraint<PriceFormat24Choice>() {
@@ -10986,10 +10986,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount35
 	 * QuantityAndAccount35}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -10997,6 +10993,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount35> forQuantityAndAccount35 = new MMConstraint<QuantityAndAccount35>() {
@@ -11020,10 +11020,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails32
 	 * TransactionDetails32}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -11031,6 +11027,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails32> forTransactionDetails32 = new MMConstraint<TransactionDetails32>() {
@@ -11054,10 +11054,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption32
 	 * CorporateActionOption32}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -11065,6 +11061,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption32> forCorporateActionOption32 = new MMConstraint<CorporateActionOption32>() {
@@ -11088,10 +11088,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption5
 	 * SecuritiesOption5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -11099,6 +11095,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesOption5> forSecuritiesOption5 = new MMConstraint<SecuritiesOption5>() {
@@ -11122,10 +11122,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown23
 	 * QuantityBreakdown23}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -11133,6 +11129,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityBreakdown23> forQuantityBreakdown23 = new MMConstraint<QuantityBreakdown23>() {
@@ -11156,10 +11156,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption28
 	 * SecuritiesOption28}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -11167,6 +11163,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesOption28> forSecuritiesOption28 = new MMConstraint<SecuritiesOption28>() {
@@ -11190,10 +11190,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown16
 	 * QuantityBreakdown16}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -11201,6 +11197,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityBreakdown16> forQuantityBreakdown16 = new MMConstraint<QuantityBreakdown16>() {
@@ -11224,10 +11224,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AdditionalInformation10
 	 * AdditionalInformation10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -11235,6 +11231,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AdditionalInformation10> forAdditionalInformation10 = new MMConstraint<AdditionalInformation10>() {
@@ -11258,10 +11258,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.SolicitationFeeRateFormat3Choice
 	 * SolicitationFeeRateFormat3Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -11269,6 +11265,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SolicitationFeeRateFormat3Choice> forSolicitationFeeRateFormat3Choice = new MMConstraint<SolicitationFeeRateFormat3Choice>() {
@@ -11292,10 +11292,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.Quantity9Choice
 	 * Quantity9Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -11303,6 +11299,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Quantity9Choice> forQuantity9Choice = new MMConstraint<Quantity9Choice>() {
@@ -11326,10 +11326,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails37
 	 * TransactionDetails37}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -11337,6 +11333,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails37> forTransactionDetails37 = new MMConstraint<TransactionDetails37>() {
@@ -11360,10 +11360,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes43
 	 * FinancialInstrumentAttributes43}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -11371,6 +11367,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -11403,10 +11403,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes8
 	 * FinancialInstrumentAttributes8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -11414,6 +11410,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes8> forFinancialInstrumentAttributes8 = new MMConstraint<FinancialInstrumentAttributes8>() {
@@ -11437,10 +11437,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes25
 	 * FinancialInstrumentAttributes25}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -11448,6 +11444,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes25> forFinancialInstrumentAttributes25 = new MMConstraint<FinancialInstrumentAttributes25>() {
@@ -11471,10 +11471,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails12
 	 * IntraPositionDetails12}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -11482,6 +11478,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IntraPositionDetails12> forIntraPositionDetails12 = new MMConstraint<IntraPositionDetails12>() {
@@ -11505,10 +11505,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount9
 	 * QuantityAndAccount9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -11516,6 +11512,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount9> forQuantityAndAccount9 = new MMConstraint<QuantityAndAccount9>() {
@@ -11539,10 +11539,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown25
 	 * QuantityBreakdown25}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -11550,6 +11546,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityBreakdown25> forQuantityBreakdown25 = new MMConstraint<QuantityBreakdown25>() {
@@ -11573,10 +11573,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes29
 	 * FinancialInstrumentAttributes29}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -11584,6 +11580,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes29> forFinancialInstrumentAttributes29 = new MMConstraint<FinancialInstrumentAttributes29>() {
@@ -11607,10 +11607,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails9
 	 * IntraPositionMovementDetails9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -11618,6 +11614,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IntraPositionMovementDetails9> forIntraPositionMovementDetails9 = new MMConstraint<IntraPositionMovementDetails9>() {
@@ -11641,10 +11641,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption21
 	 * SecuritiesOption21}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -11652,6 +11648,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesOption21> forSecuritiesOption21 = new MMConstraint<SecuritiesOption21>() {
@@ -11675,10 +11675,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.Quantity5Choice
 	 * Quantity5Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -11686,6 +11682,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Quantity5Choice> forQuantity5Choice = new MMConstraint<Quantity5Choice>() {
@@ -11709,10 +11709,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SignedQuantityFormat4
 	 * SignedQuantityFormat4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -11720,6 +11716,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SignedQuantityFormat4> forSignedQuantityFormat4 = new MMConstraint<SignedQuantityFormat4>() {
@@ -11743,10 +11743,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PriceFormat43Choice
 	 * PriceFormat43Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -11754,6 +11750,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PriceFormat43Choice> forPriceFormat43Choice = new MMConstraint<PriceFormat43Choice>() {
@@ -11777,10 +11777,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SignedQuantityFormat5
 	 * SignedQuantityFormat5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -11788,6 +11784,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SignedQuantityFormat5> forSignedQuantityFormat5 = new MMConstraint<SignedQuantityFormat5>() {
@@ -11811,10 +11811,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes15
 	 * FinancialInstrumentAttributes15}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -11822,6 +11818,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes15> forFinancialInstrumentAttributes15 = new MMConstraint<FinancialInstrumentAttributes15>() {
@@ -11845,10 +11845,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21
 	 * SecuritiesFinancingTransactionDetails21}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -11856,6 +11852,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -11896,10 +11896,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PriceFormat33Choice
 	 * PriceFormat33Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -11907,6 +11903,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -11936,10 +11936,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes46
 	 * FinancialInstrumentAttributes46}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -11947,6 +11943,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes46> forFinancialInstrumentAttributes46 = new MMConstraint<FinancialInstrumentAttributes46>() {
@@ -11970,10 +11970,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.BalanceQuantity7Choice
 	 * BalanceQuantity7Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -11981,6 +11977,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<BalanceQuantity7Choice> forBalanceQuantity7Choice = new MMConstraint<BalanceQuantity7Choice>() {
@@ -12004,10 +12004,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount21
 	 * QuantityAndAccount21}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -12015,6 +12011,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount21> forQuantityAndAccount21 = new MMConstraint<QuantityAndAccount21>() {
@@ -12038,10 +12038,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.RatioFormat14Choice
 	 * RatioFormat14Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -12049,6 +12045,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RatioFormat14Choice> forRatioFormat14Choice = new MMConstraint<RatioFormat14Choice>() {
@@ -12072,10 +12072,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount10
 	 * QuantityAndAccount10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -12083,6 +12079,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount10> forQuantityAndAccount10 = new MMConstraint<QuantityAndAccount10>() {
@@ -12106,10 +12106,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown14
 	 * QuantityBreakdown14}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -12117,6 +12113,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityBreakdown14> forQuantityBreakdown14 = new MMConstraint<QuantityBreakdown14>() {
@@ -12140,10 +12140,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.RatioFormat9Choice
 	 * RatioFormat9Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -12151,6 +12147,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RatioFormat9Choice> forRatioFormat9Choice = new MMConstraint<RatioFormat9Choice>() {
@@ -12174,10 +12174,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails50
 	 * TransactionDetails50}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -12185,6 +12181,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails50> forTransactionDetails50 = new MMConstraint<TransactionDetails50>() {
@@ -12208,10 +12208,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity1
 	 * CorporateActionQuantity1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -12219,6 +12215,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionQuantity1> forCorporateActionQuantity1 = new MMConstraint<CorporateActionQuantity1>() {
@@ -12242,10 +12242,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.StatusOrQuantityToReceive1Choice
 	 * StatusOrQuantityToReceive1Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -12253,6 +12249,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<StatusOrQuantityToReceive1Choice> forStatusOrQuantityToReceive1Choice = new MMConstraint<StatusOrQuantityToReceive1Choice>() {
@@ -12276,10 +12276,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PriceFormat39Choice
 	 * PriceFormat39Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -12287,6 +12283,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PriceFormat39Choice> forPriceFormat39Choice = new MMConstraint<PriceFormat39Choice>() {
@@ -12310,10 +12310,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown22
 	 * QuantityBreakdown22}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -12321,6 +12317,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityBreakdown22> forQuantityBreakdown22 = new MMConstraint<QuantityBreakdown22>() {
@@ -12344,10 +12344,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails9
 	 * IntraPositionDetails9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -12355,6 +12351,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IntraPositionDetails9> forIntraPositionDetails9 = new MMConstraint<IntraPositionDetails9>() {
@@ -12378,10 +12378,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.Quantity7Choice
 	 * Quantity7Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -12389,6 +12385,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Quantity7Choice> forQuantity7Choice = new MMConstraint<Quantity7Choice>() {
@@ -12412,10 +12412,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes4
 	 * FinancialInstrumentAttributes4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -12423,6 +12419,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes4> forFinancialInstrumentAttributes4 = new MMConstraint<FinancialInstrumentAttributes4>() {
@@ -12446,10 +12446,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AmountAndQuantityRatio2
 	 * AmountAndQuantityRatio2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -12457,6 +12453,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AmountAndQuantityRatio2> forAmountAndQuantityRatio2 = new MMConstraint<AmountAndQuantityRatio2>() {
@@ -12480,10 +12480,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes56
 	 * FinancialInstrumentAttributes56}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -12491,6 +12487,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes56> forFinancialInstrumentAttributes56 = new MMConstraint<FinancialInstrumentAttributes56>() {
@@ -12514,10 +12514,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes41
 	 * FinancialInstrumentAttributes41}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -12525,6 +12521,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes41> forFinancialInstrumentAttributes41 = new MMConstraint<FinancialInstrumentAttributes41>() {
@@ -12548,10 +12548,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubBalanceInformation9
 	 * SubBalanceInformation9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -12559,6 +12555,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubBalanceInformation9> forSubBalanceInformation9 = new MMConstraint<SubBalanceInformation9>() {
@@ -12582,10 +12582,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateAction5
 	 * CorporateAction5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -12593,6 +12589,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateAction5> forCorporateAction5 = new MMConstraint<CorporateAction5>() {
@@ -12616,10 +12616,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount20
 	 * QuantityAndAccount20}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -12627,6 +12623,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount20> forQuantityAndAccount20 = new MMConstraint<QuantityAndAccount20>() {
@@ -12650,10 +12650,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown9
 	 * QuantityBreakdown9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -12661,6 +12657,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityBreakdown9> forQuantityBreakdown9 = new MMConstraint<QuantityBreakdown9>() {
@@ -12684,10 +12684,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown18
 	 * QuantityBreakdown18}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -12695,6 +12691,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityBreakdown18> forQuantityBreakdown18 = new MMConstraint<QuantityBreakdown18>() {
@@ -12718,10 +12718,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption18
 	 * SecuritiesOption18}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -12729,6 +12725,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesOption18> forSecuritiesOption18 = new MMConstraint<SecuritiesOption18>() {
@@ -12752,10 +12752,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption10
 	 * CorporateActionOption10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -12763,6 +12759,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption10> forCorporateActionOption10 = new MMConstraint<CorporateActionOption10>() {
@@ -12786,10 +12786,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails3
 	 * IntraPositionMovementDetails3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -12797,6 +12793,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IntraPositionMovementDetails3> forIntraPositionMovementDetails3 = new MMConstraint<IntraPositionMovementDetails3>() {
@@ -12820,10 +12820,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.RatioFormat10Choice
 	 * RatioFormat10Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -12831,6 +12827,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RatioFormat10Choice> forRatioFormat10Choice = new MMConstraint<RatioFormat10Choice>() {
@@ -12854,10 +12854,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateAction8
 	 * CorporateAction8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -12865,6 +12861,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateAction8> forCorporateAction8 = new MMConstraint<CorporateAction8>() {
@@ -12888,10 +12888,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails62
 	 * TransactionDetails62}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -12899,6 +12895,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -12937,10 +12937,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption37
 	 * SecuritiesOption37}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -12948,6 +12944,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesOption37> forSecuritiesOption37 = new MMConstraint<SecuritiesOption37>() {
@@ -12971,10 +12971,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.RatioFormat13Choice
 	 * RatioFormat13Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -12982,6 +12978,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RatioFormat13Choice> forRatioFormat13Choice = new MMConstraint<RatioFormat13Choice>() {
@@ -13005,10 +13005,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2
 	 * SecuritiesFinancingTransactionDetails2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -13016,6 +13012,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails2> forSecuritiesFinancingTransactionDetails2 = new MMConstraint<SecuritiesFinancingTransactionDetails2>() {
@@ -13039,10 +13039,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes11
 	 * FinancialInstrumentAttributes11}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -13050,6 +13046,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes11> forFinancialInstrumentAttributes11 = new MMConstraint<FinancialInstrumentAttributes11>() {
@@ -13073,10 +13073,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails2
 	 * IntraPositionDetails2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -13084,6 +13080,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IntraPositionDetails2> forIntraPositionDetails2 = new MMConstraint<IntraPositionDetails2>() {
@@ -13107,10 +13107,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AdditionalBalanceInformation5
 	 * AdditionalBalanceInformation5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -13118,6 +13114,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AdditionalBalanceInformation5> forAdditionalBalanceInformation5 = new MMConstraint<AdditionalBalanceInformation5>() {
@@ -13141,10 +13141,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes9
 	 * FinancialInstrumentAttributes9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -13152,6 +13148,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes9> forFinancialInstrumentAttributes9 = new MMConstraint<FinancialInstrumentAttributes9>() {
@@ -13175,10 +13175,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption29
 	 * SecuritiesOption29}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -13186,6 +13182,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesOption29> forSecuritiesOption29 = new MMConstraint<SecuritiesOption29>() {
@@ -13209,10 +13209,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount18
 	 * QuantityAndAccount18}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -13220,6 +13216,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount18> forQuantityAndAccount18 = new MMConstraint<QuantityAndAccount18>() {
@@ -13243,10 +13243,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption33
 	 * SecuritiesOption33}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -13254,6 +13250,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesOption33> forSecuritiesOption33 = new MMConstraint<SecuritiesOption33>() {
@@ -13277,10 +13277,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails27
 	 * IntraPositionDetails27}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -13288,6 +13284,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IntraPositionDetails27> forIntraPositionDetails27 = new MMConstraint<IntraPositionDetails27>() {
@@ -13311,10 +13311,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount24
 	 * QuantityAndAccount24}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -13322,6 +13318,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount24> forQuantityAndAccount24 = new MMConstraint<QuantityAndAccount24>() {
@@ -13344,10 +13344,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.IntraPosition4 IntraPosition4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -13355,6 +13351,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IntraPosition4> forIntraPosition4 = new MMConstraint<IntraPosition4>() {
@@ -13378,10 +13378,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails36
 	 * TransactionDetails36}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -13389,6 +13385,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails36> forTransactionDetails36 = new MMConstraint<TransactionDetails36>() {
@@ -13412,10 +13412,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes42
 	 * FinancialInstrumentAttributes42}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -13423,6 +13419,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes42> forFinancialInstrumentAttributes42 = new MMConstraint<FinancialInstrumentAttributes42>() {
@@ -13446,10 +13446,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateAction6
 	 * CorporateAction6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -13457,6 +13453,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateAction6> forCorporateAction6 = new MMConstraint<CorporateAction6>() {
@@ -13480,10 +13480,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AdditionalBalanceInformation12
 	 * AdditionalBalanceInformation12}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -13491,6 +13487,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AdditionalBalanceInformation12> forAdditionalBalanceInformation12 = new MMConstraint<AdditionalBalanceInformation12>() {
@@ -13514,10 +13514,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateAction17
 	 * CorporateAction17}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -13525,6 +13521,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateAction17> forCorporateAction17 = new MMConstraint<CorporateAction17>() {
@@ -13548,10 +13548,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount36
 	 * QuantityAndAccount36}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -13559,6 +13555,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount36> forQuantityAndAccount36 = new MMConstraint<QuantityAndAccount36>() {
@@ -13582,10 +13582,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes36
 	 * FinancialInstrumentAttributes36}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -13593,6 +13589,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes36> forFinancialInstrumentAttributes36 = new MMConstraint<FinancialInstrumentAttributes36>() {
@@ -13616,10 +13616,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount26
 	 * QuantityAndAccount26}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -13627,6 +13623,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount26> forQuantityAndAccount26 = new MMConstraint<QuantityAndAccount26>() {
@@ -13650,10 +13650,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount2
 	 * QuantityAndAccount2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -13661,6 +13657,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount2> forQuantityAndAccount2 = new MMConstraint<QuantityAndAccount2>() {
@@ -13684,10 +13684,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount37
 	 * QuantityAndAccount37}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -13695,6 +13691,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount37> forQuantityAndAccount37 = new MMConstraint<QuantityAndAccount37>() {
@@ -13718,10 +13718,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption7
 	 * SecuritiesOption7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -13729,6 +13725,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesOption7> forSecuritiesOption7 = new MMConstraint<SecuritiesOption7>() {
@@ -13752,10 +13752,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateAction12
 	 * CorporateAction12}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -13763,6 +13759,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -13792,10 +13792,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails69
 	 * TransactionDetails69}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -13803,6 +13799,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -13832,10 +13832,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes16
 	 * FinancialInstrumentAttributes16}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -13843,6 +13839,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes16> forFinancialInstrumentAttributes16 = new MMConstraint<FinancialInstrumentAttributes16>() {
@@ -13866,10 +13866,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown19
 	 * QuantityBreakdown19}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -13877,6 +13873,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityBreakdown19> forQuantityBreakdown19 = new MMConstraint<QuantityBreakdown19>() {
@@ -13900,10 +13900,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails21
 	 * IntraPositionDetails21}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -13911,6 +13907,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IntraPositionDetails21> forIntraPositionDetails21 = new MMConstraint<IntraPositionDetails21>() {
@@ -13934,10 +13934,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption16
 	 * SecuritiesOption16}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -13945,6 +13941,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesOption16> forSecuritiesOption16 = new MMConstraint<SecuritiesOption16>() {
@@ -13968,10 +13968,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption100
 	 * CorporateActionOption100}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -13979,6 +13975,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -14008,10 +14008,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails9
 	 * TransactionDetails9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -14019,6 +14015,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails9> forTransactionDetails9 = new MMConstraint<TransactionDetails9>() {
@@ -14042,10 +14042,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PriceFormat26Choice
 	 * PriceFormat26Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -14053,6 +14049,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PriceFormat26Choice> forPriceFormat26Choice = new MMConstraint<PriceFormat26Choice>() {
@@ -14076,10 +14076,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount29
 	 * QuantityAndAccount29}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -14087,6 +14083,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount29> forQuantityAndAccount29 = new MMConstraint<QuantityAndAccount29>() {
@@ -14110,10 +14110,6 @@ public class ConstraintCoexistenceQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount23
 	 * QuantityAndAccount23}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceQuantityRule"</li>
 	 * <li>
@@ -14121,6 +14117,10 @@ public class ConstraintCoexistenceQuantityRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Quantity length must not be greater than 15, including the decimal point."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount23> forQuantityAndAccount23 = new MMConstraint<QuantityAndAccount23>() {

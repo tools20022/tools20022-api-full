@@ -157,6 +157,11 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "SecuritiesTransactionType21Code"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} =
+ * "Specifies underlying information regarding the type of transaction."</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -167,11 +172,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "SecuritiesTransactionType21Code"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} =
- * "Specifies underlying information regarding the type of transaction."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -186,12 +186,12 @@ public class SecuritiesTransactionType21Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType21Code
 	 * SecuritiesTransactionType21Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CentralBankCollateralOperation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CentralBankCollateralOperation"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesTransactionType21Code CentralBankCollateralOperation = new SecuritiesTransactionType21Code() {
@@ -210,12 +210,12 @@ public class SecuritiesTransactionType21Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType21Code
 	 * SecuritiesTransactionType21Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BuySellBack"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BuySellBack"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesTransactionType21Code BuySellBack = new SecuritiesTransactionType21Code() {
@@ -234,12 +234,12 @@ public class SecuritiesTransactionType21Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType21Code
 	 * SecuritiesTransactionType21Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CollateralIn"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CollateralIn"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesTransactionType21Code CollateralIn = new SecuritiesTransactionType21Code() {
@@ -258,12 +258,12 @@ public class SecuritiesTransactionType21Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType21Code
 	 * SecuritiesTransactionType21Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CollateralOut"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CollateralOut"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesTransactionType21Code CollateralOut = new SecuritiesTransactionType21Code() {
@@ -282,12 +282,12 @@ public class SecuritiesTransactionType21Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType21Code
 	 * SecuritiesTransactionType21Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Netting"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Netting"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesTransactionType21Code Netting = new SecuritiesTransactionType21Code() {
@@ -306,12 +306,12 @@ public class SecuritiesTransactionType21Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType21Code
 	 * SecuritiesTransactionType21Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ExternalAccountTransfer"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ExternalAccountTransfer"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesTransactionType21Code ExternalAccountTransfer = new SecuritiesTransactionType21Code() {
@@ -330,12 +330,12 @@ public class SecuritiesTransactionType21Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType21Code
 	 * SecuritiesTransactionType21Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InternalAccountTransfer"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "InternalAccountTransfer"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesTransactionType21Code InternalAccountTransfer = new SecuritiesTransactionType21Code() {
@@ -354,12 +354,12 @@ public class SecuritiesTransactionType21Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType21Code
 	 * SecuritiesTransactionType21Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PairOff"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PairOff"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesTransactionType21Code PairOff = new SecuritiesTransactionType21Code() {
@@ -378,12 +378,12 @@ public class SecuritiesTransactionType21Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType21Code
 	 * SecuritiesTransactionType21Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Placement"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Placement"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesTransactionType21Code Placement = new SecuritiesTransactionType21Code() {
@@ -402,12 +402,12 @@ public class SecuritiesTransactionType21Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType21Code
 	 * SecuritiesTransactionType21Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PortfolioMove"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PortfolioMove"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesTransactionType21Code PortfolioMove = new SecuritiesTransactionType21Code() {
@@ -426,12 +426,12 @@ public class SecuritiesTransactionType21Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType21Code
 	 * SecuritiesTransactionType21Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Realignment"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Realignment"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesTransactionType21Code Realignment = new SecuritiesTransactionType21Code() {
@@ -450,12 +450,12 @@ public class SecuritiesTransactionType21Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType21Code
 	 * SecuritiesTransactionType21Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Redemption"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Redemption"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesTransactionType21Code Redemption = new SecuritiesTransactionType21Code() {
@@ -474,12 +474,12 @@ public class SecuritiesTransactionType21Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType21Code
 	 * SecuritiesTransactionType21Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Repo"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Repo"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesTransactionType21Code Repo = new SecuritiesTransactionType21Code() {
@@ -498,12 +498,12 @@ public class SecuritiesTransactionType21Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType21Code
 	 * SecuritiesTransactionType21Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ReverseRepo"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ReverseRepo"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesTransactionType21Code ReverseRepo = new SecuritiesTransactionType21Code() {
@@ -522,12 +522,12 @@ public class SecuritiesTransactionType21Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType21Code
 	 * SecuritiesTransactionType21Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecuritiesBorrowing"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SecuritiesBorrowing"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesTransactionType21Code SecuritiesBorrowing = new SecuritiesTransactionType21Code() {
@@ -546,12 +546,12 @@ public class SecuritiesTransactionType21Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType21Code
 	 * SecuritiesTransactionType21Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecuritiesLending"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SecuritiesLending"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesTransactionType21Code SecuritiesLending = new SecuritiesTransactionType21Code() {
@@ -570,12 +570,12 @@ public class SecuritiesTransactionType21Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType21Code
 	 * SecuritiesTransactionType21Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Subscription"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Subscription"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesTransactionType21Code Subscription = new SecuritiesTransactionType21Code() {
@@ -594,12 +594,12 @@ public class SecuritiesTransactionType21Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType21Code
 	 * SecuritiesTransactionType21Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Trade"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Trade"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesTransactionType21Code Trade = new SecuritiesTransactionType21Code() {
@@ -618,12 +618,12 @@ public class SecuritiesTransactionType21Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType21Code
 	 * SecuritiesTransactionType21Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TripartyRepo"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "TripartyRepo"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesTransactionType21Code TripartyRepo = new SecuritiesTransactionType21Code() {
@@ -642,12 +642,12 @@ public class SecuritiesTransactionType21Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType21Code
 	 * SecuritiesTransactionType21Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TripartyReverseRepo"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "TripartyReverseRepo"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesTransactionType21Code TripartyReverseRepo = new SecuritiesTransactionType21Code() {
@@ -666,12 +666,12 @@ public class SecuritiesTransactionType21Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType21Code
 	 * SecuritiesTransactionType21Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Turnaround"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Turnaround"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesTransactionType21Code Turnaround = new SecuritiesTransactionType21Code() {
@@ -690,12 +690,12 @@ public class SecuritiesTransactionType21Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType21Code
 	 * SecuritiesTransactionType21Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AutoCollateralisation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AutoCollateralisation"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesTransactionType21Code AutoCollateralisation = new SecuritiesTransactionType21Code() {
@@ -714,12 +714,12 @@ public class SecuritiesTransactionType21Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType21Code
 	 * SecuritiesTransactionType21Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "MarketClaim"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "MarketClaim"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesTransactionType21Code MarketClaim = new SecuritiesTransactionType21Code() {
@@ -738,12 +738,12 @@ public class SecuritiesTransactionType21Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType21Code
 	 * SecuritiesTransactionType21Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CorporateAction"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CorporateAction"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesTransactionType21Code CorporateAction = new SecuritiesTransactionType21Code() {
@@ -762,12 +762,12 @@ public class SecuritiesTransactionType21Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType21Code
 	 * SecuritiesTransactionType21Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ExchangeTradedFunds"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ExchangeTradedFunds"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesTransactionType21Code ExchangeTradedFunds = new SecuritiesTransactionType21Code() {
@@ -786,12 +786,12 @@ public class SecuritiesTransactionType21Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType21Code
 	 * SecuritiesTransactionType21Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BuyIn"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BuyIn"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesTransactionType21Code BuyIn = new SecuritiesTransactionType21Code() {
@@ -810,12 +810,12 @@ public class SecuritiesTransactionType21Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType21Code
 	 * SecuritiesTransactionType21Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DepositoryReceiptConversion"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DepositoryReceiptConversion"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesTransactionType21Code DepositoryReceiptConversion = new SecuritiesTransactionType21Code() {
@@ -834,12 +834,12 @@ public class SecuritiesTransactionType21Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType21Code
 	 * SecuritiesTransactionType21Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Issuance"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Issuance"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesTransactionType21Code Issuance = new SecuritiesTransactionType21Code() {
@@ -858,12 +858,12 @@ public class SecuritiesTransactionType21Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType21Code
 	 * SecuritiesTransactionType21Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "MarkDown"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "MarkDown"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesTransactionType21Code MarkDown = new SecuritiesTransactionType21Code() {
@@ -882,12 +882,12 @@ public class SecuritiesTransactionType21Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType21Code
 	 * SecuritiesTransactionType21Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "MarkUp"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "MarkUp"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesTransactionType21Code MarkUp = new SecuritiesTransactionType21Code() {
@@ -906,12 +906,12 @@ public class SecuritiesTransactionType21Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType21Code
 	 * SecuritiesTransactionType21Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NonSyndicated"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "NonSyndicated"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesTransactionType21Code NonSyndicated = new SecuritiesTransactionType21Code() {
@@ -930,12 +930,12 @@ public class SecuritiesTransactionType21Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType21Code
 	 * SecuritiesTransactionType21Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Withdrawal"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Withdrawal"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesTransactionType21Code Withdrawal = new SecuritiesTransactionType21Code() {
@@ -954,12 +954,12 @@ public class SecuritiesTransactionType21Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType21Code
 	 * SecuritiesTransactionType21Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DepositoryReceiptReleaseCancellation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DepositoryReceiptReleaseCancellation"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesTransactionType21Code DepositoryReceiptReleaseCancellation = new SecuritiesTransactionType21Code() {
@@ -978,12 +978,12 @@ public class SecuritiesTransactionType21Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType21Code
 	 * SecuritiesTransactionType21Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SellBuyBack"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SellBuyBack"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesTransactionType21Code SellBuyBack = new SecuritiesTransactionType21Code() {
@@ -1002,12 +1002,12 @@ public class SecuritiesTransactionType21Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType21Code
 	 * SecuritiesTransactionType21Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SyndicateUnderwriters"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SyndicateUnderwriters"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesTransactionType21Code SyndicateUnderwriters = new SecuritiesTransactionType21Code() {
@@ -1026,12 +1026,12 @@ public class SecuritiesTransactionType21Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType21Code
 	 * SecuritiesTransactionType21Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SwitchFrom"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SwitchFrom"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesTransactionType21Code SwitchFrom = new SecuritiesTransactionType21Code() {
@@ -1050,12 +1050,12 @@ public class SecuritiesTransactionType21Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType21Code
 	 * SecuritiesTransactionType21Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SwitchTo"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SwitchTo"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesTransactionType21Code SwitchTo = new SecuritiesTransactionType21Code() {

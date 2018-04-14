@@ -37,10 +37,6 @@ public class ConstraintInstructionCancellationRequestIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV05
 	 * CorporateActionInstructionV05}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InstructionCancellationRequestIdentificationRule"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintInstructionCancellationRequestIdentificationRule {
 	 * definition} =
 	 * "If Identification/ChangeInstructionIndicator is YES (True), then InstructionCancellationRequestIdentification must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -88,10 +88,6 @@ public class ConstraintInstructionCancellationRequestIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV06
 	 * CorporateActionInstructionV06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InstructionCancellationRequestIdentificationRule"</li>
 	 * <li>
@@ -99,6 +95,10 @@ public class ConstraintInstructionCancellationRequestIdentificationRule {
 	 * definition} =
 	 * "If ChangeInstructionIndicator is 'true' or '1' (Yes), then InstructionCancellationRequestIdentification must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -139,10 +139,6 @@ public class ConstraintInstructionCancellationRequestIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV03
 	 * CorporateActionInstructionV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InstructionCancellationRequestIdentificationRule"</li>
 	 * <li>
@@ -150,6 +146,10 @@ public class ConstraintInstructionCancellationRequestIdentificationRule {
 	 * definition} =
 	 * "If Identification/ChangeInstructionIndicator is YES (True), then InstructionCancellationRequestIdentification must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionInstructionV03> for_seev_CorporateActionInstructionV03 = new MMConstraint<CorporateActionInstructionV03>() {
@@ -173,10 +173,6 @@ public class ConstraintInstructionCancellationRequestIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV02
 	 * CorporateActionInstructionV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InstructionCancellationRequestIdentificationRule"</li>
 	 * <li>
@@ -184,6 +180,10 @@ public class ConstraintInstructionCancellationRequestIdentificationRule {
 	 * definition} =
 	 * "If Identification/ChangeInstructionIndicator is YES (True), then InstructionCancellationRequestIdentification must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionInstructionV02> for_seev_CorporateActionInstructionV02 = new MMConstraint<CorporateActionInstructionV02>() {
@@ -207,10 +207,6 @@ public class ConstraintInstructionCancellationRequestIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstruction002V06
 	 * CorporateActionInstruction002V06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InstructionCancellationRequestIdentificationRule"</li>
 	 * <li>
@@ -218,6 +214,10 @@ public class ConstraintInstructionCancellationRequestIdentificationRule {
 	 * definition} =
 	 * "If ChangeInstructionIndicator is 'true' or '1' (Yes), then InstructionCancellationRequestIdentification must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionInstruction002V06> for_seev_CorporateActionInstruction002V06 = new MMConstraint<CorporateActionInstruction002V06>() {
@@ -241,10 +241,6 @@ public class ConstraintInstructionCancellationRequestIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV04
 	 * CorporateActionInstructionV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InstructionCancellationRequestIdentificationRule"</li>
 	 * <li>
@@ -252,6 +248,10 @@ public class ConstraintInstructionCancellationRequestIdentificationRule {
 	 * definition} =
 	 * "If Identification/ChangeInstructionIndicator is YES (True), then InstructionCancellationRequestIdentification must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -285,10 +285,6 @@ public class ConstraintInstructionCancellationRequestIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV01
 	 * CorporateActionInstructionV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InstructionCancellationRequestIdentificationRule"</li>
 	 * <li>
@@ -296,6 +292,10 @@ public class ConstraintInstructionCancellationRequestIdentificationRule {
 	 * definition} =
 	 * "If Identification/ChangeInstructionIndicator is YES (True), then InstructionCancellationRequestIdentification must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionInstructionV01> for_seev_CorporateActionInstructionV01 = new MMConstraint<CorporateActionInstructionV01>() {
@@ -319,10 +319,6 @@ public class ConstraintInstructionCancellationRequestIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV07
 	 * CorporateActionInstructionV07}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InstructionCancellationRequestIdentificationRule"</li>
 	 * <li>
@@ -330,6 +326,10 @@ public class ConstraintInstructionCancellationRequestIdentificationRule {
 	 * definition} =
 	 * "If ChangeInstructionIndicator is 'true' or '1' (Yes), then InstructionCancellationRequestIdentification must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -370,10 +370,6 @@ public class ConstraintInstructionCancellationRequestIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV08
 	 * CorporateActionInstructionV08}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InstructionCancellationRequestIdentificationRule"</li>
 	 * <li>
@@ -381,6 +377,10 @@ public class ConstraintInstructionCancellationRequestIdentificationRule {
 	 * definition} =
 	 * "If ChangeInstructionIndicator is 'true' or '1' (Yes), then InstructionCancellationRequestIdentification must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -411,10 +411,6 @@ public class ConstraintInstructionCancellationRequestIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstruction002V08
 	 * CorporateActionInstruction002V08}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InstructionCancellationRequestIdentificationRule"</li>
 	 * <li>
@@ -422,6 +418,10 @@ public class ConstraintInstructionCancellationRequestIdentificationRule {
 	 * definition} =
 	 * "If ChangeInstructionIndicator is 'true' or '1' (Yes), then InstructionCancellationRequestIdentification must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionInstruction002V08> for_seev_CorporateActionInstruction002V08 = new MMConstraint<CorporateActionInstruction002V08>() {

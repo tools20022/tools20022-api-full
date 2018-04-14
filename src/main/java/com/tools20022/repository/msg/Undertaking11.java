@@ -66,14 +66,14 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "Undertaking11"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Details related to the local undertaking."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -104,16 +104,16 @@ public class Undertaking11 {
 	 * {@linkplain com.tools20022.repository.msg.Undertaking11 Undertaking11}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NewUdrtkgAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NewUndertakingAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Details related to the requested new amount for the local undertaking."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<Undertaking11, Optional<UndertakingAmount2>> mmNewUndertakingAmount = new MMMessageAttribute<Undertaking11, Optional<UndertakingAmount2>>() {
@@ -162,10 +162,6 @@ public class Undertaking11 {
 	 * {@linkplain com.tools20022.repository.msg.Undertaking11 Undertaking11}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NewXpryDtls"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NewExpiryDetails"</li>
 	 * <li>
@@ -173,6 +169,10 @@ public class Undertaking11 {
 	 * definition} =
 	 * "Details related to the requested new expiry terms for the local undertaking."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<Undertaking11, Optional<ExpiryDetails1>> mmNewExpiryDetails = new MMMessageAttribute<Undertaking11, Optional<ExpiryDetails1>>() {
@@ -222,10 +222,6 @@ public class Undertaking11 {
 	 * {@linkplain com.tools20022.repository.msg.Undertaking11 Undertaking11}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NewBnfcry"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NewBeneficiary"</li>
 	 * <li>
@@ -233,6 +229,10 @@ public class Undertaking11 {
 	 * definition} =
 	 * "Details related to the requested new beneficiary for the local undertaking."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<Undertaking11, Optional<PartyIdentification43>> mmNewBeneficiary = new MMMessageAttribute<Undertaking11, Optional<PartyIdentification43>>() {
@@ -276,10 +276,6 @@ public class Undertaking11 {
 	 * {@linkplain com.tools20022.repository.msg.Undertaking11 Undertaking11}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NewUdrtkgTermsAndConds"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NewUndertakingTermsAndConditions"</li>
 	 * <li>
@@ -287,6 +283,10 @@ public class Undertaking11 {
 	 * definition} =
 	 * "Details related to the requested new terms and conditions for the local undertaking."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<Undertaking11, Optional<Narrative1>> mmNewUndertakingTermsAndConditions = new MMMessageAttribute<Undertaking11, Optional<Narrative1>>() {
@@ -335,10 +335,6 @@ public class Undertaking11 {
 	 * {@linkplain com.tools20022.repository.msg.Undertaking11 Undertaking11}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DlvryChanl"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DeliveryChannel"</li>
 	 * <li>
@@ -346,6 +342,10 @@ public class Undertaking11 {
 	 * definition} =
 	 * "Details related to the delivery channel for the amended local undertaking."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<Undertaking11, Optional<CommunicationChannel1>> mmDeliveryChannel = new MMMessageAttribute<Undertaking11, Optional<CommunicationChannel1>>() {

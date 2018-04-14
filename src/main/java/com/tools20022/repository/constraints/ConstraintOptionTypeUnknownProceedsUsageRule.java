@@ -37,10 +37,6 @@ public class ConstraintOptionTypeUnknownProceedsUsageRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption56
 	 * CorporateActionOption56}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionTypeUnknownProceedsUsageRule"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintOptionTypeUnknownProceedsUsageRule {
 	 * definition} =
 	 * "When used, the corporate action option code Unknown Proceeds should be maintained throughout the full lifecycle of the event."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption56> forCorporateActionOption56 = new MMConstraint<CorporateActionOption56>() {
@@ -71,10 +71,6 @@ public class ConstraintOptionTypeUnknownProceedsUsageRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption130
 	 * CorporateActionOption130}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionTypeUnknownProceedsUsageRule"</li>
 	 * <li>
@@ -82,6 +78,10 @@ public class ConstraintOptionTypeUnknownProceedsUsageRule {
 	 * definition} =
 	 * "When used, the corporate action option code Unknown Proceeds should be maintained throughout the full lifecycle of the event."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -122,10 +122,6 @@ public class ConstraintOptionTypeUnknownProceedsUsageRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption51
 	 * CorporateActionOption51}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionTypeUnknownProceedsUsageRule"</li>
 	 * <li>
@@ -133,6 +129,10 @@ public class ConstraintOptionTypeUnknownProceedsUsageRule {
 	 * definition} =
 	 * "When used, the corporate action option code Unknown Proceeds should be maintained throughout the full lifecycle of the event."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -166,10 +166,6 @@ public class ConstraintOptionTypeUnknownProceedsUsageRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption101
 	 * CorporateActionOption101}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionTypeUnknownProceedsUsageRule"</li>
 	 * <li>
@@ -177,6 +173,10 @@ public class ConstraintOptionTypeUnknownProceedsUsageRule {
 	 * definition} =
 	 * "When used, the corporate action option code Unknown Proceeds should be maintained throughout the full lifecycle of the event."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -216,10 +216,6 @@ public class ConstraintOptionTypeUnknownProceedsUsageRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption114
 	 * CorporateActionOption114}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionTypeUnknownProceedsUsageRule"</li>
 	 * <li>
@@ -227,6 +223,10 @@ public class ConstraintOptionTypeUnknownProceedsUsageRule {
 	 * definition} =
 	 * "When used, the corporate action option code Unknown Proceeds should be maintained throughout the full lifecycle of the event."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -267,10 +267,6 @@ public class ConstraintOptionTypeUnknownProceedsUsageRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption36
 	 * CorporateActionOption36}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionTypeUnknownProceedsUsageRule"</li>
 	 * <li>
@@ -278,6 +274,10 @@ public class ConstraintOptionTypeUnknownProceedsUsageRule {
 	 * definition} =
 	 * "When used, the corporate action option code Unknown Proceeds should be maintained throughout the full lifecycle of the event."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption36> forCorporateActionOption36 = new MMConstraint<CorporateActionOption36>() {
@@ -301,10 +301,6 @@ public class ConstraintOptionTypeUnknownProceedsUsageRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption138
 	 * CorporateActionOption138}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionTypeUnknownProceedsUsageRule"</li>
 	 * <li>
@@ -312,6 +308,10 @@ public class ConstraintOptionTypeUnknownProceedsUsageRule {
 	 * definition} =
 	 * "When used, the corporate action option code PRUN (Unknown Proceeds) should be maintained throughout the full lifecycle of the event."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -342,10 +342,6 @@ public class ConstraintOptionTypeUnknownProceedsUsageRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption45
 	 * CorporateActionOption45}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionTypeUnknownProceedsUsageRule"</li>
 	 * <li>
@@ -353,6 +349,10 @@ public class ConstraintOptionTypeUnknownProceedsUsageRule {
 	 * definition} =
 	 * "When used, the corporate action option code Unknown Proceeds should be maintained throughout the full lifecycle of the event."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption45> forCorporateActionOption45 = new MMConstraint<CorporateActionOption45>() {
@@ -376,10 +376,6 @@ public class ConstraintOptionTypeUnknownProceedsUsageRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption106
 	 * CorporateActionOption106}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionTypeUnknownProceedsUsageRule"</li>
 	 * <li>
@@ -387,6 +383,10 @@ public class ConstraintOptionTypeUnknownProceedsUsageRule {
 	 * definition} =
 	 * "When used, the corporate action option code Unknown Proceeds should be maintained throughout the full lifecycle of the event."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption106> forCorporateActionOption106 = new MMConstraint<CorporateActionOption106>() {
@@ -410,10 +410,6 @@ public class ConstraintOptionTypeUnknownProceedsUsageRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption150
 	 * CorporateActionOption150}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionTypeUnknownProceedsUsageRule"</li>
 	 * <li>
@@ -421,6 +417,10 @@ public class ConstraintOptionTypeUnknownProceedsUsageRule {
 	 * definition} =
 	 * "When used, the corporate action option code PRUN (Unknown Proceeds) should be maintained throughout the full lifecycle of the event."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption150> forCorporateActionOption150 = new MMConstraint<CorporateActionOption150>() {
@@ -444,10 +444,6 @@ public class ConstraintOptionTypeUnknownProceedsUsageRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption133
 	 * CorporateActionOption133}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionTypeUnknownProceedsUsageRule"</li>
 	 * <li>
@@ -455,6 +451,10 @@ public class ConstraintOptionTypeUnknownProceedsUsageRule {
 	 * definition} =
 	 * "When used, the corporate action option code Unknown Proceeds should be maintained throughout the full lifecycle of the event."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption133> forCorporateActionOption133 = new MMConstraint<CorporateActionOption133>() {
@@ -478,10 +478,6 @@ public class ConstraintOptionTypeUnknownProceedsUsageRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption127
 	 * CorporateActionOption127}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionTypeUnknownProceedsUsageRule"</li>
 	 * <li>
@@ -489,6 +485,10 @@ public class ConstraintOptionTypeUnknownProceedsUsageRule {
 	 * definition} =
 	 * "When used, the corporate action option code Unknown Proceeds should be maintained throughout the full lifecycle of the event."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption127> forCorporateActionOption127 = new MMConstraint<CorporateActionOption127>() {

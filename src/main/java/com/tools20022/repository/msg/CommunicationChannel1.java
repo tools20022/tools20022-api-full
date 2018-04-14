@@ -69,6 +69,10 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "CommunicationChannel1"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} = "Communication channel information."</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
  * constraint} =
  * <ul>
@@ -81,10 +85,6 @@ import javax.xml.bind.annotation.XmlType;
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "CommunicationChannel1"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Communication channel information."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -116,10 +116,6 @@ public class CommunicationChannel1 {
 	 * CommunicationChannel1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Mtd"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Method"</li>
 	 * <li>
@@ -127,6 +123,10 @@ public class CommunicationChannel1 {
 	 * definition} =
 	 * "Method by which the original undertaking or proposed amendment is to be made available.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CommunicationChannel1, ExternalChannel1Code> mmMethod = new MMMessageAttribute<CommunicationChannel1, ExternalChannel1Code>() {
@@ -177,10 +177,6 @@ public class CommunicationChannel1 {
 	 * CommunicationChannel1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DlvrToPtyTp"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DeliverToPartyType"</li>
 	 * <li>
@@ -188,6 +184,10 @@ public class CommunicationChannel1 {
 	 * definition} =
 	 * "Type of party to whom the original undertaking or proposed amendment is intended to be delivered."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CommunicationChannel1, PartyType1Choice> mmDeliverToPartyType = new MMMessageAttribute<CommunicationChannel1, PartyType1Choice>() {
@@ -237,10 +237,6 @@ public class CommunicationChannel1 {
 	 * CommunicationChannel1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DlvrToNm"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DeliverToName"</li>
 	 * <li>
@@ -248,6 +244,10 @@ public class CommunicationChannel1 {
 	 * definition} =
 	 * "Name of party to whom the original undertaking or proposed amendment is intended to be delivered."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CommunicationChannel1, Optional<Max140Text>> mmDeliverToName = new MMMessageAttribute<CommunicationChannel1, Optional<Max140Text>>() {
@@ -296,10 +296,6 @@ public class CommunicationChannel1 {
 	 * CommunicationChannel1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DlvrToAdr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DeliverToAddress"</li>
 	 * <li>
@@ -307,6 +303,10 @@ public class CommunicationChannel1 {
 	 * definition} =
 	 * "Address of party to whom the original undertaking or proposed amendment is intended to be delivered."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<CommunicationChannel1, Optional<PostalAddress6>> mmDeliverToAddress = new MMMessageAssociationEnd<CommunicationChannel1, Optional<PostalAddress6>>() {

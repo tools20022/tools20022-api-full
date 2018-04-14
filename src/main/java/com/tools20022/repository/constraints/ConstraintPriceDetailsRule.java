@@ -43,10 +43,6 @@ public class ConstraintPriceDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PriceValuation4
 	 * PriceValuation4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PriceDetailsRule"</li>
 	 * <li>
@@ -54,6 +50,10 @@ public class ConstraintPriceDetailsRule {
 	 * definition} =
 	 * "If SuspendedIndicator is \"true\" or \"1\" (Yes), then PriceDetails is optional.\nIf SuspendedIndicator is \"false\" or \"0\" (No), and if FinancialInstrumentDetails /DualFundIndicator is \"false\" or \"0\" (No), then PriceDetails must be present at least once.\nIf SuspendedIndicator is \"false\" or \"0\" (No), and if FinancialInstrumentDetails /DualFundIndicator is \"true\" or \"1\" (Yes), then PriceDetails must be present two or more times and PriceDetails/Type must be present with the values \"BIDE\" and \"OFFR\"."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PriceValuation4> forPriceValuation4 = new MMConstraint<PriceValuation4>() {
@@ -77,10 +77,6 @@ public class ConstraintPriceDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PriceValuation3
 	 * PriceValuation3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PriceDetailsRule"</li>
 	 * <li>
@@ -88,6 +84,10 @@ public class ConstraintPriceDetailsRule {
 	 * definition} =
 	 * "If SuspendedIndicator is \"true\" or \"1\" (Yes), then PriceDetails is optional.\nIf SuspendedIndicator is \"false\" or \"0\" (No), and if FinancialInstrumentDetails /DualFundIndicator is \"false\" or \"0\" (No), then PriceDetails must be present at least once.\nIf SuspendedIndicator is \"false\" or \"0\" (No), and if FinancialInstrumentDetails /DualFundIndicator is \"true\" or \"1\" (Yes), then PriceDetails must be present two or more times and PriceDetails/Type must be present with the values \"BIDE\" and \"OFFR\"."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PriceValuation3> forPriceValuation3 = new MMConstraint<PriceValuation3>() {
@@ -111,10 +111,6 @@ public class ConstraintPriceDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PriceValuation2
 	 * PriceValuation2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PriceDetailsRule"</li>
 	 * <li>
@@ -122,6 +118,10 @@ public class ConstraintPriceDetailsRule {
 	 * definition} =
 	 * "If SuspendedIndicator is \"false\" or \"0\" (No), then PriceDetails must be present. If SuspendedIndicator is \"true\" or \"1\" (Yes), then PriceDetails is optional."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PriceValuation2> forPriceValuation2 = new MMConstraint<PriceValuation2>() {

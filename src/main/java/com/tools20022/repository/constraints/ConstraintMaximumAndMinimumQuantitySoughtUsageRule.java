@@ -44,10 +44,6 @@ public class ConstraintMaximumAndMinimumQuantitySoughtUsageRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity5
 	 * CorporateActionQuantity5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MaximumAndMinimumQuantitySoughtUsageRule"</li>
 	 * <li>
@@ -55,6 +51,10 @@ public class ConstraintMaximumAndMinimumQuantitySoughtUsageRule {
 	 * definition} =
 	 * "When MaximumQuantity is present, MinimumQuantitySought must be present too. When MinimumQuantitySought is present, MaximumQuantity must be present too.\r\nWhen MinimumQuantitySought/Code is AnyAndAll, then MaximumQuantity/Code must not be AnyAndAll.\r\nWhen MaximumQuantity/Code is AnyAndAll, MinimumQuantitySought/code must not be used with the value AnyAndAll."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -88,10 +88,6 @@ public class ConstraintMaximumAndMinimumQuantitySoughtUsageRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity8
 	 * CorporateActionQuantity8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MaximumAndMinimumQuantitySoughtUsageRule"</li>
 	 * <li>
@@ -99,6 +95,10 @@ public class ConstraintMaximumAndMinimumQuantitySoughtUsageRule {
 	 * definition} =
 	 * "When MaximumQuantity is present, MinimumQuantitySought must be present too. When MinimumQuantitySought is present, MaximumQuantity must be present too.\r\nWhen MinimumQuantitySought/Code is AnyAndAll, then MaximumQuantity/Code must not be AnyAndAll.\r\nWhen MaximumQuantity/Code is AnyAndAll, MinimumQuantitySought/code must not be used with the value AnyAndAll."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionQuantity8> forCorporateActionQuantity8 = new MMConstraint<CorporateActionQuantity8>() {
@@ -122,10 +122,6 @@ public class ConstraintMaximumAndMinimumQuantitySoughtUsageRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity6
 	 * CorporateActionQuantity6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MaximumAndMinimumQuantitySoughtUsageRule"</li>
 	 * <li>
@@ -133,6 +129,10 @@ public class ConstraintMaximumAndMinimumQuantitySoughtUsageRule {
 	 * definition} =
 	 * "When MaximumQuantity is present, MinimumQuantitySought must be present too. When MinimumQuantitySought is present, MaximumQuantity must be present too.\r\nWhen MinimumQuantitySought/Code is AnyAndAll, then MaximumQuantity/Code must not be AnyAndAll.\r\nWhen MaximumQuantity/Code is AnyAndAll, MinimumQuantitySought/code must not be used with the value AnyAndAll."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionQuantity6> forCorporateActionQuantity6 = new MMConstraint<CorporateActionQuantity6>() {
@@ -156,10 +156,6 @@ public class ConstraintMaximumAndMinimumQuantitySoughtUsageRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity7
 	 * CorporateActionQuantity7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MaximumAndMinimumQuantitySoughtUsageRule"</li>
 	 * <li>
@@ -167,6 +163,10 @@ public class ConstraintMaximumAndMinimumQuantitySoughtUsageRule {
 	 * definition} =
 	 * "When MaximumQuantity is present, MinimumQuantitySought must be present too. When MinimumQuantitySought is present, MaximumQuantity must be present too.\r\nWhen MinimumQuantitySought/Code is AnyAndAll, then MaximumQuantity/Code must not be AnyAndAll.\r\nWhen MaximumQuantity/Code is AnyAndAll, MinimumQuantitySought/code must not be used with the value AnyAndAll."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =

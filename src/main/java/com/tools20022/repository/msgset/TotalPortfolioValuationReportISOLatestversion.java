@@ -43,16 +43,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * businessProcessCatalogue} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#catalogue
  * GeneratedRepository.catalogue}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "Total Portfolio Valuation Report - ISO - Latest version"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Message exchanged between an account servicer and an account owner to provide valuation information about a portfolio.\r\n"
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * </ul>
  */
 public class TotalPortfolioValuationReportISOLatestversion {

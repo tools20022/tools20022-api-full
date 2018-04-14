@@ -38,10 +38,6 @@ public class ConstraintCashAccountIdentificationGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CashAccountSearchCriteria5
 	 * CashAccountSearchCriteria5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CashAccountIdentificationGuideline"</li>
 	 * <li>
@@ -49,6 +45,10 @@ public class ConstraintCashAccountIdentificationGuideline {
 	 * definition} =
 	 * "If the account identification identifies a group of accounts with different types or in different currencies, the currency and/or the account type can be used as additional search criteria."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -82,10 +82,6 @@ public class ConstraintCashAccountIdentificationGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CashAccountSearchCriteria2
 	 * CashAccountSearchCriteria2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CashAccountIdentificationGuideline"</li>
 	 * <li>
@@ -93,6 +89,10 @@ public class ConstraintCashAccountIdentificationGuideline {
 	 * definition} =
 	 * "If the account identification identifies a group of accounts with different types or in different currencies, the currency and/or the account type can be used as additional search criteria."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CashAccountSearchCriteria2> forCashAccountSearchCriteria2 = new MMConstraint<CashAccountSearchCriteria2>() {
@@ -116,10 +116,6 @@ public class ConstraintCashAccountIdentificationGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CollateralValueSearchCriteria1
 	 * CollateralValueSearchCriteria1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CashAccountIdentificationGuideline"</li>
 	 * <li>
@@ -127,6 +123,10 @@ public class ConstraintCashAccountIdentificationGuideline {
 	 * definition} =
 	 * "If the account identification identifies a group of accounts with different types or in different currencies, the currency and/or the account type can be used as additional search criteria."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -160,10 +160,6 @@ public class ConstraintCashAccountIdentificationGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CollateralValueSearchCriteria2
 	 * CollateralValueSearchCriteria2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CashAccountIdentificationGuideline"</li>
 	 * <li>
@@ -171,6 +167,10 @@ public class ConstraintCashAccountIdentificationGuideline {
 	 * definition} =
 	 * "If the account identification identifies a group of accounts with different types or in different currencies, the currency and/or the account type can be used as additional search criteria."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -201,10 +201,6 @@ public class ConstraintCashAccountIdentificationGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CashAccountSearchCriteria4
 	 * CashAccountSearchCriteria4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CashAccountIdentificationGuideline"</li>
 	 * <li>
@@ -212,6 +208,10 @@ public class ConstraintCashAccountIdentificationGuideline {
 	 * definition} =
 	 * "If the account identification identifies a group of accounts with different types or in different currencies, the currency and/or the account type can be used as additional search criteria."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CashAccountSearchCriteria4> forCashAccountSearchCriteria4 = new MMConstraint<CashAccountSearchCriteria4>() {
@@ -235,10 +235,6 @@ public class ConstraintCashAccountIdentificationGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CashAccountSearchCriteria6
 	 * CashAccountSearchCriteria6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CashAccountIdentificationGuideline"</li>
 	 * <li>
@@ -246,6 +242,10 @@ public class ConstraintCashAccountIdentificationGuideline {
 	 * definition} =
 	 * "If the account identification identifies a group of accounts with different types or in different currencies, the currency and/or the account type can be used as additional search criteria."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -276,10 +276,6 @@ public class ConstraintCashAccountIdentificationGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CashAccountSearchCriteria3
 	 * CashAccountSearchCriteria3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CashAccountIdentificationGuideline"</li>
 	 * <li>
@@ -287,6 +283,10 @@ public class ConstraintCashAccountIdentificationGuideline {
 	 * definition} =
 	 * "If the account identification identifies a group of accounts with different types or in different currencies, the currency and/or the account type can be used as additional search criteria."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CashAccountSearchCriteria3> forCashAccountSearchCriteria3 = new MMConstraint<CashAccountSearchCriteria3>() {

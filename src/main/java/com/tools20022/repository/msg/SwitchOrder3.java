@@ -132,6 +132,12 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "SwitchOrder3"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} =
+ * "Transfer from one investment fund/fund class to another investment fund or investment fund class by the investor. A switch is composed of one or several subscription legs, and one or several redemption legs."
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
  * constraint} =
  * <ul>
@@ -157,12 +163,6 @@ import javax.xml.bind.annotation.XmlType;
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRemovalDate
  * removalDate} = September 9, 2016</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "SwitchOrder3"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} =
- * "Transfer from one investment fund/fund class to another investment fund or investment fund class by the investor. A switch is composed of one or several subscription legs, and one or several redemption legs."
- * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -194,10 +194,6 @@ public class SwitchOrder3 {
 	 * {@linkplain com.tools20022.repository.msg.SwitchOrder3 SwitchOrder3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MstrRef"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MasterReference"</li>
 	 * <li>
@@ -205,6 +201,10 @@ public class SwitchOrder3 {
 	 * definition} =
 	 * "Unique and unambiguous identifier for a group of individual orders, as assigned by the instructing party. This identifier links the individual orders together."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SwitchOrder3, Optional<Max35Text>> mmMasterReference = new MMMessageAttribute<SwitchOrder3, Optional<Max35Text>>() {
@@ -253,16 +253,16 @@ public class SwitchOrder3 {
 	 * {@linkplain com.tools20022.repository.msg.SwitchOrder3 SwitchOrder3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OrdrDtTm"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OrderDateTime"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Date and time at which the order was placed by the investor."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SwitchOrder3, Optional<ISODateTime>> mmOrderDateTime = new MMMessageAttribute<SwitchOrder3, Optional<ISODateTime>>() {
@@ -311,10 +311,6 @@ public class SwitchOrder3 {
 	 * {@linkplain com.tools20022.repository.msg.SwitchOrder3 SwitchOrder3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OrdrRef"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OrderReference"</li>
 	 * <li>
@@ -322,6 +318,10 @@ public class SwitchOrder3 {
 	 * definition} =
 	 * "Unique and unambiguous identifier for an order, as assigned by the instructing party."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SwitchOrder3, Max35Text> mmOrderReference = new MMMessageAttribute<SwitchOrder3, Max35Text>() {
@@ -370,10 +370,6 @@ public class SwitchOrder3 {
 	 * {@linkplain com.tools20022.repository.msg.SwitchOrder3 SwitchOrder3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ClntRef"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ClientReference"</li>
 	 * <li>
@@ -381,6 +377,10 @@ public class SwitchOrder3 {
 	 * definition} =
 	 * "Unique and unambiguous investor's identification of an order. This reference can typically be used in a hub scenario to give the reference of the order as assigned by the underlying client."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SwitchOrder3, Optional<Max35Text>> mmClientReference = new MMMessageAttribute<SwitchOrder3, Optional<Max35Text>>() {
@@ -424,10 +424,6 @@ public class SwitchOrder3 {
 	 * {@linkplain com.tools20022.repository.msg.SwitchOrder3 SwitchOrder3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CxlRef"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CancellationReference"</li>
 	 * <li>
@@ -435,6 +431,10 @@ public class SwitchOrder3 {
 	 * definition} =
 	 * "Unique and unambiguous identifier for an order cancellation, as assigned by the instructing party."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SwitchOrder3, Optional<Max35Text>> mmCancellationReference = new MMMessageAttribute<SwitchOrder3, Optional<Max35Text>>() {
@@ -481,10 +481,6 @@ public class SwitchOrder3 {
 	 * {@linkplain com.tools20022.repository.msg.SwitchOrder3 SwitchOrder3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "InvstmtAcctDtls"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InvestmentAccountDetails"</li>
 	 * <li>
@@ -492,6 +488,10 @@ public class SwitchOrder3 {
 	 * definition} =
 	 * "Account between an investor(s) and a fund manager or a fund. The account can contain holdings in any investment fund or investment fund class managed (or distributed) by the fund manager, within the same fund family."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<SwitchOrder3, Optional<InvestmentAccount21>> mmInvestmentAccountDetails = new MMMessageAssociationEnd<SwitchOrder3, Optional<InvestmentAccount21>>() {
@@ -542,10 +542,6 @@ public class SwitchOrder3 {
 	 * {@linkplain com.tools20022.repository.msg.SwitchOrder3 SwitchOrder3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TtlRedAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TotalRedemptionAmount"</li>
 	 * <li>
@@ -553,6 +549,10 @@ public class SwitchOrder3 {
 	 * definition} =
 	 * "Amount of money used to derive the quantity of investment fund units to be redeemed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SwitchOrder3, Optional<ActiveOrHistoricCurrencyAndAmount>> mmTotalRedemptionAmount = new MMMessageAttribute<SwitchOrder3, Optional<ActiveOrHistoricCurrencyAndAmount>>() {
@@ -602,10 +602,6 @@ public class SwitchOrder3 {
 	 * {@linkplain com.tools20022.repository.msg.SwitchOrder3 SwitchOrder3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TtlSbcptAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TotalSubscriptionAmount"</li>
 	 * <li>
@@ -613,6 +609,10 @@ public class SwitchOrder3 {
 	 * definition} =
 	 * "Amount of money used to derive the quantity of investment fund units to be subscribed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SwitchOrder3, Optional<ActiveOrHistoricCurrencyAndAmount>> mmTotalSubscriptionAmount = new MMMessageAttribute<SwitchOrder3, Optional<ActiveOrHistoricCurrencyAndAmount>>() {
@@ -661,10 +661,6 @@ public class SwitchOrder3 {
 	 * {@linkplain com.tools20022.repository.msg.SwitchOrder3 SwitchOrder3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ReqdFutrTradDt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RequestedFutureTradeDate"</li>
 	 * <li>
@@ -672,6 +668,10 @@ public class SwitchOrder3 {
 	 * definition} =
 	 * "Future date at which the investor requests the order to be executed.\nThe specification of a requested future trade date is not allowed in some markets. The date must be a date in the future."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SwitchOrder3, Optional<ISODate>> mmRequestedFutureTradeDate = new MMMessageAttribute<SwitchOrder3, Optional<ISODate>>() {
@@ -721,10 +721,6 @@ public class SwitchOrder3 {
 	 * {@linkplain com.tools20022.repository.msg.SwitchOrder3 SwitchOrder3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SttlmAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SettlementAmount"</li>
 	 * <li>
@@ -732,6 +728,10 @@ public class SwitchOrder3 {
 	 * definition} =
 	 * "Total amount of money paid /to be paid or received in exchange for the financial instrument in the individual order."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SwitchOrder3, Optional<ActiveCurrencyAndAmount>> mmSettlementAmount = new MMMessageAttribute<SwitchOrder3, Optional<ActiveCurrencyAndAmount>>() {
@@ -780,15 +780,15 @@ public class SwitchOrder3 {
 	 * {@linkplain com.tools20022.repository.msg.SwitchOrder3 SwitchOrder3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CshSttlmDt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CashSettlementDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date on which cash is available."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SwitchOrder3, Optional<ISODate>> mmCashSettlementDate = new MMMessageAttribute<SwitchOrder3, Optional<ISODate>>() {
@@ -838,15 +838,15 @@ public class SwitchOrder3 {
 	 * {@linkplain com.tools20022.repository.msg.SwitchOrder3 SwitchOrder3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SttlmMtd"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SettlementMethod"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Method by which the transaction is settled."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SwitchOrder3, Optional<DeliveryReceiptType2Code>> mmSettlementMethod = new MMMessageAttribute<SwitchOrder3, Optional<DeliveryReceiptType2Code>>() {
@@ -896,15 +896,15 @@ public class SwitchOrder3 {
 	 * {@linkplain com.tools20022.repository.msg.SwitchOrder3 SwitchOrder3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "XpryDtTm"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ExpiryDateTime"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date on which the order expires."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SwitchOrder3, Optional<DateAndDateTimeChoice>> mmExpiryDateTime = new MMMessageAttribute<SwitchOrder3, Optional<DateAndDateTimeChoice>>() {
@@ -954,10 +954,6 @@ public class SwitchOrder3 {
 	 * {@linkplain com.tools20022.repository.msg.SwitchOrder3 SwitchOrder3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AddtlCshIn"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalCashIn"</li>
 	 * <li>
@@ -965,6 +961,10 @@ public class SwitchOrder3 {
 	 * definition} =
 	 * "Additional amount of money paid by the investor in addition to the switch redemption amount."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SwitchOrder3, Optional<ActiveOrHistoricCurrencyAndAmount>> mmAdditionalCashIn = new MMMessageAttribute<SwitchOrder3, Optional<ActiveOrHistoricCurrencyAndAmount>>() {
@@ -1014,10 +1014,6 @@ public class SwitchOrder3 {
 	 * {@linkplain com.tools20022.repository.msg.SwitchOrder3 SwitchOrder3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RsltgCshOut"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ResultingCashOut"</li>
 	 * <li>
@@ -1025,6 +1021,10 @@ public class SwitchOrder3 {
 	 * definition} =
 	 * "Amount of money that results from a switch-out, that is not reinvested in another investment fund, and is repaid to the investor."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SwitchOrder3, Optional<ActiveOrHistoricCurrencyAndAmount>> mmResultingCashOut = new MMMessageAttribute<SwitchOrder3, Optional<ActiveOrHistoricCurrencyAndAmount>>() {
@@ -1072,15 +1072,15 @@ public class SwitchOrder3 {
 	 * {@linkplain com.tools20022.repository.msg.SwitchOrder3 SwitchOrder3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RltdPtyDtls"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RelatedPartyDetails"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Information about parties related to the transaction."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<SwitchOrder3, List<Intermediary8>> mmRelatedPartyDetails = new MMMessageAssociationEnd<SwitchOrder3, List<Intermediary8>>() {
@@ -1131,10 +1131,6 @@ public class SwitchOrder3 {
 	 * {@linkplain com.tools20022.repository.msg.SwitchOrder3 SwitchOrder3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CxlRght"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CancellationRight"</li>
 	 * <li>
@@ -1142,6 +1138,10 @@ public class SwitchOrder3 {
 	 * definition} =
 	 * "Cancellation right of an investor with respect to an investment fund order."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SwitchOrder3, Optional<CancellationRight1Code>> mmCancellationRight = new MMMessageAttribute<SwitchOrder3, Optional<CancellationRight1Code>>() {
@@ -1191,10 +1191,6 @@ public class SwitchOrder3 {
 	 * {@linkplain com.tools20022.repository.msg.SwitchOrder3 SwitchOrder3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "XtndedCxlRght"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ExtendedCancellationRight"</li>
 	 * <li>
@@ -1202,6 +1198,10 @@ public class SwitchOrder3 {
 	 * definition} =
 	 * "Cancellation right of an investor with respect to an investment fund order."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SwitchOrder3, Optional<Extended350Code>> mmExtendedCancellationRight = new MMMessageAttribute<SwitchOrder3, Optional<Extended350Code>>() {
@@ -1250,16 +1250,16 @@ public class SwitchOrder3 {
 	 * {@linkplain com.tools20022.repository.msg.SwitchOrder3 SwitchOrder3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RedLegDtls"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RedemptionLegDetails"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Part of an investment fund switch order that is a redemption."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<SwitchOrder3, List<SwitchRedemptionLegOrder3>> mmRedemptionLegDetails = new MMMessageAssociationEnd<SwitchOrder3, List<SwitchRedemptionLegOrder3>>() {
@@ -1308,16 +1308,16 @@ public class SwitchOrder3 {
 	 * {@linkplain com.tools20022.repository.msg.SwitchOrder3 SwitchOrder3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SbcptLegDtls"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SubscriptionLegDetails"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Part of an investment fund switch order that is a subscription."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<SwitchOrder3, List<SwitchSubscriptionLegOrder3>> mmSubscriptionLegDetails = new MMMessageAssociationEnd<SwitchOrder3, List<SwitchSubscriptionLegOrder3>>() {
@@ -1365,10 +1365,6 @@ public class SwitchOrder3 {
 	 * {@linkplain com.tools20022.repository.msg.SwitchOrder3 SwitchOrder3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CshSttlmDtls"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CashSettlementDetails"</li>
 	 * <li>
@@ -1376,6 +1372,10 @@ public class SwitchOrder3 {
 	 * definition} =
 	 * "Payment processes required to transfer cash from the debtor to the creditor."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<SwitchOrder3, Optional<PaymentTransaction25>> mmCashSettlementDetails = new MMMessageAssociationEnd<SwitchOrder3, Optional<PaymentTransaction25>>() {
@@ -1424,16 +1424,16 @@ public class SwitchOrder3 {
 	 * {@linkplain com.tools20022.repository.msg.SwitchOrder3 SwitchOrder3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "FXDtls"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ForeignExchangeDetails"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Information needed to process a currency exchange or conversion."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<SwitchOrder3, Optional<ForeignExchangeTerms6>> mmForeignExchangeDetails = new MMMessageAssociationEnd<SwitchOrder3, Optional<ForeignExchangeTerms6>>() {
@@ -1484,10 +1484,6 @@ public class SwitchOrder3 {
 	 * {@linkplain com.tools20022.repository.msg.SwitchOrder3 SwitchOrder3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "FinAdvc"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FinancialAdvice"</li>
 	 * <li>
@@ -1495,6 +1491,10 @@ public class SwitchOrder3 {
 	 * definition} =
 	 * "Specifies if advice has been received from an independent financial advisor."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SwitchOrder3, Optional<FinancialAdvice1Code>> mmFinancialAdvice = new MMMessageAttribute<SwitchOrder3, Optional<FinancialAdvice1Code>>() {
@@ -1544,15 +1544,15 @@ public class SwitchOrder3 {
 	 * {@linkplain com.tools20022.repository.msg.SwitchOrder3 SwitchOrder3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NgtdTrad"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NegotiatedTrade"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies whether the trade is negotiated."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SwitchOrder3, Optional<NegotiatedTrade1Code>> mmNegotiatedTrade = new MMMessageAttribute<SwitchOrder3, Optional<NegotiatedTrade1Code>>() {
@@ -1599,10 +1599,6 @@ public class SwitchOrder3 {
 	 * SwitchOrder3.mmResultingCashOut}</li>
 	 * </ul>
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CashInOrCashOutRule"</li>
 	 * <li>
@@ -1610,6 +1606,10 @@ public class SwitchOrder3 {
 	 * definition} =
 	 * "Either AdditionalCashIn or ResultingCashOut must be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMXor CashInOrCashOutRule = new MMXor() {
@@ -1641,10 +1641,6 @@ public class SwitchOrder3 {
 	 * SwitchOrder3.mmExtendedCancellationRight}</li>
 	 * </ul>
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CancellationRightOrExtendedCancellationRightRule"</li>
 	 * <li>
@@ -1652,6 +1648,10 @@ public class SwitchOrder3 {
 	 * definition} =
 	 * "Either CancellationRight or ExtendedCancellationRight may be present but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMXor CancellationRightOrExtendedCancellationRightRule = new MMXor() {

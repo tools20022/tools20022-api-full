@@ -98,6 +98,12 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "BeneficiaryCertificationTypeCode"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} =
+ * "The holder of the security has to irrevocably certify that it is a Qualified Institutional Buyer as defined in US Securities and Exchange Commission Rule 144A."
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -108,12 +114,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "BeneficiaryCertificationTypeCode"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} =
- * "The holder of the security has to irrevocably certify that it is a Qualified Institutional Buyer as defined in US Securities and Exchange Commission Rule 144A."
- * </li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -132,10 +132,6 @@ public class BeneficiaryCertificationTypeCode extends MMCode {
 	 * BeneficiaryCertificationTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "ACCI"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccreditedInvestor"</li>
 	 * <li>
@@ -143,6 +139,10 @@ public class BeneficiaryCertificationTypeCode extends MMCode {
 	 * definition} =
 	 * "The holder of the security has to irrevocably certify that it is an Accredited Investor as defined in US Securities and Exchange Commission Regulation D."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final BeneficiaryCertificationTypeCode AccreditedInvestor = new BeneficiaryCertificationTypeCode() {
@@ -164,15 +164,15 @@ public class BeneficiaryCertificationTypeCode extends MMCode {
 	 * BeneficiaryCertificationTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "DOMI"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DomicileCountry"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "The holder of the security has to certify his domicile."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final BeneficiaryCertificationTypeCode DomicileCountry = new BeneficiaryCertificationTypeCode() {
@@ -195,10 +195,6 @@ public class BeneficiaryCertificationTypeCode extends MMCode {
 	 * BeneficiaryCertificationTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "NDOM"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NonDomicileCountry"</li>
 	 * <li>
@@ -206,6 +202,10 @@ public class BeneficiaryCertificationTypeCode extends MMCode {
 	 * definition} =
 	 * "The holder of the security has to certify, in line with the terms of the corporate action, that it is not domiciled in the country indicated."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final BeneficiaryCertificationTypeCode NonDomicileCountry = new BeneficiaryCertificationTypeCode() {
@@ -228,10 +228,6 @@ public class BeneficiaryCertificationTypeCode extends MMCode {
 	 * BeneficiaryCertificationTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "FULL"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FullBeneficialOwnerBreakdown"</li>
 	 * <li>
@@ -239,6 +235,10 @@ public class BeneficiaryCertificationTypeCode extends MMCode {
 	 * definition} =
 	 * "The holder of the security has to provide his beneficial owner details for disclosure/instruction purpose."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final BeneficiaryCertificationTypeCode FullBeneficialOwnerBreakdown = new BeneficiaryCertificationTypeCode() {
@@ -262,10 +262,6 @@ public class BeneficiaryCertificationTypeCode extends MMCode {
 	 * BeneficiaryCertificationTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "QIBB"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "QIBCertification"</li>
 	 * <li>
@@ -273,6 +269,10 @@ public class BeneficiaryCertificationTypeCode extends MMCode {
 	 * definition} =
 	 * "The holder of the security has to irrevocably certify that it is a Qualified Institutional Buyer as defined in US Securities and Exchange Commission Rule 144A."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final BeneficiaryCertificationTypeCode QIBCertification = new BeneficiaryCertificationTypeCode() {
@@ -295,10 +295,6 @@ public class BeneficiaryCertificationTypeCode extends MMCode {
 	 * BeneficiaryCertificationTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "TRBD"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxRateBreakdown"</li>
 	 * <li>
@@ -306,6 +302,10 @@ public class BeneficiaryCertificationTypeCode extends MMCode {
 	 * definition} =
 	 * "The holder of the security has to provide basic details on nominals and associated tax rate to be used by the account servicer."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final BeneficiaryCertificationTypeCode TaxRateBreakdown = new BeneficiaryCertificationTypeCode() {
@@ -328,10 +328,6 @@ public class BeneficiaryCertificationTypeCode extends MMCode {
 	 * BeneficiaryCertificationTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "NCOM"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NonCompany"</li>
 	 * <li>
@@ -339,6 +335,10 @@ public class BeneficiaryCertificationTypeCode extends MMCode {
 	 * definition} =
 	 * "The holder of the security has to certify he is an Non-Company related person."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final BeneficiaryCertificationTypeCode NonCompany = new BeneficiaryCertificationTypeCode() {
@@ -361,10 +361,6 @@ public class BeneficiaryCertificationTypeCode extends MMCode {
 	 * BeneficiaryCertificationTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "PAPW"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BeneficialOwnerPaperwork"</li>
 	 * <li>
@@ -372,6 +368,10 @@ public class BeneficiaryCertificationTypeCode extends MMCode {
 	 * definition} =
 	 * "Indicates if the Beneficial Owner is responsible to fill in the paperwork."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final BeneficiaryCertificationTypeCode BeneficialOwnerPaperwork = new BeneficiaryCertificationTypeCode() {
@@ -394,10 +394,6 @@ public class BeneficiaryCertificationTypeCode extends MMCode {
 	 * BeneficiaryCertificationTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "PABD"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ICSDParticipantBreakdown"</li>
 	 * <li>
@@ -405,6 +401,10 @@ public class BeneficiaryCertificationTypeCode extends MMCode {
 	 * definition} =
 	 * "The (I)CSD has to provide its participants' details for disclosure purpose to the issuer/issuer’s agent."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final BeneficiaryCertificationTypeCode ICSDParticipantBreakdown = new BeneficiaryCertificationTypeCode() {
@@ -426,15 +426,15 @@ public class BeneficiaryCertificationTypeCode extends MMCode {
 	 * BeneficiaryCertificationTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "NARR"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NarrativeDescription"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "See narrative field for certification requirements."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final BeneficiaryCertificationTypeCode NarrativeDescription = new BeneficiaryCertificationTypeCode() {
@@ -457,10 +457,6 @@ public class BeneficiaryCertificationTypeCode extends MMCode {
 	 * BeneficiaryCertificationTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "FRAC"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FractionBreakdown"</li>
 	 * <li>
@@ -468,6 +464,10 @@ public class BeneficiaryCertificationTypeCode extends MMCode {
 	 * definition} =
 	 * "Indicates that the rounding rule in the Fraction Disposition component at the option level can be offered at the beneficial owner level."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final BeneficiaryCertificationTypeCode FractionBreakdown = new BeneficiaryCertificationTypeCode() {

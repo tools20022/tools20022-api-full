@@ -71,16 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "PaymentIdentification3Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Choice between ways of identifying a payment instruction by its references and business identification."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -111,10 +111,6 @@ public class PaymentIdentification3Choice {
 	 * PaymentIdentification3Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PmtInstrRef"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PaymentInstructionReference"</li>
 	 * <li>
@@ -122,6 +118,10 @@ public class PaymentIdentification3Choice {
 	 * definition} =
 	 * "Unique and unambiguous identifier for a payment instruction, as assigned by the clearing agent or the initiating party."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<PaymentIdentification3Choice, Max35Text> mmPaymentInstructionReference = new MMMessageAttribute<PaymentIdentification3Choice, Max35Text>() {
@@ -167,10 +167,6 @@ public class PaymentIdentification3Choice {
 	 * PaymentIdentification3Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "QId"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "QueueIdentification"</li>
 	 * <li>
@@ -178,6 +174,10 @@ public class PaymentIdentification3Choice {
 	 * definition} =
 	 * "Identification of the payment instruction by its position in a queue managed by the clearing agent."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<PaymentIdentification3Choice, QueueTransactionIdentificationDetails> mmQueueIdentification = new MMMessageAttribute<PaymentIdentification3Choice, QueueTransactionIdentificationDetails>() {
@@ -227,10 +227,6 @@ public class PaymentIdentification3Choice {
 	 * PaymentIdentification3Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "LngBizId"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LongBusinessIdentification"</li>
 	 * <li>
@@ -238,6 +234,10 @@ public class PaymentIdentification3Choice {
 	 * definition} =
 	 * "Business identification of the payment instruction given by the clearing agent."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<PaymentIdentification3Choice, PaymentInstructionReferenceDetails4> mmLongBusinessIdentification = new MMMessageAttribute<PaymentIdentification3Choice, PaymentInstructionReferenceDetails4>() {
@@ -288,10 +288,6 @@ public class PaymentIdentification3Choice {
 	 * PaymentIdentification3Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ShrtBizId"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ShortBusinessIdentification"</li>
 	 * <li>
@@ -299,6 +295,10 @@ public class PaymentIdentification3Choice {
 	 * definition} =
 	 * "Business identification of the payment instruction given by the clearing agent."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<PaymentIdentification3Choice, PaymentInstructionReferenceDetails2> mmShortBusinessIdentification = new MMMessageAttribute<PaymentIdentification3Choice, PaymentInstructionReferenceDetails2>() {
@@ -343,10 +343,6 @@ public class PaymentIdentification3Choice {
 	 * PaymentIdentification3Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrtryRef"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ProprietaryReference"</li>
 	 * <li>
@@ -354,6 +350,10 @@ public class PaymentIdentification3Choice {
 	 * definition} =
 	 * "Unique reference of the underlying payment instruction assigned by Target2 SSP."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<PaymentIdentification3Choice, Max70Text> mmProprietaryReference = new MMMessageAttribute<PaymentIdentification3Choice, Max70Text>() {

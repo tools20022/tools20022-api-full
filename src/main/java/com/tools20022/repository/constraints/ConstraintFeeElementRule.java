@@ -38,10 +38,6 @@ public class ConstraintFeeElementRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Fee3 Fee3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FeeElementRule"</li>
 	 * <li>
@@ -49,6 +45,10 @@ public class ConstraintFeeElementRule {
 	 * definition} =
 	 * "One of the elements (Type, RepairedStandardAmount, RepairedStandardRate, RepairedDiscountAmount, RepairedDiscountRate, RepairedRequestedAmount, RepairedRequestedRate, CommercialAgreementReference, NewCommercialAgreementReferenceIndicator) must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Fee3> forFee3 = new MMConstraint<Fee3>() {
@@ -71,10 +71,6 @@ public class ConstraintFeeElementRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Fee1 Fee1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FeeElementRule"</li>
 	 * <li>
@@ -82,6 +78,10 @@ public class ConstraintFeeElementRule {
 	 * definition} =
 	 * "One of the elements (Basis, StandardAmount, StandardRate, DiscountDetails, RequestedAmount, RequestedRate, NonStandardSLAReference, RecipientIdentification) must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Fee1> forFee1 = new MMConstraint<Fee1>() {

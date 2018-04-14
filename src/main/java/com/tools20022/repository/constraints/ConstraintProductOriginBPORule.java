@@ -37,10 +37,6 @@ public class ConstraintProductOriginBPORule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.LineItemDetails14
 	 * LineItemDetails14}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ProductOriginBPORule"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintProductOriginBPORule {
 	 * definition} =
 	 * "ProductOrigin is mandatory if PaymentObligation (BPO) is used in this transaction."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<LineItemDetails14> forLineItemDetails14 = new MMConstraint<LineItemDetails14>() {
@@ -71,10 +71,6 @@ public class ConstraintProductOriginBPORule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.LineItemDetails13
 	 * LineItemDetails13}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ProductOriginBPORule"</li>
 	 * <li>
@@ -82,6 +78,10 @@ public class ConstraintProductOriginBPORule {
 	 * definition} =
 	 * "ProductOrigin is mandatory if PaymentObligation (BPO) is used in this transaction."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<LineItemDetails13> forLineItemDetails13 = new MMConstraint<LineItemDetails13>() {

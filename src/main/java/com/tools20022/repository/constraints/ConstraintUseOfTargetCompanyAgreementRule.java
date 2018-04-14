@@ -36,10 +36,6 @@ public class ConstraintUseOfTargetCompanyAgreementRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateAction6SD1
 	 * CorporateAction6SD1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UseOfTargetCompanyAgreementRule"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintUseOfTargetCompanyAgreementRule {
 	 * definition} =
 	 * "TargetCompanyAgreement can only be used when the corporate action event type code is TEND."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateAction6SD1> forCorporateAction6SD1 = new MMConstraint<CorporateAction6SD1>() {

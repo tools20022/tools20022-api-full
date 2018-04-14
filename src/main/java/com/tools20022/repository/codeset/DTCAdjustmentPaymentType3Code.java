@@ -70,14 +70,14 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "DTCAdjustmentPaymentType3Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Specifies the type of the payment adjustment."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -92,12 +92,12 @@ public class DTCAdjustmentPaymentType3Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentType3Code
 	 * DTCAdjustmentPaymentType3Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "FailSettlement"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "FailSettlement"</li>
 	 * </ul>
 	 */
 	public static final DTCAdjustmentPaymentType3Code FailSettlement = new DTCAdjustmentPaymentType3Code() {
@@ -116,12 +116,12 @@ public class DTCAdjustmentPaymentType3Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentType3Code
 	 * DTCAdjustmentPaymentType3Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "MiscellaneousSettlement"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "MiscellaneousSettlement"</li>
 	 * </ul>
 	 */
 	public static final DTCAdjustmentPaymentType3Code MiscellaneousSettlement = new DTCAdjustmentPaymentType3Code() {
@@ -140,12 +140,12 @@ public class DTCAdjustmentPaymentType3Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentType3Code
 	 * DTCAdjustmentPaymentType3Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RepoSettlement"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "RepoSettlement"</li>
 	 * </ul>
 	 */
 	public static final DTCAdjustmentPaymentType3Code RepoSettlement = new DTCAdjustmentPaymentType3Code() {
@@ -164,12 +164,12 @@ public class DTCAdjustmentPaymentType3Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentType3Code
 	 * DTCAdjustmentPaymentType3Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "StockLoanSettlement"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "StockLoanSettlement"</li>
 	 * </ul>
 	 */
 	public static final DTCAdjustmentPaymentType3Code StockLoanSettlement = new DTCAdjustmentPaymentType3Code() {
@@ -188,12 +188,12 @@ public class DTCAdjustmentPaymentType3Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentType3Code
 	 * DTCAdjustmentPaymentType3Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ReorganisationDepositPhaseOne"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ReorganisationDepositPhaseOne"</li>
 	 * </ul>
 	 */
 	public static final DTCAdjustmentPaymentType3Code ReorganisationDepositPhaseOne = new DTCAdjustmentPaymentType3Code() {
@@ -212,12 +212,12 @@ public class DTCAdjustmentPaymentType3Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentType3Code
 	 * DTCAdjustmentPaymentType3Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ReorgDepositPhaseTwo"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ReorgDepositPhaseTwo"</li>
 	 * </ul>
 	 */
 	public static final DTCAdjustmentPaymentType3Code ReorgDepositPhaseTwo = new DTCAdjustmentPaymentType3Code() {
@@ -236,12 +236,12 @@ public class DTCAdjustmentPaymentType3Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentType3Code
 	 * DTCAdjustmentPaymentType3Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CustodyReorganizationDeposit"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CustodyReorganizationDeposit"</li>
 	 * </ul>
 	 */
 	public static final DTCAdjustmentPaymentType3Code CustodyReorganizationDeposit = new DTCAdjustmentPaymentType3Code() {
@@ -260,12 +260,12 @@ public class DTCAdjustmentPaymentType3Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentType3Code
 	 * DTCAdjustmentPaymentType3Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DynamicRateChange"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DynamicRateChange"</li>
 	 * </ul>
 	 */
 	public static final DTCAdjustmentPaymentType3Code DynamicRateChange = new DTCAdjustmentPaymentType3Code() {

@@ -61,16 +61,16 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "IsabelEpaymentTokenResponse1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Specifies the token data on which the signature is calculated by the LRCI client."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -96,10 +96,6 @@ public class IsabelEpaymentTokenResponse1 {
 	 * IsabelEpaymentTokenResponse1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "LRCITxId"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LRCITransactionIdentification"</li>
 	 * <li>
@@ -107,6 +103,10 @@ public class IsabelEpaymentTokenResponse1 {
 	 * definition} =
 	 * "Unique and unambiguous transaction identification of the group of signed payment files."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<IsabelEpaymentTokenResponse1, Max50Binary> mmLRCITransactionIdentification = new MMMessageAttribute<IsabelEpaymentTokenResponse1, Max50Binary>() {
@@ -150,10 +150,6 @@ public class IsabelEpaymentTokenResponse1 {
 	 * IsabelEpaymentTokenResponse1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PmtInf"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PaymentInformation"</li>
 	 * <li>
@@ -161,6 +157,10 @@ public class IsabelEpaymentTokenResponse1 {
 	 * definition} =
 	 * "Individual record holding all data related to a payment file that is being used during the signature process."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<IsabelEpaymentTokenResponse1, List<IsabelLRCIPaymentInformation1>> mmPaymentInformation = new MMMessageAssociationEnd<IsabelEpaymentTokenResponse1, List<IsabelLRCIPaymentInformation1>>() {
@@ -205,10 +205,6 @@ public class IsabelEpaymentTokenResponse1 {
 	 * IsabelEpaymentTokenResponse1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SvrSgntr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ServerSignature"</li>
 	 * <li>
@@ -216,6 +212,10 @@ public class IsabelEpaymentTokenResponse1 {
 	 * definition} =
 	 * "Mathematical scheme for demonstrating the authenticity of the original server challenge exchanged by the LRCI protocol during the signature process."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<IsabelEpaymentTokenResponse1, Max1kBinary> mmServerSignature = new MMMessageAttribute<IsabelEpaymentTokenResponse1, Max1kBinary>() {

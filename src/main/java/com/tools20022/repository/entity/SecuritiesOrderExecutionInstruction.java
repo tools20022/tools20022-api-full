@@ -181,14 +181,14 @@ import java.util.Optional;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "SecuritiesOrderExecutionInstruction"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Identifies the instructions for order handling"</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class SecuritiesOrderExecutionInstruction {
@@ -218,13 +218,6 @@ public class SecuritiesOrderExecutionInstruction {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderExecutionInstruction
 	 * SecuritiesOrderExecutionInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = FIXSynonym: 18 value "G"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AllOrNone"</li>
 	 * <li>
@@ -232,6 +225,13 @@ public class SecuritiesOrderExecutionInstruction {
 	 * definition} =
 	 * "Round-lot market or limit-price order that must be executed in its entirety or not at all; unlike Fill or Kill orders, AON orders are not treated as canceled if they are not executed as soon as represented in the Trading Crowd."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 18 value "G"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderExecutionInstruction, AllOrNoneIndicator> mmAllOrNone = new MMBusinessAttribute<SecuritiesOrderExecutionInstruction, AllOrNoneIndicator>() {
@@ -282,13 +282,6 @@ public class SecuritiesOrderExecutionInstruction {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderExecutionInstruction
 	 * SecuritiesOrderExecutionInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = FIXSynonym: 18 value "C"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CallFirst"</li>
 	 * <li>
@@ -296,6 +289,13 @@ public class SecuritiesOrderExecutionInstruction {
 	 * definition} =
 	 * "Refers to the client before trading in order to catch all verbal instructions on trading strategy usually because the strategy is too complex or cannot be represented in the trading application."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 18 value "C"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator> mmCallFirst = new MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator>() {
@@ -346,6 +346,11 @@ public class SecuritiesOrderExecutionInstruction {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderExecutionInstruction
 	 * SecuritiesOrderExecutionInstruction}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Cross"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Allow crossing of an order."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = FIXSynonym: 18 values "A" or "B"</li>
@@ -353,11 +358,6 @@ public class SecuritiesOrderExecutionInstruction {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Cross"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Allow crossing of an order."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator> mmCross = new MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator>() {
@@ -408,13 +408,6 @@ public class SecuritiesOrderExecutionInstruction {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderExecutionInstruction
 	 * SecuritiesOrderExecutionInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = FIXSynonym: 18 value "U"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CustomerDisplay"</li>
 	 * <li>
@@ -422,6 +415,13 @@ public class SecuritiesOrderExecutionInstruction {
 	 * definition} =
 	 * "Exchange or ECN required by the SEC to display limit orders in the public order book. A customer can choose not to have his limit order displayed to the public."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 18 value "U"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator> mmCustomerDisplay = new MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator>() {
@@ -472,13 +472,6 @@ public class SecuritiesOrderExecutionInstruction {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderExecutionInstruction
 	 * SecuritiesOrderExecutionInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = FIXSynonym: 18 values "1" or "5"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Hold"</li>
 	 * <li>
@@ -486,6 +479,13 @@ public class SecuritiesOrderExecutionInstruction {
 	 * definition} =
 	 * "Indicates whether the firm executing the order is held to best execution requirements and may be able to make some discretionary decisions."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 18 values "1" or "5"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator> mmHold = new MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator>() {
@@ -536,13 +536,6 @@ public class SecuritiesOrderExecutionInstruction {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderExecutionInstruction
 	 * SecuritiesOrderExecutionInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = FIXSynonym: 18 value "E"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Increase"</li>
 	 * <li>
@@ -550,6 +543,13 @@ public class SecuritiesOrderExecutionInstruction {
 	 * definition} =
 	 * "Indicates whether the order is to be increased in shares on the ex-dividend date as a result of a stock dividend or distribution."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 18 value "E"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator> mmIncrease = new MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator>() {
@@ -600,13 +600,6 @@ public class SecuritiesOrderExecutionInstruction {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderExecutionInstruction
 	 * SecuritiesOrderExecutionInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = FIXSynonym: 18 value "I"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InstitutionsOnly"</li>
 	 * <li>
@@ -614,6 +607,13 @@ public class SecuritiesOrderExecutionInstruction {
 	 * definition} =
 	 * "Identifies that the broker is restricted to dealing with other buy side firms."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 18 value "I"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator> mmInstitutionsOnly = new MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator>() {
@@ -664,13 +664,6 @@ public class SecuritiesOrderExecutionInstruction {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderExecutionInstruction
 	 * SecuritiesOrderExecutionInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = FIXSynonym: 18 value "N"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NonNegotiable"</li>
 	 * <li>
@@ -678,6 +671,13 @@ public class SecuritiesOrderExecutionInstruction {
 	 * definition} =
 	 * "Qualifies an asset (usually a payment instrument) of which rights cannot be transferred to a party other then the original debtor and creditor."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 18 value "N"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator> mmNonNegotiable = new MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator>() {
@@ -728,13 +728,6 @@ public class SecuritiesOrderExecutionInstruction {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderExecutionInstruction
 	 * SecuritiesOrderExecutionInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = FIXSynonym: 18 value "4"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OverTheDay"</li>
 	 * <li>
@@ -742,6 +735,13 @@ public class SecuritiesOrderExecutionInstruction {
 	 * definition} =
 	 * "Indicates whether to execute parts of the order over the course of the day. Usually done with large block orders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 18 value "4"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator> mmOverTheDay = new MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator>() {
@@ -792,13 +792,6 @@ public class SecuritiesOrderExecutionInstruction {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderExecutionInstruction
 	 * SecuritiesOrderExecutionInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = FIXSynonym: 18 value "6"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ParticipateDontInitiate"</li>
 	 * <li>
@@ -806,6 +799,13 @@ public class SecuritiesOrderExecutionInstruction {
 	 * definition} =
 	 * "An order that may participate in a transaction initiated by another party, but may not initiate a transaction."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 18 value "6"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator> mmParticipateDontInitiate = new MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator>() {
@@ -856,13 +856,6 @@ public class SecuritiesOrderExecutionInstruction {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderExecutionInstruction
 	 * SecuritiesOrderExecutionInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = FIXSynonym: 18 value "D"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PercentOfVolume"</li>
 	 * <li>
@@ -870,6 +863,13 @@ public class SecuritiesOrderExecutionInstruction {
 	 * definition} =
 	 * "Indicates that the Sender does not want all of the volume on the floor."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 18 value "D"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator> mmPercentOfVolume = new MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator>() {
@@ -920,10 +920,6 @@ public class SecuritiesOrderExecutionInstruction {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderExecutionInstruction
 	 * SecuritiesOrderExecutionInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Scale"</li>
 	 * <li>
@@ -931,6 +927,10 @@ public class SecuritiesOrderExecutionInstruction {
 	 * definition} =
 	 * "An order to buy (or sell) a financial instrument which specifies the total amount to be bought (or sold) and the amount to be bought (or sold) at specified price variations."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator> mmScale = new MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator>() {
@@ -980,13 +980,6 @@ public class SecuritiesOrderExecutionInstruction {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderExecutionInstruction
 	 * SecuritiesOrderExecutionInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = FIXSynonym: 18 value "9" or "0"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "StayOnSide"</li>
 	 * <li>
@@ -994,6 +987,13 @@ public class SecuritiesOrderExecutionInstruction {
 	 * definition} =
 	 * "Specifies the order limit based on the offer/bid at the time of the order submission."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 18 value "9" or "0"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderExecutionInstruction, StayOnSideTypeCode> mmStayOnSide = new MMBusinessAttribute<SecuritiesOrderExecutionInstruction, StayOnSideTypeCode>() {
@@ -1044,6 +1044,11 @@ public class SecuritiesOrderExecutionInstruction {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderExecutionInstruction
 	 * SecuritiesOrderExecutionInstruction}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Work"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Make the order active until notified."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = FIXSynonym: 18 value "2", FIXSynonym: 636</li>
@@ -1051,11 +1056,6 @@ public class SecuritiesOrderExecutionInstruction {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Work"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Make the order active until notified."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator> mmWork = new MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator>() {
@@ -1106,13 +1106,6 @@ public class SecuritiesOrderExecutionInstruction {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderExecutionInstruction
 	 * SecuritiesOrderExecutionInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = FIXSynonym: 18 value 3</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GoAlong"</li>
 	 * <li>
@@ -1120,6 +1113,13 @@ public class SecuritiesOrderExecutionInstruction {
 	 * definition} =
 	 * "Used for listed equity securities. Buy or sell at prices that randomly occur on the floor, participating in what\ntrades the specialist and other players will allow."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 18 value 3</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator> mmGoAlong = new MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator>() {
@@ -1170,13 +1170,6 @@ public class SecuritiesOrderExecutionInstruction {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderExecutionInstruction
 	 * SecuritiesOrderExecutionInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = FIXSynonym: 18 value 8</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TryScale"</li>
 	 * <li>
@@ -1184,6 +1177,13 @@ public class SecuritiesOrderExecutionInstruction {
 	 * definition} =
 	 * "Order to buy (sell) a security that specifies the total amount to be bought (sold) and the amount to be bought (sold) at successively decreasing (increasing) price intervals; often placed in order to average the price."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 18 value 8</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator> mmTryScale = new MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator>() {
@@ -1234,13 +1234,6 @@ public class SecuritiesOrderExecutionInstruction {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderExecutionInstruction
 	 * SecuritiesOrderExecutionInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = FIXSynonym: 18 value F</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DoNotReduce"</li>
 	 * <li>
@@ -1248,6 +1241,13 @@ public class SecuritiesOrderExecutionInstruction {
 	 * definition} =
 	 * "Indicates whether to buy, to stop order to sell, or to stop limit order to sell that is not to be reduced in price by the amount of an ordinary cash dividend on the ex-dividend date.  A \"do not reduce\" order applies only to ordinary cash dividends; it should be reduced for other distributions - such as when a stock goes ex stock dividend or ex rights."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 18 value F</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator> mmDoNotReduce = new MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator>() {
@@ -1298,13 +1298,6 @@ public class SecuritiesOrderExecutionInstruction {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderExecutionInstruction
 	 * SecuritiesOrderExecutionInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = FIXSynonym: 18 value H and Q</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CancelOnSystemFailure"</li>
 	 * <li>
@@ -1312,6 +1305,13 @@ public class SecuritiesOrderExecutionInstruction {
 	 * definition} =
 	 * "If a system failure interrupts trading or order routing, attempt to cancel this order or attempt to reinstate this order, subject to time in force limitations. Note that depending on the type and severity of the failure, this might not be possible."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 18 value H and Q</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator> mmCancelOnSystemFailure = new MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator>() {
@@ -1362,13 +1362,6 @@ public class SecuritiesOrderExecutionInstruction {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderExecutionInstruction
 	 * SecuritiesOrderExecutionInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = FIXSynonym: 18 value K and J</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CancelOnTradingHalt"</li>
 	 * <li>
@@ -1376,6 +1369,13 @@ public class SecuritiesOrderExecutionInstruction {
 	 * definition} =
 	 * "If trading in this instrument is halted, cancel this order or reinstate this order when/if trading resumes, subject to time in force limitations."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 18 value K and J</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator> mmCancelOnTradingHalt = new MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator>() {
@@ -1426,13 +1426,6 @@ public class SecuritiesOrderExecutionInstruction {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderExecutionInstruction
 	 * SecuritiesOrderExecutionInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = FIXSynonym: 18 value X</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradeAlong"</li>
 	 * <li>
@@ -1440,6 +1433,13 @@ public class SecuritiesOrderExecutionInstruction {
 	 * definition} =
 	 * "Indicates whether the broker has permission to handle and place the order in the market even if  the broker already has its own proprietary orders for the same financial instrument placed in the market."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 18 value X</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator> mmTradeAlong = new MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator>() {
@@ -1490,10 +1490,6 @@ public class SecuritiesOrderExecutionInstruction {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderExecutionInstruction
 	 * SecuritiesOrderExecutionInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "StrictLimit"</li>
 	 * <li>
@@ -1501,6 +1497,10 @@ public class SecuritiesOrderExecutionInstruction {
 	 * definition} =
 	 * "Limit order that must be traded at the exact limit price specified without any price improvement."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator> mmStrictLimit = new MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator>() {
@@ -1550,10 +1550,6 @@ public class SecuritiesOrderExecutionInstruction {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderExecutionInstruction
 	 * SecuritiesOrderExecutionInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IgnorePriceValidityChecks"</li>
 	 * <li>
@@ -1561,6 +1557,10 @@ public class SecuritiesOrderExecutionInstruction {
 	 * definition} =
 	 * "Disables validity checking of price fields for an order or change request."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator> mmIgnorePriceValidityChecks = new MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator>() {
@@ -1610,10 +1610,6 @@ public class SecuritiesOrderExecutionInstruction {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderExecutionInstruction
 	 * SecuritiesOrderExecutionInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReinstateOnSystemFailure"</li>
 	 * <li>
@@ -1621,6 +1617,10 @@ public class SecuritiesOrderExecutionInstruction {
 	 * definition} =
 	 * "If a system failure interrupts trading or order routing, attempt to reinstate this order, subject to time in force limitations. Depending on the type and severity of the failure, this might not be possible."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator> mmReinstateOnSystemFailure = new MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator>() {
@@ -1670,10 +1670,6 @@ public class SecuritiesOrderExecutionInstruction {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderExecutionInstruction
 	 * SecuritiesOrderExecutionInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReinstateOnTradingHalt"</li>
 	 * <li>
@@ -1681,6 +1677,10 @@ public class SecuritiesOrderExecutionInstruction {
 	 * definition} =
 	 * "If trading in this instrument is halted, reinstate this order when/if trading resumes, subject to time in force limitations."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator> mmReinstateOnTradingHalt = new MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator>() {
@@ -1730,10 +1730,6 @@ public class SecuritiesOrderExecutionInstruction {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderExecutionInstruction
 	 * SecuritiesOrderExecutionInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CancelIfNotBest"</li>
 	 * <li>
@@ -1741,6 +1737,10 @@ public class SecuritiesOrderExecutionInstruction {
 	 * definition} =
 	 * "Indicates that an order should be cancelled if it is no longer the best bid if buying, or the best offer if selling."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator> mmCancelIfNotBest = new MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator>() {
@@ -1790,10 +1790,6 @@ public class SecuritiesOrderExecutionInstruction {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderExecutionInstruction
 	 * SecuritiesOrderExecutionInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ExternalRoutingAllowed"</li>
 	 * <li>
@@ -1801,6 +1797,10 @@ public class SecuritiesOrderExecutionInstruction {
 	 * definition} =
 	 * "Indicates that an order sent to one market may be routed by that market to other external markets, especially in cases where the order locks or crosses the market and it can be executed against another markets superior price. The absence of this instruction does not imply that an order should not be routed externally; rather, the order receivers default will apply."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator> mmExternalRoutingAllowed = new MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator>() {
@@ -1850,10 +1850,6 @@ public class SecuritiesOrderExecutionInstruction {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderExecutionInstruction
 	 * SecuritiesOrderExecutionInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ExternalRoutingNotAllowed"</li>
 	 * <li>
@@ -1861,6 +1857,10 @@ public class SecuritiesOrderExecutionInstruction {
 	 * definition} =
 	 * "Indicates that an order sent to one market may never be routed by that market to other external markets. Should the order lock or cross the market but be unable to execute due to price protection reasons, a market may have to take alternate action, which might include rejecting the order, depending on the markets rules.The absence of this instruction does not imply that an order should be routed externally; rather, the order receivers default will apply."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator> mmExternalRoutingNotAllowed = new MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator>() {
@@ -1910,10 +1910,6 @@ public class SecuritiesOrderExecutionInstruction {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderExecutionInstruction
 	 * SecuritiesOrderExecutionInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ImbalanceOnly"</li>
 	 * <li>
@@ -1921,6 +1917,10 @@ public class SecuritiesOrderExecutionInstruction {
 	 * definition} =
 	 * "Indicates that the order can only hit the imbalance during a call auction. The imbalance is the remaining quantity when other buy and sell orders are matched at the auction clearing price."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator> mmImbalanceOnly = new MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator>() {
@@ -1970,10 +1970,6 @@ public class SecuritiesOrderExecutionInstruction {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderExecutionInstruction
 	 * SecuritiesOrderExecutionInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IntermarketSweep"</li>
 	 * <li>
@@ -1981,6 +1977,10 @@ public class SecuritiesOrderExecutionInstruction {
 	 * definition} =
 	 * "Indicates that the party sending the order has taken responsibility for price protection, and the recipient of the order should execute it, if possible, without regard to protection of other markets prices. While the term \"Intermarket sweep\" is specific to the United States, it may be used in other markets, where appropriate, to indicate an order that should be executed without regard to price protection."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator> mmIntermarketSweep = new MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator>() {
@@ -2030,10 +2030,6 @@ public class SecuritiesOrderExecutionInstruction {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderExecutionInstruction
 	 * SecuritiesOrderExecutionInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Netting"</li>
 	 * <li>
@@ -2041,6 +2037,10 @@ public class SecuritiesOrderExecutionInstruction {
 	 * definition} =
 	 * "Used when sending multiple orders indicating that you would be 'netting' the F/X later."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator> mmNetting = new MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator>() {
@@ -2073,6 +2073,10 @@ public class SecuritiesOrderExecutionInstruction {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesOrder
+	 * SecuritiesOrder}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmExecutionInstructions
@@ -2081,23 +2085,19 @@ public class SecuritiesOrderExecutionInstruction {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesOrder
-	 * SecuritiesOrder}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderExecutionInstruction
 	 * SecuritiesOrderExecutionInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RelatedOrder"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Order which is executed."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesOrderExecutionInstruction, Optional<SecuritiesOrder>> mmRelatedOrder = new MMBusinessAssociationEnd<SecuritiesOrderExecutionInstruction, Optional<SecuritiesOrder>>() {
@@ -2140,13 +2140,6 @@ public class SecuritiesOrderExecutionInstruction {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderExecutionInstruction
 	 * SecuritiesOrderExecutionInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = FIXSynonym: 18 value "V"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ForeignExchangeNetting"</li>
 	 * <li>
@@ -2154,6 +2147,13 @@ public class SecuritiesOrderExecutionInstruction {
 	 * definition} =
 	 * "Reduction of transfers of cash (resulting of a foreign exchange operation between subsidiaries or separate companies) to a net amount."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 18 value "V"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator> mmForeignExchangeNetting = new MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator>() {
@@ -2195,13 +2195,6 @@ public class SecuritiesOrderExecutionInstruction {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderExecutionInstruction
 	 * SecuritiesOrderExecutionInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = FIXSynonym: 18 value 7</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "StrictScale"</li>
 	 * <li>
@@ -2209,6 +2202,13 @@ public class SecuritiesOrderExecutionInstruction {
 	 * definition} =
 	 * "Order to buy (sell) a security that strictly specifies the total amount to be bought (sold) and the amount to be bought (sold) at successively decreasing (increasing) price intervals; often placed in order to average the price."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 18 value 7</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator> mmStrictScale = new MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator>() {
@@ -2250,13 +2250,6 @@ public class SecuritiesOrderExecutionInstruction {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderExecutionInstruction
 	 * SecuritiesOrderExecutionInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = FIXSynonym: 18 value S</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Suspend"</li>
 	 * <li>
@@ -2264,6 +2257,13 @@ public class SecuritiesOrderExecutionInstruction {
 	 * definition} =
 	 * "Used in specialist driven markets to direct the specialist to try to suspend the order."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 18 value S</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator> mmSuspend = new MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator>() {
@@ -2305,13 +2305,6 @@ public class SecuritiesOrderExecutionInstruction {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderExecutionInstruction
 	 * SecuritiesOrderExecutionInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = FIXSynonym: 18 value Y</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TryToStop"</li>
 	 * <li>
@@ -2319,6 +2312,13 @@ public class SecuritiesOrderExecutionInstruction {
 	 * definition} =
 	 * "Used in specialist driven markets to direct the specialist to try and stop the order."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 18 value Y</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator> mmTryToStop = new MMBusinessAttribute<SecuritiesOrderExecutionInstruction, YesNoIndicator>() {
@@ -2351,6 +2351,10 @@ public class SecuritiesOrderExecutionInstruction {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.Discretion
+	 * Discretion}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.Discretion#mmRelatedOrderExecution
@@ -2358,10 +2362,6 @@ public class SecuritiesOrderExecutionInstruction {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.Discretion
-	 * Discretion}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2374,15 +2374,15 @@ public class SecuritiesOrderExecutionInstruction {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderExecutionInstruction
 	 * SecuritiesOrderExecutionInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OrderPriceStrategy"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Strategy used to obtain the order price."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesOrderExecutionInstruction, Discretion> mmOrderPriceStrategy = new MMBusinessAssociationEnd<SecuritiesOrderExecutionInstruction, Discretion>() {

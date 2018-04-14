@@ -38,10 +38,6 @@ public class ConstraintAccountServicerDeadlineMissedGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PendingCancellationStatusReason5
 	 * PendingCancellationStatusReason5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountServicerDeadlineMissedGuideline"</li>
 	 * <li>
@@ -49,6 +45,10 @@ public class ConstraintAccountServicerDeadlineMissedGuideline {
 	 * definition} =
 	 * "When ReasonCode/Code is ADEA (Account Servicer Deadline Missed), the instruction is assumed to be processed “on a best effort basis” by the account servicer."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -89,10 +89,6 @@ public class ConstraintAccountServicerDeadlineMissedGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PendingCancellationStatusReason3
 	 * PendingCancellationStatusReason3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountServicerDeadlineMissedGuideline"</li>
 	 * <li>
@@ -100,6 +96,10 @@ public class ConstraintAccountServicerDeadlineMissedGuideline {
 	 * definition} =
 	 * "When ReasonCode/Code is ADEA (Account Servicer Deadline Missed), the instruction is assumed to be processed “on a best effort basis” by the account servicer."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -133,10 +133,6 @@ public class ConstraintAccountServicerDeadlineMissedGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PendingCancellationStatusReason8
 	 * PendingCancellationStatusReason8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountServicerDeadlineMissedGuideline"</li>
 	 * <li>
@@ -144,6 +140,10 @@ public class ConstraintAccountServicerDeadlineMissedGuideline {
 	 * definition} =
 	 * "When ReasonCode/Code is ADEA (Account Servicer Deadline Missed), the instruction is assumed to be processed “on a best effort basis” by the account servicer."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PendingCancellationStatusReason8> forPendingCancellationStatusReason8 = new MMConstraint<PendingCancellationStatusReason8>() {
@@ -167,10 +167,6 @@ public class ConstraintAccountServicerDeadlineMissedGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PendingCancellationStatusReason4
 	 * PendingCancellationStatusReason4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountServicerDeadlineMissedGuideline"</li>
 	 * <li>
@@ -178,6 +174,10 @@ public class ConstraintAccountServicerDeadlineMissedGuideline {
 	 * definition} =
 	 * "When ReasonCode/Code is ADEA (Account Servicer Deadline Missed), the instruction is assumed to be processed “on a best effort basis” by the account servicer."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PendingCancellationStatusReason4> forPendingCancellationStatusReason4 = new MMConstraint<PendingCancellationStatusReason4>() {
@@ -201,10 +201,6 @@ public class ConstraintAccountServicerDeadlineMissedGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PendingCancellationStatusReason7
 	 * PendingCancellationStatusReason7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountServicerDeadlineMissedGuideline"</li>
 	 * <li>
@@ -212,6 +208,10 @@ public class ConstraintAccountServicerDeadlineMissedGuideline {
 	 * definition} =
 	 * "When ReasonCode/Code is ADEA (Account Servicer Deadline Missed), the instruction is assumed to be processed “on a best effort basis” by the account servicer."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -242,10 +242,6 @@ public class ConstraintAccountServicerDeadlineMissedGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PendingCancellationStatusReason6
 	 * PendingCancellationStatusReason6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountServicerDeadlineMissedGuideline"</li>
 	 * <li>
@@ -253,6 +249,10 @@ public class ConstraintAccountServicerDeadlineMissedGuideline {
 	 * definition} =
 	 * "When ReasonCode/Code is ADEA (Account Servicer Deadline Missed), the instruction is assumed to be processed “on a best effort basis” by the account servicer."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PendingCancellationStatusReason6> forPendingCancellationStatusReason6 = new MMConstraint<PendingCancellationStatusReason6>() {

@@ -43,10 +43,6 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.pain.CustomerPaymentReversalV06
 	 * CustomerPaymentReversalV06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GroupReversalAndNumberOfTransactionsGuideline"</li>
 	 * <li>
@@ -54,6 +50,10 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 * definition} =
 	 * "If GroupHeader/GroupReversal is false and OriginalPaymentInformationAndReversal[*]/PaymentInformationReversal is false, then NumberOfTransactions must equal the number of occurrences of OriginalPaymentInformationAndReversal[*]/TransactionInformation."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -93,10 +93,6 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.GroupHeader57 GroupHeader57}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GroupReversalAndNumberOfTransactionsGuideline"</li>
 	 * <li>
@@ -104,6 +100,10 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 * definition} =
 	 * "If GroupReversal is true, then NumberOfTransactions equals the number of transactions in the original message."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -136,10 +136,6 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.GroupHeader56 GroupHeader56}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GroupReversalAndNumberOfTransactionsGuideline"</li>
 	 * <li>
@@ -147,6 +143,10 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 * definition} =
 	 * "If GroupReversal is true, then NumberOfTransactions equals the number of transactions in the original message."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -179,10 +179,6 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.GroupHeader18 GroupHeader18}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GroupReversalAndNumberOfTransactionsGuideline"</li>
 	 * <li>
@@ -190,6 +186,10 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 * definition} =
 	 * "ISO20022 Rule: \nIf GroupReversal is true, then NumberOfTransactions equals the number of transactions in the original message."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<GroupHeader18> forGroupHeader18 = new MMConstraint<GroupHeader18>() {
@@ -212,10 +212,6 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.GroupHeader28 GroupHeader28}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GroupReversalAndNumberOfTransactionsGuideline"</li>
 	 * <li>
@@ -223,6 +219,10 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 * definition} =
 	 * "If GroupReversal is true, then NumberOfTransactions equals the number of transactions in the original message."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<GroupHeader28> forGroupHeader28 = new MMConstraint<GroupHeader28>() {
@@ -245,10 +245,6 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.GroupHeader41 GroupHeader41}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GroupReversalAndNumberOfTransactionsGuideline"</li>
 	 * <li>
@@ -256,6 +252,10 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 * definition} =
 	 * "If GroupReversal is true, then NumberOfTransactions equals the number of transactions in the original message."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<GroupHeader41> forGroupHeader41 = new MMConstraint<GroupHeader41>() {
@@ -279,10 +279,6 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.pain.CustomerPaymentReversalV05
 	 * CustomerPaymentReversalV05}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GroupReversalAndNumberOfTransactionsGuideline"</li>
 	 * <li>
@@ -290,6 +286,10 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 * definition} =
 	 * "If GroupHeader/GroupReversal is false and OriginalPaymentInformationAndReversal[*]/PaymentInformationReversal is false, then NumberOfTransactions must equal the number of occurrences of OriginalPaymentInformationAndReversal[*]/TransactionInformation."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -329,10 +329,6 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.GroupHeader71 GroupHeader71}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GroupReversalAndNumberOfTransactionsGuideline"</li>
 	 * <li>
@@ -340,6 +336,10 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 * definition} =
 	 * "If GroupReversal is true, then NumberOfTransactions equals the number of transactions in the original message."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -370,10 +370,6 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.pain.CustomerPaymentReversalV08
 	 * CustomerPaymentReversalV08}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GroupReversalAndNumberOfTransactionsGuideline"</li>
 	 * <li>
@@ -381,6 +377,10 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 * definition} =
 	 * "If GroupHeader/GroupReversal is false and OriginalPaymentInformationAndReversal[*]/PaymentInformationReversal is false, then NumberOfTransactions must equal the number of occurrences of OriginalPaymentInformationAndReversal[*]/TransactionInformation."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -410,10 +410,6 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.GroupHeader9 GroupHeader9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GroupReversalAndNumberOfTransactionsGuideline"</li>
 	 * <li>
@@ -421,6 +417,10 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 * definition} =
 	 * "If GroupReversal is true, then NumberOfTransactions equals the number of transactions in the original message."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<GroupHeader9> forGroupHeader9 = new MMConstraint<GroupHeader9>() {
@@ -443,10 +443,6 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.GroupHeader30 GroupHeader30}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GroupReversalAndNumberOfTransactionsGuideline"</li>
 	 * <li>
@@ -454,6 +450,10 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 * definition} =
 	 * "ISO20022 Rule: \nIf GroupReversal is true, then NumberOfTransactions equals the number of transactions in the original message."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<GroupHeader30> forGroupHeader30 = new MMConstraint<GroupHeader30>() {
@@ -476,10 +476,6 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.GroupHeader8 GroupHeader8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GroupReversalAndNumberOfTransactionsGuideline"</li>
 	 * <li>
@@ -487,6 +483,10 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 * definition} =
 	 * "If GroupReversal is true, then NumberOfTransactions equals the number of transactions in the original message."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<GroupHeader8> forGroupHeader8 = new MMConstraint<GroupHeader8>() {
@@ -509,10 +509,6 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.GroupHeader75 GroupHeader75}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GroupReversalAndNumberOfTransactionsGuideline"</li>
 	 * <li>
@@ -520,6 +516,10 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 * definition} =
 	 * "If GroupReversal is true, then NumberOfTransactions equals the number of transactions in the original message."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -550,10 +550,6 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.pain.CustomerPaymentReversalV07
 	 * CustomerPaymentReversalV07}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GroupReversalAndNumberOfTransactionsGuideline"</li>
 	 * <li>
@@ -561,6 +557,10 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 * definition} =
 	 * "If GroupHeader/GroupReversal is false and OriginalPaymentInformationAndReversal[*]/PaymentInformationReversal is false, then NumberOfTransactions must equal the number of occurrences of OriginalPaymentInformationAndReversal[*]/TransactionInformation."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -600,10 +600,6 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.GroupHeader22 GroupHeader22}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GroupReversalAndNumberOfTransactionsGuideline"</li>
 	 * <li>
@@ -611,6 +607,10 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 * definition} =
 	 * "If GroupReversal is true, then NumberOfTransactions equals the number of transactions in the original message."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<GroupHeader22> forGroupHeader22 = new MMConstraint<GroupHeader22>() {
@@ -633,10 +633,6 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.GroupHeader40 GroupHeader40}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GroupReversalAndNumberOfTransactionsGuideline"</li>
 	 * <li>
@@ -644,6 +640,10 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 * definition} =
 	 * "If GroupReversal is true, then NumberOfTransactions equals the number of transactions in the original message."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<GroupHeader40> forGroupHeader40 = new MMConstraint<GroupHeader40>() {

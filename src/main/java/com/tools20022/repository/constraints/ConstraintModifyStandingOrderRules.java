@@ -37,10 +37,6 @@ public class ConstraintModifyStandingOrderRules {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.camt.ModifyStandingOrderV05
 	 * ModifyStandingOrderV05}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ModifyStandingOrderRules"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintModifyStandingOrderRules {
 	 * definition} =
 	 * "The NewStandingOrderValueSet can consist on an Amount, a DebitAccount, a CreditAccount, a ValidityPeriod or a Periodicity. At a minimum, one of these elements must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ModifyStandingOrderV05> for_camt_ModifyStandingOrderV05 = new MMConstraint<ModifyStandingOrderV05>() {

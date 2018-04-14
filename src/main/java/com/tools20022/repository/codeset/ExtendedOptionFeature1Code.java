@@ -77,6 +77,12 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "ExtendedOptionFeature1Code"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} =
+ * "Specifies DTCC (The Depository Trust and Clearing Corporation) specific options."
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,12 +93,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "ExtendedOptionFeature1Code"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} =
- * "Specifies DTCC (The Depository Trust and Clearing Corporation) specific options."
- * </li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -107,12 +107,12 @@ public class ExtendedOptionFeature1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.ExtendedOptionFeature1Code
 	 * ExtendedOptionFeature1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ForeignTaxUnfavorable"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ForeignTaxUnfavorable"</li>
 	 * </ul>
 	 */
 	public static final ExtendedOptionFeature1Code ForeignTaxUnfavorable = new ExtendedOptionFeature1Code() {
@@ -131,12 +131,12 @@ public class ExtendedOptionFeature1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.ExtendedOptionFeature1Code
 	 * ExtendedOptionFeature1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ForeignTaxFavorable"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ForeignTaxFavorable"</li>
 	 * </ul>
 	 */
 	public static final ExtendedOptionFeature1Code ForeignTaxFavorable = new ExtendedOptionFeature1Code() {
@@ -155,12 +155,12 @@ public class ExtendedOptionFeature1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.ExtendedOptionFeature1Code
 	 * ExtendedOptionFeature1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ForeignTaxExempt"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ForeignTaxExempt"</li>
 	 * </ul>
 	 */
 	public static final ExtendedOptionFeature1Code ForeignTaxExempt = new ExtendedOptionFeature1Code() {
@@ -179,12 +179,12 @@ public class ExtendedOptionFeature1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.ExtendedOptionFeature1Code
 	 * ExtendedOptionFeature1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DRIPUnfavorable"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DRIPUnfavorable"</li>
 	 * </ul>
 	 */
 	public static final ExtendedOptionFeature1Code DRIPUnfavorable = new ExtendedOptionFeature1Code() {
@@ -203,12 +203,12 @@ public class ExtendedOptionFeature1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.ExtendedOptionFeature1Code
 	 * ExtendedOptionFeature1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DRIPFavorable"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DRIPFavorable"</li>
 	 * </ul>
 	 */
 	public static final ExtendedOptionFeature1Code DRIPFavorable = new ExtendedOptionFeature1Code() {
@@ -227,12 +227,12 @@ public class ExtendedOptionFeature1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.ExtendedOptionFeature1Code
 	 * ExtendedOptionFeature1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DRIPExempt"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DRIPExempt"</li>
 	 * </ul>
 	 */
 	public static final ExtendedOptionFeature1Code DRIPExempt = new ExtendedOptionFeature1Code() {
@@ -251,12 +251,12 @@ public class ExtendedOptionFeature1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.ExtendedOptionFeature1Code
 	 * ExtendedOptionFeature1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ForeignCurrencyPayment"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ForeignCurrencyPayment"</li>
 	 * </ul>
 	 */
 	public static final ExtendedOptionFeature1Code ForeignCurrencyPayment = new ExtendedOptionFeature1Code() {
@@ -275,12 +275,12 @@ public class ExtendedOptionFeature1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.ExtendedOptionFeature1Code
 	 * ExtendedOptionFeature1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ForeignCurrencyPaymentUnfavorable"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ForeignCurrencyPaymentUnfavorable"</li>
 	 * </ul>
 	 */
 	public static final ExtendedOptionFeature1Code ForeignCurrencyPaymentUnfavorable = new ExtendedOptionFeature1Code() {
@@ -299,12 +299,12 @@ public class ExtendedOptionFeature1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.ExtendedOptionFeature1Code
 	 * ExtendedOptionFeature1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ForeignCurrencyPaymentFavorable"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ForeignCurrencyPaymentFavorable"</li>
 	 * </ul>
 	 */
 	public static final ExtendedOptionFeature1Code ForeignCurrencyPaymentFavorable = new ExtendedOptionFeature1Code() {
@@ -323,12 +323,12 @@ public class ExtendedOptionFeature1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.ExtendedOptionFeature1Code
 	 * ExtendedOptionFeature1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ForeignCurrencyPaymentExempt"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ForeignCurrencyPaymentExempt"</li>
 	 * </ul>
 	 */
 	public static final ExtendedOptionFeature1Code ForeignCurrencyPaymentExempt = new ExtendedOptionFeature1Code() {

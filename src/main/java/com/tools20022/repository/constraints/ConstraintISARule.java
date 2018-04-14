@@ -42,10 +42,6 @@ public class ConstraintISARule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ISATransfer10 ISATransfer10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ISARule"</li>
 	 * <li>
@@ -53,6 +49,10 @@ public class ConstraintISARule {
 	 * definition} =
 	 * "If ProductTransfer\\Portfolio\\ISA or ProductTransfer\\Portfolio\\Portfolio is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\n\r\nIf ProductTransfer\\Portfolio\\ISA or ProductTransfer\\Portfolio\\Portfolio is present then the message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ISATransfer10> forISATransfer10 = new MMConstraint<ISATransfer10>() {
@@ -75,10 +75,6 @@ public class ConstraintISARule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ISATransfer24 ISATransfer24}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ISARule"</li>
 	 * <li>
@@ -86,6 +82,10 @@ public class ConstraintISARule {
 	 * definition} =
 	 * "If any occurrence of ProductTransfer/Portfolio/ISA is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\nIf any occurrence of ProductTransfer/Portfolio/ISA is present then the elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -114,10 +114,6 @@ public class ConstraintISARule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ISATransfer7 ISATransfer7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ISARule"</li>
 	 * <li>
@@ -125,6 +121,10 @@ public class ConstraintISARule {
 	 * definition} =
 	 * "If ProductTransfer\\Portfolio\\ISA or ProductTransfer\\Portfolio\\Portfolio is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\n\r\nIf ProductTransfer\\Portfolio\\ISA or ProductTransfer\\Portfolio\\Portfolio is present then the message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ISATransfer7> forISATransfer7 = new MMConstraint<ISATransfer7>() {
@@ -148,10 +148,6 @@ public class ConstraintISARule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV04
 	 * AccountHoldingInformationRequestV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ISARule"</li>
 	 * <li>
@@ -159,6 +155,10 @@ public class ConstraintISARule {
 	 * definition} =
 	 * "If any occurrence of ProductTransfer/Portfolio/ISA is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\nIf any occurrence of ProductTransfer/Portfolio/ISA is present then the message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -196,10 +196,6 @@ public class ConstraintISARule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ISATransfer4 ISATransfer4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ISARule"</li>
 	 * <li>
@@ -207,6 +203,10 @@ public class ConstraintISARule {
 	 * definition} =
 	 * "If ProductTransfer\\Portfolio\\ISA or ProductTransfer\\Portfolio\\Portfolio is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\n\r\nIf ProductTransfer\\Portfolio\\ISA or ProductTransfer\\Portfolio\\Portfolio is present then the message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ISATransfer4> forISATransfer4 = new MMConstraint<ISATransfer4>() {
@@ -229,10 +229,6 @@ public class ConstraintISARule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ISATransfer9 ISATransfer9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ISARule"</li>
 	 * <li>
@@ -240,6 +236,10 @@ public class ConstraintISARule {
 	 * definition} =
 	 * "If ProductTransfer\\Portfolio\\ISA or ProductTransfer\\Portfolio\\Portfolio is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\n\r\nIf ProductTransfer\\Portfolio\\ISA or ProductTransfer\\Portfolio\\Portfolio is present then the message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -272,10 +272,6 @@ public class ConstraintISARule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV05
 	 * PortfolioTransferConfirmationV05}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ISARule"</li>
 	 * <li>
@@ -283,6 +279,10 @@ public class ConstraintISARule {
 	 * definition} =
 	 * "If ProductTransfer/Portfolio/ISA is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\nIf ProductTransfer/Portfolio/ISA is present, then the message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed.\r\n\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -315,10 +315,6 @@ public class ConstraintISARule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06
 	 * PortfolioTransferInstructionV06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ISARule"</li>
 	 * <li>
@@ -326,6 +322,10 @@ public class ConstraintISARule {
 	 * definition} =
 	 * "If ProductTransfer/Portfolio/ISA is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\nIf ProductTransfer/Portfolio/ISA is present, then the message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -364,10 +364,6 @@ public class ConstraintISARule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV05
 	 * AccountHoldingInformationV05}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ISARule"</li>
 	 * <li>
@@ -375,6 +371,10 @@ public class ConstraintISARule {
 	 * definition} =
 	 * "If any occurrence of ProductTransfer/Portfolio/ISA is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\nIf any occurrence of ProductTransfer/Portfolio/ISA is present, then the message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -412,10 +412,6 @@ public class ConstraintISARule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ISATransfer5 ISATransfer5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ISARule"</li>
 	 * <li>
@@ -423,6 +419,10 @@ public class ConstraintISARule {
 	 * definition} =
 	 * "If ProductTransfer\\Portfolio\\ISA or ProductTransfer\\Portfolio\\Portfolio is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\n\r\nIf ProductTransfer\\Portfolio\\ISA or ProductTransfer\\Portfolio\\Portfolio is present then the message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ISATransfer5> forISATransfer5 = new MMConstraint<ISATransfer5>() {
@@ -445,10 +445,6 @@ public class ConstraintISARule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ISATransfer19 ISATransfer19}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ISARule"</li>
 	 * <li>
@@ -456,6 +452,10 @@ public class ConstraintISARule {
 	 * definition} =
 	 * "If any occurrence of ProductTransfer/Portfolio/ISA or ProductTransfer/Portfolio/Portfolio is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\nIf any occurrence of ProductTransfer/Portfolio/ISA or ProductTransfer/Portfolio/Portfolio is present then the elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -494,10 +494,6 @@ public class ConstraintISARule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07
 	 * PortfolioTransferConfirmationV07}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ISARule"</li>
 	 * <li>
@@ -505,6 +501,10 @@ public class ConstraintISARule {
 	 * definition} =
 	 * "If any occurrence of ProductTransfer/Portfolio/ISA is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\nIf any occurrence of ProductTransfer/Portfolio/ISA is present, then the elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed.\r\n\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -543,10 +543,6 @@ public class ConstraintISARule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV07
 	 * PortfolioTransferInstructionV07}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ISARule"</li>
 	 * <li>
@@ -554,6 +550,10 @@ public class ConstraintISARule {
 	 * definition} =
 	 * "If any occurrence of ProductTransfer/Portfolio/ISA is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\nIf any occurrence of ProductTransfer/Portfolio/ISA is present then the elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -591,10 +591,6 @@ public class ConstraintISARule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ISATransfer12 ISATransfer12}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ISARule"</li>
 	 * <li>
@@ -602,6 +598,10 @@ public class ConstraintISARule {
 	 * definition} =
 	 * "If ProductTransfer/Portfolio/ISA or ProductTransfer/Portfolio/Portfolio is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\n\r\nIf ProductTransfer/Portfolio/ISA or ProductTransfer/Portfolio/Portfolio is present then the message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -639,10 +639,6 @@ public class ConstraintISARule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ISATransfer1 ISATransfer1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ISARule"</li>
 	 * <li>
@@ -650,6 +646,10 @@ public class ConstraintISARule {
 	 * definition} =
 	 * "If ProductTransfer\\Portfolio\\ISA or ProductTransfer\\Portfolio\\Portfolio is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\n\r\nIf ProductTransfer\\Portfolio\\ISA or ProductTransfer\\Portfolio\\Portfolio is present then the message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ISATransfer1> forISATransfer1 = new MMConstraint<ISATransfer1>() {
@@ -672,10 +672,6 @@ public class ConstraintISARule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ISATransfer2 ISATransfer2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ISARule"</li>
 	 * <li>
@@ -683,6 +679,10 @@ public class ConstraintISARule {
 	 * definition} =
 	 * "If ProductTransfer\\Portfolio\\ISA or ProductTransfer\\Portfolio\\Portfolio is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\n\r\nIf ProductTransfer\\Portfolio\\ISA or ProductTransfer\\Portfolio\\Portfolio is present then the message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ISATransfer2> forISATransfer2 = new MMConstraint<ISATransfer2>() {
@@ -706,10 +706,6 @@ public class ConstraintISARule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03
 	 * AccountHoldingInformationRequestV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ISARule"</li>
 	 * <li>
@@ -717,6 +713,10 @@ public class ConstraintISARule {
 	 * definition} =
 	 * "If ProductTransfer/Portfolio/ISA or ProductTransfer/Portfolio/Portfolio is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\n\r\nIf ProductTransfer/Portfolio/ISA or ProductTransfer/Portfolio/Portfolio is present then the message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -749,10 +749,6 @@ public class ConstraintISARule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV05
 	 * PortfolioTransferInstructionV05}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ISARule"</li>
 	 * <li>
@@ -760,6 +756,10 @@ public class ConstraintISARule {
 	 * definition} =
 	 * "If ProductTransfer/Portfolio/ISA is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\nIf ProductTransfer/Portfolio/ISA is present, then the message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -791,10 +791,6 @@ public class ConstraintISARule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ISATransfer6 ISATransfer6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ISARule"</li>
 	 * <li>
@@ -802,6 +798,10 @@ public class ConstraintISARule {
 	 * definition} =
 	 * "If ProductTransfer\\Portfolio\\ISA or ProductTransfer\\Portfolio\\Portfolio is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\n\r\nIf ProductTransfer\\Portfolio\\ISA or ProductTransfer\\Portfolio\\Portfolio is present then the message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ISATransfer6> forISATransfer6 = new MMConstraint<ISATransfer6>() {
@@ -825,10 +825,6 @@ public class ConstraintISARule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV04
 	 * AccountHoldingInformationV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ISARule"</li>
 	 * <li>
@@ -836,6 +832,10 @@ public class ConstraintISARule {
 	 * definition} =
 	 * "If ProductTransfer/Portfolio/ISA is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\nIf ProductTransfer/Portfolio/ISA is present, then the message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -868,10 +868,6 @@ public class ConstraintISARule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PEPISATransfer11
 	 * PEPISATransfer11}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ISARule"</li>
 	 * <li>
@@ -879,6 +875,10 @@ public class ConstraintISARule {
 	 * definition} =
 	 * "If ProductTransfer\\Portfolio\\ISA or ProductTransfer\\Portfolio\\Portfolio is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\n\r\nIf ProductTransfer\\Portfolio\\ISA or ProductTransfer\\Portfolio\\Portfolio is present then the message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PEPISATransfer11> forPEPISATransfer11 = new MMConstraint<PEPISATransfer11>() {
@@ -902,10 +902,6 @@ public class ConstraintISARule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV08
 	 * PortfolioTransferConfirmationV08}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ISARule"</li>
 	 * <li>
@@ -913,6 +909,10 @@ public class ConstraintISARule {
 	 * definition} =
 	 * "If any occurrence of ProductTransfer/Portfolio/ISA is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\nIf any occurrence of ProductTransfer/Portfolio/ISA is present, then the elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed.\r\n\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -942,10 +942,6 @@ public class ConstraintISARule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV06
 	 * PortfolioTransferConfirmationV06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ISARule"</li>
 	 * <li>
@@ -953,6 +949,10 @@ public class ConstraintISARule {
 	 * definition} =
 	 * "If any occurrence of ProductTransfer/Portfolio/ISA is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\nIf any occurrence of ProductTransfer/Portfolio/ISA is present, then the elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed.\r\n\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -991,10 +991,6 @@ public class ConstraintISARule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV06
 	 * AccountHoldingInformationV06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ISARule"</li>
 	 * <li>
@@ -1002,6 +998,10 @@ public class ConstraintISARule {
 	 * definition} =
 	 * "If any occurrence of ProductTransfer/Portfolio/ISA is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\nIf any occurrence of ProductTransfer/Portfolio/ISA is present, then the message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1031,10 +1031,6 @@ public class ConstraintISARule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV08
 	 * PortfolioTransferInstructionV08}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ISARule"</li>
 	 * <li>
@@ -1042,6 +1038,10 @@ public class ConstraintISARule {
 	 * definition} =
 	 * "If any occurrence of ProductTransfer/Portfolio/ISA is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\nIf any occurrence of ProductTransfer/Portfolio/ISA is present then the elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1071,10 +1071,6 @@ public class ConstraintISARule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV05
 	 * AccountHoldingInformationRequestV05}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ISARule"</li>
 	 * <li>
@@ -1082,6 +1078,10 @@ public class ConstraintISARule {
 	 * definition} =
 	 * "If any occurrence of ProductTransfer/Portfolio/ISA is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\nIf any occurrence of ProductTransfer/Portfolio/ISA is present then the message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =

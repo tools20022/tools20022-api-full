@@ -136,6 +136,11 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "SecuritiesBalanceType5Code"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} =
+ * "Specifies the nature of the securities or investment fund balance."</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -146,11 +151,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "SecuritiesBalanceType5Code"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} =
- * "Specifies the nature of the securities or investment fund balance."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -165,12 +165,12 @@ public class SecuritiesBalanceType5Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType5Code
 	 * SecuritiesBalanceType5Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Blocked"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Blocked"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceType5Code Blocked = new SecuritiesBalanceType5Code() {
@@ -189,12 +189,12 @@ public class SecuritiesBalanceType5Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType5Code
 	 * SecuritiesBalanceType5Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AvailableWithNoAdditionalStatus"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AvailableWithNoAdditionalStatus"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceType5Code AvailableWithNoAdditionalStatus = new SecuritiesBalanceType5Code() {
@@ -213,12 +213,12 @@ public class SecuritiesBalanceType5Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType5Code
 	 * SecuritiesBalanceType5Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BlockedCorporateAction"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BlockedCorporateAction"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceType5Code BlockedCorporateAction = new SecuritiesBalanceType5Code() {
@@ -237,12 +237,12 @@ public class SecuritiesBalanceType5Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType5Code
 	 * SecuritiesBalanceType5Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BlockedTrading"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BlockedTrading"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceType5Code BlockedTrading = new SecuritiesBalanceType5Code() {
@@ -261,12 +261,12 @@ public class SecuritiesBalanceType5Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType5Code
 	 * SecuritiesBalanceType5Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BlockedAuthenticity"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BlockedAuthenticity"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceType5Code BlockedAuthenticity = new SecuritiesBalanceType5Code() {
@@ -285,12 +285,12 @@ public class SecuritiesBalanceType5Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType5Code
 	 * SecuritiesBalanceType5Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Borrowed"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Borrowed"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceType5Code Borrowed = new SecuritiesBalanceType5Code() {
@@ -309,12 +309,12 @@ public class SecuritiesBalanceType5Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType5Code
 	 * SecuritiesBalanceType5Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PendingBorrowedDelivery"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PendingBorrowedDelivery"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceType5Code PendingBorrowedDelivery = new SecuritiesBalanceType5Code() {
@@ -333,12 +333,12 @@ public class SecuritiesBalanceType5Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType5Code
 	 * SecuritiesBalanceType5Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PendingBorrowedReceipt"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PendingBorrowedReceipt"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceType5Code PendingBorrowedReceipt = new SecuritiesBalanceType5Code() {
@@ -357,12 +357,12 @@ public class SecuritiesBalanceType5Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType5Code
 	 * SecuritiesBalanceType5Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CollateralIn"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CollateralIn"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceType5Code CollateralIn = new SecuritiesBalanceType5Code() {
@@ -381,12 +381,12 @@ public class SecuritiesBalanceType5Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType5Code
 	 * SecuritiesBalanceType5Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CollateralOut"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CollateralOut"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceType5Code CollateralOut = new SecuritiesBalanceType5Code() {
@@ -405,12 +405,12 @@ public class SecuritiesBalanceType5Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType5Code
 	 * SecuritiesBalanceType5Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OnLoan"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "OnLoan"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceType5Code OnLoan = new SecuritiesBalanceType5Code() {
@@ -429,12 +429,12 @@ public class SecuritiesBalanceType5Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType5Code
 	 * SecuritiesBalanceType5Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PendingOnLoanDelivery"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PendingOnLoanDelivery"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceType5Code PendingOnLoanDelivery = new SecuritiesBalanceType5Code() {
@@ -453,12 +453,12 @@ public class SecuritiesBalanceType5Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType5Code
 	 * SecuritiesBalanceType5Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PendingOnLoanReceipt"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PendingOnLoanReceipt"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceType5Code PendingOnLoanReceipt = new SecuritiesBalanceType5Code() {
@@ -477,12 +477,12 @@ public class SecuritiesBalanceType5Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType5Code
 	 * SecuritiesBalanceType5Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DerivativesMargin"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DerivativesMargin"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceType5Code DerivativesMargin = new SecuritiesBalanceType5Code() {
@@ -501,12 +501,12 @@ public class SecuritiesBalanceType5Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType5Code
 	 * SecuritiesBalanceType5Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PendingDeliveryMatchedBalance"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PendingDeliveryMatchedBalance"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceType5Code PendingDeliveryMatchedBalance = new SecuritiesBalanceType5Code() {
@@ -525,12 +525,12 @@ public class SecuritiesBalanceType5Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType5Code
 	 * SecuritiesBalanceType5Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PendingDeliveryUnmatchedBalance"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PendingDeliveryUnmatchedBalance"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceType5Code PendingDeliveryUnmatchedBalance = new SecuritiesBalanceType5Code() {
@@ -549,12 +549,12 @@ public class SecuritiesBalanceType5Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType5Code
 	 * SecuritiesBalanceType5Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PendingReceiptMatchedBalance"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PendingReceiptMatchedBalance"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceType5Code PendingReceiptMatchedBalance = new SecuritiesBalanceType5Code() {
@@ -573,12 +573,12 @@ public class SecuritiesBalanceType5Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType5Code
 	 * SecuritiesBalanceType5Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PendingReceiptUnmatchedBalance"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PendingReceiptUnmatchedBalance"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceType5Code PendingReceiptUnmatchedBalance = new SecuritiesBalanceType5Code() {
@@ -597,12 +597,12 @@ public class SecuritiesBalanceType5Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType5Code
 	 * SecuritiesBalanceType5Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PendingCorporateActionReceipt"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PendingCorporateActionReceipt"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceType5Code PendingCorporateActionReceipt = new SecuritiesBalanceType5Code() {
@@ -621,12 +621,12 @@ public class SecuritiesBalanceType5Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType5Code
 	 * SecuritiesBalanceType5Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PendingCorporateActionDelivery"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PendingCorporateActionDelivery"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceType5Code PendingCorporateActionDelivery = new SecuritiesBalanceType5Code() {
@@ -645,12 +645,12 @@ public class SecuritiesBalanceType5Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType5Code
 	 * SecuritiesBalanceType5Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PendingDelivery"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PendingDelivery"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceType5Code PendingDelivery = new SecuritiesBalanceType5Code() {
@@ -669,12 +669,12 @@ public class SecuritiesBalanceType5Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType5Code
 	 * SecuritiesBalanceType5Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PendingReceipt"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PendingReceipt"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceType5Code PendingReceipt = new SecuritiesBalanceType5Code() {
@@ -693,12 +693,12 @@ public class SecuritiesBalanceType5Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType5Code
 	 * SecuritiesBalanceType5Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Pledged"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Pledged"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceType5Code Pledged = new SecuritiesBalanceType5Code() {
@@ -717,12 +717,12 @@ public class SecuritiesBalanceType5Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType5Code
 	 * SecuritiesBalanceType5Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OutForRegistration"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "OutForRegistration"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceType5Code OutForRegistration = new SecuritiesBalanceType5Code() {
@@ -741,12 +741,12 @@ public class SecuritiesBalanceType5Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType5Code
 	 * SecuritiesBalanceType5Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Restricted"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Restricted"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceType5Code Restricted = new SecuritiesBalanceType5Code() {
@@ -765,12 +765,12 @@ public class SecuritiesBalanceType5Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType5Code
 	 * SecuritiesBalanceType5Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Unclassified"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Unclassified"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceType5Code Unclassified = new SecuritiesBalanceType5Code() {
@@ -789,12 +789,12 @@ public class SecuritiesBalanceType5Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType5Code
 	 * SecuritiesBalanceType5Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InTransshipment"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "InTransshipment"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceType5Code InTransshipment = new SecuritiesBalanceType5Code() {
@@ -813,12 +813,12 @@ public class SecuritiesBalanceType5Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType5Code
 	 * SecuritiesBalanceType5Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Drawn"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Drawn"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceType5Code Drawn = new SecuritiesBalanceType5Code() {
@@ -837,12 +837,12 @@ public class SecuritiesBalanceType5Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType5Code
 	 * SecuritiesBalanceType5Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "WaitingDocumentation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "WaitingDocumentation"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceType5Code WaitingDocumentation = new SecuritiesBalanceType5Code() {
@@ -861,12 +861,12 @@ public class SecuritiesBalanceType5Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType5Code
 	 * SecuritiesBalanceType5Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BeingTransferred"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BeingTransferred"</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceType5Code BeingTransferred = new SecuritiesBalanceType5Code() {

@@ -39,10 +39,6 @@ public class ConstraintRequest1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.tsin.InvoiceFinancingRequestStatusV01
 	 * InvoiceFinancingRequestStatusV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Request1Rule"</li>
 	 * <li>
@@ -50,6 +46,10 @@ public class ConstraintRequest1Rule {
 	 * definition} =
 	 * "If the status message refers to the technical validation result\nrelated to a financing request, then only Status Identification and\nOriginal Request Information blocks must be present.\nIf the status message refers to the business status related to a financing request, then the FinancingInformationAndStatus block is mandatory."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<InvoiceFinancingRequestStatusV01> for_tsin_InvoiceFinancingRequestStatusV01 = new MMConstraint<InvoiceFinancingRequestStatusV01>() {

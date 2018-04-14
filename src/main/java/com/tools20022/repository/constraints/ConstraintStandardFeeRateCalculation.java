@@ -35,10 +35,6 @@ public class ConstraintStandardFeeRateCalculation {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Fee1 Fee1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "StandardFeeRateCalculation"</li>
 	 * <li>
@@ -46,6 +42,10 @@ public class ConstraintStandardFeeRateCalculation {
 	 * definition} =
 	 * "If StandardRate, RequestedRate and DiscountDetails/Rate are all present, then StandardRate minus DiscountDetails/Rate must equal RequestedRate."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Fee1> forFee1 = new MMConstraint<Fee1>() {

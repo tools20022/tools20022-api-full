@@ -67,16 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "StressLiquidResourceRequirementAmount1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Assumed obligations that are required to be met in cash under a hypothetical stress scenario."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -108,10 +108,6 @@ public class StressLiquidResourceRequirementAmount1 {
 	 * StressLiquidResourceRequirementAmount1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OprlOutflwAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OperationalOutflowAmount"</li>
 	 * <li>
@@ -119,6 +115,10 @@ public class StressLiquidResourceRequirementAmount1 {
 	 * definition} =
 	 * "Liquidity needs arising from ‘operational’ procedures over the stress horizon. This includes (but is not necessarily limited to) repayment of excess cash collateral to members, cash to non‐cash collateral substitutions by members, reductions in margin requirements and related cash collateral and provision of liquidity to facilitate settlement / delivery for non‐defaulting members."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<StressLiquidResourceRequirementAmount1, ActiveCurrencyAndAmount> mmOperationalOutflowAmount = new MMMessageAttribute<StressLiquidResourceRequirementAmount1, ActiveCurrencyAndAmount>() {
@@ -169,10 +169,6 @@ public class StressLiquidResourceRequirementAmount1 {
 	 * StressLiquidResourceRequirementAmount1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "VartnMrgnPmtOblgtnAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "VariationMarginPaymentObligationAmount"</li>
 	 * <li>
@@ -180,6 +176,10 @@ public class StressLiquidResourceRequirementAmount1 {
 	 * definition} =
 	 * "Variation margin payment obligation of the CCP that is modelled to arise due to the default of CM1 and CM2 over the stress horizon.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<StressLiquidResourceRequirementAmount1, ActiveCurrencyAndAmount> mmVariationMarginPaymentObligationAmount = new MMMessageAttribute<StressLiquidResourceRequirementAmount1, ActiveCurrencyAndAmount>() {
@@ -230,10 +230,6 @@ public class StressLiquidResourceRequirementAmount1 {
 	 * StressLiquidResourceRequirementAmount1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SttlmOrDlvryAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SettlementOrDeliveryAmount"</li>
 	 * <li>
@@ -241,6 +237,10 @@ public class StressLiquidResourceRequirementAmount1 {
 	 * definition} =
 	 * "Liquidity needed by the CCP to fulfil the settlement/delivery obligations arising from the cleared trades of defaulting CM1 and CM2.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<StressLiquidResourceRequirementAmount1, ActiveCurrencyAndAmount> mmSettlementOrDeliveryAmount = new MMMessageAttribute<StressLiquidResourceRequirementAmount1, ActiveCurrencyAndAmount>() {
@@ -286,10 +286,6 @@ public class StressLiquidResourceRequirementAmount1 {
 	 * StressLiquidResourceRequirementAmount1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OthrAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OtherAmount"</li>
 	 * <li>
@@ -297,6 +293,10 @@ public class StressLiquidResourceRequirementAmount1 {
 	 * definition} =
 	 * "Specifies the other liquidity requirements not captured elsewhere. \r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<StressLiquidResourceRequirementAmount1, ActiveCurrencyAndAmount> mmOtherAmount = new MMMessageAttribute<StressLiquidResourceRequirementAmount1, ActiveCurrencyAndAmount>() {

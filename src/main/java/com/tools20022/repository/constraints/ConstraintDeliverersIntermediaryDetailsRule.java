@@ -37,10 +37,6 @@ public class ConstraintDeliverersIntermediaryDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DeliverInformation9
 	 * DeliverInformation9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DeliverersIntermediaryDetailsRule"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintDeliverersIntermediaryDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -80,10 +80,6 @@ public class ConstraintDeliverersIntermediaryDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DeliverInformation12
 	 * DeliverInformation12}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DeliverersIntermediaryDetailsRule"</li>
 	 * <li>
@@ -91,6 +87,10 @@ public class ConstraintDeliverersIntermediaryDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -129,10 +129,6 @@ public class ConstraintDeliverersIntermediaryDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DeliverInformation1
 	 * DeliverInformation1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DeliverersIntermediaryDetailsRule"</li>
 	 * <li>
@@ -140,6 +136,10 @@ public class ConstraintDeliverersIntermediaryDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<DeliverInformation1> forDeliverInformation1 = new MMConstraint<DeliverInformation1>() {
@@ -163,10 +163,6 @@ public class ConstraintDeliverersIntermediaryDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DeliverInformation19
 	 * DeliverInformation19}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DeliverersIntermediaryDetailsRule"</li>
 	 * <li>
@@ -174,6 +170,10 @@ public class ConstraintDeliverersIntermediaryDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -203,10 +203,6 @@ public class ConstraintDeliverersIntermediaryDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DeliverInformation11
 	 * DeliverInformation11}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DeliverersIntermediaryDetailsRule"</li>
 	 * <li>
@@ -214,6 +210,10 @@ public class ConstraintDeliverersIntermediaryDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -246,10 +246,6 @@ public class ConstraintDeliverersIntermediaryDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DeliverInformation7
 	 * DeliverInformation7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DeliverersIntermediaryDetailsRule"</li>
 	 * <li>
@@ -257,6 +253,10 @@ public class ConstraintDeliverersIntermediaryDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<DeliverInformation7> forDeliverInformation7 = new MMConstraint<DeliverInformation7>() {
@@ -280,10 +280,6 @@ public class ConstraintDeliverersIntermediaryDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DeliverInformation15
 	 * DeliverInformation15}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DeliverersIntermediaryDetailsRule"</li>
 	 * <li>
@@ -291,6 +287,10 @@ public class ConstraintDeliverersIntermediaryDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -329,10 +329,6 @@ public class ConstraintDeliverersIntermediaryDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DeliverInformation16
 	 * DeliverInformation16}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DeliverersIntermediaryDetailsRule"</li>
 	 * <li>
@@ -340,6 +336,10 @@ public class ConstraintDeliverersIntermediaryDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -378,10 +378,6 @@ public class ConstraintDeliverersIntermediaryDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DeliverInformation2
 	 * DeliverInformation2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DeliverersIntermediaryDetailsRule"</li>
 	 * <li>
@@ -389,6 +385,10 @@ public class ConstraintDeliverersIntermediaryDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<DeliverInformation2> forDeliverInformation2 = new MMConstraint<DeliverInformation2>() {
@@ -412,10 +412,6 @@ public class ConstraintDeliverersIntermediaryDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DeliverInformation4
 	 * DeliverInformation4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DeliverersIntermediaryDetailsRule"</li>
 	 * <li>
@@ -423,6 +419,10 @@ public class ConstraintDeliverersIntermediaryDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<DeliverInformation4> forDeliverInformation4 = new MMConstraint<DeliverInformation4>() {
@@ -446,10 +446,6 @@ public class ConstraintDeliverersIntermediaryDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DeliverInformation13
 	 * DeliverInformation13}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DeliverersIntermediaryDetailsRule"</li>
 	 * <li>
@@ -457,6 +453,10 @@ public class ConstraintDeliverersIntermediaryDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -495,10 +495,6 @@ public class ConstraintDeliverersIntermediaryDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DeliverInformation8
 	 * DeliverInformation8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DeliverersIntermediaryDetailsRule"</li>
 	 * <li>
@@ -506,6 +502,10 @@ public class ConstraintDeliverersIntermediaryDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<DeliverInformation8> forDeliverInformation8 = new MMConstraint<DeliverInformation8>() {
@@ -529,10 +529,6 @@ public class ConstraintDeliverersIntermediaryDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DeliverInformation3
 	 * DeliverInformation3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DeliverersIntermediaryDetailsRule"</li>
 	 * <li>
@@ -540,6 +536,10 @@ public class ConstraintDeliverersIntermediaryDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<DeliverInformation3> forDeliverInformation3 = new MMConstraint<DeliverInformation3>() {
@@ -563,10 +563,6 @@ public class ConstraintDeliverersIntermediaryDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DeliverInformation14
 	 * DeliverInformation14}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DeliverersIntermediaryDetailsRule"</li>
 	 * <li>
@@ -574,6 +570,10 @@ public class ConstraintDeliverersIntermediaryDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -612,10 +612,6 @@ public class ConstraintDeliverersIntermediaryDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DeliverInformation17
 	 * DeliverInformation17}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DeliverersIntermediaryDetailsRule"</li>
 	 * <li>
@@ -623,6 +619,10 @@ public class ConstraintDeliverersIntermediaryDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -661,10 +661,6 @@ public class ConstraintDeliverersIntermediaryDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DeliverInformation18
 	 * DeliverInformation18}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DeliverersIntermediaryDetailsRule"</li>
 	 * <li>
@@ -672,6 +668,10 @@ public class ConstraintDeliverersIntermediaryDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -701,10 +701,6 @@ public class ConstraintDeliverersIntermediaryDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DeliverInformation6
 	 * DeliverInformation6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DeliverersIntermediaryDetailsRule"</li>
 	 * <li>
@@ -712,6 +708,10 @@ public class ConstraintDeliverersIntermediaryDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<DeliverInformation6> forDeliverInformation6 = new MMConstraint<DeliverInformation6>() {
@@ -735,10 +735,6 @@ public class ConstraintDeliverersIntermediaryDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DeliverInformation5
 	 * DeliverInformation5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DeliverersIntermediaryDetailsRule"</li>
 	 * <li>
@@ -746,6 +742,10 @@ public class ConstraintDeliverersIntermediaryDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersIntermediaryDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<DeliverInformation5> forDeliverInformation5 = new MMConstraint<DeliverInformation5>() {

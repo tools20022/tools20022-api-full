@@ -44,10 +44,6 @@ public class ConstraintTransactionCreditDebitIndicatorRule {
 	 * expression} =
 	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;OR&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/AccountEntry/Entry/Amount&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/Payment/InstructedAmount&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/Payment/InterbankSettlementAmount&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/CreditDebitIndicator&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TransactionCreditDebitIndicatorRule"</li>
 	 * <li>
@@ -55,6 +51,10 @@ public class ConstraintTransactionCreditDebitIndicatorRule {
 	 * definition} =
 	 * "If CreditDebitIndicator is present, then AccountEntry/Entry/Amount or Payment/InstructedAmount or Payment/InterbankSettlementAmount must be present.\r\nIf CreditDebitIndicator is not present, then any Message Elements in the list (AccountEntry/Entry/Amount, Payment/InstructedAmount, Payment/InterbankSettlementAmount) is optional.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -97,10 +97,6 @@ public class ConstraintTransactionCreditDebitIndicatorRule {
 	 * expression} =
 	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;OR&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/AccountEntry/Entry/Amount&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/Payment/InstructedAmount&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/Payment/InterbankSettlementAmount&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/CreditDebitIndicator&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TransactionCreditDebitIndicatorRule"</li>
 	 * <li>
@@ -108,6 +104,10 @@ public class ConstraintTransactionCreditDebitIndicatorRule {
 	 * definition} =
 	 * "If CreditDebitIndicator is present, then AccountEntry/Entry/Amount or Payment/InstructedAmount or Payment/InterbankSettlementAmount must be present.\r\nIf CreditDebitIndicator is not present, then any Message Elements in the list (AccountEntry/Entry/Amount, Payment/InstructedAmount, Payment/InterbankSettlementAmount) is optional.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -137,10 +137,6 @@ public class ConstraintTransactionCreditDebitIndicatorRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Transaction4 Transaction4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TransactionCreditDebitIndicatorRule"</li>
 	 * <li>
@@ -148,6 +144,10 @@ public class ConstraintTransactionCreditDebitIndicatorRule {
 	 * definition} =
 	 * "If CreditDebitIndicator is present, then at least one or more Message Elements in the list (AccountEntry/EntryAmount, Payment/InstructedAmount, Payment/InterbankSettlementAmount) must be present.\nIf CreditDebitIndicator is not present, then any Message Elements in the list (AccountEntry/EntryAmount, Payment/InstructedAmount, Payment/InterbankSettlementAmount) is optional."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Transaction4> forTransaction4 = new MMConstraint<Transaction4>() {
@@ -174,10 +174,6 @@ public class ConstraintTransactionCreditDebitIndicatorRule {
 	 * expression} =
 	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;OR&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/AccountEntry/Entry/Amount&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/Payment/InstructedAmount&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/Payment/InterbankSettlementAmount&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/CreditDebitIndicator&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TransactionCreditDebitIndicatorRule"</li>
 	 * <li>
@@ -185,6 +181,10 @@ public class ConstraintTransactionCreditDebitIndicatorRule {
 	 * definition} =
 	 * "If CreditDebitIndicator is present, then AccountEntry/Entry/Amount or Payment/InstructedAmount or Payment/InterbankSettlementAmount must be present.\r\nIf CreditDebitIndicator is not present, then any Message Elements in the list (AccountEntry/Entry/Amount, Payment/InstructedAmount, Payment/InterbankSettlementAmount) is optional.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -217,10 +217,6 @@ public class ConstraintTransactionCreditDebitIndicatorRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Transaction3 Transaction3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TransactionCreditDebitIndicatorRule"</li>
 	 * <li>
@@ -228,6 +224,10 @@ public class ConstraintTransactionCreditDebitIndicatorRule {
 	 * definition} =
 	 * "If CreditDebitIndicator is present, then at least one or more Message Elements in the list (AccountEntry/EntryAmount, Payment/InstructedAmount, Payment/InterbankSettlementAmount) must be present.\nIf CreditDebitIndicator is not present, then any Message Elements in the list (AccountEntry/EntryAmount, Payment/InstructedAmount, Payment/InterbankSettlementAmount) is optional.\n."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Transaction3> forTransaction3 = new MMConstraint<Transaction3>() {
@@ -250,10 +250,6 @@ public class ConstraintTransactionCreditDebitIndicatorRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Transaction5 Transaction5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TransactionCreditDebitIndicatorRule"</li>
 	 * <li>
@@ -261,6 +257,10 @@ public class ConstraintTransactionCreditDebitIndicatorRule {
 	 * definition} =
 	 * "If CreditDebitIndicator is present, then at least one or more Message Elements in the list (AccountEntry/EntryAmount, Payment/InstructedAmount, Payment/InterbankSettlementAmount) must be present.\nIf CreditDebitIndicator is not present, then any Message Elements in the list (AccountEntry/EntryAmount, Payment/InstructedAmount, Payment/InterbankSettlementAmount) is optional."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Transaction5> forTransaction5 = new MMConstraint<Transaction5>() {

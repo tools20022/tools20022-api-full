@@ -39,10 +39,6 @@ public class ConstraintNarrativeDescriptionRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.BeneficiaryCertificationType4Choice
 	 * BeneficiaryCertificationType4Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NarrativeDescriptionRule"</li>
 	 * <li>
@@ -50,6 +46,10 @@ public class ConstraintNarrativeDescriptionRule {
 	 * definition} =
 	 * "Code/NarrativeDescription shall only be used when all the other code possibilities are not appropriate."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<BeneficiaryCertificationType4Choice> forBeneficiaryCertificationType4Choice = new MMConstraint<BeneficiaryCertificationType4Choice>() {
@@ -73,10 +73,6 @@ public class ConstraintNarrativeDescriptionRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.BeneficiaryCertificationType2Choice
 	 * BeneficiaryCertificationType2Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NarrativeDescriptionRule"</li>
 	 * <li>
@@ -84,6 +80,10 @@ public class ConstraintNarrativeDescriptionRule {
 	 * definition} =
 	 * "Code/NarrativeDescription shall only be used when all the other code possibilities are not appropriate."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<BeneficiaryCertificationType2Choice> forBeneficiaryCertificationType2Choice = new MMConstraint<BeneficiaryCertificationType2Choice>() {
@@ -107,10 +107,6 @@ public class ConstraintNarrativeDescriptionRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.BeneficiaryCertificationType3Choice
 	 * BeneficiaryCertificationType3Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NarrativeDescriptionRule"</li>
 	 * <li>
@@ -118,6 +114,10 @@ public class ConstraintNarrativeDescriptionRule {
 	 * definition} =
 	 * "Code/NarrativeDescription shall only be used when all the other code possibilities are not appropriate."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<BeneficiaryCertificationType3Choice> forBeneficiaryCertificationType3Choice = new MMConstraint<BeneficiaryCertificationType3Choice>() {
@@ -141,10 +141,6 @@ public class ConstraintNarrativeDescriptionRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.BeneficiaryCertificationType1Choice
 	 * BeneficiaryCertificationType1Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NarrativeDescriptionRule"</li>
 	 * <li>
@@ -152,6 +148,10 @@ public class ConstraintNarrativeDescriptionRule {
 	 * definition} =
 	 * "Code/NarrativeDescription shall only be used when all the other code possibilities are not appropriate."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<BeneficiaryCertificationType1Choice> forBeneficiaryCertificationType1Choice = new MMConstraint<BeneficiaryCertificationType1Choice>() {

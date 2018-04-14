@@ -41,10 +41,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation16
 	 * CorporateActionGeneralInformation16}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -52,6 +48,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation16> forCorporateActionGeneralInformation16 = new MMConstraint<CorporateActionGeneralInformation16>() {
@@ -75,10 +75,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType54Choice
 	 * CorporateActionEventType54Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -86,6 +82,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "If Code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -124,10 +124,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation21
 	 * CorporateActionGeneralInformation21}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -135,6 +131,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation21> forCorporateActionGeneralInformation21 = new MMConstraint<CorporateActionGeneralInformation21>() {
@@ -158,10 +158,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType22Choice
 	 * CorporateActionEventType22Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -169,6 +165,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "If code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \n\nIf code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \n\nIf code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionEventType22Choice> forCorporateActionEventType22Choice = new MMConstraint<CorporateActionEventType22Choice>() {
@@ -192,10 +192,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation34
 	 * CorporateActionGeneralInformation34}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -203,6 +199,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation34> forCorporateActionGeneralInformation34 = new MMConstraint<CorporateActionGeneralInformation34>() {
@@ -226,10 +226,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation31
 	 * CorporateActionGeneralInformation31}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -237,6 +233,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation31> forCorporateActionGeneralInformation31 = new MMConstraint<CorporateActionGeneralInformation31>() {
@@ -260,10 +260,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation70
 	 * CorporateActionGeneralInformation70}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -271,6 +267,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -309,10 +309,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation41
 	 * CorporateActionGeneralInformation41}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -320,6 +316,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation41> forCorporateActionGeneralInformation41 = new MMConstraint<CorporateActionGeneralInformation41>() {
@@ -343,10 +343,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType34Choice
 	 * CorporateActionEventType34Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -354,6 +350,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "If Code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -392,10 +392,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation4
 	 * CorporateActionGeneralInformation4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -403,6 +399,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation4> forCorporateActionGeneralInformation4 = new MMConstraint<CorporateActionGeneralInformation4>() {
@@ -426,10 +426,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation22
 	 * CorporateActionGeneralInformation22}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -437,6 +433,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation22> forCorporateActionGeneralInformation22 = new MMConstraint<CorporateActionGeneralInformation22>() {
@@ -460,10 +460,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType6Choice
 	 * CorporateActionEventType6Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -471,6 +467,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "If code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \n\nIf code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \n\nIf code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionEventType6Choice> forCorporateActionEventType6Choice = new MMConstraint<CorporateActionEventType6Choice>() {
@@ -494,10 +494,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation42
 	 * CorporateActionGeneralInformation42}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -505,6 +501,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation42> forCorporateActionGeneralInformation42 = new MMConstraint<CorporateActionGeneralInformation42>() {
@@ -528,10 +528,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType71Choice
 	 * CorporateActionEventType71Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -539,6 +535,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "The use of a specific corporate action event type code is allowed only if this specific event triggers a securities movement as per the Event Interpretation Grid published by the Securities Market Practice Group (SMPG).\r\nThe corporate action event indicator code OTHR must only be used in case no other corporate action event code is appropriate.\r\nThe corporate action event indicator code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change.\r\nThe corporate action event indicator code REDM must only be used when the redemption is decided by the issuer and not by the holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionEventType71Choice> forCorporateActionEventType71Choice = new MMConstraint<CorporateActionEventType71Choice>() {
@@ -562,10 +562,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation47
 	 * CorporateActionGeneralInformation47}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -573,6 +569,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation47> forCorporateActionGeneralInformation47 = new MMConstraint<CorporateActionGeneralInformation47>() {
@@ -596,10 +596,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType57Choice
 	 * CorporateActionEventType57Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -607,6 +603,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "If Code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionEventType57Choice> forCorporateActionEventType57Choice = new MMConstraint<CorporateActionEventType57Choice>() {
@@ -630,10 +630,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType29Choice
 	 * CorporateActionEventType29Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -641,6 +637,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "If code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \n\nIf code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \n\nIf code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -670,10 +670,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType36Choice
 	 * CorporateActionEventType36Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -681,6 +677,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "If Code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionEventType36Choice> forCorporateActionEventType36Choice = new MMConstraint<CorporateActionEventType36Choice>() {
@@ -704,10 +704,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation83
 	 * CorporateActionGeneralInformation83}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -715,6 +711,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation83> forCorporateActionGeneralInformation83 = new MMConstraint<CorporateActionGeneralInformation83>() {
@@ -738,10 +738,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation51
 	 * CorporateActionGeneralInformation51}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -749,6 +745,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -781,10 +781,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType79Choice
 	 * CorporateActionEventType79Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -792,6 +788,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "If Code is present, the code OTHR (Other) must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN (Change) must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM (Final Maturity) must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionEventType79Choice> forCorporateActionEventType79Choice = new MMConstraint<CorporateActionEventType79Choice>() {
@@ -815,10 +815,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation121
 	 * CorporateActionGeneralInformation121}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -826,6 +822,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation121> forCorporateActionGeneralInformation121 = new MMConstraint<CorporateActionGeneralInformation121>() {
@@ -849,10 +849,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation103
 	 * CorporateActionGeneralInformation103}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -860,6 +856,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation103> forCorporateActionGeneralInformation103 = new MMConstraint<CorporateActionGeneralInformation103>() {
@@ -883,10 +883,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType53Choice
 	 * CorporateActionEventType53Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -894,6 +890,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "If Code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -932,10 +932,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType27Choice
 	 * CorporateActionEventType27Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -943,6 +939,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "If code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \n\nIf code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \n\nIf code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionEventType27Choice> forCorporateActionEventType27Choice = new MMConstraint<CorporateActionEventType27Choice>() {
@@ -966,10 +966,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation91
 	 * CorporateActionGeneralInformation91}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -977,6 +973,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1015,10 +1015,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType74Choice
 	 * CorporateActionEventType74Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -1026,6 +1022,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "If Code is present, the code OTHR (Other) must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN (Change) must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM (Final Maturity) must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1055,10 +1055,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation76
 	 * CorporateActionGeneralInformation76}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -1066,6 +1062,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation76> forCorporateActionGeneralInformation76 = new MMConstraint<CorporateActionGeneralInformation76>() {
@@ -1089,10 +1089,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType75Choice
 	 * CorporateActionEventType75Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -1100,6 +1096,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "If Code is present, the code OTHR (Other) must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN (Change) must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM (Final Maturity) must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1129,10 +1129,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation98
 	 * CorporateActionGeneralInformation98}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -1140,6 +1136,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation98> forCorporateActionGeneralInformation98 = new MMConstraint<CorporateActionGeneralInformation98>() {
@@ -1163,10 +1163,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation114
 	 * CorporateActionGeneralInformation114}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -1174,6 +1170,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation114> forCorporateActionGeneralInformation114 = new MMConstraint<CorporateActionGeneralInformation114>() {
@@ -1197,10 +1197,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation115
 	 * CorporateActionGeneralInformation115}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -1208,6 +1204,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation115> forCorporateActionGeneralInformation115 = new MMConstraint<CorporateActionGeneralInformation115>() {
@@ -1231,10 +1231,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType4Choice
 	 * CorporateActionEventType4Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -1242,6 +1238,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "If code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \n\nIf code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \n\nIf code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionEventType4Choice> forCorporateActionEventType4Choice = new MMConstraint<CorporateActionEventType4Choice>() {
@@ -1265,10 +1265,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType61Choice
 	 * CorporateActionEventType61Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -1276,6 +1272,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "If Code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionEventType61Choice> forCorporateActionEventType61Choice = new MMConstraint<CorporateActionEventType61Choice>() {
@@ -1299,10 +1299,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType12Choice
 	 * CorporateActionEventType12Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -1310,6 +1306,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "If code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \n\nIf code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \n\nIf code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1342,10 +1342,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation37
 	 * CorporateActionGeneralInformation37}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -1353,6 +1349,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation37> forCorporateActionGeneralInformation37 = new MMConstraint<CorporateActionGeneralInformation37>() {
@@ -1376,10 +1376,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation12
 	 * CorporateActionGeneralInformation12}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -1387,6 +1383,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation12> forCorporateActionGeneralInformation12 = new MMConstraint<CorporateActionGeneralInformation12>() {
@@ -1410,10 +1410,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation55
 	 * CorporateActionGeneralInformation55}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -1421,6 +1417,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1453,10 +1453,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation107
 	 * CorporateActionGeneralInformation107}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -1464,6 +1460,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1493,10 +1493,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation28
 	 * CorporateActionGeneralInformation28}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -1504,6 +1500,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation28> forCorporateActionGeneralInformation28 = new MMConstraint<CorporateActionGeneralInformation28>() {
@@ -1527,10 +1527,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation15
 	 * CorporateActionGeneralInformation15}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -1538,6 +1534,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation15> forCorporateActionGeneralInformation15 = new MMConstraint<CorporateActionGeneralInformation15>() {
@@ -1561,10 +1561,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType28Choice
 	 * CorporateActionEventType28Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -1572,6 +1568,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "If code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \n\nIf code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \n\nIf code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionEventType28Choice> forCorporateActionEventType28Choice = new MMConstraint<CorporateActionEventType28Choice>() {
@@ -1595,10 +1595,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType15Choice
 	 * CorporateActionEventType15Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -1606,6 +1602,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "The use of a specific corporate action event type code is allowed only if this specific event triggers a securities movement as per the Event Interpretation Grid published by the Securities Market Practice Group (SMPG).\r\nThe corporate action event indicator code OTHR must only be used in case no other corporate action event code is appropriate.\r\nThe corporate action event indicator code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change.\r\nThe corporate action event indicator code REDM must only be used when the redemption is decided by the issuer and not by the holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1638,10 +1638,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation44
 	 * CorporateActionGeneralInformation44}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -1649,6 +1645,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation44> forCorporateActionGeneralInformation44 = new MMConstraint<CorporateActionGeneralInformation44>() {
@@ -1672,10 +1672,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType19Choice
 	 * CorporateActionEventType19Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -1683,6 +1679,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "The use of a specific corporate action event type code is allowed only if this specific event triggers a securities movement as per the Event Interpretation Grid published by the Securities Market Practice Group (SMPG).\r\nThe corporate action event indicator code OTHR must only be used in case no other corporate action event code is appropriate.\r\nThe corporate action event indicator code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change.\r\nThe corporate action event indicator code REDM must only be used when the redemption is decided by the issuer and not by the holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionEventType19Choice> forCorporateActionEventType19Choice = new MMConstraint<CorporateActionEventType19Choice>() {
@@ -1706,10 +1706,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation24
 	 * CorporateActionGeneralInformation24}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -1717,6 +1713,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation24> forCorporateActionGeneralInformation24 = new MMConstraint<CorporateActionGeneralInformation24>() {
@@ -1740,10 +1740,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation36
 	 * CorporateActionGeneralInformation36}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -1751,6 +1747,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation36> forCorporateActionGeneralInformation36 = new MMConstraint<CorporateActionGeneralInformation36>() {
@@ -1774,10 +1774,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation6
 	 * CorporateActionGeneralInformation6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -1785,6 +1781,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation6> forCorporateActionGeneralInformation6 = new MMConstraint<CorporateActionGeneralInformation6>() {
@@ -1808,10 +1808,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation26
 	 * CorporateActionGeneralInformation26}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -1819,6 +1815,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation26> forCorporateActionGeneralInformation26 = new MMConstraint<CorporateActionGeneralInformation26>() {
@@ -1842,10 +1842,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType58Choice
 	 * CorporateActionEventType58Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -1853,6 +1849,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "If Code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionEventType58Choice> forCorporateActionEventType58Choice = new MMConstraint<CorporateActionEventType58Choice>() {
@@ -1876,10 +1876,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType31Choice
 	 * CorporateActionEventType31Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -1887,6 +1883,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "If Code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1925,10 +1925,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation77
 	 * CorporateActionGeneralInformation77}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -1936,6 +1932,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation77> forCorporateActionGeneralInformation77 = new MMConstraint<CorporateActionGeneralInformation77>() {
@@ -1959,10 +1959,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType3Choice
 	 * CorporateActionEventType3Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -1970,6 +1966,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "If code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \n\nIf code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \n\nIf code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionEventType3Choice> forCorporateActionEventType3Choice = new MMConstraint<CorporateActionEventType3Choice>() {
@@ -1993,10 +1993,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType69Choice
 	 * CorporateActionEventType69Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -2004,6 +2000,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "If code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \n\nIf code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \n\nIf code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionEventType69Choice> forCorporateActionEventType69Choice = new MMConstraint<CorporateActionEventType69Choice>() {
@@ -2027,10 +2027,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation110
 	 * CorporateActionGeneralInformation110}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -2038,6 +2034,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2067,10 +2067,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType30Choice
 	 * CorporateActionEventType30Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -2078,6 +2074,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "The use of a specific corporate action event type code is allowed only if this specific event triggers a securities movement as per the Event Interpretation Grid published by the Securities Market Practice Group (SMPG).\r\nThe corporate action event indicator code OTHR must only be used in case no other corporate action event code is appropriate.\r\nThe corporate action event indicator code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change.\r\nThe corporate action event indicator code REDM must only be used when the redemption is decided by the issuer and not by the holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -2116,10 +2116,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation104
 	 * CorporateActionGeneralInformation104}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -2127,6 +2123,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation104> forCorporateActionGeneralInformation104 = new MMConstraint<CorporateActionGeneralInformation104>() {
@@ -2150,10 +2150,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation33
 	 * CorporateActionGeneralInformation33}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -2161,6 +2157,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation33> forCorporateActionGeneralInformation33 = new MMConstraint<CorporateActionGeneralInformation33>() {
@@ -2184,10 +2184,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType7Choice
 	 * CorporateActionEventType7Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -2195,6 +2191,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "If code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \n\nIf code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \n\nIf code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionEventType7Choice> forCorporateActionEventType7Choice = new MMConstraint<CorporateActionEventType7Choice>() {
@@ -2218,10 +2218,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType50Choice
 	 * CorporateActionEventType50Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -2229,6 +2225,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "If Code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionEventType50Choice> forCorporateActionEventType50Choice = new MMConstraint<CorporateActionEventType50Choice>() {
@@ -2252,10 +2252,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType32Choice
 	 * CorporateActionEventType32Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -2263,6 +2259,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "If Code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -2301,10 +2301,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType51Choice
 	 * CorporateActionEventType51Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -2312,6 +2308,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "If Code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -2350,10 +2350,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation105
 	 * CorporateActionGeneralInformation105}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -2361,6 +2357,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2390,10 +2390,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation111
 	 * CorporateActionGeneralInformation111}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -2401,6 +2397,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2430,10 +2430,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType17Choice
 	 * CorporateActionEventType17Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -2441,6 +2437,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "If code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \n\nIf code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \n\nIf code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionEventType17Choice> forCorporateActionEventType17Choice = new MMConstraint<CorporateActionEventType17Choice>() {
@@ -2464,10 +2464,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation9
 	 * CorporateActionGeneralInformation9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -2475,6 +2471,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation9> forCorporateActionGeneralInformation9 = new MMConstraint<CorporateActionGeneralInformation9>() {
@@ -2498,10 +2498,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation88
 	 * CorporateActionGeneralInformation88}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -2509,6 +2505,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -2547,10 +2547,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation109
 	 * CorporateActionGeneralInformation109}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -2558,6 +2554,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2587,10 +2587,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation89
 	 * CorporateActionGeneralInformation89}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -2598,6 +2594,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -2636,10 +2636,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation90
 	 * CorporateActionGeneralInformation90}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -2647,6 +2643,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -2685,10 +2685,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation50
 	 * CorporateActionGeneralInformation50}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -2696,6 +2692,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -2728,10 +2728,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType35Choice
 	 * CorporateActionEventType35Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -2739,6 +2735,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "If Code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionEventType35Choice> forCorporateActionEventType35Choice = new MMConstraint<CorporateActionEventType35Choice>() {
@@ -2762,10 +2762,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation52
 	 * CorporateActionGeneralInformation52}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -2773,6 +2769,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -2805,10 +2805,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType11Choice
 	 * CorporateActionEventType11Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -2816,6 +2812,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "If code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \n\nIf code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \n\nIf code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -2848,10 +2848,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation11
 	 * CorporateActionGeneralInformation11}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -2859,6 +2855,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation11> forCorporateActionGeneralInformation11 = new MMConstraint<CorporateActionGeneralInformation11>() {
@@ -2882,10 +2882,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation29
 	 * CorporateActionGeneralInformation29}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -2893,6 +2889,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation29> forCorporateActionGeneralInformation29 = new MMConstraint<CorporateActionGeneralInformation29>() {
@@ -2916,10 +2916,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType83Choice
 	 * CorporateActionEventType83Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -2927,6 +2923,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "The use of a specific corporate action event type code is allowed only if this specific event triggers a securities movement as per the Event Interpretation Grid published by the Securities Market Practice Group (SMPG).\r\n\r\nThe corporate action event indicator code OTHR must only be used in case no other corporate action event code is appropriate.\r\n\r\nThe corporate action event indicator code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change.\r\n\r\nThe corporate action event indicator code REDM must only be used when the redemption is decided by the issuer and not by the holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionEventType83Choice> forCorporateActionEventType83Choice = new MMConstraint<CorporateActionEventType83Choice>() {
@@ -2950,10 +2950,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType73Choice
 	 * CorporateActionEventType73Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -2961,6 +2957,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "The use of a specific corporate action event type code is allowed only if this specific event triggers a securities movement as per the Event Interpretation Grid published by the Securities Market Practice Group (SMPG).\r\nThe corporate action event indicator code OTHR must only be used in case no other corporate action event code is appropriate.\r\nThe corporate action event indicator code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change.\r\nThe corporate action event indicator code REDM must only be used when the redemption is decided by the issuer and not by the holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2990,10 +2990,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType62Choice
 	 * CorporateActionEventType62Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -3001,6 +2997,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "If Code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionEventType62Choice> forCorporateActionEventType62Choice = new MMConstraint<CorporateActionEventType62Choice>() {
@@ -3024,10 +3024,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation39
 	 * CorporateActionGeneralInformation39}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -3035,6 +3031,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation39> forCorporateActionGeneralInformation39 = new MMConstraint<CorporateActionGeneralInformation39>() {
@@ -3058,10 +3058,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation27
 	 * CorporateActionGeneralInformation27}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -3069,6 +3065,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation27> forCorporateActionGeneralInformation27 = new MMConstraint<CorporateActionGeneralInformation27>() {
@@ -3092,10 +3092,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType41Choice
 	 * CorporateActionEventType41Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -3103,6 +3099,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "If Code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionEventType41Choice> forCorporateActionEventType41Choice = new MMConstraint<CorporateActionEventType41Choice>() {
@@ -3126,10 +3126,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation61
 	 * CorporateActionGeneralInformation61}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -3137,6 +3133,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation61> forCorporateActionGeneralInformation61 = new MMConstraint<CorporateActionGeneralInformation61>() {
@@ -3160,10 +3160,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation68
 	 * CorporateActionGeneralInformation68}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -3171,6 +3167,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation68> forCorporateActionGeneralInformation68 = new MMConstraint<CorporateActionGeneralInformation68>() {
@@ -3194,10 +3194,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType42Choice
 	 * CorporateActionEventType42Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -3205,6 +3201,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "If Code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionEventType42Choice> forCorporateActionEventType42Choice = new MMConstraint<CorporateActionEventType42Choice>() {
@@ -3228,10 +3228,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation49
 	 * CorporateActionGeneralInformation49}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -3239,6 +3235,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -3271,10 +3271,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType16Choice
 	 * CorporateActionEventType16Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -3282,6 +3278,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "If code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \n\nIf code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \n\nIf code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -3314,10 +3314,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation118
 	 * CorporateActionGeneralInformation118}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -3325,6 +3321,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation118> forCorporateActionGeneralInformation118 = new MMConstraint<CorporateActionGeneralInformation118>() {
@@ -3348,10 +3348,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation113
 	 * CorporateActionGeneralInformation113}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -3359,6 +3355,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation113> forCorporateActionGeneralInformation113 = new MMConstraint<CorporateActionGeneralInformation113>() {
@@ -3382,10 +3382,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType77Choice
 	 * CorporateActionEventType77Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -3393,6 +3389,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "If Code is present, the code OTHR (Other) must only be used if no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN (Change) must only be used if no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM (Final Maturity) must only be used if the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionEventType77Choice> forCorporateActionEventType77Choice = new MMConstraint<CorporateActionEventType77Choice>() {
@@ -3416,10 +3416,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation13
 	 * CorporateActionGeneralInformation13}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -3427,6 +3423,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation13> forCorporateActionGeneralInformation13 = new MMConstraint<CorporateActionGeneralInformation13>() {
@@ -3450,10 +3450,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType5Choice
 	 * CorporateActionEventType5Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -3461,6 +3457,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "If code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \n\nIf code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \n\nIf code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionEventType5Choice> forCorporateActionEventType5Choice = new MMConstraint<CorporateActionEventType5Choice>() {
@@ -3484,10 +3484,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType33Choice
 	 * CorporateActionEventType33Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -3495,6 +3491,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "If Code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -3533,10 +3533,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType13Choice
 	 * CorporateActionEventType13Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -3544,6 +3540,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "If code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \n\nIf code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \n\nIf code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -3576,10 +3576,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType21Choice
 	 * CorporateActionEventType21Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -3587,6 +3583,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "If code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \n\nIf code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \n\nIf code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionEventType21Choice> forCorporateActionEventType21Choice = new MMConstraint<CorporateActionEventType21Choice>() {
@@ -3610,10 +3610,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType78Choice
 	 * CorporateActionEventType78Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -3621,6 +3617,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "If Code is present, the code OTHR (Other) must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN (Change) must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM (Final Maturity) must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionEventType78Choice> forCorporateActionEventType78Choice = new MMConstraint<CorporateActionEventType78Choice>() {
@@ -3644,10 +3644,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType9Choice
 	 * CorporateActionEventType9Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -3655,6 +3651,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "If code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \n\nIf code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \n\nIf code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionEventType9Choice> forCorporateActionEventType9Choice = new MMConstraint<CorporateActionEventType9Choice>() {
@@ -3678,10 +3678,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation7
 	 * CorporateActionGeneralInformation7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -3689,6 +3685,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation7> forCorporateActionGeneralInformation7 = new MMConstraint<CorporateActionGeneralInformation7>() {
@@ -3712,10 +3712,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation79
 	 * CorporateActionGeneralInformation79}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -3723,6 +3719,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -3761,10 +3761,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation97
 	 * CorporateActionGeneralInformation97}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -3772,6 +3768,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation97> forCorporateActionGeneralInformation97 = new MMConstraint<CorporateActionGeneralInformation97>() {
@@ -3795,10 +3795,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation62
 	 * CorporateActionGeneralInformation62}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -3806,6 +3802,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation62> forCorporateActionGeneralInformation62 = new MMConstraint<CorporateActionGeneralInformation62>() {
@@ -3829,10 +3829,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType14Choice
 	 * CorporateActionEventType14Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -3840,6 +3836,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "If code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \n\nIf code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \n\nIf code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -3872,10 +3872,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType10Choice
 	 * CorporateActionEventType10Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -3883,6 +3879,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "If code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \n\nIf code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \n\nIf code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionEventType10Choice> forCorporateActionEventType10Choice = new MMConstraint<CorporateActionEventType10Choice>() {
@@ -3906,10 +3906,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation45
 	 * CorporateActionGeneralInformation45}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -3917,6 +3913,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation45> forCorporateActionGeneralInformation45 = new MMConstraint<CorporateActionGeneralInformation45>() {
@@ -3940,10 +3940,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation14
 	 * CorporateActionGeneralInformation14}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -3951,6 +3947,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation14> forCorporateActionGeneralInformation14 = new MMConstraint<CorporateActionGeneralInformation14>() {
@@ -3974,10 +3974,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation19
 	 * CorporateActionGeneralInformation19}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -3985,6 +3981,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation19> forCorporateActionGeneralInformation19 = new MMConstraint<CorporateActionGeneralInformation19>() {
@@ -4008,10 +4008,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation85
 	 * CorporateActionGeneralInformation85}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -4019,6 +4015,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -4057,10 +4057,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation58
 	 * CorporateActionGeneralInformation58}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -4068,6 +4064,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation58> forCorporateActionGeneralInformation58 = new MMConstraint<CorporateActionGeneralInformation58>() {
@@ -4091,10 +4091,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation82
 	 * CorporateActionGeneralInformation82}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -4102,6 +4098,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation82> forCorporateActionGeneralInformation82 = new MMConstraint<CorporateActionGeneralInformation82>() {
@@ -4125,10 +4125,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType56Choice
 	 * CorporateActionEventType56Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -4136,6 +4132,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "The use of a specific corporate action event type code is allowed only if this specific event triggers a securities movement as per the Event Interpretation Grid published by the Securities Market Practice Group (SMPG).\r\nThe corporate action event indicator code OTHR must only be used in case no other corporate action event code is appropriate.\r\nThe corporate action event indicator code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change.\r\nThe corporate action event indicator code REDM must only be used when the redemption is decided by the issuer and not by the holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -4174,10 +4174,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType76Choice
 	 * CorporateActionEventType76Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -4185,6 +4181,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "If Code is present, the code OTHR (Other) must only be used if no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN (Change) must only be used if no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM (Final Maturity) must only be used if the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -4214,10 +4214,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation71
 	 * CorporateActionGeneralInformation71}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -4225,6 +4221,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -4263,10 +4263,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType46Choice
 	 * CorporateActionEventType46Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -4274,6 +4270,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "If code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \n\nIf code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \n\nIf code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionEventType46Choice> forCorporateActionEventType46Choice = new MMConstraint<CorporateActionEventType46Choice>() {
@@ -4297,10 +4297,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation94
 	 * CorporateActionGeneralInformation94}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -4308,6 +4304,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation94> forCorporateActionGeneralInformation94 = new MMConstraint<CorporateActionGeneralInformation94>() {
@@ -4331,10 +4331,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType48Choice
 	 * CorporateActionEventType48Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -4342,6 +4338,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "The use of a specific corporate action event type code is allowed only if this specific event triggers a securities movement as per the Event Interpretation Grid published by the Securities Market Practice Group (SMPG).\r\nThe corporate action event indicator code OTHR must only be used in case no other corporate action event code is appropriate.\r\nThe corporate action event indicator code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change.\r\nThe corporate action event indicator code REDM must only be used when the redemption is decided by the issuer and not by the holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionEventType48Choice> forCorporateActionEventType48Choice = new MMConstraint<CorporateActionEventType48Choice>() {
@@ -4365,10 +4365,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType8Choice
 	 * CorporateActionEventType8Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -4376,6 +4372,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "If code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \n\nIf code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \n\nIf code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionEventType8Choice> forCorporateActionEventType8Choice = new MMConstraint<CorporateActionEventType8Choice>() {
@@ -4399,10 +4399,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation67
 	 * CorporateActionGeneralInformation67}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -4410,6 +4406,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation67> forCorporateActionGeneralInformation67 = new MMConstraint<CorporateActionGeneralInformation67>() {
@@ -4433,10 +4433,6 @@ public class ConstraintEventTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType52Choice
 	 * CorporateActionEventType52Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EventTypeRule"</li>
 	 * <li>
@@ -4444,6 +4440,10 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "If Code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =

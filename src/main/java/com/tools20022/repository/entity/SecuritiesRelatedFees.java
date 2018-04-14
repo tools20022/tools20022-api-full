@@ -74,14 +74,14 @@ import java.util.Objects;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "SecuritiesRelatedFees"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Fees related to securities trades."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class SecuritiesRelatedFees extends Charges {
@@ -94,6 +94,9 @@ public class SecuritiesRelatedFees extends Charges {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.Security Security}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} = {@linkplain com.tools20022.repository.entity.Security#mmFees
 	 * Security.mmFees}</li>
@@ -101,22 +104,19 @@ public class SecuritiesRelatedFees extends Charges {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.Security Security}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesRelatedFees
 	 * SecuritiesRelatedFees}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Security"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Security for which fees are specified."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesRelatedFees, List<Security>> mmSecurity = new MMBusinessAssociationEnd<SecuritiesRelatedFees, List<Security>>() {
@@ -235,15 +235,15 @@ public class SecuritiesRelatedFees extends Charges {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesRelatedFees
 	 * SecuritiesRelatedFees}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PostageFeeAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount of money paid for delivery by regular post mail."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesRelatedFees, CurrencyAndAmount> mmPostageFeeAmount = new MMBusinessAttribute<SecuritiesRelatedFees, CurrencyAndAmount>() {
@@ -525,10 +525,6 @@ public class SecuritiesRelatedFees extends Charges {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesRelatedFees
 	 * SecuritiesRelatedFees}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RegulatoryFeesAmount"</li>
 	 * <li>
@@ -536,6 +532,10 @@ public class SecuritiesRelatedFees extends Charges {
 	 * definition} =
 	 * "Amount of money charged by a regulatory authority, eg, Securities and Exchange fees."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesRelatedFees, CurrencyAndAmount> mmRegulatoryFeesAmount = new MMBusinessAttribute<SecuritiesRelatedFees, CurrencyAndAmount>() {
@@ -826,16 +826,16 @@ public class SecuritiesRelatedFees extends Charges {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesRelatedFees
 	 * SecuritiesRelatedFees}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ShippingFeesAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Amount of money (including insurance) paid for delivery by carrier."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesRelatedFees, CurrencyAndAmount> mmShippingFeesAmount = new MMBusinessAttribute<SecuritiesRelatedFees, CurrencyAndAmount>() {
@@ -916,10 +916,6 @@ public class SecuritiesRelatedFees extends Charges {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesRelatedFees
 	 * SecuritiesRelatedFees}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ResearchFee"</li>
 	 * <li>
@@ -927,6 +923,10 @@ public class SecuritiesRelatedFees extends Charges {
 	 * definition} =
 	 * "Charge or commission paid by the investor to a distributor/intermediary or other service provider for the provision of financial research."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesRelatedFees, CurrencyAndAmount> mmResearchFee = new MMBusinessAttribute<SecuritiesRelatedFees, CurrencyAndAmount>() {

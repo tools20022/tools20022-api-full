@@ -41,10 +41,6 @@ public class ConstraintDesignationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.RequestForPEPOrISAOrPortfolioInformationV01
 	 * RequestForPEPOrISAOrPortfolioInformationV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DesignationRule"</li>
 	 * <li>
@@ -52,6 +48,10 @@ public class ConstraintDesignationRule {
 	 * definition} =
 	 * "If ProductTransfer\\ISA or ProductTransfer\\PEP is present, then ClientAccount\\Designation is not allowed.\n\nIf ProductTransfer\\Portfolio is present, then ClientAccount\\Designation is allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RequestForPEPOrISAOrPortfolioInformationV01> for_sese_RequestForPEPOrISAOrPortfolioInformationV01 = new MMConstraint<RequestForPEPOrISAOrPortfolioInformationV01>() {
@@ -74,10 +74,6 @@ public class ConstraintDesignationRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ISATransfer10 ISATransfer10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DesignationRule"</li>
 	 * <li>
@@ -85,6 +81,10 @@ public class ConstraintDesignationRule {
 	 * definition} =
 	 * "If ProductTransfer\\Portfolio\\ISA is present, then TransferorAccount\\Designation is not allowed.\r\n\r\nIf ProductTransfer\\Portfolio\\Portfolio is present, then TransferorAccount\\Designation is allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ISATransfer10> forISATransfer10 = new MMConstraint<ISATransfer10>() {
@@ -107,10 +107,6 @@ public class ConstraintDesignationRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ISATransfer24 ISATransfer24}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DesignationRule"</li>
 	 * <li>
@@ -118,6 +114,10 @@ public class ConstraintDesignationRule {
 	 * definition} =
 	 * "If any occurrence of ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed.\r\nIf any occurrence of ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -146,10 +146,6 @@ public class ConstraintDesignationRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ISATransfer7 ISATransfer7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DesignationRule"</li>
 	 * <li>
@@ -157,6 +153,10 @@ public class ConstraintDesignationRule {
 	 * definition} =
 	 * "If ProductTransfer\\Portfolio\\ISA is present, then TransferorAccount\\Designation is not allowed.\r\n\r\nIf ProductTransfer\\Portfolio\\Portfolio is present, then TransferorAccount\\Designation is allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ISATransfer7> forISATransfer7 = new MMConstraint<ISATransfer7>() {
@@ -180,10 +180,6 @@ public class ConstraintDesignationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV04
 	 * AccountHoldingInformationRequestV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DesignationRule"</li>
 	 * <li>
@@ -191,6 +187,10 @@ public class ConstraintDesignationRule {
 	 * definition} =
 	 * "If ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed.\r\n\r\nIf ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -228,10 +228,6 @@ public class ConstraintDesignationRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ISATransfer4 ISATransfer4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DesignationRule"</li>
 	 * <li>
@@ -239,6 +235,10 @@ public class ConstraintDesignationRule {
 	 * definition} =
 	 * "If ProductTransfer\\Portfolio\\ISA is present, then TransferorAccount\\Designation is not allowed.\r\n\r\nIf ProductTransfer\\Portfolio\\Portfolio is present, then TransferorAccount\\Designation is allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ISATransfer4> forISATransfer4 = new MMConstraint<ISATransfer4>() {
@@ -262,10 +262,6 @@ public class ConstraintDesignationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferInstructionV02
 	 * PEPOrISAOrPortfolioTransferInstructionV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DesignationRule"</li>
 	 * <li>
@@ -273,6 +269,10 @@ public class ConstraintDesignationRule {
 	 * definition} =
 	 * "If ProductTransfer\\ISA or ProductTransfer\\PEP is present, then ClientAccount\\Designation is not allowed.\n\nIf ProductTransfer\\Portfolio is present, then ClientAccount\\Designation is allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PEPOrISAOrPortfolioTransferInstructionV02> for_sese_PEPOrISAOrPortfolioTransferInstructionV02 = new MMConstraint<PEPOrISAOrPortfolioTransferInstructionV02>() {
@@ -295,10 +295,6 @@ public class ConstraintDesignationRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ISATransfer9 ISATransfer9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DesignationRule"</li>
 	 * <li>
@@ -306,6 +302,10 @@ public class ConstraintDesignationRule {
 	 * definition} =
 	 * "If ProductTransfer\\Portfolio\\ISA is present, then TransferorAccount\\Designation is not allowed.\r\n\r\nIf ProductTransfer\\Portfolio\\Portfolio is present, then TransferorAccount\\Designation is allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -338,10 +338,6 @@ public class ConstraintDesignationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV05
 	 * PortfolioTransferConfirmationV05}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DesignationRule"</li>
 	 * <li>
@@ -349,6 +345,10 @@ public class ConstraintDesignationRule {
 	 * definition} =
 	 * "If ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed. If ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -381,10 +381,6 @@ public class ConstraintDesignationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06
 	 * PortfolioTransferInstructionV06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DesignationRule"</li>
 	 * <li>
@@ -392,6 +388,10 @@ public class ConstraintDesignationRule {
 	 * definition} =
 	 * "If any occurrence of ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed. If any occurrence of ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -430,10 +430,6 @@ public class ConstraintDesignationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV05
 	 * AccountHoldingInformationV05}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DesignationRule"</li>
 	 * <li>
@@ -441,6 +437,10 @@ public class ConstraintDesignationRule {
 	 * definition} =
 	 * "If ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed. \r\nIf ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -478,10 +478,6 @@ public class ConstraintDesignationRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ISATransfer5 ISATransfer5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DesignationRule"</li>
 	 * <li>
@@ -489,6 +485,10 @@ public class ConstraintDesignationRule {
 	 * definition} =
 	 * "If ProductTransfer\\Portfolio\\ISA is present, then TransferorAccount\\Designation is not allowed.\r\n\r\nIf ProductTransfer\\Portfolio\\Portfolio is present, then TransferorAccount\\Designation is allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ISATransfer5> forISATransfer5 = new MMConstraint<ISATransfer5>() {
@@ -511,10 +511,6 @@ public class ConstraintDesignationRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ISATransfer19 ISATransfer19}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DesignationRule"</li>
 	 * <li>
@@ -522,6 +518,10 @@ public class ConstraintDesignationRule {
 	 * definition} =
 	 * "If any occurrence of ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed.\r\nIf any occurrence of ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -560,10 +560,6 @@ public class ConstraintDesignationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07
 	 * PortfolioTransferConfirmationV07}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DesignationRule"</li>
 	 * <li>
@@ -571,6 +567,10 @@ public class ConstraintDesignationRule {
 	 * definition} =
 	 * "If any occurrence of ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed. If any occurrence of ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -609,10 +609,6 @@ public class ConstraintDesignationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV07
 	 * PortfolioTransferInstructionV07}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DesignationRule"</li>
 	 * <li>
@@ -620,6 +616,10 @@ public class ConstraintDesignationRule {
 	 * definition} =
 	 * "If any occurrence of ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed. If any occurrence of ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -657,10 +657,6 @@ public class ConstraintDesignationRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ISATransfer12 ISATransfer12}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DesignationRule"</li>
 	 * <li>
@@ -668,6 +664,10 @@ public class ConstraintDesignationRule {
 	 * definition} =
 	 * "If ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed.\r\n\r\nIf ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -705,10 +705,6 @@ public class ConstraintDesignationRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ISATransfer1 ISATransfer1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DesignationRule"</li>
 	 * <li>
@@ -716,6 +712,10 @@ public class ConstraintDesignationRule {
 	 * definition} =
 	 * "If ProductTransfer\\Portfolio\\ISA is present, then TransferorAccount\\Designation is not allowed.\r\n\r\nIf ProductTransfer\\Portfolio\\Portfolio is present, then TransferorAccount\\Designation is allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ISATransfer1> forISATransfer1 = new MMConstraint<ISATransfer1>() {
@@ -739,10 +739,6 @@ public class ConstraintDesignationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PEPISATransfer7
 	 * PEPISATransfer7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DesignationRule"</li>
 	 * <li>
@@ -750,6 +746,10 @@ public class ConstraintDesignationRule {
 	 * definition} =
 	 * "If ProductTransfer\\ISA or ProductTransfer\\PEP is present, then ClientAccount\\Designation is not allowed.\n\nIf ProductTransfer\\Portfolio is present, then ClientAccount\\Designation is allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PEPISATransfer7> forPEPISATransfer7 = new MMConstraint<PEPISATransfer7>() {
@@ -772,10 +772,6 @@ public class ConstraintDesignationRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ISATransfer2 ISATransfer2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DesignationRule"</li>
 	 * <li>
@@ -783,6 +779,10 @@ public class ConstraintDesignationRule {
 	 * definition} =
 	 * "If ProductTransfer\\Portfolio\\ISA is present, then TransferorAccount\\Designation is not allowed.\r\n\r\nIf ProductTransfer\\Portfolio\\Portfolio is present, then TransferorAccount\\Designation is allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ISATransfer2> forISATransfer2 = new MMConstraint<ISATransfer2>() {
@@ -806,10 +806,6 @@ public class ConstraintDesignationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03
 	 * AccountHoldingInformationRequestV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DesignationRule"</li>
 	 * <li>
@@ -817,6 +813,10 @@ public class ConstraintDesignationRule {
 	 * definition} =
 	 * "If ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed.\r\n\r\nIf ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -849,10 +849,6 @@ public class ConstraintDesignationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV05
 	 * PortfolioTransferInstructionV05}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DesignationRule"</li>
 	 * <li>
@@ -860,6 +856,10 @@ public class ConstraintDesignationRule {
 	 * definition} =
 	 * "If ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed. If ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -892,10 +892,6 @@ public class ConstraintDesignationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioInformationV01
 	 * PEPOrISAOrPortfolioInformationV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DesignationRule"</li>
 	 * <li>
@@ -903,6 +899,10 @@ public class ConstraintDesignationRule {
 	 * definition} =
 	 * "If ProductTransfer\\ISA or ProductTransfer\\PEP is present, then ClientAccount\\Designation is not allowed.\n\nIf ProductTransfer\\Portfolio is present, then ClientAccount\\Designation is allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PEPOrISAOrPortfolioInformationV01> for_sese_PEPOrISAOrPortfolioInformationV01 = new MMConstraint<PEPOrISAOrPortfolioInformationV01>() {
@@ -925,10 +925,6 @@ public class ConstraintDesignationRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ISATransfer6 ISATransfer6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DesignationRule"</li>
 	 * <li>
@@ -936,6 +932,10 @@ public class ConstraintDesignationRule {
 	 * definition} =
 	 * "If ProductTransfer\\Portfolio\\ISA is present, then TransferorAccount\\Designation is not allowed.\r\n\r\nIf ProductTransfer\\Portfolio\\Portfolio is present, then TransferorAccount\\Designation is allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ISATransfer6> forISATransfer6 = new MMConstraint<ISATransfer6>() {
@@ -959,10 +959,6 @@ public class ConstraintDesignationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV04
 	 * AccountHoldingInformationV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DesignationRule"</li>
 	 * <li>
@@ -970,6 +966,10 @@ public class ConstraintDesignationRule {
 	 * definition} =
 	 * "If ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed. \r\nIf ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1002,10 +1002,6 @@ public class ConstraintDesignationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PEPISATransfer11
 	 * PEPISATransfer11}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DesignationRule"</li>
 	 * <li>
@@ -1013,6 +1009,10 @@ public class ConstraintDesignationRule {
 	 * definition} =
 	 * "If ProductTransfer\\Portfolio\\ISA is present, then TransferorAccount\\Designation is not allowed.\r\n\r\nIf ProductTransfer\\Portfolio\\Portfolio is present, then TransferorAccount\\Designation is allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PEPISATransfer11> forPEPISATransfer11 = new MMConstraint<PEPISATransfer11>() {
@@ -1036,10 +1036,6 @@ public class ConstraintDesignationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV08
 	 * PortfolioTransferConfirmationV08}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DesignationRule"</li>
 	 * <li>
@@ -1047,6 +1043,10 @@ public class ConstraintDesignationRule {
 	 * definition} =
 	 * "If any occurrence of ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed. If any occurrence of ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1076,10 +1076,6 @@ public class ConstraintDesignationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferConfirmationV02
 	 * PEPOrISAOrPortfolioTransferConfirmationV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DesignationRule"</li>
 	 * <li>
@@ -1087,6 +1083,10 @@ public class ConstraintDesignationRule {
 	 * definition} =
 	 * "If ProductTransfer\\ISA or ProductTransfer\\PEP is present, then ClientAccount\\Designation is not allowed.\n\nIf ProductTransfer\\Portfolio is present, then ClientAccount\\Designation is allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PEPOrISAOrPortfolioTransferConfirmationV02> for_sese_PEPOrISAOrPortfolioTransferConfirmationV02 = new MMConstraint<PEPOrISAOrPortfolioTransferConfirmationV02>() {
@@ -1110,10 +1110,6 @@ public class ConstraintDesignationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV06
 	 * PortfolioTransferConfirmationV06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DesignationRule"</li>
 	 * <li>
@@ -1121,6 +1117,10 @@ public class ConstraintDesignationRule {
 	 * definition} =
 	 * "If any occurrence of ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed. If any occurrence of ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1159,10 +1159,6 @@ public class ConstraintDesignationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV06
 	 * AccountHoldingInformationV06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DesignationRule"</li>
 	 * <li>
@@ -1170,6 +1166,10 @@ public class ConstraintDesignationRule {
 	 * definition} =
 	 * "If ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed. \r\nIf ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1199,10 +1199,6 @@ public class ConstraintDesignationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV08
 	 * PortfolioTransferInstructionV08}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DesignationRule"</li>
 	 * <li>
@@ -1210,6 +1206,10 @@ public class ConstraintDesignationRule {
 	 * definition} =
 	 * "If any occurrence of ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed. If any occurrence of ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1239,10 +1239,6 @@ public class ConstraintDesignationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV05
 	 * AccountHoldingInformationRequestV05}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DesignationRule"</li>
 	 * <li>
@@ -1250,6 +1246,10 @@ public class ConstraintDesignationRule {
 	 * definition} =
 	 * "If ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed.\r\n\r\nIf ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =

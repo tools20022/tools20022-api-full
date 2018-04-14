@@ -36,10 +36,6 @@ public class ConstraintMessageNameRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV02
 	 * OrderInstructionStatusReportV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MessageNameRule"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintMessageNameRule {
 	 * definition} =
 	 * "If MasterReference is present, then MasterReference/MessageName is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<OrderInstructionStatusReportV02> for_setr_OrderInstructionStatusReportV02 = new MMConstraint<OrderInstructionStatusReportV02>() {

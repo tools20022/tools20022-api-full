@@ -79,16 +79,16 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "InvestmentFundCashSettlementInformation4"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Settlement instructions to be used to transfer cash from the Debtor to the Creditor."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
  * nextVersions} =
  * <ul>
@@ -123,10 +123,6 @@ public class InvestmentFundCashSettlementInformation4 {
 	 * InvestmentFundCashSettlementInformation4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ModScpIndctn"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ModificationScopeIndication"</li>
 	 * <li>
@@ -134,6 +130,10 @@ public class InvestmentFundCashSettlementInformation4 {
 	 * definition} =
 	 * "Specifies the type of modification to be applied on a set of information."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<InvestmentFundCashSettlementInformation4, DataModification2Code> mmModificationScopeIndication = new MMMessageAttribute<InvestmentFundCashSettlementInformation4, DataModification2Code>() {
@@ -180,10 +180,6 @@ public class InvestmentFundCashSettlementInformation4 {
 	 * InvestmentFundCashSettlementInformation4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SbcptPmtInstrm"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SubscriptionPaymentInstrument"</li>
 	 * <li>
@@ -191,6 +187,10 @@ public class InvestmentFundCashSettlementInformation4 {
 	 * definition} =
 	 * "Instrument that has or represents monetary value and is used to process a payment instruction for a subscription payment."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<InvestmentFundCashSettlementInformation4, Optional<PaymentInstrument8>> mmSubscriptionPaymentInstrument = new MMMessageAssociationEnd<InvestmentFundCashSettlementInformation4, Optional<PaymentInstrument8>>() {
@@ -239,10 +239,6 @@ public class InvestmentFundCashSettlementInformation4 {
 	 * InvestmentFundCashSettlementInformation4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RedPmtInstrm"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RedemptionPaymentInstrument"</li>
 	 * <li>
@@ -250,6 +246,10 @@ public class InvestmentFundCashSettlementInformation4 {
 	 * definition} =
 	 * "Instrument that has or represents monetary value and is used to process a payment instruction for a redemption payment."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<InvestmentFundCashSettlementInformation4, Optional<PaymentInstrument9>> mmRedemptionPaymentInstrument = new MMMessageAssociationEnd<InvestmentFundCashSettlementInformation4, Optional<PaymentInstrument9>>() {
@@ -298,10 +298,6 @@ public class InvestmentFundCashSettlementInformation4 {
 	 * InvestmentFundCashSettlementInformation4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DvddPmtInstrm"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DividendPaymentInstrument"</li>
 	 * <li>
@@ -309,6 +305,10 @@ public class InvestmentFundCashSettlementInformation4 {
 	 * definition} =
 	 * "Instrument that has or represents monetary value and is used to process a payment instruction for a dividend payment."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<InvestmentFundCashSettlementInformation4, Optional<PaymentInstrument9>> mmDividendPaymentInstrument = new MMMessageAssociationEnd<InvestmentFundCashSettlementInformation4, Optional<PaymentInstrument9>>() {
@@ -357,10 +357,6 @@ public class InvestmentFundCashSettlementInformation4 {
 	 * InvestmentFundCashSettlementInformation4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SvgsPlanPmtInstrm"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SavingsPlanPaymentInstrument"</li>
 	 * <li>
@@ -368,6 +364,10 @@ public class InvestmentFundCashSettlementInformation4 {
 	 * definition} =
 	 * "Instrument that has or represents monetary value and is used to process a payment instruction for a savings plan payment."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<InvestmentFundCashSettlementInformation4, Optional<PaymentInstrument8>> mmSavingsPlanPaymentInstrument = new MMMessageAssociationEnd<InvestmentFundCashSettlementInformation4, Optional<PaymentInstrument8>>() {

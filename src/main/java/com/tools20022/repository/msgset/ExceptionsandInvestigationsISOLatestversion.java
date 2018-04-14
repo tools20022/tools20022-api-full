@@ -84,16 +84,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * businessProcessCatalogue} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#catalogue
  * GeneratedRepository.catalogue}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "Exceptions and Investigations - ISO - Latest version"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Set of messages to support payment-related investigation activities such as cancellation, modification, unable to apply and claim of non-receipt.\r\n"
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * </ul>
  */
 public class ExceptionsandInvestigationsISOLatestversion {

@@ -40,10 +40,6 @@ public class ConstraintCancellation2Guideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.MeetingCancellationV02
 	 * MeetingCancellationV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Cancellation2Guideline"</li>
 	 * <li>
@@ -51,6 +47,10 @@ public class ConstraintCancellation2Guideline {
 	 * definition} =
 	 * "It is recommended to cancel a meeting notification message by using MessageCancellation, MeetingReference/MeetingIdentification and Reason only. It is recommended to avoid the repetition of optional building blocks or components."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<MeetingCancellationV02> for_seev_MeetingCancellationV02 = new MMConstraint<MeetingCancellationV02>() {
@@ -74,10 +74,6 @@ public class ConstraintCancellation2Guideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.MeetingCancellationV04
 	 * MeetingCancellationV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Cancellation2Guideline"</li>
 	 * <li>
@@ -85,6 +81,10 @@ public class ConstraintCancellation2Guideline {
 	 * definition} =
 	 * "It is recommended to cancel a meeting notification message by using MessageCancellation, MeetingReference/MeetingIdentification and Reason only. It is recommended to avoid the repetition of optional building blocks or components."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<MeetingCancellationV04> for_seev_MeetingCancellationV04 = new MMConstraint<MeetingCancellationV04>() {
@@ -108,10 +108,6 @@ public class ConstraintCancellation2Guideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.MeetingCancellationV03
 	 * MeetingCancellationV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Cancellation2Guideline"</li>
 	 * <li>
@@ -119,6 +115,10 @@ public class ConstraintCancellation2Guideline {
 	 * definition} =
 	 * "It is recommended to cancel a meeting notification message by using MessageCancellation, MeetingReference/MeetingIdentification and Reason only. It is recommended to avoid the repetition of optional building blocks or components."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<MeetingCancellationV03> for_seev_MeetingCancellationV03 = new MMConstraint<MeetingCancellationV03>() {

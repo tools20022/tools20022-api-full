@@ -114,16 +114,16 @@ import java.util.Objects;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "AmendmentOfUndertaking"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Modification of an undertaking such as an guarantee or standby letter of credit."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class AmendmentOfUndertaking {
@@ -152,15 +152,15 @@ public class AmendmentOfUndertaking {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AmendmentOfUndertaking
 	 * AmendmentOfUndertaking}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DateOfIssuance"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date the amendment is issued."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<AmendmentOfUndertaking, ISODateTime> mmDateOfIssuance = new MMBusinessAttribute<AmendmentOfUndertaking, ISODateTime>() {
@@ -213,10 +213,6 @@ public class AmendmentOfUndertaking {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AmendmentOfUndertaking
 	 * AmendmentOfUndertaking}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ChangeOfAmount"</li>
 	 * <li>
@@ -224,6 +220,10 @@ public class AmendmentOfUndertaking {
 	 * definition} =
 	 * "Decrease (negative) or increase (positive) of the undertaking as a result of the amendment. "
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<AmendmentOfUndertaking, CurrencyAndAmount> mmChangeOfAmount = new MMBusinessAttribute<AmendmentOfUndertaking, CurrencyAndAmount>() {
@@ -256,6 +256,10 @@ public class AmendmentOfUndertaking {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.Undertaking
+	 * Undertaking}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.Undertaking#mmUndertakingAmendment
@@ -263,10 +267,6 @@ public class AmendmentOfUndertaking {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.Undertaking
-	 * Undertaking}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -289,15 +289,15 @@ public class AmendmentOfUndertaking {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AmendmentOfUndertaking
 	 * AmendmentOfUndertaking}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Undertaking"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Contents of an UndertakingAmendmentResponse message."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<AmendmentOfUndertaking, Undertaking> mmUndertaking = new MMBusinessAssociationEnd<AmendmentOfUndertaking, Undertaking>() {
@@ -349,10 +349,6 @@ public class AmendmentOfUndertaking {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AmendmentOfUndertaking
 	 * AmendmentOfUndertaking}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BeneficiaryConsentRequestIndicator"</li>
 	 * <li>
@@ -360,6 +356,10 @@ public class AmendmentOfUndertaking {
 	 * definition} =
 	 * "Indicates whether or not a request for consent is required from the beneficiary."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<AmendmentOfUndertaking, YesNoIndicator> mmBeneficiaryConsentRequestIndicator = new MMBusinessAttribute<AmendmentOfUndertaking, YesNoIndicator>() {
@@ -411,15 +411,15 @@ public class AmendmentOfUndertaking {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AmendmentOfUndertaking
 	 * AmendmentOfUndertaking}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AmendmentIdentification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identification of the amendment."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<AmendmentOfUndertaking, Max35Text> mmAmendmentIdentification = new MMBusinessAttribute<AmendmentOfUndertaking, Max35Text>() {

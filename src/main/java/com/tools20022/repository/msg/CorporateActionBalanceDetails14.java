@@ -103,6 +103,12 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "CorporateActionBalanceDetails14"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} =
+ * "Eligible and not eligible balance of securities for a corporate action event."
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
  * constraint} =
  * <ul>
@@ -116,12 +122,6 @@ import javax.xml.bind.annotation.XmlType;
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "CorporateActionBalanceDetails14"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} =
- * "Eligible and not eligible balance of securities for a corporate action event."
- * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -154,13 +154,6 @@ public class CorporateActionBalanceDetails14 {
 	 * CorporateActionBalanceDetails14}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ConfdBal"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = ISO15022Synonym: :93a::CONB</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ConfirmedBalance"</li>
 	 * <li>
@@ -168,6 +161,13 @@ public class CorporateActionBalanceDetails14 {
 	 * definition} =
 	 * "Balance to which the payment applies (less or equal to the total eligible balance)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93a::CONB</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionBalanceDetails14, BalanceFormat2Choice> mmConfirmedBalance = new MMMessageAttribute<CorporateActionBalanceDetails14, BalanceFormat2Choice>() {
@@ -219,6 +219,11 @@ public class CorporateActionBalanceDetails14 {
 	 * CorporateActionBalanceDetails14}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TtlElgblBal"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TotalEligibleBalance"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Total quantity of financial instruments of the balance."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = ISO15022Synonym: :93B::ELIG</li>
@@ -226,11 +231,6 @@ public class CorporateActionBalanceDetails14 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "TotalEligibleBalance"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Total quantity of financial instruments of the balance."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionBalanceDetails14, Optional<Quantity8Choice>> mmTotalEligibleBalance = new MMMessageAttribute<CorporateActionBalanceDetails14, Optional<Quantity8Choice>>() {
@@ -282,6 +282,11 @@ public class CorporateActionBalanceDetails14 {
 	 * CorporateActionBalanceDetails14}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "BlckdBal"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BlockedBalance"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Balance of financial instruments that are blocked."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = ISO15022Synonym: :93a::BLOK</li>
@@ -289,11 +294,6 @@ public class CorporateActionBalanceDetails14 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BlockedBalance"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Balance of financial instruments that are blocked."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionBalanceDetails14, Optional<BalanceFormat2Choice>> mmBlockedBalance = new MMMessageAttribute<CorporateActionBalanceDetails14, Optional<BalanceFormat2Choice>>() {
@@ -345,13 +345,6 @@ public class CorporateActionBalanceDetails14 {
 	 * CorporateActionBalanceDetails14}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "BrrwdBal"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = ISO15022Synonym: :93a::BORR</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BorrowedBalance"</li>
 	 * <li>
@@ -359,6 +352,13 @@ public class CorporateActionBalanceDetails14 {
 	 * definition} =
 	 * "Balance of financial instruments that have been borrowed from another party."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93a::BORR</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionBalanceDetails14, Optional<BalanceFormat2Choice>> mmBorrowedBalance = new MMMessageAttribute<CorporateActionBalanceDetails14, Optional<BalanceFormat2Choice>>() {
@@ -410,13 +410,6 @@ public class CorporateActionBalanceDetails14 {
 	 * CorporateActionBalanceDetails14}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CollInBal"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = ISO15022Synonym: :93a::COLI</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CollateralInBalance"</li>
 	 * <li>
@@ -424,6 +417,13 @@ public class CorporateActionBalanceDetails14 {
 	 * definition} =
 	 * "Balance of securities that belong to a third party and that are held for the purpose of collateralisation."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93a::COLI</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionBalanceDetails14, Optional<BalanceFormat2Choice>> mmCollateralInBalance = new MMMessageAttribute<CorporateActionBalanceDetails14, Optional<BalanceFormat2Choice>>() {
@@ -475,13 +475,6 @@ public class CorporateActionBalanceDetails14 {
 	 * CorporateActionBalanceDetails14}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CollOutBal"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = ISO15022Synonym: :93a::COLO</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CollateralOutBalance"</li>
 	 * <li>
@@ -489,6 +482,13 @@ public class CorporateActionBalanceDetails14 {
 	 * definition} =
 	 * "Balance of securities that belong to the safekeeping account indicated within this message, and are deposited with a third party for the purpose of collateralisation."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93a::COLO</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionBalanceDetails14, Optional<BalanceFormat2Choice>> mmCollateralOutBalance = new MMMessageAttribute<CorporateActionBalanceDetails14, Optional<BalanceFormat2Choice>>() {
@@ -540,13 +540,6 @@ public class CorporateActionBalanceDetails14 {
 	 * CorporateActionBalanceDetails14}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OnLnBal"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = ISO15022Synonym: :93a::LOAN</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OnLoanBalance"</li>
 	 * <li>
@@ -554,6 +547,13 @@ public class CorporateActionBalanceDetails14 {
 	 * definition} =
 	 * "Balance of financial instruments that have been loaned to a third party."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93a::LOAN</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionBalanceDetails14, Optional<BalanceFormat2Choice>> mmOnLoanBalance = new MMMessageAttribute<CorporateActionBalanceDetails14, Optional<BalanceFormat2Choice>>() {
@@ -605,6 +605,12 @@ public class CorporateActionBalanceDetails14 {
 	 * CorporateActionBalanceDetails14}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PdgDlvryBal"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PendingDeliveryBalance"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Balance of financial instruments that are pending delivery."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = ISO15022Synonym: :93a::PEND</li>
@@ -612,12 +618,6 @@ public class CorporateActionBalanceDetails14 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PendingDeliveryBalance"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Balance of financial instruments that are pending delivery."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionBalanceDetails14, List<BalanceFormat2Choice>> mmPendingDeliveryBalance = new MMMessageAttribute<CorporateActionBalanceDetails14, List<BalanceFormat2Choice>>() {
@@ -668,6 +668,12 @@ public class CorporateActionBalanceDetails14 {
 	 * CorporateActionBalanceDetails14}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PdgRctBal"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PendingReceiptBalance"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Balance of financial instruments that are pending receipt."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = ISO15022Synonym: :93a::PENR</li>
@@ -675,12 +681,6 @@ public class CorporateActionBalanceDetails14 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PendingReceiptBalance"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Balance of financial instruments that are pending receipt."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionBalanceDetails14, List<BalanceFormat2Choice>> mmPendingReceiptBalance = new MMMessageAttribute<CorporateActionBalanceDetails14, List<BalanceFormat2Choice>>() {
@@ -731,13 +731,6 @@ public class CorporateActionBalanceDetails14 {
 	 * CorporateActionBalanceDetails14}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OutForRegnBal"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = ISO15022Synonym: :93a::REGO</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OutForRegistrationBalance"</li>
 	 * <li>
@@ -745,6 +738,13 @@ public class CorporateActionBalanceDetails14 {
 	 * definition} =
 	 * "Balance of financial instruments currently being processed by the institution responsible for registering the new beneficial owner (or nominee)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93a::REGO</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionBalanceDetails14, Optional<BalanceFormat2Choice>> mmOutForRegistrationBalance = new MMMessageAttribute<CorporateActionBalanceDetails14, Optional<BalanceFormat2Choice>>() {
@@ -796,13 +796,6 @@ public class CorporateActionBalanceDetails14 {
 	 * CorporateActionBalanceDetails14}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SttlmPosBal"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = ISO15022Synonym: :93a::SETT</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SettlementPositionBalance"</li>
 	 * <li>
@@ -810,6 +803,13 @@ public class CorporateActionBalanceDetails14 {
 	 * definition} =
 	 * "Balance of securities representing only settled transactions; pending transactions not included."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93a::SETT</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionBalanceDetails14, Optional<BalanceFormat2Choice>> mmSettlementPositionBalance = new MMMessageAttribute<CorporateActionBalanceDetails14, Optional<BalanceFormat2Choice>>() {
@@ -861,13 +861,6 @@ public class CorporateActionBalanceDetails14 {
 	 * CorporateActionBalanceDetails14}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "StrtPosBal"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = ISO15022Synonym: :93a::SPOS</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "StreetPositionBalance"</li>
 	 * <li>
@@ -875,6 +868,13 @@ public class CorporateActionBalanceDetails14 {
 	 * definition} =
 	 * "Balance of financial instruments that remain registered in the name of the prior beneficial owner."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93a::SPOS</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionBalanceDetails14, Optional<BalanceFormat2Choice>> mmStreetPositionBalance = new MMMessageAttribute<CorporateActionBalanceDetails14, Optional<BalanceFormat2Choice>>() {
@@ -926,13 +926,6 @@ public class CorporateActionBalanceDetails14 {
 	 * CorporateActionBalanceDetails14}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TradDtPosBal"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = ISO15022Synonym: :93a::TRAD</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradeDatePositionBalance"</li>
 	 * <li>
@@ -940,6 +933,13 @@ public class CorporateActionBalanceDetails14 {
 	 * definition} =
 	 * "Balance of securities based on trade date, for example, includes all pending transactions in addition to the balance of settled transactions."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93a::TRAD</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionBalanceDetails14, Optional<BalanceFormat2Choice>> mmTradeDatePositionBalance = new MMMessageAttribute<CorporateActionBalanceDetails14, Optional<BalanceFormat2Choice>>() {
@@ -991,13 +991,6 @@ public class CorporateActionBalanceDetails14 {
 	 * CorporateActionBalanceDetails14}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "InTrnsShipmntBal"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = ISO15022Synonym: :93a::TRAN</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InTransshipmentBalance"</li>
 	 * <li>
@@ -1005,6 +998,13 @@ public class CorporateActionBalanceDetails14 {
 	 * definition} =
 	 * "Balance of physical securities that are in the process of being transferred from one depository/agent to another."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93a::TRAN</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionBalanceDetails14, Optional<BalanceFormat2Choice>> mmInTransshipmentBalance = new MMMessageAttribute<CorporateActionBalanceDetails14, Optional<BalanceFormat2Choice>>() {
@@ -1056,13 +1056,6 @@ public class CorporateActionBalanceDetails14 {
 	 * CorporateActionBalanceDetails14}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RegdBal"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = ISO15022Synonym: :93a::NOMI</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RegisteredBalance"</li>
 	 * <li>
@@ -1070,6 +1063,13 @@ public class CorporateActionBalanceDetails14 {
 	 * definition} =
 	 * "Balance of financial instruments that are registered (in the name of a nominee name or of the beneficial owner)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93a::NOMI</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionBalanceDetails14, Optional<BalanceFormat2Choice>> mmRegisteredBalance = new MMMessageAttribute<CorporateActionBalanceDetails14, Optional<BalanceFormat2Choice>>() {
@@ -1121,6 +1121,12 @@ public class CorporateActionBalanceDetails14 {
 	 * CorporateActionBalanceDetails14}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AfctdBal"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AffectedBalance"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Balance that has been affected by the process run through the event."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = ISO15022Synonym: :93a::AFFB</li>
@@ -1128,12 +1134,6 @@ public class CorporateActionBalanceDetails14 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AffectedBalance"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Balance that has been affected by the process run through the event."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionBalanceDetails14, Optional<BalanceFormat2Choice>> mmAffectedBalance = new MMMessageAttribute<CorporateActionBalanceDetails14, Optional<BalanceFormat2Choice>>() {
@@ -1185,13 +1185,6 @@ public class CorporateActionBalanceDetails14 {
 	 * CorporateActionBalanceDetails14}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "UafctdBal"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = ISO15022Synonym: :93a::UNAF</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnaffectedBalance"</li>
 	 * <li>
@@ -1199,6 +1192,13 @@ public class CorporateActionBalanceDetails14 {
 	 * definition} =
 	 * "Balance that has not been affected by the process run through the event."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93a::UNAF</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionBalanceDetails14, Optional<BalanceFormat2Choice>> mmUnaffectedBalance = new MMMessageAttribute<CorporateActionBalanceDetails14, Optional<BalanceFormat2Choice>>() {

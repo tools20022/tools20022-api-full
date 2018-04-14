@@ -307,16 +307,16 @@ import java.util.Objects;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "PortfolioTransfer"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Transfer by the delivering account servicer to the receiving account servicer of a retail or institutional client portfolio. A portfolio can be any grouping of  investments, for example  stocks, bonds, options, warrants. held by an institution or an individual."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class PortfolioTransfer {
@@ -364,10 +364,6 @@ public class PortfolioTransfer {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer
 	 * PortfolioTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TransferredYear"</li>
 	 * <li>
@@ -375,6 +371,10 @@ public class PortfolioTransfer {
 	 * definition} =
 	 * "Specifies the year during which the investment plan to be transferred was issued."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<PortfolioTransfer, ISOYear> mmTransferredYear = new MMBusinessAttribute<PortfolioTransfer, ISOYear>() {
@@ -443,10 +443,6 @@ public class PortfolioTransfer {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer
 	 * PortfolioTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CashComponentIndicator"</li>
 	 * <li>
@@ -454,6 +450,10 @@ public class PortfolioTransfer {
 	 * definition} =
 	 * "Indicates whether an ISA investment plan contains a cash component asset for transfer."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<PortfolioTransfer, YesNoIndicator> mmCashComponentIndicator = new MMBusinessAttribute<PortfolioTransfer, YesNoIndicator>() {
@@ -487,6 +487,10 @@ public class PortfolioTransfer {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.InvestmentAccount
+	 * InvestmentAccount}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmDebitPortfolioTransfer
@@ -494,10 +498,6 @@ public class PortfolioTransfer {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.InvestmentAccount
-	 * InvestmentAccount}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -526,10 +526,6 @@ public class PortfolioTransfer {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer
 	 * PortfolioTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountFrom"</li>
 	 * <li>
@@ -537,6 +533,10 @@ public class PortfolioTransfer {
 	 * definition} =
 	 * "Specifies the account owned by an investor and from which the assets are transferred."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<PortfolioTransfer, List<InvestmentAccount>> mmAccountFrom = new MMBusinessAssociationEnd<PortfolioTransfer, List<InvestmentAccount>>() {
@@ -571,6 +571,10 @@ public class PortfolioTransfer {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.InvestmentAccount
+	 * InvestmentAccount}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmCreditPortfolioTransfer
@@ -579,18 +583,10 @@ public class PortfolioTransfer {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.InvestmentAccount
-	 * InvestmentAccount}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer
 	 * PortfolioTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountTo"</li>
 	 * <li>
@@ -598,6 +594,10 @@ public class PortfolioTransfer {
 	 * definition} =
 	 * "Specifies the account owned by an investor and to which the assets are transferred."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<PortfolioTransfer, List<InvestmentAccount>> mmAccountTo = new MMBusinessAssociationEnd<PortfolioTransfer, List<InvestmentAccount>>() {
@@ -630,6 +630,10 @@ public class PortfolioTransfer {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.PaymentObligation
+	 * PaymentObligation}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#mmPaymentSourcePortfolioTransfer
@@ -638,18 +642,10 @@ public class PortfolioTransfer {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.PaymentObligation
-	 * PaymentObligation}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer
 	 * PortfolioTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PaymentObligation"</li>
 	 * <li>
@@ -657,6 +653,10 @@ public class PortfolioTransfer {
 	 * definition} =
 	 * "Specifies the cash amount to be transferred in relation with a portfolio transfer."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<PortfolioTransfer, List<PaymentObligation>> mmPaymentObligation = new MMBusinessAssociationEnd<PortfolioTransfer, List<PaymentObligation>>() {
@@ -689,6 +689,10 @@ public class PortfolioTransfer {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.Portfolio Portfolio}
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.Portfolio#mmTransfer
@@ -696,10 +700,6 @@ public class PortfolioTransfer {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.Portfolio Portfolio}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -771,15 +771,15 @@ public class PortfolioTransfer {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer
 	 * PortfolioTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TransferredPortfolio"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the portfolio which has to be transferred."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<PortfolioTransfer, List<Portfolio>> mmTransferredPortfolio = new MMBusinessAssociationEnd<PortfolioTransfer, List<Portfolio>>() {
@@ -816,6 +816,11 @@ public class PortfolioTransfer {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesDeliveryObligation
+	 * SecuritiesDeliveryObligation}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesDeliveryObligation#mmRelatedPortfolioTransfer
@@ -824,19 +829,10 @@ public class PortfolioTransfer {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesDeliveryObligation
-	 * SecuritiesDeliveryObligation}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer
 	 * PortfolioTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SecuritiesDeliveryObligation"</li>
 	 * <li>
@@ -844,6 +840,10 @@ public class PortfolioTransfer {
 	 * definition} =
 	 * "Specifies the financial instrument to be transferred in relation with a portfolio transfer."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<PortfolioTransfer, List<SecuritiesDeliveryObligation>> mmSecuritiesDeliveryObligation = new MMBusinessAssociationEnd<PortfolioTransfer, List<SecuritiesDeliveryObligation>>() {
@@ -885,10 +885,6 @@ public class PortfolioTransfer {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer
 	 * PortfolioTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TransferredAmount"</li>
 	 * <li>
@@ -896,6 +892,10 @@ public class PortfolioTransfer {
 	 * definition} =
 	 * "Quantity of financial instrument to transfer expressed as an amount of money."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<PortfolioTransfer, CurrencyAndAmount> mmTransferredAmount = new MMBusinessAttribute<PortfolioTransfer, CurrencyAndAmount>() {
@@ -947,10 +947,6 @@ public class PortfolioTransfer {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer
 	 * PortfolioTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TransferredPercentage"</li>
 	 * <li>
@@ -958,6 +954,10 @@ public class PortfolioTransfer {
 	 * definition} =
 	 * "Quantity of financial instrument to transfer expressed as a percentage of the investor's total holding."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<PortfolioTransfer, PercentageRate> mmTransferredPercentage = new MMBusinessAttribute<PortfolioTransfer, PercentageRate>() {
@@ -1048,15 +1048,15 @@ public class PortfolioTransfer {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer
 	 * PortfolioTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TransferDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Execution date of the transfer instruction."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<PortfolioTransfer, ISODateTime> mmTransferDate = new MMBusinessAttribute<PortfolioTransfer, ISODateTime>() {
@@ -1091,6 +1091,10 @@ public class PortfolioTransfer {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.InvestmentAccount
+	 * InvestmentAccount}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmRelatedPortfolioTransfer
@@ -1098,10 +1102,6 @@ public class PortfolioTransfer {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.InvestmentAccount
-	 * InvestmentAccount}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1130,10 +1130,6 @@ public class PortfolioTransfer {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer
 	 * PortfolioTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NomineeAccount"</li>
 	 * <li>
@@ -1141,6 +1137,10 @@ public class PortfolioTransfer {
 	 * definition} =
 	 * "Account held in the name of a party that is not the name of the beneficial owner of the shares."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<PortfolioTransfer, InvestmentAccount> mmNomineeAccount = new MMBusinessAssociationEnd<PortfolioTransfer, InvestmentAccount>() {
@@ -1193,16 +1193,16 @@ public class PortfolioTransfer {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer
 	 * PortfolioTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PEPOrISAPlan"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies whether the investment plan is a PEP or ISA type."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<PortfolioTransfer, PEPISACode> mmPEPOrISAPlan = new MMBusinessAttribute<PortfolioTransfer, PEPISACode>() {
@@ -1293,10 +1293,6 @@ public class PortfolioTransfer {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer
 	 * PortfolioTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrentYearISAType"</li>
 	 * <li>
@@ -1304,6 +1300,10 @@ public class PortfolioTransfer {
 	 * definition} =
 	 * "Current year ISA is an ISA that was issued during the current fiscal year."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<PortfolioTransfer, ISATypeCode> mmCurrentYearISAType = new MMBusinessAttribute<PortfolioTransfer, ISATypeCode>() {

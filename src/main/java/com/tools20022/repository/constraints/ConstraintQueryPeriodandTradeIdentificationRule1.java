@@ -35,10 +35,6 @@ public class ConstraintQueryPeriodandTradeIdentificationRule1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeCaptureReportRequestV01
 	 * ForeignExchangeTradeCaptureReportRequestV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "QueryPeriodandTradeIdentificationRule1"</li>
 	 * <li>
@@ -46,6 +42,10 @@ public class ConstraintQueryPeriodandTradeIdentificationRule1 {
 	 * definition} =
 	 * "Either QueryTradeIdentification or QueryPeriod may be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ForeignExchangeTradeCaptureReportRequestV01> for_fxtr_ForeignExchangeTradeCaptureReportRequestV01 = new MMConstraint<ForeignExchangeTradeCaptureReportRequestV01>() {

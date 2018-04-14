@@ -37,10 +37,6 @@ public class ConstraintSingleAndMultipleTransferConfirmationReferencesGuideline1
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Transfer28 Transfer28}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SingleAndMultipleTransferConfirmationReferencesGuideline1"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintSingleAndMultipleTransferConfirmationReferencesGuideline1
 	 * definition} =
 	 * "TransferConfirmationReference may each be repeated across multiple instances of the TransferDetails component where the executing party allocates a common reference to several transfers that are being confirmed in the same message."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -87,10 +87,6 @@ public class ConstraintSingleAndMultipleTransferConfirmationReferencesGuideline1
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Transfer29 Transfer29}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SingleAndMultipleTransferConfirmationReferencesGuideline1"</li>
 	 * <li>
@@ -98,6 +94,10 @@ public class ConstraintSingleAndMultipleTransferConfirmationReferencesGuideline1
 	 * definition} =
 	 * "TransferConfirmationReference may each be repeated across multiple instances of the TransferDetails component where the executing party allocates a common reference to several transfers that are being confirmed in the same message."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -137,10 +137,6 @@ public class ConstraintSingleAndMultipleTransferConfirmationReferencesGuideline1
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Transfer26 Transfer26}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SingleAndMultipleTransferConfirmationReferencesGuideline1"</li>
 	 * <li>
@@ -148,6 +144,10 @@ public class ConstraintSingleAndMultipleTransferConfirmationReferencesGuideline1
 	 * definition} =
 	 * "TransferConfirmationReference may each be repeated across multiple instances of the TransferDetails component where the executing party allocates a common reference to several transfers that are being confirmed in the same message."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -180,10 +180,6 @@ public class ConstraintSingleAndMultipleTransferConfirmationReferencesGuideline1
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Transfer31 Transfer31}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SingleAndMultipleTransferConfirmationReferencesGuideline1"</li>
 	 * <li>
@@ -191,6 +187,10 @@ public class ConstraintSingleAndMultipleTransferConfirmationReferencesGuideline1
 	 * definition} =
 	 * "TransferConfirmationReference may each be repeated across multiple instances of the TransferDetails component where the executing party allocates a common reference to several transfers that are being confirmed in the same message."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -220,10 +220,6 @@ public class ConstraintSingleAndMultipleTransferConfirmationReferencesGuideline1
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Transfer33 Transfer33}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SingleAndMultipleTransferConfirmationReferencesGuideline1"</li>
 	 * <li>
@@ -231,6 +227,10 @@ public class ConstraintSingleAndMultipleTransferConfirmationReferencesGuideline1
 	 * definition} =
 	 * "TransferConfirmationReference may each be repeated across multiple instances of the TransferDetails component where the executing party allocates a common reference to several transfers that are being confirmed in the same message."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -260,10 +260,6 @@ public class ConstraintSingleAndMultipleTransferConfirmationReferencesGuideline1
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Transfer23 Transfer23}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SingleAndMultipleTransferConfirmationReferencesGuideline1"</li>
 	 * <li>
@@ -271,6 +267,10 @@ public class ConstraintSingleAndMultipleTransferConfirmationReferencesGuideline1
 	 * definition} =
 	 * "TransferConfirmationReference may each be repeated across multiple instances of the TransferDetails component where the executing party allocates a common reference to several transfers that are being confirmed in the same message."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -303,10 +303,6 @@ public class ConstraintSingleAndMultipleTransferConfirmationReferencesGuideline1
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Transfer13 Transfer13}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SingleAndMultipleTransferConfirmationReferencesGuideline1"</li>
 	 * <li>
@@ -314,6 +310,10 @@ public class ConstraintSingleAndMultipleTransferConfirmationReferencesGuideline1
 	 * definition} =
 	 * "TransferConfirmationReference may each be repeated across multiple instances of the TransferDetails component where the executing party allocates a common reference to several transfers that are being confirmed in the same message."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Transfer13> forTransfer13 = new MMConstraint<Transfer13>() {
@@ -336,10 +336,6 @@ public class ConstraintSingleAndMultipleTransferConfirmationReferencesGuideline1
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Transfer18 Transfer18}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SingleAndMultipleTransferConfirmationReferencesGuideline1"</li>
 	 * <li>
@@ -347,6 +343,10 @@ public class ConstraintSingleAndMultipleTransferConfirmationReferencesGuideline1
 	 * definition} =
 	 * "TransferConfirmationReference may each be repeated across multiple instances of the TransferDetails component where the executing party allocates a common reference to several transfers that are being confirmed in the same message."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Transfer18> forTransfer18 = new MMConstraint<Transfer18>() {

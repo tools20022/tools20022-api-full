@@ -52,16 +52,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * businessProcessCatalogue} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#catalogue
  * GeneratedRepository.catalogue}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "Invoice Financing Request - ISO - Latest version"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Set of messages used to request invoice financing services from a financial institution, to cancel a previously submitted financing request, and for financial institutions to report back on the status of the request.\r\n"
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * </ul>
  */
 public class InvoiceFinancingRequestISOLatestversion {

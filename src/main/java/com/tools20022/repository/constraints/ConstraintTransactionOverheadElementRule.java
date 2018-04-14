@@ -36,10 +36,6 @@ public class ConstraintTransactionOverheadElementRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TotalFeesAndTaxes40
 	 * TotalFeesAndTaxes40}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TransactionOverheadElementRule"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintTransactionOverheadElementRule {
 	 * definition} =
 	 * "One of the elements (TotalOverheadApplied, TotalFees, TotalTaxes, CommercialAgreementReference, IndividualFee, IndividualTax) must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TotalFeesAndTaxes40> forTotalFeesAndTaxes40 = new MMConstraint<TotalFeesAndTaxes40>() {

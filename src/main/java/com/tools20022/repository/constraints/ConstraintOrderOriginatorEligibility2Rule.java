@@ -38,10 +38,6 @@ public class ConstraintOrderOriginatorEligibility2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount58
 	 * InvestmentAccount58}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OrderOriginatorEligibility2Rule"</li>
 	 * <li>
@@ -49,6 +45,10 @@ public class ConstraintOrderOriginatorEligibility2Rule {
 	 * definition} =
 	 * "OrderOriginatorEligibility may only be present if one or more of the parties identified in OwnerIdentification is/are the originator of the order."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -78,10 +78,6 @@ public class ConstraintOrderOriginatorEligibility2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount21
 	 * InvestmentAccount21}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OrderOriginatorEligibility2Rule"</li>
 	 * <li>
@@ -89,6 +85,10 @@ public class ConstraintOrderOriginatorEligibility2Rule {
 	 * definition} =
 	 * "OrderOriginatorEligibility may only be present if one or more of the parties identified in OwnerIdentification is/are the originator of the order."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>

@@ -78,16 +78,16 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "DirectDebitMandate2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Instruction, initiated by the creditor, to debit a debtor's account in favour of the creditor. A direct debit can be pre-authorised or not. In most countries, authorisation is in the form of a mandate between the debtor and creditor."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -119,10 +119,6 @@ public class DirectDebitMandate2 {
 	 * DirectDebitMandate2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DbtrAcctId"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DebtorAccountIdentification"</li>
 	 * <li>
@@ -130,6 +126,10 @@ public class DirectDebitMandate2 {
 	 * definition} =
 	 * "Unique and unambiguous identification for the account between the account owner and the account servicer."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<DirectDebitMandate2, CashAccountIdentification1Choice> mmDebtorAccountIdentification = new MMMessageAttribute<DirectDebitMandate2, CashAccountIdentification1Choice>() {
@@ -180,10 +180,6 @@ public class DirectDebitMandate2 {
 	 * DirectDebitMandate2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DbtrId"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DebtorIdentification"</li>
 	 * <li>
@@ -191,6 +187,10 @@ public class DirectDebitMandate2 {
 	 * definition} =
 	 * "Party that owes the cash to the creditor/final party. The debtor is also the debit account owner."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<DirectDebitMandate2, Optional<PartyIdentification2Choice>> mmDebtorIdentification = new MMMessageAttribute<DirectDebitMandate2, Optional<PartyIdentification2Choice>>() {
@@ -241,10 +241,6 @@ public class DirectDebitMandate2 {
 	 * DirectDebitMandate2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CdtrId"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CreditorIdentification"</li>
 	 * <li>
@@ -252,6 +248,10 @@ public class DirectDebitMandate2 {
 	 * definition} =
 	 * "Party that receives an amount of money from the debtor. In the context of the payment model, the creditor is also the credit account owner."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<DirectDebitMandate2, Optional<PartyIdentification2Choice>> mmCreditorIdentification = new MMMessageAttribute<DirectDebitMandate2, Optional<PartyIdentification2Choice>>() {
@@ -302,10 +302,6 @@ public class DirectDebitMandate2 {
 	 * DirectDebitMandate2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "FrstAgt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FirstAgent"</li>
 	 * <li>
@@ -313,6 +309,10 @@ public class DirectDebitMandate2 {
 	 * definition} =
 	 * "Financial institution that receives the direct debit instruction from the creditor or other authorised party."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<DirectDebitMandate2, FinancialInstitutionIdentification3Choice> mmFirstAgent = new MMMessageAttribute<DirectDebitMandate2, FinancialInstitutionIdentification3Choice>() {
@@ -363,10 +363,6 @@ public class DirectDebitMandate2 {
 	 * DirectDebitMandate2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "FnlAgt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FinalAgent"</li>
 	 * <li>
@@ -374,6 +370,10 @@ public class DirectDebitMandate2 {
 	 * definition} =
 	 * "Financial institution that receives the payment transaction on behalf of the creditor, or other nominated party, and credits the account."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<DirectDebitMandate2, Optional<FinancialInstitutionIdentification3Choice>> mmFinalAgent = new MMMessageAttribute<DirectDebitMandate2, Optional<FinancialInstitutionIdentification3Choice>>() {
@@ -423,10 +423,6 @@ public class DirectDebitMandate2 {
 	 * DirectDebitMandate2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RegnId"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RegistrationIdentification"</li>
 	 * <li>
@@ -434,6 +430,10 @@ public class DirectDebitMandate2 {
 	 * definition} =
 	 * "Reference assigned to a creditor by its financial institution, or relevant authority, authorising the creditor to take part in a direct debit scheme."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<DirectDebitMandate2, Optional<Max35Text>> mmRegistrationIdentification = new MMMessageAttribute<DirectDebitMandate2, Optional<Max35Text>>() {
@@ -483,10 +483,6 @@ public class DirectDebitMandate2 {
 	 * DirectDebitMandate2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MndtId"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MandateIdentification"</li>
 	 * <li>
@@ -494,6 +490,10 @@ public class DirectDebitMandate2 {
 	 * definition} =
 	 * "Reference of the direct debit mandate that has been agreed upon by the debtor and creditor."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<DirectDebitMandate2, Optional<Max35Text>> mmMandateIdentification = new MMMessageAttribute<DirectDebitMandate2, Optional<Max35Text>>() {

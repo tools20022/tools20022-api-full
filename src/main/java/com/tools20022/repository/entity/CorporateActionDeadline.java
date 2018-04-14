@@ -131,14 +131,14 @@ import java.util.Objects;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CorporateActionDeadline"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Time constraints for processing corporate actions."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class CorporateActionDeadline extends Deadline {
@@ -186,10 +186,6 @@ public class CorporateActionDeadline extends Deadline {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
 	 * CorporateActionDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RevocabilityPeriod"</li>
 	 * <li>
@@ -197,6 +193,10 @@ public class CorporateActionDeadline extends Deadline {
 	 * definition} =
 	 * "Period during which the shareholder can revoke, change or withdraw its instruction."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CorporateActionDeadline, DateTimePeriod> mmRevocabilityPeriod = new MMBusinessAttribute<CorporateActionDeadline, DateTimePeriod>() {
@@ -300,10 +300,6 @@ public class CorporateActionDeadline extends Deadline {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
 	 * CorporateActionDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ProtectDate"</li>
 	 * <li>
@@ -311,6 +307,10 @@ public class CorporateActionDeadline extends Deadline {
 	 * definition} =
 	 * "Last date a holder can request to defer delivery of securities pursuant to a notice of guaranteed delivery or other required documentation."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CorporateActionDeadline, ISODateTime> mmProtectDate = new MMBusinessAttribute<CorporateActionDeadline, ISODateTime>() {
@@ -398,10 +398,6 @@ public class CorporateActionDeadline extends Deadline {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
 	 * CorporateActionDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradingSuspendedDate"</li>
 	 * <li>
@@ -409,6 +405,10 @@ public class CorporateActionDeadline extends Deadline {
 	 * definition} =
 	 * "Date on which trading of a security is suspended as the result of an event."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CorporateActionDeadline, ISODateTime> mmTradingSuspendedDate = new MMBusinessAttribute<CorporateActionDeadline, ISODateTime>() {
@@ -493,10 +493,6 @@ public class CorporateActionDeadline extends Deadline {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
 	 * CorporateActionDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ThirdPartyDeadline"</li>
 	 * <li>
@@ -504,6 +500,10 @@ public class CorporateActionDeadline extends Deadline {
 	 * definition} =
 	 * "Date/Time by which the account owner must instruct directly another party, for example to provide documentation to an issuer agent."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CorporateActionDeadline, ISODateTime> mmThirdPartyDeadline = new MMBusinessAttribute<CorporateActionDeadline, ISODateTime>() {
@@ -590,10 +590,6 @@ public class CorporateActionDeadline extends Deadline {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
 	 * CorporateActionDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CertificationDeadline"</li>
 	 * <li>
@@ -601,6 +597,10 @@ public class CorporateActionDeadline extends Deadline {
 	 * definition} =
 	 * "Deadline by which the beneficial ownership of securities must be declared."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CorporateActionDeadline, ISODateTime> mmCertificationDeadline = new MMBusinessAttribute<CorporateActionDeadline, ISODateTime>() {
@@ -688,10 +688,6 @@ public class CorporateActionDeadline extends Deadline {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
 	 * CorporateActionDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DeadlineToSplit"</li>
 	 * <li>
@@ -699,6 +695,10 @@ public class CorporateActionDeadline extends Deadline {
 	 * definition} =
 	 * "Deadline by which instructions must be received to split securities, that is, of physical certificates."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CorporateActionDeadline, ISODateTime> mmDeadlineToSplit = new MMBusinessAttribute<CorporateActionDeadline, ISODateTime>() {
@@ -785,10 +785,6 @@ public class CorporateActionDeadline extends Deadline {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
 	 * CorporateActionDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SpecialExDate"</li>
 	 * <li>
@@ -796,6 +792,10 @@ public class CorporateActionDeadline extends Deadline {
 	 * definition} =
 	 * "Date/time as from which 'special processing' can start to be used by participants for that event. Special processing is a means of marking a transaction, that would normally be traded ex or cum, as being traded cum or ex respectively,  for example, a transaction dealt 'special' after the ex date would result in the buyer being eligible for the entitlement. This is typically used in the UK and Irish markets."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CorporateActionDeadline, ISODateTime> mmSpecialExDate = new MMBusinessAttribute<CorporateActionDeadline, ISODateTime>() {
@@ -882,16 +882,16 @@ public class CorporateActionDeadline extends Deadline {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
 	 * CorporateActionDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DeadlineForTaxBreakdownInstruction"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Date until which tax breakdown instructions will be accepted."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CorporateActionDeadline, ISODateTime> mmDeadlineForTaxBreakdownInstruction = new MMBusinessAttribute<CorporateActionDeadline, ISODateTime>() {
@@ -980,10 +980,6 @@ public class CorporateActionDeadline extends Deadline {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
 	 * CorporateActionDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EarlyClosingDate"</li>
 	 * <li>
@@ -991,6 +987,10 @@ public class CorporateActionDeadline extends Deadline {
 	 * definition} =
 	 * "First possible early closing date of an offer if different from the expiry date."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CorporateActionDeadline, ISODateTime> mmEarlyClosingDate = new MMBusinessAttribute<CorporateActionDeadline, ISODateTime>() {
@@ -1131,10 +1131,6 @@ public class CorporateActionDeadline extends Deadline {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
 	 * CorporateActionDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RecordDate"</li>
 	 * <li>
@@ -1142,6 +1138,10 @@ public class CorporateActionDeadline extends Deadline {
 	 * definition} =
 	 * "Date at which the positions are struck to note which parties will receive the entitlement."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CorporateActionDeadline, ISODateTime> mmRecordDate = new MMBusinessAttribute<CorporateActionDeadline, ISODateTime>() {
@@ -1249,10 +1249,6 @@ public class CorporateActionDeadline extends Deadline {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
 	 * CorporateActionDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoverExpirationDate"</li>
 	 * <li>
@@ -1260,6 +1256,10 @@ public class CorporateActionDeadline extends Deadline {
 	 * definition} =
 	 * "Last day a holder can deliver the securities that it had previously protected."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CorporateActionDeadline, ISODateTime> mmCoverExpirationDate = new MMBusinessAttribute<CorporateActionDeadline, ISODateTime>() {
@@ -1360,10 +1360,6 @@ public class CorporateActionDeadline extends Deadline {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
 	 * CorporateActionDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ElectionToCounterpartyDeadline"</li>
 	 * <li>
@@ -1371,6 +1367,10 @@ public class CorporateActionDeadline extends Deadline {
 	 * definition} =
 	 * "Deadline by which an entitled holder needs to advise their counterparty to a transaction of their election for a corporate action event."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CorporateActionDeadline, ISODateTime> mmElectionToCounterpartyDeadline = new MMBusinessAttribute<CorporateActionDeadline, ISODateTime>() {
@@ -1478,15 +1478,15 @@ public class CorporateActionDeadline extends Deadline {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
 	 * CorporateActionDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ExpiryDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date on which the offer terminates."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CorporateActionDeadline, ISODateTime> mmExpiryDate = new MMBusinessAttribute<CorporateActionDeadline, ISODateTime>() {
@@ -1530,10 +1530,6 @@ public class CorporateActionDeadline extends Deadline {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
 	 * CorporateActionDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EarlyThirdPartyDeadline"</li>
 	 * <li>
@@ -1541,6 +1537,10 @@ public class CorporateActionDeadline extends Deadline {
 	 * definition} =
 	 * "Date/Time set by the issuer agent as a first early deadline by which the account owner must instruct directly another party, possibly giving the holder eligibility to incentives. For example, to provide documentation to an issuer agent."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CorporateActionDeadline, ISODateTime> mmEarlyThirdPartyDeadline = new MMBusinessAttribute<CorporateActionDeadline, ISODateTime>() {
@@ -1615,10 +1615,6 @@ public class CorporateActionDeadline extends Deadline {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
 	 * CorporateActionDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DepositoryCoverExpirationDate"</li>
 	 * <li>
@@ -1626,6 +1622,10 @@ public class CorporateActionDeadline extends Deadline {
 	 * definition} =
 	 * "The last date/tiime that a participant of the depository can deliver securities that it had elected on and/or previously protected."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CorporateActionDeadline, ISODateTime> mmDepositoryCoverExpirationDate = new MMBusinessAttribute<CorporateActionDeadline, ISODateTime>() {
@@ -1739,10 +1739,6 @@ public class CorporateActionDeadline extends Deadline {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
 	 * CorporateActionDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ResponseDeadline"</li>
 	 * <li>
@@ -1750,6 +1746,10 @@ public class CorporateActionDeadline extends Deadline {
 	 * definition} =
 	 * "Date on which the account servicer has set as the deadline to respond, with instructions, to an outstanding event. This time is dependent on the reference time zone of the account servicer as specified in an SLA."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CorporateActionDeadline, ISODateTime> mmResponseDeadline = new MMBusinessAttribute<CorporateActionDeadline, ISODateTime>() {
@@ -1802,10 +1802,6 @@ public class CorporateActionDeadline extends Deadline {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
 	 * CorporateActionDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ConsentExpirationDate"</li>
 	 * <li>
@@ -1813,6 +1809,10 @@ public class CorporateActionDeadline extends Deadline {
 	 * definition} =
 	 * "Last date on which a holder can consent to the changes sought by the corporation."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CorporateActionDeadline, ISODateTime> mmConsentExpirationDate = new MMBusinessAttribute<CorporateActionDeadline, ISODateTime>() {
@@ -1897,10 +1897,6 @@ public class CorporateActionDeadline extends Deadline {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
 	 * CorporateActionDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RegistrationDeadline"</li>
 	 * <li>
@@ -1908,6 +1904,10 @@ public class CorporateActionDeadline extends Deadline {
 	 * definition} =
 	 * "Date on which instructions to register or registration details will be accepted."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CorporateActionDeadline, ISODateTime> mmRegistrationDeadline = new MMBusinessAttribute<CorporateActionDeadline, ISODateTime>() {
@@ -1986,10 +1986,6 @@ public class CorporateActionDeadline extends Deadline {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
 	 * CorporateActionDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "StockLendingDeadline"</li>
 	 * <li>
@@ -1997,6 +1993,10 @@ public class CorporateActionDeadline extends Deadline {
 	 * definition} =
 	 * "Date or date and time that the account servicer has set as the deadline to respond with instructions to an event for which the underlying security is out on loan. "
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CorporateActionDeadline, ISODateTime> mmStockLendingDeadline = new MMBusinessAttribute<CorporateActionDeadline, ISODateTime>() {
@@ -2047,10 +2047,6 @@ public class CorporateActionDeadline extends Deadline {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
 	 * CorporateActionDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ConsentRecordDate"</li>
 	 * <li>
@@ -2058,6 +2054,10 @@ public class CorporateActionDeadline extends Deadline {
 	 * definition} =
 	 * "Date used by the offeror to determine the beneficiary eligible to participate in a consent based on the registered owner of the securities, eg, beneficial owner of consent record. The consent record date qualifier is used to indicate that a record date only applies to a certain part of the offer, not the entire offer.\r\nThe consent record date is used to indicate that a record date only applies to a certain part of the offer, not the entire offer."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CorporateActionDeadline, ISODateTime> mmConsentRecordDate = new MMBusinessAttribute<CorporateActionDeadline, ISODateTime>() {
@@ -2175,10 +2175,6 @@ public class CorporateActionDeadline extends Deadline {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
 	 * CorporateActionDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EarlyResponseDeadline"</li>
 	 * <li>
@@ -2186,6 +2182,10 @@ public class CorporateActionDeadline extends Deadline {
 	 * definition} =
 	 * "Date/time that the account servicer has set as the deadline to respond, with instructions, to an outstanding event, giving the holder eligibility to incentives. This time is dependent on the reference time zone of the account servicer as specified in an SLA."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CorporateActionDeadline, ISODateTime> mmEarlyResponseDeadline = new MMBusinessAttribute<CorporateActionDeadline, ISODateTime>() {
@@ -2275,10 +2275,6 @@ public class CorporateActionDeadline extends Deadline {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline
 	 * CorporateActionDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GuaranteedParticipationDate"</li>
 	 * <li>
@@ -2286,6 +2282,10 @@ public class CorporateActionDeadline extends Deadline {
 	 * definition} =
 	 * "Last date/time by which a buying counterparty to a trade can be sure that it will have the right to participate in an event."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CorporateActionDeadline, ISODateTime> mmGuaranteedParticipationDate = new MMBusinessAttribute<CorporateActionDeadline, ISODateTime>() {

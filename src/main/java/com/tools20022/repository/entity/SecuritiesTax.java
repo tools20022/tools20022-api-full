@@ -225,16 +225,16 @@ import java.util.Optional;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "SecuritiesTax"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Amount of money due to the government or tax authority, according to various pre-defined parameters such as thresholds or income."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class SecuritiesTax extends Tax {
@@ -300,10 +300,6 @@ public class SecuritiesTax extends Tax {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax SecuritiesTax}
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxableIncomePerShare"</li>
 	 * <li>
@@ -311,6 +307,10 @@ public class SecuritiesTax extends Tax {
 	 * definition} =
 	 * "Amount included in the NAV that corresponds to gains directly or indirectly derived from interest payment in the scope of the European Directive on taxation of savings income in the form of interest payments."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTax, ActiveCurrencyAndAmount> mmTaxableIncomePerShare = new MMBusinessAttribute<SecuritiesTax, ActiveCurrencyAndAmount>() {
@@ -474,10 +474,6 @@ public class SecuritiesTax extends Tax {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax SecuritiesTax}
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxableIncomePerShareCalculated"</li>
 	 * <li>
@@ -485,6 +481,10 @@ public class SecuritiesTax extends Tax {
 	 * definition} =
 	 * "Specifies whether the fund calculates a taxable interest per share (TIS)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTax, TaxableIncomePerShareCalculatedCode> mmTaxableIncomePerShareCalculated = new MMBusinessAttribute<SecuritiesTax, TaxableIncomePerShareCalculatedCode>() {
@@ -659,10 +659,6 @@ public class SecuritiesTax extends Tax {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax SecuritiesTax}
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EUCapitalGain"</li>
 	 * <li>
@@ -670,6 +666,10 @@ public class SecuritiesTax extends Tax {
 	 * definition} =
 	 * "Specifies whether capital gain is in the scope of the European directive on taxation of savings income in the form of interest payments (Council Directive 2003/48/EC 3 June), or an income realised upon sale, a refund or redemption of shares and units, etc."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTax, EUCapitalGainCode> mmEUCapitalGain = new MMBusinessAttribute<SecuritiesTax, EUCapitalGainCode>() {
@@ -763,10 +763,6 @@ public class SecuritiesTax extends Tax {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax SecuritiesTax}
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EUDividendStatus"</li>
 	 * <li>
@@ -774,6 +770,10 @@ public class SecuritiesTax extends Tax {
 	 * definition} =
 	 * "Specifies whether dividend is in the scope of the European directive on taxation of savings income in the form of interest payments (Council Directive 2003/48/EC 3 June), or an income realised upon sale, a refund or redemption of shares and units, etc."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTax, EUDividendStatusCode> mmEUDividendStatus = new MMBusinessAttribute<SecuritiesTax, EUDividendStatusCode>() {
@@ -837,10 +837,6 @@ public class SecuritiesTax extends Tax {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax SecuritiesTax}
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxableIncomePerDividend"</li>
 	 * <li>
@@ -848,6 +844,10 @@ public class SecuritiesTax extends Tax {
 	 * definition} =
 	 * "Amount included in the dividend that corresponds to gains directly or indirectly derived from interest payment in the scope of the European Directive on taxation of savings income in the form of interest payments."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTax, CurrencyAndAmount> mmTaxableIncomePerDividend = new MMBusinessAttribute<SecuritiesTax, CurrencyAndAmount>() {
@@ -985,15 +985,15 @@ public class SecuritiesTax extends Tax {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax SecuritiesTax}
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "StampDutyType"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates how the stamp duty should be applied."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTax, StampDutyTypeCode> mmStampDutyType = new MMBusinessAttribute<SecuritiesTax, StampDutyTypeCode>() {
@@ -1477,13 +1477,6 @@ public class SecuritiesTax extends Tax {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax SecuritiesTax}
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = ISO15022Synonym: :22F::STAM</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "StampDutyTaxBasis"</li>
 	 * <li>
@@ -1491,6 +1484,13 @@ public class SecuritiesTax extends Tax {
 	 * definition} =
 	 * "Specifies the stamp duty type or exemption reason applicable to the settlement transaction."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::STAM</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTax, Max4AlphaNumericText> mmStampDutyTaxBasis = new MMBusinessAttribute<SecuritiesTax, Max4AlphaNumericText>() {
@@ -1552,6 +1552,10 @@ public class SecuritiesTax extends Tax {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.TaxVoucher
+	 * TaxVoucher}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.TaxVoucher#mmRelatedSecurityTax
@@ -1560,23 +1564,19 @@ public class SecuritiesTax extends Tax {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.TaxVoucher
-	 * TaxVoucher}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax SecuritiesTax}
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxVoucher"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Tax voucher which is related to a securities tax."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesTax, Optional<TaxVoucher>> mmTaxVoucher = new MMBusinessAssociationEnd<SecuritiesTax, Optional<TaxVoucher>>() {
@@ -1753,10 +1753,6 @@ public class SecuritiesTax extends Tax {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax SecuritiesTax}
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxableIncomePerDividendShare"</li>
 	 * <li>
@@ -1764,6 +1760,10 @@ public class SecuritiesTax extends Tax {
 	 * definition} =
 	 * "Amount included in the dividend/NAV that is identified as gains directly or indirectly derived from interest payments within the scope of the EU Savings directive"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTax, ActiveCurrencyAndAmount> mmTaxableIncomePerDividendShare = new MMBusinessAttribute<SecuritiesTax, ActiveCurrencyAndAmount>() {
@@ -1807,6 +1807,10 @@ public class SecuritiesTax extends Tax {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.RateAndAmount
+	 * RateAndAmount}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmSecuritiesTax
@@ -1815,24 +1819,20 @@ public class SecuritiesTax extends Tax {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.RateAndAmount
-	 * RateAndAmount}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax SecuritiesTax}
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RelatedTax"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Percentage of the gross dividend rate on which tax must be paid ."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesTax, RateAndAmount> mmRelatedTax = new MMBusinessAssociationEnd<SecuritiesTax, RateAndAmount>() {
@@ -1883,10 +1883,6 @@ public class SecuritiesTax extends Tax {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax SecuritiesTax}
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxLotNumber"</li>
 	 * <li>
@@ -1894,6 +1890,10 @@ public class SecuritiesTax extends Tax {
 	 * definition} =
 	 * "Identification, for tax purposes, of a lot of identical securities that are bought at a certain date and at a certain price."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTax, Max15NumericText> mmTaxLotNumber = new MMBusinessAttribute<SecuritiesTax, Max15NumericText>() {
@@ -1926,6 +1926,9 @@ public class SecuritiesTax extends Tax {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.Security Security}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.Security#mmTaxDetails
@@ -1934,22 +1937,19 @@ public class SecuritiesTax extends Tax {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.Security Security}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax SecuritiesTax}
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Security"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Security on which the tax applies."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesTax, Optional<Security>> mmSecurity = new MMBusinessAssociationEnd<SecuritiesTax, Optional<Security>>() {
@@ -1992,10 +1992,6 @@ public class SecuritiesTax extends Tax {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax SecuritiesTax}
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxRuleExemptIndicator"</li>
 	 * <li>
@@ -2003,6 +1999,10 @@ public class SecuritiesTax extends Tax {
 	 * definition} =
 	 * "Indicates whether the tax rule applies within the jurisdiction as a condition of this security."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTax, YesNoIndicator> mmTaxRuleExemptIndicator = new MMBusinessAttribute<SecuritiesTax, YesNoIndicator>() {
@@ -2043,16 +2043,16 @@ public class SecuritiesTax extends Tax {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax SecuritiesTax}
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EffectivePeriod"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Period during which the tax rule applies within the jurisdiction."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTax, DateTimePeriod> mmEffectivePeriod = new MMBusinessAttribute<SecuritiesTax, DateTimePeriod>() {
@@ -2093,15 +2093,15 @@ public class SecuritiesTax extends Tax {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax SecuritiesTax}
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FrankedRate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Percentage of dividend for which tax is already paid."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTax, PercentageRate> mmFrankedRate = new MMBusinessAttribute<SecuritiesTax, PercentageRate>() {
@@ -2159,16 +2159,16 @@ public class SecuritiesTax extends Tax {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax SecuritiesTax}
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TEFRARule"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Indicates the TEFRA rule under which the security is issued."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTax, TEFRARulesCode> mmTEFRARule = new MMBusinessAttribute<SecuritiesTax, TEFRARulesCode>() {
@@ -2201,6 +2201,10 @@ public class SecuritiesTax extends Tax {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.Jurisdiction
+	 * Jurisdiction}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.Jurisdiction#mmRelatedSecuritiesTax
@@ -2209,23 +2213,19 @@ public class SecuritiesTax extends Tax {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.Jurisdiction
-	 * Jurisdiction}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax SecuritiesTax}
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Jurisdiction"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Jurisdiction in which the tax rule applies."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesTax, com.tools20022.repository.entity.Jurisdiction> mmJurisdiction = new MMBusinessAssociationEnd<SecuritiesTax, com.tools20022.repository.entity.Jurisdiction>() {

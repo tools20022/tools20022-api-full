@@ -39,10 +39,6 @@ public class ConstraintPaymentMessageTypeRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Transactions4 Transactions4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PaymentMessageTypeRule"</li>
 	 * <li>
@@ -50,6 +46,10 @@ public class ConstraintPaymentMessageTypeRule {
 	 * definition} =
 	 * "If PaymentCommonInformation/PaymentMessageType is present, then TransactionReport/Transaction/Payment/PaymentMessageType is not allowed.\nIf PaymentCommonInformation/PaymentMessageType is not present, then TransactionReport/Transaction/Payment/PaymentMessageType is optional."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Transactions4> forTransactions4 = new MMConstraint<Transactions4>() {
@@ -72,10 +72,6 @@ public class ConstraintPaymentMessageTypeRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Transactions3 Transactions3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PaymentMessageTypeRule"</li>
 	 * <li>
@@ -83,6 +79,10 @@ public class ConstraintPaymentMessageTypeRule {
 	 * definition} =
 	 * "If PaymentCommonInformation/PaymentMessageType is present, then TransactionReport/Transaction/Payment/PaymentMessageType is not allowed.\nIf PaymentCommonInformation/PaymentMessageType is not present, then TransactionReport/Transaction/Payment/PaymentMessageType is optional."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Transactions3> forTransactions3 = new MMConstraint<Transactions3>() {
@@ -105,10 +105,6 @@ public class ConstraintPaymentMessageTypeRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Transactions2 Transactions2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PaymentMessageTypeRule"</li>
 	 * <li>
@@ -116,6 +112,10 @@ public class ConstraintPaymentMessageTypeRule {
 	 * definition} =
 	 * "If PaymentCommonInformation/PaymentMessageType is present, then TransactionReport/Transaction/Payment/PaymentMessageType is not allowed.\nIf PaymentCommonInformation/PaymentMessageType is not present, then TransactionReport/Transaction/Payment/PaymentMessageType is optional."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Transactions2> forTransactions2 = new MMConstraint<Transactions2>() {

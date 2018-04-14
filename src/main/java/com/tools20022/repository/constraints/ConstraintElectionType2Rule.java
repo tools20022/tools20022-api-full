@@ -40,10 +40,6 @@ public class ConstraintElectionType2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionAdviceV01
 	 * AgentCAElectionAdviceV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ElectionType2Rule"</li>
 	 * <li>
@@ -51,6 +47,10 @@ public class ConstraintElectionType2Rule {
 	 * definition} =
 	 * "If ElectionAdviceTypeAndLinkages/ElectionType is CHAN, then ElectionDetails/SecuritiesMovementDetails/CreditAccountDetails/OptionNumber, ElectionDetails/SecuritiesMovementDetails/CreditAccountDetails/OptionType, ElectionDetails/SecuritiesMovementDetails/DebitAccountDetails/OptionNumber and ElectionDetails/SecuritiesMovementDetails/DebitAccountDetails/OptionType must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AgentCAElectionAdviceV01> for_seev_AgentCAElectionAdviceV01 = new MMConstraint<AgentCAElectionAdviceV01>() {

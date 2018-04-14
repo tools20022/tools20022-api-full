@@ -38,10 +38,6 @@ public class ConstraintAggregateBalanceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace8
 	 * AggregateBalancePerSafekeepingPlace8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AggregateBalanceGuideline"</li>
 	 * <li>
@@ -49,6 +45,10 @@ public class ConstraintAggregateBalanceGuideline {
 	 * definition} =
 	 * "If AvailableQuantity and NotAvailableQuantity are both present, then the AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace8> forAggregateBalancePerSafekeepingPlace8 = new MMConstraint<AggregateBalancePerSafekeepingPlace8>() {
@@ -72,10 +72,6 @@ public class ConstraintAggregateBalanceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace14
 	 * AggregateBalancePerSafekeepingPlace14}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AggregateBalanceGuideline"</li>
 	 * <li>
@@ -83,6 +79,10 @@ public class ConstraintAggregateBalanceGuideline {
 	 * definition} =
 	 * "If AvailableQuantity and NotAvailableQuantity are both present, then the AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace14> forAggregateBalancePerSafekeepingPlace14 = new MMConstraint<AggregateBalancePerSafekeepingPlace14>() {
@@ -106,10 +106,6 @@ public class ConstraintAggregateBalanceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace9
 	 * AggregateBalancePerSafekeepingPlace9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AggregateBalanceGuideline"</li>
 	 * <li>
@@ -117,6 +113,10 @@ public class ConstraintAggregateBalanceGuideline {
 	 * definition} =
 	 * "If AvailableQuantity and NotAvailableQuantity are both present, then the AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace9> forAggregateBalancePerSafekeepingPlace9 = new MMConstraint<AggregateBalancePerSafekeepingPlace9>() {
@@ -140,10 +140,6 @@ public class ConstraintAggregateBalanceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace6
 	 * AggregateBalancePerSafekeepingPlace6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AggregateBalanceGuideline"</li>
 	 * <li>
@@ -151,6 +147,10 @@ public class ConstraintAggregateBalanceGuideline {
 	 * definition} =
 	 * "The AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity if AvailableQuantityand NotAvailableQuantity are both present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace6> forAggregateBalancePerSafekeepingPlace6 = new MMConstraint<AggregateBalancePerSafekeepingPlace6>() {
@@ -174,10 +174,6 @@ public class ConstraintAggregateBalanceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation25
 	 * AggregateBalanceInformation25}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AggregateBalanceGuideline"</li>
 	 * <li>
@@ -185,6 +181,10 @@ public class ConstraintAggregateBalanceGuideline {
 	 * definition} =
 	 * "If AvailableQuantity and NotAvailableQuantity are both present, then the AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -223,10 +223,6 @@ public class ConstraintAggregateBalanceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation20
 	 * AggregateBalanceInformation20}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AggregateBalanceGuideline"</li>
 	 * <li>
@@ -234,6 +230,10 @@ public class ConstraintAggregateBalanceGuideline {
 	 * definition} =
 	 * "If AvailableBalance and NotAvailableBalance are both present, then the AggregateBalance should be the sum of AvailableBalance and NotAvailableBalance."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -266,10 +266,6 @@ public class ConstraintAggregateBalanceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28
 	 * AggregateBalancePerSafekeepingPlace28}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AggregateBalanceGuideline"</li>
 	 * <li>
@@ -277,6 +273,10 @@ public class ConstraintAggregateBalanceGuideline {
 	 * definition} =
 	 * "If AvailableQuantity and NotAvailableQuantity are both present, then the AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -307,10 +307,6 @@ public class ConstraintAggregateBalanceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace30
 	 * AggregateBalancePerSafekeepingPlace30}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AggregateBalanceGuideline"</li>
 	 * <li>
@@ -318,6 +314,10 @@ public class ConstraintAggregateBalanceGuideline {
 	 * definition} =
 	 * "If AvailableQuantity and NotAvailableQuantity are both present, then the AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace30> forAggregateBalancePerSafekeepingPlace30 = new MMConstraint<AggregateBalancePerSafekeepingPlace30>() {
@@ -341,10 +341,6 @@ public class ConstraintAggregateBalanceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace15
 	 * AggregateBalancePerSafekeepingPlace15}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AggregateBalanceGuideline"</li>
 	 * <li>
@@ -352,6 +348,10 @@ public class ConstraintAggregateBalanceGuideline {
 	 * definition} =
 	 * "If AvailableQuantity and NotAvailableQuantity are both present, then the AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace15> forAggregateBalancePerSafekeepingPlace15 = new MMConstraint<AggregateBalancePerSafekeepingPlace15>() {
@@ -375,10 +375,6 @@ public class ConstraintAggregateBalanceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace19
 	 * AggregateBalancePerSafekeepingPlace19}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AggregateBalanceGuideline"</li>
 	 * <li>
@@ -386,6 +382,10 @@ public class ConstraintAggregateBalanceGuideline {
 	 * definition} =
 	 * "If AvailableBalance and NotAvailableBalance are both present, then the AggregateBalance should be the sum of AvailableBalance and NotAvailableBalance."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace19> forAggregateBalancePerSafekeepingPlace19 = new MMConstraint<AggregateBalancePerSafekeepingPlace19>() {
@@ -409,10 +409,6 @@ public class ConstraintAggregateBalanceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation33
 	 * AggregateBalanceInformation33}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AggregateBalanceGuideline"</li>
 	 * <li>
@@ -420,6 +416,10 @@ public class ConstraintAggregateBalanceGuideline {
 	 * definition} =
 	 * "If AvailableQuantity and NotAvailableQuantity are both present, then the AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AggregateBalanceInformation33> forAggregateBalanceInformation33 = new MMConstraint<AggregateBalanceInformation33>() {
@@ -443,10 +443,6 @@ public class ConstraintAggregateBalanceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation34
 	 * AggregateBalanceInformation34}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AggregateBalanceGuideline"</li>
 	 * <li>
@@ -454,6 +450,10 @@ public class ConstraintAggregateBalanceGuideline {
 	 * definition} =
 	 * "If AvailableBalance and NotAvailableBalance are both present, then the AggregateBalance should be the sum of AvailableBalance and NotAvailableBalance."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -483,10 +483,6 @@ public class ConstraintAggregateBalanceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation10
 	 * AggregateBalanceInformation10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AggregateBalanceGuideline"</li>
 	 * <li>
@@ -494,6 +490,10 @@ public class ConstraintAggregateBalanceGuideline {
 	 * definition} =
 	 * "If AvailableQuantity and NotAvailableQuantity are both present, then the AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AggregateBalanceInformation10> forAggregateBalanceInformation10 = new MMConstraint<AggregateBalanceInformation10>() {
@@ -517,10 +517,6 @@ public class ConstraintAggregateBalanceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace5
 	 * AggregateBalancePerSafekeepingPlace5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AggregateBalanceGuideline"</li>
 	 * <li>
@@ -528,6 +524,10 @@ public class ConstraintAggregateBalanceGuideline {
 	 * definition} =
 	 * "The AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity if AvailableQuantityand NotAvailableQuantity are both present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace5> forAggregateBalancePerSafekeepingPlace5 = new MMConstraint<AggregateBalancePerSafekeepingPlace5>() {
@@ -551,10 +551,6 @@ public class ConstraintAggregateBalanceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace25
 	 * AggregateBalancePerSafekeepingPlace25}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AggregateBalanceGuideline"</li>
 	 * <li>
@@ -562,6 +558,10 @@ public class ConstraintAggregateBalanceGuideline {
 	 * definition} =
 	 * "If AvailableQuantity and NotAvailableQuantity are both present, then the AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -602,10 +602,6 @@ public class ConstraintAggregateBalanceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace22
 	 * AggregateBalancePerSafekeepingPlace22}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AggregateBalanceGuideline"</li>
 	 * <li>
@@ -613,6 +609,10 @@ public class ConstraintAggregateBalanceGuideline {
 	 * definition} =
 	 * "If AvailableQuantity and NotAvailableQuantity are both present, then the AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace22> forAggregateBalancePerSafekeepingPlace22 = new MMConstraint<AggregateBalancePerSafekeepingPlace22>() {
@@ -636,10 +636,6 @@ public class ConstraintAggregateBalanceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace16
 	 * AggregateBalancePerSafekeepingPlace16}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AggregateBalanceGuideline"</li>
 	 * <li>
@@ -647,6 +643,10 @@ public class ConstraintAggregateBalanceGuideline {
 	 * definition} =
 	 * "If AvailableQuantity and NotAvailableQuantity are both present, then the AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace16> forAggregateBalancePerSafekeepingPlace16 = new MMConstraint<AggregateBalancePerSafekeepingPlace16>() {
@@ -670,10 +670,6 @@ public class ConstraintAggregateBalanceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24
 	 * AggregateBalancePerSafekeepingPlace24}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AggregateBalanceGuideline"</li>
 	 * <li>
@@ -681,6 +677,10 @@ public class ConstraintAggregateBalanceGuideline {
 	 * definition} =
 	 * "If AvailableQuantity and NotAvailableQuantity are both present, then the AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -721,10 +721,6 @@ public class ConstraintAggregateBalanceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace26
 	 * AggregateBalancePerSafekeepingPlace26}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AggregateBalanceGuideline"</li>
 	 * <li>
@@ -732,6 +728,10 @@ public class ConstraintAggregateBalanceGuideline {
 	 * definition} =
 	 * "If AvailableQuantity and NotAvailableQuantity are both present, then the AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace26> forAggregateBalancePerSafekeepingPlace26 = new MMConstraint<AggregateBalancePerSafekeepingPlace26>() {
@@ -755,10 +755,6 @@ public class ConstraintAggregateBalanceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation12
 	 * AggregateBalanceInformation12}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AggregateBalanceGuideline"</li>
 	 * <li>
@@ -766,6 +762,10 @@ public class ConstraintAggregateBalanceGuideline {
 	 * definition} =
 	 * "If AvailableQuantity and NotAvailableQuantity are both present, then the AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AggregateBalanceInformation12> forAggregateBalanceInformation12 = new MMConstraint<AggregateBalanceInformation12>() {
@@ -789,10 +789,6 @@ public class ConstraintAggregateBalanceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace10
 	 * AggregateBalancePerSafekeepingPlace10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AggregateBalanceGuideline"</li>
 	 * <li>
@@ -800,6 +796,10 @@ public class ConstraintAggregateBalanceGuideline {
 	 * definition} =
 	 * "If AvailableQuantity and NotAvailableQuantity are both present, then the AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace10> forAggregateBalancePerSafekeepingPlace10 = new MMConstraint<AggregateBalancePerSafekeepingPlace10>() {
@@ -823,10 +823,6 @@ public class ConstraintAggregateBalanceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace18
 	 * AggregateBalancePerSafekeepingPlace18}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AggregateBalanceGuideline"</li>
 	 * <li>
@@ -834,6 +830,10 @@ public class ConstraintAggregateBalanceGuideline {
 	 * definition} =
 	 * "If AvailableQuantity and NotAvailableQuantity are both present, then the AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace18> forAggregateBalancePerSafekeepingPlace18 = new MMConstraint<AggregateBalancePerSafekeepingPlace18>() {
@@ -857,10 +857,6 @@ public class ConstraintAggregateBalanceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace17
 	 * AggregateBalancePerSafekeepingPlace17}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AggregateBalanceGuideline"</li>
 	 * <li>
@@ -868,6 +864,10 @@ public class ConstraintAggregateBalanceGuideline {
 	 * definition} =
 	 * "If AvailableQuantity and NotAvailableQuantity are both present, then the AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace17> forAggregateBalancePerSafekeepingPlace17 = new MMConstraint<AggregateBalancePerSafekeepingPlace17>() {
@@ -891,10 +891,6 @@ public class ConstraintAggregateBalanceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation9
 	 * AggregateBalanceInformation9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AggregateBalanceGuideline"</li>
 	 * <li>
@@ -902,6 +898,10 @@ public class ConstraintAggregateBalanceGuideline {
 	 * definition} =
 	 * "If AvailableQuantity and NotAvailableQuantity are both present, then the AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AggregateBalanceInformation9> forAggregateBalanceInformation9 = new MMConstraint<AggregateBalanceInformation9>() {
@@ -925,10 +925,6 @@ public class ConstraintAggregateBalanceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace21
 	 * AggregateBalancePerSafekeepingPlace21}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AggregateBalanceGuideline"</li>
 	 * <li>
@@ -936,6 +932,10 @@ public class ConstraintAggregateBalanceGuideline {
 	 * definition} =
 	 * "If AvailableQuantity and NotAvailableQuantity are both present, then the AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -969,10 +969,6 @@ public class ConstraintAggregateBalanceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace27
 	 * AggregateBalancePerSafekeepingPlace27}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AggregateBalanceGuideline"</li>
 	 * <li>
@@ -980,6 +976,10 @@ public class ConstraintAggregateBalanceGuideline {
 	 * definition} =
 	 * "If AvailableQuantity and NotAvailableQuantity are both present, then the AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace27> forAggregateBalancePerSafekeepingPlace27 = new MMConstraint<AggregateBalancePerSafekeepingPlace27>() {
@@ -1003,10 +1003,6 @@ public class ConstraintAggregateBalanceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation24
 	 * AggregateBalanceInformation24}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AggregateBalanceGuideline"</li>
 	 * <li>
@@ -1014,6 +1010,10 @@ public class ConstraintAggregateBalanceGuideline {
 	 * definition} =
 	 * "If AvailableQuantity and NotAvailableQuantity are both present, then the AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AggregateBalanceInformation24> forAggregateBalanceInformation24 = new MMConstraint<AggregateBalanceInformation24>() {
@@ -1037,10 +1037,6 @@ public class ConstraintAggregateBalanceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation28
 	 * AggregateBalanceInformation28}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AggregateBalanceGuideline"</li>
 	 * <li>
@@ -1048,6 +1044,10 @@ public class ConstraintAggregateBalanceGuideline {
 	 * definition} =
 	 * "If AvailableQuantity and NotAvailableQuantity are both present, then the AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AggregateBalanceInformation28> forAggregateBalanceInformation28 = new MMConstraint<AggregateBalanceInformation28>() {
@@ -1071,10 +1071,6 @@ public class ConstraintAggregateBalanceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace13
 	 * AggregateBalancePerSafekeepingPlace13}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AggregateBalanceGuideline"</li>
 	 * <li>
@@ -1082,6 +1078,10 @@ public class ConstraintAggregateBalanceGuideline {
 	 * definition} =
 	 * "If AvailableQuantity and NotAvailableQuantity are both present, then the AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace13> forAggregateBalancePerSafekeepingPlace13 = new MMConstraint<AggregateBalancePerSafekeepingPlace13>() {
@@ -1105,10 +1105,6 @@ public class ConstraintAggregateBalanceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace31
 	 * AggregateBalancePerSafekeepingPlace31}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AggregateBalanceGuideline"</li>
 	 * <li>
@@ -1116,6 +1112,10 @@ public class ConstraintAggregateBalanceGuideline {
 	 * definition} =
 	 * "If AvailableQuantity and NotAvailableQuantity are both present, then the AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace31> forAggregateBalancePerSafekeepingPlace31 = new MMConstraint<AggregateBalancePerSafekeepingPlace31>() {
@@ -1139,10 +1139,6 @@ public class ConstraintAggregateBalanceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace23
 	 * AggregateBalancePerSafekeepingPlace23}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AggregateBalanceGuideline"</li>
 	 * <li>
@@ -1150,6 +1146,10 @@ public class ConstraintAggregateBalanceGuideline {
 	 * definition} =
 	 * "If AvailableQuantity and NotAvailableQuantity are both present, then the AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace23> forAggregateBalancePerSafekeepingPlace23 = new MMConstraint<AggregateBalancePerSafekeepingPlace23>() {
@@ -1173,10 +1173,6 @@ public class ConstraintAggregateBalanceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation18
 	 * AggregateBalanceInformation18}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AggregateBalanceGuideline"</li>
 	 * <li>
@@ -1184,6 +1180,10 @@ public class ConstraintAggregateBalanceGuideline {
 	 * definition} =
 	 * "If AvailableQuantity and NotAvailableQuantity are both present, then the AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AggregateBalanceInformation18> forAggregateBalanceInformation18 = new MMConstraint<AggregateBalanceInformation18>() {
@@ -1207,10 +1207,6 @@ public class ConstraintAggregateBalanceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation30
 	 * AggregateBalanceInformation30}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AggregateBalanceGuideline"</li>
 	 * <li>
@@ -1218,6 +1214,10 @@ public class ConstraintAggregateBalanceGuideline {
 	 * definition} =
 	 * "If AvailableQuantity and NotAvailableQuantity are both present, then the AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1247,10 +1247,6 @@ public class ConstraintAggregateBalanceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace29
 	 * AggregateBalancePerSafekeepingPlace29}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AggregateBalanceGuideline"</li>
 	 * <li>
@@ -1258,6 +1254,10 @@ public class ConstraintAggregateBalanceGuideline {
 	 * definition} =
 	 * "If AvailableQuantity and NotAvailableQuantity are both present, then the AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1288,10 +1288,6 @@ public class ConstraintAggregateBalanceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation16
 	 * AggregateBalanceInformation16}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AggregateBalanceGuideline"</li>
 	 * <li>
@@ -1299,6 +1295,10 @@ public class ConstraintAggregateBalanceGuideline {
 	 * definition} =
 	 * "If AvailableQuantity and NotAvailableQuantity are both present, then the AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AggregateBalanceInformation16> forAggregateBalanceInformation16 = new MMConstraint<AggregateBalanceInformation16>() {
@@ -1322,10 +1322,6 @@ public class ConstraintAggregateBalanceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace12
 	 * AggregateBalancePerSafekeepingPlace12}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AggregateBalanceGuideline"</li>
 	 * <li>
@@ -1333,6 +1329,10 @@ public class ConstraintAggregateBalanceGuideline {
 	 * definition} =
 	 * "If AvailableQuantity and NotAvailableQuantity are both present, then the AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace12> forAggregateBalancePerSafekeepingPlace12 = new MMConstraint<AggregateBalancePerSafekeepingPlace12>() {
@@ -1356,10 +1356,6 @@ public class ConstraintAggregateBalanceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace7
 	 * AggregateBalancePerSafekeepingPlace7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AggregateBalanceGuideline"</li>
 	 * <li>
@@ -1367,6 +1363,10 @@ public class ConstraintAggregateBalanceGuideline {
 	 * definition} =
 	 * "If AvailableQuantity and NotAvailableQuantity are both present, then the AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace7> forAggregateBalancePerSafekeepingPlace7 = new MMConstraint<AggregateBalancePerSafekeepingPlace7>() {
@@ -1390,10 +1390,6 @@ public class ConstraintAggregateBalanceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace20
 	 * AggregateBalancePerSafekeepingPlace20}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AggregateBalanceGuideline"</li>
 	 * <li>
@@ -1401,6 +1397,10 @@ public class ConstraintAggregateBalanceGuideline {
 	 * definition} =
 	 * "If AvailableQuantity and NotAvailableQuantity are both present, then the AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1434,10 +1434,6 @@ public class ConstraintAggregateBalanceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace11
 	 * AggregateBalancePerSafekeepingPlace11}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AggregateBalanceGuideline"</li>
 	 * <li>
@@ -1445,6 +1441,10 @@ public class ConstraintAggregateBalanceGuideline {
 	 * definition} =
 	 * "If AvailableQuantity and NotAvailableQuantity are both present, then the AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace11> forAggregateBalancePerSafekeepingPlace11 = new MMConstraint<AggregateBalancePerSafekeepingPlace11>() {
@@ -1468,10 +1468,6 @@ public class ConstraintAggregateBalanceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation14
 	 * AggregateBalanceInformation14}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AggregateBalanceGuideline"</li>
 	 * <li>
@@ -1479,6 +1475,10 @@ public class ConstraintAggregateBalanceGuideline {
 	 * definition} =
 	 * "If AvailableQuantity and NotAvailableQuantity are both present, then the AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AggregateBalanceInformation14> forAggregateBalanceInformation14 = new MMConstraint<AggregateBalanceInformation14>() {
@@ -1502,10 +1502,6 @@ public class ConstraintAggregateBalanceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation21
 	 * AggregateBalanceInformation21}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AggregateBalanceGuideline"</li>
 	 * <li>
@@ -1513,6 +1509,10 @@ public class ConstraintAggregateBalanceGuideline {
 	 * definition} =
 	 * "If AvailableQuantity and NotAvailableQuantity are both present, then the AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>

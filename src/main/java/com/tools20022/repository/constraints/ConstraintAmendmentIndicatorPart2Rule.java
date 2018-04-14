@@ -46,10 +46,6 @@ public class ConstraintAmendmentIndicatorPart2Rule {
 	 * expression} =
 	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/AmendmentInformationDetails&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/AmendmentIndicator&lt;/leftOperand&gt;&lt;rightOperand&gt;false&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AmendmentIndicatorPart2Rule"</li>
 	 * <li>
@@ -57,6 +53,10 @@ public class ConstraintAmendmentIndicatorPart2Rule {
 	 * definition} =
 	 * "ISO20022 Rule: AmendmentIndicatorRule\nIf AmendmentIndicator is true, then AmendementInformationDetails must be present, with amended mandate information.\nIf AmendmentIndicator is false, then AmendmentInformationDetails is not allowed.\n\nPart 2 Implements:\nIf AmendmentIndicator is false, then AmendmentInformationDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<MandateRelatedInformation5> forMandateRelatedInformation5 = new MMConstraint<MandateRelatedInformation5>() {
@@ -85,10 +85,6 @@ public class ConstraintAmendmentIndicatorPart2Rule {
 	 * expression} =
 	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/AmendmentInformationDetails&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/AmendmentIndicator&lt;/leftOperand&gt;&lt;rightOperand&gt;false&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AmendmentIndicatorPart2Rule"</li>
 	 * <li>
@@ -96,6 +92,10 @@ public class ConstraintAmendmentIndicatorPart2Rule {
 	 * definition} =
 	 * "ISO20022 Rule: AmendmentIndicatorRule\nIf AmendmentIndicator is true, then AmendementInformationDetails must be present, with amended mandate information.\nIf AmendmentIndicator is false, then AmendmentInformationDetails is not allowed.\n\nPart 2 Implements:\nIf AmendmentIndicator is false, then AmendmentInformationDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<MandateRelatedInformation4> forMandateRelatedInformation4 = new MMConstraint<MandateRelatedInformation4>() {

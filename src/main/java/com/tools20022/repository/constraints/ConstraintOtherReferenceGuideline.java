@@ -41,10 +41,6 @@ public class ConstraintOtherReferenceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.OrderCancellationStatusReportV03
 	 * OrderCancellationStatusReportV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OtherReferenceGuideline"</li>
 	 * <li>
@@ -52,6 +48,10 @@ public class ConstraintOtherReferenceGuideline {
 	 * definition} =
 	 * "OtherReference should be used to reference an order cancellation 'message' sent in a proprietary way or used for a system reference. If OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<OrderCancellationStatusReportV03> for_setr_OrderCancellationStatusReportV03 = new MMConstraint<OrderCancellationStatusReportV03>() {
@@ -75,10 +75,6 @@ public class ConstraintOtherReferenceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01
 	 * OrderConfirmationStatusReportV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OtherReferenceGuideline"</li>
 	 * <li>
@@ -86,6 +82,10 @@ public class ConstraintOtherReferenceGuideline {
 	 * definition} =
 	 * "OtherReference should be used to reference an order confirmation, order confirmation cancellation or order confirmation amendment 'message' sent in a proprietary way or used for a system reference. If OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<OrderConfirmationStatusReportV01> for_setr_OrderConfirmationStatusReportV01 = new MMConstraint<OrderConfirmationStatusReportV01>() {
@@ -109,10 +109,6 @@ public class ConstraintOtherReferenceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.RequestForOrderConfirmationStatusReportV02
 	 * RequestForOrderConfirmationStatusReportV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OtherReferenceGuideline"</li>
 	 * <li>
@@ -120,6 +116,10 @@ public class ConstraintOtherReferenceGuideline {
 	 * definition} =
 	 * "RequestDetails/Reference/OtherReference should be used to reference an order instruction or cancellation 'message' sent in a proprietary way or used for a system reference. If RequestDetails/Reference/OtherReference is present, RequestDetails/Reference/OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RequestForOrderConfirmationStatusReportV02> for_setr_RequestForOrderConfirmationStatusReportV02 = new MMConstraint<RequestForOrderConfirmationStatusReportV02>() {
@@ -143,10 +143,6 @@ public class ConstraintOtherReferenceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference4
 	 * MessageAndBusinessReference4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OtherReferenceGuideline"</li>
 	 * <li>
@@ -154,6 +150,10 @@ public class ConstraintOtherReferenceGuideline {
 	 * definition} =
 	 * "OtherReference should be used to reference an order instruction or cancellation 'message' sent in a proprietary way or used for a system reference. If OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<MessageAndBusinessReference4> forMessageAndBusinessReference4 = new MMConstraint<MessageAndBusinessReference4>() {
@@ -177,10 +177,6 @@ public class ConstraintOtherReferenceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountManagementMessageReference2
 	 * AccountManagementMessageReference2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OtherReferenceGuideline"</li>
 	 * <li>
@@ -188,6 +184,10 @@ public class ConstraintOtherReferenceGuideline {
 	 * definition} =
 	 * "LinkedReference/OtherReference should be used for an account opening or an account modification instruction sent by proprietary way or for system references. \r\nIf LinkedReference/OtherReference is present, LinkedReference/OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -226,10 +226,6 @@ public class ConstraintOtherReferenceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV02
 	 * OrderInstructionStatusReportV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OtherReferenceGuideline"</li>
 	 * <li>
@@ -237,6 +233,10 @@ public class ConstraintOtherReferenceGuideline {
 	 * definition} =
 	 * "OtherReference should be used for orders sent by proprietary way or for system references. \nIf OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email'."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<OrderInstructionStatusReportV02> for_setr_OrderInstructionStatusReportV02 = new MMConstraint<OrderInstructionStatusReportV02>() {
@@ -260,10 +260,6 @@ public class ConstraintOtherReferenceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountManagementMessageReference1
 	 * AccountManagementMessageReference1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OtherReferenceGuideline"</li>
 	 * <li>
@@ -271,6 +267,10 @@ public class ConstraintOtherReferenceGuideline {
 	 * definition} =
 	 * "OtherReference should be used for an account opening or an account modification instruction sent by proprietary way or for system references. \nIf OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -303,10 +303,6 @@ public class ConstraintOtherReferenceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference5
 	 * MessageAndBusinessReference5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OtherReferenceGuideline"</li>
 	 * <li>
@@ -314,6 +310,10 @@ public class ConstraintOtherReferenceGuideline {
 	 * definition} =
 	 * "OtherReference should be used to reference an order confirmation, order confirmation cancellation or order confirmation amendment 'message' sent in a proprietary way or used for a system reference. If OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<MessageAndBusinessReference5> forMessageAndBusinessReference5 = new MMConstraint<MessageAndBusinessReference5>() {
@@ -337,10 +337,6 @@ public class ConstraintOtherReferenceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.LinkedMessage4Choice
 	 * LinkedMessage4Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OtherReferenceGuideline"</li>
 	 * <li>
@@ -348,6 +344,10 @@ public class ConstraintOtherReferenceGuideline {
 	 * definition} =
 	 * "OtherReference should be used for an account opening or an account modification instruction sent in a proprietary way or for system references. \r\nIf OtherReference is present, OtherReference/MessageName must contain, for example, 'fax' or 'phone' or 'email'."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<LinkedMessage4Choice> forLinkedMessage4Choice = new MMConstraint<LinkedMessage4Choice>() {
@@ -371,10 +371,6 @@ public class ConstraintOtherReferenceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.OrderConfirmationStatusReportV02
 	 * OrderConfirmationStatusReportV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OtherReferenceGuideline"</li>
 	 * <li>
@@ -382,6 +378,10 @@ public class ConstraintOtherReferenceGuideline {
 	 * definition} =
 	 * "OtherReference should be used to reference an order confirmation cancellation 'message' sent in a proprietary way or used for a system reference. If OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<OrderConfirmationStatusReportV02> for_setr_OrderConfirmationStatusReportV02 = new MMConstraint<OrderConfirmationStatusReportV02>() {
@@ -405,10 +405,6 @@ public class ConstraintOtherReferenceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.RequestForOrderStatusReportV04
 	 * RequestForOrderStatusReportV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OtherReferenceGuideline"</li>
 	 * <li>
@@ -416,6 +412,10 @@ public class ConstraintOtherReferenceGuideline {
 	 * definition} =
 	 * "RequestDetails/Reference/OtherReference should be used to reference an order instruction or cancellation 'message' sent in a proprietary way or used for a system reference. If RequestDetails/Reference/OtherReference is present, RequestDetails/Reference/OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RequestForOrderStatusReportV04> for_setr_RequestForOrderStatusReportV04 = new MMConstraint<RequestForOrderStatusReportV04>() {
@@ -439,10 +439,6 @@ public class ConstraintOtherReferenceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountManagementMessageReference3
 	 * AccountManagementMessageReference3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OtherReferenceGuideline"</li>
 	 * <li>
@@ -450,6 +446,10 @@ public class ConstraintOtherReferenceGuideline {
 	 * definition} =
 	 * "LinkedReference/OtherReference should be used for an account opening or an account modification instruction sent by proprietary way or for system references. \r\nIf LinkedReference/OtherReference is present, LinkedReference/OtherReference/MessageName must contain, for example, 'fax' or 'phone' or 'email'."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -479,10 +479,6 @@ public class ConstraintOtherReferenceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountManagementMessageReference
 	 * AccountManagementMessageReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OtherReferenceGuideline"</li>
 	 * <li>
@@ -490,6 +486,10 @@ public class ConstraintOtherReferenceGuideline {
 	 * definition} =
 	 * "OtherReference should be used for an account opening or an account modification instruction sent by proprietary way or for system references. \nIf OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountManagementMessageReference> forAccountManagementMessageReference = new MMConstraint<AccountManagementMessageReference>() {
@@ -513,10 +513,6 @@ public class ConstraintOtherReferenceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.OrderCancellationStatusReportV04
 	 * OrderCancellationStatusReportV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OtherReferenceGuideline"</li>
 	 * <li>
@@ -524,6 +520,10 @@ public class ConstraintOtherReferenceGuideline {
 	 * definition} =
 	 * "OtherReference should be used to reference an order cancellation 'message' sent in a proprietary way or used for a system reference. If OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<OrderCancellationStatusReportV04> for_setr_OrderCancellationStatusReportV04 = new MMConstraint<OrderCancellationStatusReportV04>() {
@@ -547,10 +547,6 @@ public class ConstraintOtherReferenceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference2
 	 * MessageAndBusinessReference2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OtherReferenceGuideline"</li>
 	 * <li>
@@ -558,6 +554,10 @@ public class ConstraintOtherReferenceGuideline {
 	 * definition} =
 	 * "OtherReference should be used for orders sent by proprietary way or for system references. \nIf OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<MessageAndBusinessReference2> forMessageAndBusinessReference2 = new MMConstraint<MessageAndBusinessReference2>() {
@@ -581,10 +581,6 @@ public class ConstraintOtherReferenceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV03
 	 * OrderInstructionStatusReportV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OtherReferenceGuideline"</li>
 	 * <li>
@@ -592,6 +588,10 @@ public class ConstraintOtherReferenceGuideline {
 	 * definition} =
 	 * "OtherReference should be used to reference an order instruction or cancellation 'message' sent in a proprietary way or used for a system reference. If OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -625,10 +625,6 @@ public class ConstraintOtherReferenceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV04
 	 * OrderInstructionStatusReportV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OtherReferenceGuideline"</li>
 	 * <li>
@@ -636,6 +632,10 @@ public class ConstraintOtherReferenceGuideline {
 	 * definition} =
 	 * "Reference/OtherReference should be used to reference an order instruction sent in a proprietary way or used for a system reference. If Reference/OtherReference is present, Reference/OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =

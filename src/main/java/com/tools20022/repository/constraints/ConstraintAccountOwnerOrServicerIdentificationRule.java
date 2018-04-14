@@ -37,10 +37,6 @@ public class ConstraintAccountOwnerOrServicerIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.MarketClaimDetailsSD1
 	 * MarketClaimDetailsSD1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountOwnerOrServicerIdentificationRule"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintAccountOwnerOrServicerIdentificationRule {
 	 * definition} =
 	 * "At least one of the elements amongst AccountOwnerIdentification and AccountServicerIdentification must be present, both may be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<MarketClaimDetailsSD1> forMarketClaimDetailsSD1 = new MMConstraint<MarketClaimDetailsSD1>() {
@@ -71,10 +71,6 @@ public class ConstraintAccountOwnerOrServicerIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.GenericIdentificationSD1
 	 * GenericIdentificationSD1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountOwnerOrServicerIdentificationRule"</li>
 	 * <li>
@@ -82,6 +78,10 @@ public class ConstraintAccountOwnerOrServicerIdentificationRule {
 	 * definition} =
 	 * "At least one of the elements amongst AccountOwnerIdentification and AccountServicerIdentification must be present, both may be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<GenericIdentificationSD1> forGenericIdentificationSD1 = new MMConstraint<GenericIdentificationSD1>() {

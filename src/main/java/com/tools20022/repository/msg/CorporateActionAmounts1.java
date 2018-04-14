@@ -200,15 +200,15 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CorporateActionAmounts1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Specifies amounts in the framework of a corporate action event."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -245,16 +245,16 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "GrssCshAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GrossCashAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Amount of money before any deductions and allowances have been made."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmGrossCashAmount = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -305,10 +305,6 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NetCshAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NetCashAmount"</li>
 	 * <li>
@@ -316,6 +312,10 @@ public class CorporateActionAmounts1 {
 	 * definition} =
 	 * "Amount of money after deductions and allowances have been made, if any, ie, the total amount +/- charges/fees."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmNetCashAmount = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -366,10 +366,6 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "IsseDscntAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IssueDiscountAmount"</li>
 	 * <li>
@@ -377,6 +373,10 @@ public class CorporateActionAmounts1 {
 	 * definition} =
 	 * "Amount of money defined as a discount on a new issue or on a tranche of an existing issue."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmIssueDiscountAmount = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -427,10 +427,6 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SlctnFees"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SolicitationFees"</li>
 	 * <li>
@@ -438,6 +434,10 @@ public class CorporateActionAmounts1 {
 	 * definition} =
 	 * "Amount of cash premium made available in order to encourage participation in the offer. Payment is made to a third party who has solicited an entity to take part in the offer."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmSolicitationFees = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -488,16 +488,16 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CshInLieuOfShr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CashInLieuOfShare"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Cash disbursement in lieu of a fractional quantity of, eg, equity."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmCashInLieuOfShare = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -548,10 +548,6 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OrgnlAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OriginalAmount"</li>
 	 * <li>
@@ -559,6 +555,10 @@ public class CorporateActionAmounts1 {
 	 * definition} =
 	 * "Amount in its original currency when conversion from/into another currency has occurred."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmOriginalAmount = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -609,16 +609,16 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CptlGn"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CapitalGain"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Amount of money distributed as the result of a capital gain."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmCapitalGain = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -669,15 +669,15 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "IntrstAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InterestAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount of money representing a coupon payment."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmInterestAmount = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -728,10 +728,6 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "IndmntyAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IndemnityAmount"</li>
 	 * <li>
@@ -739,6 +735,10 @@ public class CorporateActionAmounts1 {
 	 * definition} =
 	 * "(Unique to France) Amount due to a buyer of securities dealt prior to ex date which may be subject to different rate of taxation."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmIndemnityAmount = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -789,10 +789,6 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RedPrmAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RedemptionPremiumAmount"</li>
 	 * <li>
@@ -800,6 +796,10 @@ public class CorporateActionAmounts1 {
 	 * definition} =
 	 * "Amount of money (not interest) in addition to the principal at the redemption of a bond."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmRedemptionPremiumAmount = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -850,10 +850,6 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ManfctrdDvddAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ManufacturedDividendAmount"</li>
 	 * <li>
@@ -861,6 +857,10 @@ public class CorporateActionAmounts1 {
 	 * definition} =
 	 * "Amount of money that the borrower pays to the lender as a compensation. It does not entitle the lender to reclaim any tax credit and is sometimes treated differently by the local tax authorities of the lender."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmManufacturedDividendAmount = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -911,10 +911,6 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrncplOrCrps"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PrincipalOrCorpus"</li>
 	 * <li>
@@ -922,6 +918,10 @@ public class CorporateActionAmounts1 {
 	 * definition} =
 	 * "Amount of money representing a distribution of a bond's principal, eg, repayment of outstanding debt."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmPrincipalOrCorpus = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -972,15 +972,15 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RinvstmtAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReinvestmentAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount of money reinvested in additional securities."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmReinvestmentAmount = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -1031,15 +1031,15 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MktClmAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MarketClaimAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount of money resulting from a market claim."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmMarketClaimAmount = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -1090,10 +1090,6 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "FullyFrnkdAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FullyFrankedAmount"</li>
 	 * <li>
@@ -1101,6 +1097,10 @@ public class CorporateActionAmounts1 {
 	 * definition} =
 	 * "Amount resulting from a fully franked dividend paid by a company; amount includes tax credit for companies that have made sufficient tax payments during the fiscal period."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmFullyFrankedAmount = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -1151,10 +1151,6 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "UfrnkdAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnfrankedAmount"</li>
 	 * <li>
@@ -1162,6 +1158,10 @@ public class CorporateActionAmounts1 {
 	 * definition} =
 	 * "Amount resulting from an unfranked dividend paid by a company; the amount does not include tax credit and is subject to withholding tax."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmUnfrankedAmount = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -1212,16 +1212,16 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SndryOrOthrAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SundryOrOtherAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Amount of money related to taxable income that cannot be categorised."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmSundryOrOtherAmount = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -1272,10 +1272,6 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SpclCncssnAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SpecialConcessionAmount"</li>
 	 * <li>
@@ -1283,6 +1279,10 @@ public class CorporateActionAmounts1 {
 	 * definition} =
 	 * "Amount of drawdown or other reduction from or in addition to the deal price."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmSpecialConcessionAmount = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -1333,10 +1333,6 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "EntitldAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EntitledAmount"</li>
 	 * <li>
@@ -1344,6 +1340,10 @@ public class CorporateActionAmounts1 {
 	 * definition} =
 	 * "Cash amount based on terms of corporate action event and balance of underlying securities, entitled to/from account owner (which may be positive or negative)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmEntitledAmount = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -1394,10 +1394,6 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CshIncntiv"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CashIncentive"</li>
 	 * <li>
@@ -1405,6 +1401,10 @@ public class CorporateActionAmounts1 {
 	 * definition} =
 	 * "Rate of the cash premium made available if the securities holder consents or participates to an event, e.g. consent fees."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmCashIncentive = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -1455,10 +1455,6 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AddtlSbcptCost"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalSubscriptionCost"</li>
 	 * <li>
@@ -1466,6 +1462,10 @@ public class CorporateActionAmounts1 {
 	 * definition} =
 	 * "Additional costs - coming on top of the subscription costs - which the subscriber should pay as per the subscription process. Not to be used for the subscription cost itself."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmAdditionalSubscriptionCost = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -1515,15 +1515,15 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TaxFreeAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxFreeAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount of money that has not been subject to taxation."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmTaxFreeAmount = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -1573,15 +1573,15 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TaxDfrrdAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxDeferredAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount of income eligible for deferred taxation."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmTaxDeferredAmount = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -1631,10 +1631,6 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "GrmnLclTax1Amt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GermanLocalTax1Amount"</li>
 	 * <li>
@@ -1642,6 +1638,10 @@ public class CorporateActionAmounts1 {
 	 * definition} =
 	 * "Local tax (ZAS Anrechnungsbetrag) subject to interest down payment tax (proportion of interest liable for interest down payment tax/interim profit that is not covered by the tax exempt amount)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmGermanLocalTax1Amount = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -1691,10 +1691,6 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "GrmnLclTax2Amt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GermanLocalTax2Amount"</li>
 	 * <li>
@@ -1702,6 +1698,10 @@ public class CorporateActionAmounts1 {
 	 * definition} =
 	 * "Local tax (ZAS Pflichtige Zinsen) interest liable for interest down payment tax (proportion of gross interest per unit/interim profits that is not covered by the credit in the interest pool)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmGermanLocalTax2Amount = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -1751,10 +1751,6 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "GrmnLclTax3Amt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GermanLocalTax3Amount"</li>
 	 * <li>
@@ -1762,6 +1758,10 @@ public class CorporateActionAmounts1 {
 	 * definition} =
 	 * "Local tax (Zinstopf) offset interest per unit against tax exempt amount (variation to offset interest per unit in relation to tax exempt amount)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmGermanLocalTax3Amount = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -1811,10 +1811,6 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "GrmnLclTax4Amt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GermanLocalTax4Amount"</li>
 	 * <li>
@@ -1822,6 +1818,10 @@ public class CorporateActionAmounts1 {
 	 * definition} =
 	 * "Local tax (Ertrag Besitzanteilig) yield liable for interest down payment tax."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmGermanLocalTax4Amount = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -1871,15 +1871,15 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "StockXchgTaxAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "StockExchangeTaxAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount of stock exchange tax."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmStockExchangeTaxAmount = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -1929,16 +1929,16 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TrfTaxAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TransferTaxAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Tax levied on a transfer of ownership of financial instrument."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmTransferTaxAmount = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -1988,15 +1988,15 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TxTaxAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TransactionTaxAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount of transaction tax."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmTransactionTaxAmount = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -2046,15 +2046,15 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ValAddedTaxAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ValueAddedTaxAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Tax on value added."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmValueAddedTaxAmount = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -2104,10 +2104,6 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "EURtntnTaxAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EURetentionTaxAmount"</li>
 	 * <li>
@@ -2115,6 +2111,10 @@ public class CorporateActionAmounts1 {
 	 * definition} =
 	 * "Total amount of tax withheld at source in conformance with the EU Savings Directive."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmEURetentionTaxAmount = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -2164,10 +2164,6 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "LclTaxAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LocalTaxAmount"</li>
 	 * <li>
@@ -2175,6 +2171,10 @@ public class CorporateActionAmounts1 {
 	 * definition} =
 	 * "Amount of tax charged by the jurisdiction in which the financial instrument settles."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmLocalTaxAmount = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -2224,15 +2224,15 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PmtLevyTaxAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PaymentLevyTaxAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Payment levy tax."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmPaymentLevyTaxAmount = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -2282,10 +2282,6 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CtryNtlFdrlTaxAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CountryNationalFederalTaxAmount"</li>
 	 * <li>
@@ -2293,6 +2289,10 @@ public class CorporateActionAmounts1 {
 	 * definition} =
 	 * "Amount of country, national or federal tax charged by the jurisdiction in which the account servicer is located."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmCountryNationalFederalTaxAmount = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -2342,15 +2342,15 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "StmpDtyAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "StampDutyAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount of stamp duty."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmStampDutyAmount = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -2400,10 +2400,6 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TaxRclmAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxReclaimAmount"</li>
 	 * <li>
@@ -2411,6 +2407,10 @@ public class CorporateActionAmounts1 {
 	 * definition} =
 	 * "Amount that was paid in excess of actual tax obligation and was reclaimed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmTaxReclaimAmount = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -2461,10 +2461,6 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TaxCdtAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxCreditAmount"</li>
 	 * <li>
@@ -2472,6 +2468,10 @@ public class CorporateActionAmounts1 {
 	 * definition} =
 	 * "Amount of taxes that have been previously paid in relation to the taxable event."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmTaxCreditAmount = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -2521,10 +2521,6 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "WhldgOfFrgnTaxAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "WithholdingOfForeignTaxAmount"</li>
 	 * <li>
@@ -2532,6 +2528,10 @@ public class CorporateActionAmounts1 {
 	 * definition} =
 	 * "Amount of money withheld by the jurisdiction in which the income was originally paid, for which relief at source and/or reclaim may be possible."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmWithholdingOfForeignTaxAmount = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -2581,10 +2581,6 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "WhldgOfLclTaxAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "WithholdingOfLocalTaxAmount"</li>
 	 * <li>
@@ -2592,6 +2588,10 @@ public class CorporateActionAmounts1 {
 	 * definition} =
 	 * "Amount of money withheld by the jurisdiction in which the account owner is located, for which relief at source and/or reclaim may be possible."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmWithholdingOfLocalTaxAmount = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -2641,15 +2641,15 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AddtlTaxAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalTaxAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount of additional taxes that cannot be categorised."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmAdditionalTaxAmount = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -2699,10 +2699,6 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "WhldgTaxAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "WithholdingTaxAmount"</li>
 	 * <li>
@@ -2710,6 +2706,10 @@ public class CorporateActionAmounts1 {
 	 * definition} =
 	 * "Amount of a cash distribution that will be withheld by a tax authority."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmWithholdingTaxAmount = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -2759,15 +2759,15 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "FsclStmpAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FiscalStampAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount of fiscal tax to apply."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmFiscalStampAmount = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -2818,16 +2818,16 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ExctgBrkrAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ExecutingBrokerAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Amount of money paid to an executing broker as a commission."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmExecutingBrokerAmount = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -2878,15 +2878,15 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PngAgtComssnAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PayingAgentCommissionAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount of paying/sub-paying agent commission."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmPayingAgentCommissionAmount = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -2937,15 +2937,15 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "LclBrkrComssnAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LocalBrokerCommissionAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Local broker's commission."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmLocalBrokerCommissionAmount = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -2996,15 +2996,15 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PstgFeeAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PostageFeeAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount of money paid for delivery by regular post mail."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmPostageFeeAmount = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -3055,10 +3055,6 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RgltryFeesAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RegulatoryFeesAmount"</li>
 	 * <li>
@@ -3066,6 +3062,10 @@ public class CorporateActionAmounts1 {
 	 * definition} =
 	 * "Amount of money charged by a regulatory authority, eg, Securities and Exchange fees."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmRegulatoryFeesAmount = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -3116,16 +3116,16 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ShppgFeesAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ShippingFeesAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Amount of money (including insurance) paid for delivery by carrier."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmShippingFeesAmount = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {
@@ -3176,10 +3176,6 @@ public class CorporateActionAmounts1 {
 	 * CorporateActionAmounts1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ChrgsAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ChargesAmount"</li>
 	 * <li>
@@ -3187,6 +3183,10 @@ public class CorporateActionAmounts1 {
 	 * definition} =
 	 * "Amount of money paid for the provision of financial services that cannot be categorised by another qualifier."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>> mmChargesAmount = new MMMessageAttribute<CorporateActionAmounts1, Optional<ActiveCurrencyAndAmount>>() {

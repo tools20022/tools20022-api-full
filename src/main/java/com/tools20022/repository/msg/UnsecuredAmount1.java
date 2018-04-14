@@ -56,14 +56,14 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "UnsecuredAmount1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Value of cash held, on an unsecured basis at a bank."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -93,10 +93,6 @@ public class UnsecuredAmount1 {
 	 * UnsecuredAmount1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DfltdCtrPtyAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DefaultedCounterpartyAmount"</li>
 	 * <li>
@@ -104,6 +100,10 @@ public class UnsecuredAmount1 {
 	 * definition} =
 	 * "Value of cash held, on an unsecured basis, at the defaulting members CM1 and CM2 at T-1, and flows for the remainder of the horizon. Indicates if the balance or flows were positive (true) or negative (false)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<UnsecuredAmount1, AmountAndDirection6> mmDefaultedCounterpartyAmount = new MMMessageAssociationEnd<UnsecuredAmount1, AmountAndDirection6>() {
@@ -153,10 +153,6 @@ public class UnsecuredAmount1 {
 	 * UnsecuredAmount1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NotDfltdCtrPtyAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NotDefaultedCounterpartyAmount"</li>
 	 * <li>
@@ -164,6 +160,10 @@ public class UnsecuredAmount1 {
 	 * definition} =
 	 * "Value of cash held, on an unsecured basis, at authorised credit institutions other than the defaulting members CM1 and CM2. Indicates if the balance or flows were positive (true) or negative (false)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<UnsecuredAmount1, AmountAndDirection6> mmNotDefaultedCounterpartyAmount = new MMMessageAssociationEnd<UnsecuredAmount1, AmountAndDirection6>() {

@@ -35,12 +35,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * businessProcessCatalogue} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#catalogue
  * GeneratedRepository.catalogue}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "ISO Archive"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "ISO Archive"</li>
  * </ul>
  */
 public class ISOArchive {

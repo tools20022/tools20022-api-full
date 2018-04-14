@@ -35,10 +35,6 @@ public class ConstraintRejectedElementRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RejectedStatus9
 	 * RejectedStatus9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RejectedElementRule"</li>
 	 * <li>
@@ -46,6 +42,10 @@ public class ConstraintRejectedElementRule {
 	 * definition} =
 	 * "Either Reason or AdditionalInformation must be present. Both may be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RejectedStatus9> forRejectedStatus9 = new MMConstraint<RejectedStatus9>() {

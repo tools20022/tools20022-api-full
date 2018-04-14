@@ -38,10 +38,6 @@ public class ConstraintPreviousReferenceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference1
 	 * MessageAndBusinessReference1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PreviousReferenceRule"</li>
 	 * <li>
@@ -49,6 +45,10 @@ public class ConstraintPreviousReferenceRule {
 	 * definition} =
 	 * "If PreviousReference/MessageName is present, it must contain 540 or 542 or must start with sese.001 or sese.002 or sese.005 or sese.006 and Reference must contain the MessageReference from the Application Header."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<MessageAndBusinessReference1> forMessageAndBusinessReference1 = new MMConstraint<MessageAndBusinessReference1>() {
@@ -72,10 +72,6 @@ public class ConstraintPreviousReferenceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference11
 	 * MessageAndBusinessReference11}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PreviousReferenceRule"</li>
 	 * <li>
@@ -83,6 +79,10 @@ public class ConstraintPreviousReferenceRule {
 	 * definition} =
 	 * "If Reference/PreviousReference/MessageName is present, it must start with sese.001, sese.002, sese.005, sese.006, sese.012 or sese.014."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -112,10 +112,6 @@ public class ConstraintPreviousReferenceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference6
 	 * MessageAndBusinessReference6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PreviousReferenceRule"</li>
 	 * <li>
@@ -123,6 +119,10 @@ public class ConstraintPreviousReferenceRule {
 	 * definition} =
 	 * "If PreviousReference/MessageName is present, it must contain 540 or 542 or must start with sese.001, sese.002, sese.005 or sese.006 and and PreviousReference/Reference must contain the reference of a message in this list."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -155,10 +155,6 @@ public class ConstraintPreviousReferenceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference8
 	 * MessageAndBusinessReference8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PreviousReferenceRule"</li>
 	 * <li>
@@ -166,6 +162,10 @@ public class ConstraintPreviousReferenceRule {
 	 * definition} =
 	 * "If Reference/PreviousReference/MessageName is present, it must start with sese.001, sese.002, sese.005, sese.006, sese.012 or sese.014."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -204,10 +204,6 @@ public class ConstraintPreviousReferenceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference7
 	 * MessageAndBusinessReference7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PreviousReferenceRule"</li>
 	 * <li>
@@ -215,6 +211,10 @@ public class ConstraintPreviousReferenceRule {
 	 * definition} =
 	 * "If Reference/PreviousReference/MessageName is present, it must start with sese.001, sese.002, sese.005, sese.006, sese.012 or sese.014."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>

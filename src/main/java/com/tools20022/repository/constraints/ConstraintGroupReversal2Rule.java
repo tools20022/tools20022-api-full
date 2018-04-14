@@ -37,10 +37,6 @@ public class ConstraintGroupReversal2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.pain.CustomerPaymentReversalV01
 	 * CustomerPaymentReversalV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GroupReversal2Rule"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintGroupReversal2Rule {
 	 * definition} =
 	 * "If GroupHeader/GroupReversal is true, then OriginalGroupInformation/ReversalReasonInformation/ReversalReason must present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CustomerPaymentReversalV01> for_pain_CustomerPaymentReversalV01 = new MMConstraint<CustomerPaymentReversalV01>() {

@@ -96,16 +96,16 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CorporateActionConfirmationDetailsExtension1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Provides additional information regarding corporate action confirmation details."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -132,15 +132,15 @@ public class CorporateActionConfirmationDetailsExtension1 {
 	 * CorporateActionConfirmationDetailsExtension1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PlcAndNm"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PlaceAndName"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "xPath to the element that is being extended."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionConfirmationDetailsExtension1, Max350Text> mmPlaceAndName = new MMMessageAttribute<CorporateActionConfirmationDetailsExtension1, Max350Text>() {
@@ -185,13 +185,6 @@ public class CorporateActionConfirmationDetailsExtension1 {
 	 * CorporateActionConfirmationDetailsExtension1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DTCCOptnTp"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = DTCCSynonym: Option Type</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DTCCOptionType"</li>
 	 * <li>
@@ -199,6 +192,13 @@ public class CorporateActionConfirmationDetailsExtension1 {
 	 * definition} =
 	 * "Used for the option types that cannot be classified in ISO and marked as Option Type: OTHR. Options like convert and dividend reinvestment, or DTC (The Depository Trust Corporation) special option types for the instances where the event and security are eligible for DTC (The Depository Trust Corporation) services like Foreign Tax, Foreign Currency Payments, etc."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Option Type</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionConfirmationDetailsExtension1, Optional<Max4AlphaNumericText>> mmDTCCOptionType = new MMMessageAttribute<CorporateActionConfirmationDetailsExtension1, Optional<Max4AlphaNumericText>>() {
@@ -244,6 +244,11 @@ public class CorporateActionConfirmationDetailsExtension1 {
 	 * CorporateActionConfirmationDetailsExtension1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OrgnlCcy"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OriginalCurrency"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Original currency initially announced by the issuer."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = DTCCSynonym: Original Currency</li>
@@ -251,11 +256,6 @@ public class CorporateActionConfirmationDetailsExtension1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "OriginalCurrency"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Original currency initially announced by the issuer."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionConfirmationDetailsExtension1, Optional<ActiveCurrencyCode>> mmOriginalCurrency = new MMMessageAttribute<CorporateActionConfirmationDetailsExtension1, Optional<ActiveCurrencyCode>>() {
@@ -300,6 +300,13 @@ public class CorporateActionConfirmationDetailsExtension1 {
 	 * CorporateActionConfirmationDetailsExtension1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DTCGnrtdDpstRefId"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DTCGeneratedDepositReferenceIdentification"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Unique identification issued by DTC (The Depository Trust Corporation) for reorganisation deposit."
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = DTCCSynonym: DTC Generated Deposit Reference
@@ -308,13 +315,6 @@ public class CorporateActionConfirmationDetailsExtension1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DTCGeneratedDepositReferenceIdentification"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Unique identification issued by DTC (The Depository Trust Corporation) for reorganisation deposit."
-	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionConfirmationDetailsExtension1, Optional<Max16Text>> mmDTCGeneratedDepositReferenceIdentification = new MMMessageAttribute<CorporateActionConfirmationDetailsExtension1, Optional<Max16Text>>() {
@@ -359,6 +359,13 @@ public class CorporateActionConfirmationDetailsExtension1 {
 	 * CorporateActionConfirmationDetailsExtension1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PtcptDpstRefId"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ParticipantDepositReferenceIdentification"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Unique identifier issued by a participant for the reorganisation deposit."
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = DTCCSynonym: Participant Deposit Reference
@@ -367,13 +374,6 @@ public class CorporateActionConfirmationDetailsExtension1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ParticipantDepositReferenceIdentification"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Unique identifier issued by a participant for the reorganisation deposit."
-	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionConfirmationDetailsExtension1, Optional<Max16Text>> mmParticipantDepositReferenceIdentification = new MMMessageAttribute<CorporateActionConfirmationDetailsExtension1, Optional<Max16Text>>() {
@@ -418,6 +418,11 @@ public class CorporateActionConfirmationDetailsExtension1 {
 	 * CorporateActionConfirmationDetailsExtension1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DpstDt"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DepositDate"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Date at which the reorganisation deposit was made."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = DTCCSynonym: Deposit Date</li>
@@ -425,11 +430,6 @@ public class CorporateActionConfirmationDetailsExtension1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DepositDate"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Date at which the reorganisation deposit was made."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionConfirmationDetailsExtension1, Optional<ISODate>> mmDepositDate = new MMMessageAttribute<CorporateActionConfirmationDetailsExtension1, Optional<ISODate>>() {
@@ -474,6 +474,12 @@ public class CorporateActionConfirmationDetailsExtension1 {
 	 * CorporateActionConfirmationDetailsExtension1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CtdyCstmrId"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CustodyCustomerIdentification"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Participant generated account number for custody deposits."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = DTCCSynonym: Custody Customer Identification</li>
@@ -481,12 +487,6 @@ public class CorporateActionConfirmationDetailsExtension1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CustodyCustomerIdentification"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Participant generated account number for custody deposits."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionConfirmationDetailsExtension1, Optional<Max35Text>> mmCustodyCustomerIdentification = new MMMessageAttribute<CorporateActionConfirmationDetailsExtension1, Optional<Max35Text>>() {
@@ -531,6 +531,12 @@ public class CorporateActionConfirmationDetailsExtension1 {
 	 * CorporateActionConfirmationDetailsExtension1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AsOfDt"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AsOfDate"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Effective date of the adjustment to the participant account."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = DTCCSynonym: As Of Date</li>
@@ -538,12 +544,6 @@ public class CorporateActionConfirmationDetailsExtension1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AsOfDate"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Effective date of the adjustment to the participant account."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionConfirmationDetailsExtension1, Optional<ISODate>> mmAsOfDate = new MMMessageAttribute<CorporateActionConfirmationDetailsExtension1, Optional<ISODate>>() {
@@ -588,6 +588,13 @@ public class CorporateActionConfirmationDetailsExtension1 {
 	 * CorporateActionConfirmationDetailsExtension1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PtcptCrossRefId"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ParticipantCrossReferenceIdentification"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Transaction identification that the participant provides on the reorganisation deposit."
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = DTCCSynonym: Participant Cross Reference Identification
@@ -596,13 +603,6 @@ public class CorporateActionConfirmationDetailsExtension1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ParticipantCrossReferenceIdentification"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Transaction identification that the participant provides on the reorganisation deposit."
-	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionConfirmationDetailsExtension1, Optional<Max16Text>> mmParticipantCrossReferenceIdentification = new MMMessageAttribute<CorporateActionConfirmationDetailsExtension1, Optional<Max16Text>>() {
@@ -648,13 +648,6 @@ public class CorporateActionConfirmationDetailsExtension1 {
 	 * CorporateActionConfirmationDetailsExtension1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DTCWhldgTaxRate"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = DTCCSynonym: DTC Withholding Tax Rate</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DTCWithholdingTaxRate"</li>
 	 * <li>
@@ -662,6 +655,13 @@ public class CorporateActionConfirmationDetailsExtension1 {
 	 * definition} =
 	 * "Withholding tax rate after the application of statutory or treaty withholding percentages used at DTC (The Depository Trust Corporation)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: DTC Withholding Tax Rate</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionConfirmationDetailsExtension1, Optional<DecimalNumber>> mmDTCWithholdingTaxRate = new MMMessageAttribute<CorporateActionConfirmationDetailsExtension1, Optional<DecimalNumber>>() {
@@ -707,13 +707,6 @@ public class CorporateActionConfirmationDetailsExtension1 {
 	 * CorporateActionConfirmationDetailsExtension1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DTCCshRate"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = DTCCSynonym: DTC Cash Rate</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DTCCashRate"</li>
 	 * <li>
@@ -721,6 +714,13 @@ public class CorporateActionConfirmationDetailsExtension1 {
 	 * definition} =
 	 * "Rate of the dividend payable in cash at DTC (The Depository Trust Corporation)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: DTC Cash Rate</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionConfirmationDetailsExtension1, Optional<DecimalNumber>> mmDTCCashRate = new MMMessageAttribute<CorporateActionConfirmationDetailsExtension1, Optional<DecimalNumber>>() {
@@ -766,6 +766,11 @@ public class CorporateActionConfirmationDetailsExtension1 {
 	 * CorporateActionConfirmationDetailsExtension1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PyoutNb"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PayoutNumber"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Unique number associated with a payout within an option."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = DTCCSynonym: Payout Number</li>
@@ -773,11 +778,6 @@ public class CorporateActionConfirmationDetailsExtension1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PayoutNumber"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Unique number associated with a payout within an option."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionConfirmationDetailsExtension1, Exact3NumericText> mmPayoutNumber = new MMMessageAttribute<CorporateActionConfirmationDetailsExtension1, Exact3NumericText>() {
@@ -823,13 +823,6 @@ public class CorporateActionConfirmationDetailsExtension1 {
 	 * CorporateActionConfirmationDetailsExtension1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DTCSctyRate"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = DTCCSynonym: DTC Security Rate</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DTCSecurityRate"</li>
 	 * <li>
@@ -837,6 +830,13 @@ public class CorporateActionConfirmationDetailsExtension1 {
 	 * definition} =
 	 * "Rate of the dividend payable in stock rather than in cash at DTC (The Depository Trust Corporation)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: DTC Security Rate</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionConfirmationDetailsExtension1, Optional<DecimalNumber>> mmDTCSecurityRate = new MMMessageAttribute<CorporateActionConfirmationDetailsExtension1, Optional<DecimalNumber>>() {
@@ -882,6 +882,12 @@ public class CorporateActionConfirmationDetailsExtension1 {
 	 * CorporateActionConfirmationDetailsExtension1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AllctdCshVal"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AllocatedCashValue"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Cash value calculated based on the rate and allocated positions."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = DTCCSynonym: Allocated Cash Value</li>
@@ -889,12 +895,6 @@ public class CorporateActionConfirmationDetailsExtension1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AllocatedCashValue"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Cash value calculated based on the rate and allocated positions."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionConfirmationDetailsExtension1, Optional<DecimalNumber>> mmAllocatedCashValue = new MMMessageAttribute<CorporateActionConfirmationDetailsExtension1, Optional<DecimalNumber>>() {

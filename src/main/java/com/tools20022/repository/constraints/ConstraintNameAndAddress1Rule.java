@@ -38,10 +38,6 @@ public class ConstraintNameAndAddress1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DeliveryParameters4
 	 * DeliveryParameters4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NameAndAddress1Rule"</li>
 	 * <li>
@@ -49,6 +45,10 @@ public class ConstraintNameAndAddress1Rule {
 	 * definition} =
 	 * "If RegisteredAddressIndicator is \"true\" or \"1\" (Yes), then NameAndAddress is not allowed.\nIf RegisteredAddressIndicator is \"false\" or \"0\" (No), then NameAndAddress must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<DeliveryParameters4> forDeliveryParameters4 = new MMConstraint<DeliveryParameters4>() {
@@ -72,10 +72,6 @@ public class ConstraintNameAndAddress1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DeliveryParameters2
 	 * DeliveryParameters2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NameAndAddress1Rule"</li>
 	 * <li>
@@ -83,6 +79,10 @@ public class ConstraintNameAndAddress1Rule {
 	 * definition} =
 	 * "If RegisteredAddressIndicator is \"true\" or \"1\" (Yes), then NameAndAddress is not allowed.\nIf RegisteredAddressIndicator is \"false\" or \"0\" (No), then NameAndAddress must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<DeliveryParameters2> forDeliveryParameters2 = new MMConstraint<DeliveryParameters2>() {

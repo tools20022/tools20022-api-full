@@ -73,16 +73,16 @@ import java.util.Optional;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "AccountReportedMovement"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Provides statistical information on the number of movements and their value for a particular account."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class AccountReportedMovement {
@@ -139,10 +139,6 @@ public class AccountReportedMovement {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AccountReportedMovement
 	 * AccountReportedMovement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MonthlyPaymentValue"</li>
 	 * <li>
@@ -150,6 +146,10 @@ public class AccountReportedMovement {
 	 * definition} =
 	 * "Monthly average of the payment amounts (that is, payments going out) over a year."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<AccountReportedMovement, CurrencyAndAmount> mmMonthlyPaymentValue = new MMBusinessAttribute<AccountReportedMovement, CurrencyAndAmount>() {
@@ -228,10 +228,6 @@ public class AccountReportedMovement {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AccountReportedMovement
 	 * AccountReportedMovement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MonthlyReceivedValue"</li>
 	 * <li>
@@ -239,6 +235,10 @@ public class AccountReportedMovement {
 	 * definition} =
 	 * "Monthly average of the received amounts over a year (that is, payments coming in)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<AccountReportedMovement, CurrencyAndAmount> mmMonthlyReceivedValue = new MMBusinessAttribute<AccountReportedMovement, CurrencyAndAmount>() {
@@ -316,10 +316,6 @@ public class AccountReportedMovement {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AccountReportedMovement
 	 * AccountReportedMovement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MonthlyTransactionNumber"</li>
 	 * <li>
@@ -327,6 +323,10 @@ public class AccountReportedMovement {
 	 * definition} =
 	 * "Monthly average of the number of payments (coming in and going out) over a year."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<AccountReportedMovement, Max35Text> mmMonthlyTransactionNumber = new MMBusinessAttribute<AccountReportedMovement, Max35Text>() {
@@ -405,10 +405,6 @@ public class AccountReportedMovement {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AccountReportedMovement
 	 * AccountReportedMovement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AverageBalance"</li>
 	 * <li>
@@ -416,6 +412,10 @@ public class AccountReportedMovement {
 	 * definition} =
 	 * "Sum of the end of day balances over a month divided by the number of business days in the month."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<AccountReportedMovement, CurrencyAndAmount> mmAverageBalance = new MMBusinessAttribute<AccountReportedMovement, CurrencyAndAmount>() {
@@ -450,6 +450,10 @@ public class AccountReportedMovement {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.CashAccount
+	 * CashAccount}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.CashAccount#mmReportedMovements
@@ -458,24 +462,20 @@ public class AccountReportedMovement {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.CashAccount
-	 * CashAccount}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AccountReportedMovement
 	 * AccountReportedMovement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReportedCashAccount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Cash account for which reported movements are calculated."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<AccountReportedMovement, Optional<CashAccount>> mmReportedCashAccount = new MMBusinessAssociationEnd<AccountReportedMovement, Optional<CashAccount>>() {

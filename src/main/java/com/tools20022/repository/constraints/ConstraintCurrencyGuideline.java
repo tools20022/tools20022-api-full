@@ -38,10 +38,6 @@ public class ConstraintCurrencyGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.camt.ReturnTransactionV07
 	 * ReturnTransactionV07}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyGuideline"</li>
 	 * <li>
@@ -49,6 +45,10 @@ public class ConstraintCurrencyGuideline {
 	 * definition} =
 	 * "The currency may be omitted in the amounts present in the message. However, this should only be done in cases of one single currency systems (eg, the euro)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ReturnTransactionV07> for_camt_ReturnTransactionV07 = new MMConstraint<ReturnTransactionV07>() {
@@ -72,10 +72,6 @@ public class ConstraintCurrencyGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ReturnTransactionCopy1
 	 * ReturnTransactionCopy1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyGuideline"</li>
 	 * <li>
@@ -83,6 +79,10 @@ public class ConstraintCurrencyGuideline {
 	 * definition} =
 	 * "The currency may be omitted in the amounts present in the message. However, this should only be done in cases of one single currency systems (eg, the euro)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ReturnTransactionCopy1> forReturnTransactionCopy1 = new MMConstraint<ReturnTransactionCopy1>() {

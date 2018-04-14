@@ -97,16 +97,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * businessProcessCatalogue} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#catalogue
  * GeneratedRepository.catalogue}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "Demand Guarantees and Standby Letters of Credit – ISO – Latest version"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Set of messages to support the exchange of data concerning demand guarantees and standby letters of credit including the application, issuance, advising, amendment, non-extension, termination and processing of demands associated with these financial instruments."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * </ul>
  */
 public class DemandGuaranteesandStandbyLettersofCreditISOLatestversion {

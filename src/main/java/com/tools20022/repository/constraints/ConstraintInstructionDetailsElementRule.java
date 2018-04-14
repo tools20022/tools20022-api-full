@@ -37,10 +37,6 @@ public class ConstraintInstructionDetailsElementRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountModification3
 	 * InvestmentAccountModification3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InstructionDetailsElementRule"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintInstructionDetailsElementRule {
 	 * definition} =
 	 * "One of the elements (ModificationReason, AccountApplicationIdentification, ClientReference, CounterpartyReference, ExistingAccountIdentification) must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<InvestmentAccountModification3> forInvestmentAccountModification3 = new MMConstraint<InvestmentAccountModification3>() {

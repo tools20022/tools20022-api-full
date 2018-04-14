@@ -38,10 +38,6 @@ public class ConstraintBlockTradeGuideline {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TotalNumber1 TotalNumber1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BlockTradeGuideline"</li>
 	 * <li>
@@ -49,6 +45,10 @@ public class ConstraintBlockTradeGuideline {
 	 * definition} =
 	 * "In a block trade instruction, the total number of children must be provided using TotalOfLinkedInstructions.\r\nThe CurrentInstructionNumber of the parent must be 000. The children must have an incremental CurrentInstructionNumber from 001 to 999.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TotalNumber1> forTotalNumber1 = new MMConstraint<TotalNumber1>() {

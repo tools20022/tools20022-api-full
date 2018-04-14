@@ -64,8 +64,8 @@ import javax.xml.bind.annotation.XmlType;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV03#mmUnderlying
- * RequestToModifyPaymentV03.mmUnderlying}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV03_replaced#mmUnderlying
+ * RequestToModifyPaymentV03_replaced.mmUnderlying}</li>
  * <li>
  * {@linkplain com.tools20022.repository.area.camt.UnableToApplyV03#mmUnderlying
  * UnableToApplyV03.mmUnderlying}</li>
@@ -85,16 +85,16 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "UnderlyingTransaction1Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Specifies the details of the underlying transaction on which the investigation is processed."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -125,10 +125,6 @@ public class UnderlyingTransaction1Choice {
 	 * UnderlyingTransaction1Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Initn"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Initiation"</li>
 	 * <li>
@@ -136,6 +132,10 @@ public class UnderlyingTransaction1Choice {
 	 * definition} =
 	 * "Set of elements used to reference the details of the original payment initiation."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<UnderlyingTransaction1Choice, UnderlyingPaymentInstruction1> mmInitiation = new MMMessageAssociationEnd<UnderlyingTransaction1Choice, UnderlyingPaymentInstruction1>() {
@@ -185,10 +185,6 @@ public class UnderlyingTransaction1Choice {
 	 * UnderlyingTransaction1Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "IntrBk"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Interbank"</li>
 	 * <li>
@@ -196,6 +192,10 @@ public class UnderlyingTransaction1Choice {
 	 * definition} =
 	 * "Set of elements used to reference the details of the original interbank payment transaction."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<UnderlyingTransaction1Choice, UnderlyingPaymentTransaction1> mmInterbank = new MMMessageAssociationEnd<UnderlyingTransaction1Choice, UnderlyingPaymentTransaction1>() {
@@ -245,16 +245,16 @@ public class UnderlyingTransaction1Choice {
 	 * UnderlyingTransaction1Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "StmtNtry"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "StatementEntry"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Reference details on the underlying statement cash entry."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<UnderlyingTransaction1Choice, UnderlyingStatementEntry1> mmStatementEntry = new MMMessageAssociationEnd<UnderlyingTransaction1Choice, UnderlyingStatementEntry1>() {
@@ -288,7 +288,7 @@ public class UnderlyingTransaction1Choice {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UnderlyingTransaction1Choice.mmInitiation, com.tools20022.repository.choice.UnderlyingTransaction1Choice.mmInterbank,
 						com.tools20022.repository.choice.UnderlyingTransaction1Choice.mmStatementEntry);
-				messageBuildingBlock_lazy = () -> Arrays.asList(RequestToModifyPaymentV03.mmUnderlying, UnableToApplyV03.mmUnderlying, ClaimNonReceiptV03.mmUnderlying, AdditionalPaymentInformationV03.mmUnderlying,
+				messageBuildingBlock_lazy = () -> Arrays.asList(RequestToModifyPaymentV03_replaced.mmUnderlying, UnableToApplyV03.mmUnderlying, ClaimNonReceiptV03.mmUnderlying, AdditionalPaymentInformationV03.mmUnderlying,
 						DebitAuthorisationRequestV03.mmUnderlying);
 				trace_lazy = () -> Payment.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;

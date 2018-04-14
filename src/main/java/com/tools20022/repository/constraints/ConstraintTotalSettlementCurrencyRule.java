@@ -21,6 +21,7 @@ import com.tools20022.core.repo.NotImplementedConstraintException;
 import com.tools20022.metamodel.MMConstraint;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.msg.RedemptionMultipleExecution5;
+import com.tools20022.repository.msg.RedemptionMultipleOrder6;
 import com.tools20022.repository.msg.SubscriptionMultipleExecution5;
 import com.tools20022.repository.msg.SubscriptionMultipleOrder6;
 
@@ -39,10 +40,6 @@ public class ConstraintTotalSettlementCurrencyRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder6
 	 * SubscriptionMultipleOrder6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TotalSettlementCurrency Rule"</li>
 	 * <li>
@@ -50,6 +47,10 @@ public class ConstraintTotalSettlementCurrencyRule {
 	 * definition} =
 	 * "If TotalSettlementAmount is present, then Currency in IndividualOrderDetails/SettlementAmount, if present, must be the same in all occurrences of IndividualOrderDetails."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubscriptionMultipleOrder6> forSubscriptionMultipleOrder6 = new MMConstraint<SubscriptionMultipleOrder6>() {
@@ -71,12 +72,42 @@ public class ConstraintTotalSettlementCurrencyRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleExecution5
-	 * RedemptionMultipleExecution5}</li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder6
+	 * RedemptionMultipleOrder6}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TotalSettlementCurrencyRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If TotalSettlementAmount is present, then Currency in IndividualOrderDetails/SettlementAmount, if present, must be the same in all occurrences of IndividualOrderDetails."
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<RedemptionMultipleOrder6> forRedemptionMultipleOrder6 = new MMConstraint<RedemptionMultipleOrder6>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "TotalSettlementCurrencyRule";
+			definition = "If TotalSettlementAmount is present, then Currency in IndividualOrderDetails/SettlementAmount, if present, must be the same in all occurrences of IndividualOrderDetails.";
+			owner_lazy = () -> RedemptionMultipleOrder6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionMultipleOrder6 obj) throws Exception {
+			checkRedemptionMultipleOrder6(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleExecution5
+	 * RedemptionMultipleExecution5}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TotalSettlementCurrency Rule"</li>
 	 * <li>
@@ -84,6 +115,10 @@ public class ConstraintTotalSettlementCurrencyRule {
 	 * definition} =
 	 * "If TotalSettlementAmount is present, then Currency in IndividualExecutionDetails/SettlementAmount, must be the same in all occurrences of IndividualExecutionDetails."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RedemptionMultipleExecution5> forRedemptionMultipleExecution5 = new MMConstraint<RedemptionMultipleExecution5>() {
@@ -107,10 +142,6 @@ public class ConstraintTotalSettlementCurrencyRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleExecution5
 	 * SubscriptionMultipleExecution5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TotalSettlementCurrency Rule"</li>
 	 * <li>
@@ -118,6 +149,10 @@ public class ConstraintTotalSettlementCurrencyRule {
 	 * definition} =
 	 * "If TotalSettlementAmount is present, then Currency in IndividualOrderDetails/SettlementAmount, if present, must be the same in all occurrences of IndividualOrderDetails."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubscriptionMultipleExecution5> forSubscriptionMultipleExecution5 = new MMConstraint<SubscriptionMultipleExecution5>() {
@@ -140,6 +175,15 @@ public class ConstraintTotalSettlementCurrencyRule {
 	 * all occurrences of IndividualOrderDetails.
 	 */
 	public static void checkSubscriptionMultipleOrder6(SubscriptionMultipleOrder6 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If TotalSettlementAmount is present, then Currency in
+	 * IndividualOrderDetails/SettlementAmount, if present, must be the same in
+	 * all occurrences of IndividualOrderDetails.
+	 */
+	public static void checkRedemptionMultipleOrder6(RedemptionMultipleOrder6 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 

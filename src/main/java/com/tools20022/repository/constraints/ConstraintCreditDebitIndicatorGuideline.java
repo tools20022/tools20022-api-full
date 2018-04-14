@@ -36,10 +36,6 @@ public class ConstraintCreditDebitIndicatorGuideline {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Transaction33 Transaction33}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CreditDebitIndicatorGuideline"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintCreditDebitIndicatorGuideline {
 	 * definition} =
 	 * "The CreditDebitIndicator may be omitted for optimisation reason if the CreditDebitIndicator is used in the search criteria of the related query."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -84,10 +84,6 @@ public class ConstraintCreditDebitIndicatorGuideline {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Transaction59 Transaction59}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CreditDebitIndicatorGuideline"</li>
 	 * <li>
@@ -95,6 +91,10 @@ public class ConstraintCreditDebitIndicatorGuideline {
 	 * definition} =
 	 * "The CreditDebitIndicator may be omitted for optimisation reason if the CreditDebitIndicator is used in the search criteria of the related query."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -123,10 +123,6 @@ public class ConstraintCreditDebitIndicatorGuideline {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Transaction4 Transaction4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CreditDebitIndicatorGuideline"</li>
 	 * <li>
@@ -134,6 +130,10 @@ public class ConstraintCreditDebitIndicatorGuideline {
 	 * definition} =
 	 * "The CreditDebitIndicator may be omitted for optimisation reason if the CreditDebitIndicator is used in the search criteria of the related query."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Transaction4> forTransaction4 = new MMConstraint<Transaction4>() {
@@ -156,10 +156,6 @@ public class ConstraintCreditDebitIndicatorGuideline {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Transaction24 Transaction24}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CreditDebitIndicatorGuideline"</li>
 	 * <li>
@@ -167,6 +163,10 @@ public class ConstraintCreditDebitIndicatorGuideline {
 	 * definition} =
 	 * "The CreditDebitIndicator may be omitted for optimisation reason if the CreditDebitIndicator is used in the search criteria of the related query."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -199,10 +199,6 @@ public class ConstraintCreditDebitIndicatorGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TotalsPerBankTransactionCode2
 	 * TotalsPerBankTransactionCode2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CreditDebitIndicatorGuideline"</li>
 	 * <li>
@@ -210,6 +206,10 @@ public class ConstraintCreditDebitIndicatorGuideline {
 	 * definition} =
 	 * "If TotalNetEntryAmount is present, then CreditDebitIndicator should be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TotalsPerBankTransactionCode2> forTotalsPerBankTransactionCode2 = new MMConstraint<TotalsPerBankTransactionCode2>() {
@@ -232,10 +232,6 @@ public class ConstraintCreditDebitIndicatorGuideline {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Transaction3 Transaction3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CreditDebitIndicatorGuideline"</li>
 	 * <li>
@@ -243,6 +239,10 @@ public class ConstraintCreditDebitIndicatorGuideline {
 	 * definition} =
 	 * "The CreditDebitIndicator may be omitted for optimisation reason if the CreditDebitIndicator is used in the search criteria of the related query."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Transaction3> forTransaction3 = new MMConstraint<Transaction3>() {
@@ -266,10 +266,6 @@ public class ConstraintCreditDebitIndicatorGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.NumberAndSumOfTransactions3
 	 * NumberAndSumOfTransactions3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CreditDebitIndicatorGuideline"</li>
 	 * <li>
@@ -277,6 +273,10 @@ public class ConstraintCreditDebitIndicatorGuideline {
 	 * definition} =
 	 * "CreditDebitIndicator should be present when TotalNetEntryAmount is present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<NumberAndSumOfTransactions3> forNumberAndSumOfTransactions3 = new MMConstraint<NumberAndSumOfTransactions3>() {
@@ -299,10 +299,6 @@ public class ConstraintCreditDebitIndicatorGuideline {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Transaction5 Transaction5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CreditDebitIndicatorGuideline"</li>
 	 * <li>
@@ -310,6 +306,10 @@ public class ConstraintCreditDebitIndicatorGuideline {
 	 * definition} =
 	 * "The CreditDebitIndicator may be omitted for optimisation reason if the CreditDebitIndicator is used in the search criteria of the related query."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Transaction5> forTransaction5 = new MMConstraint<Transaction5>() {

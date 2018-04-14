@@ -83,16 +83,16 @@ import java.util.Objects;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "SettlementInstructionSystemRole"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Identification of a specific system or set of rules and/or processes to be applied at the settlement place."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class SettlementInstructionSystemRole extends CashSettlementInstructionPartyRole {
@@ -105,6 +105,10 @@ public class SettlementInstructionSystemRole extends CashSettlementInstructionPa
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.CashClearingSystem
+	 * CashClearingSystem}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.CashClearingSystem#mmSystemRole
@@ -112,10 +116,6 @@ public class SettlementInstructionSystemRole extends CashSettlementInstructionPa
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.CashClearingSystem
-	 * CashClearingSystem}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -546,10 +546,6 @@ public class SettlementInstructionSystemRole extends CashSettlementInstructionPa
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SettlementInstructionSystemRole
 	 * SettlementInstructionSystemRole}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "System"</li>
 	 * <li>
@@ -557,6 +553,10 @@ public class SettlementInstructionSystemRole extends CashSettlementInstructionPa
 	 * definition} =
 	 * "Specifies the system which plays a role in the settlement of a payment."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SettlementInstructionSystemRole, List<CashClearingSystem>> mmSystem = new MMBusinessAssociationEnd<SettlementInstructionSystemRole, List<CashClearingSystem>>() {

@@ -259,14 +259,14 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "AssetClassDetailedSubProductType16Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Sub product code list for commodity derivatives."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -281,12 +281,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ForeignExchangeCrossRate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ForeignExchangeCrossRate"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code ForeignExchangeCrossRate = new AssetClassDetailedSubProductType16Code() {
@@ -305,12 +305,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ForeignExchangeEmergingMarket"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ForeignExchangeEmergingMarket"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code ForeignExchangeEmergingMarket = new AssetClassDetailedSubProductType16Code() {
@@ -329,12 +329,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ForeignExchangeMajor"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ForeignExchangeMajor"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code ForeignExchangeMajor = new AssetClassDetailedSubProductType16Code() {
@@ -353,12 +353,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Fuel"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Fuel"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code Fuel = new AssetClassDetailedSubProductType16Code() {
@@ -377,12 +377,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "FuelOil"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "FuelOil"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code FuelOil = new AssetClassDetailedSubProductType16Code() {
@@ -401,12 +401,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Gasoil"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Gasoil"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code Gasoil = new AssetClassDetailedSubProductType16Code() {
@@ -425,12 +425,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Gasoline"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Gasoline"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code Gasoline = new AssetClassDetailedSubProductType16Code() {
@@ -449,12 +449,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "GasPool"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "GasPool"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code GasPool = new AssetClassDetailedSubProductType16Code() {
@@ -473,12 +473,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "HeatingOil"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "HeatingOil"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code HeatingOil = new AssetClassDetailedSubProductType16Code() {
@@ -497,12 +497,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "IronOre"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "IronOre"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code IronOre = new AssetClassDetailedSubProductType16Code() {
@@ -521,12 +521,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "JetFuel"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "JetFuel"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code JetFuel = new AssetClassDetailedSubProductType16Code() {
@@ -545,12 +545,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Kerosene"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Kerosene"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code Kerosene = new AssetClassDetailedSubProductType16Code() {
@@ -569,12 +569,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Lampante"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Lampante"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code Lampante = new AssetClassDetailedSubProductType16Code() {
@@ -593,12 +593,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Lead"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Lead"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code Lead = new AssetClassDetailedSubProductType16Code() {
@@ -617,12 +617,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "LightLouisianaSweet"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "LightLouisianaSweet"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code LightLouisianaSweet = new AssetClassDetailedSubProductType16Code() {
@@ -641,12 +641,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "LNG"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "LNG"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code LNG = new AssetClassDetailedSubProductType16Code() {
@@ -665,12 +665,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Maize"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Maize"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code Maize = new AssetClassDetailedSubProductType16Code() {
@@ -689,12 +689,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Mars"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Mars"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code Mars = new AssetClassDetailedSubProductType16Code() {
@@ -713,12 +713,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "MillingWheat"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "MillingWheat"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code MillingWheat = new AssetClassDetailedSubProductType16Code() {
@@ -737,12 +737,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Molybdenum"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Molybdenum"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code Molybdenum = new AssetClassDetailedSubProductType16Code() {
@@ -761,12 +761,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Naphta"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Naphta"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code Naphta = new AssetClassDetailedSubProductType16Code() {
@@ -785,12 +785,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NBP"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "NBP"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code NBP = new AssetClassDetailedSubProductType16Code() {
@@ -809,12 +809,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NASAAC"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "NASAAC"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code NASAAC = new AssetClassDetailedSubProductType16Code() {
@@ -833,12 +833,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NCG"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "NCG"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code NCG = new AssetClassDetailedSubProductType16Code() {
@@ -857,12 +857,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NGL"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "NGL"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code NGL = new AssetClassDetailedSubProductType16Code() {
@@ -881,12 +881,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Nickel"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Nickel"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code Nickel = new AssetClassDetailedSubProductType16Code() {
@@ -905,12 +905,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OffPeak"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "OffPeak"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code OffPeak = new AssetClassDetailedSubProductType16Code() {
@@ -929,12 +929,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Aluminium"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Aluminium"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code Aluminium = new AssetClassDetailedSubProductType16Code() {
@@ -953,12 +953,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AluminiumAlloy"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AluminiumAlloy"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code AluminiumAlloy = new AssetClassDetailedSubProductType16Code() {
@@ -977,12 +977,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Bakken"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Bakken"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code Bakken = new AssetClassDetailedSubProductType16Code() {
@@ -1001,12 +1001,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BaseLoad"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BaseLoad"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code BaseLoad = new AssetClassDetailedSubProductType16Code() {
@@ -1025,12 +1025,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Biodiesel"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Biodiesel"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code Biodiesel = new AssetClassDetailedSubProductType16Code() {
@@ -1049,12 +1049,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Brent"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Brent"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code Brent = new AssetClassDetailedSubProductType16Code() {
@@ -1073,12 +1073,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BrentNX"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BrentNX"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code BrentNX = new AssetClassDetailedSubProductType16Code() {
@@ -1097,12 +1097,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Canadian"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Canadian"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code Canadian = new AssetClassDetailedSubProductType16Code() {
@@ -1121,12 +1121,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CER"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CER"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code CER = new AssetClassDetailedSubProductType16Code() {
@@ -1145,12 +1145,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Cobalt"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Cobalt"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code Cobalt = new AssetClassDetailedSubProductType16Code() {
@@ -1169,12 +1169,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Cocoa"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Cocoa"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code Cocoa = new AssetClassDetailedSubProductType16Code() {
@@ -1193,12 +1193,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Condensate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Condensate"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code Condensate = new AssetClassDetailedSubProductType16Code() {
@@ -1217,12 +1217,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Containership"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Containership"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code Containership = new AssetClassDetailedSubProductType16Code() {
@@ -1241,12 +1241,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Copper"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Copper"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code Copper = new AssetClassDetailedSubProductType16Code() {
@@ -1265,12 +1265,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Diesel"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Diesel"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code Diesel = new AssetClassDetailedSubProductType16Code() {
@@ -1289,12 +1289,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DryBulkCarrier"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DryBulkCarrier"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code DryBulkCarrier = new AssetClassDetailedSubProductType16Code() {
@@ -1313,12 +1313,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Dubai"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Dubai"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code Dubai = new AssetClassDetailedSubProductType16Code() {
@@ -1337,12 +1337,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ERU"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ERU"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code ERU = new AssetClassDetailedSubProductType16Code() {
@@ -1361,12 +1361,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ESPO"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ESPO"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code ESPO = new AssetClassDetailedSubProductType16Code() {
@@ -1385,12 +1385,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Ethanol"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Ethanol"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code Ethanol = new AssetClassDetailedSubProductType16Code() {
@@ -1409,12 +1409,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "EUA"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "EUA"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code EUA = new AssetClassDetailedSubProductType16Code() {
@@ -1433,12 +1433,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "EUAA"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "EUAA"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code EUAA = new AssetClassDetailedSubProductType16Code() {
@@ -1457,12 +1457,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "FeedWheat"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "FeedWheat"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code FeedWheat = new AssetClassDetailedSubProductType16Code() {
@@ -1481,12 +1481,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "FinancialTransmissionRights"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "FinancialTransmissionRights"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code FinancialTransmissionRights = new AssetClassDetailedSubProductType16Code() {
@@ -1505,12 +1505,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Other"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Other"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code Other = new AssetClassDetailedSubProductType16Code() {
@@ -1529,12 +1529,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Palladium"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Palladium"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code Palladium = new AssetClassDetailedSubProductType16Code() {
@@ -1553,12 +1553,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PeakLoad"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PeakLoad"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code PeakLoad = new AssetClassDetailedSubProductType16Code() {
@@ -1577,12 +1577,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Platinum"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Platinum"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code Platinum = new AssetClassDetailedSubProductType16Code() {
@@ -1601,12 +1601,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Potatoes"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Potatoes"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code Potatoes = new AssetClassDetailedSubProductType16Code() {
@@ -1625,12 +1625,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Rapeseed"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Rapeseed"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code Rapeseed = new AssetClassDetailedSubProductType16Code() {
@@ -1649,12 +1649,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RawSugar"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "RawSugar"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code RawSugar = new AssetClassDetailedSubProductType16Code() {
@@ -1673,12 +1673,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Rice"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Rice"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code Rice = new AssetClassDetailedSubProductType16Code() {
@@ -1697,12 +1697,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RobustaCoffee"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "RobustaCoffee"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code RobustaCoffee = new AssetClassDetailedSubProductType16Code() {
@@ -1721,12 +1721,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Silver"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Silver"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code Silver = new AssetClassDetailedSubProductType16Code() {
@@ -1745,12 +1745,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Soybeans"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Soybeans"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code Soybeans = new AssetClassDetailedSubProductType16Code() {
@@ -1769,12 +1769,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Steel"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Steel"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code Steel = new AssetClassDetailedSubProductType16Code() {
@@ -1793,12 +1793,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Tanker"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Tanker"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code Tanker = new AssetClassDetailedSubProductType16Code() {
@@ -1817,12 +1817,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Tapis"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Tapis"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code Tapis = new AssetClassDetailedSubProductType16Code() {
@@ -1841,12 +1841,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Tin"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Tin"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code Tin = new AssetClassDetailedSubProductType16Code() {
@@ -1865,12 +1865,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TTF"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "TTF"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code TTF = new AssetClassDetailedSubProductType16Code() {
@@ -1889,12 +1889,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Urals"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Urals"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code Urals = new AssetClassDetailedSubProductType16Code() {
@@ -1913,12 +1913,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "WhiteSugar"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "WhiteSugar"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code WhiteSugar = new AssetClassDetailedSubProductType16Code() {
@@ -1937,12 +1937,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "WTI"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "WTI"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code WTI = new AssetClassDetailedSubProductType16Code() {
@@ -1961,12 +1961,12 @@ public class AssetClassDetailedSubProductType16Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
 	 * AssetClassDetailedSubProductType16Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Zinc"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Zinc"</li>
 	 * </ul>
 	 */
 	public static final AssetClassDetailedSubProductType16Code Zinc = new AssetClassDetailedSubProductType16Code() {

@@ -229,16 +229,16 @@ import java.util.Objects;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "SecuritiesProceedsDefinition"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "The definition of the securities proceeds for a corporate action in generic terms; that is, before applying it to specific securities holding. An example would be the definition of a  bonus rights issue where all the information will be given in general on a per share basis."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class SecuritiesProceedsDefinition extends ProceedsDefinition {
@@ -251,6 +251,10 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
+	 * SecuritiesQuantity}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmSecuritiesProceedsDefinition
@@ -258,10 +262,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
-	 * SecuritiesQuantity}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -431,15 +431,15 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
 	 * SecuritiesProceedsDefinition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SecuritiesQuantity"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "The quantity of financial instruments that is posted."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesProceedsDefinition, com.tools20022.repository.entity.SecuritiesQuantity> mmSecuritiesQuantity = new MMBusinessAssociationEnd<SecuritiesProceedsDefinition, com.tools20022.repository.entity.SecuritiesQuantity>() {
@@ -486,6 +486,10 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
+	 * SecuritiesQuantity}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmConditionalQuantitySecuritiesProceeds
@@ -493,10 +497,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
-	 * SecuritiesQuantity}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -519,10 +519,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
 	 * SecuritiesProceedsDefinition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ConditionalQuantity"</li>
 	 * <li>
@@ -530,6 +526,10 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * definition} =
 	 * "Minimum quantity of securities to be accepted (used in the framework of conditional privilege on election). In case of proration, if this minimum quantity is not reached then the instruction is void."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesProceedsDefinition, com.tools20022.repository.entity.SecuritiesQuantity> mmConditionalQuantity = new MMBusinessAssociationEnd<SecuritiesProceedsDefinition, com.tools20022.repository.entity.SecuritiesQuantity>() {
@@ -564,6 +564,10 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
+	 * SecuritiesQuantity}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmOverAndAboveQuantitySecuritiesProceeds
@@ -571,10 +575,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
-	 * SecuritiesQuantity}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -591,10 +591,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
 	 * SecuritiesProceedsDefinition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OverAndAboveNormalEnsuredEntitlementQuantity"</li>
 	 * <li>
@@ -602,6 +598,10 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * definition} =
 	 * "Quantity instructed to be received over and above normal ensured entitlement."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesProceedsDefinition, com.tools20022.repository.entity.SecuritiesQuantity> mmOverAndAboveNormalEnsuredEntitlementQuantity = new MMBusinessAssociationEnd<SecuritiesProceedsDefinition, com.tools20022.repository.entity.SecuritiesQuantity>() {
@@ -636,6 +636,10 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
+	 * SecuritiesQuantity}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmExpectedQuantitySecuritiesProceeds
@@ -643,10 +647,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
-	 * SecuritiesQuantity}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -669,10 +669,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
 	 * SecuritiesProceedsDefinition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "QuantityToReceive"</li>
 	 * <li>
@@ -680,6 +676,10 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * definition} =
 	 * "Quantity of the benefits that the account owner wants to receive, for example, as a result of dividend reinvestment."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesProceedsDefinition, com.tools20022.repository.entity.SecuritiesQuantity> mmQuantityToReceive = new MMBusinessAssociationEnd<SecuritiesProceedsDefinition, com.tools20022.repository.entity.SecuritiesQuantity>() {
@@ -715,6 +715,10 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
+	 * SecuritiesQuantity}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmStatusRelatedSecuritiesProceeds
@@ -722,10 +726,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
-	 * SecuritiesQuantity}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -748,16 +748,16 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
 	 * SecuritiesProceedsDefinition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "StatusQuantity"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Quantity of securities that has been assigned the status indicated."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesProceedsDefinition, com.tools20022.repository.entity.SecuritiesQuantity> mmStatusQuantity = new MMBusinessAssociationEnd<SecuritiesProceedsDefinition, com.tools20022.repository.entity.SecuritiesQuantity>() {
@@ -792,6 +792,10 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.DateTimePeriod
+	 * DateTimePeriod}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmParallelTradingProceedsDefinition
@@ -799,10 +803,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.DateTimePeriod
-	 * DateTimePeriod}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -837,10 +837,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
 	 * SecuritiesProceedsDefinition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ParallelTradingPeriod"</li>
 	 * <li>
@@ -848,6 +844,10 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * definition} =
 	 * "Period during which both old and new equity may be traded simultaneously, eg, consolidation of equity or splitting of equity."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesProceedsDefinition, DateTimePeriod> mmParallelTradingPeriod = new MMBusinessAssociationEnd<SecuritiesProceedsDefinition, DateTimePeriod>() {
@@ -884,6 +884,10 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.QuantityRatio
+	 * QuantityRatio}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.QuantityRatio#mmAdditionalQuantityForResultantSecuritiesProceedsDefinition
@@ -892,10 +896,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.QuantityRatio
-	 * QuantityRatio}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1009,10 +1009,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
 	 * SecuritiesProceedsDefinition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalQuantityForSubscribedResultantSecurities"</li>
 	 * <li>
@@ -1020,6 +1016,10 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * definition} =
 	 * "Quantity of additional intermediate securities/new equities awarded for a given quantity of securities derived from subscription."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesProceedsDefinition, QuantityRatio> mmAdditionalQuantityForSubscribedResultantSecurities = new MMBusinessAssociationEnd<SecuritiesProceedsDefinition, QuantityRatio>() {
@@ -1066,6 +1066,10 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.QuantityRatio
+	 * QuantityRatio}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.QuantityRatio#mmAdditionalQuantityForSubscribedSecuritiesProceedsDefinition
@@ -1074,10 +1078,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.QuantityRatio
-	 * QuantityRatio}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1166,10 +1166,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
 	 * SecuritiesProceedsDefinition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalQuantityForExistingSecurities"</li>
 	 * <li>
@@ -1177,6 +1173,10 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * definition} =
 	 * "Quantity of additional securities for a given quantity of underlying securities where underlying securities are not exchanged or debited, eg, 1 for 1: 1 new equity credited for every 1 underlying equity = 2 resulting equities."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesProceedsDefinition, QuantityRatio> mmAdditionalQuantityForExistingSecurities = new MMBusinessAssociationEnd<SecuritiesProceedsDefinition, QuantityRatio>() {
@@ -1219,6 +1219,10 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.QuantityRatio
+	 * QuantityRatio}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.QuantityRatio#mmNewToOldProceedsDefinition
@@ -1226,10 +1230,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.QuantityRatio
-	 * QuantityRatio}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1315,10 +1315,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
 	 * SecuritiesProceedsDefinition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NewToOld"</li>
 	 * <li>
@@ -1326,6 +1322,10 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * definition} =
 	 * "Quantity of new securities for a given quantity of underlying securities, where the underlying securities will be exchanged or debited, eg, 2 for 1: 2 new equities credited for every 1 underlying equity debited = 2 resulting equities."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesProceedsDefinition, QuantityRatio> mmNewToOld = new MMBusinessAssociationEnd<SecuritiesProceedsDefinition, QuantityRatio>() {
@@ -1364,6 +1364,10 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.QuantityRatio
+	 * QuantityRatio}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.QuantityRatio#mmNewToUnderlyingProceedsDefinition
@@ -1371,10 +1375,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.QuantityRatio
-	 * QuantityRatio}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1400,10 +1400,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
 	 * SecuritiesProceedsDefinition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NewSecuritiesToUnderlyingSecurities"</li>
 	 * <li>
@@ -1411,6 +1407,10 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * definition} =
 	 * "Quantity of new equities that will be derived by the exercise of a given quantity of intermediate securities."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesProceedsDefinition, QuantityRatio> mmNewSecuritiesToUnderlyingSecurities = new MMBusinessAssociationEnd<SecuritiesProceedsDefinition, QuantityRatio>() {
@@ -1589,15 +1589,15 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
 	 * SecuritiesProceedsDefinition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReinvestmentAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount of money reinvested in additional securities."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesProceedsDefinition, CurrencyAndAmount> mmReinvestmentAmount = new MMBusinessAttribute<SecuritiesProceedsDefinition, CurrencyAndAmount>() {
@@ -1910,10 +1910,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
 	 * SecuritiesProceedsDefinition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IntermediateSecuritiesDistributionType"</li>
 	 * <li>
@@ -1921,6 +1917,10 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * definition} =
 	 * "Type of intermediate securities distribution, eg, stock dividend, reverse right."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesProceedsDefinition, IntermediateSecurityDistributionTypeCode> mmIntermediateSecuritiesDistributionType = new MMBusinessAttribute<SecuritiesProceedsDefinition, IntermediateSecurityDistributionTypeCode>() {
@@ -1980,6 +1980,10 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
+	 * SecuritiesQuantity}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmBoardLotSecuritiesProceeds
@@ -1987,10 +1991,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
-	 * SecuritiesQuantity}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2055,15 +2055,15 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
 	 * SecuritiesProceedsDefinition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BoardLotSecuritiesQuantity"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Quantity of equity that makes up a board lot."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesProceedsDefinition, com.tools20022.repository.entity.SecuritiesQuantity> mmBoardLotSecuritiesQuantity = new MMBusinessAssociationEnd<SecuritiesProceedsDefinition, com.tools20022.repository.entity.SecuritiesQuantity>() {
@@ -2102,6 +2102,10 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
+	 * SecuritiesQuantity}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmNewDenominationSecuritiesProceeds
@@ -2109,10 +2113,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
-	 * SecuritiesQuantity}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2177,10 +2177,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
 	 * SecuritiesProceedsDefinition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NewDenominationSecuritiesQuantity"</li>
 	 * <li>
@@ -2188,6 +2184,10 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * definition} =
 	 * "New denomination of the financial instrument following, eg, an increase or decrease in nominal value."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesProceedsDefinition, com.tools20022.repository.entity.SecuritiesQuantity> mmNewDenominationSecuritiesQuantity = new MMBusinessAssociationEnd<SecuritiesProceedsDefinition, com.tools20022.repository.entity.SecuritiesQuantity>() {
@@ -2226,6 +2226,10 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.QuantityRatio
+	 * QuantityRatio}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.QuantityRatio#mmIntermediateSecuritiesProceedsDefinition
@@ -2233,10 +2237,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.QuantityRatio
-	 * QuantityRatio}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2287,10 +2287,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
 	 * SecuritiesProceedsDefinition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IntermediateSecuritiesToUnderlyingRatio"</li>
 	 * <li>
@@ -2298,6 +2294,10 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * definition} =
 	 * "Quantity of intermediate securities awarded for a given quantity of underlying security."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesProceedsDefinition, QuantityRatio> mmIntermediateSecuritiesToUnderlyingRatio = new MMBusinessAssociationEnd<SecuritiesProceedsDefinition, QuantityRatio>() {
@@ -2395,10 +2395,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
 	 * SecuritiesProceedsDefinition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReinvestmentDiscountToMarket"</li>
 	 * <li>
@@ -2406,6 +2402,10 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * definition} =
 	 * "Rate of discount for securities purchased through a reinvestment scheme as compared to the current market price of security."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesProceedsDefinition, PercentageRate> mmReinvestmentDiscountToMarket = new MMBusinessAttribute<SecuritiesProceedsDefinition, PercentageRate>() {
@@ -2458,10 +2458,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
 	 * SecuritiesProceedsDefinition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RedemptionDate"</li>
 	 * <li>
@@ -2469,6 +2465,10 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * definition} =
 	 * "Date on which the securities will be redeemed (early) for payment of principal."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesProceedsDefinition, ISODateTime> mmRedemptionDate = new MMBusinessAttribute<SecuritiesProceedsDefinition, ISODateTime>() {
@@ -2501,6 +2501,10 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.DateTimePeriod
+	 * DateTimePeriod}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmAssentedLinePeriodProceedsDefinition
@@ -2508,10 +2512,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.DateTimePeriod
-	 * DateTimePeriod}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2525,15 +2525,15 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
 	 * SecuritiesProceedsDefinition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AssentedLinePeriod"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Period during which the assented line is available."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesProceedsDefinition, DateTimePeriod> mmAssentedLinePeriod = new MMBusinessAssociationEnd<SecuritiesProceedsDefinition, DateTimePeriod>() {
@@ -2568,6 +2568,10 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.DateTimePeriod
+	 * DateTimePeriod}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmSellThruIssuerProceedsDefinition
@@ -2575,10 +2579,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.DateTimePeriod
-	 * DateTimePeriod}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2592,10 +2592,6 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
 	 * SecuritiesProceedsDefinition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SellThruIssuerPeriod"</li>
 	 * <li>
@@ -2603,6 +2599,10 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * definition} =
 	 * "Period (last day included) during which an account owner can surrender or sell securities to the issuer and receive the sale proceeds."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesProceedsDefinition, DateTimePeriod> mmSellThruIssuerPeriod = new MMBusinessAssociationEnd<SecuritiesProceedsDefinition, DateTimePeriod>() {
@@ -2654,16 +2654,16 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition
 	 * SecuritiesProceedsDefinition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ShareRanking"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies whether the shares are ranking for dividend or pari passu."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesProceedsDefinition, ShareRankingCode> mmShareRanking = new MMBusinessAttribute<SecuritiesProceedsDefinition, ShareRankingCode>() {

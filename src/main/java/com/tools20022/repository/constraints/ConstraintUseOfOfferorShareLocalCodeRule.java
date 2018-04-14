@@ -36,10 +36,6 @@ public class ConstraintUseOfOfferorShareLocalCodeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation6SD3
 	 * UpdatedAdditionalInformation6SD3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UseOfOfferorShareLocalCodeRule"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintUseOfOfferorShareLocalCodeRule {
 	 * definition} =
 	 * "OfferorShareLocalCode can only be used when the corporate action event type code is TEND."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<UpdatedAdditionalInformation6SD3> forUpdatedAdditionalInformation6SD3 = new MMConstraint<UpdatedAdditionalInformation6SD3>() {

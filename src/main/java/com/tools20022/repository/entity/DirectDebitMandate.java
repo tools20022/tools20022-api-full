@@ -333,16 +333,16 @@ import java.util.Optional;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "DirectDebitMandate"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Authorisation in favour of the creditor given by the debtor to debit its own account."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class DirectDebitMandate extends Mandate {
@@ -355,6 +355,10 @@ public class DirectDebitMandate extends Mandate {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.DirectDebit
+	 * DirectDebit}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.DirectDebit#mmDirectDebitMandate
@@ -363,23 +367,19 @@ public class DirectDebitMandate extends Mandate {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.DirectDebit
-	 * DirectDebit}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.DirectDebitMandate
 	 * DirectDebitMandate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RelatedDirectDebit"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Direct debit to which a mandate applies."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<DirectDebitMandate, Optional<DirectDebit>> mmRelatedDirectDebit = new MMBusinessAssociationEnd<DirectDebitMandate, Optional<DirectDebit>>() {
@@ -492,16 +492,16 @@ public class DirectDebitMandate extends Mandate {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.DirectDebitMandate
 	 * DirectDebitMandate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FinalCollectionDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Date of the final collection of a direct debit as per the mandate."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<DirectDebitMandate, ISODate> mmFinalCollectionDate = new MMBusinessAttribute<DirectDebitMandate, ISODate>() {
@@ -622,10 +622,6 @@ public class DirectDebitMandate extends Mandate {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.DirectDebitMandate
 	 * DirectDebitMandate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Frequency"</li>
 	 * <li>
@@ -633,6 +629,10 @@ public class DirectDebitMandate extends Mandate {
 	 * definition} =
 	 * "Regularity with which direct debit instructions are to be created and processed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<DirectDebitMandate, FrequencyCode> mmFrequency = new MMBusinessAttribute<DirectDebitMandate, FrequencyCode>() {
@@ -721,16 +721,16 @@ public class DirectDebitMandate extends Mandate {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.DirectDebitMandate
 	 * DirectDebitMandate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FirstCollectionDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Date of the first collection of a direct debit as per the mandate."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<DirectDebitMandate, ISODate> mmFirstCollectionDate = new MMBusinessAttribute<DirectDebitMandate, ISODate>() {
@@ -766,6 +766,10 @@ public class DirectDebitMandate extends Mandate {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.PaymentProcessing
+	 * PaymentProcessing}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmRelatedMandate
@@ -773,10 +777,6 @@ public class DirectDebitMandate extends Mandate {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.PaymentProcessing
-	 * PaymentProcessing}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -815,10 +815,6 @@ public class DirectDebitMandate extends Mandate {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.DirectDebitMandate
 	 * DirectDebitMandate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MandatePaymentType"</li>
 	 * <li>
@@ -826,6 +822,10 @@ public class DirectDebitMandate extends Mandate {
 	 * definition} =
 	 * "Set of elements that further identifies the type of mandate (service level and/or paper or electronic) being requested or given by the initiating party."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<DirectDebitMandate, PaymentProcessing> mmMandatePaymentType = new MMBusinessAssociationEnd<DirectDebitMandate, PaymentProcessing>() {
@@ -932,10 +932,6 @@ public class DirectDebitMandate extends Mandate {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.DirectDebitMandate
 	 * DirectDebitMandate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CollectionAmount"</li>
 	 * <li>
@@ -943,6 +939,10 @@ public class DirectDebitMandate extends Mandate {
 	 * definition} =
 	 * "Fixed amount that the debtor has agreed will be collected from their account."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<DirectDebitMandate, CurrencyAndAmount> mmCollectionAmount = new MMBusinessAttribute<DirectDebitMandate, CurrencyAndAmount>() {
@@ -1022,10 +1022,6 @@ public class DirectDebitMandate extends Mandate {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.DirectDebitMandate
 	 * DirectDebitMandate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MaximumAmount"</li>
 	 * <li>
@@ -1033,6 +1029,10 @@ public class DirectDebitMandate extends Mandate {
 	 * definition} =
 	 * "Maximum amount that may be collected from the debtor's account, per instruction."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<DirectDebitMandate, CurrencyAndAmount> mmMaximumAmount = new MMBusinessAttribute<DirectDebitMandate, CurrencyAndAmount>() {
@@ -1075,10 +1075,6 @@ public class DirectDebitMandate extends Mandate {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.DirectDebitMandate
 	 * DirectDebitMandate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PreNotification"</li>
 	 * <li>
@@ -1086,6 +1082,10 @@ public class DirectDebitMandate extends Mandate {
 	 * definition} =
 	 * "Indicates wether a pre-notification must be sent by the creditor to the debtor before a direct debit occurs"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<DirectDebitMandate, TrueFalseIndicator> mmPreNotification = new MMBusinessAttribute<DirectDebitMandate, TrueFalseIndicator>() {
@@ -1125,10 +1125,6 @@ public class DirectDebitMandate extends Mandate {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.DirectDebitMandate
 	 * DirectDebitMandate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PreNotificationThreshold"</li>
 	 * <li>
@@ -1136,6 +1132,10 @@ public class DirectDebitMandate extends Mandate {
 	 * definition} =
 	 * "Specifies the number of days before the direct debit for notifying the debtor."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<DirectDebitMandate, Number> mmPreNotificationThreshold = new MMBusinessAttribute<DirectDebitMandate, Number>() {
@@ -1184,15 +1184,15 @@ public class DirectDebitMandate extends Mandate {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.DirectDebitMandate
 	 * DirectDebitMandate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Classification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Type of direct debit instruction."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<DirectDebitMandate, MandateClassificationCode> mmClassification = new MMBusinessAttribute<DirectDebitMandate, MandateClassificationCode>() {
@@ -1234,10 +1234,6 @@ public class DirectDebitMandate extends Mandate {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.DirectDebitMandate
 	 * DirectDebitMandate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PointInTime"</li>
 	 * <li>
@@ -1245,6 +1241,10 @@ public class DirectDebitMandate extends Mandate {
 	 * definition} =
 	 * "Specifies a frequency in terms of an exact point in time or moment within a specified period type."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<DirectDebitMandate, FrequencyCode> mmPointInTime = new MMBusinessAttribute<DirectDebitMandate, FrequencyCode>() {

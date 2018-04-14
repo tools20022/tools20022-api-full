@@ -36,10 +36,6 @@ public class ConstraintAdjustmentFreightChargesAndTaxRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.LineItem13 LineItem13}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdjustmentFreightChargesAndTaxRule"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintAdjustmentFreightChargesAndTaxRule {
 	 * definition} =
 	 * "Adjustments, freight charges and taxes must be entered at this level, or adjustments, freight charges and taxes must be entered at line item level."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -75,10 +75,6 @@ public class ConstraintAdjustmentFreightChargesAndTaxRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.LineItem11 LineItem11}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdjustmentFreightChargesAndTaxRule"</li>
 	 * <li>
@@ -86,6 +82,10 @@ public class ConstraintAdjustmentFreightChargesAndTaxRule {
 	 * definition} =
 	 * "Adjustments, freight charges and taxes must be entered at this level, or adjustments, freight charges and taxes must be entered at line item level."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -123,10 +123,6 @@ public class ConstraintAdjustmentFreightChargesAndTaxRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.LineItem15 LineItem15}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdjustmentFreightChargesAndTaxRule"</li>
 	 * <li>
@@ -134,6 +130,10 @@ public class ConstraintAdjustmentFreightChargesAndTaxRule {
 	 * definition} =
 	 * "Either all adjustments, freight charges and taxes must be entered at this level only, or all adjustments, freight charges and taxes must be entered at line item level only."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -162,10 +162,6 @@ public class ConstraintAdjustmentFreightChargesAndTaxRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.LineItem4 LineItem4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdjustmentFreightChargesAndTaxRule"</li>
 	 * <li>
@@ -173,6 +169,10 @@ public class ConstraintAdjustmentFreightChargesAndTaxRule {
 	 * definition} =
 	 * "Either all adjustments, freight charges and taxes must be entered at this level only, or all adjustments, freight charges and taxes must be entered at line item level only."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<LineItem4> forLineItem4 = new MMConstraint<LineItem4>() {
@@ -195,10 +195,6 @@ public class ConstraintAdjustmentFreightChargesAndTaxRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.LineItem9 LineItem9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdjustmentFreightChargesAndTaxRule"</li>
 	 * <li>
@@ -206,6 +202,10 @@ public class ConstraintAdjustmentFreightChargesAndTaxRule {
 	 * definition} =
 	 * "Either all adjustments, freight charges and taxes must be entered at this level only, or all adjustments, freight charges and taxes must be entered at line item level only."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -237,10 +237,6 @@ public class ConstraintAdjustmentFreightChargesAndTaxRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.LineItem7 LineItem7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdjustmentFreightChargesAndTaxRule"</li>
 	 * <li>
@@ -248,6 +244,10 @@ public class ConstraintAdjustmentFreightChargesAndTaxRule {
 	 * definition} =
 	 * "Adjustments, freight charges and taxes must be entered at this level, or adjustments, freight charges and taxes must be entered at line item level."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -279,10 +279,6 @@ public class ConstraintAdjustmentFreightChargesAndTaxRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.LineItem5 LineItem5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdjustmentFreightChargesAndTaxRule"</li>
 	 * <li>
@@ -290,6 +286,10 @@ public class ConstraintAdjustmentFreightChargesAndTaxRule {
 	 * definition} =
 	 * "Either all adjustments, freight charges and taxes must be entered at this level only, or all adjustments, freight charges and taxes must be entered at line item level only."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<LineItem5> forLineItem5 = new MMConstraint<LineItem5>() {
@@ -312,10 +312,6 @@ public class ConstraintAdjustmentFreightChargesAndTaxRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.LineItem12 LineItem12}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdjustmentFreightChargesAndTaxRule"</li>
 	 * <li>
@@ -323,6 +319,10 @@ public class ConstraintAdjustmentFreightChargesAndTaxRule {
 	 * definition} =
 	 * "Either all adjustments, freight charges and taxes must be entered at this level only, or all adjustments, freight charges and taxes must be entered at line item level only."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>

@@ -47,6 +47,12 @@ import javax.xml.bind.annotation.*;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "EuroMax15Amount"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} =
+ * "Number of monetary units specified in a currency, where the unit of currency is the EUR and compliant with ISO 4217. The decimal separator is a dot, of maximum 15 digits before the dot and 2 after.\nNote: A zero amount is not allowed."
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -57,12 +63,6 @@ import javax.xml.bind.annotation.*;
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "EuroMax15Amount"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} =
- * "Number of monetary units specified in a currency, where the unit of currency is the EUR and compliant with ISO 4217. The decimal separator is a dot, of maximum 15 digits before the dot and 2 after.\nNote: A zero amount is not allowed."
- * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)

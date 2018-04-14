@@ -38,10 +38,6 @@ public class ConstraintRequestResponderRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeCaptureReportV01
 	 * ForeignExchangeTradeCaptureReportV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RequestResponderRule"</li>
 	 * <li>
@@ -49,6 +45,10 @@ public class ConstraintRequestResponderRule {
 	 * definition} =
 	 * "If RequestResponder is \"true\" or \"1\" (Yes), then Reference and Request Rejected must be present.\r\nIf RequestResponder is \"false\" or \"0\" (No), then TradeDetail and TradingSideIdentification and CounterpartySideIdentification must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ForeignExchangeTradeCaptureReportV01> for_fxtr_ForeignExchangeTradeCaptureReportV01 = new MMConstraint<ForeignExchangeTradeCaptureReportV01>() {

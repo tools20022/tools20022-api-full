@@ -139,14 +139,14 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "DateAndAmountSD1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Extra dates, amounts and related indicators."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -177,10 +177,6 @@ public class DateAndAmountSD1 {
 	 * DateAndAmountSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PlcAndNm"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PlaceAndName"</li>
 	 * <li>
@@ -188,6 +184,10 @@ public class DateAndAmountSD1 {
 	 * definition} =
 	 * "Unambiguous reference to the location where the supplementary data must be inserted in the message instance. \r\n\r\nIn the case of XML, this is expressed by a valid XPath."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<DateAndAmountSD1, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<DateAndAmountSD1, Optional<Max350Text>>() {
@@ -230,10 +230,6 @@ public class DateAndAmountSD1 {
 	 * DateAndAmountSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "FrstSttlmDtOfDfrrdTrds"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FirstSettlementDateOfDeferredTrades"</li>
 	 * <li>
@@ -241,6 +237,10 @@ public class DateAndAmountSD1 {
 	 * definition} =
 	 * "First settlement of deferred settlement trades and normal T+3 trades.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<DateAndAmountSD1, Optional<DateFormat22Choice>> mmFirstSettlementDateOfDeferredTrades = new MMMessageAssociationEnd<DateAndAmountSD1, Optional<DateFormat22Choice>>() {
@@ -286,16 +286,16 @@ public class DateAndAmountSD1 {
 	 * DateAndAmountSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TpOfPmtDt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TypeOfPaymentDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies whether the payment date is estimated or actual."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<DateAndAmountSD1, Optional<TypeOfDate1Code>> mmTypeOfPaymentDate = new MMMessageAttribute<DateAndAmountSD1, Optional<TypeOfDate1Code>>() {
@@ -338,10 +338,6 @@ public class DateAndAmountSD1 {
 	 * DateAndAmountSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "EqvtLclAmtAnncmntDt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EquivalentLocalAmountAnnouncementDate"</li>
 	 * <li>
@@ -349,6 +345,10 @@ public class DateAndAmountSD1 {
 	 * definition} =
 	 * "Date when the equivalent amount in the local currency will be announced."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<DateAndAmountSD1, Optional<DateFormat22Choice>> mmEquivalentLocalAmountAnnouncementDate = new MMMessageAssociationEnd<DateAndAmountSD1, Optional<DateFormat22Choice>>() {
@@ -394,10 +394,6 @@ public class DateAndAmountSD1 {
 	 * DateAndAmountSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TpOfEqvtLclAmtAnncmntDt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TypeOfEquivalentLocalAmountAnnouncementDate"</li>
 	 * <li>
@@ -405,6 +401,10 @@ public class DateAndAmountSD1 {
 	 * definition} =
 	 * "Specifies whether the Equivalent Local Amount Announcement Date is estimated or actual."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<DateAndAmountSD1, Optional<TypeOfAmount4Code>> mmTypeOfEquivalentLocalAmountAnnouncementDate = new MMMessageAttribute<DateAndAmountSD1, Optional<TypeOfAmount4Code>>() {
@@ -447,10 +447,6 @@ public class DateAndAmountSD1 {
 	 * DateAndAmountSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "EqvtFrgnAmtAnncmntDt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EquivalentForeignAmountAnnouncementDate"</li>
 	 * <li>
@@ -458,6 +454,10 @@ public class DateAndAmountSD1 {
 	 * definition} =
 	 * "Date when the equivalent amount in the foreign currency will be announced."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<DateAndAmountSD1, Optional<DateFormat22Choice>> mmEquivalentForeignAmountAnnouncementDate = new MMMessageAssociationEnd<DateAndAmountSD1, Optional<DateFormat22Choice>>() {
@@ -503,10 +503,6 @@ public class DateAndAmountSD1 {
 	 * DateAndAmountSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TpOfEqvtFrgnAmtAnncmntDt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TypeOfEquivalentForeignAmountAnnouncementDate"</li>
 	 * <li>
@@ -514,6 +510,10 @@ public class DateAndAmountSD1 {
 	 * definition} =
 	 * "Specifies whether the Equivalent Foreign Amount Announcement Date is estimated or actual."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<DateAndAmountSD1, Optional<TypeOfAmount4Code>> mmTypeOfEquivalentForeignAmountAnnouncementDate = new MMMessageAttribute<DateAndAmountSD1, Optional<TypeOfAmount4Code>>() {
@@ -558,16 +558,16 @@ public class DateAndAmountSD1 {
 	 * DateAndAmountSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TpOfIsseDt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TypeOfIssueDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies whether the securities issue date is estimated or actual."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<DateAndAmountSD1, Optional<TypeOfDate1Code>> mmTypeOfIssueDate = new MMMessageAttribute<DateAndAmountSD1, Optional<TypeOfDate1Code>>() {
@@ -612,10 +612,6 @@ public class DateAndAmountSD1 {
 	 * DateAndAmountSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrpssFrIsseDtInd"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PariPassuFromIssueDateIndicator"</li>
 	 * <li>
@@ -623,6 +619,10 @@ public class DateAndAmountSD1 {
 	 * definition} =
 	 * "Specifies whether the securities rank pari passu from issue date.\r\nTRUE means yes."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<DateAndAmountSD1, Optional<TrueFalseIndicator>> mmPariPassuFromIssueDateIndicator = new MMMessageAttribute<DateAndAmountSD1, Optional<TrueFalseIndicator>>() {
@@ -665,10 +665,6 @@ public class DateAndAmountSD1 {
 	 * DateAndAmountSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "LdgmntOfSctyHldrRsltnDt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LodgementOfSecurityHolderResolutionDate"</li>
 	 * <li>
@@ -676,6 +672,10 @@ public class DateAndAmountSD1 {
 	 * definition} =
 	 * "Anticipated or actual date of lodgement of security holder resolution approving the capital return with ASIC."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<DateAndAmountSD1, Optional<DateFormat22Choice>> mmLodgementOfSecurityHolderResolutionDate = new MMMessageAssociationEnd<DateAndAmountSD1, Optional<DateFormat22Choice>>() {
@@ -721,10 +721,6 @@ public class DateAndAmountSD1 {
 	 * DateAndAmountSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TpOfLdgmntOfSctyHldrRsltnDt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TypeOfLodgementOfSecurityHolderResolutionDate"</li>
 	 * <li>
@@ -732,6 +728,10 @@ public class DateAndAmountSD1 {
 	 * definition} =
 	 * "Specifies whether the Lodgement Of Security Holder Resolution Date is estimated or actual."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<DateAndAmountSD1, Optional<TypeOfDate1Code>> mmTypeOfLodgementOfSecurityHolderResolutionDate = new MMMessageAttribute<DateAndAmountSD1, Optional<TypeOfDate1Code>>() {
@@ -776,10 +776,6 @@ public class DateAndAmountSD1 {
 	 * DateAndAmountSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SelctvRtrOfCptlInd"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SelectiveReturnOfCapitalIndicator"</li>
 	 * <li>
@@ -787,6 +783,10 @@ public class DateAndAmountSD1 {
 	 * definition} =
 	 * "Indicator to determine if the capital return is a selective reduction of capital.\r\nTRUE means yes."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<DateAndAmountSD1, Optional<TrueFalseIndicator>> mmSelectiveReturnOfCapitalIndicator = new MMMessageAttribute<DateAndAmountSD1, Optional<TrueFalseIndicator>>() {
@@ -829,10 +829,6 @@ public class DateAndAmountSD1 {
 	 * DateAndAmountSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SpclAmtPerSctyAnncmntDt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SpecialAmountPerSecurityAnnouncementDate"</li>
 	 * <li>
@@ -840,6 +836,10 @@ public class DateAndAmountSD1 {
 	 * definition} =
 	 * "Date or approximate date, that actual special dividend will be announced."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<DateAndAmountSD1, Optional<DateFormat22Choice>> mmSpecialAmountPerSecurityAnnouncementDate = new MMMessageAssociationEnd<DateAndAmountSD1, Optional<DateFormat22Choice>>() {
@@ -885,10 +885,6 @@ public class DateAndAmountSD1 {
 	 * DateAndAmountSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TpOfSpclAmtPerSctyAnncmntDt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TypeOfSpecialAmountPerSecurityAnnouncementDate"</li>
 	 * <li>
@@ -896,6 +892,10 @@ public class DateAndAmountSD1 {
 	 * definition} =
 	 * "Specifies whether the Special Amount Per Security Announcement Date is actual or estimated."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<DateAndAmountSD1, Optional<TypeOfDateCode>> mmTypeOfSpecialAmountPerSecurityAnnouncementDate = new MMMessageAttribute<DateAndAmountSD1, Optional<TypeOfDateCode>>() {
@@ -938,10 +938,6 @@ public class DateAndAmountSD1 {
 	 * DateAndAmountSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ScripAmtPerSctyAnncmntDt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ScripAmountPerSecurityAnnouncementDate"</li>
 	 * <li>
@@ -949,6 +945,10 @@ public class DateAndAmountSD1 {
 	 * definition} =
 	 * "Date or approximate date, that the actual scrip dividend will be announced."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<DateAndAmountSD1, Optional<DateFormat22Choice>> mmScripAmountPerSecurityAnnouncementDate = new MMMessageAssociationEnd<DateAndAmountSD1, Optional<DateFormat22Choice>>() {
@@ -994,10 +994,6 @@ public class DateAndAmountSD1 {
 	 * DateAndAmountSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TpOfScripAmtPerSctyAnncmntDt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TypeOfScripAmountPerSecurityAnnouncementDate"</li>
 	 * <li>
@@ -1005,6 +1001,10 @@ public class DateAndAmountSD1 {
 	 * definition} =
 	 * "Specifies whether the Special Amount Per Security Announcement Date is actual or estimated."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<DateAndAmountSD1, Optional<TypeOfDateCode>> mmTypeOfScripAmountPerSecurityAnnouncementDate = new MMMessageAttribute<DateAndAmountSD1, Optional<TypeOfDateCode>>() {
@@ -1047,10 +1047,6 @@ public class DateAndAmountSD1 {
 	 * DateAndAmountSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SplmtryAmtPerSctyAnncmntDt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SupplementaryAmountPerSecurityAnnouncementDate"</li>
 	 * <li>
@@ -1058,6 +1054,10 @@ public class DateAndAmountSD1 {
 	 * definition} =
 	 * "Date or approximate date, that the actual supplementary dividend will be announced."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<DateAndAmountSD1, Optional<DateFormat22Choice>> mmSupplementaryAmountPerSecurityAnnouncementDate = new MMMessageAssociationEnd<DateAndAmountSD1, Optional<DateFormat22Choice>>() {
@@ -1103,10 +1103,6 @@ public class DateAndAmountSD1 {
 	 * DateAndAmountSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TpOfSplmtryAmtPerSctyAnncmntDt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TypeOfSupplementaryAmountPerSecurityAnnouncementDate"</li>
 	 * <li>
@@ -1114,6 +1110,10 @@ public class DateAndAmountSD1 {
 	 * definition} =
 	 * "Specifies whether the Suppmentary Amount Per Security Announcement Date is actual or estimated."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<DateAndAmountSD1, Optional<TypeOfDateCode>> mmTypeOfSupplementaryAmountPerSecurityAnnouncementDate = new MMMessageAttribute<DateAndAmountSD1, Optional<TypeOfDateCode>>() {
@@ -1156,10 +1156,6 @@ public class DateAndAmountSD1 {
 	 * DateAndAmountSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AmtPerSctyAnncmntDt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AmountPerSecurityAnnouncementDate"</li>
 	 * <li>
@@ -1167,6 +1163,10 @@ public class DateAndAmountSD1 {
 	 * definition} =
 	 * "Date or approximate date, that actual ordinary dividend will be announced."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<DateAndAmountSD1, Optional<DateFormat22Choice>> mmAmountPerSecurityAnnouncementDate = new MMMessageAssociationEnd<DateAndAmountSD1, Optional<DateFormat22Choice>>() {
@@ -1212,10 +1212,6 @@ public class DateAndAmountSD1 {
 	 * DateAndAmountSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TpOfAmtPerSctyAnncmntDt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TypeOfAmountPerSecurityAnnouncementDate"</li>
 	 * <li>
@@ -1223,6 +1219,10 @@ public class DateAndAmountSD1 {
 	 * definition} =
 	 * "Specifies whether the ordinary Amount Per Security Announcement Date is actual or estimated."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<DateAndAmountSD1, Optional<TypeOfDateCode>> mmTypeOfAmountPerSecurityAnnouncementDate = new MMMessageAttribute<DateAndAmountSD1, Optional<TypeOfDateCode>>() {
@@ -1267,16 +1267,16 @@ public class DateAndAmountSD1 {
 	 * DateAndAmountSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TpOfGrssDvddRate"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TypeOfGrossDividendRate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies whether the Gross Dividend Rate is estimated or actual."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<DateAndAmountSD1, Optional<TypeOfAmount4Code>> mmTypeOfGrossDividendRate = new MMMessageAttribute<DateAndAmountSD1, Optional<TypeOfAmount4Code>>() {
@@ -1319,10 +1319,6 @@ public class DateAndAmountSD1 {
 	 * DateAndAmountSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "EndDtOfDvddPrd"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EndDateOfDividendPeriod"</li>
 	 * <li>
@@ -1330,6 +1326,10 @@ public class DateAndAmountSD1 {
 	 * definition} =
 	 * "Date which marks the end of the period for which the dividend is to be declared."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<DateAndAmountSD1, Optional<DateFormat22Choice>> mmEndDateOfDividendPeriod = new MMMessageAssociationEnd<DateAndAmountSD1, Optional<DateFormat22Choice>>() {
@@ -1373,15 +1373,15 @@ public class DateAndAmountSD1 {
 	 * DateAndAmountSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "LastTradgDayForOrgnlScties"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LastTradingDayForOriginalSecurities"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Last day for trading in pre-reorganisation securities."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<DateAndAmountSD1, Optional<DateFormat22Choice>> mmLastTradingDayForOriginalSecurities = new MMMessageAssociationEnd<DateAndAmountSD1, Optional<DateFormat22Choice>>() {
@@ -1425,10 +1425,6 @@ public class DateAndAmountSD1 {
 	 * DateAndAmountSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "EarlstPstCnsldtnNtfctnDt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EarliestPostConsolidationNotificationDate"</li>
 	 * <li>
@@ -1436,6 +1432,10 @@ public class DateAndAmountSD1 {
 	 * definition} =
 	 * "First day to send notices to security holders and register securities on a post-reorganisation basis."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<DateAndAmountSD1, Optional<DateFormat22Choice>> mmEarliestPostConsolidationNotificationDate = new MMMessageAssociationEnd<DateAndAmountSD1, Optional<DateFormat22Choice>>() {
@@ -1481,10 +1481,6 @@ public class DateAndAmountSD1 {
 	 * DateAndAmountSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MinAmtForPrtcptn"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MinimumAmountForParticipation"</li>
 	 * <li>
@@ -1492,6 +1488,10 @@ public class DateAndAmountSD1 {
 	 * definition} =
 	 * "Minimum amount for a single securityholder participating in the plan, in the primary currency.\r\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<DateAndAmountSD1, Optional<ActiveCurrencyAnd13DecimalAmount>> mmMinimumAmountForParticipation = new MMMessageAttribute<DateAndAmountSD1, Optional<ActiveCurrencyAnd13DecimalAmount>>() {
@@ -1536,10 +1536,6 @@ public class DateAndAmountSD1 {
 	 * DateAndAmountSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MaxAmtForPrtcptn"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MaximumAmountForParticipation"</li>
 	 * <li>
@@ -1547,6 +1543,10 @@ public class DateAndAmountSD1 {
 	 * definition} =
 	 * "Maximum amount for a single security holder participating in the plan, in the primary currency.\r\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<DateAndAmountSD1, Optional<ActiveCurrencyAnd13DecimalAmount>> mmMaximumAmountForParticipation = new MMMessageAttribute<DateAndAmountSD1, Optional<ActiveCurrencyAnd13DecimalAmount>>() {
@@ -1589,10 +1589,6 @@ public class DateAndAmountSD1 {
 	 * DateAndAmountSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RinvstmtDscntRate"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReinvestmentDiscountRate"</li>
 	 * <li>
@@ -1600,6 +1596,10 @@ public class DateAndAmountSD1 {
 	 * definition} =
 	 * "Percentage discount applied to the weighted average DRP/BSP/Plan issue price calculated as part of the DRP/BSP/Plan.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<DateAndAmountSD1, Optional<RateFormat6Choice>> mmReinvestmentDiscountRate = new MMMessageAssociationEnd<DateAndAmountSD1, Optional<RateFormat6Choice>>() {
@@ -1645,15 +1645,15 @@ public class DateAndAmountSD1 {
 	 * DateAndAmountSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RinvstmtPlanTp"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReinvestmentPlanType"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates for whom this reinvestment plan applies."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<DateAndAmountSD1, Optional<ReinvestmentPlan1Code>> mmReinvestmentPlanType = new MMMessageAttribute<DateAndAmountSD1, Optional<ReinvestmentPlan1Code>>() {

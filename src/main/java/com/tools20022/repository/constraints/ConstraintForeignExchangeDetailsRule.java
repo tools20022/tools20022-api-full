@@ -35,10 +35,6 @@ public class ConstraintForeignExchangeDetailsRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Trade1 Trade1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ForeignExchangeDetailsRule"</li>
 	 * <li>
@@ -46,6 +42,10 @@ public class ConstraintForeignExchangeDetailsRule {
 	 * definition} =
 	 * "If Foreign ExchangeTradeProduct is equal to 'FORW'or'NDFO'or'SPOT', then ForeignExchangeDetails must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Trade1> forTrade1 = new MMConstraint<Trade1>() {

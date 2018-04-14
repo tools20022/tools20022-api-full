@@ -42,10 +42,6 @@ public class ConstraintInterbankReportingRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CounterpartyIdentification3Choice
 	 * CounterpartyIdentification3Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InterbankReportingRule"</li>
 	 * <li>
@@ -53,6 +49,10 @@ public class ConstraintInterbankReportingRule {
 	 * definition} =
 	 * "When the reported transaction is an interbank transaction or when the counterparty is a supranational authority or when transaction is conducted via a central clearing counterparty (CCP), the counterparty must be identified with the LEI only. In the latter case, this variable must specify the LEI of the CCP."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -82,10 +82,6 @@ public class ConstraintInterbankReportingRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CounterpartyIdentification1Choice
 	 * CounterpartyIdentification1Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InterbankReportingRule"</li>
 	 * <li>
@@ -93,6 +89,10 @@ public class ConstraintInterbankReportingRule {
 	 * definition} =
 	 * "When the reported transaction is an interbank transaction or when the counterparty is a supranational authority or when transaction is conducted via a central clearing counterparty (CCP), the counterparty must be identified with the LEI only. In the latter case, this variable must specify the LEI of the CCP."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -125,10 +125,6 @@ public class ConstraintInterbankReportingRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CounterpartyIdentification2Choice
 	 * CounterpartyIdentification2Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InterbankReportingRule"</li>
 	 * <li>
@@ -136,6 +132,10 @@ public class ConstraintInterbankReportingRule {
 	 * definition} =
 	 * "When the reported transaction is an interbank transaction or when the counterparty is a supranational authority or when transaction is conducted via a central clearing counterparty (CCP), the counterparty must be identified with the LEI only. In the latter case, this variable must specify the LEI of the CCP."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>

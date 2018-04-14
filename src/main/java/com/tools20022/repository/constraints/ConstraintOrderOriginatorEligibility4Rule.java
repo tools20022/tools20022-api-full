@@ -43,10 +43,6 @@ public class ConstraintOrderOriginatorEligibility4Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationV03
 	 * SwitchOrderConfirmationV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OrderOriginatorEligibility4Rule"</li>
 	 * <li>
@@ -54,6 +50,10 @@ public class ConstraintOrderOriginatorEligibility4Rule {
 	 * definition} =
 	 * "Either SwitchExecutionDetails/InvestmentAccountDetails/OrderOriginatorEligibility or (one or more instances of SwitchExecutionDetails/RelatedPartyDetails/OrderOriginatorEligibility) may be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SwitchOrderConfirmationV03> for_setr_SwitchOrderConfirmationV03 = new MMConstraint<SwitchOrderConfirmationV03>() {
@@ -77,10 +77,6 @@ public class ConstraintOrderOriginatorEligibility4Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SwitchOrderInstruction2
 	 * SwitchOrderInstruction2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OrderOriginatorEligibility4Rule"</li>
 	 * <li>
@@ -88,6 +84,10 @@ public class ConstraintOrderOriginatorEligibility4Rule {
 	 * definition} =
 	 * "Either SwitchOrderDetails/InvestmentAccountDetails/OrderOriginatorEligibility or (one or more instances of SwitchOrderDetails/RelatedPartyDetails/OrderOriginatorEligibility) may be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SwitchOrderInstruction2> forSwitchOrderInstruction2 = new MMConstraint<SwitchOrderInstruction2>() {
@@ -111,10 +111,6 @@ public class ConstraintOrderOriginatorEligibility4Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationAmendmentV01
 	 * SwitchOrderConfirmationAmendmentV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OrderOriginatorEligibility4Rule"</li>
 	 * <li>
@@ -122,6 +118,10 @@ public class ConstraintOrderOriginatorEligibility4Rule {
 	 * definition} =
 	 * "Either SwitchExecutionDetails/InvestmentAccountDetails/OrderOriginatorEligibility or (one or more instances of SwitchExecutionDetails/RelatedPartyDetails/OrderOriginatorEligibility) may be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SwitchOrderConfirmationAmendmentV01> for_setr_SwitchOrderConfirmationAmendmentV01 = new MMConstraint<SwitchOrderConfirmationAmendmentV01>() {
@@ -145,10 +145,6 @@ public class ConstraintOrderOriginatorEligibility4Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV03
 	 * SwitchOrderV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OrderOriginatorEligibility4Rule"</li>
 	 * <li>
@@ -156,6 +152,10 @@ public class ConstraintOrderOriginatorEligibility4Rule {
 	 * definition} =
 	 * "Either SwitchOrderDetails/InvestmentAccountDetails/OrderOriginatorEligibility or (one or more instances of SwitchOrderDetails/RelatedPartyDetails/OrderOriginatorEligibility) may be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SwitchOrderV03> for_setr_SwitchOrderV03 = new MMConstraint<SwitchOrderV03>() {
@@ -179,10 +179,6 @@ public class ConstraintOrderOriginatorEligibility4Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SwitchOrderConfirmation1
 	 * SwitchOrderConfirmation1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OrderOriginatorEligibility4Rule"</li>
 	 * <li>
@@ -190,6 +186,10 @@ public class ConstraintOrderOriginatorEligibility4Rule {
 	 * definition} =
 	 * "Either SwitchExecutionDetails/InvestmentAccountDetails/OrderOriginatorEligibility or (one or more instances of SwitchExecutionDetails/RelatedPartyDetails/OrderOriginatorEligibility) may be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SwitchOrderConfirmation1> forSwitchOrderConfirmation1 = new MMConstraint<SwitchOrderConfirmation1>() {

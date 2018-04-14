@@ -86,6 +86,12 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "PaymentInstructionExtract2"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} =
+ * "Details of a payment instruction. The information contained in this component is sufficient to retrieve a payment instruction."
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
  * constraint} =
  * <ul>
@@ -104,12 +110,6 @@ import javax.xml.bind.annotation.XmlType;
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRemovalDate
  * removalDate} = September 9, 2016</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "PaymentInstructionExtract2"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} =
- * "Details of a payment instruction. The information contained in this component is sufficient to retrieve a payment instruction."
- * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -135,10 +135,6 @@ public class PaymentInstructionExtract2 {
 	 * PaymentInstructionExtract2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OrgnlMsgNmId"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OriginalMessageNameIdentification"</li>
 	 * <li>
@@ -146,6 +142,10 @@ public class PaymentInstructionExtract2 {
 	 * definition} =
 	 * "Specifies the original message name identifier to which the message refers, eg, pacs.003.001.01 or MT103."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<PaymentInstructionExtract2, Optional<Max35Text>> mmOriginalMessageNameIdentification = new MMMessageAttribute<PaymentInstructionExtract2, Optional<Max35Text>>() {
@@ -194,10 +194,6 @@ public class PaymentInstructionExtract2 {
 	 * PaymentInstructionExtract2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OrgnlInstrId"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OriginalInstructionIdentification"</li>
 	 * <li>
@@ -205,6 +201,10 @@ public class PaymentInstructionExtract2 {
 	 * definition} =
 	 * "Original unique instruction identification as assigned by an instructing party for an instructed party to unambiguously identify the original instruction.\n\nUsage: the original instruction identification is the original point to point reference used between the instructing party and the instructed party to refer to the original instruction."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<PaymentInstructionExtract2, Max35Text> mmOriginalInstructionIdentification = new MMMessageAttribute<PaymentInstructionExtract2, Max35Text>() {
@@ -255,10 +255,6 @@ public class PaymentInstructionExtract2 {
 	 * PaymentInstructionExtract2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "InstdAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InstructedAmount"</li>
 	 * <li>
@@ -266,6 +262,10 @@ public class PaymentInstructionExtract2 {
 	 * definition} =
 	 * "Amount of money to be moved between the debtor and creditor, before deduction of charges, expressed in the currency as ordered by the initiating party."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<PaymentInstructionExtract2, CurrencyAndAmount> mmInstructedAmount = new MMMessageAttribute<PaymentInstructionExtract2, CurrencyAndAmount>() {
@@ -316,10 +316,6 @@ public class PaymentInstructionExtract2 {
 	 * PaymentInstructionExtract2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "IntrBkSttlmAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InterbankSettlementAmount"</li>
 	 * <li>
@@ -327,6 +323,10 @@ public class PaymentInstructionExtract2 {
 	 * definition} =
 	 * "Amount of money moved between the instructing agent and the instructed agent."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<PaymentInstructionExtract2, CurrencyAndAmount> mmInterbankSettlementAmount = new MMMessageAttribute<PaymentInstructionExtract2, CurrencyAndAmount>() {
@@ -376,10 +376,6 @@ public class PaymentInstructionExtract2 {
 	 * PaymentInstructionExtract2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ReqdExctnDt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RequestedExecutionDate"</li>
 	 * <li>
@@ -387,6 +383,10 @@ public class PaymentInstructionExtract2 {
 	 * definition} =
 	 * "Date the debtor requests the clearing agent to process the payment instruction."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<PaymentInstructionExtract2, ISODate> mmRequestedExecutionDate = new MMMessageAttribute<PaymentInstructionExtract2, ISODate>() {
@@ -436,10 +436,6 @@ public class PaymentInstructionExtract2 {
 	 * PaymentInstructionExtract2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "IntrBkSttlmDt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InterbankSettlementDate"</li>
 	 * <li>
@@ -447,6 +443,10 @@ public class PaymentInstructionExtract2 {
 	 * definition} =
 	 * "Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<PaymentInstructionExtract2, ISODate> mmInterbankSettlementDate = new MMMessageAttribute<PaymentInstructionExtract2, ISODate>() {
@@ -495,10 +495,6 @@ public class PaymentInstructionExtract2 {
 	 * PaymentInstructionExtract2.mmInterbankSettlementAmount}</li>
 	 * </ul>
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InstructedAmountOrInterbankSettlementAmount"</li>
 	 * <li>
@@ -506,6 +502,10 @@ public class PaymentInstructionExtract2 {
 	 * definition} =
 	 * "If InstructedAmount is present, then InterbankSettlementAmount is not allowed.\nIf InterbankSettlementAmount is present, then InstructedAmount is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMXor InstructedAmountOrInterbankSettlementAmount = new MMXor() {
@@ -539,10 +539,6 @@ public class PaymentInstructionExtract2 {
 	 * PaymentInstructionExtract2.mmInterbankSettlementDate}</li>
 	 * </ul>
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RequestedExecutionDateOrInterbankSettlementDate"</li>
 	 * <li>
@@ -550,6 +546,10 @@ public class PaymentInstructionExtract2 {
 	 * definition} =
 	 * "If RequestedExecutionDate is present, then InterbankSettlementDate is not allowed.\nIf InterbankSettlementDate is present, then RequestedExecutionDate is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMXor RequestedExecutionDateOrInterbankSettlementDate = new MMXor() {

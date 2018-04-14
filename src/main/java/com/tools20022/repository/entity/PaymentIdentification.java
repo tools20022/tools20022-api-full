@@ -119,16 +119,16 @@ import java.util.Objects;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "PaymentIdentification"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Specifies the different identifications associated with a payment transaction."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class PaymentIdentification extends TradeIdentification {
@@ -663,10 +663,6 @@ public class PaymentIdentification extends TradeIdentification {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification
 	 * PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ExecutionIdentification"</li>
 	 * <li>
@@ -674,6 +670,10 @@ public class PaymentIdentification extends TradeIdentification {
 	 * definition} =
 	 * "Unique and unambiguous identifier for a payment execution, as assigned by the clearing agent or the initiating party."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<PaymentIdentification, Max35Text> mmExecutionIdentification = new MMBusinessAttribute<PaymentIdentification, Max35Text>() {
@@ -1258,10 +1258,6 @@ public class PaymentIdentification extends TradeIdentification {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification
 	 * PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EndToEndIdentification"</li>
 	 * <li>
@@ -1269,6 +1265,10 @@ public class PaymentIdentification extends TradeIdentification {
 	 * definition} =
 	 * "Unique and unambiguous identifier for a payment as assigned by the originator. The payment transaction reference is used for reconciliation or to link tasks relating to the payment."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<PaymentIdentification, Max35Text> mmEndToEndIdentification = new MMBusinessAttribute<PaymentIdentification, Max35Text>() {
@@ -1732,10 +1732,6 @@ public class PaymentIdentification extends TradeIdentification {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification
 	 * PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InstructionIdentification"</li>
 	 * <li>
@@ -1743,6 +1739,10 @@ public class PaymentIdentification extends TradeIdentification {
 	 * definition} =
 	 * "Unique identification assigned by an instructing party for an instructed party to unambiguously identify the instruction."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<PaymentIdentification, Max35Text> mmInstructionIdentification = new MMBusinessAttribute<PaymentIdentification, Max35Text>() {
@@ -2072,10 +2072,6 @@ public class PaymentIdentification extends TradeIdentification {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification
 	 * PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TransactionIdentification"</li>
 	 * <li>
@@ -2083,6 +2079,10 @@ public class PaymentIdentification extends TradeIdentification {
 	 * definition} =
 	 * "Unique identification assigned by the first instructing agent to unambiguously identify the transaction and passed on, unchanged, throughout the entire interbank chain. "
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<PaymentIdentification, Max35Text> mmTransactionIdentification = new MMBusinessAttribute<PaymentIdentification, Max35Text>() {
@@ -2322,10 +2322,6 @@ public class PaymentIdentification extends TradeIdentification {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification
 	 * PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ClearingSystemReference"</li>
 	 * <li>
@@ -2333,6 +2329,10 @@ public class PaymentIdentification extends TradeIdentification {
 	 * definition} =
 	 * "Unique and unambiguous identifier for a payment instruction, as assigned by the clearing system."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<PaymentIdentification, Max35Text> mmClearingSystemReference = new MMBusinessAttribute<PaymentIdentification, Max35Text>() {
@@ -2444,10 +2444,6 @@ public class PaymentIdentification extends TradeIdentification {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification
 	 * PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CreditorReference"</li>
 	 * <li>
@@ -2455,6 +2451,10 @@ public class PaymentIdentification extends TradeIdentification {
 	 * definition} =
 	 * "Unique and unambiguous reference assigned by the creditor to refer to the payment obligation."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<PaymentIdentification, Max35Text> mmCreditorReference = new MMBusinessAttribute<PaymentIdentification, Max35Text>() {
@@ -2491,6 +2491,9 @@ public class PaymentIdentification extends TradeIdentification {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.Payment Payment}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.Payment#mmPaymentRelatedIdentifications
@@ -2499,22 +2502,19 @@ public class PaymentIdentification extends TradeIdentification {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.Payment Payment}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification
 	 * PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Payment"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Payment for which identifications are provided."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<PaymentIdentification, com.tools20022.repository.entity.Payment> mmPayment = new MMBusinessAssociationEnd<PaymentIdentification, com.tools20022.repository.entity.Payment>() {

@@ -64,6 +64,12 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "CreditDefaultSwapDerivative4"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} =
+ * "Credit default swap derivative specific for reporting derivatives on a single name."
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
  * constraint} =
  * <ul>
@@ -76,12 +82,6 @@ import javax.xml.bind.annotation.XmlType;
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "CreditDefaultSwapDerivative4"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} =
- * "Credit default swap derivative specific for reporting derivatives on a single name."
- * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -113,10 +113,6 @@ public class CreditDefaultSwapDerivative4 {
 	 * CreditDefaultSwapDerivative4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "UndrlygNmId"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnderlyingNameIdentification"</li>
 	 * <li>
@@ -124,6 +120,10 @@ public class CreditDefaultSwapDerivative4 {
 	 * definition} =
 	 * "Derivative on a credit default swap with the ISIN code of the underlying swap."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CreditDefaultSwapDerivative4, Optional<ISINOct2015Identifier>> mmUnderlyingNameIdentification = new MMMessageAttribute<CreditDefaultSwapDerivative4, Optional<ISINOct2015Identifier>>() {
@@ -174,10 +174,6 @@ public class CreditDefaultSwapDerivative4 {
 	 * CreditDefaultSwapDerivative4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OblgtnId"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ObligationIdentification"</li>
 	 * <li>
@@ -185,6 +181,10 @@ public class CreditDefaultSwapDerivative4 {
 	 * definition} =
 	 * "Identification of the reference obligation for a derivative on a credit default swap."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CreditDefaultSwapDerivative4, ISINOct2015Identifier> mmObligationIdentification = new MMMessageAttribute<CreditDefaultSwapDerivative4, ISINOct2015Identifier>() {
@@ -234,10 +234,6 @@ public class CreditDefaultSwapDerivative4 {
 	 * CreditDefaultSwapDerivative4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SnglNm"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SingleName"</li>
 	 * <li>
@@ -245,6 +241,10 @@ public class CreditDefaultSwapDerivative4 {
 	 * definition} =
 	 * "Describes the single name specific details the derivative is being made on."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<CreditDefaultSwapDerivative4, CreditDefaultSwapSingleName2> mmSingleName = new MMMessageAssociationEnd<CreditDefaultSwapDerivative4, CreditDefaultSwapSingleName2>() {

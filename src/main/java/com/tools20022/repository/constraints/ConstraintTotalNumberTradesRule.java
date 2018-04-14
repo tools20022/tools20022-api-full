@@ -36,10 +36,6 @@ public class ConstraintTotalNumberTradesRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeCaptureReportV01
 	 * ForeignExchangeTradeCaptureReportV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TotalNumberTradesRule"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintTotalNumberTradesRule {
 	 * definition} =
 	 * "If TotalNumberTrades is not equal to 0, then Trade Information and TradingSideIdentification and CounterpartySideIdentification must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ForeignExchangeTradeCaptureReportV01> for_fxtr_ForeignExchangeTradeCaptureReportV01 = new MMConstraint<ForeignExchangeTradeCaptureReportV01>() {

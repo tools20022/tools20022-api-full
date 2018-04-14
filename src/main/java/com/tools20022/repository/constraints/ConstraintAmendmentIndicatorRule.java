@@ -39,10 +39,6 @@ public class ConstraintAmendmentIndicatorRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.MandateRelatedInformation1
 	 * MandateRelatedInformation1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AmendmentIndicatorRule"</li>
 	 * <li>
@@ -50,6 +46,10 @@ public class ConstraintAmendmentIndicatorRule {
 	 * definition} =
 	 * "If AmendmentIndicator is true, then AmendementInformationDetails must be present, with amended mandate information.\n\nIf AmendmentIndicator is false, then AmendmentInformationDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<MandateRelatedInformation1> forMandateRelatedInformation1 = new MMConstraint<MandateRelatedInformation1>() {

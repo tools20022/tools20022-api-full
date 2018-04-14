@@ -35,10 +35,6 @@ public class ConstraintUseOfPostEffectiveDateClassificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes23SD1
 	 * FinancialInstrumentAttributes23SD1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UseOfPostEffectiveDateClassificationRule"</li>
 	 * <li>
@@ -46,6 +42,10 @@ public class ConstraintUseOfPostEffectiveDateClassificationRule {
 	 * definition} =
 	 * "PostEffectiveDateClassification can only be used with Event Type Code MRGR."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes23SD1> forFinancialInstrumentAttributes23SD1 = new MMConstraint<FinancialInstrumentAttributes23SD1>() {

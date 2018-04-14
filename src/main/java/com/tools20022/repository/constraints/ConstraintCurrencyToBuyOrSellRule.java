@@ -69,10 +69,6 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails73
 	 * SecuritiesTradeDetails73}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyToBuyOrSellRule"</li>
 	 * <li>
@@ -80,6 +76,10 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * definition} =
 	 * "CurrencyToBuy and CurrencyToSell in the TradeDetails message component, provides an instruction to the account servicer to execute a foreign exchange deal on behalf of the account owner. The purpose of the forex deal is to fund the purchase of securities. This field is not to be used when standing instructions have been established. \r\n\r\nIf CurrencyToSell is used, then it implies the following:\r\n- the instruction is a receive.\r\n- the currency required for funding a purchase of securities, for example, the currency to be purchased, is the currency of the settlement amount. The currency to be sold to obtain settlement currency is provided by the currency to sell message element. Normally, this is the base currency of the portfolio. \r\n- the amount of currency to be bought is equal to the settlement amount of the transaction. This implies the forex will not be used for other transactions and that a bulk forex deal must be instructed by other means. \r\n- a forex deal to fund the purchase of securities should be executed in time for the currency to be available on the settlement date of the securities transaction. \r\n- a bilateral agreement regarding the use of this field has been established.\r\n\r\nIf CurrencyToBuy is used, then it implies the following:\r\n- the instruction is a delivery\r\n- the currency received as proceeds from the sale of securities, for example, the currency to be sold, is the currency of the settlement amount. The currency to be bought is provided by the currency to buy message element. If proceeds are repatriated, this is in the base currency of the portfolio. \r\n- the amount of currency to be sold is equal to the settlement amount of the transaction. This implies a bulk forex deal must be instructed by other means. \r\n- a forex deal to repatriate proceeds after the sale of securities should be executed for the soonest possible value date after settlement of the securities, as permitted by market convention. \r\n- a bilateral agreement regarding the use of this field has been established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -109,10 +109,6 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails88
 	 * SecuritiesTradeDetails88}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyToBuyOrSellRule"</li>
 	 * <li>
@@ -120,6 +116,10 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * definition} =
 	 * "CurrencyToBuy and CurrencyToSell in the TradeDetails message component, provides an instruction to the account servicer to execute a foreign exchange deal on behalf of the account owner. The purpose of the forex deal is to fund the purchase of securities. This field is not to be used when standing instructions have been established. \r\n\r\nIf CurrencyToSell is used, then it implies the following:\r\n- the instruction is a receive.\r\n- the currency required for funding a purchase of securities, for example, the currency to be purchased, is the currency of the settlement amount. The currency to be sold to obtain settlement currency is provided by the currency to sell message element. Normally, this is the base currency of the portfolio. \r\n- the amount of currency to be bought is equal to the settlement amount of the transaction. This implies the forex will not be used for other transactions and that a bulk forex deal must be instructed by other means. \r\n- a forex deal to fund the purchase of securities should be executed in time for the currency to be available on the settlement date of the securities transaction. \r\n- a bilateral agreement regarding the use of this field has been established.\r\n\r\nIf CurrencyToBuy is used, then it implies the following:\r\n- the instruction is a delivery\r\n- the currency received as proceeds from the sale of securities, for example, the currency to be sold, is the currency of the settlement amount. The currency to be bought is provided by the currency to buy message element. If proceeds are repatriated, this is in the base currency of the portfolio. \r\n- the amount of currency to be sold is equal to the settlement amount of the transaction. This implies a bulk forex deal must be instructed by other means. \r\n- a forex deal to repatriate proceeds after the sale of securities should be executed for the soonest possible value date after settlement of the securities, as permitted by market convention. \r\n- a bilateral agreement regarding the use of this field has been established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails88> forSecuritiesTradeDetails88 = new MMConstraint<SecuritiesTradeDetails88>() {
@@ -142,10 +142,6 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Order17 Order17}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyToBuyOrSellRule"</li>
 	 * <li>
@@ -153,6 +149,10 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * definition} =
 	 * "CurrencyToBuyOrSell in the TradeDetails message component, provides an instruction to the account servicer to execute a foreign exchange deal on behalf of the account owner. The purpose of the forex deal is to fund the purchase of securities. This field is not to be used when standing instructions have been established. \r\n\r\nIf CurrencyToSell is used, then it implies the following:\r\n- the instruction is to receive.\r\n- the currency required for funding a purchase of securities, eg, the currency to be purchased, is the currency of the settlement amount. The currency to be sold to obtain settlement currency is provided by the currency to sell message element. Normally, this is the base currency of the portfolio. \r\n- the amount of currency to be bought is equal to the settlement amount of the transaction. This implies the forex will not be used for other transactions and that a bulk forex deal must be instructed by other means. \r\n- a forex deal to fund the purchase of securities should be executed in time for the currency to be available on the settlement date of the securities transaction. \r\n- a bilateral agreement regarding the use of this field has been established.\r\n\r\nIf CurrencyToBuy is used, then it implies the following:\r\n- the instruction is to delivery\r\n- the currency received as proceeds from the sale of securities, eg, the currency to be sold, is the currency of the settlement amount. The currency to be bought is provided by the currency to buy message element. If proceeds are repatriated, this is in the base currency of the portfolio. \r\n- the amount of currency to be sold is equal to the settlement amount of the transaction. This implies a bulk forex deal must be instructed by other means. \r\n- a forex deal to repatriate proceeds after the sale of securities should be executed for the soonest possible value date after settlement of the securities, as permitted by market convention. \r\n- a bilateral agreement regarding the use of this field has been established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -181,10 +181,6 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Order16 Order16}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyToBuyOrSellRule"</li>
 	 * <li>
@@ -192,6 +188,10 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * definition} =
 	 * "CurrencyToBuyOrSell in the TradeDetails message component, provides an instruction to the account servicer to execute a foreign exchange deal on behalf of the account owner. The purpose of the forex deal is to fund the purchase of securities. This field is not to be used when standing instructions have been established. \r\n\r\nIf CurrencyToSell is used, then it implies the following:\r\n- the instruction is to receive.\r\n- the currency required for funding a purchase of securities, eg, the currency to be purchased, is the currency of the settlement amount. The currency to be sold to obtain settlement currency is provided by the currency to sell message element. Normally, this is the base currency of the portfolio. \r\n- the amount of currency to be bought is equal to the settlement amount of the transaction. This implies the forex will not be used for other transactions and that a bulk forex deal must be instructed by other means. \r\n- a forex deal to fund the purchase of securities should be executed in time for the currency to be available on the settlement date of the securities transaction. \r\n- a bilateral agreement regarding the use of this field has been established.\r\n\r\nIf CurrencyToBuy is used, then it implies the following:\r\n- the instruction is to delivery\r\n- the currency received as proceeds from the sale of securities, eg, the currency to be sold, is the currency of the settlement amount. The currency to be bought is provided by the currency to buy message element. If proceeds are repatriated, this is in the base currency of the portfolio. \r\n- the amount of currency to be sold is equal to the settlement amount of the transaction. This implies a bulk forex deal must be instructed by other means. \r\n- a forex deal to repatriate proceeds after the sale of securities should be executed for the soonest possible value date after settlement of the securities, as permitted by market convention. \r\n- a bilateral agreement regarding the use of this field has been established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -224,10 +224,6 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails67
 	 * SecuritiesTradeDetails67}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyToBuyOrSellRule"</li>
 	 * <li>
@@ -235,6 +231,10 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * definition} =
 	 * "CurrencyToBuy and CurrencyToSell in the TradeDetails message component, provides an instruction to the account servicer to execute a foreign exchange deal on behalf of the account owner. The purpose of the forex deal is to fund the purchase of securities. This field is not to be used when standing instructions have been established. \n\nIf CurrencyToSell is used, then it implies the following: \n- the instruction is a receive.\n- the currency required for funding a purchase of securities, eg, the currency to be purchased, is the currency of the settlement amount. The currency to be sold to obtain settlement currency is provided by the currency to sell message element. Normally, this is the base currency of the portfolio. \n- the amount of currency to be bought is equal to the settlement amount of the transaction. This implies the forex will not be used for other transactions and that a bulk forex deal must be instructed by other means. \n- a forex deal to fund the purchase of securities should be executed in time for the currency to be available on the settlement date of the securities transaction. \n- a bilateral agreement regarding the use of this field has been established.\n\nIf CurrencyToBuy is used, then it implies the following: \n- the instruction is a delivery\n- the currency received as proceeds from the sale of securities, eg, the currency to be sold, is the currency of the settlement amount. The currency to be bought is provided by the currency to buy message element. If proceeds are repatriated, this is in the base currency of the portfolio. \n- the amount of currency to be sold is equal to the settlement amount of the transaction. This implies a bulk forex deal must be instructed by other means. \n- a forex deal to repatriate proceeds after the sale of securities should be executed for the soonest possible value date after settlement of the securities, as permitted by market convention. \n- a bilateral agreement regarding the use of this field has been established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -273,10 +273,6 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails65
 	 * SecuritiesTradeDetails65}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyToBuyOrSellRule"</li>
 	 * <li>
@@ -284,6 +280,10 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * definition} =
 	 * "CurrencyToBuy and CurrencyToSell in the TradeDetails message component, provides an instruction to the account servicer to execute a foreign exchange deal on behalf of the account owner. The purpose of the forex deal is to fund the purchase of securities. This field is not to be used when standing instructions have been established. \n\nIf CurrencyToSell is used, then it implies the following: \n- the instruction is a receive.\n- the currency required for funding a purchase of securities, eg, the currency to be purchased, is the currency of the settlement amount. The currency to be sold to obtain settlement currency is provided by the currency to sell message element. Normally, this is the base currency of the portfolio. \n- the amount of currency to be bought is equal to the settlement amount of the transaction. This implies the forex will not be used for other transactions and that a bulk forex deal must be instructed by other means. \n- a forex deal to fund the purchase of securities should be executed in time for the currency to be available on the settlement date of the securities transaction. \n- a bilateral agreement regarding the use of this field has been established.\n\nIf CurrencyToBuy is used, then it implies the following: \n- the instruction is a delivery\n- the currency received as proceeds from the sale of securities, eg, the currency to be sold, is the currency of the settlement amount. The currency to be bought is provided by the currency to buy message element. If proceeds are repatriated, this is in the base currency of the portfolio. \n- the amount of currency to be sold is equal to the settlement amount of the transaction. This implies a bulk forex deal must be instructed by other means. \n- a forex deal to repatriate proceeds after the sale of securities should be executed for the soonest possible value date after settlement of the securities, as permitted by market convention. \n- a bilateral agreement regarding the use of this field has been established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails65> forSecuritiesTradeDetails65 = new MMConstraint<SecuritiesTradeDetails65>() {
@@ -307,10 +307,6 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails26
 	 * SecuritiesTradeDetails26}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyToBuyOrSellRule"</li>
 	 * <li>
@@ -318,6 +314,10 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * definition} =
 	 * "CurrencyToBuy and CurrencyToSell in the TradeDetails message component, provides an instruction to the account servicer to execute a foreign exchange deal on behalf of the account owner. The purpose of the forex deal is to fund the purchase of securities. This field is not to be used when standing instructions have been established. \n\nIf CurrencyToSell is used, then it implies the following: \n- the instruction is a receive.\n- the currency required for funding a purchase of securities, eg, the currency to be purchased, is the currency of the settlement amount. The currency to be sold to obtain settlement currency is provided by the currency to sell message element. Normally, this is the base currency of the portfolio. \n- the amount of currency to be bought is equal to the settlement amount of the transaction. This implies the forex will not be used for other transactions and that a bulk forex deal must be instructed by other means. \n- a forex deal to fund the purchase of securities should be executed in time for the currency to be available on the settlement date of the securities transaction. \n- a bilateral agreement regarding the use of this field has been established.\n\nIf CurrencyToBuy is used, then it implies the following: \n- the instruction is a delivery\n- the currency received as proceeds from the sale of securities, eg, the currency to be sold, is the currency of the settlement amount. The currency to be bought is provided by the currency to buy message element. If proceeds are repatriated, this is in the base currency of the portfolio. \n- the amount of currency to be sold is equal to the settlement amount of the transaction. This implies a bulk forex deal must be instructed by other means. \n- a forex deal to repatriate proceeds after the sale of securities should be executed for the soonest possible value date after settlement of the securities, as permitted by market convention. \n- a bilateral agreement regarding the use of this field has been established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -350,10 +350,6 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails47
 	 * SecuritiesTradeDetails47}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyToBuyOrSellRule"</li>
 	 * <li>
@@ -361,6 +357,10 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * definition} =
 	 * "CurrencyToBuy and CurrencyToSell in the TradeDetails message component, provides an instruction to the account servicer to execute a foreign exchange deal on behalf of the account owner. The purpose of the forex deal is to fund the purchase of securities. This field is not to be used when standing instructions have been established. \n\nIf CurrencyToSell is used, then it implies the following: \n- the instruction is a receive.\n- the currency required for funding a purchase of securities, eg, the currency to be purchased, is the currency of the settlement amount. The currency to be sold to obtain settlement currency is provided by the currency to sell message element. Normally, this is the base currency of the portfolio. \n- the amount of currency to be bought is equal to the settlement amount of the transaction. This implies the forex will not be used for other transactions and that a bulk forex deal must be instructed by other means. \n- a forex deal to fund the purchase of securities should be executed in time for the currency to be available on the settlement date of the securities transaction. \n- a bilateral agreement regarding the use of this field has been established.\n\nIf CurrencyToBuy is used, then it implies the following: \n- the instruction is a delivery\n- the currency received as proceeds from the sale of securities, eg, the currency to be sold, is the currency of the settlement amount. The currency to be bought is provided by the currency to buy message element. If proceeds are repatriated, this is in the base currency of the portfolio. \n- the amount of currency to be sold is equal to the settlement amount of the transaction. This implies a bulk forex deal must be instructed by other means. \n- a forex deal to repatriate proceeds after the sale of securities should be executed for the soonest possible value date after settlement of the securities, as permitted by market convention. \n- a bilateral agreement regarding the use of this field has been established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails47> forSecuritiesTradeDetails47 = new MMConstraint<SecuritiesTradeDetails47>() {
@@ -384,10 +384,6 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails56
 	 * SecuritiesTradeDetails56}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyToBuyOrSellRule"</li>
 	 * <li>
@@ -395,6 +391,10 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * definition} =
 	 * "CurrencyToBuy and CurrencyToSell in the TradeDetails message component, provides an instruction to the account servicer to execute a foreign exchange deal on behalf of the account owner. The purpose of the forex deal is to fund the purchase of securities. This field is not to be used when standing instructions have been established. \n\nIf CurrencyToSell is used, then it implies the following: \n- the instruction is a receive.\n- the currency required for funding a purchase of securities, eg, the currency to be purchased, is the currency of the settlement amount. The currency to be sold to obtain settlement currency is provided by the currency to sell message element. Normally, this is the base currency of the portfolio. \n- the amount of currency to be bought is equal to the settlement amount of the transaction. This implies the forex will not be used for other transactions and that a bulk forex deal must be instructed by other means. \n- a forex deal to fund the purchase of securities should be executed in time for the currency to be available on the settlement date of the securities transaction. \n- a bilateral agreement regarding the use of this field has been established.\n\nIf CurrencyToBuy is used, then it implies the following: \n- the instruction is a delivery\n- the currency received as proceeds from the sale of securities, eg, the currency to be sold, is the currency of the settlement amount. The currency to be bought is provided by the currency to buy message element. If proceeds are repatriated, this is in the base currency of the portfolio. \n- the amount of currency to be sold is equal to the settlement amount of the transaction. This implies a bulk forex deal must be instructed by other means. \n- a forex deal to repatriate proceeds after the sale of securities should be executed for the soonest possible value date after settlement of the securities, as permitted by market convention. \n- a bilateral agreement regarding the use of this field has been established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -433,10 +433,6 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails55
 	 * SecuritiesTradeDetails55}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyToBuyOrSellRule"</li>
 	 * <li>
@@ -444,6 +440,10 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * definition} =
 	 * "CurrencyToBuy and CurrencyToSell in the TradeDetails message component, provides an instruction to the account servicer to execute a foreign exchange deal on behalf of the account owner. The purpose of the forex deal is to fund the purchase of securities. This field is not to be used when standing instructions have been established. \n\nIf CurrencyToSell is used, then it implies the following: \n- the instruction is a receive.\n- the currency required for funding a purchase of securities, eg, the currency to be purchased, is the currency of the settlement amount. The currency to be sold to obtain settlement currency is provided by the currency to sell message element. Normally, this is the base currency of the portfolio. \n- the amount of currency to be bought is equal to the settlement amount of the transaction. This implies the forex will not be used for other transactions and that a bulk forex deal must be instructed by other means. \n- a forex deal to fund the purchase of securities should be executed in time for the currency to be available on the settlement date of the securities transaction. \n- a bilateral agreement regarding the use of this field has been established.\n\nIf CurrencyToBuy is used, then it implies the following: \n- the instruction is a delivery\n- the currency received as proceeds from the sale of securities, eg, the currency to be sold, is the currency of the settlement amount. The currency to be bought is provided by the currency to buy message element. If proceeds are repatriated, this is in the base currency of the portfolio. \n- the amount of currency to be sold is equal to the settlement amount of the transaction. This implies a bulk forex deal must be instructed by other means. \n- a forex deal to repatriate proceeds after the sale of securities should be executed for the soonest possible value date after settlement of the securities, as permitted by market convention. \n- a bilateral agreement regarding the use of this field has been established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -481,10 +481,6 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Order18 Order18}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyToBuyOrSellRule"</li>
 	 * <li>
@@ -492,6 +488,10 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * definition} =
 	 * "CurrencyToBuyOrSell in the TradeDetails message component, provides an instruction to the account servicer to execute a foreign exchange deal on behalf of the account owner. The purpose of the forex deal is to fund the purchase of securities. This field is not to be used when standing instructions have been established. \r\n\r\nIf CurrencyToSell is used, then it implies the following:\r\n- the instruction is to receive.\r\n- the currency required for funding a purchase of securities, eg, the currency to be purchased, is the currency of the settlement amount. The currency to be sold to obtain settlement currency is provided by the currency to sell message element. Normally, this is the base currency of the portfolio. \r\n- the amount of currency to be bought is equal to the settlement amount of the transaction. This implies the forex will not be used for other transactions and that a bulk forex deal must be instructed by other means. \r\n- a forex deal to fund the purchase of securities should be executed in time for the currency to be available on the settlement date of the securities transaction. \r\n- a bilateral agreement regarding the use of this field has been established.\r\n\r\nIf CurrencyToBuy is used, then it implies the following:\r\n- the instruction is to delivery\r\n- the currency received as proceeds from the sale of securities, eg, the currency to be sold, is the currency of the settlement amount. The currency to be bought is provided by the currency to buy message element. If proceeds are repatriated, this is in the base currency of the portfolio. \r\n- the amount of currency to be sold is equal to the settlement amount of the transaction. This implies a bulk forex deal must be instructed by other means. \r\n- a forex deal to repatriate proceeds after the sale of securities should be executed for the soonest possible value date after settlement of the securities, as permitted by market convention. \r\n- a bilateral agreement regarding the use of this field has been established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -521,10 +521,6 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails34
 	 * SecuritiesTradeDetails34}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyToBuyOrSellRule"</li>
 	 * <li>
@@ -532,6 +528,10 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * definition} =
 	 * "CurrencyToBuy and CurrencyToSell in the TradeDetails message component, provides an instruction to the account servicer to execute a foreign exchange deal on behalf of the account owner. The purpose of the forex deal is to fund the purchase of securities. This field is not to be used when standing instructions have been established. \n\nIf CurrencyToSell is used, then it implies the following: \n- the instruction is a receive.\n- the currency required for funding a purchase of securities, eg, the currency to be purchased, is the currency of the settlement amount. The currency to be sold to obtain settlement currency is provided by the currency to sell message element. Normally, this is the base currency of the portfolio. \n- the amount of currency to be bought is equal to the settlement amount of the transaction. This implies the forex will not be used for other transactions and that a bulk forex deal must be instructed by other means. \n- a forex deal to fund the purchase of securities should be executed in time for the currency to be available on the settlement date of the securities transaction. \n- a bilateral agreement regarding the use of this field has been established.\n\nIf CurrencyToBuy is used, then it implies the following: \n- the instruction is a delivery\n- the currency received as proceeds from the sale of securities, eg, the currency to be sold, is the currency of the settlement amount. The currency to be bought is provided by the currency to buy message element. If proceeds are repatriated, this is in the base currency of the portfolio. \n- the amount of currency to be sold is equal to the settlement amount of the transaction. This implies a bulk forex deal must be instructed by other means. \n- a forex deal to repatriate proceeds after the sale of securities should be executed for the soonest possible value date after settlement of the securities, as permitted by market convention. \n- a bilateral agreement regarding the use of this field has been established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -570,10 +570,6 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails87
 	 * SecuritiesTradeDetails87}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyToBuyOrSellRule"</li>
 	 * <li>
@@ -581,6 +577,10 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * definition} =
 	 * "CurrencyToBuy and CurrencyToSell in the TradeDetails message component, provides an instruction to the account servicer to execute a foreign exchange deal on behalf of the account owner. The purpose of the forex deal is to fund the purchase of securities. This field is not to be used when standing instructions have been established. \r\n\r\nIf CurrencyToSell is used, then it implies the following:\r\n- the instruction is a receive.\r\n- the currency required for funding a purchase of securities, for example, the currency to be purchased, is the currency of the settlement amount. The currency to be sold to obtain settlement currency is provided by the currency to sell message element. Normally, this is the base currency of the portfolio. \r\n- the amount of currency to be bought is equal to the settlement amount of the transaction. This implies the forex will not be used for other transactions and that a bulk forex deal must be instructed by other means. \r\n- a forex deal to fund the purchase of securities should be executed in time for the currency to be available on the settlement date of the securities transaction. \r\n- a bilateral agreement regarding the use of this field has been established.\r\n\r\nIf CurrencyToBuy is used, then it implies the following:\r\n- the instruction is a delivery\r\n- the currency received as proceeds from the sale of securities, for example, the currency to be sold, is the currency of the settlement amount. The currency to be bought is provided by the currency to buy message element. If proceeds are repatriated, this is in the base currency of the portfolio. \r\n- the amount of currency to be sold is equal to the settlement amount of the transaction. This implies a bulk forex deal must be instructed by other means. \r\n- a forex deal to repatriate proceeds after the sale of securities should be executed for the soonest possible value date after settlement of the securities, as permitted by market convention. \r\n- a bilateral agreement regarding the use of this field has been established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails87> forSecuritiesTradeDetails87 = new MMConstraint<SecuritiesTradeDetails87>() {
@@ -604,10 +604,6 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails38
 	 * SecuritiesTradeDetails38}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyToBuyOrSellRule"</li>
 	 * <li>
@@ -615,6 +611,10 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * definition} =
 	 * "CurrencyToBuy and CurrencyToSell in the TradeDetails message component, provides an instruction to the account servicer to execute a foreign exchange deal on behalf of the account owner. The purpose of the forex deal is to fund the purchase of securities. This field is not to be used when standing instructions have been established. \n\nIf CurrencyToSell is used, then it implies the following: \n- the instruction is a receive.\n- the currency required for funding a purchase of securities, eg, the currency to be purchased, is the currency of the settlement amount. The currency to be sold to obtain settlement currency is provided by the currency to sell message element. Normally, this is the base currency of the portfolio. \n- the amount of currency to be bought is equal to the settlement amount of the transaction. This implies the forex will not be used for other transactions and that a bulk forex deal must be instructed by other means. \n- a forex deal to fund the purchase of securities should be executed in time for the currency to be available on the settlement date of the securities transaction. \n- a bilateral agreement regarding the use of this field has been established.\n\nIf CurrencyToBuy is used, then it implies the following: \n- the instruction is a delivery\n- the currency received as proceeds from the sale of securities, eg, the currency to be sold, is the currency of the settlement amount. The currency to be bought is provided by the currency to buy message element. If proceeds are repatriated, this is in the base currency of the portfolio. \n- the amount of currency to be sold is equal to the settlement amount of the transaction. This implies a bulk forex deal must be instructed by other means. \n- a forex deal to repatriate proceeds after the sale of securities should be executed for the soonest possible value date after settlement of the securities, as permitted by market convention. \n- a bilateral agreement regarding the use of this field has been established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -653,10 +653,6 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails51
 	 * SecuritiesTradeDetails51}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyToBuyOrSellRule"</li>
 	 * <li>
@@ -664,6 +660,10 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * definition} =
 	 * "CurrencyToBuy and CurrencyToSell in the TradeDetails message component, provides an instruction to the account servicer to execute a foreign exchange deal on behalf of the account owner. The purpose of the forex deal is to fund the purchase of securities. This field is not to be used when standing instructions have been established. \n\nIf CurrencyToSell is used, then it implies the following: \n- the instruction is a receive.\n- the currency required for funding a purchase of securities, eg, the currency to be purchased, is the currency of the settlement amount. The currency to be sold to obtain settlement currency is provided by the currency to sell message element. Normally, this is the base currency of the portfolio. \n- the amount of currency to be bought is equal to the settlement amount of the transaction. This implies the forex will not be used for other transactions and that a bulk forex deal must be instructed by other means. \n- a forex deal to fund the purchase of securities should be executed in time for the currency to be available on the settlement date of the securities transaction. \n- a bilateral agreement regarding the use of this field has been established.\n\nIf CurrencyToBuy is used, then it implies the following: \n- the instruction is a delivery\n- the currency received as proceeds from the sale of securities, eg, the currency to be sold, is the currency of the settlement amount. The currency to be bought is provided by the currency to buy message element. If proceeds are repatriated, this is in the base currency of the portfolio. \n- the amount of currency to be sold is equal to the settlement amount of the transaction. This implies a bulk forex deal must be instructed by other means. \n- a forex deal to repatriate proceeds after the sale of securities should be executed for the soonest possible value date after settlement of the securities, as permitted by market convention. \n- a bilateral agreement regarding the use of this field has been established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -706,10 +706,6 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails83
 	 * SecuritiesTradeDetails83}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyToBuyOrSellRule"</li>
 	 * <li>
@@ -717,6 +713,10 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * definition} =
 	 * "CurrencyToBuy and CurrencyToSell in the TradeDetails message component, provides an instruction to the account servicer to execute a foreign exchange deal on behalf of the account owner. The purpose of the forex deal is to fund the purchase of securities. This field is not to be used when standing instructions have been established. \r\n\r\nIf CurrencyToSell is used, then it implies the following:\r\n- the instruction is a receive.\r\n- the currency required for funding a purchase of securities, for example, the currency to be purchased, is the currency of the settlement amount. The currency to be sold to obtain settlement currency is provided by the currency to sell message element. Normally, this is the base currency of the portfolio. \r\n- the amount of currency to be bought is equal to the settlement amount of the transaction. This implies the forex will not be used for other transactions and that a bulk forex deal must be instructed by other means. \r\n- a forex deal to fund the purchase of securities should be executed in time for the currency to be available on the settlement date of the securities transaction. \r\n- a bilateral agreement regarding the use of this field has been established.\r\n\r\nIf CurrencyToBuy is used, then it implies the following:\r\n- the instruction is a delivery\r\n- the currency received as proceeds from the sale of securities, for example, the currency to be sold, is the currency of the settlement amount. The currency to be bought is provided by the currency to buy message element. If proceeds are repatriated, this is in the base currency of the portfolio. \r\n- the amount of currency to be sold is equal to the settlement amount of the transaction. This implies a bulk forex deal must be instructed by other means. \r\n- a forex deal to repatriate proceeds after the sale of securities should be executed for the soonest possible value date after settlement of the securities, as permitted by market convention. \r\n- a bilateral agreement regarding the use of this field has been established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails83> forSecuritiesTradeDetails83 = new MMConstraint<SecuritiesTradeDetails83>() {
@@ -740,10 +740,6 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails25
 	 * SecuritiesTradeDetails25}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyToBuyOrSellRule"</li>
 	 * <li>
@@ -751,6 +747,10 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * definition} =
 	 * "CurrencyToBuy and CurrencyToSell in the TradeDetails message component, provides an instruction to the account servicer to execute a foreign exchange deal on behalf of the account owner. The purpose of the forex deal is to fund the purchase of securities. This field is not to be used when standing instructions have been established. \n\nIf CurrencyToSell is used, then it implies the following: \n- the instruction is a receive.\n- the currency required for funding a purchase of securities, eg, the currency to be purchased, is the currency of the settlement amount. The currency to be sold to obtain settlement currency is provided by the currency to sell message element. Normally, this is the base currency of the portfolio. \n- the amount of currency to be bought is equal to the settlement amount of the transaction. This implies the forex will not be used for other transactions and that a bulk forex deal must be instructed by other means. \n- a forex deal to fund the purchase of securities should be executed in time for the currency to be available on the settlement date of the securities transaction. \n- a bilateral agreement regarding the use of this field has been established.\n\nIf CurrencyToBuy is used, then it implies the following: \n- the instruction is a delivery\n- the currency received as proceeds from the sale of securities, eg, the currency to be sold, is the currency of the settlement amount. The currency to be bought is provided by the currency to buy message element. If proceeds are repatriated, this is in the base currency of the portfolio. \n- the amount of currency to be sold is equal to the settlement amount of the transaction. This implies a bulk forex deal must be instructed by other means. \n- a forex deal to repatriate proceeds after the sale of securities should be executed for the soonest possible value date after settlement of the securities, as permitted by market convention. \n- a bilateral agreement regarding the use of this field has been established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -783,10 +783,6 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails66
 	 * SecuritiesTradeDetails66}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyToBuyOrSellRule"</li>
 	 * <li>
@@ -794,6 +790,10 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * definition} =
 	 * "CurrencyToBuy and CurrencyToSell in the TradeDetails message component, provides an instruction to the account servicer to execute a foreign exchange deal on behalf of the account owner. The purpose of the forex deal is to fund the purchase of securities. This field is not to be used when standing instructions have been established. \n\nIf CurrencyToSell is used, then it implies the following: \n- the instruction is a receive.\n- the currency required for funding a purchase of securities, eg, the currency to be purchased, is the currency of the settlement amount. The currency to be sold to obtain settlement currency is provided by the currency to sell message element. Normally, this is the base currency of the portfolio. \n- the amount of currency to be bought is equal to the settlement amount of the transaction. This implies the forex will not be used for other transactions and that a bulk forex deal must be instructed by other means. \n- a forex deal to fund the purchase of securities should be executed in time for the currency to be available on the settlement date of the securities transaction. \n- a bilateral agreement regarding the use of this field has been established.\n\nIf CurrencyToBuy is used, then it implies the following: \n- the instruction is a delivery\n- the currency received as proceeds from the sale of securities, eg, the currency to be sold, is the currency of the settlement amount. The currency to be bought is provided by the currency to buy message element. If proceeds are repatriated, this is in the base currency of the portfolio. \n- the amount of currency to be sold is equal to the settlement amount of the transaction. This implies a bulk forex deal must be instructed by other means. \n- a forex deal to repatriate proceeds after the sale of securities should be executed for the soonest possible value date after settlement of the securities, as permitted by market convention. \n- a bilateral agreement regarding the use of this field has been established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails66> forSecuritiesTradeDetails66 = new MMConstraint<SecuritiesTradeDetails66>() {
@@ -817,10 +817,6 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails59
 	 * SecuritiesTradeDetails59}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyToBuyOrSellRule"</li>
 	 * <li>
@@ -828,6 +824,10 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * definition} =
 	 * "CurrencyToBuy and CurrencyToSell in the TradeDetails message component, provides an instruction to the account servicer to execute a foreign exchange deal on behalf of the account owner. The purpose of the forex deal is to fund the purchase of securities. This field is not to be used when standing instructions have been established. \n\nIf CurrencyToSell is used, then it implies the following: \n- the instruction is a receive.\n- the currency required for funding a purchase of securities, eg, the currency to be purchased, is the currency of the settlement amount. The currency to be sold to obtain settlement currency is provided by the currency to sell message element. Normally, this is the base currency of the portfolio. \n- the amount of currency to be bought is equal to the settlement amount of the transaction. This implies the forex will not be used for other transactions and that a bulk forex deal must be instructed by other means. \n- a forex deal to fund the purchase of securities should be executed in time for the currency to be available on the settlement date of the securities transaction. \n- a bilateral agreement regarding the use of this field has been established.\n\nIf CurrencyToBuy is used, then it implies the following: \n- the instruction is a delivery\n- the currency received as proceeds from the sale of securities, eg, the currency to be sold, is the currency of the settlement amount. The currency to be bought is provided by the currency to buy message element. If proceeds are repatriated, this is in the base currency of the portfolio. \n- the amount of currency to be sold is equal to the settlement amount of the transaction. This implies a bulk forex deal must be instructed by other means. \n- a forex deal to repatriate proceeds after the sale of securities should be executed for the soonest possible value date after settlement of the securities, as permitted by market convention. \n- a bilateral agreement regarding the use of this field has been established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails59> forSecuritiesTradeDetails59 = new MMConstraint<SecuritiesTradeDetails59>() {
@@ -851,10 +851,6 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails15
 	 * SecuritiesTradeDetails15}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyToBuyOrSellRule"</li>
 	 * <li>
@@ -862,6 +858,10 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * definition} =
 	 * "CurrencyToBuy and CurrencyToSell in the TradeDetails message component, provides an instruction to the account servicer to execute a foreign exchange deal on behalf of the account owner. The purpose of the forex deal is to fund the purchase of securities. This field is not to be used when standing instructions have been established. \n\nIf CurrencyToSell is used, then it implies the following: \n- the instruction is a receive.\n- the currency required for funding a purchase of securities, eg, the currency to be purchased, is the currency of the settlement amount. The currency to be sold to obtain settlement currency is provided by the currency to sell message element. Normally, this is the base currency of the portfolio. \n- the amount of currency to be bought is equal to the settlement amount of the transaction. This implies the forex will not be used for other transactions and that a bulk forex deal must be instructed by other means. \n- a forex deal to fund the purchase of securities should be executed in time for the currency to be available on the settlement date of the securities transaction. \n- a bilateral agreement regarding the use of this field has been established.\n\nIf CurrencyToBuy is used, then it implies the following: \n- the instruction is a delivery\n- the currency received as proceeds from the sale of securities, eg, the currency to be sold, is the currency of the settlement amount. The currency to be bought is provided by the currency to buy message element. If proceeds are repatriated, this is in the base currency of the portfolio. \n- the amount of currency to be sold is equal to the settlement amount of the transaction. This implies a bulk forex deal must be instructed by other means. \n- a forex deal to repatriate proceeds after the sale of securities should be executed for the soonest possible value date after settlement of the securities, as permitted by market convention. \n- a bilateral agreement regarding the use of this field has been established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails15> forSecuritiesTradeDetails15 = new MMConstraint<SecuritiesTradeDetails15>() {
@@ -885,10 +885,6 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails50
 	 * SecuritiesTradeDetails50}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyToBuyOrSellRule"</li>
 	 * <li>
@@ -896,6 +892,10 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * definition} =
 	 * "CurrencyToBuy and CurrencyToSell in the TradeDetails message component, provides an instruction to the account servicer to execute a foreign exchange deal on behalf of the account owner. The purpose of the forex deal is to fund the purchase of securities. This field is not to be used when standing instructions have been established. \n\nIf CurrencyToSell is used, then it implies the following: \n- the instruction is a receive.\n- the currency required for funding a purchase of securities, eg, the currency to be purchased, is the currency of the settlement amount. The currency to be sold to obtain settlement currency is provided by the currency to sell message element. Normally, this is the base currency of the portfolio. \n- the amount of currency to be bought is equal to the settlement amount of the transaction. This implies the forex will not be used for other transactions and that a bulk forex deal must be instructed by other means. \n- a forex deal to fund the purchase of securities should be executed in time for the currency to be available on the settlement date of the securities transaction. \n- a bilateral agreement regarding the use of this field has been established.\n\nIf CurrencyToBuy is used, then it implies the following: \n- the instruction is a delivery\n- the currency received as proceeds from the sale of securities, eg, the currency to be sold, is the currency of the settlement amount. The currency to be bought is provided by the currency to buy message element. If proceeds are repatriated, this is in the base currency of the portfolio. \n- the amount of currency to be sold is equal to the settlement amount of the transaction. This implies a bulk forex deal must be instructed by other means. \n- a forex deal to repatriate proceeds after the sale of securities should be executed for the soonest possible value date after settlement of the securities, as permitted by market convention. \n- a bilateral agreement regarding the use of this field has been established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -934,10 +934,6 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails44
 	 * SecuritiesTradeDetails44}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyToBuyOrSellRule"</li>
 	 * <li>
@@ -945,6 +941,10 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * definition} =
 	 * "CurrencyToBuy and CurrencyToSell in the TradeDetails message component, provides an instruction to the account servicer to execute a foreign exchange deal on behalf of the account owner. The purpose of the forex deal is to fund the purchase of securities. This field is not to be used when standing instructions have been established. \n\nIf CurrencyToSell is used, then it implies the following: \n- the instruction is a receive.\n- the currency required for funding a purchase of securities, eg, the currency to be purchased, is the currency of the settlement amount. The currency to be sold to obtain settlement currency is provided by the currency to sell message element. Normally, this is the base currency of the portfolio. \n- the amount of currency to be bought is equal to the settlement amount of the transaction. This implies the forex will not be used for other transactions and that a bulk forex deal must be instructed by other means. \n- a forex deal to fund the purchase of securities should be executed in time for the currency to be available on the settlement date of the securities transaction. \n- a bilateral agreement regarding the use of this field has been established.\n\nIf CurrencyToBuy is used, then it implies the following: \n- the instruction is a delivery\n- the currency received as proceeds from the sale of securities, eg, the currency to be sold, is the currency of the settlement amount. The currency to be bought is provided by the currency to buy message element. If proceeds are repatriated, this is in the base currency of the portfolio. \n- the amount of currency to be sold is equal to the settlement amount of the transaction. This implies a bulk forex deal must be instructed by other means. \n- a forex deal to repatriate proceeds after the sale of securities should be executed for the soonest possible value date after settlement of the securities, as permitted by market convention. \n- a bilateral agreement regarding the use of this field has been established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails44> forSecuritiesTradeDetails44 = new MMConstraint<SecuritiesTradeDetails44>() {
@@ -968,10 +968,6 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails46
 	 * SecuritiesTradeDetails46}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyToBuyOrSellRule"</li>
 	 * <li>
@@ -979,6 +975,10 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * definition} =
 	 * "CurrencyToBuy and CurrencyToSell in the TradeDetails message component, provides an instruction to the account servicer to execute a foreign exchange deal on behalf of the account owner. The purpose of the forex deal is to fund the purchase of securities. This field is not to be used when standing instructions have been established. \n\nIf CurrencyToSell is used, then it implies the following: \n- the instruction is a receive.\n- the currency required for funding a purchase of securities, eg, the currency to be purchased, is the currency of the settlement amount. The currency to be sold to obtain settlement currency is provided by the currency to sell message element. Normally, this is the base currency of the portfolio. \n- the amount of currency to be bought is equal to the settlement amount of the transaction. This implies the forex will not be used for other transactions and that a bulk forex deal must be instructed by other means. \n- a forex deal to fund the purchase of securities should be executed in time for the currency to be available on the settlement date of the securities transaction. \n- a bilateral agreement regarding the use of this field has been established.\n\nIf CurrencyToBuy is used, then it implies the following: \n- the instruction is a delivery\n- the currency received as proceeds from the sale of securities, eg, the currency to be sold, is the currency of the settlement amount. The currency to be bought is provided by the currency to buy message element. If proceeds are repatriated, this is in the base currency of the portfolio. \n- the amount of currency to be sold is equal to the settlement amount of the transaction. This implies a bulk forex deal must be instructed by other means. \n- a forex deal to repatriate proceeds after the sale of securities should be executed for the soonest possible value date after settlement of the securities, as permitted by market convention. \n- a bilateral agreement regarding the use of this field has been established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails46> forSecuritiesTradeDetails46 = new MMConstraint<SecuritiesTradeDetails46>() {
@@ -1002,10 +1002,6 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails58
 	 * SecuritiesTradeDetails58}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyToBuyOrSellRule"</li>
 	 * <li>
@@ -1013,6 +1009,10 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * definition} =
 	 * "CurrencyToBuy and CurrencyToSell in the TradeDetails message component, provides an instruction to the account servicer to execute a foreign exchange deal on behalf of the account owner. The purpose of the forex deal is to fund the purchase of securities. This field is not to be used when standing instructions have been established. \n\nIf CurrencyToSell is used, then it implies the following: \n- the instruction is a receive.\n- the currency required for funding a purchase of securities, eg, the currency to be purchased, is the currency of the settlement amount. The currency to be sold to obtain settlement currency is provided by the currency to sell message element. Normally, this is the base currency of the portfolio. \n- the amount of currency to be bought is equal to the settlement amount of the transaction. This implies the forex will not be used for other transactions and that a bulk forex deal must be instructed by other means. \n- a forex deal to fund the purchase of securities should be executed in time for the currency to be available on the settlement date of the securities transaction. \n- a bilateral agreement regarding the use of this field has been established.\n\nIf CurrencyToBuy is used, then it implies the following: \n- the instruction is a delivery\n- the currency received as proceeds from the sale of securities, eg, the currency to be sold, is the currency of the settlement amount. The currency to be bought is provided by the currency to buy message element. If proceeds are repatriated, this is in the base currency of the portfolio. \n- the amount of currency to be sold is equal to the settlement amount of the transaction. This implies a bulk forex deal must be instructed by other means. \n- a forex deal to repatriate proceeds after the sale of securities should be executed for the soonest possible value date after settlement of the securities, as permitted by market convention. \n- a bilateral agreement regarding the use of this field has been established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails58> forSecuritiesTradeDetails58 = new MMConstraint<SecuritiesTradeDetails58>() {
@@ -1036,10 +1036,6 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails52
 	 * SecuritiesTradeDetails52}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyToBuyOrSellRule"</li>
 	 * <li>
@@ -1047,6 +1043,10 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * definition} =
 	 * "CurrencyToBuy and CurrencyToSell in the TradeDetails message component, provides an instruction to the account servicer to execute a foreign exchange deal on behalf of the account owner. The purpose of the forex deal is to fund the purchase of securities. This field is not to be used when standing instructions have been established. \n\nIf CurrencyToSell is used, then it implies the following: \n- the instruction is a receive.\n- the currency required for funding a purchase of securities, eg, the currency to be purchased, is the currency of the settlement amount. The currency to be sold to obtain settlement currency is provided by the currency to sell message element. Normally, this is the base currency of the portfolio. \n- the amount of currency to be bought is equal to the settlement amount of the transaction. This implies the forex will not be used for other transactions and that a bulk forex deal must be instructed by other means. \n- a forex deal to fund the purchase of securities should be executed in time for the currency to be available on the settlement date of the securities transaction. \n- a bilateral agreement regarding the use of this field has been established.\n\nIf CurrencyToBuy is used, then it implies the following: \n- the instruction is a delivery\n- the currency received as proceeds from the sale of securities, eg, the currency to be sold, is the currency of the settlement amount. The currency to be bought is provided by the currency to buy message element. If proceeds are repatriated, this is in the base currency of the portfolio. \n- the amount of currency to be sold is equal to the settlement amount of the transaction. This implies a bulk forex deal must be instructed by other means. \n- a forex deal to repatriate proceeds after the sale of securities should be executed for the soonest possible value date after settlement of the securities, as permitted by market convention. \n- a bilateral agreement regarding the use of this field has been established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1085,10 +1085,6 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails89
 	 * SecuritiesTradeDetails89}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyToBuyOrSellRule"</li>
 	 * <li>
@@ -1096,6 +1092,10 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * definition} =
 	 * "CurrencyToBuy and CurrencyToSell in the TradeDetails message component, provides an instruction to the account servicer to execute a foreign exchange deal on behalf of the account owner. The purpose of the forex deal is to fund the purchase of securities. This field is not to be used when standing instructions have been established. \r\n\r\nIf CurrencyToSell is used, then it implies the following:\r\n- the instruction is a receive.\r\n- the currency required for funding a purchase of securities, for example, the currency to be purchased, is the currency of the settlement amount. The currency to be sold to obtain settlement currency is provided by the currency to sell message element. Normally, this is the base currency of the portfolio. \r\n- the amount of currency to be bought is equal to the settlement amount of the transaction. This implies the forex will not be used for other transactions and that a bulk forex deal must be instructed by other means. \r\n- a forex deal to fund the purchase of securities should be executed in time for the currency to be available on the settlement date of the securities transaction. \r\n- a bilateral agreement regarding the use of this field has been established.\r\n\r\nIf CurrencyToBuy is used, then it implies the following:\r\n- the instruction is a delivery\r\n- the currency received as proceeds from the sale of securities, for example, the currency to be sold, is the currency of the settlement amount. The currency to be bought is provided by the currency to buy message element. If proceeds are repatriated, this is in the base currency of the portfolio. \r\n- the amount of currency to be sold is equal to the settlement amount of the transaction. This implies a bulk forex deal must be instructed by other means. \r\n- a forex deal to repatriate proceeds after the sale of securities should be executed for the soonest possible value date after settlement of the securities, as permitted by market convention. \r\n- a bilateral agreement regarding the use of this field has been established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails89> forSecuritiesTradeDetails89 = new MMConstraint<SecuritiesTradeDetails89>() {
@@ -1119,10 +1119,6 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails1
 	 * SecuritiesTradeDetails1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyToBuyOrSellRule"</li>
 	 * <li>
@@ -1130,6 +1126,10 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * definition} =
 	 * "CurrencyToBuy and CurrencyToSell in the TradeDetails message component, provides an instruction to the account servicer to execute a foreign exchange deal on behalf of the account owner. The purpose of the forex deal is to fund the purchase of securities. This field is not to be used when standing instructions have been established. \n\nIf CurrencyToSell is used, then it implies the following: \n- the instruction is a receive.\n- the currency required for funding a purchase of securities, eg, the currency to be purchased, is the currency of the settlement amount. The currency to be sold to obtain settlement currency is provided by the currency to sell message element. Normally, this is the base currency of the portfolio. \n- the amount of currency to be bought is equal to the settlement amount of the transaction. This implies the forex will not be used for other transactions and that a bulk forex deal must be instructed by other means. \n- a forex deal to fund the purchase of securities should be executed in time for the currency to be available on the settlement date of the securities transaction. \n- a bilateral agreement regarding the use of this field has been established.\n\nIf CurrencyToBuy is used, then it implies the following: \n- the instruction is a delivery\n- the currency received as proceeds from the sale of securities, eg, the currency to be sold, is the currency of the settlement amount. The currency to be bought is provided by the currency to buy message element. If proceeds are repatriated, this is in the base currency of the portfolio. \n- the amount of currency to be sold is equal to the settlement amount of the transaction. This implies a bulk forex deal must be instructed by other means. \n- a forex deal to repatriate proceeds after the sale of securities should be executed for the soonest possible value date after settlement of the securities, as permitted by market convention. \n- a bilateral agreement regarding the use of this field has been established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1162,10 +1162,6 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails37
 	 * SecuritiesTradeDetails37}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyToBuyOrSellRule"</li>
 	 * <li>
@@ -1173,6 +1169,10 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * definition} =
 	 * "CurrencyToBuy and CurrencyToSell in the TradeDetails message component, provides an instruction to the account servicer to execute a foreign exchange deal on behalf of the account owner. The purpose of the forex deal is to fund the purchase of securities. This field is not to be used when standing instructions have been established. \n\nIf CurrencyToSell is used, then it implies the following: \n- the instruction is a receive.\n- the currency required for funding a purchase of securities, eg, the currency to be purchased, is the currency of the settlement amount. The currency to be sold to obtain settlement currency is provided by the currency to sell message element. Normally, this is the base currency of the portfolio. \n- the amount of currency to be bought is equal to the settlement amount of the transaction. This implies the forex will not be used for other transactions and that a bulk forex deal must be instructed by other means. \n- a forex deal to fund the purchase of securities should be executed in time for the currency to be available on the settlement date of the securities transaction. \n- a bilateral agreement regarding the use of this field has been established.\n\nIf CurrencyToBuy is used, then it implies the following: \n- the instruction is a delivery\n- the currency received as proceeds from the sale of securities, eg, the currency to be sold, is the currency of the settlement amount. The currency to be bought is provided by the currency to buy message element. If proceeds are repatriated, this is in the base currency of the portfolio. \n- the amount of currency to be sold is equal to the settlement amount of the transaction. This implies a bulk forex deal must be instructed by other means. \n- a forex deal to repatriate proceeds after the sale of securities should be executed for the soonest possible value date after settlement of the securities, as permitted by market convention. \n- a bilateral agreement regarding the use of this field has been established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1211,10 +1211,6 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails11
 	 * SecuritiesTradeDetails11}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyToBuyOrSellRule"</li>
 	 * <li>
@@ -1222,6 +1218,10 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * definition} =
 	 * "CurrencyToBuy and CurrencyToSell in the TradeDetails message component, provides an instruction to the account servicer to execute a foreign exchange deal on behalf of the account owner. The purpose of the forex deal is to fund the purchase of securities. This field is not to be used when standing instructions have been established. \n\nIf CurrencyToSell is used, then it implies the following: \n- the instruction is a receive.\n- the currency required for funding a purchase of securities, eg, the currency to be purchased, is the currency of the settlement amount. The currency to be sold to obtain settlement currency is provided by the currency to sell message element. Normally, this is the base currency of the portfolio. \n- the amount of currency to be bought is equal to the settlement amount of the transaction. This implies the forex will not be used for other transactions and that a bulk forex deal must be instructed by other means. \n- a forex deal to fund the purchase of securities should be executed in time for the currency to be available on the settlement date of the securities transaction. \n- a bilateral agreement regarding the use of this field has been established.\n\nIf CurrencyToBuy is used, then it implies the following: \n- the instruction is a delivery\n- the currency received as proceeds from the sale of securities, eg, the currency to be sold, is the currency of the settlement amount. The currency to be bought is provided by the currency to buy message element. If proceeds are repatriated, this is in the base currency of the portfolio. \n- the amount of currency to be sold is equal to the settlement amount of the transaction. This implies a bulk forex deal must be instructed by other means. \n- a forex deal to repatriate proceeds after the sale of securities should be executed for the soonest possible value date after settlement of the securities, as permitted by market convention. \n- a bilateral agreement regarding the use of this field has been established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails11> forSecuritiesTradeDetails11 = new MMConstraint<SecuritiesTradeDetails11>() {
@@ -1245,10 +1245,6 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails79
 	 * SecuritiesTradeDetails79}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyToBuyOrSellRule"</li>
 	 * <li>
@@ -1256,6 +1252,10 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * definition} =
 	 * "CurrencyToBuy and CurrencyToSell in the TradeDetails message component, provides an instruction to the account servicer to execute a foreign exchange deal on behalf of the account owner. The purpose of the forex deal is to fund the purchase of securities. This field is not to be used when standing instructions have been established. \r\n\r\nIf CurrencyToSell is used, then it implies the following:\r\n- the instruction is a receive.\r\n- the currency required for funding a purchase of securities, for example, the currency to be purchased, is the currency of the settlement amount. The currency to be sold to obtain settlement currency is provided by the currency to sell message element. Normally, this is the base currency of the portfolio. \r\n- the amount of currency to be bought is equal to the settlement amount of the transaction. This implies the forex will not be used for other transactions and that a bulk forex deal must be instructed by other means. \r\n- a forex deal to fund the purchase of securities should be executed in time for the currency to be available on the settlement date of the securities transaction. \r\n- a bilateral agreement regarding the use of this field has been established.\r\n\r\nIf CurrencyToBuy is used, then it implies the following:\r\n- the instruction is a delivery\r\n- the currency received as proceeds from the sale of securities, for example, the currency to be sold, is the currency of the settlement amount. The currency to be bought is provided by the currency to buy message element. If proceeds are repatriated, this is in the base currency of the portfolio. \r\n- the amount of currency to be sold is equal to the settlement amount of the transaction. This implies a bulk forex deal must be instructed by other means. \r\n- a forex deal to repatriate proceeds after the sale of securities should be executed for the soonest possible value date after settlement of the securities, as permitted by market convention. \r\n- a bilateral agreement regarding the use of this field has been established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1285,10 +1285,6 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails75
 	 * SecuritiesTradeDetails75}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyToBuyOrSellRule"</li>
 	 * <li>
@@ -1296,6 +1292,10 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * definition} =
 	 * "CurrencyToBuy and CurrencyToSell in the TradeDetails message component, provides an instruction to the account servicer to execute a foreign exchange deal on behalf of the account owner. The purpose of the forex deal is to fund the purchase of securities. This field is not to be used when standing instructions have been established. \r\n\r\nIf CurrencyToSell is used, then it implies the following:\r\n- the instruction is a receive.\r\n- the currency required for funding a purchase of securities, for example, the currency to be purchased, is the currency of the settlement amount. The currency to be sold to obtain settlement currency is provided by the currency to sell message element. Normally, this is the base currency of the portfolio. \r\n- the amount of currency to be bought is equal to the settlement amount of the transaction. This implies the forex will not be used for other transactions and that a bulk forex deal must be instructed by other means. \r\n- a forex deal to fund the purchase of securities should be executed in time for the currency to be available on the settlement date of the securities transaction. \r\n- a bilateral agreement regarding the use of this field has been established.\r\n\r\nIf CurrencyToBuy is used, then it implies the following:\r\n- the instruction is a delivery\r\n- the currency received as proceeds from the sale of securities, for example, the currency to be sold, is the currency of the settlement amount. The currency to be bought is provided by the currency to buy message element. If proceeds are repatriated, this is in the base currency of the portfolio. \r\n- the amount of currency to be sold is equal to the settlement amount of the transaction. This implies a bulk forex deal must be instructed by other means. \r\n- a forex deal to repatriate proceeds after the sale of securities should be executed for the soonest possible value date after settlement of the securities, as permitted by market convention. \r\n- a bilateral agreement regarding the use of this field has been established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1325,10 +1325,6 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails63
 	 * SecuritiesTradeDetails63}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyToBuyOrSellRule"</li>
 	 * <li>
@@ -1336,6 +1332,10 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * definition} =
 	 * "CurrencyToBuy and CurrencyToSell in the TradeDetails message component, provides an instruction to the account servicer to execute a foreign exchange deal on behalf of the account owner. The purpose of the forex deal is to fund the purchase of securities. This field is not to be used when standing instructions have been established. \n\nIf CurrencyToSell is used, then it implies the following: \n- the instruction is a receive.\n- the currency required for funding a purchase of securities, eg, the currency to be purchased, is the currency of the settlement amount. The currency to be sold to obtain settlement currency is provided by the currency to sell message element. Normally, this is the base currency of the portfolio. \n- the amount of currency to be bought is equal to the settlement amount of the transaction. This implies the forex will not be used for other transactions and that a bulk forex deal must be instructed by other means. \n- a forex deal to fund the purchase of securities should be executed in time for the currency to be available on the settlement date of the securities transaction. \n- a bilateral agreement regarding the use of this field has been established.\n\nIf CurrencyToBuy is used, then it implies the following: \n- the instruction is a delivery\n- the currency received as proceeds from the sale of securities, eg, the currency to be sold, is the currency of the settlement amount. The currency to be bought is provided by the currency to buy message element. If proceeds are repatriated, this is in the base currency of the portfolio. \n- the amount of currency to be sold is equal to the settlement amount of the transaction. This implies a bulk forex deal must be instructed by other means. \n- a forex deal to repatriate proceeds after the sale of securities should be executed for the soonest possible value date after settlement of the securities, as permitted by market convention. \n- a bilateral agreement regarding the use of this field has been established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails63> forSecuritiesTradeDetails63 = new MMConstraint<SecuritiesTradeDetails63>() {
@@ -1358,10 +1358,6 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Order14 Order14}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyToBuyOrSellRule"</li>
 	 * <li>
@@ -1369,6 +1365,10 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * definition} =
 	 * "CurrencyToBuyOrSell in the TradeDetails message component, provides an instruction to the account servicer to execute a foreign exchange deal on behalf of the account owner. The purpose of the forex deal is to fund the purchase of securities. This field is not to be used when standing instructions have been established. \r\n\r\nIf CurrencyToSell is used, then it implies the following:\r\n- the instruction is to receive.\r\n- the currency required for funding a purchase of securities, eg, the currency to be purchased, is the currency of the settlement amount. The currency to be sold to obtain settlement currency is provided by the currency to sell message element. Normally, this is the base currency of the portfolio. \r\n- the amount of currency to be bought is equal to the settlement amount of the transaction. This implies the forex will not be used for other transactions and that a bulk forex deal must be instructed by other means. \r\n- a forex deal to fund the purchase of securities should be executed in time for the currency to be available on the settlement date of the securities transaction. \r\n- a bilateral agreement regarding the use of this field has been established.\r\n\r\nIf CurrencyToBuy is used, then it implies the following:\r\n- the instruction is to delivery\r\n- the currency received as proceeds from the sale of securities, eg, the currency to be sold, is the currency of the settlement amount. The currency to be bought is provided by the currency to buy message element. If proceeds are repatriated, this is in the base currency of the portfolio. \r\n- the amount of currency to be sold is equal to the settlement amount of the transaction. This implies a bulk forex deal must be instructed by other means. \r\n- a forex deal to repatriate proceeds after the sale of securities should be executed for the soonest possible value date after settlement of the securities, as permitted by market convention. \r\n- a bilateral agreement regarding the use of this field has been established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1401,10 +1401,6 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails70
 	 * SecuritiesTradeDetails70}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyToBuyOrSellRule"</li>
 	 * <li>
@@ -1412,6 +1408,10 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * definition} =
 	 * "CurrencyToBuy and CurrencyToSell in the TradeDetails message component, provides an instruction to the account servicer to execute a foreign exchange deal on behalf of the account owner. The purpose of the forex deal is to fund the purchase of securities. This field is not to be used when standing instructions have been established. \n\nIf CurrencyToSell is used, then it implies the following: \n- the instruction is a receive.\n- the currency required for funding a purchase of securities, eg, the currency to be purchased, is the currency of the settlement amount. The currency to be sold to obtain settlement currency is provided by the currency to sell message element. Normally, this is the base currency of the portfolio. \n- the amount of currency to be bought is equal to the settlement amount of the transaction. This implies the forex will not be used for other transactions and that a bulk forex deal must be instructed by other means. \n- a forex deal to fund the purchase of securities should be executed in time for the currency to be available on the settlement date of the securities transaction. \n- a bilateral agreement regarding the use of this field has been established.\n\nIf CurrencyToBuy is used, then it implies the following: \n- the instruction is a delivery\n- the currency received as proceeds from the sale of securities, eg, the currency to be sold, is the currency of the settlement amount. The currency to be bought is provided by the currency to buy message element. If proceeds are repatriated, this is in the base currency of the portfolio. \n- the amount of currency to be sold is equal to the settlement amount of the transaction. This implies a bulk forex deal must be instructed by other means. \n- a forex deal to repatriate proceeds after the sale of securities should be executed for the soonest possible value date after settlement of the securities, as permitted by market convention. \n- a bilateral agreement regarding the use of this field has been established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails70> forSecuritiesTradeDetails70 = new MMConstraint<SecuritiesTradeDetails70>() {
@@ -1435,10 +1435,6 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails78
 	 * SecuritiesTradeDetails78}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyToBuyOrSellRule"</li>
 	 * <li>
@@ -1446,6 +1442,10 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * definition} =
 	 * "CurrencyToBuy and CurrencyToSell in the TradeDetails message component, provides an instruction to the account servicer to execute a foreign exchange deal on behalf of the account owner. The purpose of the forex deal is to fund the purchase of securities. This field is not to be used when standing instructions have been established. \r\n\r\nIf CurrencyToSell is used, then it implies the following:\r\n- the instruction is a receive.\r\n- the currency required for funding a purchase of securities, for example, the currency to be purchased, is the currency of the settlement amount. The currency to be sold to obtain settlement currency is provided by the currency to sell message element. Normally, this is the base currency of the portfolio. \r\n- the amount of currency to be bought is equal to the settlement amount of the transaction. This implies the forex will not be used for other transactions and that a bulk forex deal must be instructed by other means. \r\n- a forex deal to fund the purchase of securities should be executed in time for the currency to be available on the settlement date of the securities transaction. \r\n- a bilateral agreement regarding the use of this field has been established.\r\n\r\nIf CurrencyToBuy is used, then it implies the following:\r\n- the instruction is a delivery\r\n- the currency received as proceeds from the sale of securities, for example, the currency to be sold, is the currency of the settlement amount. The currency to be bought is provided by the currency to buy message element. If proceeds are repatriated, this is in the base currency of the portfolio. \r\n- the amount of currency to be sold is equal to the settlement amount of the transaction. This implies a bulk forex deal must be instructed by other means. \r\n- a forex deal to repatriate proceeds after the sale of securities should be executed for the soonest possible value date after settlement of the securities, as permitted by market convention. \r\n- a bilateral agreement regarding the use of this field has been established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1475,10 +1475,6 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails27
 	 * SecuritiesTradeDetails27}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyToBuyOrSellRule"</li>
 	 * <li>
@@ -1486,6 +1482,10 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * definition} =
 	 * "CurrencyToBuy and CurrencyToSell in the TradeDetails message component, provides an instruction to the account servicer to execute a foreign exchange deal on behalf of the account owner. The purpose of the forex deal is to fund the purchase of securities. This field is not to be used when standing instructions have been established. \n\nIf CurrencyToSell is used, then it implies the following: \n- the instruction is a receive.\n- the currency required for funding a purchase of securities, eg, the currency to be purchased, is the currency of the settlement amount. The currency to be sold to obtain settlement currency is provided by the currency to sell message element. Normally, this is the base currency of the portfolio. \n- the amount of currency to be bought is equal to the settlement amount of the transaction. This implies the forex will not be used for other transactions and that a bulk forex deal must be instructed by other means. \n- a forex deal to fund the purchase of securities should be executed in time for the currency to be available on the settlement date of the securities transaction. \n- a bilateral agreement regarding the use of this field has been established.\n\nIf CurrencyToBuy is used, then it implies the following: \n- the instruction is a delivery\n- the currency received as proceeds from the sale of securities, eg, the currency to be sold, is the currency of the settlement amount. The currency to be bought is provided by the currency to buy message element. If proceeds are repatriated, this is in the base currency of the portfolio. \n- the amount of currency to be sold is equal to the settlement amount of the transaction. This implies a bulk forex deal must be instructed by other means. \n- a forex deal to repatriate proceeds after the sale of securities should be executed for the soonest possible value date after settlement of the securities, as permitted by market convention. \n- a bilateral agreement regarding the use of this field has been established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails27> forSecuritiesTradeDetails27 = new MMConstraint<SecuritiesTradeDetails27>() {
@@ -1509,10 +1509,6 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails3
 	 * SecuritiesTradeDetails3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyToBuyOrSellRule"</li>
 	 * <li>
@@ -1520,6 +1516,10 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * definition} =
 	 * "CurrencyToBuy and CurrencyToSell in the TradeDetails message component, provides an instruction to the account servicer to execute a foreign exchange deal on behalf of the account owner. The purpose of the forex deal is to fund the purchase of securities. This field is not to be used when standing instructions have been established. \n\nIf CurrencyToSell is used, then it implies the following: \n- the instruction is a receive.\n- the currency required for funding a purchase of securities, eg, the currency to be purchased, is the currency of the settlement amount. The currency to be sold to obtain settlement currency is provided by the currency to sell message element. Normally, this is the base currency of the portfolio. \n- the amount of currency to be bought is equal to the settlement amount of the transaction. This implies the forex will not be used for other transactions and that a bulk forex deal must be instructed by other means. \n- a forex deal to fund the purchase of securities should be executed in time for the currency to be available on the settlement date of the securities transaction. \n- a bilateral agreement regarding the use of this field has been established.\n\nIf CurrencyToBuy is used, then it implies the following: \n- the instruction is a delivery\n- the currency received as proceeds from the sale of securities, eg, the currency to be sold, is the currency of the settlement amount. The currency to be bought is provided by the currency to buy message element. If proceeds are repatriated, this is in the base currency of the portfolio. \n- the amount of currency to be sold is equal to the settlement amount of the transaction. This implies a bulk forex deal must be instructed by other means. \n- a forex deal to repatriate proceeds after the sale of securities should be executed for the soonest possible value date after settlement of the securities, as permitted by market convention. \n- a bilateral agreement regarding the use of this field has been established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1552,10 +1552,6 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails39
 	 * SecuritiesTradeDetails39}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyToBuyOrSellRule"</li>
 	 * <li>
@@ -1563,6 +1559,10 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * definition} =
 	 * "CurrencyToBuy and CurrencyToSell in the TradeDetails message component, provides an instruction to the account servicer to execute a foreign exchange deal on behalf of the account owner. The purpose of the forex deal is to fund the purchase of securities. This field is not to be used when standing instructions have been established. \n\nIf CurrencyToSell is used, then it implies the following: \n- the instruction is a receive.\n- the currency required for funding a purchase of securities, eg, the currency to be purchased, is the currency of the settlement amount. The currency to be sold to obtain settlement currency is provided by the currency to sell message element. Normally, this is the base currency of the portfolio. \n- the amount of currency to be bought is equal to the settlement amount of the transaction. This implies the forex will not be used for other transactions and that a bulk forex deal must be instructed by other means. \n- a forex deal to fund the purchase of securities should be executed in time for the currency to be available on the settlement date of the securities transaction. \n- a bilateral agreement regarding the use of this field has been established.\n\nIf CurrencyToBuy is used, then it implies the following: \n- the instruction is a delivery\n- the currency received as proceeds from the sale of securities, eg, the currency to be sold, is the currency of the settlement amount. The currency to be bought is provided by the currency to buy message element. If proceeds are repatriated, this is in the base currency of the portfolio. \n- the amount of currency to be sold is equal to the settlement amount of the transaction. This implies a bulk forex deal must be instructed by other means. \n- a forex deal to repatriate proceeds after the sale of securities should be executed for the soonest possible value date after settlement of the securities, as permitted by market convention. \n- a bilateral agreement regarding the use of this field has been established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails39> forSecuritiesTradeDetails39 = new MMConstraint<SecuritiesTradeDetails39>() {
@@ -1586,10 +1586,6 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails28
 	 * SecuritiesTradeDetails28}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyToBuyOrSellRule"</li>
 	 * <li>
@@ -1597,6 +1593,10 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * definition} =
 	 * "CurrencyToBuy and CurrencyToSell in the TradeDetails message component, provides an instruction to the account servicer to execute a foreign exchange deal on behalf of the account owner. The purpose of the forex deal is to fund the purchase of securities. This field is not to be used when standing instructions have been established. \n\nIf CurrencyToSell is used, then it implies the following: \n- the instruction is a receive.\n- the currency required for funding a purchase of securities, eg, the currency to be purchased, is the currency of the settlement amount. The currency to be sold to obtain settlement currency is provided by the currency to sell message element. Normally, this is the base currency of the portfolio. \n- the amount of currency to be bought is equal to the settlement amount of the transaction. This implies the forex will not be used for other transactions and that a bulk forex deal must be instructed by other means. \n- a forex deal to fund the purchase of securities should be executed in time for the currency to be available on the settlement date of the securities transaction. \n- a bilateral agreement regarding the use of this field has been established.\n\nIf CurrencyToBuy is used, then it implies the following: \n- the instruction is a delivery\n- the currency received as proceeds from the sale of securities, eg, the currency to be sold, is the currency of the settlement amount. The currency to be bought is provided by the currency to buy message element. If proceeds are repatriated, this is in the base currency of the portfolio. \n- the amount of currency to be sold is equal to the settlement amount of the transaction. This implies a bulk forex deal must be instructed by other means. \n- a forex deal to repatriate proceeds after the sale of securities should be executed for the soonest possible value date after settlement of the securities, as permitted by market convention. \n- a bilateral agreement regarding the use of this field has been established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails28> forSecuritiesTradeDetails28 = new MMConstraint<SecuritiesTradeDetails28>() {
@@ -1620,10 +1620,6 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails13
 	 * SecuritiesTradeDetails13}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyToBuyOrSellRule"</li>
 	 * <li>
@@ -1631,6 +1627,10 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * definition} =
 	 * "CurrencyToBuy and CurrencyToSell in the TradeDetails message component, provides an instruction to the account servicer to execute a foreign exchange deal on behalf of the account owner. The purpose of the forex deal is to fund the purchase of securities. This field is not to be used when standing instructions have been established. \n\nIf CurrencyToSell is used, then it implies the following: \n- the instruction is a receive.\n- the currency required for funding a purchase of securities, eg, the currency to be purchased, is the currency of the settlement amount. The currency to be sold to obtain settlement currency is provided by the currency to sell message element. Normally, this is the base currency of the portfolio. \n- the amount of currency to be bought is equal to the settlement amount of the transaction. This implies the forex will not be used for other transactions and that a bulk forex deal must be instructed by other means. \n- a forex deal to fund the purchase of securities should be executed in time for the currency to be available on the settlement date of the securities transaction. \n- a bilateral agreement regarding the use of this field has been established.\n\nIf CurrencyToBuy is used, then it implies the following: \n- the instruction is a delivery\n- the currency received as proceeds from the sale of securities, eg, the currency to be sold, is the currency of the settlement amount. The currency to be bought is provided by the currency to buy message element. If proceeds are repatriated, this is in the base currency of the portfolio. \n- the amount of currency to be sold is equal to the settlement amount of the transaction. This implies a bulk forex deal must be instructed by other means. \n- a forex deal to repatriate proceeds after the sale of securities should be executed for the soonest possible value date after settlement of the securities, as permitted by market convention. \n- a bilateral agreement regarding the use of this field has been established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails13> forSecuritiesTradeDetails13 = new MMConstraint<SecuritiesTradeDetails13>() {
@@ -1654,10 +1654,6 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails77
 	 * SecuritiesTradeDetails77}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyToBuyOrSellRule"</li>
 	 * <li>
@@ -1665,6 +1661,10 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * definition} =
 	 * "CurrencyToBuy and CurrencyToSell in the TradeDetails message component, provides an instruction to the account servicer to execute a foreign exchange deal on behalf of the account owner. The purpose of the forex deal is to fund the purchase of securities. This field is not to be used when standing instructions have been established. \r\n\r\nIf CurrencyToSell is used, then it implies the following:\r\n- the instruction is a receive.\r\n- the currency required for funding a purchase of securities, for example, the currency to be purchased, is the currency of the settlement amount. The currency to be sold to obtain settlement currency is provided by the currency to sell message element. Normally, this is the base currency of the portfolio. \r\n- the amount of currency to be bought is equal to the settlement amount of the transaction. This implies the forex will not be used for other transactions and that a bulk forex deal must be instructed by other means. \r\n- a forex deal to fund the purchase of securities should be executed in time for the currency to be available on the settlement date of the securities transaction. \r\n- a bilateral agreement regarding the use of this field has been established.\r\n\r\nIf CurrencyToBuy is used, then it implies the following:\r\n- the instruction is a delivery\r\n- the currency received as proceeds from the sale of securities, for example, the currency to be sold, is the currency of the settlement amount. The currency to be bought is provided by the currency to buy message element. If proceeds are repatriated, this is in the base currency of the portfolio. \r\n- the amount of currency to be sold is equal to the settlement amount of the transaction. This implies a bulk forex deal must be instructed by other means. \r\n- a forex deal to repatriate proceeds after the sale of securities should be executed for the soonest possible value date after settlement of the securities, as permitted by market convention. \r\n- a bilateral agreement regarding the use of this field has been established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1694,10 +1694,6 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails74
 	 * SecuritiesTradeDetails74}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyToBuyOrSellRule"</li>
 	 * <li>
@@ -1705,6 +1701,10 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * definition} =
 	 * "CurrencyToBuy and CurrencyToSell in the TradeDetails message component, provides an instruction to the account servicer to execute a foreign exchange deal on behalf of the account owner. The purpose of the forex deal is to fund the purchase of securities. This field is not to be used when standing instructions have been established. \r\n\r\nIf CurrencyToSell is used, then it implies the following:\r\n- the instruction is a receive.\r\n- the currency required for funding a purchase of securities, for example, the currency to be purchased, is the currency of the settlement amount. The currency to be sold to obtain settlement currency is provided by the currency to sell message element. Normally, this is the base currency of the portfolio. \r\n- the amount of currency to be bought is equal to the settlement amount of the transaction. This implies the forex will not be used for other transactions and that a bulk forex deal must be instructed by other means. \r\n- a forex deal to fund the purchase of securities should be executed in time for the currency to be available on the settlement date of the securities transaction. \r\n- a bilateral agreement regarding the use of this field has been established.\r\n\r\nIf CurrencyToBuy is used, then it implies the following:\r\n- the instruction is a delivery\r\n- the currency received as proceeds from the sale of securities, for example, the currency to be sold, is the currency of the settlement amount. The currency to be bought is provided by the currency to buy message element. If proceeds are repatriated, this is in the base currency of the portfolio. \r\n- the amount of currency to be sold is equal to the settlement amount of the transaction. This implies a bulk forex deal must be instructed by other means. \r\n- a forex deal to repatriate proceeds after the sale of securities should be executed for the soonest possible value date after settlement of the securities, as permitted by market convention. \r\n- a bilateral agreement regarding the use of this field has been established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1734,10 +1734,6 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails82
 	 * SecuritiesTradeDetails82}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyToBuyOrSellRule"</li>
 	 * <li>
@@ -1745,6 +1741,10 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * definition} =
 	 * "CurrencyToBuy and CurrencyToSell in the TradeDetails message component, provides an instruction to the account servicer to execute a foreign exchange deal on behalf of the account owner. The purpose of the forex deal is to fund the purchase of securities. This field is not to be used when standing instructions have been established. \r\n\r\nIf CurrencyToSell is used, then it implies the following:\r\n- the instruction is a receive.\r\n- the currency required for funding a purchase of securities, for example, the currency to be purchased, is the currency of the settlement amount. The currency to be sold to obtain settlement currency is provided by the currency to sell message element. Normally, this is the base currency of the portfolio. \r\n- the amount of currency to be bought is equal to the settlement amount of the transaction. This implies the forex will not be used for other transactions and that a bulk forex deal must be instructed by other means. \r\n- a forex deal to fund the purchase of securities should be executed in time for the currency to be available on the settlement date of the securities transaction. \r\n- a bilateral agreement regarding the use of this field has been established.\r\n\r\nIf CurrencyToBuy is used, then it implies the following:\r\n- the instruction is a delivery\r\n- the currency received as proceeds from the sale of securities, for example, the currency to be sold, is the currency of the settlement amount. The currency to be bought is provided by the currency to buy message element. If proceeds are repatriated, this is in the base currency of the portfolio. \r\n- the amount of currency to be sold is equal to the settlement amount of the transaction. This implies a bulk forex deal must be instructed by other means. \r\n- a forex deal to repatriate proceeds after the sale of securities should be executed for the soonest possible value date after settlement of the securities, as permitted by market convention. \r\n- a bilateral agreement regarding the use of this field has been established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails82> forSecuritiesTradeDetails82 = new MMConstraint<SecuritiesTradeDetails82>() {
@@ -1768,10 +1768,6 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails40
 	 * SecuritiesTradeDetails40}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyToBuyOrSellRule"</li>
 	 * <li>
@@ -1779,6 +1775,10 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * definition} =
 	 * "CurrencyToBuy and CurrencyToSell in the TradeDetails message component, provides an instruction to the account servicer to execute a foreign exchange deal on behalf of the account owner. The purpose of the forex deal is to fund the purchase of securities. This field is not to be used when standing instructions have been established. \n\nIf CurrencyToSell is used, then it implies the following: \n- the instruction is a receive.\n- the currency required for funding a purchase of securities, eg, the currency to be purchased, is the currency of the settlement amount. The currency to be sold to obtain settlement currency is provided by the currency to sell message element. Normally, this is the base currency of the portfolio. \n- the amount of currency to be bought is equal to the settlement amount of the transaction. This implies the forex will not be used for other transactions and that a bulk forex deal must be instructed by other means. \n- a forex deal to fund the purchase of securities should be executed in time for the currency to be available on the settlement date of the securities transaction. \n- a bilateral agreement regarding the use of this field has been established.\n\nIf CurrencyToBuy is used, then it implies the following: \n- the instruction is a delivery\n- the currency received as proceeds from the sale of securities, eg, the currency to be sold, is the currency of the settlement amount. The currency to be bought is provided by the currency to buy message element. If proceeds are repatriated, this is in the base currency of the portfolio. \n- the amount of currency to be sold is equal to the settlement amount of the transaction. This implies a bulk forex deal must be instructed by other means. \n- a forex deal to repatriate proceeds after the sale of securities should be executed for the soonest possible value date after settlement of the securities, as permitted by market convention. \n- a bilateral agreement regarding the use of this field has been established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails40> forSecuritiesTradeDetails40 = new MMConstraint<SecuritiesTradeDetails40>() {
@@ -1802,10 +1802,6 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails33
 	 * SecuritiesTradeDetails33}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyToBuyOrSellRule"</li>
 	 * <li>
@@ -1813,6 +1809,10 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * definition} =
 	 * "CurrencyToBuy and CurrencyToSell in the TradeDetails message component, provides an instruction to the account servicer to execute a foreign exchange deal on behalf of the account owner. The purpose of the forex deal is to fund the purchase of securities. This field is not to be used when standing instructions have been established. \n\nIf CurrencyToSell is used, then it implies the following: \n- the instruction is a receive.\n- the currency required for funding a purchase of securities, eg, the currency to be purchased, is the currency of the settlement amount. The currency to be sold to obtain settlement currency is provided by the currency to sell message element. Normally, this is the base currency of the portfolio. \n- the amount of currency to be bought is equal to the settlement amount of the transaction. This implies the forex will not be used for other transactions and that a bulk forex deal must be instructed by other means. \n- a forex deal to fund the purchase of securities should be executed in time for the currency to be available on the settlement date of the securities transaction. \n- a bilateral agreement regarding the use of this field has been established.\n\nIf CurrencyToBuy is used, then it implies the following: \n- the instruction is a delivery\n- the currency received as proceeds from the sale of securities, eg, the currency to be sold, is the currency of the settlement amount. The currency to be bought is provided by the currency to buy message element. If proceeds are repatriated, this is in the base currency of the portfolio. \n- the amount of currency to be sold is equal to the settlement amount of the transaction. This implies a bulk forex deal must be instructed by other means. \n- a forex deal to repatriate proceeds after the sale of securities should be executed for the soonest possible value date after settlement of the securities, as permitted by market convention. \n- a bilateral agreement regarding the use of this field has been established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1851,10 +1851,6 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails6
 	 * SecuritiesTradeDetails6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyToBuyOrSellRule"</li>
 	 * <li>
@@ -1862,6 +1858,10 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * definition} =
 	 * "CurrencyToBuy and CurrencyToSell in the TradeDetails message component, provides an instruction to the account servicer to execute a foreign exchange deal on behalf of the account owner. The purpose of the forex deal is to fund the purchase of securities. This field is not to be used when standing instructions have been established. \n\nIf CurrencyToSell is used, then it implies the following: \n- the instruction is a receive.\n- the currency required for funding a purchase of securities, eg, the currency to be purchased, is the currency of the settlement amount. The currency to be sold to obtain settlement currency is provided by the currency to sell message element. Normally, this is the base currency of the portfolio. \n- the amount of currency to be bought is equal to the settlement amount of the transaction. This implies the forex will not be used for other transactions and that a bulk forex deal must be instructed by other means. \n- a forex deal to fund the purchase of securities should be executed in time for the currency to be available on the settlement date of the securities transaction. \n- a bilateral agreement regarding the use of this field has been established.\n\nIf CurrencyToBuy is used, then it implies the following: \n- the instruction is a delivery\n- the currency received as proceeds from the sale of securities, eg, the currency to be sold, is the currency of the settlement amount. The currency to be bought is provided by the currency to buy message element. If proceeds are repatriated, this is in the base currency of the portfolio. \n- the amount of currency to be sold is equal to the settlement amount of the transaction. This implies a bulk forex deal must be instructed by other means. \n- a forex deal to repatriate proceeds after the sale of securities should be executed for the soonest possible value date after settlement of the securities, as permitted by market convention. \n- a bilateral agreement regarding the use of this field has been established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1894,10 +1894,6 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails32
 	 * SecuritiesTradeDetails32}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyToBuyOrSellRule"</li>
 	 * <li>
@@ -1905,6 +1901,10 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * definition} =
 	 * "CurrencyToBuy and CurrencyToSell in the TradeDetails message component, provides an instruction to the account servicer to execute a foreign exchange deal on behalf of the account owner. The purpose of the forex deal is to fund the purchase of securities. This field is not to be used when standing instructions have been established. \n\nIf CurrencyToSell is used, then it implies the following: \n- the instruction is a receive.\n- the currency required for funding a purchase of securities, eg, the currency to be purchased, is the currency of the settlement amount. The currency to be sold to obtain settlement currency is provided by the currency to sell message element. Normally, this is the base currency of the portfolio. \n- the amount of currency to be bought is equal to the settlement amount of the transaction. This implies the forex will not be used for other transactions and that a bulk forex deal must be instructed by other means. \n- a forex deal to fund the purchase of securities should be executed in time for the currency to be available on the settlement date of the securities transaction. \n- a bilateral agreement regarding the use of this field has been established.\n\nIf CurrencyToBuy is used, then it implies the following: \n- the instruction is a delivery\n- the currency received as proceeds from the sale of securities, eg, the currency to be sold, is the currency of the settlement amount. The currency to be bought is provided by the currency to buy message element. If proceeds are repatriated, this is in the base currency of the portfolio. \n- the amount of currency to be sold is equal to the settlement amount of the transaction. This implies a bulk forex deal must be instructed by other means. \n- a forex deal to repatriate proceeds after the sale of securities should be executed for the soonest possible value date after settlement of the securities, as permitted by market convention. \n- a bilateral agreement regarding the use of this field has been established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1943,10 +1943,6 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails90
 	 * SecuritiesTradeDetails90}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyToBuyOrSellRule"</li>
 	 * <li>
@@ -1954,6 +1950,10 @@ public class ConstraintCurrencyToBuyOrSellRule {
 	 * definition} =
 	 * "CurrencyToBuy and CurrencyToSell in the TradeDetails message component, provides an instruction to the account servicer to execute a foreign exchange deal on behalf of the account owner. The purpose of the forex deal is to fund the purchase of securities. This field is not to be used when standing instructions have been established. \r\n\r\nIf CurrencyToSell is used, then it implies the following:\r\n- the instruction is a receive.\r\n- the currency required for funding a purchase of securities, for example, the currency to be purchased, is the currency of the settlement amount. The currency to be sold to obtain settlement currency is provided by the currency to sell message element. Normally, this is the base currency of the portfolio. \r\n- the amount of currency to be bought is equal to the settlement amount of the transaction. This implies the forex will not be used for other transactions and that a bulk forex deal must be instructed by other means. \r\n- a forex deal to fund the purchase of securities should be executed in time for the currency to be available on the settlement date of the securities transaction. \r\n- a bilateral agreement regarding the use of this field has been established.\r\n\r\nIf CurrencyToBuy is used, then it implies the following:\r\n- the instruction is a delivery\r\n- the currency received as proceeds from the sale of securities, for example, the currency to be sold, is the currency of the settlement amount. The currency to be bought is provided by the currency to buy message element. If proceeds are repatriated, this is in the base currency of the portfolio. \r\n- the amount of currency to be sold is equal to the settlement amount of the transaction. This implies a bulk forex deal must be instructed by other means. \r\n- a forex deal to repatriate proceeds after the sale of securities should be executed for the soonest possible value date after settlement of the securities, as permitted by market convention. \r\n- a bilateral agreement regarding the use of this field has been established."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails90> forSecuritiesTradeDetails90 = new MMConstraint<SecuritiesTradeDetails90>() {

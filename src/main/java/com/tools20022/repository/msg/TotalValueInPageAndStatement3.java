@@ -70,6 +70,11 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "TotalValueInPageAndStatement3"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} =
+ * "Totals for the value of the holdings reported in the statement or page."</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
  * constraint} =
  * <ul>
@@ -82,11 +87,6 @@ import javax.xml.bind.annotation.XmlType;
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "TotalValueInPageAndStatement3"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} =
- * "Totals for the value of the holdings reported in the statement or page."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -111,15 +111,15 @@ public class TotalValueInPageAndStatement3 {
 	 * TotalValueInPageAndStatement3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TtlHldgsValOfPg"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TotalHoldingsValueOfPage"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Total value of positions reported in this message."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<TotalValueInPageAndStatement3, Optional<AmountAndDirection14>> mmTotalHoldingsValueOfPage = new MMMessageAssociationEnd<TotalValueInPageAndStatement3, Optional<AmountAndDirection14>>() {
@@ -163,10 +163,6 @@ public class TotalValueInPageAndStatement3 {
 	 * TotalValueInPageAndStatement3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TtlHldgsValOfStmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TotalHoldingsValueOfStatement"</li>
 	 * <li>
@@ -174,6 +170,10 @@ public class TotalValueInPageAndStatement3 {
 	 * definition} =
 	 * "Total value of positions reported in this statement (a statement may comprise one or more messages)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<TotalValueInPageAndStatement3, AmountAndDirection14> mmTotalHoldingsValueOfStatement = new MMMessageAssociationEnd<TotalValueInPageAndStatement3, AmountAndDirection14>() {
@@ -217,10 +217,6 @@ public class TotalValueInPageAndStatement3 {
 	 * TotalValueInPageAndStatement3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TtlBookValOfStmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TotalBookValueOfStatement"</li>
 	 * <li>
@@ -228,6 +224,10 @@ public class TotalValueInPageAndStatement3 {
 	 * definition} =
 	 * "Total book value of positions reported in this statement (a statement may comprise one or more messages)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<TotalValueInPageAndStatement3, Optional<AmountAndDirection14>> mmTotalBookValueOfStatement = new MMMessageAssociationEnd<TotalValueInPageAndStatement3, Optional<AmountAndDirection14>>() {
@@ -276,10 +276,6 @@ public class TotalValueInPageAndStatement3 {
 	 * TotalValueInPageAndStatement3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TtlElgblCollVal"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TotalEligibleCollateralValue"</li>
 	 * <li>
@@ -287,6 +283,10 @@ public class TotalValueInPageAndStatement3 {
 	 * definition} =
 	 * "Total value of the holdings eligible for collateral purposes reported in this statement (a statement may comprise one or more messages)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<TotalValueInPageAndStatement3, Optional<AmountAndDirection14>> mmTotalEligibleCollateralValue = new MMMessageAssociationEnd<TotalValueInPageAndStatement3, Optional<AmountAndDirection14>>() {

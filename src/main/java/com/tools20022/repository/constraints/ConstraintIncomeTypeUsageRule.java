@@ -38,10 +38,6 @@ public class ConstraintIncomeTypeUsageRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption50
 	 * SecuritiesOption50}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IncomeTypeUsageRule"</li>
 	 * <li>
@@ -49,6 +45,10 @@ public class ConstraintIncomeTypeUsageRule {
 	 * definition} =
 	 * "The lists of income type codes to be used in IncomeType are provided in the document titled \"ETYP-ITYP Exemption &amp; Income Type Codes\" that is available on the SMPG website at www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -80,10 +80,6 @@ public class ConstraintIncomeTypeUsageRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CashOption51 CashOption51}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IncomeTypeUsageRule"</li>
 	 * <li>
@@ -91,6 +87,10 @@ public class ConstraintIncomeTypeUsageRule {
 	 * definition} =
 	 * "The lists of income type codes to be used in IncomeType are provided in the document titled \"ETYP-ITYP Exemption &amp; Income Type Codes\" that is available on the SMPG website at www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -129,10 +129,6 @@ public class ConstraintIncomeTypeUsageRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption55
 	 * SecuritiesOption55}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IncomeTypeUsageRule"</li>
 	 * <li>
@@ -140,6 +136,10 @@ public class ConstraintIncomeTypeUsageRule {
 	 * definition} =
 	 * "The lists of income type codes to be used in IncomeType are provided in the document titled \"ETYP-ITYP Exemption &amp; Income Type Codes\" that is available on the SMPG website at www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesOption55> forSecuritiesOption55 = new MMConstraint<SecuritiesOption55>() {
@@ -163,10 +163,6 @@ public class ConstraintIncomeTypeUsageRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption67
 	 * SecuritiesOption67}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IncomeTypeUsageRule"</li>
 	 * <li>
@@ -174,6 +170,10 @@ public class ConstraintIncomeTypeUsageRule {
 	 * definition} =
 	 * "The lists of income type codes to be used in IncomeType are provided in the document \"ETYP-ITYP Exemption &amp; Income Type Codes\" available on the SMPG website at www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesOption67> forSecuritiesOption67 = new MMConstraint<SecuritiesOption67>() {
@@ -196,10 +196,6 @@ public class ConstraintIncomeTypeUsageRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CashOption52 CashOption52}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IncomeTypeUsageRule"</li>
 	 * <li>
@@ -207,6 +203,10 @@ public class ConstraintIncomeTypeUsageRule {
 	 * definition} =
 	 * "The lists of income type codes to be used in IncomeType are provided in the document titled \"ETYP-ITYP Exemption &amp; Income Type Codes\" that is available on the SMPG website at www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -245,10 +245,6 @@ public class ConstraintIncomeTypeUsageRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption64
 	 * SecuritiesOption64}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IncomeTypeUsageRule"</li>
 	 * <li>
@@ -256,6 +252,10 @@ public class ConstraintIncomeTypeUsageRule {
 	 * definition} =
 	 * "The lists of income type codes to be used in IncomeType are provided in the document \"ETYP-ITYP Exemption &amp; Income Type Codes\" available on the SMPG website at www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -284,10 +284,6 @@ public class ConstraintIncomeTypeUsageRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CashOption55 CashOption55}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IncomeTypeUsageRule"</li>
 	 * <li>
@@ -295,6 +291,10 @@ public class ConstraintIncomeTypeUsageRule {
 	 * definition} =
 	 * "The lists of income type codes to be used in IncomeType are provided in the document titled \"ETYP-ITYP Exemption &amp; Income Type Codes\" that is available on the SMPG website at www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CashOption55> forCashOption55 = new MMConstraint<CashOption55>() {
@@ -317,10 +317,6 @@ public class ConstraintIncomeTypeUsageRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CashOption57 CashOption57}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IncomeTypeUsageRule"</li>
 	 * <li>
@@ -328,6 +324,10 @@ public class ConstraintIncomeTypeUsageRule {
 	 * definition} =
 	 * "The lists of income type codes to be used in IncomeType are provided in the document \"ETYP-ITYP Exemption &amp; Income Type Codes\" available on the SMPG website at www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -356,10 +356,6 @@ public class ConstraintIncomeTypeUsageRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CashOption61 CashOption61}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IncomeTypeUsageRule"</li>
 	 * <li>
@@ -367,6 +363,10 @@ public class ConstraintIncomeTypeUsageRule {
 	 * definition} =
 	 * "The lists of income type codes to be used in IncomeType are provided in the document \"ETYP-ITYP Exemption &amp; Income Type Codes\" available on the SMPG website at www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CashOption61> forCashOption61 = new MMConstraint<CashOption61>() {
@@ -390,10 +390,6 @@ public class ConstraintIncomeTypeUsageRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption63
 	 * SecuritiesOption63}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IncomeTypeUsageRule"</li>
 	 * <li>
@@ -401,6 +397,10 @@ public class ConstraintIncomeTypeUsageRule {
 	 * definition} =
 	 * "The lists of income type codes to be used in IncomeType are provided in the document titled \"ETYP-ITYP Exemption &amp; Income Type Codes\" that is available on the SMPG website at www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesOption63> forSecuritiesOption63 = new MMConstraint<SecuritiesOption63>() {
@@ -424,10 +424,6 @@ public class ConstraintIncomeTypeUsageRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption68
 	 * SecuritiesOption68}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IncomeTypeUsageRule"</li>
 	 * <li>
@@ -435,6 +431,10 @@ public class ConstraintIncomeTypeUsageRule {
 	 * definition} =
 	 * "The lists of income type codes to be used in IncomeType are provided in the document \"ETYP-ITYP Exemption &amp; Income Type Codes\" available on the SMPG website at www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesOption68> forSecuritiesOption68 = new MMConstraint<SecuritiesOption68>() {
@@ -457,10 +457,6 @@ public class ConstraintIncomeTypeUsageRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CashOption58 CashOption58}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IncomeTypeUsageRule"</li>
 	 * <li>
@@ -468,6 +464,10 @@ public class ConstraintIncomeTypeUsageRule {
 	 * definition} =
 	 * "The lists of income type codes to be used in IncomeType are provided in the document \"ETYP-ITYP Exemption &amp; Income Type Codes\" available on the SMPG website at www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -497,10 +497,6 @@ public class ConstraintIncomeTypeUsageRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption57
 	 * SecuritiesOption57}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IncomeTypeUsageRule"</li>
 	 * <li>
@@ -508,6 +504,10 @@ public class ConstraintIncomeTypeUsageRule {
 	 * definition} =
 	 * "The lists of income type codes to be used in IncomeType are provided in the document titled \"ETYP-ITYP Exemption &amp; Income Type Codes\" that is available on the SMPG website at www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesOption57> forSecuritiesOption57 = new MMConstraint<SecuritiesOption57>() {
@@ -531,10 +531,6 @@ public class ConstraintIncomeTypeUsageRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption49
 	 * SecuritiesOption49}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IncomeTypeUsageRule"</li>
 	 * <li>
@@ -542,6 +538,10 @@ public class ConstraintIncomeTypeUsageRule {
 	 * definition} =
 	 * "The lists of income type codes to be used in IncomeType are provided in the document titled \"ETYP-ITYP Exemption &amp; Income Type Codes\" that is available on the SMPG website at www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -574,10 +574,6 @@ public class ConstraintIncomeTypeUsageRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption59
 	 * SecuritiesOption59}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IncomeTypeUsageRule"</li>
 	 * <li>
@@ -585,6 +581,10 @@ public class ConstraintIncomeTypeUsageRule {
 	 * definition} =
 	 * "The lists of income type codes to be used in IncomeType are provided in the document titled \"ETYP-ITYP Exemption &amp; Income Type Codes\" that is available on the SMPG website at www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -622,10 +622,6 @@ public class ConstraintIncomeTypeUsageRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CashOption56 CashOption56}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IncomeTypeUsageRule"</li>
 	 * <li>
@@ -633,6 +629,10 @@ public class ConstraintIncomeTypeUsageRule {
 	 * definition} =
 	 * "The lists of income type codes to be used in IncomeType are provided in the document \"ETYP-ITYP Exemption &amp; Income Type Codes\" available on the SMPG website at www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -661,10 +661,6 @@ public class ConstraintIncomeTypeUsageRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CashOption44 CashOption44}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IncomeTypeUsageRule"</li>
 	 * <li>
@@ -672,6 +668,10 @@ public class ConstraintIncomeTypeUsageRule {
 	 * definition} =
 	 * "The lists of income type codes to be used in IncomeType are provided in the document titled \"ETYP-ITYP Exemption &amp; Income Type Codes\" that is available on the SMPG website at www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -704,10 +704,6 @@ public class ConstraintIncomeTypeUsageRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption60
 	 * SecuritiesOption60}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IncomeTypeUsageRule"</li>
 	 * <li>
@@ -715,6 +711,10 @@ public class ConstraintIncomeTypeUsageRule {
 	 * definition} =
 	 * "The lists of income type codes to be used in IncomeType are provided in the document titled \"ETYP-ITYP Exemption &amp; Income Type Codes\" that is available on the SMPG website at www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -752,10 +752,6 @@ public class ConstraintIncomeTypeUsageRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CashOption46 CashOption46}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IncomeTypeUsageRule"</li>
 	 * <li>
@@ -763,6 +759,10 @@ public class ConstraintIncomeTypeUsageRule {
 	 * definition} =
 	 * "The lists of income type codes to be used in IncomeType are provided in the document titled \"ETYP-ITYP Exemption &amp; Income Type Codes\" that is available on the SMPG website at www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CashOption46> forCashOption46 = new MMConstraint<CashOption46>() {
@@ -786,10 +786,6 @@ public class ConstraintIncomeTypeUsageRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption61
 	 * SecuritiesOption61}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IncomeTypeUsageRule"</li>
 	 * <li>
@@ -797,6 +793,10 @@ public class ConstraintIncomeTypeUsageRule {
 	 * definition} =
 	 * "The lists of income type codes to be used in IncomeType are provided in the document titled \"ETYP-ITYP Exemption &amp; Income Type Codes\" that is available on the SMPG website at www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesOption61> forSecuritiesOption61 = new MMConstraint<SecuritiesOption61>() {
@@ -819,10 +819,6 @@ public class ConstraintIncomeTypeUsageRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CashOption54 CashOption54}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IncomeTypeUsageRule"</li>
 	 * <li>
@@ -830,6 +826,10 @@ public class ConstraintIncomeTypeUsageRule {
 	 * definition} =
 	 * "The lists of income type codes to be used in IncomeType are provided in the document titled \"ETYP-ITYP Exemption &amp; Income Type Codes\" that is available on the SMPG website at www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CashOption54> forCashOption54 = new MMConstraint<CashOption54>() {
@@ -852,10 +852,6 @@ public class ConstraintIncomeTypeUsageRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CashOption63 CashOption63}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IncomeTypeUsageRule"</li>
 	 * <li>
@@ -863,6 +859,10 @@ public class ConstraintIncomeTypeUsageRule {
 	 * definition} =
 	 * "The lists of income type codes to be used in IncomeType are provided in the document \"ETYP-ITYP Exemption &amp; Income Type Codes\" available on the SMPG website at www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CashOption63> forCashOption63 = new MMConstraint<CashOption63>() {
@@ -885,10 +885,6 @@ public class ConstraintIncomeTypeUsageRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CashOption53 CashOption53}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IncomeTypeUsageRule"</li>
 	 * <li>
@@ -896,6 +892,10 @@ public class ConstraintIncomeTypeUsageRule {
 	 * definition} =
 	 * "The lists of income type codes to be used in IncomeType are provided in the document titled \"ETYP-ITYP Exemption &amp; Income Type Codes\" that is available on the SMPG website at www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CashOption53> forCashOption53 = new MMConstraint<CashOption53>() {
@@ -918,10 +918,6 @@ public class ConstraintIncomeTypeUsageRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CashOption47 CashOption47}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IncomeTypeUsageRule"</li>
 	 * <li>
@@ -929,6 +925,10 @@ public class ConstraintIncomeTypeUsageRule {
 	 * definition} =
 	 * "The lists of income type codes to be used in IncomeType are provided in the document titled \"ETYP-ITYP Exemption &amp; Income Type Codes\" that is available on the SMPG website at www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CashOption47> forCashOption47 = new MMConstraint<CashOption47>() {
@@ -951,10 +951,6 @@ public class ConstraintIncomeTypeUsageRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CashOption60 CashOption60}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IncomeTypeUsageRule"</li>
 	 * <li>
@@ -962,6 +958,10 @@ public class ConstraintIncomeTypeUsageRule {
 	 * definition} =
 	 * "The lists of income type codes to be used in IncomeType are provided in the document \"ETYP-ITYP Exemption &amp; Income Type Codes\" available on the SMPG website at www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CashOption60> forCashOption60 = new MMConstraint<CashOption60>() {
@@ -984,10 +984,6 @@ public class ConstraintIncomeTypeUsageRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CashOption49 CashOption49}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IncomeTypeUsageRule"</li>
 	 * <li>
@@ -995,6 +991,10 @@ public class ConstraintIncomeTypeUsageRule {
 	 * definition} =
 	 * "The lists of income type codes to be used in IncomeType are provided in the document titled \"ETYP-ITYP Exemption &amp; Income Type Codes\" that is available on the SMPG website at www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CashOption49> forCashOption49 = new MMConstraint<CashOption49>() {
@@ -1018,10 +1018,6 @@ public class ConstraintIncomeTypeUsageRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption65
 	 * SecuritiesOption65}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IncomeTypeUsageRule"</li>
 	 * <li>
@@ -1029,6 +1025,10 @@ public class ConstraintIncomeTypeUsageRule {
 	 * definition} =
 	 * "The lists of income type codes to be used in IncomeType are provided in the document \"ETYP-ITYP Exemption &amp; Income Type Codes\" available on the SMPG website at www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1057,10 +1057,6 @@ public class ConstraintIncomeTypeUsageRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CashOption43 CashOption43}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IncomeTypeUsageRule"</li>
 	 * <li>
@@ -1068,6 +1064,10 @@ public class ConstraintIncomeTypeUsageRule {
 	 * definition} =
 	 * "The lists of income type codes to be used in IncomeType are provided in the document titled \"ETYP-ITYP Exemption &amp; Income Type Codes\" that is available on the SMPG website at www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1099,10 +1099,6 @@ public class ConstraintIncomeTypeUsageRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CashOption42 CashOption42}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IncomeTypeUsageRule"</li>
 	 * <li>
@@ -1110,6 +1106,10 @@ public class ConstraintIncomeTypeUsageRule {
 	 * definition} =
 	 * "The lists of income type codes to be used in IncomeType are provided in the document titled \"ETYP-ITYP Exemption &amp; Income Type Codes\" that is available on the SMPG website at www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1141,10 +1141,6 @@ public class ConstraintIncomeTypeUsageRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CashOption50 CashOption50}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IncomeTypeUsageRule"</li>
 	 * <li>
@@ -1152,6 +1148,10 @@ public class ConstraintIncomeTypeUsageRule {
 	 * definition} =
 	 * "The lists of income type codes to be used in IncomeType are provided in the document titled \"ETYP-ITYP Exemption &amp; Income Type Codes\" that is available on the SMPG website at www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>

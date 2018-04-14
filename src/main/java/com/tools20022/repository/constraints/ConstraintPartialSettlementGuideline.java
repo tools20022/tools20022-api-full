@@ -42,10 +42,6 @@ public class ConstraintPartialSettlementGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount51
 	 * QuantityAndAccount51}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PartialSettlementGuideline"</li>
 	 * <li>
@@ -53,6 +49,10 @@ public class ConstraintPartialSettlementGuideline {
 	 * definition} =
 	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -85,10 +85,6 @@ public class ConstraintPartialSettlementGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount72
 	 * QuantityAndAccount72}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PartialSettlementGuideline"</li>
 	 * <li>
@@ -96,6 +92,10 @@ public class ConstraintPartialSettlementGuideline {
 	 * definition} =
 	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount72> forQuantityAndAccount72 = new MMConstraint<QuantityAndAccount72>() {
@@ -119,10 +119,6 @@ public class ConstraintPartialSettlementGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters18
 	 * AdditionalParameters18}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PartialSettlementGuideline"</li>
 	 * <li>
@@ -130,6 +126,10 @@ public class ConstraintPartialSettlementGuideline {
 	 * definition} =
 	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -162,10 +162,6 @@ public class ConstraintPartialSettlementGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters20
 	 * AdditionalParameters20}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PartialSettlementGuideline"</li>
 	 * <li>
@@ -173,6 +169,10 @@ public class ConstraintPartialSettlementGuideline {
 	 * definition} =
 	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AdditionalParameters20> forAdditionalParameters20 = new MMConstraint<AdditionalParameters20>() {
@@ -196,10 +196,6 @@ public class ConstraintPartialSettlementGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount12
 	 * QuantityAndAccount12}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PartialSettlementGuideline"</li>
 	 * <li>
@@ -207,6 +203,10 @@ public class ConstraintPartialSettlementGuideline {
 	 * definition} =
 	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount12> forQuantityAndAccount12 = new MMConstraint<QuantityAndAccount12>() {
@@ -230,10 +230,6 @@ public class ConstraintPartialSettlementGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters29
 	 * AdditionalParameters29}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PartialSettlementGuideline"</li>
 	 * <li>
@@ -241,6 +237,10 @@ public class ConstraintPartialSettlementGuideline {
 	 * definition} =
 	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -270,10 +270,6 @@ public class ConstraintPartialSettlementGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters13
 	 * AdditionalParameters13}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PartialSettlementGuideline"</li>
 	 * <li>
@@ -281,6 +277,10 @@ public class ConstraintPartialSettlementGuideline {
 	 * definition} =
 	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AdditionalParameters13> forAdditionalParameters13 = new MMConstraint<AdditionalParameters13>() {
@@ -304,10 +304,6 @@ public class ConstraintPartialSettlementGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters2
 	 * AdditionalParameters2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PartialSettlementGuideline"</li>
 	 * <li>
@@ -315,6 +311,10 @@ public class ConstraintPartialSettlementGuideline {
 	 * definition} =
 	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AdditionalParameters2> forAdditionalParameters2 = new MMConstraint<AdditionalParameters2>() {
@@ -338,10 +338,6 @@ public class ConstraintPartialSettlementGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters24
 	 * AdditionalParameters24}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PartialSettlementGuideline"</li>
 	 * <li>
@@ -349,6 +345,10 @@ public class ConstraintPartialSettlementGuideline {
 	 * definition} =
 	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -378,10 +378,6 @@ public class ConstraintPartialSettlementGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount28
 	 * QuantityAndAccount28}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PartialSettlementGuideline"</li>
 	 * <li>
@@ -389,6 +385,10 @@ public class ConstraintPartialSettlementGuideline {
 	 * definition} =
 	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -421,10 +421,6 @@ public class ConstraintPartialSettlementGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters6
 	 * AdditionalParameters6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PartialSettlementGuideline"</li>
 	 * <li>
@@ -432,6 +428,10 @@ public class ConstraintPartialSettlementGuideline {
 	 * definition} =
 	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AdditionalParameters6> forAdditionalParameters6 = new MMConstraint<AdditionalParameters6>() {
@@ -455,10 +455,6 @@ public class ConstraintPartialSettlementGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters22
 	 * AdditionalParameters22}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PartialSettlementGuideline"</li>
 	 * <li>
@@ -466,6 +462,10 @@ public class ConstraintPartialSettlementGuideline {
 	 * definition} =
 	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -504,10 +504,6 @@ public class ConstraintPartialSettlementGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters26
 	 * AdditionalParameters26}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PartialSettlementGuideline"</li>
 	 * <li>
@@ -515,6 +511,10 @@ public class ConstraintPartialSettlementGuideline {
 	 * definition} =
 	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AdditionalParameters26> forAdditionalParameters26 = new MMConstraint<AdditionalParameters26>() {
@@ -538,10 +538,6 @@ public class ConstraintPartialSettlementGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount41
 	 * QuantityAndAccount41}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PartialSettlementGuideline"</li>
 	 * <li>
@@ -549,6 +545,10 @@ public class ConstraintPartialSettlementGuideline {
 	 * definition} =
 	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -587,10 +587,6 @@ public class ConstraintPartialSettlementGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters27
 	 * AdditionalParameters27}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PartialSettlementGuideline"</li>
 	 * <li>
@@ -598,6 +594,10 @@ public class ConstraintPartialSettlementGuideline {
 	 * definition} =
 	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AdditionalParameters27> forAdditionalParameters27 = new MMConstraint<AdditionalParameters27>() {
@@ -621,10 +621,6 @@ public class ConstraintPartialSettlementGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters31
 	 * AdditionalParameters31}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PartialSettlementGuideline"</li>
 	 * <li>
@@ -632,6 +628,10 @@ public class ConstraintPartialSettlementGuideline {
 	 * definition} =
 	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AdditionalParameters31> forAdditionalParameters31 = new MMConstraint<AdditionalParameters31>() {
@@ -655,10 +655,6 @@ public class ConstraintPartialSettlementGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount15
 	 * QuantityAndAccount15}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PartialSettlementGuideline"</li>
 	 * <li>
@@ -666,6 +662,10 @@ public class ConstraintPartialSettlementGuideline {
 	 * definition} =
 	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount15> forQuantityAndAccount15 = new MMConstraint<QuantityAndAccount15>() {
@@ -689,10 +689,6 @@ public class ConstraintPartialSettlementGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount57
 	 * QuantityAndAccount57}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PartialSettlementGuideline"</li>
 	 * <li>
@@ -700,6 +696,10 @@ public class ConstraintPartialSettlementGuideline {
 	 * definition} =
 	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -729,10 +729,6 @@ public class ConstraintPartialSettlementGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount64
 	 * QuantityAndAccount64}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PartialSettlementGuideline"</li>
 	 * <li>
@@ -740,6 +736,10 @@ public class ConstraintPartialSettlementGuideline {
 	 * definition} =
 	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -769,10 +769,6 @@ public class ConstraintPartialSettlementGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount20
 	 * QuantityAndAccount20}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PartialSettlementGuideline"</li>
 	 * <li>
@@ -780,6 +776,10 @@ public class ConstraintPartialSettlementGuideline {
 	 * definition} =
 	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount20> forQuantityAndAccount20 = new MMConstraint<QuantityAndAccount20>() {
@@ -803,10 +803,6 @@ public class ConstraintPartialSettlementGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters19
 	 * AdditionalParameters19}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PartialSettlementGuideline"</li>
 	 * <li>
@@ -814,6 +810,10 @@ public class ConstraintPartialSettlementGuideline {
 	 * definition} =
 	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AdditionalParameters19> forAdditionalParameters19 = new MMConstraint<AdditionalParameters19>() {
@@ -837,10 +837,6 @@ public class ConstraintPartialSettlementGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters17
 	 * AdditionalParameters17}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PartialSettlementGuideline"</li>
 	 * <li>
@@ -848,6 +844,10 @@ public class ConstraintPartialSettlementGuideline {
 	 * definition} =
 	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -880,10 +880,6 @@ public class ConstraintPartialSettlementGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount2
 	 * QuantityAndAccount2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PartialSettlementGuideline"</li>
 	 * <li>
@@ -891,6 +887,10 @@ public class ConstraintPartialSettlementGuideline {
 	 * definition} =
 	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount2> forQuantityAndAccount2 = new MMConstraint<QuantityAndAccount2>() {
@@ -914,10 +914,6 @@ public class ConstraintPartialSettlementGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount37
 	 * QuantityAndAccount37}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PartialSettlementGuideline"</li>
 	 * <li>
@@ -925,6 +921,10 @@ public class ConstraintPartialSettlementGuideline {
 	 * definition} =
 	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount37> forQuantityAndAccount37 = new MMConstraint<QuantityAndAccount37>() {
@@ -948,10 +948,6 @@ public class ConstraintPartialSettlementGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters12
 	 * AdditionalParameters12}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PartialSettlementGuideline"</li>
 	 * <li>
@@ -959,6 +955,10 @@ public class ConstraintPartialSettlementGuideline {
 	 * definition} =
 	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AdditionalParameters12> forAdditionalParameters12 = new MMConstraint<AdditionalParameters12>() {

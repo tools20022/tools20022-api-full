@@ -73,14 +73,14 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "SwitchStatusCode"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Specifies the status of a given account switch."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -100,10 +100,6 @@ public class SwitchStatusCode extends MMCode {
 	 * SwitchStatusCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "TMTN"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Termination"</li>
 	 * <li>
@@ -111,6 +107,10 @@ public class SwitchStatusCode extends MMCode {
 	 * definition} =
 	 * "Account switch is terminated. \r\n\r\nUsage: Terminated status should be used when the account switch service receives and validates a terminate switch request."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SwitchStatusCode Termination = new SwitchStatusCode() {
@@ -135,10 +135,6 @@ public class SwitchStatusCode extends MMCode {
 	 * SwitchStatusCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "REQU"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Requested"</li>
 	 * <li>
@@ -146,6 +142,10 @@ public class SwitchStatusCode extends MMCode {
 	 * definition} =
 	 * "Information is requested for the account switch. \r\n\r\nUsage: Requested status should be used when the account switch service receives and validates an information request."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SwitchStatusCode Requested = new SwitchStatusCode() {
@@ -171,10 +171,6 @@ public class SwitchStatusCode extends MMCode {
 	 * SwitchStatusCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "REJT"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Rejected"</li>
 	 * <li>
@@ -182,6 +178,10 @@ public class SwitchStatusCode extends MMCode {
 	 * definition} =
 	 * "Account switch is rejected. \r\n\r\nUsage: Rejected status should be used when account switch service receives and validates an information response request rejecting the account switch."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SwitchStatusCode Rejected = new SwitchStatusCode() {
@@ -206,10 +206,6 @@ public class SwitchStatusCode extends MMCode {
 	 * SwitchStatusCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "REDE"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RedirectionEnded"</li>
 	 * <li>
@@ -217,6 +213,10 @@ public class SwitchStatusCode extends MMCode {
 	 * definition} =
 	 * "Redirection ended at the end of the redirection period. \r\n\r\nUsage: Indicates the cessation of account redirection by a particular service."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SwitchStatusCode RedirectionEnded = new SwitchStatusCode() {
@@ -241,10 +241,6 @@ public class SwitchStatusCode extends MMCode {
 	 * SwitchStatusCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "REDT"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Redirection"</li>
 	 * <li>
@@ -252,6 +248,10 @@ public class SwitchStatusCode extends MMCode {
 	 * definition} =
 	 * "Request for redirection. \r\n\r\nUsage: Redirection status should be used when the account switch service receives and validates the first redirection request."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SwitchStatusCode Redirection = new SwitchStatusCode() {
@@ -276,10 +276,6 @@ public class SwitchStatusCode extends MMCode {
 	 * SwitchStatusCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "COMP"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Completed"</li>
 	 * <li>
@@ -287,6 +283,10 @@ public class SwitchStatusCode extends MMCode {
 	 * definition} =
 	 * "Account switch is completed.\r\n\r\nUsage: Completed status should be used when account switch service receives and validates a notify account switch complete request."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SwitchStatusCode Completed = new SwitchStatusCode() {
@@ -312,10 +312,6 @@ public class SwitchStatusCode extends MMCode {
 	 * SwitchStatusCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "BTRS"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BalanceTransferResponse"</li>
 	 * <li>
@@ -323,6 +319,10 @@ public class SwitchStatusCode extends MMCode {
 	 * definition} =
 	 * "Balance transfer responded.\r\n\r\nUsage: Balance transfer responded staus should be used when the account switch service receives and validates an acknowledge balance transfer request."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SwitchStatusCode BalanceTransferResponse = new SwitchStatusCode() {
@@ -347,10 +347,6 @@ public class SwitchStatusCode extends MMCode {
 	 * SwitchStatusCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "BTRQ"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BalanceTransferRequested"</li>
 	 * <li>
@@ -358,6 +354,10 @@ public class SwitchStatusCode extends MMCode {
 	 * definition} =
 	 * "Account balance transfer is requested.\r\n\r\nUsage: Balance transfer requested status should be used when account switch service receives and validates a request balance transfer request."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SwitchStatusCode BalanceTransferRequested = new SwitchStatusCode() {
@@ -383,10 +383,6 @@ public class SwitchStatusCode extends MMCode {
 	 * SwitchStatusCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "ACPT"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Accepted"</li>
 	 * <li>
@@ -394,6 +390,10 @@ public class SwitchStatusCode extends MMCode {
 	 * definition} =
 	 * "Account switch is accepted.\r\n\r\nUsage: Accepted status should be used when account switch service receives and validates an information response request accepting the switch."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SwitchStatusCode Accepted = new SwitchStatusCode() {

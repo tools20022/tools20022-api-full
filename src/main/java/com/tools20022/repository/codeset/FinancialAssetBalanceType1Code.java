@@ -226,6 +226,10 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "FinancialAssetBalanceType1Code"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} = "Specifies balances of assets and other balances."</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -236,10 +240,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "FinancialAssetBalanceType1Code"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Specifies balances of assets and other balances."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -254,12 +254,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AccruedIncome"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AccruedIncome"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code AccruedIncome = new FinancialAssetBalanceType1Code() {
@@ -278,12 +278,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OtherFinancialInstruments"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "OtherFinancialInstruments"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code OtherFinancialInstruments = new FinancialAssetBalanceType1Code() {
@@ -302,12 +302,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettledCash"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettledCash"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code SettledCash = new FinancialAssetBalanceType1Code() {
@@ -326,12 +326,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "FXTransaction"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "FXTransaction"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code FXTransaction = new FinancialAssetBalanceType1Code() {
@@ -350,12 +350,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Cash"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Cash"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code Cash = new FinancialAssetBalanceType1Code() {
@@ -374,12 +374,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TreasuryInflatedProtectedSecurity"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "TreasuryInflatedProtectedSecurity"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code TreasuryInflatedProtectedSecurity = new FinancialAssetBalanceType1Code() {
@@ -398,12 +398,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Equity"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Equity"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code Equity = new FinancialAssetBalanceType1Code() {
@@ -422,12 +422,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CommonStock"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CommonStock"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code CommonStock = new FinancialAssetBalanceType1Code() {
@@ -446,12 +446,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PreferredStock"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PreferredStock"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code PreferredStock = new FinancialAssetBalanceType1Code() {
@@ -470,12 +470,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "MutualFund"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "MutualFund"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code MutualFund = new FinancialAssetBalanceType1Code() {
@@ -494,12 +494,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ExchangeTradedFund"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ExchangeTradedFund"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code ExchangeTradedFund = new FinancialAssetBalanceType1Code() {
@@ -518,12 +518,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Rights"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Rights"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code Rights = new FinancialAssetBalanceType1Code() {
@@ -542,12 +542,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Warrant"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Warrant"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code Warrant = new FinancialAssetBalanceType1Code() {
@@ -566,12 +566,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Bond"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Bond"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code Bond = new FinancialAssetBalanceType1Code() {
@@ -590,12 +590,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ConvertibleBond"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ConvertibleBond"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code ConvertibleBond = new FinancialAssetBalanceType1Code() {
@@ -614,12 +614,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CorporateBond"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CorporateBond"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code CorporateBond = new FinancialAssetBalanceType1Code() {
@@ -638,12 +638,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "GovernmentBond"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "GovernmentBond"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code GovernmentBond = new FinancialAssetBalanceType1Code() {
@@ -662,12 +662,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Option"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Option"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code Option = new FinancialAssetBalanceType1Code() {
@@ -686,12 +686,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Future"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Future"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code Future = new FinancialAssetBalanceType1Code() {
@@ -710,12 +710,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Swap"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Swap"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code Swap = new FinancialAssetBalanceType1Code() {
@@ -734,12 +734,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CurrencyExchange"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CurrencyExchange"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code CurrencyExchange = new FinancialAssetBalanceType1Code() {
@@ -758,12 +758,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ForeignInvestment"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ForeignInvestment"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code ForeignInvestment = new FinancialAssetBalanceType1Code() {
@@ -782,12 +782,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Gold"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Gold"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code Gold = new FinancialAssetBalanceType1Code() {
@@ -806,12 +806,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Property"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Property"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code Property = new FinancialAssetBalanceType1Code() {
@@ -830,12 +830,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BankersAcceptance"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BankersAcceptance"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code BankersAcceptance = new FinancialAssetBalanceType1Code() {
@@ -854,12 +854,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SyndicatedBankLoan"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SyndicatedBankLoan"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code SyndicatedBankLoan = new FinancialAssetBalanceType1Code() {
@@ -878,12 +878,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CollateralisedBondObligation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CollateralisedBondObligation"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code CollateralisedBondObligation = new FinancialAssetBalanceType1Code() {
@@ -902,12 +902,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CertificateOfDeposit"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CertificateOfDeposit"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code CertificateOfDeposit = new FinancialAssetBalanceType1Code() {
@@ -926,12 +926,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CollateralisedDebtObligation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CollateralisedDebtObligation"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code CollateralisedDebtObligation = new FinancialAssetBalanceType1Code() {
@@ -950,12 +950,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CollateralisedLoanObligation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CollateralisedLoanObligation"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code CollateralisedLoanObligation = new FinancialAssetBalanceType1Code() {
@@ -974,12 +974,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CollateralisedMortgageObligation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CollateralisedMortgageObligation"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code CollateralisedMortgageObligation = new FinancialAssetBalanceType1Code() {
@@ -998,12 +998,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CommericalPaper"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CommericalPaper"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code CommericalPaper = new FinancialAssetBalanceType1Code() {
@@ -1022,12 +1022,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CorporatePrivatePlacement"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CorporatePrivatePlacement"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code CorporatePrivatePlacement = new FinancialAssetBalanceType1Code() {
@@ -1046,12 +1046,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DiscountNote"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DiscountNote"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code DiscountNote = new FinancialAssetBalanceType1Code() {
@@ -1070,12 +1070,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "FederalAgencyDiscountNote"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "FederalAgencyDiscountNote"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code FederalAgencyDiscountNote = new FinancialAssetBalanceType1Code() {
@@ -1094,12 +1094,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "FederalHousingAuthority"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "FederalHousingAuthority"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code FederalHousingAuthority = new FinancialAssetBalanceType1Code() {
@@ -1118,12 +1118,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "FederalHomeLoan"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "FederalHomeLoan"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code FederalHomeLoan = new FinancialAssetBalanceType1Code() {
@@ -1142,12 +1142,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "FederalNationalMortgageAssociation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "FederalNationalMortgageAssociation"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code FederalNationalMortgageAssociation = new FinancialAssetBalanceType1Code() {
@@ -1166,12 +1166,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "FloatingRateNote"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "FloatingRateNote"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code FloatingRateNote = new FinancialAssetBalanceType1Code() {
@@ -1190,12 +1190,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "GovernmentNationalMortgageAssociation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "GovernmentNationalMortgageAssociation"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code GovernmentNationalMortgageAssociation = new FinancialAssetBalanceType1Code() {
@@ -1214,12 +1214,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TreasuriesAndAgenciesDebentures"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "TreasuriesAndAgenciesDebentures"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code TreasuriesAndAgenciesDebentures = new FinancialAssetBalanceType1Code() {
@@ -1238,12 +1238,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "IOETTEMortgage"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "IOETTEMortgage"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code IOETTEMortgage = new FinancialAssetBalanceType1Code() {
@@ -1262,12 +1262,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "MortgagePrivatePlacement"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "MortgagePrivatePlacement"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code MortgagePrivatePlacement = new FinancialAssetBalanceType1Code() {
@@ -1286,12 +1286,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "MunicipalBond"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "MunicipalBond"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code MunicipalBond = new FinancialAssetBalanceType1Code() {
@@ -1310,12 +1310,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "StudentLoanMarketingAssociation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "StudentLoanMarketingAssociation"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code StudentLoanMarketingAssociation = new FinancialAssetBalanceType1Code() {
@@ -1334,12 +1334,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ShortTermInvestmentFund"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ShortTermInvestmentFund"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code ShortTermInvestmentFund = new FinancialAssetBalanceType1Code() {
@@ -1358,12 +1358,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TreasuryStrips"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "TreasuryStrips"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code TreasuryStrips = new FinancialAssetBalanceType1Code() {
@@ -1382,12 +1382,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TimeDeposit"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "TimeDeposit"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code TimeDeposit = new FinancialAssetBalanceType1Code() {
@@ -1406,12 +1406,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "UnitizedBondsAndWarrants"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "UnitizedBondsAndWarrants"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code UnitizedBondsAndWarrants = new FinancialAssetBalanceType1Code() {
@@ -1430,12 +1430,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "UnitizedBonds"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "UnitizedBonds"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code UnitizedBonds = new FinancialAssetBalanceType1Code() {
@@ -1454,12 +1454,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "VariableRateDiscountNote"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "VariableRateDiscountNote"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code VariableRateDiscountNote = new FinancialAssetBalanceType1Code() {
@@ -1478,12 +1478,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CatsTigersLions"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CatsTigersLions"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code CatsTigersLions = new FinancialAssetBalanceType1Code() {
@@ -1502,12 +1502,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ForwardBonds"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ForwardBonds"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code ForwardBonds = new FinancialAssetBalanceType1Code() {
@@ -1526,12 +1526,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ForwardRateAgreement"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ForwardRateAgreement"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code ForwardRateAgreement = new FinancialAssetBalanceType1Code() {
@@ -1550,12 +1550,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RepurchaseAgreement"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "RepurchaseAgreement"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code RepurchaseAgreement = new FinancialAssetBalanceType1Code() {
@@ -1574,12 +1574,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ReverseRepurchaseAgreement"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ReverseRepurchaseAgreement"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code ReverseRepurchaseAgreement = new FinancialAssetBalanceType1Code() {
@@ -1598,12 +1598,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TripartyRepurchaseAgreement"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "TripartyRepurchaseAgreement"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code TripartyRepurchaseAgreement = new FinancialAssetBalanceType1Code() {
@@ -1622,12 +1622,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TripartyReverseRepurchaseAgreement"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "TripartyReverseRepurchaseAgreement"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code TripartyReverseRepurchaseAgreement = new FinancialAssetBalanceType1Code() {
@@ -1646,12 +1646,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "FXForward"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "FXForward"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code FXForward = new FinancialAssetBalanceType1Code() {
@@ -1670,12 +1670,12 @@ public class FinancialAssetBalanceType1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
 	 * FinancialAssetBalanceType1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "FXSpot"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "FXSpot"</li>
 	 * </ul>
 	 */
 	public static final FinancialAssetBalanceType1Code FXSpot = new FinancialAssetBalanceType1Code() {

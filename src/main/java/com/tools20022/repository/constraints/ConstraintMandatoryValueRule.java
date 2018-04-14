@@ -37,10 +37,6 @@ public class ConstraintMandatoryValueRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.camt.ModifyMemberV03
 	 * ModifyMemberV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MandatoryValueRule"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintMandatoryValueRule {
 	 * definition} =
 	 * "The NewMemberValueSet consists of a MemberReturnAddress, a CommunicationAddress or a ContactReference. At a minimum, one of these elements must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ModifyMemberV03> for_camt_ModifyMemberV03 = new MMConstraint<ModifyMemberV03>() {

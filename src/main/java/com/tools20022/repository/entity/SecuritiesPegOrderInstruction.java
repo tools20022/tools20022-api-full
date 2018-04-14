@@ -102,16 +102,16 @@ import java.util.Optional;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "SecuritiesPegOrderInstruction"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Instructions specific to pegged orders, which consist in an investor buying large amounts of  the underlying asset of a derivative it holds.\r\n"
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class SecuritiesPegOrderInstruction {
@@ -141,15 +141,15 @@ public class SecuritiesPegOrderInstruction {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction
 	 * SecuritiesPegOrderInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Offset"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount (signed) added to the peg for a pegged order."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesPegOrderInstruction, CurrencyAndAmount> mmOffset = new MMBusinessAttribute<SecuritiesPegOrderInstruction, CurrencyAndAmount>() {
@@ -198,15 +198,15 @@ public class SecuritiesPegOrderInstruction {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction
 	 * SecuritiesPegOrderInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PriceType"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Defines the type of peg."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesPegOrderInstruction, PegTypeCode> mmPriceType = new MMBusinessAttribute<SecuritiesPegOrderInstruction, PegTypeCode>() {
@@ -255,15 +255,15 @@ public class SecuritiesPegOrderInstruction {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction
 	 * SecuritiesPegOrderInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MoveType"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Describes whether peg is static/fixed or floats."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesPegOrderInstruction, MoveTypeCode> mmMoveType = new MMBusinessAttribute<SecuritiesPegOrderInstruction, MoveTypeCode>() {
@@ -313,15 +313,15 @@ public class SecuritiesPegOrderInstruction {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction
 	 * SecuritiesPegOrderInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OffsetType"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Type of peg offset."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesPegOrderInstruction, OffsetTypeCode> mmOffsetType = new MMBusinessAttribute<SecuritiesPegOrderInstruction, OffsetTypeCode>() {
@@ -370,15 +370,15 @@ public class SecuritiesPegOrderInstruction {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction
 	 * SecuritiesPegOrderInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LimitType"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies nature of resulting pegged price."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesPegOrderInstruction, Max35Text> mmLimitType = new MMBusinessAttribute<SecuritiesPegOrderInstruction, Max35Text>() {
@@ -428,10 +428,6 @@ public class SecuritiesPegOrderInstruction {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction
 	 * SecuritiesPegOrderInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Scope"</li>
 	 * <li>
@@ -439,6 +435,10 @@ public class SecuritiesPegOrderInstruction {
 	 * definition} =
 	 * "The scope of \"related to\" price of the peg (for example, local, global etc)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesPegOrderInstruction, PriceProtectionScopeCode> mmScope = new MMBusinessAttribute<SecuritiesPegOrderInstruction, PriceProtectionScopeCode>() {
@@ -488,10 +488,6 @@ public class SecuritiesPegOrderInstruction {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction
 	 * SecuritiesPegOrderInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OffsetSign"</li>
 	 * <li>
@@ -499,6 +495,10 @@ public class SecuritiesPegOrderInstruction {
 	 * definition} =
 	 * "Indicates whether the offset should be added to or subtracted from the peg for a pegged order."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesPegOrderInstruction, PlusOrMinusIndicator> mmOffsetSign = new MMBusinessAttribute<SecuritiesPegOrderInstruction, PlusOrMinusIndicator>() {
@@ -531,6 +531,11 @@ public class SecuritiesPegOrderInstruction {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderParameters
+	 * SecuritiesOrderParameters}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderParameters#mmPegInstructions
@@ -539,24 +544,19 @@ public class SecuritiesPegOrderInstruction {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderParameters
-	 * SecuritiesOrderParameters}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction
 	 * SecuritiesPegOrderInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Order"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Order which is pegged."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesPegOrderInstruction, Optional<SecuritiesOrderParameters>> mmOrder = new MMBusinessAssociationEnd<SecuritiesPegOrderInstruction, Optional<SecuritiesOrderParameters>>() {
@@ -590,6 +590,10 @@ public class SecuritiesPegOrderInstruction {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.RoundingParameters
+	 * RoundingParameters}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.RoundingParameters#mmRelatedPegOrderInstruction
@@ -597,10 +601,6 @@ public class SecuritiesPegOrderInstruction {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.RoundingParameters
-	 * RoundingParameters}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -614,10 +614,6 @@ public class SecuritiesPegOrderInstruction {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction
 	 * SecuritiesPegOrderInstruction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RoundDirection"</li>
 	 * <li>
@@ -625,6 +621,10 @@ public class SecuritiesPegOrderInstruction {
 	 * definition} =
 	 * "If the calculated peg price is not a valid tick price, specifies how to round the price."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesPegOrderInstruction, RoundingParameters> mmRoundDirection = new MMBusinessAssociationEnd<SecuritiesPegOrderInstruction, RoundingParameters>() {

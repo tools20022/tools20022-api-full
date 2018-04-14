@@ -155,14 +155,14 @@ import java.util.Optional;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "SecuritiesOrderParameters"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Parameters of the transfer of a financial instrument."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class SecuritiesOrderParameters {
@@ -175,6 +175,10 @@ public class SecuritiesOrderParameters {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
+	 * SecuritiesQuantity}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMinimumQuantityOrderParameters
@@ -182,10 +186,6 @@ public class SecuritiesOrderParameters {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
-	 * SecuritiesQuantity}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -199,13 +199,6 @@ public class SecuritiesOrderParameters {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderParameters
 	 * SecuritiesOrderParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = ISO15022Synonym: :36B::MINI</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MinimumQuantity"</li>
 	 * <li>
@@ -213,6 +206,13 @@ public class SecuritiesOrderParameters {
 	 * definition} =
 	 * "Minimum quantity of financial instrument to be bought or sold if the entire order cannot be executed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :36B::MINI</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesOrderParameters, SecuritiesQuantity> mmMinimumQuantity = new MMBusinessAssociationEnd<SecuritiesOrderParameters, SecuritiesQuantity>() {
@@ -248,6 +248,10 @@ public class SecuritiesOrderParameters {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
+	 * SecuritiesQuantity}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMatchIncrementOrderParameters
@@ -255,10 +259,6 @@ public class SecuritiesOrderParameters {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
-	 * SecuritiesQuantity}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -278,10 +278,6 @@ public class SecuritiesOrderParameters {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderParameters
 	 * SecuritiesOrderParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MatchIncrement"</li>
 	 * <li>
@@ -289,6 +285,10 @@ public class SecuritiesOrderParameters {
 	 * definition} =
 	 * "Allows orders to specify a minimum quantity that applies to every execution. (one execution could be for multiple counter-orders). The order may still fill against smaller orders, but the cumulative quantity of the execution must be in multiples of the MatchIncrement."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesOrderParameters, SecuritiesQuantity> mmMatchIncrement = new MMBusinessAssociationEnd<SecuritiesOrderParameters, SecuritiesQuantity>() {
@@ -323,6 +323,11 @@ public class SecuritiesOrderParameters {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction
+	 * SecuritiesPegOrderInstruction}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction#mmOrder
@@ -330,11 +335,6 @@ public class SecuritiesOrderParameters {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction
-	 * SecuritiesPegOrderInstruction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -348,15 +348,15 @@ public class SecuritiesOrderParameters {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderParameters
 	 * SecuritiesOrderParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PegInstructions"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Additional instructions if the order is pegged."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesOrderParameters, SecuritiesPegOrderInstruction> mmPegInstructions = new MMBusinessAssociationEnd<SecuritiesOrderParameters, SecuritiesPegOrderInstruction>() {
@@ -391,6 +391,10 @@ public class SecuritiesOrderParameters {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesPricing
+	 * SecuritiesPricing}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmRelatedOrder
@@ -398,10 +402,6 @@ public class SecuritiesOrderParameters {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesPricing
-	 * SecuritiesPricing}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -415,15 +415,15 @@ public class SecuritiesOrderParameters {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderParameters
 	 * SecuritiesOrderParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PreviousClosingPrice"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Previous closing price of security."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesOrderParameters, SecuritiesPricing> mmPreviousClosingPrice = new MMBusinessAssociationEnd<SecuritiesOrderParameters, SecuritiesPricing>() {
@@ -475,6 +475,12 @@ public class SecuritiesOrderParameters {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderParameters
 	 * SecuritiesOrderParameters}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AutoRouting"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Indicates whether an automatic routing system is involved."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = ISO15022Synonym: :22a::AUTO</li>
@@ -482,12 +488,6 @@ public class SecuritiesOrderParameters {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AutoRouting"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Indicates whether an automatic routing system is involved."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderParameters, AutoRoutingCode> mmAutoRouting = new MMBusinessAttribute<SecuritiesOrderParameters, AutoRoutingCode>() {
@@ -530,13 +530,6 @@ public class SecuritiesOrderParameters {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderParameters
 	 * SecuritiesOrderParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = ISO15022Synonym: :22F::CAOP</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CorporateActionOptionIndicator"</li>
 	 * <li>
@@ -544,6 +537,13 @@ public class SecuritiesOrderParameters {
 	 * definition} =
 	 * "Indicates the possible options or choices available to account owner (for investment funds)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::CAOP</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderParameters, IncomePreferenceCode> mmCorporateActionOptionIndicator = new MMBusinessAttribute<SecuritiesOrderParameters, IncomePreferenceCode>() {
@@ -595,6 +595,11 @@ public class SecuritiesOrderParameters {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderParameters
 	 * SecuritiesOrderParameters}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ExecutionTimeLimit"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Indicates from/until when an order must be executed."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = ISO15022Synonym: :22a::TILI, FIXSynonym: 59</li>
@@ -602,11 +607,6 @@ public class SecuritiesOrderParameters {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ExecutionTimeLimit"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Indicates from/until when an order must be executed."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderParameters, ExecutionTimeLimitCode> mmExecutionTimeLimit = new MMBusinessAttribute<SecuritiesOrderParameters, ExecutionTimeLimitCode>() {
@@ -648,6 +648,11 @@ public class SecuritiesOrderParameters {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderParameters
 	 * SecuritiesOrderParameters}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PreAllocationConditionIndicator"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Indicates the conditions that apply to a pre-allocation."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = ISO15022Synonym: :22F::PRCO</li>
@@ -655,11 +660,6 @@ public class SecuritiesOrderParameters {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PreAllocationConditionIndicator"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Indicates the conditions that apply to a pre-allocation."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderParameters, Max16Text> mmPreAllocationConditionIndicator = new MMBusinessAttribute<SecuritiesOrderParameters, Max16Text>() {
@@ -708,6 +708,11 @@ public class SecuritiesOrderParameters {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderParameters
 	 * SecuritiesOrderParameters}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PriorityIndicator"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Indicates the execution priority of the trade."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = ISO15022Synonym: :22a::PRIR</li>
@@ -715,11 +720,6 @@ public class SecuritiesOrderParameters {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PriorityIndicator"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Indicates the execution priority of the trade."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderParameters, PriorityCode> mmPriorityIndicator = new MMBusinessAttribute<SecuritiesOrderParameters, PriorityCode>() {
@@ -761,15 +761,15 @@ public class SecuritiesOrderParameters {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderParameters
 	 * SecuritiesOrderParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RequestedDealCurrency"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Currency in which a trade should be executed."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderParameters, CurrencyCode> mmRequestedDealCurrency = new MMBusinessAttribute<SecuritiesOrderParameters, CurrencyCode>() {
@@ -818,16 +818,16 @@ public class SecuritiesOrderParameters {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderParameters
 	 * SecuritiesOrderParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OrderHandlingInstruction"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies instructions for order handling on the broker trading floor."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderParameters, TradingFloorOrderHandlingCode> mmOrderHandlingInstruction = new MMBusinessAttribute<SecuritiesOrderParameters, TradingFloorOrderHandlingCode>() {
@@ -877,13 +877,6 @@ public class SecuritiesOrderParameters {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderParameters
 	 * SecuritiesOrderParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = FIXSynonym: 114</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "StockLocateRequired"</li>
 	 * <li>
@@ -891,6 +884,13 @@ public class SecuritiesOrderParameters {
 	 * definition} =
 	 * "Indicates whether the broker is to locate the stock in conjunction with a short sell order.\nThis information is mandatory in case of short sales. When executed, the report will then mention the securities location."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 114</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderParameters, YesNoIndicator> mmStockLocateRequired = new MMBusinessAttribute<SecuritiesOrderParameters, YesNoIndicator>() {
@@ -944,13 +944,6 @@ public class SecuritiesOrderParameters {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderParameters
 	 * SecuritiesOrderParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = FIXSynonym: 636</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "WorkingIndicator"</li>
 	 * <li>
@@ -958,6 +951,13 @@ public class SecuritiesOrderParameters {
 	 * definition} =
 	 * "Indicates if the order is currently being worked. For open outcry markets this indicates that the order is being worked in the crowd.  For electronic markets it indicates that the order has transitioned from a contingent order to a market order."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 636</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderParameters, YesNoIndicator> mmWorkingIndicator = new MMBusinessAttribute<SecuritiesOrderParameters, YesNoIndicator>() {
@@ -1000,13 +1000,6 @@ public class SecuritiesOrderParameters {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderParameters
 	 * SecuritiesOrderParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = FIXSynonym: 638</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BookPriorityIndicator"</li>
 	 * <li>
@@ -1014,6 +1007,13 @@ public class SecuritiesOrderParameters {
 	 * definition} =
 	 * "Indicates if a Cancel/Replace has caused an order to lose book priority."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 638</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderParameters, BookPriorityIndicatorCode> mmBookPriorityIndicator = new MMBusinessAttribute<SecuritiesOrderParameters, BookPriorityIndicatorCode>() {
@@ -1062,10 +1062,6 @@ public class SecuritiesOrderParameters {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderParameters
 	 * SecuritiesOrderParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MaxPriceLevels"</li>
 	 * <li>
@@ -1073,6 +1069,10 @@ public class SecuritiesOrderParameters {
 	 * definition} =
 	 * "Allows an order to specify a maximum number of price levels to trade through."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderParameters, Number> mmMaxPriceLevels = new MMBusinessAttribute<SecuritiesOrderParameters, Number>() {
@@ -1122,10 +1122,6 @@ public class SecuritiesOrderParameters {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderParameters
 	 * SecuritiesOrderParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PreTradeAnonymity"</li>
 	 * <li>
@@ -1133,6 +1129,10 @@ public class SecuritiesOrderParameters {
 	 * definition} =
 	 * "Allows trader to explicitly request anonymity or disclosure in pre-trade market data feeds. Anonymity is relevant in markets where counterparties are regularly disclosed in order depth feeds. Disclosure is relevant when counterparties are not normally visible."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderParameters, YesNoIndicator> mmPreTradeAnonymity = new MMBusinessAttribute<SecuritiesOrderParameters, YesNoIndicator>() {
@@ -1182,10 +1182,6 @@ public class SecuritiesOrderParameters {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderParameters
 	 * SecuritiesOrderParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GoodTillBooking"</li>
 	 * <li>
@@ -1193,6 +1189,10 @@ public class SecuritiesOrderParameters {
 	 * definition} =
 	 * "For partially good till orders, the specification of whether to book each execution, or to accumulate the executions."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderParameters, GoodTillBookingInstructionCode> mmGoodTillBooking = new MMBusinessAttribute<SecuritiesOrderParameters, GoodTillBookingInstructionCode>() {
@@ -1242,10 +1242,6 @@ public class SecuritiesOrderParameters {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderParameters
 	 * SecuritiesOrderParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ManualOrderIndicator"</li>
 	 * <li>
@@ -1253,6 +1249,10 @@ public class SecuritiesOrderParameters {
 	 * definition} =
 	 * "Indicates if the order was initially received manually (as opposed to electronically)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderParameters, YesNoIndicator> mmManualOrderIndicator = new MMBusinessAttribute<SecuritiesOrderParameters, YesNoIndicator>() {
@@ -1302,10 +1302,6 @@ public class SecuritiesOrderParameters {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderParameters
 	 * SecuritiesOrderParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DirectedOrder"</li>
 	 * <li>
@@ -1313,6 +1309,10 @@ public class SecuritiesOrderParameters {
 	 * definition} =
 	 * "Indicates if the customer directed this order to a specific execution venue (Y) or not (N)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderParameters, YesNoIndicator> mmDirectedOrder = new MMBusinessAttribute<SecuritiesOrderParameters, YesNoIndicator>() {
@@ -1361,16 +1361,16 @@ public class SecuritiesOrderParameters {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderParameters
 	 * SecuritiesOrderParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReceivedDepartment"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Identifies the Broker / Dealer Department that first took the order."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderParameters, Max35Text> mmReceivedDepartment = new MMBusinessAttribute<SecuritiesOrderParameters, Max35Text>() {
@@ -1426,10 +1426,6 @@ public class SecuritiesOrderParameters {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderParameters
 	 * SecuritiesOrderParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CustomerHandlingInstruction"</li>
 	 * <li>
@@ -1437,6 +1433,10 @@ public class SecuritiesOrderParameters {
 	 * definition} =
 	 * "Codes that apply special information that the Broker / Dealer needs to report, as specified by the customer."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderParameters, CustomerHandlingInstructionsCode> mmCustomerHandlingInstruction = new MMBusinessAttribute<SecuritiesOrderParameters, CustomerHandlingInstructionsCode>() {
@@ -1486,15 +1486,15 @@ public class SecuritiesOrderParameters {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderParameters
 	 * SecuritiesOrderParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ProcessCode"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Used to identify soft trades at order entry."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesOrderParameters, CommissionTypeV2Code> mmProcessCode = new MMBusinessAttribute<SecuritiesOrderParameters, CommissionTypeV2Code>() {
@@ -1527,6 +1527,10 @@ public class SecuritiesOrderParameters {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesOrder
+	 * SecuritiesOrder}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmOrderExecutionParameters
@@ -1535,23 +1539,19 @@ public class SecuritiesOrderParameters {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesOrder
-	 * SecuritiesOrder}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderParameters
 	 * SecuritiesOrderParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RelatedSecuritiesOrder"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Securities order for which parameters are specified."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesOrderParameters, Optional<SecuritiesOrder>> mmRelatedSecuritiesOrder = new MMBusinessAssociationEnd<SecuritiesOrderParameters, Optional<SecuritiesOrder>>() {

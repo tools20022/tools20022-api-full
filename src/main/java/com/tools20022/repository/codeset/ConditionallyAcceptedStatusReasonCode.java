@@ -126,6 +126,10 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "ConditionallyAcceptedStatusReasonCode"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} = "Specifies the reason for a conditionally accepted status."</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -136,10 +140,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "ConditionallyAcceptedStatusReasonCode"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Specifies the reason for a conditionally accepted status."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -158,10 +158,6 @@ public class ConditionallyAcceptedStatusReasonCode extends MMCode {
 	 * ConditionallyAcceptedStatusReasonCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "AWMO"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AwaitingMoney"</li>
 	 * <li>
@@ -169,6 +165,10 @@ public class ConditionallyAcceptedStatusReasonCode extends MMCode {
 	 * definition} =
 	 * "Order is accepted for further processing but the execution of the order is pending until there is enough cash in the account to pay the subscription."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final ConditionallyAcceptedStatusReasonCode AwaitingMoney = new ConditionallyAcceptedStatusReasonCode() {
@@ -191,10 +191,6 @@ public class ConditionallyAcceptedStatusReasonCode extends MMCode {
 	 * ConditionallyAcceptedStatusReasonCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "AWSH"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AwaitingFunds"</li>
 	 * <li>
@@ -202,6 +198,10 @@ public class ConditionallyAcceptedStatusReasonCode extends MMCode {
 	 * definition} =
 	 * "Order is accepted for further processing but the execution of the order is pending until there are enough funds in the account to complete it."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final ConditionallyAcceptedStatusReasonCode AwaitingFunds = new ConditionallyAcceptedStatusReasonCode() {
@@ -225,10 +225,6 @@ public class ConditionallyAcceptedStatusReasonCode extends MMCode {
 	 * ConditionallyAcceptedStatusReasonCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "DOCC"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AwaitingDocuments"</li>
 	 * <li>
@@ -236,6 +232,10 @@ public class ConditionallyAcceptedStatusReasonCode extends MMCode {
 	 * definition} =
 	 * "Order is pending until documents are completed and received, eg, legal documents from the successor, legal proceeds because of bankruptcy, missing signature."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final ConditionallyAcceptedStatusReasonCode AwaitingDocuments = new ConditionallyAcceptedStatusReasonCode() {
@@ -259,10 +259,6 @@ public class ConditionallyAcceptedStatusReasonCode extends MMCode {
 	 * ConditionallyAcceptedStatusReasonCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "AWRM"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AwaitingRedemptionMoney"</li>
 	 * <li>
@@ -270,6 +266,10 @@ public class ConditionallyAcceptedStatusReasonCode extends MMCode {
 	 * definition} =
 	 * "Order is accepted for further processing but the execution of the order is pending until there are enough funds in the account to complete the redemption."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final ConditionallyAcceptedStatusReasonCode AwaitingRedemptionMoney = new ConditionallyAcceptedStatusReasonCode() {
@@ -293,10 +293,6 @@ public class ConditionallyAcceptedStatusReasonCode extends MMCode {
 	 * ConditionallyAcceptedStatusReasonCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "AWSM"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AwaitingSubscriptionMoney"</li>
 	 * <li>
@@ -304,6 +300,10 @@ public class ConditionallyAcceptedStatusReasonCode extends MMCode {
 	 * definition} =
 	 * "Order is accepted for further processing but the execution of the order is pending until there is enough cash in the account to pay the subscription."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final ConditionallyAcceptedStatusReasonCode AwaitingSubscriptionMoney = new ConditionallyAcceptedStatusReasonCode() {
@@ -325,15 +325,15 @@ public class ConditionallyAcceptedStatusReasonCode extends MMCode {
 	 * ConditionallyAcceptedStatusReasonCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "OTHR"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Other"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Another reason for the conditionally accepted status."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final ConditionallyAcceptedStatusReasonCode Other = new ConditionallyAcceptedStatusReasonCode() {
@@ -356,10 +356,6 @@ public class ConditionallyAcceptedStatusReasonCode extends MMCode {
 	 * ConditionallyAcceptedStatusReasonCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "DUPL"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PossibleDuplicate"</li>
 	 * <li>
@@ -367,6 +363,10 @@ public class ConditionallyAcceptedStatusReasonCode extends MMCode {
 	 * definition} =
 	 * "Order is accepted for further processing pending the result of the investigation for possible duplicates."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final ConditionallyAcceptedStatusReasonCode PossibleDuplicate = new ConditionallyAcceptedStatusReasonCode() {
@@ -389,10 +389,6 @@ public class ConditionallyAcceptedStatusReasonCode extends MMCode {
 	 * ConditionallyAcceptedStatusReasonCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "CRED"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradingLimitExceeded"</li>
 	 * <li>
@@ -400,6 +396,10 @@ public class ConditionallyAcceptedStatusReasonCode extends MMCode {
 	 * definition} =
 	 * "Order is accepted for further processing pending the extension of the trading limit."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final ConditionallyAcceptedStatusReasonCode TradingLimitExceeded = new ConditionallyAcceptedStatusReasonCode() {
@@ -422,10 +422,6 @@ public class ConditionallyAcceptedStatusReasonCode extends MMCode {
 	 * ConditionallyAcceptedStatusReasonCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "BPID"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BenefitPlanDeclaration"</li>
 	 * <li>
@@ -433,6 +429,10 @@ public class ConditionallyAcceptedStatusReasonCode extends MMCode {
 	 * definition} =
 	 * "Order is accepted for further processing but the execution of the order is pending the benefit plan investor (BPI) declaration."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final ConditionallyAcceptedStatusReasonCode BenefitPlanDeclaration = new ConditionallyAcceptedStatusReasonCode() {
@@ -455,10 +455,6 @@ public class ConditionallyAcceptedStatusReasonCode extends MMCode {
 	 * ConditionallyAcceptedStatusReasonCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "ERIS"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ERISADeclaration"</li>
 	 * <li>
@@ -466,6 +462,10 @@ public class ConditionallyAcceptedStatusReasonCode extends MMCode {
 	 * definition} =
 	 * "Order is accepted for further processing but the execution of the order is pending the ERISA declaration."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final ConditionallyAcceptedStatusReasonCode ERISADeclaration = new ConditionallyAcceptedStatusReasonCode() {
@@ -489,10 +489,6 @@ public class ConditionallyAcceptedStatusReasonCode extends MMCode {
 	 * ConditionallyAcceptedStatusReasonCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "AMLD"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AMLDocuments"</li>
 	 * <li>
@@ -500,6 +496,10 @@ public class ConditionallyAcceptedStatusReasonCode extends MMCode {
 	 * definition} =
 	 * "Order is accepted for further processing but the execution of the order is pending until the required anti-money laundering documentation is presented to the transfer agent."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final ConditionallyAcceptedStatusReasonCode AMLDocuments = new ConditionallyAcceptedStatusReasonCode() {
@@ -522,10 +522,6 @@ public class ConditionallyAcceptedStatusReasonCode extends MMCode {
 	 * ConditionallyAcceptedStatusReasonCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "APPR"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AwaitingApproval"</li>
 	 * <li>
@@ -533,6 +529,10 @@ public class ConditionallyAcceptedStatusReasonCode extends MMCode {
 	 * definition} =
 	 * "Order is accepted for further processing but the execution of the order is pending the investment manager's approval."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final ConditionallyAcceptedStatusReasonCode AwaitingApproval = new ConditionallyAcceptedStatusReasonCode() {
@@ -555,10 +555,6 @@ public class ConditionallyAcceptedStatusReasonCode extends MMCode {
 	 * ConditionallyAcceptedStatusReasonCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "AFUN"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalFundingRequired"</li>
 	 * <li>
@@ -566,6 +562,10 @@ public class ConditionallyAcceptedStatusReasonCode extends MMCode {
 	 * definition} =
 	 * "Order is accepted for further processing but the execution of the subscription order is pending as additional funding is required."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final ConditionallyAcceptedStatusReasonCode AdditionalFundingRequired = new ConditionallyAcceptedStatusReasonCode() {
@@ -589,10 +589,6 @@ public class ConditionallyAcceptedStatusReasonCode extends MMCode {
 	 * ConditionallyAcceptedStatusReasonCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "BMIN"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BelowMinimumInitialInvestmentAmount"</li>
 	 * <li>
@@ -600,6 +596,10 @@ public class ConditionallyAcceptedStatusReasonCode extends MMCode {
 	 * definition} =
 	 * "Order is accepted for further processing but the execution of the order is pending as the order is below the minimum initial investment amount and is subject to the investment manager's approval."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final ConditionallyAcceptedStatusReasonCode BelowMinimumInitialInvestmentAmount = new ConditionallyAcceptedStatusReasonCode() {
@@ -623,10 +623,6 @@ public class ConditionallyAcceptedStatusReasonCode extends MMCode {
 	 * ConditionallyAcceptedStatusReasonCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "BMTO"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BelowMinimumTopUpAmount"</li>
 	 * <li>
@@ -634,6 +630,10 @@ public class ConditionallyAcceptedStatusReasonCode extends MMCode {
 	 * definition} =
 	 * "Order is accepted for further processing but the execution of the subscription order is pending as the order is below the minimum top-up investment and is subject to the investment manager's approval."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final ConditionallyAcceptedStatusReasonCode BelowMinimumTopUpAmount = new ConditionallyAcceptedStatusReasonCode() {
@@ -657,10 +657,6 @@ public class ConditionallyAcceptedStatusReasonCode extends MMCode {
 	 * ConditionallyAcceptedStatusReasonCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "INSU"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InsufficientCapacity"</li>
 	 * <li>
@@ -668,6 +664,10 @@ public class ConditionallyAcceptedStatusReasonCode extends MMCode {
 	 * definition} =
 	 * "Order is accepted for further processing but the execution of the order is pending as there is insufficient capacity and the order is subject to the investment manager's approval."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final ConditionallyAcceptedStatusReasonCode InsufficientCapacity = new ConditionallyAcceptedStatusReasonCode() {
@@ -691,10 +691,6 @@ public class ConditionallyAcceptedStatusReasonCode extends MMCode {
 	 * ConditionallyAcceptedStatusReasonCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "PRCT"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PercentageHoldingBreach"</li>
 	 * <li>
@@ -702,6 +698,10 @@ public class ConditionallyAcceptedStatusReasonCode extends MMCode {
 	 * definition} =
 	 * "Order is accepted for further processing but the execution of the order is pending because of a percentage holding breach, eg, PPM rules; taxation rules (ERISA)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final ConditionallyAcceptedStatusReasonCode PercentageHoldingBreach = new ConditionallyAcceptedStatusReasonCode() {
@@ -725,10 +725,6 @@ public class ConditionallyAcceptedStatusReasonCode extends MMCode {
 	 * ConditionallyAcceptedStatusReasonCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "BMRA"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BelowMinimumRedemptionAmount"</li>
 	 * <li>
@@ -736,6 +732,10 @@ public class ConditionallyAcceptedStatusReasonCode extends MMCode {
 	 * definition} =
 	 * "Order is accepted for further processing but the execution of the redemption order is pending as it is below the minimum redemption amount and subject to the investment manager's approval."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final ConditionallyAcceptedStatusReasonCode BelowMinimumRedemptionAmount = new ConditionallyAcceptedStatusReasonCode() {
@@ -759,10 +759,6 @@ public class ConditionallyAcceptedStatusReasonCode extends MMCode {
 	 * ConditionallyAcceptedStatusReasonCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "BMRV"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BelowMinimumRetainedAmount"</li>
 	 * <li>
@@ -770,6 +766,10 @@ public class ConditionallyAcceptedStatusReasonCode extends MMCode {
 	 * definition} =
 	 * "Order is accepted for further processing but the execution of the redemption order is pending as the holding will be below the minimum retained value and subject to the investment manager's approval."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final ConditionallyAcceptedStatusReasonCode BelowMinimumRetainedAmount = new ConditionallyAcceptedStatusReasonCode() {
@@ -793,10 +793,6 @@ public class ConditionallyAcceptedStatusReasonCode extends MMCode {
 	 * ConditionallyAcceptedStatusReasonCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "LOCK"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LockUp"</li>
 	 * <li>
@@ -804,6 +800,10 @@ public class ConditionallyAcceptedStatusReasonCode extends MMCode {
 	 * definition} =
 	 * "Order is accepted for further processing but the execution of the order is pending as a lock-up period is in place and subject to the investment manager's approval."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final ConditionallyAcceptedStatusReasonCode LockUp = new ConditionallyAcceptedStatusReasonCode() {
@@ -827,10 +827,6 @@ public class ConditionallyAcceptedStatusReasonCode extends MMCode {
 	 * ConditionallyAcceptedStatusReasonCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "ILLI"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AssetsIlliquid"</li>
 	 * <li>
@@ -838,6 +834,10 @@ public class ConditionallyAcceptedStatusReasonCode extends MMCode {
 	 * definition} =
 	 * "Order is accepted for further processing but the execution of the redemption order is pending as assets are illiquid and the order is subject to the investment manager's approval."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final ConditionallyAcceptedStatusReasonCode AssetsIlliquid = new ConditionallyAcceptedStatusReasonCode() {
@@ -861,10 +861,6 @@ public class ConditionallyAcceptedStatusReasonCode extends MMCode {
 	 * ConditionallyAcceptedStatusReasonCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "DISC"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Discretion"</li>
 	 * <li>
@@ -872,6 +868,10 @@ public class ConditionallyAcceptedStatusReasonCode extends MMCode {
 	 * definition} =
 	 * "Order is accepted for further processing but the execution of the redemption order is pending as it is subject to the investment manager's discretion."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final ConditionallyAcceptedStatusReasonCode Discretion = new ConditionallyAcceptedStatusReasonCode() {
@@ -895,10 +895,6 @@ public class ConditionallyAcceptedStatusReasonCode extends MMCode {
 	 * ConditionallyAcceptedStatusReasonCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "STOP"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SubscriptionTopUpAmount"</li>
 	 * <li>
@@ -906,6 +902,10 @@ public class ConditionallyAcceptedStatusReasonCode extends MMCode {
 	 * definition} =
 	 * "Order is accepted for further processing but the execution of the subscription order is pending as the order is below the minimum investment and a top-up is required."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final ConditionallyAcceptedStatusReasonCode SubscriptionTopUpAmount = new ConditionallyAcceptedStatusReasonCode() {

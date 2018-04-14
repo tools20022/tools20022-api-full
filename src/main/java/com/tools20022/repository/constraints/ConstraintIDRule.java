@@ -36,10 +36,6 @@ public class ConstraintIDRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QualifiedPartyAndXMLSignature1
 	 * QualifiedPartyAndXMLSignature1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IDRule"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintIDRule {
 	 * definition} =
 	 * "When a signature is created for a message component that contains IDREFs or IDs, these elements MUST not be excluded from the signature."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QualifiedPartyAndXMLSignature1> forQualifiedPartyAndXMLSignature1 = new MMConstraint<QualifiedPartyAndXMLSignature1>() {

@@ -37,10 +37,6 @@ public class ConstraintOverAndAboveQuantityGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption2
 	 * SecuritiesOption2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OverAndAboveQuantityGuideline"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintOverAndAboveQuantityGuideline {
 	 * definition} =
 	 * "OverAndAboveNormalEnsuredEntitlementQuantity defines the quantity to receive on top of the normal entitlement, not the combined quantity."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesOption2> forSecuritiesOption2 = new MMConstraint<SecuritiesOption2>() {
@@ -71,10 +71,6 @@ public class ConstraintOverAndAboveQuantityGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption7
 	 * SecuritiesOption7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OverAndAboveQuantityGuideline"</li>
 	 * <li>
@@ -82,6 +78,10 @@ public class ConstraintOverAndAboveQuantityGuideline {
 	 * definition} =
 	 * "OverAndAboveNormalEnsuredEntitlementQuantity defines the quantity to receive on top of the normal entitlement, not the combined quantity."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesOption7> forSecuritiesOption7 = new MMConstraint<SecuritiesOption7>() {

@@ -40,10 +40,6 @@ public class ConstraintTotalRedemptionAmountRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SwitchOrder2 SwitchOrder2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TotalRedemptionAmountRule"</li>
 	 * <li>
@@ -51,6 +47,10 @@ public class ConstraintTotalRedemptionAmountRule {
 	 * definition} =
 	 * "If SubscriptionLegDetails/FinancialInstrumentQuantityChoice/PercentageOfTotalRedemptionAmount is present, then TotalRedemptionAmount must also be present. If SubscriptionLegDetails/FinancialInstrumentQuantityChoice/PercentageOfTotalRedemptionAmount is not present, then TotalRedemptionAmount is optional."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SwitchOrder2> forSwitchOrder2 = new MMConstraint<SwitchOrder2>() {
@@ -73,10 +73,6 @@ public class ConstraintTotalRedemptionAmountRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SwitchOrder4 SwitchOrder4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TotalRedemptionAmountRule"</li>
 	 * <li>
@@ -84,6 +80,10 @@ public class ConstraintTotalRedemptionAmountRule {
 	 * definition} =
 	 * "If SubscriptionLegDetails/FinancialInstrumentQuantityChoice/PercentageOfTotalRedemptionAmount is present, then TotalRedemptionAmount must also be present. If SubscriptionLegDetails/FinancialInstrumentQuantityChoice/PercentageOfTotalRedemptionAmount is not present, then TotalRedemptionAmount is optional."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SwitchOrder4> forSwitchOrder4 = new MMConstraint<SwitchOrder4>() {
@@ -106,10 +106,6 @@ public class ConstraintTotalRedemptionAmountRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SwitchOrder3 SwitchOrder3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TotalRedemptionAmountRule"</li>
 	 * <li>
@@ -117,6 +113,10 @@ public class ConstraintTotalRedemptionAmountRule {
 	 * definition} =
 	 * "If SubscriptionLegDetails/FinancialInstrumentQuantityChoice/PercentageOfTotalRedemptionAmount is present, then TotalRedemptionAmount must also be present. If SubscriptionLegDetails/FinancialInstrumentQuantityChoice/PercentageOfTotalRedemptionAmount is not present, then TotalRedemptionAmount is optional."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SwitchOrder3> forSwitchOrder3 = new MMConstraint<SwitchOrder3>() {

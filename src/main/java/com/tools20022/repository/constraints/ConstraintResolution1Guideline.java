@@ -49,10 +49,6 @@ public class ConstraintResolution1Guideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV05
 	 * MeetingNotificationV05}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Resolution1Guideline"</li>
 	 * <li>
@@ -60,6 +56,10 @@ public class ConstraintResolution1Guideline {
 	 * definition} =
 	 * "When an agenda item needs to be linked to a resolution, it is recommended to have the resolution information following directly the agenda item information to which the resolution is linked as illustrated in the following example: \n\nResolution/IssuerLabel = Agenda item 1\nDescription = &lt;Item description.&gt;\nForInformationOnly = True\nType =.\n\nDirectly followed by\n\nResolution/IssuerLabel = Resolution 1\nDescription = &lt;Resolution description.&gt;\nForInformationOnly = False\nType =.\n."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -89,10 +89,6 @@ public class ConstraintResolution1Guideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV04
 	 * MeetingNotificationV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Resolution1Guideline"</li>
 	 * <li>
@@ -100,6 +96,10 @@ public class ConstraintResolution1Guideline {
 	 * definition} =
 	 * "When an agenda item needs to be linked to a resolution, it is recommended to have the resolution information following directly the agenda item information to which the resolution is linked as illustrated in the following example: \n\nResolution/IssuerLabel = Agenda item 1\nDescription = &lt;Item description.&gt;\nForInformationOnly = True\nType =.\n\nDirectly followed by\n\nResolution/IssuerLabel = Resolution 1\nDescription = &lt;Resolution description.&gt;\nForInformationOnly = False\nType =.\n."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -132,10 +132,6 @@ public class ConstraintResolution1Guideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV03
 	 * MeetingNotificationV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Resolution1Guideline"</li>
 	 * <li>
@@ -143,6 +139,10 @@ public class ConstraintResolution1Guideline {
 	 * definition} =
 	 * "When an agenda item needs to be linked to a resolution, it is recommended to have the resolution information following directly the agenda item information to which the resolution is linked as illustrated in the following example: \n\nResolution/IssuerLabel = Agenda item 1\nDescription = &lt;Item description.&gt;\nForInformationOnly = True\nType =.\n\nDirectly followed by\n\nResolution/IssuerLabel = Resolution 1\nDescription = &lt;Resolution description.&gt;\nForInformationOnly = False\nType =.\n."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<MeetingNotificationV03> for_seev_MeetingNotificationV03 = new MMConstraint<MeetingNotificationV03>() {

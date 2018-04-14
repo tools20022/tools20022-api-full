@@ -41,10 +41,6 @@ public class ConstraintMasterAndTransferReferencesGuideline1 {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Transfer15 Transfer15}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MasterAndTransferReferencesGuideline1"</li>
 	 * <li>
@@ -52,6 +48,10 @@ public class ConstraintMasterAndTransferReferencesGuideline1 {
 	 * definition} =
 	 * "TransferReference, ClientReference and CounterpartyReference may each be repeated across multiple instances of the TransferDetails component where the respective party has allocated only a single reference to all transfers within the instruction. Where the instructing party allocates a master reference to link several transfers together, but does not allocate individual references at transfer level, it should repeat that reference in the MasterReference and each instance of TransferReference."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Transfer15> forTransfer15 = new MMConstraint<Transfer15>() {
@@ -74,10 +74,6 @@ public class ConstraintMasterAndTransferReferencesGuideline1 {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Transfer19 Transfer19}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MasterAndTransferReferencesGuideline1"</li>
 	 * <li>
@@ -85,6 +81,10 @@ public class ConstraintMasterAndTransferReferencesGuideline1 {
 	 * definition} =
 	 * "TransferReference, ClientReference and CounterpartyReference may each be repeated across multiple instances of the TransferDetails component where the respective party has allocated only a single reference to all transfers within the instruction. Where the instructing party allocates a master reference to link several transfers together, but does not allocate individual references at transfer level, it should repeat that reference in the MasterReference and each instance of TransferReference."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -116,10 +116,6 @@ public class ConstraintMasterAndTransferReferencesGuideline1 {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Transfer27 Transfer27}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MasterAndTransferReferencesGuideline1"</li>
 	 * <li>
@@ -127,6 +123,10 @@ public class ConstraintMasterAndTransferReferencesGuideline1 {
 	 * definition} =
 	 * "TransferReference, ClientReference and CounterpartyReference may each be repeated across multiple instances of the TransferDetails component where the respective party has allocated only a single reference to all transfers within the instruction. Where the instructing party allocates a master reference to link several transfers together, but does not allocate individual references at transfer level, it should repeat that reference in the MasterReference and each instance of TransferReference."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -164,10 +164,6 @@ public class ConstraintMasterAndTransferReferencesGuideline1 {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Transfer32 Transfer32}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MasterAndTransferReferencesGuideline1"</li>
 	 * <li>
@@ -175,6 +171,10 @@ public class ConstraintMasterAndTransferReferencesGuideline1 {
 	 * definition} =
 	 * "TransferReference, ClientReference and CounterpartyReference may each be repeated across multiple instances of the TransferDetails component where the respective party has allocated only a single reference to all transfers within the instruction. Where the instructing party allocates a master reference to link several transfers together, but does not allocate individual references at transfer level, it should repeat that reference in the MasterReference and each instance of TransferReference."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -203,10 +203,6 @@ public class ConstraintMasterAndTransferReferencesGuideline1 {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Transfer30 Transfer30}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MasterAndTransferReferencesGuideline1"</li>
 	 * <li>
@@ -214,6 +210,10 @@ public class ConstraintMasterAndTransferReferencesGuideline1 {
 	 * definition} =
 	 * "TransferReference, ClientReference and CounterpartyReference may each be repeated across multiple instances of the TransferDetails component where the respective party has allocated only a single reference to all transfers within the instruction. Where the instructing party allocates a master reference to link several transfers together, but does not allocate individual references at transfer level, it should repeat that reference in the MasterReference and each instance of TransferReference."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -242,10 +242,6 @@ public class ConstraintMasterAndTransferReferencesGuideline1 {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Transfer21 Transfer21}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MasterAndTransferReferencesGuideline1"</li>
 	 * <li>
@@ -253,6 +249,10 @@ public class ConstraintMasterAndTransferReferencesGuideline1 {
 	 * definition} =
 	 * "TransferReference, ClientReference and CounterpartyReference may each be repeated across multiple instances of the TransferDetails component where the respective party has allocated only a single reference to all transfers within the instruction. Where the instructing party allocates a master reference to link several transfers together, but does not allocate individual references at transfer level, it should repeat that reference in the MasterReference and each instance of TransferReference."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -284,10 +284,6 @@ public class ConstraintMasterAndTransferReferencesGuideline1 {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Transfer11 Transfer11}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MasterAndTransferReferencesGuideline1"</li>
 	 * <li>
@@ -295,6 +291,10 @@ public class ConstraintMasterAndTransferReferencesGuideline1 {
 	 * definition} =
 	 * "TransferReference, ClientReference and CounterpartyReference may each be repeated across multiple instances of the TransferDetails component where the respective party has allocated only a single reference to all transfers within the instruction. Where the instructing party allocates a master reference to link several transfers together, but does not allocate individual references at transfer level, it should repeat that reference in the MasterReference and each instance of TransferReference."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Transfer11> forTransfer11 = new MMConstraint<Transfer11>() {

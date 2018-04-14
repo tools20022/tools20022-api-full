@@ -36,10 +36,6 @@ public class ConstraintTransactionAndPurchaseOrderRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ReportLine1 ReportLine1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TransactionAndPurchaseOrderRule"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintTransactionAndPurchaseOrderRule {
 	 * definition} =
 	 * "The transaction identification and purchase order must match, that is, the purchase order must be the one contained in the baseline/transaction, identified by the transaction identification."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ReportLine1> forReportLine1 = new MMConstraint<ReportLine1>() {

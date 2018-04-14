@@ -38,10 +38,6 @@ public class ConstraintCurrentInstructionNumberRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.NumberCount1Choice
 	 * NumberCount1Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrentInstructionNumberRule"</li>
 	 * <li>
@@ -49,6 +45,10 @@ public class ConstraintCurrentInstructionNumberRule {
 	 * definition} =
 	 * "If the Sender wants to indicate that this instruction is linked to one or more settlement instruction, then the CurrentInstructionNumber must be specified."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<NumberCount1Choice> forNumberCount1Choice = new MMConstraint<NumberCount1Choice>() {
@@ -71,10 +71,6 @@ public class ConstraintCurrentInstructionNumberRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TotalNumber1 TotalNumber1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrentInstructionNumberRule"</li>
 	 * <li>
@@ -82,6 +78,10 @@ public class ConstraintCurrentInstructionNumberRule {
 	 * definition} =
 	 * "If the Sender wants to indicate that this instruction is linked to one or more settlement instruction, then the CurrentInstructionNumber must be specified."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TotalNumber1> forTotalNumber1 = new MMConstraint<TotalNumber1>() {

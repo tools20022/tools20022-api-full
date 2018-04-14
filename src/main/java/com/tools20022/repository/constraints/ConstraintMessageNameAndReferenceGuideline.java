@@ -39,10 +39,6 @@ public class ConstraintMessageNameAndReferenceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.OrderCancellationStatusReportV03
 	 * OrderCancellationStatusReportV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MessageNameAndReferenceGuideline"</li>
 	 * <li>
@@ -50,6 +46,10 @@ public class ConstraintMessageNameAndReferenceGuideline {
 	 * definition} =
 	 * "If RelatedReference/MessageName or OtherReference/MessageName is present, it must contain 502 or must start with setr.002, setr.005, setr.008, setr.011, setr.014 or setr.018 and RelatedReference/Reference must contain the message reference of a message in this list."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<OrderCancellationStatusReportV03> for_setr_OrderCancellationStatusReportV03 = new MMConstraint<OrderCancellationStatusReportV03>() {
@@ -73,10 +73,6 @@ public class ConstraintMessageNameAndReferenceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.OrderCancellationStatusReportV02
 	 * OrderCancellationStatusReportV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MessageNameAndReferenceGuideline"</li>
 	 * <li>
@@ -84,6 +80,10 @@ public class ConstraintMessageNameAndReferenceGuideline {
 	 * definition} =
 	 * "If MessageName is present, it must contain 502 or must start with setr.002 or setr.005 or setr.008 or setr.011 or setr.014 or setr.025 and Reference must contain the business reference of a message in this list."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<OrderCancellationStatusReportV02> for_setr_OrderCancellationStatusReportV02 = new MMConstraint<OrderCancellationStatusReportV02>() {
@@ -107,10 +107,6 @@ public class ConstraintMessageNameAndReferenceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.OrderConfirmationStatusReportV02
 	 * OrderConfirmationStatusReportV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MessageNameAndReferenceGuideline"</li>
 	 * <li>
@@ -118,6 +114,10 @@ public class ConstraintMessageNameAndReferenceGuideline {
 	 * definition} =
 	 * "If Reference/RelatedReference/MessageName or Reference/OtherReference/MessageName is present, it must contain 502 or must start with setr.047, setr.049, setr.051, setr.053, setr.055, setr.058 and Reference/RelatedReference/Reference must contain the message reference of a message in this list."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<OrderConfirmationStatusReportV02> for_setr_OrderConfirmationStatusReportV02 = new MMConstraint<OrderConfirmationStatusReportV02>() {
@@ -141,10 +141,6 @@ public class ConstraintMessageNameAndReferenceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.OrderCancellationStatusReportV04
 	 * OrderCancellationStatusReportV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MessageNameAndReferenceGuideline"</li>
 	 * <li>
@@ -152,6 +148,10 @@ public class ConstraintMessageNameAndReferenceGuideline {
 	 * definition} =
 	 * "If Reference/RelatedReference/MessageName or Reference/OtherReference/MessageName is present, it must it must contain 502 or must start with setr.002, setr.005, setr.008, setr.011, setr.014 or setr.018 and Reference/RelatedReference/Reference must contain the message reference of a message in this list."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<OrderCancellationStatusReportV04> for_setr_OrderCancellationStatusReportV04 = new MMConstraint<OrderCancellationStatusReportV04>() {
@@ -175,10 +175,6 @@ public class ConstraintMessageNameAndReferenceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV03
 	 * OrderInstructionStatusReportV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MessageNameAndReferenceGuideline"</li>
 	 * <li>
@@ -186,6 +182,10 @@ public class ConstraintMessageNameAndReferenceGuideline {
 	 * definition} =
 	 * "If RelatedReference/MessageName or OtherReference/MessageName is present, it must contain 502 or must start with setr.001, setr.004, setr.007, setr.010, setr.013, setr.019 or setr.018 and RelatedReference/Reference must contain the message reference of a message in this list."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -219,10 +219,6 @@ public class ConstraintMessageNameAndReferenceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV04
 	 * OrderInstructionStatusReportV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MessageNameAndReferenceGuideline"</li>
 	 * <li>
@@ -230,6 +226,10 @@ public class ConstraintMessageNameAndReferenceGuideline {
 	 * definition} =
 	 * "If Reference/RelatedReference/MessageName or Reference/OtherReference/MessageName is present, it must contain 502 or must start with setr.001, setr.004, setr.007, setr.010, setr.013, setr.019 or setr.018 and Reference/RelatedReference/Reference must contain the message reference of a message in this list."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =

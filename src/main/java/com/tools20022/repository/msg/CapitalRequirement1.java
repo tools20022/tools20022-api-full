@@ -80,16 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CapitalRequirement1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Report of the breakdown of the components for the capital requirement for central counterparty."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -116,10 +116,6 @@ public class CapitalRequirement1 {
 	 * CapitalRequirement1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "WndgDwnOrRstrgRsk"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "WindingDownOrRestructuringRisk"</li>
 	 * <li>
@@ -127,6 +123,10 @@ public class CapitalRequirement1 {
 	 * definition} =
 	 * "Indicates the capital necessary to cover the winding down or restructuring of activities."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CapitalRequirement1, ActiveCurrencyAndAmount> mmWindingDownOrRestructuringRisk = new MMMessageAttribute<CapitalRequirement1, ActiveCurrencyAndAmount>() {
@@ -171,10 +171,6 @@ public class CapitalRequirement1 {
 	 * CapitalRequirement1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OprlAndLglRsk"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OperationalAndLegalRisk"</li>
 	 * <li>
@@ -182,6 +178,10 @@ public class CapitalRequirement1 {
 	 * definition} =
 	 * "Indicates the capital necessary to cover the overall operational and legal risks.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CapitalRequirement1, ActiveCurrencyAndAmount> mmOperationalAndLegalRisk = new MMMessageAttribute<CapitalRequirement1, ActiveCurrencyAndAmount>() {
@@ -226,10 +226,6 @@ public class CapitalRequirement1 {
 	 * CapitalRequirement1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CdtRsk"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CreditRisk"</li>
 	 * <li>
@@ -237,6 +233,10 @@ public class CapitalRequirement1 {
 	 * definition} =
 	 * "Indicates the capital necessary to cover credit risks not already covered by other financial resources, such as risks stemming from clearing activity.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CapitalRequirement1, ActiveCurrencyAndAmount> mmCreditRisk = new MMMessageAttribute<CapitalRequirement1, ActiveCurrencyAndAmount>() {
@@ -281,10 +281,6 @@ public class CapitalRequirement1 {
 	 * CapitalRequirement1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CntrPtyRsk"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CounterPartyRisk"</li>
 	 * <li>
@@ -292,6 +288,10 @@ public class CapitalRequirement1 {
 	 * definition} =
 	 * "Indicates the capital necessary to cover counterparty credit risks not already covered by other financial resources, such as risks stemming from clearing activity.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CapitalRequirement1, ActiveCurrencyAndAmount> mmCounterPartyRisk = new MMMessageAttribute<CapitalRequirement1, ActiveCurrencyAndAmount>() {
@@ -336,10 +336,6 @@ public class CapitalRequirement1 {
 	 * CapitalRequirement1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MktRsk"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MarketRisk"</li>
 	 * <li>
@@ -347,6 +343,10 @@ public class CapitalRequirement1 {
 	 * definition} =
 	 * "Indicates the capital necessary to cover counterparty market risks not already covered by other financial resources, such as risks stemming from clearing activity.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CapitalRequirement1, ActiveCurrencyAndAmount> mmMarketRisk = new MMMessageAttribute<CapitalRequirement1, ActiveCurrencyAndAmount>() {
@@ -391,16 +391,16 @@ public class CapitalRequirement1 {
 	 * CapitalRequirement1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "BizRsk"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BusinessRisk"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Indicates the capital necessary to cover business risk.\r\n"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CapitalRequirement1, ActiveCurrencyAndAmount> mmBusinessRisk = new MMMessageAttribute<CapitalRequirement1, ActiveCurrencyAndAmount>() {
@@ -444,10 +444,6 @@ public class CapitalRequirement1 {
 	 * CapitalRequirement1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NtfctnBffr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NotificationBuffer"</li>
 	 * <li>
@@ -455,6 +451,10 @@ public class CapitalRequirement1 {
 	 * definition} =
 	 * "Indicates the percentage above 100 percent of the CCP’s required capital requiring notification to the CCP’s National Competent Authority threshold.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CapitalRequirement1, Optional<BaseOneRate>> mmNotificationBuffer = new MMMessageAttribute<CapitalRequirement1, Optional<BaseOneRate>>() {

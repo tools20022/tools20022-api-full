@@ -38,10 +38,6 @@ public class ConstraintCurrencyUserDefinedPeriodsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ValuationStatistics3
 	 * ValuationStatistics3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyUserDefinedPeriodsRule"</li>
 	 * <li>
@@ -49,6 +45,10 @@ public class ConstraintCurrencyUserDefinedPeriodsRule {
 	 * definition} =
 	 * "Currency in ByUserDefinedTimePeriod/HighestPriceValue/Amount, ByUserDefinedTimePeriod/LowestPriceValue/Amount and ByUserDefinedTimePeriod/PriceChange/Amount must be the same as Currency."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ValuationStatistics3> forValuationStatistics3 = new MMConstraint<ValuationStatistics3>() {
@@ -72,10 +72,6 @@ public class ConstraintCurrencyUserDefinedPeriodsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ValuationStatistics2
 	 * ValuationStatistics2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyUserDefinedPeriodsRule"</li>
 	 * <li>
@@ -83,6 +79,10 @@ public class ConstraintCurrencyUserDefinedPeriodsRule {
 	 * definition} =
 	 * "Currency in ByUserDefinedTimePeriod/HighestPriceValue/Amount, ByUserDefinedTimePeriod/LowestPriceValue/Amount and ByUserDefinedTimePeriod/PriceChange/Amount must be the same as Currency."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ValuationStatistics2> forValuationStatistics2 = new MMConstraint<ValuationStatistics2>() {

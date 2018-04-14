@@ -73,15 +73,15 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "PreAllocation1"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} = "Provides pre-allocation details."</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRemovalDate
  * removalDate} = September 9, 2016</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "PreAllocation1"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Provides pre-allocation details."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -111,6 +111,12 @@ public class PreAllocation1 {
 	 * {@linkplain com.tools20022.repository.msg.PreAllocation1 PreAllocation1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AllcnId"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AllocationIdentification"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Used to assign an identifier to the block of preallocations."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = FIXSynonym: 70</li>
@@ -118,12 +124,6 @@ public class PreAllocation1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AllocationIdentification"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Used to assign an identifier to the block of preallocations."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<PreAllocation1, Optional<Max35Text>> mmAllocationIdentification = new MMMessageAttribute<PreAllocation1, Optional<Max35Text>>() {
@@ -173,6 +173,11 @@ public class PreAllocation1 {
 	 * {@linkplain com.tools20022.repository.msg.PreAllocation1 PreAllocation1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "IndvAllcnId"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "IndividualAllocationIdentification"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "A unique identification for each allocation instance."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = FIXSynonym: 467</li>
@@ -180,11 +185,6 @@ public class PreAllocation1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "IndividualAllocationIdentification"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "A unique identification for each allocation instance."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<PreAllocation1, Optional<Max35Text>> mmIndividualAllocationIdentification = new MMMessageAttribute<PreAllocation1, Optional<Max35Text>>() {
@@ -235,13 +235,6 @@ public class PreAllocation1 {
 	 * {@linkplain com.tools20022.repository.msg.PreAllocation1 PreAllocation1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AllctdQty"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = FIXSynonym: 80</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AllocatedQuantity"</li>
 	 * <li>
@@ -249,6 +242,13 @@ public class PreAllocation1 {
 	 * definition} =
 	 * "Quantity of a specific security allocated from a block trade, based upon the distribution of the trade to different accounts."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 80</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<PreAllocation1, Optional<FinancialInstrumentQuantityChoice>> mmAllocatedQuantity = new MMMessageAttribute<PreAllocation1, Optional<FinancialInstrumentQuantityChoice>>() {
@@ -298,6 +298,12 @@ public class PreAllocation1 {
 	 * {@linkplain com.tools20022.repository.msg.PreAllocation1 PreAllocation1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AllctdSttlmCcy"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AllocatedSettlementCurrency"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Currency to be used for settlement of the settlement amount."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = FIXSynonym: 736</li>
@@ -305,12 +311,6 @@ public class PreAllocation1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AllocatedSettlementCurrency"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Currency to be used for settlement of the settlement amount."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<PreAllocation1, Optional<CurrencyCode>> mmAllocatedSettlementCurrency = new MMMessageAttribute<PreAllocation1, Optional<CurrencyCode>>() {
@@ -359,6 +359,11 @@ public class PreAllocation1 {
 	 * {@linkplain com.tools20022.repository.msg.PreAllocation1 PreAllocation1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AllcnAcctDtls"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AllocationAccountDetails"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Account to or from which an allocation must be made."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = FIXSynonym: 79, FIXSynonym: 661</li>
@@ -366,11 +371,6 @@ public class PreAllocation1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AllocationAccountDetails"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Account to or from which an allocation must be made."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<PreAllocation1, Optional<SecuritiesAccount2>> mmAllocationAccountDetails = new MMMessageAssociationEnd<PreAllocation1, Optional<SecuritiesAccount2>>() {

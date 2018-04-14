@@ -78,15 +78,15 @@ import java.util.Objects;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "VariationMarginTerm"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Defines the specific terms used to calculate a variation margin."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class VariationMarginTerm extends ExposureTerm {
@@ -119,10 +119,6 @@ public class VariationMarginTerm extends ExposureTerm {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.VariationMarginTerm
 	 * VariationMarginTerm}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ThresholdAmount"</li>
 	 * <li>
@@ -130,6 +126,10 @@ public class VariationMarginTerm extends ExposureTerm {
 	 * definition} =
 	 * "Amount of unsecured exposure a counterparty will accept before issuing a margin call in the base currency."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<VariationMarginTerm, CurrencyAndAmount> mmThresholdAmount = new MMBusinessAttribute<VariationMarginTerm, CurrencyAndAmount>() {
@@ -182,10 +182,6 @@ public class VariationMarginTerm extends ExposureTerm {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.VariationMarginTerm
 	 * VariationMarginTerm}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ThresholdType"</li>
 	 * <li>
@@ -193,6 +189,10 @@ public class VariationMarginTerm extends ExposureTerm {
 	 * definition} =
 	 * "Defines whetherthe threshold is applied on an unsecured or security basis."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<VariationMarginTerm, ThresholdTypeCode> mmThresholdType = new MMBusinessAttribute<VariationMarginTerm, ThresholdTypeCode>() {

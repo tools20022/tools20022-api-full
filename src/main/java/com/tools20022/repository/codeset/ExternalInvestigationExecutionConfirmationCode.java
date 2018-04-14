@@ -114,16 +114,16 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "ExternalInvestigationExecutionConfirmationCode"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Specifies the result of an investigation, as published in an external investigation execution confirmation code set.\r\nExternal code sets can be downloaded from www.iso20022.org."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -140,15 +140,15 @@ public class ExternalInvestigationExecutionConfirmationCode extends MMCode {
 	 * ExternalInvestigationExecutionConfirmationCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "CNCL"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CancelledAsPerRequest"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Used when a requested cancellation is successful."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final ExternalInvestigationExecutionConfirmationCode CancelledAsPerRequest = new ExternalInvestigationExecutionConfirmationCode() {
@@ -170,15 +170,15 @@ public class ExternalInvestigationExecutionConfirmationCode extends MMCode {
 	 * ExternalInvestigationExecutionConfirmationCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "MODI"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ModifiedAsPerRequest"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Used when a requested modification is successful."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final ExternalInvestigationExecutionConfirmationCode ModifiedAsPerRequest = new ExternalInvestigationExecutionConfirmationCode() {
@@ -200,15 +200,15 @@ public class ExternalInvestigationExecutionConfirmationCode extends MMCode {
 	 * ExternalInvestigationExecutionConfirmationCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "ACDA"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AcceptedDebitAuthorisation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Used when a creditor accepts the debit authorisation."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final ExternalInvestigationExecutionConfirmationCode AcceptedDebitAuthorisation = new ExternalInvestigationExecutionConfirmationCode() {
@@ -231,10 +231,6 @@ public class ExternalInvestigationExecutionConfirmationCode extends MMCode {
 	 * ExternalInvestigationExecutionConfirmationCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "IPAY"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PaymentInitiated"</li>
 	 * <li>
@@ -242,6 +238,10 @@ public class ExternalInvestigationExecutionConfirmationCode extends MMCode {
 	 * definition} =
 	 * "Used when the result of an investigation is, or will be, the initiation of a payment instruction."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final ExternalInvestigationExecutionConfirmationCode PaymentInitiated = new ExternalInvestigationExecutionConfirmationCode() {
@@ -264,10 +264,6 @@ public class ExternalInvestigationExecutionConfirmationCode extends MMCode {
 	 * ExternalInvestigationExecutionConfirmationCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "ICOV"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoverInitiated"</li>
 	 * <li>
@@ -275,6 +271,10 @@ public class ExternalInvestigationExecutionConfirmationCode extends MMCode {
 	 * definition} =
 	 * "Used when a transfer of funds has been initiated (a cover payment) to resolve a case."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final ExternalInvestigationExecutionConfirmationCode CoverInitiated = new ExternalInvestigationExecutionConfirmationCode() {
@@ -297,10 +297,6 @@ public class ExternalInvestigationExecutionConfirmationCode extends MMCode {
 	 * ExternalInvestigationExecutionConfirmationCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "MCOV"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoverModified"</li>
 	 * <li>
@@ -308,6 +304,10 @@ public class ExternalInvestigationExecutionConfirmationCode extends MMCode {
 	 * definition} =
 	 * "Used when a transfer of funds has been modified (a cover payment) to resolve a case."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final ExternalInvestigationExecutionConfirmationCode CoverModified = new ExternalInvestigationExecutionConfirmationCode() {
@@ -330,10 +330,6 @@ public class ExternalInvestigationExecutionConfirmationCode extends MMCode {
 	 * ExternalInvestigationExecutionConfirmationCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "IPYI"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PaymentInstructionInitiated"</li>
 	 * <li>
@@ -341,6 +337,10 @@ public class ExternalInvestigationExecutionConfirmationCode extends MMCode {
 	 * definition} =
 	 * "Used when a payment instruction (eg. MT103) has been initiated to resolve a case."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final ExternalInvestigationExecutionConfirmationCode PaymentInstructionInitiated = new ExternalInvestigationExecutionConfirmationCode() {
@@ -363,10 +363,6 @@ public class ExternalInvestigationExecutionConfirmationCode extends MMCode {
 	 * ExternalInvestigationExecutionConfirmationCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "INFO"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalInformationSent"</li>
 	 * <li>
@@ -374,6 +370,10 @@ public class ExternalInvestigationExecutionConfirmationCode extends MMCode {
 	 * definition} =
 	 * "Used when additional information has been sent to the beneficiary of a payment."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final ExternalInvestigationExecutionConfirmationCode AdditionalInformationSent = new ExternalInvestigationExecutionConfirmationCode() {
@@ -396,10 +396,6 @@ public class ExternalInvestigationExecutionConfirmationCode extends MMCode {
 	 * ExternalInvestigationExecutionConfirmationCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "CONF"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ConfirmationOfPayment"</li>
 	 * <li>
@@ -407,6 +403,10 @@ public class ExternalInvestigationExecutionConfirmationCode extends MMCode {
 	 * definition} =
 	 * "Used when a payment has been checked and was correctly executed without any intervention."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final ExternalInvestigationExecutionConfirmationCode ConfirmationOfPayment = new ExternalInvestigationExecutionConfirmationCode() {
@@ -428,16 +428,16 @@ public class ExternalInvestigationExecutionConfirmationCode extends MMCode {
 	 * ExternalInvestigationExecutionConfirmationCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "CWFW"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CancellationWillFollow"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Used when a payment will be cancelled to solve an investigation case."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final ExternalInvestigationExecutionConfirmationCode CancellationWillFollow = new ExternalInvestigationExecutionConfirmationCode() {
@@ -459,16 +459,16 @@ public class ExternalInvestigationExecutionConfirmationCode extends MMCode {
 	 * ExternalInvestigationExecutionConfirmationCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "MWFW"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ModificationWillFollow"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Used when the payment will be modified to solve an investigation case."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final ExternalInvestigationExecutionConfirmationCode ModificationWillFollow = new ExternalInvestigationExecutionConfirmationCode() {
@@ -491,10 +491,6 @@ public class ExternalInvestigationExecutionConfirmationCode extends MMCode {
 	 * ExternalInvestigationExecutionConfirmationCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "UWFW"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnableToApplyWillFollow"</li>
 	 * <li>
@@ -502,6 +498,10 @@ public class ExternalInvestigationExecutionConfirmationCode extends MMCode {
 	 * definition} =
 	 * "Used when sender wants to respond to an assignment with an Unable To Apply workflow."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final ExternalInvestigationExecutionConfirmationCode UnableToApplyWillFollow = new ExternalInvestigationExecutionConfirmationCode() {
@@ -523,16 +523,16 @@ public class ExternalInvestigationExecutionConfirmationCode extends MMCode {
 	 * ExternalInvestigationExecutionConfirmationCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "PECR"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PartiallyExecutedCancellationRequest"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Used when a requested cancellation has been partially executed."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final ExternalInvestigationExecutionConfirmationCode PartiallyExecutedCancellationRequest = new ExternalInvestigationExecutionConfirmationCode() {
@@ -554,15 +554,15 @@ public class ExternalInvestigationExecutionConfirmationCode extends MMCode {
 	 * ExternalInvestigationExecutionConfirmationCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "RJCR"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RejectedCancellationRequest"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Used when a requested cancellation has been rejected."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final ExternalInvestigationExecutionConfirmationCode RejectedCancellationRequest = new ExternalInvestigationExecutionConfirmationCode() {
@@ -584,15 +584,15 @@ public class ExternalInvestigationExecutionConfirmationCode extends MMCode {
 	 * ExternalInvestigationExecutionConfirmationCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "PDCR"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PendingCancellationRequest"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Used when a requested cancellation is pending."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final ExternalInvestigationExecutionConfirmationCode PendingCancellationRequest = new ExternalInvestigationExecutionConfirmationCode() {
@@ -614,15 +614,15 @@ public class ExternalInvestigationExecutionConfirmationCode extends MMCode {
 	 * ExternalInvestigationExecutionConfirmationCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "SMTC"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "StatementEntryCorrect"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Used when the entry in the statement is correct."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final ExternalInvestigationExecutionConfirmationCode StatementEntryCorrect = new ExternalInvestigationExecutionConfirmationCode() {
@@ -645,10 +645,6 @@ public class ExternalInvestigationExecutionConfirmationCode extends MMCode {
 	 * ExternalInvestigationExecutionConfirmationCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "SMTI"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "StatementEntryIncorrect"</li>
 	 * <li>
@@ -656,6 +652,10 @@ public class ExternalInvestigationExecutionConfirmationCode extends MMCode {
 	 * definition} =
 	 * "Used when the entry in the statement is incorrect and further information is provided with the resolution."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final ExternalInvestigationExecutionConfirmationCode StatementEntryIncorrect = new ExternalInvestigationExecutionConfirmationCode() {
@@ -677,16 +677,16 @@ public class ExternalInvestigationExecutionConfirmationCode extends MMCode {
 	 * ExternalInvestigationExecutionConfirmationCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "CHRG"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ChargesDetailsProvided"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Further charges details are provided to resolve the case."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final ExternalInvestigationExecutionConfirmationCode ChargesDetailsProvided = new ExternalInvestigationExecutionConfirmationCode() {
@@ -708,16 +708,16 @@ public class ExternalInvestigationExecutionConfirmationCode extends MMCode {
 	 * ExternalInvestigationExecutionConfirmationCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "PURP"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PurposeDetailsProvided"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Further purpose details are provided to resolve the case."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final ExternalInvestigationExecutionConfirmationCode PurposeDetailsProvided = new ExternalInvestigationExecutionConfirmationCode() {
@@ -740,10 +740,6 @@ public class ExternalInvestigationExecutionConfirmationCode extends MMCode {
 	 * ExternalInvestigationExecutionConfirmationCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "IDUP"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InstructionIsDuplicate"</li>
 	 * <li>
@@ -751,6 +747,10 @@ public class ExternalInvestigationExecutionConfirmationCode extends MMCode {
 	 * definition} =
 	 * "Used when the requested check for a possible duplicate instruction is confirmed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final ExternalInvestigationExecutionConfirmationCode InstructionIsDuplicate = new ExternalInvestigationExecutionConfirmationCode() {

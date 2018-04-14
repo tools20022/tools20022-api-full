@@ -40,10 +40,6 @@ public class ConstraintRegistrationAddressIndicator2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountParties9
 	 * AccountParties9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RegistrationAddressIndicator2Rule"</li>
 	 * <li>
@@ -51,6 +47,10 @@ public class ConstraintRegistrationAddressIndicator2Rule {
 	 * definition} =
 	 * "If SecondaryOwner is present, then all occurrences of SecondaryOwner/Party/Organisation/PostalAddress/RegistrationAddressIndicator must be \"false\" or \"0\" (No), or, all occurrences of SecondaryOwner/Party/IndividualPerson/PostalAddress/RegistrationAddressIndicator must be \"false\" or \"0\" (No)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -93,10 +93,6 @@ public class ConstraintRegistrationAddressIndicator2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountParties8
 	 * AccountParties8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RegistrationAddressIndicator2Rule"</li>
 	 * <li>
@@ -104,6 +100,10 @@ public class ConstraintRegistrationAddressIndicator2Rule {
 	 * definition} =
 	 * "If SecondaryOwner is present, then all occurrences of SecondaryOwner/Party/Organisation/ ModifiedPostalAddress/PostalAddress/RegistrationAddressIndicator or of SecondaryOwner/Party/IndividualPerson/ ModifiedPostalAddress/PostalAddress/RegistrationAddressIndicator must be \"false\" or \"0\" (No)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -142,10 +142,6 @@ public class ConstraintRegistrationAddressIndicator2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountParties5
 	 * AccountParties5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RegistrationAddressIndicator2Rule"</li>
 	 * <li>
@@ -153,6 +149,10 @@ public class ConstraintRegistrationAddressIndicator2Rule {
 	 * definition} =
 	 * "If SecondaryOwner is present, then all occurrences of SecondaryOwner/Organisation/Address/RegistrationAddressIndicator or of SecondaryOwner/IndividualPerson/Address/RegistrationAddressIndicator must be \"false\" or \"0\" (No)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountParties5> forAccountParties5 = new MMConstraint<AccountParties5>() {
@@ -176,10 +176,6 @@ public class ConstraintRegistrationAddressIndicator2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountParties11
 	 * AccountParties11}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RegistrationAddressIndicator2Rule"</li>
 	 * <li>
@@ -187,6 +183,10 @@ public class ConstraintRegistrationAddressIndicator2Rule {
 	 * definition} =
 	 * "If SecondaryOwner is present, then all occurrences of SecondaryOwner/Party/Organisation/ ModifiedPostalAddress/PostalAddress/RegistrationAddressIndicator or of SecondaryOwner/Party/IndividualPerson/ ModifiedPostalAddress/PostalAddress/RegistrationAddressIndicator must be \"false\" or \"0\" (No)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -216,10 +216,6 @@ public class ConstraintRegistrationAddressIndicator2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountParties7
 	 * AccountParties7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RegistrationAddressIndicator2Rule"</li>
 	 * <li>
@@ -227,6 +223,10 @@ public class ConstraintRegistrationAddressIndicator2Rule {
 	 * definition} =
 	 * "If SecondaryOwner is present, then all occurrences of SecondaryOwner/Organisation/ModifiedAddress/Address/RegistrationAddressIndicator or of SecondaryOwner/IndividualPerson/ModifiedAddress/Address/RegistrationAddressIndicator must be \"false\" or \"0\" (No)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -259,10 +259,6 @@ public class ConstraintRegistrationAddressIndicator2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountParties6
 	 * AccountParties6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RegistrationAddressIndicator2Rule"</li>
 	 * <li>
@@ -270,6 +266,10 @@ public class ConstraintRegistrationAddressIndicator2Rule {
 	 * definition} =
 	 * "If SecondaryOwner is present, then all occurrences of SecondaryOwner/Organisation/Address/RegistrationAddressIndicator or of SecondaryOwner/IndividualPerson/Address/RegistrationAddressIndicator must be \"false\" or \"0\" (No)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -302,10 +302,6 @@ public class ConstraintRegistrationAddressIndicator2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountParties12
 	 * AccountParties12}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RegistrationAddressIndicator2Rule"</li>
 	 * <li>
@@ -313,6 +309,10 @@ public class ConstraintRegistrationAddressIndicator2Rule {
 	 * definition} =
 	 * "If SecondaryOwner is present, then all occurrences of SecondaryOwner/Party/Organisation/PostalAddress/RegistrationAddressIndicator must be \"false\" or \"0\" (No), or, all occurrences of SecondaryOwner/Party/IndividualPerson/PostalAddress/RegistrationAddressIndicator must be \"false\" or \"0\" (No)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -342,10 +342,6 @@ public class ConstraintRegistrationAddressIndicator2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountParties2
 	 * AccountParties2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RegistrationAddressIndicator2Rule"</li>
 	 * <li>
@@ -353,6 +349,10 @@ public class ConstraintRegistrationAddressIndicator2Rule {
 	 * definition} =
 	 * "If SecondaryOwner is present, then all occurrences of SecondaryOwner/Organisation/Address/RegistrationAddressIndicator or of SecondaryOwner/IndividualPerson/Address/RegistrationAddressIndicator must be \"false\" or \"0\" (No)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountParties2> forAccountParties2 = new MMConstraint<AccountParties2>() {
@@ -376,10 +376,6 @@ public class ConstraintRegistrationAddressIndicator2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountParties4
 	 * AccountParties4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RegistrationAddressIndicator2Rule"</li>
 	 * <li>
@@ -387,6 +383,10 @@ public class ConstraintRegistrationAddressIndicator2Rule {
 	 * definition} =
 	 * "If SecondaryOwner is present, then all occurrences of SecondaryOwner/Organisation/ModifiedAddress/Address/RegistrationAddressIndicator or of SecondaryOwner/IndividualPerson/ModifiedAddress/Address/RegistrationAddressIndicator must be \"false\" or \"0\" (No)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountParties4> forAccountParties4 = new MMConstraint<AccountParties4>() {
@@ -410,10 +410,6 @@ public class ConstraintRegistrationAddressIndicator2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountParties3
 	 * AccountParties3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RegistrationAddressIndicator2Rule"</li>
 	 * <li>
@@ -421,6 +417,10 @@ public class ConstraintRegistrationAddressIndicator2Rule {
 	 * definition} =
 	 * "If SecondaryOwner is present, then all occurrences of SecondaryOwner/Organisation/ModifiedAddress/Address/RegistrationAddressIndicator or of SecondaryOwner/IndividualPerson/ModifiedAddress/Address/RegistrationAddressIndicator must be \"false\" or \"0\" (No)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountParties3> forAccountParties3 = new MMConstraint<AccountParties3>() {
@@ -444,10 +444,6 @@ public class ConstraintRegistrationAddressIndicator2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountParties10
 	 * AccountParties10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RegistrationAddressIndicator2Rule"</li>
 	 * <li>
@@ -455,6 +451,10 @@ public class ConstraintRegistrationAddressIndicator2Rule {
 	 * definition} =
 	 * "If SecondaryOwner is present, then all occurrences of SecondaryOwner/Party/Organisation/PostalAddress/RegistrationAddressIndicator must be \"false\" or \"0\" (No), or, all occurrences of SecondaryOwner/Party/IndividualPerson/PostalAddress/RegistrationAddressIndicator must be \"false\" or \"0\" (No)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =

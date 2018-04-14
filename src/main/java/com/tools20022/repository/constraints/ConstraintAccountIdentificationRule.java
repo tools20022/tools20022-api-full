@@ -39,10 +39,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationV03
 	 * SwitchOrderConfirmationV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -50,6 +46,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in SwitchExecutionDetails/InvestmentAccountDetails must be UNKNOWN."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SwitchOrderConfirmationV03> for_setr_SwitchOrderConfirmationV03 = new MMConstraint<SwitchOrderConfirmationV03>() {
@@ -73,10 +73,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationAmendmentV01
 	 * SubscriptionBulkOrderConfirmationAmendmentV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -84,6 +80,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in BulkExecutionDetails/IndividualExecutionDetails/InvestmentAccountDetails must be UNKNOWN."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubscriptionBulkOrderConfirmationAmendmentV01> for_setr_SubscriptionBulkOrderConfirmationAmendmentV01 = new MMConstraint<SubscriptionBulkOrderConfirmationAmendmentV01>() {
@@ -107,10 +107,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderV04
 	 * RedemptionOrderV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -118,6 +114,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in MultipleOrderDetails/InvestmentAccountDetails must be UNKNOWN."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -147,10 +147,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV03
 	 * SwitchOrderCancellationRequestV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -158,6 +154,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in CancellationByOrderDetails/SwitchOrderDetails/InvestmentAccountDetails must be UNKNOWN."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SwitchOrderCancellationRequestV03> for_setr_SwitchOrderCancellationRequestV03 = new MMConstraint<SwitchOrderCancellationRequestV03>() {
@@ -181,10 +181,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02
 	 * SubscriptionBulkOrderConfirmationV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -192,6 +188,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in BulkExecutionDetails/IndividualExecutionDetails/InvestmentAccountDetails must be UNKNOWN."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubscriptionBulkOrderConfirmationV02> for_setr_SubscriptionBulkOrderConfirmationV02 = new MMConstraint<SubscriptionBulkOrderConfirmationV02>() {
@@ -215,10 +215,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.RedemptionMultipleOrderConfirmationV02
 	 * RedemptionMultipleOrderConfirmationV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -226,6 +222,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in MultipleExecutionDetails/InvestmentAccountDetails must be UNKNOWN."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RedemptionMultipleOrderConfirmationV02> for_setr_RedemptionMultipleOrderConfirmationV02 = new MMConstraint<RedemptionMultipleOrderConfirmationV02>() {
@@ -249,10 +249,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV03
 	 * RedemptionBulkOrderConfirmationV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -260,6 +256,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in BulkExecutionDetails/IndividualExecutionDetails/InvestmentAccountDetails must be UNKNOWN."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -293,10 +293,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderV04
 	 * SubscriptionBulkOrderV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -304,6 +300,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in BulkOrderDetails/IndividualOrderDetails/InvestmentAccountDetails must be UNKNOWN."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -333,10 +333,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationV04
 	 * SubscriptionOrderConfirmationV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -344,6 +340,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in MultipleExecutionDetails/InvestmentAccountDetails must be UNKNOWN."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -374,10 +374,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.SubscriptionMultipleOrderConfirmationV02
 	 * SubscriptionMultipleOrderConfirmationV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -385,6 +381,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in MultipleExecutionDetails/InvestmentAccountDetails must be UNKNOWN."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubscriptionMultipleOrderConfirmationV02> for_setr_SubscriptionMultipleOrderConfirmationV02 = new MMConstraint<SubscriptionMultipleOrderConfirmationV02>() {
@@ -408,10 +408,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01
 	 * SubscriptionOrderConfirmationCancellationInstructionV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -419,6 +415,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If the confirmation message was linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in CancellationByOrderConfirmationDetails/MultipleExecutionDetails/InvestmentAccountDetails must be UNKNOWN if present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubscriptionOrderConfirmationCancellationInstructionV01> for_setr_SubscriptionOrderConfirmationCancellationInstructionV01 = new MMConstraint<SubscriptionOrderConfirmationCancellationInstructionV01>() {
@@ -442,10 +442,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.RedemptionMultipleOrderV02
 	 * RedemptionMultipleOrderV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -453,6 +449,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in MultipleOrderDetails/InvestmentAccountDetails must be UNKNOWN."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RedemptionMultipleOrderV02> for_setr_RedemptionMultipleOrderV02 = new MMConstraint<RedemptionMultipleOrderV02>() {
@@ -476,10 +476,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount55
 	 * InvestmentAccount55}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -487,6 +483,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "At least one occurrence of one message element in the list (OwnerIdentification, AccountIdentification, AccountName) must be present. If an element in the list is repetitive, more than one occurrence of this message element may be present. More than one message element in the list may be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -529,10 +529,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationV02
 	 * SwitchOrderConfirmationV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -540,6 +536,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in SwitchExecutionDetails/InvestmentAccountDetails must be UNKNOWN."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SwitchOrderConfirmationV02> for_setr_SwitchOrderConfirmationV02 = new MMConstraint<SwitchOrderConfirmationV02>() {
@@ -563,10 +563,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderConfirmationAmendmentV01
 	 * RedemptionOrderConfirmationAmendmentV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -574,6 +570,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in MultipleExecutionDetails/InvestmentAccountDetails must be UNKNOWN."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RedemptionOrderConfirmationAmendmentV01> for_setr_RedemptionOrderConfirmationAmendmentV01 = new MMConstraint<RedemptionOrderConfirmationAmendmentV01>() {
@@ -597,10 +597,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderCancellationInstructionV02
 	 * SwitchOrderCancellationInstructionV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -608,6 +604,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in OrderToBeCancelled/SwitchOrderDetails/InvestmentAccountDetails must be UNKNOWN."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SwitchOrderCancellationInstructionV02> for_setr_SwitchOrderCancellationInstructionV02 = new MMConstraint<SwitchOrderCancellationInstructionV02>() {
@@ -631,10 +631,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV02
 	 * SwitchOrderV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -642,6 +638,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in SwitchOrderDetails/InvestmentAccountDetails must be UNKNOWN."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SwitchOrderV02> for_setr_SwitchOrderV02 = new MMConstraint<SwitchOrderV02>() {
@@ -665,10 +665,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount24
 	 * InvestmentAccount24}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -676,6 +672,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "At least one occurrence of one message element in the list (OwnerIdentification, AccountIdentification, AccountName) must be present. If an element in the list is repetitive, more than one occurrence of this message element may be present. More than one message element in the list may be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -708,10 +708,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderCancellationRequestV03
 	 * SubscriptionOrderCancellationRequestV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -719,6 +715,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in CancellationByOrderDetails/MultipleOrderDetails/InvestmentAccountDetails must be UNKNOWN."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubscriptionOrderCancellationRequestV03> for_setr_SubscriptionOrderCancellationRequestV03 = new MMConstraint<SubscriptionOrderCancellationRequestV03>() {
@@ -742,10 +742,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount68
 	 * InvestmentAccount68}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -753,6 +749,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "At least one occurrence of one message element in the list (OwnerIdentification, AccountIdentification, AccountName) must be present. If an element in the list is repetitive, more than one occurrence of this message element may be present. More than one message element in the list may be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -782,10 +782,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03
 	 * RedemptionBulkOrderCancellationRequestV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -793,6 +789,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in OrderToBeCancelled/BulkOrderDetails/IndividualOrderDetails/InvestmentAccountDetails must be UNKNOWN."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RedemptionBulkOrderCancellationRequestV03> for_setr_RedemptionBulkOrderCancellationRequestV03 = new MMConstraint<RedemptionBulkOrderCancellationRequestV03>() {
@@ -816,10 +816,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV04
 	 * RedemptionBulkOrderConfirmationV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -827,6 +823,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in BulkExecutionDetails/IndividualExecutionDetails/InvestmentAccountDetails must be UNKNOWN."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -857,10 +857,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV02
 	 * RedemptionBulkOrderConfirmationV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -868,6 +864,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in BulkExecutionDetails/IndividualExecutionDetails/InvestmentAccountDetails must be UNKNOWN."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RedemptionBulkOrderConfirmationV02> for_setr_RedemptionBulkOrderConfirmationV02 = new MMConstraint<RedemptionBulkOrderConfirmationV02>() {
@@ -891,10 +891,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderConfirmationCancellationInstructionV01
 	 * RedemptionOrderConfirmationCancellationInstructionV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -902,6 +898,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If the confirmation message was linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in CancellationByOrderConfirmationDetails/MultipleExecutionDetails/InvestmentAccountDetails must be UNKNOWN if present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RedemptionOrderConfirmationCancellationInstructionV01> for_setr_RedemptionOrderConfirmationCancellationInstructionV01 = new MMConstraint<RedemptionOrderConfirmationCancellationInstructionV01>() {
@@ -925,10 +925,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.RedemptionMultipleOrderCancellationInstructionV02
 	 * RedemptionMultipleOrderCancellationInstructionV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -936,6 +932,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in OrderToBeCancelled/MultipleOrderDetails/InvestmentAccountDetails must be UNKNOWN."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RedemptionMultipleOrderCancellationInstructionV02> for_setr_RedemptionMultipleOrderCancellationInstructionV02 = new MMConstraint<RedemptionMultipleOrderCancellationInstructionV02>() {
@@ -959,10 +959,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV03
 	 * SubscriptionBulkOrderCancellationRequestV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -970,6 +966,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in OrderToBeCancelled/BulkOrderDetails/IndividualOrderDetails/InvestmentAccountDetails must be UNKNOWN."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubscriptionBulkOrderCancellationRequestV03> for_setr_SubscriptionBulkOrderCancellationRequestV03 = new MMConstraint<SubscriptionBulkOrderCancellationRequestV03>() {
@@ -993,10 +993,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderV03
 	 * SubscriptionBulkOrderV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -1004,6 +1000,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in BulkOrderDetails/IndividualOrderDetails/InvestmentAccountDetails must be UNKNOWN."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1036,10 +1036,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationAmendmentV01
 	 * SwitchOrderConfirmationAmendmentV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -1047,6 +1043,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If the confirmation message was linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in SwitchExecutionDetails/InvestmentAccountDetails must be UNKNOWN."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SwitchOrderConfirmationAmendmentV01> for_setr_SwitchOrderConfirmationAmendmentV01 = new MMConstraint<SwitchOrderConfirmationAmendmentV01>() {
@@ -1070,10 +1070,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderV03
 	 * RedemptionOrderV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -1081,6 +1077,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in MultipleOrderDetails/InvestmentAccountDetails must be UNKNOWN."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1113,10 +1113,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV04
 	 * SubscriptionBulkOrderConfirmationV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -1124,6 +1120,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in BulkExecutionDetails/IndividualExecutionDetails/InvestmentAccountDetails must be UNKNOWN."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1154,10 +1154,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationInstructionV02
 	 * SubscriptionBulkOrderCancellationInstructionV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -1165,6 +1161,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in OrderToBeCancelled/BulkOrderDetails/IndividualOrderDetails/InvestmentAccountDetails must be UNKNOWN."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubscriptionBulkOrderCancellationInstructionV02> for_setr_SubscriptionBulkOrderCancellationInstructionV02 = new MMConstraint<SubscriptionBulkOrderCancellationInstructionV02>() {
@@ -1188,10 +1188,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderCancellationRequestV03
 	 * RedemptionOrderCancellationRequestV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -1199,6 +1195,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in OrderToBeCancelled/MultipleOrderDetails/InvestmentAccountDetails must be UNKNOWN."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RedemptionOrderCancellationRequestV03> for_setr_RedemptionOrderCancellationRequestV03 = new MMConstraint<RedemptionOrderCancellationRequestV03>() {
@@ -1222,10 +1222,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV03
 	 * SwitchOrderV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -1233,6 +1229,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in SwitchOrderDetails/InvestmentAccountDetails must be UNKNOWN."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SwitchOrderV03> for_setr_SwitchOrderV03 = new MMConstraint<SwitchOrderV03>() {
@@ -1256,10 +1256,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderConfirmationV04
 	 * RedemptionOrderConfirmationV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -1267,6 +1263,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in MultipleExecutionDetails/InvestmentAccountDetails must be UNKNOWN."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1297,10 +1297,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.SubscriptionMultipleOrderCancellationInstructionV02
 	 * SubscriptionMultipleOrderCancellationInstructionV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -1308,6 +1304,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in OrderToBeCancelled/MultipleOrderDetails/InvestmentAccountDetails must be UNKNOWN."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubscriptionMultipleOrderCancellationInstructionV02> for_setr_SubscriptionMultipleOrderCancellationInstructionV02 = new MMConstraint<SubscriptionMultipleOrderCancellationInstructionV02>() {
@@ -1331,10 +1331,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderV02
 	 * SubscriptionBulkOrderV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -1342,6 +1338,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in BulkOrderDetails/IndividualOrderDetails/InvestmentAccountDetails must be UNKNOWN."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubscriptionBulkOrderV02> for_setr_SubscriptionBulkOrderV02 = new MMConstraint<SubscriptionBulkOrderV02>() {
@@ -1365,10 +1365,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderV03
 	 * RedemptionBulkOrderV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -1376,6 +1372,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in BulkOrderDetails/IndividualOrderDetails/InvestmentAccountDetails must be UNKNOWN."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1408,10 +1408,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount65
 	 * InvestmentAccount65}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -1419,6 +1415,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "At least one occurrence of one message element in the list (OwnerIdentification, AccountIdentification, AccountName) must be present. If an element in the list is repetitive, more than one occurrence of this message element may be present. More than one message element in the list may be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1448,10 +1448,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.EligiblePosition
 	 * EligiblePosition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -1459,6 +1455,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If AccountIdentification is empty, then HoldingBalance represents the total balance (for all the accounts)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<EligiblePosition> forEligiblePosition = new MMConstraint<EligiblePosition>() {
@@ -1482,10 +1482,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderV04
 	 * SubscriptionOrderV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -1493,6 +1489,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in MultipleOrderDetails/InvestmentAccountDetails must be UNKNOWN."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1522,10 +1522,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderV03
 	 * SubscriptionOrderV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -1533,6 +1529,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in MultipleOrderDetails/InvestmentAccountDetails must be UNKNOWN."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1565,10 +1565,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.SubscriptionMultipleOrderV02
 	 * SubscriptionMultipleOrderV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -1576,6 +1572,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in MultipleOrderDetails/InvestmentAccountDetails must be UNKNOWN."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubscriptionMultipleOrderV02> for_setr_SubscriptionMultipleOrderV02 = new MMConstraint<SubscriptionMultipleOrderV02>() {
@@ -1599,10 +1599,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderV02
 	 * RedemptionBulkOrderV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -1610,6 +1606,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in BulkOrderDetails/IndividualOrderDetails/InvestmentAccountDetails must be UNKNOWN."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RedemptionBulkOrderV02> for_setr_RedemptionBulkOrderV02 = new MMConstraint<RedemptionBulkOrderV02>() {
@@ -1633,10 +1633,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationAmendmentV01
 	 * RedemptionBulkOrderConfirmationAmendmentV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -1644,6 +1640,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in BulkExecutionDetails/IndividualExecutionDetails/InvestmentAccountDetails must be UNKNOWN."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RedemptionBulkOrderConfirmationAmendmentV01> for_setr_RedemptionBulkOrderConfirmationAmendmentV01 = new MMConstraint<RedemptionBulkOrderConfirmationAmendmentV01>() {
@@ -1667,10 +1667,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount41
 	 * InvestmentAccount41}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -1678,6 +1674,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "At least one occurrence of one message element in the list (OwnerIdentification, AccountIdentification, AccountName) must be present. If an element in the list is repetitive, more than one occurrence of this message element may be present. More than one message element in the list may be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1716,10 +1716,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderV04
 	 * RedemptionBulkOrderV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -1727,6 +1723,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in BulkOrderDetails/IndividualOrderDetails/InvestmentAccountDetails must be UNKNOWN."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1756,10 +1756,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV03
 	 * SubscriptionBulkOrderConfirmationV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -1767,6 +1763,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in BulkExecutionDetails/IndividualExecutionDetails/InvestmentAccountDetails must be UNKNOWN."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1800,10 +1800,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationCancellationInstructionV01
 	 * SubscriptionBulkOrderConfirmationCancellationInstructionV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -1811,6 +1807,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If the confirmation message was linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in CancellationByOrderConfirmationDetails/BulkExecutionDetails/IndividualExecutionDetails/InvestmentAccountDetails must be UNKNOWN if present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubscriptionBulkOrderConfirmationCancellationInstructionV01> for_setr_SubscriptionBulkOrderConfirmationCancellationInstructionV01 = new MMConstraint<SubscriptionBulkOrderConfirmationCancellationInstructionV01>() {
@@ -1834,10 +1834,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01
 	 * SwitchOrderConfirmationCancellationInstructionV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -1845,6 +1841,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If the confirmation message was linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in CancellationByOrderConfirmationDetails/SwitchExecutionDetails/InvestmentAccountDetails must be UNKNOWN if present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SwitchOrderConfirmationCancellationInstructionV01> for_setr_SwitchOrderConfirmationCancellationInstructionV01 = new MMConstraint<SwitchOrderConfirmationCancellationInstructionV01>() {
@@ -1868,10 +1868,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationCancellationInstructionV01
 	 * RedemptionBulkOrderConfirmationCancellationInstructionV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -1879,6 +1875,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If the confirmation message was linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in CancellationByOrderConfirmationDetails/MultipleExecutionDetails/InvestmentAccountDetails must be UNKNOWN if present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RedemptionBulkOrderConfirmationCancellationInstructionV01> for_setr_RedemptionBulkOrderConfirmationCancellationInstructionV01 = new MMConstraint<RedemptionBulkOrderConfirmationCancellationInstructionV01>() {
@@ -1902,10 +1902,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderConfirmationV03
 	 * RedemptionOrderConfirmationV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -1913,6 +1909,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in MultipleExecutionDetails/InvestmentAccountDetails must be UNKNOWN."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1946,10 +1946,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationInstructionV02
 	 * RedemptionBulkOrderCancellationInstructionV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -1957,6 +1953,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in OrderToBeCancelled/BulkOrderDetails/IndividualOrderDetails/InvestmentAccountDetails must be UNKNOWN."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RedemptionBulkOrderCancellationInstructionV02> for_setr_RedemptionBulkOrderCancellationInstructionV02 = new MMConstraint<RedemptionBulkOrderCancellationInstructionV02>() {
@@ -1980,10 +1980,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount57
 	 * InvestmentAccount57}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -1991,6 +1987,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "At least one occurrence of one message element in the list (OwnerIdentification, AccountIdentification, AccountName) must be present. If an element in the list is repetitive, more than one occurrence of this message element may be present. More than one message element in the list may be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -2029,10 +2029,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationAmendmentV01
 	 * SubscriptionOrderConfirmationAmendmentV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -2040,6 +2036,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in MultipleExecutionDetails/InvestmentAccountDetails must be UNKNOWN."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubscriptionOrderConfirmationAmendmentV01> for_setr_SubscriptionOrderConfirmationAmendmentV01 = new MMConstraint<SubscriptionOrderConfirmationAmendmentV01>() {
@@ -2063,10 +2063,6 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationV03
 	 * SubscriptionOrderConfirmationV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountIdentificationRule"</li>
 	 * <li>
@@ -2074,6 +2070,10 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in MultipleExecutionDetails/InvestmentAccountDetails must be UNKNOWN."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>

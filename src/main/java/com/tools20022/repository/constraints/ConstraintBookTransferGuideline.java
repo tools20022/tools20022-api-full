@@ -39,10 +39,6 @@ public class ConstraintBookTransferGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SettlementParties36
 	 * SettlementParties36}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BookTransferGuideline"</li>
 	 * <li>
@@ -50,6 +46,10 @@ public class ConstraintBookTransferGuideline {
 	 * definition} =
 	 * "In case of own account internal transfer, own account external transfer, portfolio transfer and in specie transfer (see SecuritiesTransactionType), the account of (delivering) Party2 at (delivering) Party1 must be provided.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -88,10 +88,6 @@ public class ConstraintBookTransferGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SettlementParties11
 	 * SettlementParties11}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BookTransferGuideline"</li>
 	 * <li>
@@ -99,6 +95,10 @@ public class ConstraintBookTransferGuideline {
 	 * definition} =
 	 * "In case of own account internal transfer, own account external transfer, portfolio transfer and in specie transfer (see SecuritiesTransactionType), the account of (delivering) Party2 at (delivering) Party1 must be provided.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SettlementParties11> forSettlementParties11 = new MMConstraint<SettlementParties11>() {
@@ -122,10 +122,6 @@ public class ConstraintBookTransferGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SettlementParties62
 	 * SettlementParties62}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BookTransferGuideline"</li>
 	 * <li>
@@ -133,6 +129,10 @@ public class ConstraintBookTransferGuideline {
 	 * definition} =
 	 * "In case of own account internal transfer, own account external transfer, portfolio transfer and in specie transfer (see SecuritiesTransactionType), the account of (delivering) Party2 at (delivering) Party1 must be provided.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -162,10 +162,6 @@ public class ConstraintBookTransferGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SettlementParties20
 	 * SettlementParties20}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BookTransferGuideline"</li>
 	 * <li>
@@ -173,6 +169,10 @@ public class ConstraintBookTransferGuideline {
 	 * definition} =
 	 * "In case of own account internal transfer, own account external transfer, portfolio transfer and in specie transfer (see SecuritiesTransactionType), the account of (delivering) Party2 at (delivering) Party1 must be provided.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SettlementParties20> forSettlementParties20 = new MMConstraint<SettlementParties20>() {
@@ -196,10 +196,6 @@ public class ConstraintBookTransferGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SettlementParties73
 	 * SettlementParties73}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BookTransferGuideline"</li>
 	 * <li>
@@ -207,6 +203,10 @@ public class ConstraintBookTransferGuideline {
 	 * definition} =
 	 * "In case of own account internal transfer, own account external transfer, portfolio transfer and in specie transfer (see SecuritiesTransactionType), the account of (delivering) Party2 at (delivering) Party1 must be provided.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SettlementParties73> forSettlementParties73 = new MMConstraint<SettlementParties73>() {
@@ -230,10 +230,6 @@ public class ConstraintBookTransferGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SettlementParties27
 	 * SettlementParties27}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BookTransferGuideline"</li>
 	 * <li>
@@ -241,6 +237,10 @@ public class ConstraintBookTransferGuideline {
 	 * definition} =
 	 * "In case of own account internal transfer, own account external transfer, portfolio transfer and in specie transfer (see SecuritiesTransactionType), the account of (delivering) Party2 at (delivering) Party1 must be provided.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SettlementParties27> forSettlementParties27 = new MMConstraint<SettlementParties27>() {
@@ -264,10 +264,6 @@ public class ConstraintBookTransferGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SettlementParties5
 	 * SettlementParties5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BookTransferGuideline"</li>
 	 * <li>
@@ -275,6 +271,10 @@ public class ConstraintBookTransferGuideline {
 	 * definition} =
 	 * "In case of own account internal transfer, own account external transfer, portfolio transfer and in specie transfer (see SecuritiesTransactionType), the account of (delivering) Party2 at (delivering) Party1 must be provided.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SettlementParties5> forSettlementParties5 = new MMConstraint<SettlementParties5>() {
@@ -298,10 +298,6 @@ public class ConstraintBookTransferGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SettlementParties18
 	 * SettlementParties18}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BookTransferGuideline"</li>
 	 * <li>
@@ -309,6 +305,10 @@ public class ConstraintBookTransferGuideline {
 	 * definition} =
 	 * "In case of own account internal transfer, own account external transfer, portfolio transfer and in specie transfer (see SecuritiesTransactionType), the account of (delivering) Party2 at (delivering) Party1 must be provided.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SettlementParties18> forSettlementParties18 = new MMConstraint<SettlementParties18>() {
@@ -332,10 +332,6 @@ public class ConstraintBookTransferGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SettlementParties10
 	 * SettlementParties10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BookTransferGuideline"</li>
 	 * <li>
@@ -343,6 +339,10 @@ public class ConstraintBookTransferGuideline {
 	 * definition} =
 	 * "In case of own account internal transfer, own account external transfer, portfolio transfer and in specie transfer (see SecuritiesTransactionType), the account of (delivering) Party2 at (delivering) Party1 must be provided.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -375,10 +375,6 @@ public class ConstraintBookTransferGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SettlementParties14
 	 * SettlementParties14}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BookTransferGuideline"</li>
 	 * <li>
@@ -386,6 +382,10 @@ public class ConstraintBookTransferGuideline {
 	 * definition} =
 	 * "In case of own account internal transfer, own account external transfer, portfolio transfer and in specie transfer (see SecuritiesTransactionType), the account of (delivering) Party2 at (delivering) Party1 must be provided.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SettlementParties14> forSettlementParties14 = new MMConstraint<SettlementParties14>() {
@@ -409,10 +409,6 @@ public class ConstraintBookTransferGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SettlementParties63
 	 * SettlementParties63}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BookTransferGuideline"</li>
 	 * <li>
@@ -420,6 +416,10 @@ public class ConstraintBookTransferGuideline {
 	 * definition} =
 	 * "In case of own account internal transfer, own account external transfer, portfolio transfer and in specie transfer (see SecuritiesTransactionType), the account of (delivering) Party2 at (delivering) Party1 must be provided.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -449,10 +449,6 @@ public class ConstraintBookTransferGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SettlementParties39
 	 * SettlementParties39}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BookTransferGuideline"</li>
 	 * <li>
@@ -460,6 +456,10 @@ public class ConstraintBookTransferGuideline {
 	 * definition} =
 	 * "In case of own account internal transfer, own account external transfer, portfolio transfer and in specie transfer (see SecuritiesTransactionType), the account of (delivering) Party2 at (delivering) Party1 must be provided.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -498,10 +498,6 @@ public class ConstraintBookTransferGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SettlementParties64
 	 * SettlementParties64}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BookTransferGuideline"</li>
 	 * <li>
@@ -509,6 +505,10 @@ public class ConstraintBookTransferGuideline {
 	 * definition} =
 	 * "In case of own account internal transfer, own account external transfer, portfolio transfer and in specie transfer (see SecuritiesTransactionType), the account of (delivering) Party2 at (delivering) Party1 must be provided.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SettlementParties64> forSettlementParties64 = new MMConstraint<SettlementParties64>() {
@@ -532,10 +532,6 @@ public class ConstraintBookTransferGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SettlementParties58
 	 * SettlementParties58}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BookTransferGuideline"</li>
 	 * <li>
@@ -543,6 +539,10 @@ public class ConstraintBookTransferGuideline {
 	 * definition} =
 	 * "In case of own account internal transfer, own account external transfer, portfolio transfer and in specie transfer (see SecuritiesTransactionType), the account of (delivering) Party2 at (delivering) Party1 must be provided.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SettlementParties58> forSettlementParties58 = new MMConstraint<SettlementParties58>() {
@@ -566,10 +566,6 @@ public class ConstraintBookTransferGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SettlementParties17
 	 * SettlementParties17}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BookTransferGuideline"</li>
 	 * <li>
@@ -577,6 +573,10 @@ public class ConstraintBookTransferGuideline {
 	 * definition} =
 	 * "In case of own account internal transfer, own account external transfer, portfolio transfer and in specie transfer (see SecuritiesTransactionType), the account of (delivering) Party2 at (delivering) Party1 must be provided.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SettlementParties17> forSettlementParties17 = new MMConstraint<SettlementParties17>() {
@@ -600,10 +600,6 @@ public class ConstraintBookTransferGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SettlementParties7
 	 * SettlementParties7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BookTransferGuideline"</li>
 	 * <li>
@@ -611,6 +607,10 @@ public class ConstraintBookTransferGuideline {
 	 * definition} =
 	 * "In case of own account internal transfer, own account external transfer, portfolio transfer and in specie transfer (see SecuritiesTransactionType), the account of (delivering) Party2 at (delivering) Party1 must be provided.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SettlementParties7> forSettlementParties7 = new MMConstraint<SettlementParties7>() {
@@ -634,10 +634,6 @@ public class ConstraintBookTransferGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SettlementParties44
 	 * SettlementParties44}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BookTransferGuideline"</li>
 	 * <li>
@@ -645,6 +641,10 @@ public class ConstraintBookTransferGuideline {
 	 * definition} =
 	 * "In case of own account internal transfer, own account external transfer, portfolio transfer and in specie transfer (see SecuritiesTransactionType), the account of (delivering) Party2 at (delivering) Party1 must be provided.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SettlementParties44> forSettlementParties44 = new MMConstraint<SettlementParties44>() {
@@ -668,10 +668,6 @@ public class ConstraintBookTransferGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SettlementParties26
 	 * SettlementParties26}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BookTransferGuideline"</li>
 	 * <li>
@@ -679,6 +675,10 @@ public class ConstraintBookTransferGuideline {
 	 * definition} =
 	 * "In case of own account internal transfer, own account external transfer, portfolio transfer and in specie transfer (see SecuritiesTransactionType), the account of (delivering) Party2 at (delivering) Party1 must be provided.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>

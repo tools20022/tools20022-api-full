@@ -85,16 +85,16 @@ import java.util.Optional;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "SwitchExecutionRedemptionLeg"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Execution of the redemption part, in a switch between investment funds or investment fund classes."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class SwitchExecutionRedemptionLeg extends RedemptionExecution {
@@ -107,6 +107,10 @@ public class SwitchExecutionRedemptionLeg extends RedemptionExecution {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.SwitchExecution
+	 * SwitchExecution}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.SwitchExecution#mmRedemptionLeg
@@ -115,24 +119,20 @@ public class SwitchExecutionRedemptionLeg extends RedemptionExecution {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.SwitchExecution
-	 * SwitchExecution}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SwitchExecutionRedemptionLeg
 	 * SwitchExecutionRedemptionLeg}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RelatedSwitchExecution"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Switch execution process for which a redemption leg is specified."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SwitchExecutionRedemptionLeg, Optional<SwitchExecution>> mmRelatedSwitchExecution = new MMBusinessAssociationEnd<SwitchExecutionRedemptionLeg, Optional<SwitchExecution>>() {
@@ -175,10 +175,6 @@ public class SwitchExecutionRedemptionLeg extends RedemptionExecution {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SwitchExecutionRedemptionLeg
 	 * SwitchExecutionRedemptionLeg}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PercentageOfTotalSubscriptionAmount"</li>
 	 * <li>
@@ -186,6 +182,10 @@ public class SwitchExecutionRedemptionLeg extends RedemptionExecution {
 	 * definition} =
 	 * "Percentage of the total amount subscribed, and that came from redemption of investment funds or investment fund classes."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SwitchExecutionRedemptionLeg, PercentageRate> mmPercentageOfTotalSubscriptionAmount = new MMBusinessAttribute<SwitchExecutionRedemptionLeg, PercentageRate>() {

@@ -36,10 +36,6 @@ public class ConstraintIssuerAndOrMessageNameRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AdditionalReferences
 	 * AdditionalReferences}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IssuerAndOrMessageNameRule"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintIssuerAndOrMessageNameRule {
 	 * definition} =
 	 * "If MessageName is not present, then ReferenceIssuer is mandatory. If MessageName is present, then ReferenceIssuer is optional."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AdditionalReferences> forAdditionalReferences = new MMConstraint<AdditionalReferences>() {

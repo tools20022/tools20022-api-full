@@ -36,10 +36,6 @@ public class ConstraintDebitCreditIndicatorGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.NumberAndSumOfTransactionsPerBankTransactionCode1
 	 * NumberAndSumOfTransactionsPerBankTransactionCode1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DebitCreditIndicatorGuideline"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintDebitCreditIndicatorGuideline {
 	 * definition} =
 	 * "DebitCreditIndicator should be present when TotalNetEntryAmount is present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<NumberAndSumOfTransactionsPerBankTransactionCode1> forNumberAndSumOfTransactionsPerBankTransactionCode1 = new MMConstraint<NumberAndSumOfTransactionsPerBankTransactionCode1>() {
@@ -70,10 +70,6 @@ public class ConstraintDebitCreditIndicatorGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.NumberAndSumOfTransactions2
 	 * NumberAndSumOfTransactions2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DebitCreditIndicatorGuideline"</li>
 	 * <li>
@@ -81,6 +77,10 @@ public class ConstraintDebitCreditIndicatorGuideline {
 	 * definition} =
 	 * "DebitCreditIndicator should be present when TotalNetEntryAmount is present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<NumberAndSumOfTransactions2> forNumberAndSumOfTransactions2 = new MMConstraint<NumberAndSumOfTransactions2>() {

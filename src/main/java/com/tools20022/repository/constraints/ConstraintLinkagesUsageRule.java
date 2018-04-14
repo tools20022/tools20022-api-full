@@ -38,10 +38,6 @@ public class ConstraintLinkagesUsageRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequest002V04
 	 * SecuritiesSettlementTransactionModificationRequest002V04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LinkagesUsageRule"</li>
 	 * <li>
@@ -49,6 +45,10 @@ public class ConstraintLinkagesUsageRule {
 	 * definition} =
 	 * "The linkages can only be used when modifying the Paired or Turned Quantity. For the changes of linking and unlinking messages this must be done with the SecuritiesSettlementConditionsModificationRequest."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionModificationRequest002V04> for_sese_SecuritiesSettlementTransactionModificationRequest002V04 = new MMConstraint<SecuritiesSettlementTransactionModificationRequest002V04>() {
@@ -72,10 +72,6 @@ public class ConstraintLinkagesUsageRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestV03
 	 * SecuritiesSettlementTransactionModificationRequestV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LinkagesUsageRule"</li>
 	 * <li>
@@ -83,6 +79,10 @@ public class ConstraintLinkagesUsageRule {
 	 * definition} =
 	 * "The linkages can only be used when modifying the Paired or Turned Quantity. For the changes of linking and unlinking messages this must be done with the SecuritiesSettlementConditionsModificationRequest."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -123,10 +123,6 @@ public class ConstraintLinkagesUsageRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequest002V06
 	 * SecuritiesSettlementTransactionModificationRequest002V06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LinkagesUsageRule"</li>
 	 * <li>
@@ -134,6 +130,10 @@ public class ConstraintLinkagesUsageRule {
 	 * definition} =
 	 * "The linkages can only be used when modifying the Paired or Turned Quantity. For the changes of linking and unlinking messages this must be done with the SecuritiesSettlementConditionsModificationRequest."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionModificationRequest002V06> for_sese_SecuritiesSettlementTransactionModificationRequest002V06 = new MMConstraint<SecuritiesSettlementTransactionModificationRequest002V06>() {
@@ -157,10 +157,6 @@ public class ConstraintLinkagesUsageRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestV01
 	 * SecuritiesSettlementTransactionModificationRequestV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LinkagesUsageRule"</li>
 	 * <li>
@@ -168,6 +164,10 @@ public class ConstraintLinkagesUsageRule {
 	 * definition} =
 	 * "The linkages can only be used when modifying the Paired or Turned Quantity. For the changes of linking and unlinking messages this must be done with the SecuritiesSettlementConditionsModificationRequest."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionModificationRequestV01> for_sese_SecuritiesSettlementTransactionModificationRequestV01 = new MMConstraint<SecuritiesSettlementTransactionModificationRequestV01>() {
@@ -191,10 +191,6 @@ public class ConstraintLinkagesUsageRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestV04
 	 * SecuritiesSettlementTransactionModificationRequestV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LinkagesUsageRule"</li>
 	 * <li>
@@ -202,6 +198,10 @@ public class ConstraintLinkagesUsageRule {
 	 * definition} =
 	 * "The linkages can only be used when modifying the Paired or Turned Quantity. For the changes of linking and unlinking messages this must be done with the SecuritiesSettlementConditionsModificationRequest."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -242,10 +242,6 @@ public class ConstraintLinkagesUsageRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestV02
 	 * SecuritiesSettlementTransactionModificationRequestV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LinkagesUsageRule"</li>
 	 * <li>
@@ -253,6 +249,10 @@ public class ConstraintLinkagesUsageRule {
 	 * definition} =
 	 * "The linkages can only be used when modifying the Paired or Turned Quantity. For the changes of linking and unlinking messages this must be done with the SecuritiesSettlementConditionsModificationRequest."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -286,10 +286,6 @@ public class ConstraintLinkagesUsageRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestV06
 	 * SecuritiesSettlementTransactionModificationRequestV06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LinkagesUsageRule"</li>
 	 * <li>
@@ -297,6 +293,10 @@ public class ConstraintLinkagesUsageRule {
 	 * definition} =
 	 * "The linkages can only be used when modifying the Paired or Turned Quantity. For the changes of linking and unlinking messages this must be done with the SecuritiesSettlementConditionsModificationRequest."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -327,10 +327,6 @@ public class ConstraintLinkagesUsageRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequest002V05
 	 * SecuritiesSettlementTransactionModificationRequest002V05}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LinkagesUsageRule"</li>
 	 * <li>
@@ -338,6 +334,10 @@ public class ConstraintLinkagesUsageRule {
 	 * definition} =
 	 * "The linkages can only be used when modifying the Paired or Turned Quantity. For the changes of linking and unlinking messages this must be done with the SecuritiesSettlementConditionsModificationRequest."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionModificationRequest002V05> for_sese_SecuritiesSettlementTransactionModificationRequest002V05 = new MMConstraint<SecuritiesSettlementTransactionModificationRequest002V05>() {
@@ -361,10 +361,6 @@ public class ConstraintLinkagesUsageRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestV05
 	 * SecuritiesSettlementTransactionModificationRequestV05}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LinkagesUsageRule"</li>
 	 * <li>
@@ -372,6 +368,10 @@ public class ConstraintLinkagesUsageRule {
 	 * definition} =
 	 * "The linkages can only be used when modifying the Paired or Turned Quantity. For the changes of linking and unlinking messages this must be done with the SecuritiesSettlementConditionsModificationRequest."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>

@@ -82,6 +82,12 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "ReinvestmentIncomeClassification1Code"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} =
+ * "Specifies the type of cash proceeds that the holder is eligible to reinvest."
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -92,12 +98,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "ReinvestmentIncomeClassification1Code"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} =
- * "Specifies the type of cash proceeds that the holder is eligible to reinvest."
- * </li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -112,12 +112,12 @@ public class ReinvestmentIncomeClassification1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassification1Code
 	 * ReinvestmentIncomeClassification1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CashDividend"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CashDividend"</li>
 	 * </ul>
 	 */
 	public static final ReinvestmentIncomeClassification1Code CashDividend = new ReinvestmentIncomeClassification1Code() {
@@ -136,12 +136,12 @@ public class ReinvestmentIncomeClassification1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassification1Code
 	 * ReinvestmentIncomeClassification1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CashDividendOnIncreasedShares"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CashDividendOnIncreasedShares"</li>
 	 * </ul>
 	 */
 	public static final ReinvestmentIncomeClassification1Code CashDividendOnIncreasedShares = new ReinvestmentIncomeClassification1Code() {
@@ -160,12 +160,12 @@ public class ReinvestmentIncomeClassification1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassification1Code
 	 * ReinvestmentIncomeClassification1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CashDividendTaxUnfavorable"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CashDividendTaxUnfavorable"</li>
 	 * </ul>
 	 */
 	public static final ReinvestmentIncomeClassification1Code CashDividendTaxUnfavorable = new ReinvestmentIncomeClassification1Code() {
@@ -184,12 +184,12 @@ public class ReinvestmentIncomeClassification1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassification1Code
 	 * ReinvestmentIncomeClassification1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CashDividendTaxFavorable"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CashDividendTaxFavorable"</li>
 	 * </ul>
 	 */
 	public static final ReinvestmentIncomeClassification1Code CashDividendTaxFavorable = new ReinvestmentIncomeClassification1Code() {
@@ -208,12 +208,12 @@ public class ReinvestmentIncomeClassification1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassification1Code
 	 * ReinvestmentIncomeClassification1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CashDividendTaxExempt"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CashDividendTaxExempt"</li>
 	 * </ul>
 	 */
 	public static final ReinvestmentIncomeClassification1Code CashDividendTaxExempt = new ReinvestmentIncomeClassification1Code() {
@@ -232,12 +232,12 @@ public class ReinvestmentIncomeClassification1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassification1Code
 	 * ReinvestmentIncomeClassification1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CashDividendSpecial"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CashDividendSpecial"</li>
 	 * </ul>
 	 */
 	public static final ReinvestmentIncomeClassification1Code CashDividendSpecial = new ReinvestmentIncomeClassification1Code() {
@@ -256,12 +256,12 @@ public class ReinvestmentIncomeClassification1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassification1Code
 	 * ReinvestmentIncomeClassification1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Interest"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Interest"</li>
 	 * </ul>
 	 */
 	public static final ReinvestmentIncomeClassification1Code Interest = new ReinvestmentIncomeClassification1Code() {
@@ -280,12 +280,12 @@ public class ReinvestmentIncomeClassification1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassification1Code
 	 * ReinvestmentIncomeClassification1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Principal"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Principal"</li>
 	 * </ul>
 	 */
 	public static final ReinvestmentIncomeClassification1Code Principal = new ReinvestmentIncomeClassification1Code() {
@@ -304,12 +304,12 @@ public class ReinvestmentIncomeClassification1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassification1Code
 	 * ReinvestmentIncomeClassification1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CapitalGains"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CapitalGains"</li>
 	 * </ul>
 	 */
 	public static final ReinvestmentIncomeClassification1Code CapitalGains = new ReinvestmentIncomeClassification1Code() {
@@ -328,12 +328,12 @@ public class ReinvestmentIncomeClassification1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassification1Code
 	 * ReinvestmentIncomeClassification1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "LongTermCapitalGains"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "LongTermCapitalGains"</li>
 	 * </ul>
 	 */
 	public static final ReinvestmentIncomeClassification1Code LongTermCapitalGains = new ReinvestmentIncomeClassification1Code() {
@@ -352,12 +352,12 @@ public class ReinvestmentIncomeClassification1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassification1Code
 	 * ReinvestmentIncomeClassification1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ShortTermCapitalGains"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ShortTermCapitalGains"</li>
 	 * </ul>
 	 */
 	public static final ReinvestmentIncomeClassification1Code ShortTermCapitalGains = new ReinvestmentIncomeClassification1Code() {
@@ -376,12 +376,12 @@ public class ReinvestmentIncomeClassification1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassification1Code
 	 * ReinvestmentIncomeClassification1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ReturnOfCapital"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ReturnOfCapital"</li>
 	 * </ul>
 	 */
 	public static final ReinvestmentIncomeClassification1Code ReturnOfCapital = new ReinvestmentIncomeClassification1Code() {

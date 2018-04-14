@@ -36,10 +36,6 @@ public class ConstraintFinancialInstrumentdentificationGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument4
 	 * FinancialInstrument4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FinancialInstrumentdentificationGuideline"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintFinancialInstrumentdentificationGuideline {
 	 * definition} =
 	 * "It is recommended that ISIN be used in Identification\\SecurityIdentification1Choice."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrument4> forFinancialInstrument4 = new MMConstraint<FinancialInstrument4>() {

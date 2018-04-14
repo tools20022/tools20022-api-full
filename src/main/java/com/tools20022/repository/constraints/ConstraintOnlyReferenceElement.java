@@ -38,10 +38,6 @@ public class ConstraintOnlyReferenceElement {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.other.SignatureEnvelopeReference
 	 * SignatureEnvelopeReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OnlyReferenceElement"</li>
 	 * <li>
@@ -49,6 +45,10 @@ public class ConstraintOnlyReferenceElement {
 	 * definition} =
 	 * "The XML Signature namespace (\"http://www.w3.org/2000/09/xmldsig#\") allows for different XML elements to be root elements. This means the user has to choose amongst these global elements which one to use as the root element. Only the XML element Reference is allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SignatureEnvelopeReference> forSignatureEnvelopeReference = new MMConstraint<SignatureEnvelopeReference>() {

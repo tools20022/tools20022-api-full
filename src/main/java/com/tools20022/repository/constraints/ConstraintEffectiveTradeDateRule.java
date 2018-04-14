@@ -37,10 +37,6 @@ public class ConstraintEffectiveTradeDateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV07
 	 * ReversalOfTransferInConfirmationV07}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EffectiveTradeDateRule"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintEffectiveTradeDateRule {
 	 * definition} =
 	 * "If Function is ADVI (Advice) or Function is not present, and Reversal/TransferInConfirmationDetails is present, then EffectiveTransferDate must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ReversalOfTransferInConfirmationV07> for_sese_ReversalOfTransferInConfirmationV07 = new MMConstraint<ReversalOfTransferInConfirmationV07>() {

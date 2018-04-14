@@ -36,10 +36,6 @@ public class ConstraintBilateralLimitCounterparty1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.LimitIdentificationDetails1
 	 * LimitIdentificationDetails1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BilateralLimitCounterparty1Rule"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintBilateralLimitCounterparty1Rule {
 	 * definition} =
 	 * "If Type is MULT, then BilateralLimitCounterpartyIdentification is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<LimitIdentificationDetails1> forLimitIdentificationDetails1 = new MMConstraint<LimitIdentificationDetails1>() {
@@ -70,10 +70,6 @@ public class ConstraintBilateralLimitCounterparty1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RiskManagementLimitIdentificationDetails
 	 * RiskManagementLimitIdentificationDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BilateralLimitCounterparty1Rule"</li>
 	 * <li>
@@ -81,6 +77,10 @@ public class ConstraintBilateralLimitCounterparty1Rule {
 	 * definition} =
 	 * "If Type is MULT, then BilateralLimitCounterpartyIdentification is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RiskManagementLimitIdentificationDetails> forRiskManagementLimitIdentificationDetails = new MMConstraint<RiskManagementLimitIdentificationDetails>() {
@@ -108,10 +108,6 @@ public class ConstraintBilateralLimitCounterparty1Rule {
 	 * expression} =
 	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/BilateralLimitCounterpartyIdentification&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/Type/Code&lt;/leftOperand&gt;&lt;rightOperand&gt;Multilateral&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BilateralLimitCounterparty1Rule"</li>
 	 * <li>
@@ -119,6 +115,10 @@ public class ConstraintBilateralLimitCounterparty1Rule {
 	 * definition} =
 	 * "If Type is MULT, then BilateralLimitCounterpartyIdentification is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<LimitIdentification1> forLimitIdentification1 = new MMConstraint<LimitIdentification1>() {
@@ -143,10 +143,6 @@ public class ConstraintBilateralLimitCounterparty1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.LimitIdentificationDetails3
 	 * LimitIdentificationDetails3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BilateralLimitCounterparty1Rule"</li>
 	 * <li>
@@ -154,6 +150,10 @@ public class ConstraintBilateralLimitCounterparty1Rule {
 	 * definition} =
 	 * "If Type is MULT, then BilateralLimitCounterpartyIdentification is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<LimitIdentificationDetails3> forLimitIdentificationDetails3 = new MMConstraint<LimitIdentificationDetails3>() {
@@ -177,10 +177,6 @@ public class ConstraintBilateralLimitCounterparty1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.LimitIdentificationDetails2
 	 * LimitIdentificationDetails2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BilateralLimitCounterparty1Rule"</li>
 	 * <li>
@@ -188,6 +184,10 @@ public class ConstraintBilateralLimitCounterparty1Rule {
 	 * definition} =
 	 * "If Type is MULT, then BilateralLimitCounterpartyIdentification is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<LimitIdentificationDetails2> forLimitIdentificationDetails2 = new MMConstraint<LimitIdentificationDetails2>() {

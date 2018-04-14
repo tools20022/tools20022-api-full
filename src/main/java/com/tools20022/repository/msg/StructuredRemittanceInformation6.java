@@ -80,16 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "StructuredRemittanceInformation6"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Structured information supplied to enable the matching, i.e. reconciliation, of a payment with the items that the payment is intended to settle, eg, commercial invoices in an accounts receivable system."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -120,10 +120,6 @@ public class StructuredRemittanceInformation6 {
 	 * StructuredRemittanceInformation6}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RfrdDocInf"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReferredDocumentInformation"</li>
 	 * <li>
@@ -131,6 +127,10 @@ public class StructuredRemittanceInformation6 {
 	 * definition} =
 	 * "Reference information to allow the identification of the underlying reference documents."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<StructuredRemittanceInformation6, Optional<ReferredDocumentInformation1>> mmReferredDocumentInformation = new MMMessageAssociationEnd<StructuredRemittanceInformation6, Optional<ReferredDocumentInformation1>>() {
@@ -181,16 +181,16 @@ public class StructuredRemittanceInformation6 {
 	 * StructuredRemittanceInformation6}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RfrdDocRltdDt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReferredDocumentRelatedDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Date associated with the referred document, eg, date of issue."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<StructuredRemittanceInformation6, Optional<ISODate>> mmReferredDocumentRelatedDate = new MMMessageAttribute<StructuredRemittanceInformation6, Optional<ISODate>>() {
@@ -241,10 +241,6 @@ public class StructuredRemittanceInformation6 {
 	 * StructuredRemittanceInformation6}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RfrdDocAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReferredDocumentAmount"</li>
 	 * <li>
@@ -252,6 +248,10 @@ public class StructuredRemittanceInformation6 {
 	 * definition} =
 	 * "Amount of money and currency of a document referred to in the remittance section. The amount is typically either the original amount due and payable, or the amount actually remitted for the referred document."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<StructuredRemittanceInformation6, List<ReferredDocumentAmount1Choice>> mmReferredDocumentAmount = new MMMessageAttribute<StructuredRemittanceInformation6, List<ReferredDocumentAmount1Choice>>() {
@@ -300,10 +300,6 @@ public class StructuredRemittanceInformation6 {
 	 * StructuredRemittanceInformation6}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CdtrRefInf"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CreditorReferenceInformation"</li>
 	 * <li>
@@ -311,6 +307,10 @@ public class StructuredRemittanceInformation6 {
 	 * definition} =
 	 * "Reference information provided by the creditor to allow the identification of the underlying documents."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<StructuredRemittanceInformation6, Optional<CreditorReferenceInformation1>> mmCreditorReferenceInformation = new MMMessageAssociationEnd<StructuredRemittanceInformation6, Optional<CreditorReferenceInformation1>>() {
@@ -360,10 +360,6 @@ public class StructuredRemittanceInformation6 {
 	 * StructuredRemittanceInformation6}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Invcr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Invoicer"</li>
 	 * <li>
@@ -371,6 +367,10 @@ public class StructuredRemittanceInformation6 {
 	 * definition} =
 	 * "Identification of the organization issuing the invoice when different than the creditor or final party."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<StructuredRemittanceInformation6, Optional<PartyIdentification8>> mmInvoicer = new MMMessageAssociationEnd<StructuredRemittanceInformation6, Optional<PartyIdentification8>>() {
@@ -419,10 +419,6 @@ public class StructuredRemittanceInformation6 {
 	 * StructuredRemittanceInformation6}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Invcee"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Invoicee"</li>
 	 * <li>
@@ -430,6 +426,10 @@ public class StructuredRemittanceInformation6 {
 	 * definition} =
 	 * "Identification of the party to whom an invoice is issued, when different than the originator or debtor."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<StructuredRemittanceInformation6, Optional<PartyIdentification8>> mmInvoicee = new MMMessageAssociationEnd<StructuredRemittanceInformation6, Optional<PartyIdentification8>>() {
@@ -479,10 +479,6 @@ public class StructuredRemittanceInformation6 {
 	 * StructuredRemittanceInformation6}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AddtlRmtInf"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalRemittanceInformation"</li>
 	 * <li>
@@ -490,6 +486,10 @@ public class StructuredRemittanceInformation6 {
 	 * definition} =
 	 * "Additional information, in free text form, to complement the structured remittance information."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<StructuredRemittanceInformation6, Optional<Max140Text>> mmAdditionalRemittanceInformation = new MMMessageAttribute<StructuredRemittanceInformation6, Optional<Max140Text>>() {

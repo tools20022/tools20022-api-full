@@ -36,10 +36,6 @@ public class ConstraintTypeAmountRateRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Commission14 Commission14}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TypeAmountRateRule"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintTypeAmountRateRule {
 	 * definition} =
 	 * "If Type is present, then either Amount or Rate must be present. If Amount or Rate is present, then Type must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Commission14> forCommission14 = new MMConstraint<Commission14>() {
@@ -69,10 +69,6 @@ public class ConstraintTypeAmountRateRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Commission11 Commission11}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TypeAmountRateRule"</li>
 	 * <li>
@@ -80,6 +76,10 @@ public class ConstraintTypeAmountRateRule {
 	 * definition} =
 	 * "If Type or ExtendedType is present, then either Amount or Rate must be present. If Amount or Rate is present, then either Type or Extended Type must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Commission11> forCommission11 = new MMConstraint<Commission11>() {

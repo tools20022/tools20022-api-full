@@ -42,6 +42,12 @@ import javax.xml.bind.annotation.*;
  * <strong>Constant fields:</strong>
  * <ul>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code trea.005.001.02}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} = {@linkplain com.tools20022.repository.area.TreasuryArchive
+ * TreasuryArchive}</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
  * <ul>
@@ -77,22 +83,16 @@ import javax.xml.bind.annotation.*;
  * rootElement} = "Document"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
  * xmlTag} = "AmdNDFValtnV02"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} = {@linkplain com.tools20022.repository.area.TreasuryArchive
- * TreasuryArchive}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code trea.005.001.02}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "AmendNonDeliverableForwardValuationV02"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Scope\r\nThe AmendNonDeliverableForwardValuation message is sent by a participant to a central system or to a counterparty to notify the amendment of the valuation of a non deliverable trade previously confirmed by the sender.\r\nUsage\r\nThe message is sent from a participant to a central settlement system to advise of the update of a previously sent notification and it contains a \"Related Reference\" to link it to the previous notification."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -113,10 +113,6 @@ public class AmendNonDeliverableForwardValuationV02 {
 	 * TradeAgreement2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TradInf"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradeInformation"</li>
 	 * <li>
@@ -124,6 +120,10 @@ public class AmendNonDeliverableForwardValuationV02 {
 	 * definition} =
 	 * "Provides references and date of the valuation of the non deliverable trade which is amended."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock<AmendNonDeliverableForwardValuationV02, TradeAgreement2> mmTradeInformation = new MMMessageBuildingBlock<AmendNonDeliverableForwardValuationV02, TradeAgreement2>() {
@@ -161,10 +161,6 @@ public class AmendNonDeliverableForwardValuationV02 {
 	 * TradePartyIdentification3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TradgSdId"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradingSideIdentification"</li>
 	 * <li>
@@ -172,6 +168,10 @@ public class AmendNonDeliverableForwardValuationV02 {
 	 * definition} =
 	 * "Specifies the trading side of the valuation of the non deliverable trade which is amended."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock<AmendNonDeliverableForwardValuationV02, TradePartyIdentification3> mmTradingSideIdentification = new MMMessageBuildingBlock<AmendNonDeliverableForwardValuationV02, TradePartyIdentification3>() {
@@ -209,10 +209,6 @@ public class AmendNonDeliverableForwardValuationV02 {
 	 * TradePartyIdentification3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CtrPtySdId"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CounterpartySideIdentification"</li>
 	 * <li>
@@ -220,6 +216,10 @@ public class AmendNonDeliverableForwardValuationV02 {
 	 * definition} =
 	 * "Specifies the counterparty of the valuation of the non deliverable trade which is amended."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock<AmendNonDeliverableForwardValuationV02, TradePartyIdentification3> mmCounterpartySideIdentification = new MMMessageBuildingBlock<AmendNonDeliverableForwardValuationV02, TradePartyIdentification3>() {
@@ -257,10 +257,6 @@ public class AmendNonDeliverableForwardValuationV02 {
 	 * AmountsAndValueDate1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TradAmts"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradeAmounts"</li>
 	 * <li>
@@ -268,6 +264,10 @@ public class AmendNonDeliverableForwardValuationV02 {
 	 * definition} =
 	 * "Specifies the amounts of the valuation of the non deliverable trade which is amended."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock<AmendNonDeliverableForwardValuationV02, AmountsAndValueDate1> mmTradeAmounts = new MMMessageBuildingBlock<AmendNonDeliverableForwardValuationV02, AmountsAndValueDate1>() {
@@ -304,10 +304,6 @@ public class AmendNonDeliverableForwardValuationV02 {
 	 * AgreedRate1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ValtnRate"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ValuationRate"</li>
 	 * <li>
@@ -315,6 +311,10 @@ public class AmendNonDeliverableForwardValuationV02 {
 	 * definition} =
 	 * "Specifies the valuation rate of the valuation of the non deliverable trade which is amended."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock<AmendNonDeliverableForwardValuationV02, AgreedRate1> mmValuationRate = new MMMessageBuildingBlock<AmendNonDeliverableForwardValuationV02, AgreedRate1>() {
@@ -351,10 +351,6 @@ public class AmendNonDeliverableForwardValuationV02 {
 	 * ValuationData2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ValtnInf"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ValuationInformation"</li>
 	 * <li>
@@ -362,6 +358,10 @@ public class AmendNonDeliverableForwardValuationV02 {
 	 * definition} =
 	 * "Specifies the valuation information of the valuation of the non deliverable trade which is amended."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock<AmendNonDeliverableForwardValuationV02, ValuationData2> mmValuationInformation = new MMMessageBuildingBlock<AmendNonDeliverableForwardValuationV02, ValuationData2>() {

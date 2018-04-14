@@ -73,14 +73,14 @@ import java.util.Objects;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "UndertakingPlaceOfPresentation"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Place at which the documents must be presented."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class UndertakingPlaceOfPresentation extends UndertakingPartyRole {
@@ -102,10 +102,6 @@ public class UndertakingPlaceOfPresentation extends UndertakingPartyRole {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.UndertakingPlaceOfPresentation
 	 * UndertakingPlaceOfPresentation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PresentationUnderConfirmation"</li>
 	 * <li>
@@ -113,6 +109,10 @@ public class UndertakingPlaceOfPresentation extends UndertakingPartyRole {
 	 * definition} =
 	 * "Specifies the type of party to which a presentation under confirmation is required."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<UndertakingPlaceOfPresentation, PresentationPartyCode> mmPresentationUnderConfirmation = new MMBusinessAttribute<UndertakingPlaceOfPresentation, PresentationPartyCode>() {

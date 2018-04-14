@@ -40,10 +40,6 @@ public class ConstraintNameSpaceRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMConstraint#getExpressionLanguage
 	 * expressionLanguage} = " "</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NameSpaceRule"</li>
 	 * <li>
@@ -51,6 +47,10 @@ public class ConstraintNameSpaceRule {
 	 * definition} =
 	 * "The name space of the Msg MUST be one of the registered ISO 20022 messages."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<EncapsulatedBusinessMessage1> forEncapsulatedBusinessMessage1 = new MMConstraint<EncapsulatedBusinessMessage1>() {

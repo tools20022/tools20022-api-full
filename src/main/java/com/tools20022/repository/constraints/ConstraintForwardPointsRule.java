@@ -40,10 +40,6 @@ public class ConstraintForwardPointsRule {
 	 * expression} =
 	 * "On Condition\r\n\t/ForeignExchangeTradeProduct is equal to value 'NDFO' or 'FORW'\r\nFollowing Must be True\r\n\t/ForwardPoints Must be present"
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ForwardPointsRule"</li>
 	 * <li>
@@ -51,6 +47,10 @@ public class ConstraintForwardPointsRule {
 	 * definition} =
 	 * "If ForeignExchangeTradeProduct is equal to value 'NDFO' or 'FORW', then ForwardPoints Must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Trade2> forTrade2 = new MMConstraint<Trade2>() {
@@ -78,10 +78,6 @@ public class ConstraintForwardPointsRule {
 	 * expression} =
 	 * "On Condition\r\n\t/ForeignExchangeTradeProduct is equal to value 'NDFO' or 'FORW'\r\nFollowing Must be True\r\n\t/ForwardPoints Must be present"
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ForwardPointsRule"</li>
 	 * <li>
@@ -89,6 +85,10 @@ public class ConstraintForwardPointsRule {
 	 * definition} =
 	 * "If ForeignExchangeTradeProduct is equal to value 'NDFO' or 'FORW', then ForwardPoints Must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Trade1> forTrade1 = new MMConstraint<Trade1>() {

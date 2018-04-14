@@ -37,10 +37,6 @@ public class ConstraintRelatedReferenceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV06
 	 * TransferInstructionStatusReportV06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RelatedReferenceRule"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintRelatedReferenceRule {
 	 * definition} =
 	 * "If Reference/RelatedReference/MessageName is present, it must start with sese.001, sese.002, sese.005, sese.006, sese.009, sese.012 or sese.014."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -78,10 +78,6 @@ public class ConstraintRelatedReferenceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReportV06
 	 * TransferCancellationStatusReportV06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RelatedReferenceRule"</li>
 	 * <li>
@@ -89,6 +85,10 @@ public class ConstraintRelatedReferenceRule {
 	 * definition} =
 	 * "If Reference/RelatedReference/MessageName is present, it must start with sese.002, sese.006, sese.009 or sese.014."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -119,10 +119,6 @@ public class ConstraintRelatedReferenceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV03
 	 * TransferInstructionStatusReportV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RelatedReferenceRule"</li>
 	 * <li>
@@ -130,6 +126,10 @@ public class ConstraintRelatedReferenceRule {
 	 * definition} =
 	 * "If RelatedReference/MessageName is present, it must contain 540 or 542 or must start with sese.001, sese.002, sese.005, sese.006 or sese.009 and the RelatedReference/Reference must contain the reference of a message in this list."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -163,10 +163,6 @@ public class ConstraintRelatedReferenceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV05
 	 * TransferInstructionStatusReportV05}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RelatedReferenceRule"</li>
 	 * <li>
@@ -174,6 +170,10 @@ public class ConstraintRelatedReferenceRule {
 	 * definition} =
 	 * "If Reference/RelatedReference/MessageName is present, it must start with sese.001, sese.002, sese.005, sese.006, sese.009, sese.012 or sese.014."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -214,10 +214,6 @@ public class ConstraintRelatedReferenceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV02
 	 * TransferInstructionStatusReportV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RelatedReferenceRule"</li>
 	 * <li>
@@ -225,6 +221,10 @@ public class ConstraintRelatedReferenceRule {
 	 * definition} =
 	 * "If RelatedReference/MessageName is present, it must contain 540 or 542 or must start with sese.001, sese.002, sese.005, sese.006 or sese.009 and the RelatedReference/Reference must contain the reference of a message in this list."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransferInstructionStatusReportV02> for_sese_TransferInstructionStatusReportV02 = new MMConstraint<TransferInstructionStatusReportV02>() {
@@ -248,10 +248,6 @@ public class ConstraintRelatedReferenceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReportV05
 	 * TransferCancellationStatusReportV05}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RelatedReferenceRule"</li>
 	 * <li>
@@ -259,6 +255,10 @@ public class ConstraintRelatedReferenceRule {
 	 * definition} =
 	 * "If Reference/RelatedReference/MessageName is present, it must start with sese.002, sese.006, sese.009 or sese.014."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -299,10 +299,6 @@ public class ConstraintRelatedReferenceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV04
 	 * TransferInstructionStatusReportV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RelatedReferenceRule"</li>
 	 * <li>
@@ -310,6 +306,10 @@ public class ConstraintRelatedReferenceRule {
 	 * definition} =
 	 * "If Reference/RelatedReference/MessageName is present, it must start with sese.001, sese.002, sese.005, sese.006, sese.009, sese.012 or sese.014."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -350,10 +350,6 @@ public class ConstraintRelatedReferenceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReportV02
 	 * TransferCancellationStatusReportV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RelatedReferenceRule"</li>
 	 * <li>
@@ -361,6 +357,10 @@ public class ConstraintRelatedReferenceRule {
 	 * definition} =
 	 * "If RelatedReference/MessageName is present, it must contain 540 or 542 or must start with sese.002, sese.006 or sese.009 and the RelatedReference/Reference must contain the reference of a message in this list."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransferCancellationStatusReportV02> for_sese_TransferCancellationStatusReportV02 = new MMConstraint<TransferCancellationStatusReportV02>() {
@@ -384,10 +384,6 @@ public class ConstraintRelatedReferenceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReportV03
 	 * TransferCancellationStatusReportV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RelatedReferenceRule"</li>
 	 * <li>
@@ -395,6 +391,10 @@ public class ConstraintRelatedReferenceRule {
 	 * definition} =
 	 * "If RelatedReference/MessageName is present, it must contain 540 or 542 or must start with sese.002, sese.006 or sese.009 and the RelatedReference/Reference must contain the reference of a message in this list."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -428,10 +428,6 @@ public class ConstraintRelatedReferenceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReportV04
 	 * TransferCancellationStatusReportV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RelatedReferenceRule"</li>
 	 * <li>
@@ -439,6 +435,10 @@ public class ConstraintRelatedReferenceRule {
 	 * definition} =
 	 * "If Reference/RelatedReference/MessageName is present, it must start with sese.002, sese.006, sese.009 or sese.014."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>

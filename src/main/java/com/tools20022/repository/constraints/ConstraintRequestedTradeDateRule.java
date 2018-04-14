@@ -37,10 +37,6 @@ public class ConstraintRequestedTradeDateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder9
 	 * RedemptionOrder9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RequestedTradeDateRule"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintRequestedTradeDateRule {
 	 * definition} =
 	 * "If RequestedTradeDate is not present, then the next available date is used."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RedemptionOrder9> forRedemptionOrder9 = new MMConstraint<RedemptionOrder9>() {
@@ -71,10 +71,6 @@ public class ConstraintRequestedTradeDateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder9
 	 * SubscriptionOrder9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RequestedTradeDateRule"</li>
 	 * <li>
@@ -82,6 +78,10 @@ public class ConstraintRequestedTradeDateRule {
 	 * definition} =
 	 * "If RequestedTradeDate is not present, then the next available date is used."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubscriptionOrder9> forSubscriptionOrder9 = new MMConstraint<SubscriptionOrder9>() {
@@ -105,10 +105,6 @@ public class ConstraintRequestedTradeDateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution10
 	 * RedemptionExecution10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RequestedTradeDateRule"</li>
 	 * <li>
@@ -116,6 +112,10 @@ public class ConstraintRequestedTradeDateRule {
 	 * definition} =
 	 * "If RequestedTradeDate is not present, then the next available date is used."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RedemptionExecution10> forRedemptionExecution10 = new MMConstraint<RedemptionExecution10>() {

@@ -71,8 +71,8 @@ import javax.xml.bind.annotation.XmlType;
  * {@linkplain com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV01#mmAssignment
  * FIToFIPaymentCancellationRequestV01.mmAssignment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV03#mmAssignment
- * RequestToModifyPaymentV03.mmAssignment}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV03_replaced#mmAssignment
+ * RequestToModifyPaymentV03_replaced.mmAssignment}</li>
  * <li>
  * {@linkplain com.tools20022.repository.area.camt.UnableToApplyV03#mmAssignment
  * UnableToApplyV03.mmAssignment}</li>
@@ -119,15 +119,15 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CaseAssignment2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Set of elements used to represent the assignment of a case to a party."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -158,15 +158,15 @@ public class CaseAssignment2 {
 	 * CaseAssignment2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Id"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Identification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Uniquely identifies the case assignment."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CaseAssignment2, Max35Text> mmIdentification = new MMMessageAttribute<CaseAssignment2, Max35Text>() {
@@ -215,10 +215,6 @@ public class CaseAssignment2 {
 	 * CaseAssignment2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Assgnr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Assigner"</li>
 	 * <li>
@@ -226,6 +222,10 @@ public class CaseAssignment2 {
 	 * definition} =
 	 * "Party who assigns the case. \nUsage: This is also the sender of the message."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<CaseAssignment2, Party7Choice> mmAssigner = new MMMessageAssociationEnd<CaseAssignment2, Party7Choice>() {
@@ -275,10 +275,6 @@ public class CaseAssignment2 {
 	 * CaseAssignment2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Assgne"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Assignee"</li>
 	 * <li>
@@ -286,6 +282,10 @@ public class CaseAssignment2 {
 	 * definition} =
 	 * "Party to which the case is assigned.\nUsage: This is also the receiver of the message."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<CaseAssignment2, Party7Choice> mmAssignee = new MMMessageAssociationEnd<CaseAssignment2, Party7Choice>() {
@@ -336,15 +336,15 @@ public class CaseAssignment2 {
 	 * CaseAssignment2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CreDtTm"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CreationDateTime"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date and time at which the assignment was created."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CaseAssignment2, ISODateTime> mmCreationDateTime = new MMMessageAttribute<CaseAssignment2, ISODateTime>() {
@@ -377,10 +377,10 @@ public class CaseAssignment2 {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CaseAssignment2.mmIdentification, com.tools20022.repository.msg.CaseAssignment2.mmAssigner, com.tools20022.repository.msg.CaseAssignment2.mmAssignee,
 						com.tools20022.repository.msg.CaseAssignment2.mmCreationDateTime);
-				messageBuildingBlock_lazy = () -> Arrays.asList(CustomerPaymentCancellationRequestV01.mmAssignment, FIToFIPaymentCancellationRequestV01.mmAssignment, RequestToModifyPaymentV03.mmAssignment, UnableToApplyV03.mmAssignment,
-						ClaimNonReceiptV03.mmAssignment, AdditionalPaymentInformationV03.mmAssignment, ResolutionOfInvestigationV03.mmAssignment, NotificationOfCaseAssignmentV03.mmAssignment, RejectInvestigationV03.mmAssignment,
-						CancelCaseAssignmentV02.mmAssignment, RequestForDuplicateV03.mmAssignment, DuplicateV03.mmAssignment, ProprietaryFormatInvestigationV02.mmAssignment, DebitAuthorisationResponseV02.mmAssignment,
-						DebitAuthorisationRequestV03.mmAssignment, CaseStatusReportV03.mmNewAssignment);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CustomerPaymentCancellationRequestV01.mmAssignment, FIToFIPaymentCancellationRequestV01.mmAssignment, RequestToModifyPaymentV03_replaced.mmAssignment,
+						UnableToApplyV03.mmAssignment, ClaimNonReceiptV03.mmAssignment, AdditionalPaymentInformationV03.mmAssignment, ResolutionOfInvestigationV03.mmAssignment, NotificationOfCaseAssignmentV03.mmAssignment,
+						RejectInvestigationV03.mmAssignment, CancelCaseAssignmentV02.mmAssignment, RequestForDuplicateV03.mmAssignment, DuplicateV03.mmAssignment, ProprietaryFormatInvestigationV02.mmAssignment,
+						DebitAuthorisationResponseV02.mmAssignment, DebitAuthorisationRequestV03.mmAssignment, CaseStatusReportV03.mmNewAssignment);
 				trace_lazy = () -> InvestigationCase.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

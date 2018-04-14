@@ -195,6 +195,11 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "CorporateActionReferenceDateCode"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} =
+ * "Specifies the reference date of corporate action, in coded form."</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -205,11 +210,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "CorporateActionReferenceDateCode"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} =
- * "Specifies the reference date of corporate action, in coded form."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -227,10 +227,6 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * CorporateActionReferenceDateCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "ANOU"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AnnouncementDate"</li>
 	 * <li>
@@ -238,6 +234,10 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * definition} =
 	 * "Date on which the issuer announced that a corporate action event will occur."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionReferenceDateCode AnnouncementDate = new CorporateActionReferenceDateCode() {
@@ -260,10 +260,6 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * CorporateActionReferenceDateCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "AVAL"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AvailableDate"</li>
 	 * <li>
@@ -271,6 +267,10 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * definition} =
 	 * "Date on which securities become available for trading, for example first dealing date."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionReferenceDateCode AvailableDate = new CorporateActionReferenceDateCode() {
@@ -293,10 +293,6 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * CorporateActionReferenceDateCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "CERT"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CertificationDeadline"</li>
 	 * <li>
@@ -304,6 +300,10 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * definition} =
 	 * "Deadline by which the beneficial ownership of securities must be declared."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionReferenceDateCode CertificationDeadline = new CorporateActionReferenceDateCode() {
@@ -326,10 +326,6 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * CorporateActionReferenceDateCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "CEXD"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ConsentExpirationDate"</li>
 	 * <li>
@@ -337,6 +333,10 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * definition} =
 	 * "Last date on which a holder can consent to the changes sought by the corporation."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionReferenceDateCode ConsentExpirationDate = new CorporateActionReferenceDateCode() {
@@ -358,15 +358,15 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * CorporateActionReferenceDateCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "COAP"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CourtApprovalDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date upon which the court provided approval."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionReferenceDateCode CourtApprovalDate = new CorporateActionReferenceDateCode() {
@@ -392,10 +392,6 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * CorporateActionReferenceDateCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "CORD"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ConsentRecordDate"</li>
 	 * <li>
@@ -403,6 +399,10 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * definition} =
 	 * "Date used by the offeror to determine the beneficiary eligible to participate in a consent based on the registered owner of the securities, for example, beneficial owner of consent record. Consent record date qualifier is used to indicate that a record date only applies to a certain part of the offer, not the entire offer."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionReferenceDateCode ConsentRecordDate = new CorporateActionReferenceDateCode() {
@@ -425,10 +425,6 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * CorporateActionReferenceDateCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "CVPR"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoverExpirationDate"</li>
 	 * <li>
@@ -436,6 +432,10 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * definition} =
 	 * "Last day a holder can deliver the securities that it had elected on and/or previously protected."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionReferenceDateCode CoverExpirationDate = new CorporateActionReferenceDateCode() {
@@ -457,15 +457,15 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * CorporateActionReferenceDateCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "DIVR"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DividendRankingDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date on which a security will be entitled to a dividend."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionReferenceDateCode DividendRankingDate = new CorporateActionReferenceDateCode() {
@@ -488,10 +488,6 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * CorporateActionReferenceDateCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "EARL"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EarliestPaymentDate"</li>
 	 * <li>
@@ -499,6 +495,10 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * definition} =
 	 * "Date on which a payment can be made, for example, if payment date is a non-business day or to indicate the first payment date of an offer."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionReferenceDateCode EarliestPaymentDate = new CorporateActionReferenceDateCode() {
@@ -521,10 +521,6 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * CorporateActionReferenceDateCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "ECPD"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ElectionToCounterpartyDeadline"</li>
 	 * <li>
@@ -532,6 +528,10 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * definition} =
 	 * "Deadline by which an entitled holder needs to advise their counterparty to a transaction of their election for a corporate action event."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionReferenceDateCode ElectionToCounterpartyDeadline = new CorporateActionReferenceDateCode() {
@@ -553,16 +553,16 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * CorporateActionReferenceDateCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "EFFD"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EffectiveDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Date on which a process is to be completed or becomes effective."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionReferenceDateCode EffectiveDate = new CorporateActionReferenceDateCode() {
@@ -586,10 +586,6 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * CorporateActionReferenceDateCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "EQUL"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EqualisationDate"</li>
 	 * <li>
@@ -597,6 +593,10 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * definition} =
 	 * "Date on which all or part of any holding bought in a unit trust is subject to being treated as capital rather than income. This is normally one day after the previous distribution's ex date."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionReferenceDateCode EqualisationDate = new CorporateActionReferenceDateCode() {
@@ -619,10 +619,6 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * CorporateActionReferenceDateCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "EXPI"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ExpiryDate"</li>
 	 * <li>
@@ -630,6 +626,10 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * definition} =
 	 * "Date on which an order expires or on which a privilege or offer terminates."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionReferenceDateCode ExpiryDate = new CorporateActionReferenceDateCode() {
@@ -651,15 +651,15 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * CorporateActionReferenceDateCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "FBDM"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FirstBusinessDayOfMonth"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "First day of the month that is a working day."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionReferenceDateCode FirstBusinessDayOfMonth = new CorporateActionReferenceDateCode() {
@@ -681,15 +681,15 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * CorporateActionReferenceDateCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "FCDM"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FirstCalendarDayOfMonth"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "First calendar day of the month."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionReferenceDateCode FirstCalendarDayOfMonth = new CorporateActionReferenceDateCode() {
@@ -712,10 +712,6 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * CorporateActionReferenceDateCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "FDAT"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FurtherDetailedAnnouncementDate"</li>
 	 * <li>
@@ -723,6 +719,10 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * definition} =
 	 * "Date on which additional information on the event will be announced, for example, exchange ratio announcement date."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionReferenceDateCode FurtherDetailedAnnouncementDate = new CorporateActionReferenceDateCode() {
@@ -744,16 +744,16 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * CorporateActionReferenceDateCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "FXDT"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyExchangeDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date on which a foreign exchange rate will be determined."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionReferenceDateCode CurrencyExchangeDate = new CorporateActionReferenceDateCode() {
@@ -776,10 +776,6 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * CorporateActionReferenceDateCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "GUPA"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GuaranteedParticipationDate"</li>
 	 * <li>
@@ -787,6 +783,10 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * definition} =
 	 * "Last date/time by which a buying counterparty to a trade can be sure that it will have the right to participate in an event."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionReferenceDateCode GuaranteedParticipationDate = new CorporateActionReferenceDateCode() {
@@ -808,15 +808,15 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * CorporateActionReferenceDateCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "IFIX"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IndexFixingDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date/time at which an index rate will be determined."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionReferenceDateCode IndexFixingDate = new CorporateActionReferenceDateCode() {
@@ -838,15 +838,15 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * CorporateActionReferenceDateCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "INST"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InstructedDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date on which instruction was sent."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionReferenceDateCode InstructedDate = new CorporateActionReferenceDateCode() {
@@ -868,15 +868,15 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * CorporateActionReferenceDateCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "LBDM"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LastBusinessDayOfMonth"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Last day of the month that is a working day."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionReferenceDateCode LastBusinessDayOfMonth = new CorporateActionReferenceDateCode() {
@@ -898,15 +898,15 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * CorporateActionReferenceDateCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "LCDM"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LastCalendarDayOfMonth"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Last calendar day of the month."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionReferenceDateCode LastCalendarDayOfMonth = new CorporateActionReferenceDateCode() {
@@ -929,10 +929,6 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * CorporateActionReferenceDateCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "LOTO"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LotteryDate"</li>
 	 * <li>
@@ -940,6 +936,10 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * definition} =
 	 * "Date on which the lottery is run and applied to the holder's positions. This is also applicable to partial calls."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionReferenceDateCode LotteryDate = new CorporateActionReferenceDateCode() {
@@ -962,10 +962,6 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * CorporateActionReferenceDateCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "MATU"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MaturityDate"</li>
 	 * <li>
@@ -973,6 +969,10 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * definition} =
 	 * "Date upon which interest bearing security becomes due and principal is paid."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionReferenceDateCode MaturityDate = new CorporateActionReferenceDateCode() {
@@ -994,10 +994,6 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * CorporateActionReferenceDateCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "MEET"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MeetingDate"</li>
 	 * <li>
@@ -1005,6 +1001,10 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * definition} =
 	 * "Date on which the bondholders' or shareholders' meeting will take place."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionReferenceDateCode MeetingDate = new CorporateActionReferenceDateCode() {
@@ -1027,10 +1027,6 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * CorporateActionReferenceDateCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "MET2"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SecondMeetingDate"</li>
 	 * <li>
@@ -1038,6 +1034,10 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * definition} =
 	 * "Date on which the company's general meeting is scheduled, second session if applicable, for example, Italy."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionReferenceDateCode SecondMeetingDate = new CorporateActionReferenceDateCode() {
@@ -1060,10 +1060,6 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * CorporateActionReferenceDateCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "MET3"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ThirdMeetingDate"</li>
 	 * <li>
@@ -1071,6 +1067,10 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * definition} =
 	 * "Date on which the company's general meeting is scheduled, third session if applicable, for example, Italy."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionReferenceDateCode ThirdMeetingDate = new CorporateActionReferenceDateCode() {
@@ -1092,15 +1092,15 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * CorporateActionReferenceDateCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "MFIX"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MarginFixingDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date/time at which the margin rate will be determined."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionReferenceDateCode MarginFixingDate = new CorporateActionReferenceDateCode() {
@@ -1123,10 +1123,6 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * CorporateActionReferenceDateCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "MKDT"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MarketDeadline"</li>
 	 * <li>
@@ -1134,6 +1130,10 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * definition} =
 	 * "Issuer or issuer's agent deadline to respond, with an election instruction, to an outstanding offer or privilege."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionReferenceDateCode MarketDeadline = new CorporateActionReferenceDateCode() {
@@ -1155,10 +1155,6 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * CorporateActionReferenceDateCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "PAYD"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PaymentDate"</li>
 	 * <li>
@@ -1166,6 +1162,10 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * definition} =
 	 * "Date on which the movement is due to take place (cash and/or securities)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionReferenceDateCode PaymentDate = new CorporateActionReferenceDateCode() {
@@ -1188,10 +1188,6 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * CorporateActionReferenceDateCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "PODT"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ProtectDate"</li>
 	 * <li>
@@ -1199,6 +1195,10 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * definition} =
 	 * "Last date a holder can request to defer delivery of securities pursuant to a notice of guaranteed delivery or other required documentation."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionReferenceDateCode ProtectDate = new CorporateActionReferenceDateCode() {
@@ -1221,10 +1221,6 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * CorporateActionReferenceDateCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "PPDT"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PariPassuDate"</li>
 	 * <li>
@@ -1232,6 +1228,10 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * definition} =
 	 * "Date on which security will assimilate, become fungible, or have the same rights to dividends as the parent issue."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionReferenceDateCode PariPassuDate = new CorporateActionReferenceDateCode() {
@@ -1254,10 +1254,6 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * CorporateActionReferenceDateCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "PROD"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ProrationDate"</li>
 	 * <li>
@@ -1265,6 +1261,10 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * definition} =
 	 * "Date at which an issuer will determine the proration amount/quantity of an offer."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionReferenceDateCode ProrationDate = new CorporateActionReferenceDateCode() {
@@ -1289,10 +1289,6 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * CorporateActionReferenceDateCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "RDDT"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ResponseDeadline"</li>
 	 * <li>
@@ -1300,6 +1296,10 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * definition} =
 	 * "Date on which the account servicer has set as the deadline to respond, with instructions, to an outstanding event. This time is dependent on the reference time zone of the account servicer as specified in a Service Level Agreement (SLA)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionReferenceDateCode ResponseDeadline = new CorporateActionReferenceDateCode() {
@@ -1323,10 +1323,6 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * CorporateActionReferenceDateCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "RDTE"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RecordDate"</li>
 	 * <li>
@@ -1334,6 +1330,10 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * definition} =
 	 * "Date on which positions are struck at the end of the day to note which parties will receive the relevant amount of entitlement, due to be distributed on payment date."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionReferenceDateCode RecordDate = new CorporateActionReferenceDateCode() {
@@ -1356,10 +1356,6 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * CorporateActionReferenceDateCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "REGI"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RegistrationDeadline"</li>
 	 * <li>
@@ -1367,6 +1363,10 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * definition} =
 	 * "Date on which instructions to register or registration details will be accepted."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionReferenceDateCode RegistrationDeadline = new CorporateActionReferenceDateCode() {
@@ -1388,16 +1388,16 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * CorporateActionReferenceDateCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "RESU"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ResultsPublicationDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Date on which results are published, for example, results of an offer."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionReferenceDateCode ResultsPublicationDate = new CorporateActionReferenceDateCode() {
@@ -1420,10 +1420,6 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * CorporateActionReferenceDateCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "SPLT"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SplitDeadline"</li>
 	 * <li>
@@ -1431,6 +1427,10 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * definition} =
 	 * "Deadline by which instructions must be received to split securities, for example, of physical certificates."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionReferenceDateCode SplitDeadline = new CorporateActionReferenceDateCode() {
@@ -1452,10 +1452,6 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * CorporateActionReferenceDateCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "SUBS"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SubscriptionCostDebitDate"</li>
 	 * <li>
@@ -1463,6 +1459,10 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * definition} =
 	 * "Date by which cash must be in place in order to take part in the event."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionReferenceDateCode SubscriptionCostDebitDate = new CorporateActionReferenceDateCode() {
@@ -1489,10 +1489,6 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * CorporateActionReferenceDateCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "SXDT"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SpecialExDate"</li>
 	 * <li>
@@ -1500,6 +1496,10 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * definition} =
 	 * "Date/time as from which 'special processing' can start to be used by participants for that event. Special processing is a means of marking a transaction, that would normally be traded ex or cum, as being traded cum or ex respectively, for example, a transaction dealt 'special' after the ex date would result in the buyer's being eligible for the entitlement. This is typically used in the UK and Irish markets."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionReferenceDateCode SpecialExDate = new CorporateActionReferenceDateCode() {
@@ -1521,16 +1521,16 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * CorporateActionReferenceDateCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "TAXB"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DeadlineForTaxBreakdownInstructions"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Date on until which tax breakdown instructions will be accepted."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionReferenceDateCode DeadlineForTaxBreakdownInstructions = new CorporateActionReferenceDateCode() {
@@ -1552,15 +1552,15 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * CorporateActionReferenceDateCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "TRAD"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradeDateTime"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date on which the trade was executed."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionReferenceDateCode TradeDateTime = new CorporateActionReferenceDateCode() {
@@ -1583,10 +1583,6 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * CorporateActionReferenceDateCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "TSDT"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradingSuspendedDate"</li>
 	 * <li>
@@ -1594,6 +1590,10 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * definition} =
 	 * "Date on which trading of a security is suspended as the result of an event."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionReferenceDateCode TradingSuspendedDate = new CorporateActionReferenceDateCode() {
@@ -1615,16 +1615,16 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * CorporateActionReferenceDateCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "UNCO"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnconditionalDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Date upon which the terms of the take-over become unconditional."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionReferenceDateCode UnconditionalDate = new CorporateActionReferenceDateCode() {
@@ -1647,10 +1647,6 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * CorporateActionReferenceDateCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "VALU"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ValueDate"</li>
 	 * <li>
@@ -1658,6 +1654,10 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * definition} =
 	 * "Date on which assets become available to the account owner (in a credit entry), or cease to be available to the account owner (in a debit entry)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionReferenceDateCode ValueDate = new CorporateActionReferenceDateCode() {
@@ -1680,10 +1680,6 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * CorporateActionReferenceDateCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "WUCO"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "WhollyUnconditionalDate"</li>
 	 * <li>
@@ -1691,6 +1687,10 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * definition} =
 	 * "Date on which all conditions, including regulatory, legal etc. pertaining to the take-over, have been met."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionReferenceDateCode WhollyUnconditionalDate = new CorporateActionReferenceDateCode() {
@@ -1713,10 +1713,6 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * CorporateActionReferenceDateCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "XDTE"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ExDividendDate"</li>
 	 * <li>
@@ -1724,6 +1720,10 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * definition} =
 	 * "Date as from which trading (including exchange and Over The Counter (OTC) trading) occurs on the underlying security without the benefit."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionReferenceDateCode ExDividendDate = new CorporateActionReferenceDateCode() {
@@ -1749,10 +1749,6 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * CorporateActionReferenceDateCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "EARD"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EarlyResponseDeadline"</li>
 	 * <li>
@@ -1760,6 +1756,10 @@ public class CorporateActionReferenceDateCode extends MMCode {
 	 * definition} =
 	 * "Date/time at which the account servicer has set as the deadline to respond, with instructions, to an outstanding event, giving the holder eligibility to incentives. This time is dependent on the reference time zone of the account servicer as specified in a Service Level Agreement (SLA)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionReferenceDateCode EarlyResponseDeadline = new CorporateActionReferenceDateCode() {

@@ -36,10 +36,6 @@ public class ConstraintBalanceTypeGuideline2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.BalanceDetails6
 	 * BalanceDetails6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BalanceTypeGuideline2"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintBalanceTypeGuideline2 {
 	 * definition} =
 	 * "FinancialAssetTypeCategory codes and Type codes used are subject to market practice and/or bilateral service level agreements."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<BalanceDetails6> forBalanceDetails6 = new MMConstraint<BalanceDetails6>() {

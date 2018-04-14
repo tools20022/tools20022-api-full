@@ -87,14 +87,14 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CorporateActionDate21SD1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Extension to cater for specific corporate action dates."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -122,10 +122,6 @@ public class CorporateActionDate21SD1 {
 	 * CorporateActionDate21SD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PlcAndNm"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PlaceAndName"</li>
 	 * <li>
@@ -133,6 +129,10 @@ public class CorporateActionDate21SD1 {
 	 * definition} =
 	 * "Unambiguous reference to the location where the supplementary data must be inserted in the message instance. \r\n\r\nIn the case of XML, this is expressed by a valid XPath."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionDate21SD1, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<CorporateActionDate21SD1, Optional<Max350Text>>() {
@@ -177,10 +177,6 @@ public class CorporateActionDate21SD1 {
 	 * CorporateActionDate21SD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "WebSvcNtfctnDt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "WebServiceNotificationDate"</li>
 	 * <li>
@@ -188,6 +184,10 @@ public class CorporateActionDate21SD1 {
 	 * definition} =
 	 * "Date and time of notification via web service as reference information.\r\n通知日時 Notification date and time."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionDate21SD1, Optional<DateFormat22Choice>> mmWebServiceNotificationDate = new MMMessageAttribute<CorporateActionDate21SD1, Optional<DateFormat22Choice>>() {
@@ -232,10 +232,6 @@ public class CorporateActionDate21SD1 {
 	 * CorporateActionDate21SD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrvsWebSvcNtfctnDt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PreviousWebServiceNotificationDate"</li>
 	 * <li>
@@ -243,6 +239,10 @@ public class CorporateActionDate21SD1 {
 	 * definition} =
 	 * "Date and time of previous notification via web service as a reference information (in case of replacement). \r\n訂正（削除）前通知日時."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionDate21SD1, Optional<DateFormat22Choice>> mmPreviousWebServiceNotificationDate = new MMMessageAttribute<CorporateActionDate21SD1, Optional<DateFormat22Choice>>() {
@@ -287,10 +287,6 @@ public class CorporateActionDate21SD1 {
 	 * CorporateActionDate21SD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ActlRcrdDt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ActualRecordDate"</li>
 	 * <li>
@@ -298,6 +294,10 @@ public class CorporateActionDate21SD1 {
 	 * definition} =
 	 * "Actual record date - the previous business day of the record date if the record date falls to Saturday, Sunday or national holiday.\r\n権利確定日."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionDate21SD1, Optional<DateFormat22Choice>> mmActualRecordDate = new MMMessageAttribute<CorporateActionDate21SD1, Optional<DateFormat22Choice>>() {
@@ -342,15 +342,15 @@ public class CorporateActionDate21SD1 {
 	 * CorporateActionDate21SD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "BrdMtgDt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BoardMeetingDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date of the board meeting.\r\n取締役会決議日."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionDate21SD1, Optional<DateFormat22Choice>> mmBoardMeetingDate = new MMMessageAttribute<CorporateActionDate21SD1, Optional<DateFormat22Choice>>() {
@@ -395,16 +395,16 @@ public class CorporateActionDate21SD1 {
 	 * CorporateActionDate21SD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CorpRegnDt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CorporateRegistrationDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Date on which the new company will be registered.\r\n新設会社登記日."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionDate21SD1, Optional<DateFormat22Choice>> mmCorporateRegistrationDate = new MMMessageAttribute<CorporateActionDate21SD1, Optional<DateFormat22Choice>>() {
@@ -449,10 +449,6 @@ public class CorporateActionDate21SD1 {
 	 * CorporateActionDate21SD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "EarlstPlandDtOfIssePric"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EarliestPlannedDateOfIssuePrice"</li>
 	 * <li>
@@ -460,6 +456,10 @@ public class CorporateActionDate21SD1 {
 	 * definition} =
 	 * "Earliest planned date on which the issue price will be set.\r\n発行価格決定予定日（最短）."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionDate21SD1, Optional<DateFormat22Choice>> mmEarliestPlannedDateOfIssuePrice = new MMMessageAttribute<CorporateActionDate21SD1, Optional<DateFormat22Choice>>() {
@@ -504,10 +504,6 @@ public class CorporateActionDate21SD1 {
 	 * CorporateActionDate21SD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "LatstPlandDtOfIssePric"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LatestPlannedDateOfIssuePrice"</li>
 	 * <li>
@@ -515,6 +511,10 @@ public class CorporateActionDate21SD1 {
 	 * definition} =
 	 * "Latest planned date on which the issue price will be set.\r\n発行価格決定予定日（最長）."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionDate21SD1, Optional<DateFormat22Choice>> mmLatestPlannedDateOfIssuePrice = new MMMessageAttribute<CorporateActionDate21SD1, Optional<DateFormat22Choice>>() {
@@ -559,15 +559,15 @@ public class CorporateActionDate21SD1 {
 	 * CorporateActionDate21SD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DtOfIssePric"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DateOfIssuePrice"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date on which the issue price will be set.\r\n発行価格決定日."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionDate21SD1, Optional<DateFormat22Choice>> mmDateOfIssuePrice = new MMMessageAttribute<CorporateActionDate21SD1, Optional<DateFormat22Choice>>() {
@@ -612,10 +612,6 @@ public class CorporateActionDate21SD1 {
 	 * CorporateActionDate21SD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "EarlstPlandSbcptCostPmtDt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EarliestPlannedSubscriptionCostPaymentDate"</li>
 	 * <li>
@@ -623,6 +619,10 @@ public class CorporateActionDate21SD1 {
 	 * definition} =
 	 * "Earliest planned date on which the cash payment (for the subscription cost) will be made.\r\n払込期日予定日（最短）."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionDate21SD1, Optional<DateFormat22Choice>> mmEarliestPlannedSubscriptionCostPaymentDate = new MMMessageAttribute<CorporateActionDate21SD1, Optional<DateFormat22Choice>>() {
@@ -667,10 +667,6 @@ public class CorporateActionDate21SD1 {
 	 * CorporateActionDate21SD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "LatstPlandSbcptCostPmtDt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LatestPlannedSubscriptionCostPaymentDate"</li>
 	 * <li>
@@ -678,6 +674,10 @@ public class CorporateActionDate21SD1 {
 	 * definition} =
 	 * "Latest planned date on which the cash payment (for the subscription cost) will be made.\r\n払込期日予定日（最長）."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionDate21SD1, Optional<DateFormat22Choice>> mmLatestPlannedSubscriptionCostPaymentDate = new MMMessageAttribute<CorporateActionDate21SD1, Optional<DateFormat22Choice>>() {
@@ -722,16 +722,16 @@ public class CorporateActionDate21SD1 {
 	 * CorporateActionDate21SD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SbsqntListgDt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SubsequentListingDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Listing date of the new shares announced by Stock Exchange.\r\n変更上場日."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionDate21SD1, Optional<DateFormat22Choice>> mmSubsequentListingDate = new MMMessageAttribute<CorporateActionDate21SD1, Optional<DateFormat22Choice>>() {
@@ -774,16 +774,16 @@ public class CorporateActionDate21SD1 {
 	 * CorporateActionDate21SD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NewShrUnitQtyFctvDt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NewShareUnitQuantityEffectiveDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Date at which the new share unit quantity becomes effective."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<CorporateActionDate21SD1, Optional<DateFormat22Choice>> mmNewShareUnitQuantityEffectiveDate = new MMMessageAssociationEnd<CorporateActionDate21SD1, Optional<DateFormat22Choice>>() {

@@ -35,10 +35,6 @@ public class ConstraintTimeCountryLocationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SettlementRateSource1
 	 * SettlementRateSource1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TimeCountryLocationRule"</li>
 	 * <li>
@@ -46,6 +42,10 @@ public class ConstraintTimeCountryLocationRule {
 	 * definition} =
 	 * "Time, Country and Location must be present together or not present at all."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SettlementRateSource1> forSettlementRateSource1 = new MMConstraint<SettlementRateSource1>() {

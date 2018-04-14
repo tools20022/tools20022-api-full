@@ -144,6 +144,10 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "SecuritiesExecutionInstructions1"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} = "Identifies the instructions for order handling."</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
  * semanticMarkup} = FIXSynonym: 18</li>
@@ -151,10 +155,6 @@ import javax.xml.bind.annotation.XmlType;
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "SecuritiesExecutionInstructions1"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Identifies the instructions for order handling."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -188,10 +188,6 @@ public class SecuritiesExecutionInstructions1 {
 	 * SecuritiesExecutionInstructions1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AllOrNn"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AllOrNone"</li>
 	 * <li>
@@ -199,6 +195,10 @@ public class SecuritiesExecutionInstructions1 {
 	 * definition} =
 	 * "Round-lot market or limit-price order that must be executed in its entirety or not at all; unlike Fill or Kill orders, AON orders are not treated as canceled if they are not executed as soon as represented in the Trading Crowd."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<AllOrNoneIndicator>> mmAllOrNone = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<AllOrNoneIndicator>>() {
@@ -249,10 +249,6 @@ public class SecuritiesExecutionInstructions1 {
 	 * SecuritiesExecutionInstructions1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CallFrst"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CallFirst"</li>
 	 * <li>
@@ -260,6 +256,10 @@ public class SecuritiesExecutionInstructions1 {
 	 * definition} =
 	 * "Refers to the client before trading in order to catch all verbal instructions on trading strategy usually because the strategy is too complex or cannot be represented in the trading application."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmCallFirst = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
@@ -310,15 +310,15 @@ public class SecuritiesExecutionInstructions1 {
 	 * SecuritiesExecutionInstructions1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Cross"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Cross"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Allow crossing of an order."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmCross = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
@@ -369,10 +369,6 @@ public class SecuritiesExecutionInstructions1 {
 	 * SecuritiesExecutionInstructions1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CstmrDisp"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CustomerDisplay"</li>
 	 * <li>
@@ -380,6 +376,10 @@ public class SecuritiesExecutionInstructions1 {
 	 * definition} =
 	 * "Exchange or ECN required by the SEC to display limit orders in the public order book. A customer can choose not to have his limit order displayed to the public."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmCustomerDisplay = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
@@ -430,10 +430,6 @@ public class SecuritiesExecutionInstructions1 {
 	 * SecuritiesExecutionInstructions1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Hld"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Hold"</li>
 	 * <li>
@@ -441,6 +437,10 @@ public class SecuritiesExecutionInstructions1 {
 	 * definition} =
 	 * "Indicates whether the firm executing the order is held to best execution requirements and may be able to make some discretionary decisions."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmHold = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
@@ -491,10 +491,6 @@ public class SecuritiesExecutionInstructions1 {
 	 * SecuritiesExecutionInstructions1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Incr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Increase"</li>
 	 * <li>
@@ -502,6 +498,10 @@ public class SecuritiesExecutionInstructions1 {
 	 * definition} =
 	 * "Indicates whether the order is to be increased in shares on the ex-dividend date as a result of a stock dividend or distribution."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmIncrease = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
@@ -552,10 +552,6 @@ public class SecuritiesExecutionInstructions1 {
 	 * SecuritiesExecutionInstructions1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "InstnsOnly"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InstitutionsOnly"</li>
 	 * <li>
@@ -563,6 +559,10 @@ public class SecuritiesExecutionInstructions1 {
 	 * definition} =
 	 * "Identifies that the broker is restricted to dealing with other buy side firms."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmInstitutionsOnly = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
@@ -613,10 +613,6 @@ public class SecuritiesExecutionInstructions1 {
 	 * SecuritiesExecutionInstructions1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NonNgtbl"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NonNegotiable"</li>
 	 * <li>
@@ -624,6 +620,10 @@ public class SecuritiesExecutionInstructions1 {
 	 * definition} =
 	 * "Qualifies an asset (usually a payment instrument) of which rights cannot be transferred to a party other then the original debtor and creditor."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmNonNegotiable = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
@@ -674,10 +674,6 @@ public class SecuritiesExecutionInstructions1 {
 	 * SecuritiesExecutionInstructions1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OverTheDay"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OverTheDay"</li>
 	 * <li>
@@ -685,6 +681,10 @@ public class SecuritiesExecutionInstructions1 {
 	 * definition} =
 	 * "Indicates whether to execute parts of the order over the course of the day. Usually done with large block orders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmOverTheDay = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
@@ -735,10 +735,6 @@ public class SecuritiesExecutionInstructions1 {
 	 * SecuritiesExecutionInstructions1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PtcpDontInit"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ParticipateDontInitiate"</li>
 	 * <li>
@@ -746,6 +742,10 @@ public class SecuritiesExecutionInstructions1 {
 	 * definition} =
 	 * "An order that may participate in a transaction initiated by another party, but may not initiate a transaction."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmParticipateDontInitiate = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
@@ -796,10 +796,6 @@ public class SecuritiesExecutionInstructions1 {
 	 * SecuritiesExecutionInstructions1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PctOfVol"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PercentOfVolume"</li>
 	 * <li>
@@ -807,6 +803,10 @@ public class SecuritiesExecutionInstructions1 {
 	 * definition} =
 	 * "Indicates that the Sender does not want all of the volume on the floor."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmPercentOfVolume = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
@@ -857,10 +857,6 @@ public class SecuritiesExecutionInstructions1 {
 	 * SecuritiesExecutionInstructions1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Scale"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Scale"</li>
 	 * <li>
@@ -868,6 +864,10 @@ public class SecuritiesExecutionInstructions1 {
 	 * definition} =
 	 * "An order to buy (or sell) a financial instrument which specifies the total amount to be bought (or sold) and the amount to be bought (or sold) at specified price variations."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmScale = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
@@ -918,10 +918,6 @@ public class SecuritiesExecutionInstructions1 {
 	 * SecuritiesExecutionInstructions1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "StayOnSd"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "StayOnSide"</li>
 	 * <li>
@@ -929,6 +925,10 @@ public class SecuritiesExecutionInstructions1 {
 	 * definition} =
 	 * "Specifies the order limit based on the offer/bid at the time of the order submission."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<StayOnSideType1Code>> mmStayOnSide = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<StayOnSideType1Code>>() {
@@ -979,15 +979,15 @@ public class SecuritiesExecutionInstructions1 {
 	 * SecuritiesExecutionInstructions1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Work"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Work"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Make the order active until notified."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmWork = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
@@ -1038,10 +1038,6 @@ public class SecuritiesExecutionInstructions1 {
 	 * SecuritiesExecutionInstructions1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "GoAlong"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GoAlong"</li>
 	 * <li>
@@ -1049,6 +1045,10 @@ public class SecuritiesExecutionInstructions1 {
 	 * definition} =
 	 * "Used for listed equity securities. Buy or sell at prices that randomly occur on the floor, participating in what\ntrades the specialist and other players will allow."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmGoAlong = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
@@ -1099,10 +1099,6 @@ public class SecuritiesExecutionInstructions1 {
 	 * SecuritiesExecutionInstructions1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TryScale"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TryScale"</li>
 	 * <li>
@@ -1110,6 +1106,10 @@ public class SecuritiesExecutionInstructions1 {
 	 * definition} =
 	 * "Order to buy (sell) a security that specifies the total amount to be bought (sold) and the amount to be bought (sold) at successively decreasing (increasing) price intervals; often placed in order to average the price."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmTryScale = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
@@ -1160,10 +1160,6 @@ public class SecuritiesExecutionInstructions1 {
 	 * SecuritiesExecutionInstructions1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DoNotRdc"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DoNotReduce"</li>
 	 * <li>
@@ -1171,6 +1167,10 @@ public class SecuritiesExecutionInstructions1 {
 	 * definition} =
 	 * "Indicates whether to buy, to stop order to sell, or to stop limit order to sell that is not to be reduced in price by the amount of an ordinary cash dividend on the ex-dividend date. A \"do not reduce\" order applies only to ordinary cash dividends; it should be reduced for other distributions - such as when a stock goes ex stock dividend or ex rights."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmDoNotReduce = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
@@ -1221,10 +1221,6 @@ public class SecuritiesExecutionInstructions1 {
 	 * SecuritiesExecutionInstructions1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CclOnSysFailr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CancelOnSystemFailure"</li>
 	 * <li>
@@ -1232,6 +1228,10 @@ public class SecuritiesExecutionInstructions1 {
 	 * definition} =
 	 * "If a system failure interrupts trading or order routing, attempt to cancel this order and attempt to reinstate this order, subject to time in force limitations. Note that depending on the type and severity of the failure, this might not be possible."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmCancelOnSystemFailure = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
@@ -1282,10 +1282,6 @@ public class SecuritiesExecutionInstructions1 {
 	 * SecuritiesExecutionInstructions1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CclOnTradgHalt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CancelOnTradingHalt"</li>
 	 * <li>
@@ -1293,6 +1289,10 @@ public class SecuritiesExecutionInstructions1 {
 	 * definition} =
 	 * "If trading in this instrument is halted, cancel this order and reinstate this order when/if trading resumes, subject to time in force limitations."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmCancelOnTradingHalt = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
@@ -1343,10 +1343,6 @@ public class SecuritiesExecutionInstructions1 {
 	 * SecuritiesExecutionInstructions1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TradAlong"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradeAlong"</li>
 	 * <li>
@@ -1354,6 +1350,10 @@ public class SecuritiesExecutionInstructions1 {
 	 * definition} =
 	 * "Indicates whether the broker has permission to handle and place the order in the market even if the broker already has its own proprietary orders for the same financial instrument placed in the market."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmTradeAlong = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
@@ -1404,10 +1404,6 @@ public class SecuritiesExecutionInstructions1 {
 	 * SecuritiesExecutionInstructions1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "StrctLmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "StrictLimit"</li>
 	 * <li>
@@ -1415,6 +1411,10 @@ public class SecuritiesExecutionInstructions1 {
 	 * definition} =
 	 * "Limit order that must be traded at the exact limit price specified without any price improvement."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmStrictLimit = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
@@ -1465,10 +1465,6 @@ public class SecuritiesExecutionInstructions1 {
 	 * SecuritiesExecutionInstructions1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "IgnrPricVldtyChcks"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IgnorePriceValidityChecks"</li>
 	 * <li>
@@ -1476,6 +1472,10 @@ public class SecuritiesExecutionInstructions1 {
 	 * definition} =
 	 * "Disables validity checking of price fields for an order or change request."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmIgnorePriceValidityChecks = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
@@ -1526,10 +1526,6 @@ public class SecuritiesExecutionInstructions1 {
 	 * SecuritiesExecutionInstructions1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RinsttOnSysFailr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReinstateOnSystemFailure"</li>
 	 * <li>
@@ -1537,6 +1533,10 @@ public class SecuritiesExecutionInstructions1 {
 	 * definition} =
 	 * "If a system failure interrupts trading or order routing, attempt to reinstate this order, subject to time in force limitations. Depending on the type and severity of the failure, this might not be possible."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmReinstateOnSystemFailure = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
@@ -1587,10 +1587,6 @@ public class SecuritiesExecutionInstructions1 {
 	 * SecuritiesExecutionInstructions1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RinsttOnTradgHalt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReinstateOnTradingHalt"</li>
 	 * <li>
@@ -1598,6 +1594,10 @@ public class SecuritiesExecutionInstructions1 {
 	 * definition} =
 	 * "If trading in this instrument is halted, reinstate this order when/if trading resumes, subject to time in force limitations."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmReinstateOnTradingHalt = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
@@ -1648,10 +1648,6 @@ public class SecuritiesExecutionInstructions1 {
 	 * SecuritiesExecutionInstructions1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CclIfNotBest"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CancelIfNotBest"</li>
 	 * <li>
@@ -1659,6 +1655,10 @@ public class SecuritiesExecutionInstructions1 {
 	 * definition} =
 	 * "Indicates that an order should be cancelled if it is no longer the best bid if buying, or the best offer if selling."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmCancelIfNotBest = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
@@ -1709,10 +1709,6 @@ public class SecuritiesExecutionInstructions1 {
 	 * SecuritiesExecutionInstructions1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "XtrnlRtgAllwd"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ExternalRoutingAllowed"</li>
 	 * <li>
@@ -1720,6 +1716,10 @@ public class SecuritiesExecutionInstructions1 {
 	 * definition} =
 	 * "Indicates that an order sent to one market may be routed by that market to other external markets, especially in cases where the order locks or crosses the market and it can be executed against another markets superior price. The absence of this instruction does not imply that an order should not be routed externally; rather, the order receivers default will apply."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmExternalRoutingAllowed = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
@@ -1770,10 +1770,6 @@ public class SecuritiesExecutionInstructions1 {
 	 * SecuritiesExecutionInstructions1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "XtrnlRtgNotAllwd"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ExternalRoutingNotAllowed"</li>
 	 * <li>
@@ -1781,6 +1777,10 @@ public class SecuritiesExecutionInstructions1 {
 	 * definition} =
 	 * "Indicates that an order sent to one market may never be routed by that market to other external markets. Should the order lock or cross the market but be unable to execute due to price protection reasons, a market may have to take alternate action, which might include rejecting the order, depending on the markets rules.The absence of this instruction does not imply that an order should be routed externally; rather, the order receivers default will apply."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmExternalRoutingNotAllowed = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
@@ -1831,10 +1831,6 @@ public class SecuritiesExecutionInstructions1 {
 	 * SecuritiesExecutionInstructions1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ImbalOnly"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ImbalanceOnly"</li>
 	 * <li>
@@ -1842,6 +1838,10 @@ public class SecuritiesExecutionInstructions1 {
 	 * definition} =
 	 * "Indicates that the order can only hit the imbalance during a call auction. The imbalance is the remaining quantity when other buy and sell orders are matched at the auction clearing price."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmImbalanceOnly = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
@@ -1892,10 +1892,6 @@ public class SecuritiesExecutionInstructions1 {
 	 * SecuritiesExecutionInstructions1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "IntrmktSweep"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IntermarketSweep"</li>
 	 * <li>
@@ -1903,6 +1899,10 @@ public class SecuritiesExecutionInstructions1 {
 	 * definition} =
 	 * "Indicates that the party sending the order has taken responsibility for price protection, and the recipient of the order should execute it, if possible, without regard to protection of other markets prices. While the term \"Intermarket sweep\" is specific to the United States, it may be used in other markets, where appropriate, to indicate an order that should be executed without regard to price protection."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmIntermarketSweep = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
@@ -1953,10 +1953,6 @@ public class SecuritiesExecutionInstructions1 {
 	 * SecuritiesExecutionInstructions1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Netg"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Netting"</li>
 	 * <li>
@@ -1964,6 +1960,10 @@ public class SecuritiesExecutionInstructions1 {
 	 * definition} =
 	 * "Used when sending multiple orders indicating that you would be 'netting' the F/X later."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmNetting = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {

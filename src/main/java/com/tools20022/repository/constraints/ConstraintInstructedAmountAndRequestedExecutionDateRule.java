@@ -37,10 +37,6 @@ public class ConstraintInstructedAmountAndRequestedExecutionDateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionExtract2
 	 * PaymentInstructionExtract2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InstructedAmountAndRequestedExecutionDateRule"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintInstructedAmountAndRequestedExecutionDateRule {
 	 * definition} =
 	 * "If InstructedAmount is present, then RequestedExecutionDate is mandatory.\nIf InstructedAmount is not present, then RequestedExecutionDate is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PaymentInstructionExtract2> forPaymentInstructionExtract2 = new MMConstraint<PaymentInstructionExtract2>() {
@@ -71,10 +71,6 @@ public class ConstraintInstructedAmountAndRequestedExecutionDateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorrectivePaymentInstructionExtract
 	 * CorrectivePaymentInstructionExtract}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InstructedAmountAndRequestedExecutionDateRule"</li>
 	 * <li>
@@ -82,6 +78,10 @@ public class ConstraintInstructedAmountAndRequestedExecutionDateRule {
 	 * definition} =
 	 * "If InstructedAmount is present, then RequestedExecutionDate is mandatory.\nIf InstructedAmount is not present, then RequestedExecutionDate is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorrectivePaymentInstructionExtract> forCorrectivePaymentInstructionExtract = new MMConstraint<CorrectivePaymentInstructionExtract>() {

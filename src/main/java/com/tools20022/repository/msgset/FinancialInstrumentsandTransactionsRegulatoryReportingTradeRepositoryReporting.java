@@ -51,10 +51,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * businessProcessCatalogue} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#catalogue
  * GeneratedRepository.catalogue}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "Financial Instruments and Transactions Regulatory Reporting (Trade Repository Reporting)"
  * </li>
@@ -62,6 +58,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} =
  * "This message set provides for the specification of the Financial Instrument Reporting (Trade Repository reporting) requirements."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * </ul>
  */
 public class FinancialInstrumentsandTransactionsRegulatoryReportingTradeRepositoryReporting {

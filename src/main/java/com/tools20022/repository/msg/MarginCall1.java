@@ -111,14 +111,14 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "MarginCall1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Details of the margin call request."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -149,10 +149,6 @@ public class MarginCall1 {
 	 * {@linkplain com.tools20022.repository.msg.MarginCall1 MarginCall1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "XpsdAmtPtyA"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ExposedAmountPartyA"</li>
 	 * <li>
@@ -160,6 +156,10 @@ public class MarginCall1 {
 	 * definition} =
 	 * "Sum of the exposures of all transactions which are in the favour of party A. That is, all transactions which would have an amount payable by party B to party A if they were being terminated."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<MarginCall1, Optional<ActiveCurrencyAndAmount>> mmExposedAmountPartyA = new MMMessageAttribute<MarginCall1, Optional<ActiveCurrencyAndAmount>>() {
@@ -209,10 +209,6 @@ public class MarginCall1 {
 	 * {@linkplain com.tools20022.repository.msg.MarginCall1 MarginCall1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "XpsdAmtPtyB"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ExposedAmountPartyB"</li>
 	 * <li>
@@ -220,6 +216,10 @@ public class MarginCall1 {
 	 * definition} =
 	 * "Sum of the exposures of all transactions which are in the favour of party B. That is, all transactions which would have an amount payable by party A to party B if they were being terminated."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<MarginCall1, Optional<ActiveCurrencyAndAmount>> mmExposedAmountPartyB = new MMMessageAttribute<MarginCall1, Optional<ActiveCurrencyAndAmount>>() {
@@ -269,10 +269,6 @@ public class MarginCall1 {
 	 * {@linkplain com.tools20022.repository.msg.MarginCall1 MarginCall1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "XpsrCnvntn"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ExposureConvention"</li>
 	 * <li>
@@ -280,6 +276,10 @@ public class MarginCall1 {
 	 * definition} =
 	 * "Determines how the variation margin requirement is to be calculated:\r\n- either Net, in which the exposure of all transactions in favour of party A and the the exposure of all transactions in favour of party B will be netted together or\r\n- gross in which two separate variation margin requirements will be determined."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<MarginCall1, Optional<ExposureConventionType1Code>> mmExposureConvention = new MMMessageAttribute<MarginCall1, Optional<ExposureConventionType1Code>>() {
@@ -328,10 +328,6 @@ public class MarginCall1 {
 	 * {@linkplain com.tools20022.repository.msg.MarginCall1 MarginCall1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "IndpdntAmtPtyA"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IndependentAmountPartyA"</li>
 	 * <li>
@@ -339,6 +335,10 @@ public class MarginCall1 {
 	 * definition} =
 	 * "Amount applied as an add-on to the exposure (to party A) usually intended to cover a possible increase in exposure before the next valuation date."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<MarginCall1, Optional<AggregatedIndependentAmount1>> mmIndependentAmountPartyA = new MMMessageAssociationEnd<MarginCall1, Optional<AggregatedIndependentAmount1>>() {
@@ -388,10 +388,6 @@ public class MarginCall1 {
 	 * {@linkplain com.tools20022.repository.msg.MarginCall1 MarginCall1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "IndpdntAmtPtyB"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IndependentAmountPartyB"</li>
 	 * <li>
@@ -399,6 +395,10 @@ public class MarginCall1 {
 	 * definition} =
 	 * "An amount applied as an add-on to the exposure (to party B) usually intended to cover a possible increase in exposure before the next valuation date."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<MarginCall1, Optional<AggregatedIndependentAmount1>> mmIndependentAmountPartyB = new MMMessageAssociationEnd<MarginCall1, Optional<AggregatedIndependentAmount1>>() {
@@ -447,10 +447,6 @@ public class MarginCall1 {
 	 * {@linkplain com.tools20022.repository.msg.MarginCall1 MarginCall1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MrgnTerms"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MarginTerms"</li>
 	 * <li>
@@ -458,6 +454,10 @@ public class MarginCall1 {
 	 * definition} =
 	 * "Provides information like threshold amount, threshold type, minimum transfer amount, rouding amount or rounding convention, that applies to either the variation margin or the segregated independent amount."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<MarginCall1, Optional<MarginTerms1Choice>> mmMarginTerms = new MMMessageAssociationEnd<MarginCall1, Optional<MarginTerms1Choice>>() {
@@ -507,10 +507,6 @@ public class MarginCall1 {
 	 * {@linkplain com.tools20022.repository.msg.MarginCall1 MarginCall1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CollBal"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CollateralBalance"</li>
 	 * <li>
@@ -518,6 +514,10 @@ public class MarginCall1 {
 	 * definition} =
 	 * "Provides details about the collateral held, in transit or that still needs to be agreed by both parties with a segregation between variation margin and segregated independent amount."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<MarginCall1, Optional<CollateralBalance1Choice>> mmCollateralBalance = new MMMessageAssociationEnd<MarginCall1, Optional<CollateralBalance1Choice>>() {

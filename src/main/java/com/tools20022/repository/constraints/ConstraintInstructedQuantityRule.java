@@ -38,10 +38,6 @@ public class ConstraintInstructedQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.InstructedOrQuantityToReceive2Choice
 	 * InstructedOrQuantityToReceive2Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InstructedQuantityRule"</li>
 	 * <li>
@@ -49,6 +45,10 @@ public class ConstraintInstructedQuantityRule {
 	 * definition} =
 	 * "InstructedQuantity must be provided unless QuantityToReceive is requested in the related CorporateActionNotification message, eg, for event types Priority Issue (PRIO) and Dividend Reinvestment (DRIP)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<InstructedOrQuantityToReceive2Choice> forInstructedOrQuantityToReceive2Choice = new MMConstraint<InstructedOrQuantityToReceive2Choice>() {
@@ -72,10 +72,6 @@ public class ConstraintInstructedQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.InstructedOrQuantityToReceive1Choice
 	 * InstructedOrQuantityToReceive1Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InstructedQuantityRule"</li>
 	 * <li>
@@ -83,6 +79,10 @@ public class ConstraintInstructedQuantityRule {
 	 * definition} =
 	 * "InstructedQuantity must be provided unless QuantityToReceive is requested in the related CorporateActionNotification message, eg, for event types Priority Issue (PRIO) and Dividend Reinvestment (DRIP)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<InstructedOrQuantityToReceive1Choice> forInstructedOrQuantityToReceive1Choice = new MMConstraint<InstructedOrQuantityToReceive1Choice>() {

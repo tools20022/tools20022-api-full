@@ -107,16 +107,16 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "ReorganisationInstructionDetailsSD1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Provides additional information regarding corporate action reorganisation instruction details."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -144,15 +144,15 @@ public class ReorganisationInstructionDetailsSD1 {
 	 * ReorganisationInstructionDetailsSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PlcAndNm"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PlaceAndName"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Xpath to the element that is being extended."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ReorganisationInstructionDetailsSD1, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<ReorganisationInstructionDetailsSD1, Optional<Max350Text>>() {
@@ -197,15 +197,15 @@ public class ReorganisationInstructionDetailsSD1 {
 	 * ReorganisationInstructionDetailsSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TxTp"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TransactionType"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identifies the reorganisation transaction type."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ReorganisationInstructionDetailsSD1, Optional<ReorganisationTransactionType1Code>> mmTransactionType = new MMMessageAttribute<ReorganisationInstructionDetailsSD1, Optional<ReorganisationTransactionType1Code>>() {
@@ -249,10 +249,6 @@ public class ReorganisationInstructionDetailsSD1 {
 	 * ReorganisationInstructionDetailsSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TxId"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TransactionIdentification"</li>
 	 * <li>
@@ -260,6 +256,10 @@ public class ReorganisationInstructionDetailsSD1 {
 	 * definition} =
 	 * "Unique number assigned by the depository. Transaction identification will be either the DTC instruction reference number for reorganisation instructions (VOI) or the DAM reference number for custody / reorganisation deposits."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ReorganisationInstructionDetailsSD1, Optional<Max15Text>> mmTransactionIdentification = new MMMessageAttribute<ReorganisationInstructionDetailsSD1, Optional<Max15Text>>() {
@@ -304,10 +304,6 @@ public class ReorganisationInstructionDetailsSD1 {
 	 * ReorganisationInstructionDetailsSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TxSeqNb"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TransactionSequenceNumber"</li>
 	 * <li>
@@ -315,6 +311,10 @@ public class ReorganisationInstructionDetailsSD1 {
 	 * definition} =
 	 * "Number which further identifies DTC instruction reference number. Not applicable to reorganisation / custody deposits."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ReorganisationInstructionDetailsSD1, Optional<Max3NumericText>> mmTransactionSequenceNumber = new MMMessageAttribute<ReorganisationInstructionDetailsSD1, Optional<Max3NumericText>>() {
@@ -359,15 +359,15 @@ public class ReorganisationInstructionDetailsSD1 {
 	 * ReorganisationInstructionDetailsSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CstmrSeqNb"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CustomerSequenceNumber"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Unique identifier for each customer in a transaction."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ReorganisationInstructionDetailsSD1, Optional<Max9NumericText>> mmCustomerSequenceNumber = new MMMessageAttribute<ReorganisationInstructionDetailsSD1, Optional<Max9NumericText>>() {
@@ -411,10 +411,6 @@ public class ReorganisationInstructionDetailsSD1 {
 	 * ReorganisationInstructionDetailsSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrtctId"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ProtectIdentification"</li>
 	 * <li>
@@ -422,6 +418,10 @@ public class ReorganisationInstructionDetailsSD1 {
 	 * definition} =
 	 * "Identifies the protect itself or of that is being covered. It is required for the function types cover protect (COVR), cover protect directly to agent (COVA) and cover on behalf of another participant (COVP)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ReorganisationInstructionDetailsSD1, Optional<Max15Text>> mmProtectIdentification = new MMMessageAttribute<ReorganisationInstructionDetailsSD1, Optional<Max15Text>>() {
@@ -466,10 +466,6 @@ public class ReorganisationInstructionDetailsSD1 {
 	 * ReorganisationInstructionDetailsSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrtctSfkpgAcct"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ProtectSafekeepingAccount"</li>
 	 * <li>
@@ -477,6 +473,10 @@ public class ReorganisationInstructionDetailsSD1 {
 	 * definition} =
 	 * "For cover protect instructions whereby one safekeeping account is covering on behalf of another safekeeping account. The protect safekeeping account will be the account which submitted the original protect instruction."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ReorganisationInstructionDetailsSD1, Optional<RestrictedFINMax35Text>> mmProtectSafekeepingAccount = new MMMessageAttribute<ReorganisationInstructionDetailsSD1, Optional<RestrictedFINMax35Text>>() {
@@ -520,10 +520,6 @@ public class ReorganisationInstructionDetailsSD1 {
 	 * ReorganisationInstructionDetailsSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrtctDt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ProtectDate"</li>
 	 * <li>
@@ -531,6 +527,10 @@ public class ReorganisationInstructionDetailsSD1 {
 	 * definition} =
 	 * "Date on which the protect was created. It is required for transaction types cover protect transaction (COVR), cover protect directly to agent transaction (COVA) and \r\ncover protect on behalf of another participant transaction (COVP)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ReorganisationInstructionDetailsSD1, Optional<ISODate>> mmProtectDate = new MMMessageAttribute<ReorganisationInstructionDetailsSD1, Optional<ISODate>>() {
@@ -574,10 +574,6 @@ public class ReorganisationInstructionDetailsSD1 {
 	 * ReorganisationInstructionDetailsSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SctiesQtyDtls"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SecuritiesQuantityDetails"</li>
 	 * <li>
@@ -585,6 +581,10 @@ public class ReorganisationInstructionDetailsSD1 {
 	 * definition} =
 	 * "Provides information about securities quantity linked to a corporate action option."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<ReorganisationInstructionDetailsSD1, Optional<SecuritiesQuantityDetailsSD3>> mmSecuritiesQuantityDetails = new MMMessageAssociationEnd<ReorganisationInstructionDetailsSD1, Optional<SecuritiesQuantityDetailsSD3>>() {
@@ -630,10 +630,6 @@ public class ReorganisationInstructionDetailsSD1 {
 	 * ReorganisationInstructionDetailsSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "WarrtSbcptChrgAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "WarrantSubscriptionChargeAmount"</li>
 	 * <li>
@@ -641,6 +637,10 @@ public class ReorganisationInstructionDetailsSD1 {
 	 * definition} =
 	 * "Warrant subscription amount entered by client when instructing on a warrant exercise instruction."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ReorganisationInstructionDetailsSD1, Optional<RestrictedFINActiveCurrencyAndAmount>> mmWarrantSubscriptionChargeAmount = new MMMessageAttribute<ReorganisationInstructionDetailsSD1, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
@@ -685,10 +685,6 @@ public class ReorganisationInstructionDetailsSD1 {
 	 * ReorganisationInstructionDetailsSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NonXmptInstrsAllwdInd"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NonExemptInstructionsAllowedIndicator"</li>
 	 * <li>
@@ -696,6 +692,10 @@ public class ReorganisationInstructionDetailsSD1 {
 	 * definition} =
 	 * "Indicates whether DTC participant is willing to accept penalties as a result of processing instructions prior to maturity of CD redemptions events.\r\nYes: participant accepts penalties.\r\nNo: participant does not accept penalties."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ReorganisationInstructionDetailsSD1, Optional<YesNoIndicator>> mmNonExemptInstructionsAllowedIndicator = new MMMessageAttribute<ReorganisationInstructionDetailsSD1, Optional<YesNoIndicator>>() {
@@ -740,10 +740,6 @@ public class ReorganisationInstructionDetailsSD1 {
 	 * ReorganisationInstructionDetailsSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SlctnFeeInd"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SolicitationFeeIndicator"</li>
 	 * <li>
@@ -751,6 +747,10 @@ public class ReorganisationInstructionDetailsSD1 {
 	 * definition} =
 	 * "Indicates whether there is a solicitation fee on the event. This fee is paid soliciting dealer.\r\nYes: there is a solicitation fee.\r\nNo: there is not a solicitation fee."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ReorganisationInstructionDetailsSD1, Optional<YesNoIndicator>> mmSolicitationFeeIndicator = new MMMessageAttribute<ReorganisationInstructionDetailsSD1, Optional<YesNoIndicator>>() {
@@ -795,10 +795,6 @@ public class ReorganisationInstructionDetailsSD1 {
 	 * ReorganisationInstructionDetailsSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TndrOddLotInd"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TenderOddLotIndicator"</li>
 	 * <li>
@@ -806,6 +802,10 @@ public class ReorganisationInstructionDetailsSD1 {
 	 * definition} =
 	 * "Indicates whether the tender offer accepts odd lots. \r\nYes: tender offer accepts odd lots.\r\nNo: tender offer does not accept odd lots."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ReorganisationInstructionDetailsSD1, Optional<YesNoIndicator>> mmTenderOddLotIndicator = new MMMessageAttribute<ReorganisationInstructionDetailsSD1, Optional<YesNoIndicator>>() {
@@ -849,15 +849,15 @@ public class ReorganisationInstructionDetailsSD1 {
 	 * ReorganisationInstructionDetailsSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Cert"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Certificate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Certificate information for a given instruction."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<ReorganisationInstructionDetailsSD1, Optional<CorporateActionCertificateSD1>> mmCertificate = new MMMessageAssociationEnd<ReorganisationInstructionDetailsSD1, Optional<CorporateActionCertificateSD1>>() {
@@ -902,16 +902,16 @@ public class ReorganisationInstructionDetailsSD1 {
 	 * ReorganisationInstructionDetailsSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CstmrRefId"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CustomerReferenceIdentification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Customer identification entered by client upon instruction submission."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ReorganisationInstructionDetailsSD1, Optional<Max30Text>> mmCustomerReferenceIdentification = new MMMessageAttribute<ReorganisationInstructionDetailsSD1, Optional<Max30Text>>() {
@@ -955,10 +955,6 @@ public class ReorganisationInstructionDetailsSD1 {
 	 * ReorganisationInstructionDetailsSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "UsrRefNb"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UserReferenceNumber"</li>
 	 * <li>
@@ -966,6 +962,10 @@ public class ReorganisationInstructionDetailsSD1 {
 	 * definition} =
 	 * "Unique identification of the transaction used by the transmitting party."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ReorganisationInstructionDetailsSD1, Optional<Max6Text>> mmUserReferenceNumber = new MMMessageAttribute<ReorganisationInstructionDetailsSD1, Optional<Max6Text>>() {
@@ -1008,10 +1008,6 @@ public class ReorganisationInstructionDetailsSD1 {
 	 * ReorganisationInstructionDetailsSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CtctPrsn"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ContactPerson"</li>
 	 * <li>
@@ -1019,6 +1015,10 @@ public class ReorganisationInstructionDetailsSD1 {
 	 * definition} =
 	 * "Party contact information for the given instruction; required for voluntary offer instruction transaction (VOIT), protect transaction (PROT) and protect on behalf of another participant transaction (PROP); not required for cover protect instructions like cover protect transaction (COVR), cover protect directly to agent transaction (COVA) and cover protect on behalf of another participant transaction (COVP)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<ReorganisationInstructionDetailsSD1, Optional<ContactIdentification5>> mmContactPerson = new MMMessageAssociationEnd<ReorganisationInstructionDetailsSD1, Optional<ContactIdentification5>>() {
@@ -1063,10 +1063,6 @@ public class ReorganisationInstructionDetailsSD1 {
 	 * ReorganisationInstructionDetailsSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AckDtls"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AcknowledgementDetails"</li>
 	 * <li>
@@ -1074,6 +1070,10 @@ public class ReorganisationInstructionDetailsSD1 {
 	 * definition} =
 	 * "Acknowledgement information relative to corporate action reorganisation instructions."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<ReorganisationInstructionDetailsSD1, Optional<CorporateActionAcknowledgementSD1>> mmAcknowledgementDetails = new MMMessageAssociationEnd<ReorganisationInstructionDetailsSD1, Optional<CorporateActionAcknowledgementSD1>>() {
@@ -1117,10 +1117,6 @@ public class ReorganisationInstructionDetailsSD1 {
 	 * ReorganisationInstructionDetailsSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DcsdBnfclOwnrDtls"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DeceasedBeneficialOwnerDetails"</li>
 	 * <li>
@@ -1128,6 +1124,10 @@ public class ReorganisationInstructionDetailsSD1 {
 	 * definition} =
 	 * "Beneficial owner information related to CD early redemption instructions."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<ReorganisationInstructionDetailsSD1, Optional<DeceasedStatusSD1>> mmDeceasedBeneficialOwnerDetails = new MMMessageAssociationEnd<ReorganisationInstructionDetailsSD1, Optional<DeceasedStatusSD1>>() {

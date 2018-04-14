@@ -39,10 +39,6 @@ public class ConstraintCurrencyAmount {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount
 	 * ActiveOrHistoricCurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyAmount"</li>
 	 * <li>
@@ -50,6 +46,10 @@ public class ConstraintCurrencyAmount {
 	 * definition} =
 	 * "The number of fractional digits (or minor unit of currency) must comply with ISO 4217.\nNote: The decimal separator is a dot."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ActiveOrHistoricCurrencyAndAmount> forActiveOrHistoricCurrencyAndAmount = new MMConstraint<ActiveOrHistoricCurrencyAndAmount>() {
@@ -73,10 +73,6 @@ public class ConstraintCurrencyAmount {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
 	 * ActiveCurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyAmount"</li>
 	 * <li>
@@ -84,6 +80,10 @@ public class ConstraintCurrencyAmount {
 	 * definition} =
 	 * "The number of fractional digits (or minor unit of currency) must comply with ISO 4217.\nNote: The decimal separator is a dot."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ActiveCurrencyAndAmount> forActiveCurrencyAndAmount = new MMConstraint<ActiveCurrencyAndAmount>() {
@@ -107,10 +107,6 @@ public class ConstraintCurrencyAmount {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.datatype.RestrictedFINActiveOrHistoricCurrencyAndAmount
 	 * RestrictedFINActiveOrHistoricCurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyAmount"</li>
 	 * <li>
@@ -118,6 +114,10 @@ public class ConstraintCurrencyAmount {
 	 * definition} =
 	 * "The number of fractional digits (or minor unit of currency) must comply with ISO 4217.\nNote: The decimal separator is a dot."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RestrictedFINActiveOrHistoricCurrencyAndAmount> forRestrictedFINActiveOrHistoricCurrencyAndAmount = new MMConstraint<RestrictedFINActiveOrHistoricCurrencyAndAmount>() {
@@ -141,10 +141,6 @@ public class ConstraintCurrencyAmount {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.datatype.RestrictedFINActiveCurrencyAndAmount
 	 * RestrictedFINActiveCurrencyAndAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyAmount"</li>
 	 * <li>
@@ -152,6 +148,10 @@ public class ConstraintCurrencyAmount {
 	 * definition} =
 	 * "The number of fractional digits (or minor unit of currency) must comply with ISO 4217.\nNote: The decimal separator is a dot."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RestrictedFINActiveCurrencyAndAmount> forRestrictedFINActiveCurrencyAndAmount = new MMConstraint<RestrictedFINActiveCurrencyAndAmount>() {

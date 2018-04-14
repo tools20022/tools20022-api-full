@@ -37,10 +37,6 @@ public class ConstraintIBAN {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.datatype.IBANIdentifier
 	 * IBANIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IBAN"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintIBAN {
 	 * definition} =
 	 * "A valid IBAN consists of all three of the following components: Country Code, check digits and BBAN."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IBANIdentifier> forIBANIdentifier = new MMConstraint<IBANIdentifier>() {
@@ -71,10 +71,6 @@ public class ConstraintIBAN {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.datatype.IBAN2007Identifier
 	 * IBAN2007Identifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IBAN"</li>
 	 * <li>
@@ -82,6 +78,10 @@ public class ConstraintIBAN {
 	 * definition} =
 	 * "A valid IBAN consists of all three of the following components: Country Code, check digits and BBAN."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IBAN2007Identifier> forIBAN2007Identifier = new MMConstraint<IBAN2007Identifier>() {

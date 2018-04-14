@@ -38,10 +38,6 @@ public class ConstraintSecondLevelTax2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate97
 	 * CorporateActionRate97}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SecondLevelTax2Rule"</li>
 	 * <li>
@@ -49,6 +45,10 @@ public class ConstraintSecondLevelTax2Rule {
 	 * definition} =
 	 * "Only a single occurrence of either SecondLevelTax/Amount or SecondLevelTax/Rate or SecondLevelTax/NotSpecifiedRate may be present, only one of these elements may be present. \r\n(MT 564 NVR C7)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionRate97> forCorporateActionRate97 = new MMConstraint<CorporateActionRate97>() {
@@ -71,10 +71,6 @@ public class ConstraintSecondLevelTax2Rule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RateDetails33 RateDetails33}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SecondLevelTax2Rule"</li>
 	 * <li>
@@ -82,6 +78,10 @@ public class ConstraintSecondLevelTax2Rule {
 	 * definition} =
 	 * "Only a single occurrence of either SecondLevelTax/Amount or SecondLevelTax/Rate or SecondLevelTax/NotSpecifiedRate may be present, only one of these elements may be present. \r\n(MT 566 NVR C3)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RateDetails33> forRateDetails33 = new MMConstraint<RateDetails33>() {
@@ -104,10 +104,6 @@ public class ConstraintSecondLevelTax2Rule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RateDetails32 RateDetails32}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SecondLevelTax2Rule"</li>
 	 * <li>
@@ -115,6 +111,10 @@ public class ConstraintSecondLevelTax2Rule {
 	 * definition} =
 	 * "Only a single occurrence of either SecondLevelTax/Amount or SecondLevelTax/Rate or SecondLevelTax/NotSpecifiedRate may be present, only one of these elements may be present. \r\n(MT 566 NVR C3)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RateDetails32> forRateDetails32 = new MMConstraint<RateDetails32>() {
@@ -138,10 +138,6 @@ public class ConstraintSecondLevelTax2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate94
 	 * CorporateActionRate94}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SecondLevelTax2Rule"</li>
 	 * <li>
@@ -149,6 +145,10 @@ public class ConstraintSecondLevelTax2Rule {
 	 * definition} =
 	 * "Only a single occurrence of either SecondLevelTax/Amount or SecondLevelTax/Rate or SecondLevelTax/NotSpecifiedRate may be present, only one of these elements may be present. \r\n(MT 564 NVR C7)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionRate94> forCorporateActionRate94 = new MMConstraint<CorporateActionRate94>() {
@@ -172,10 +172,6 @@ public class ConstraintSecondLevelTax2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate88
 	 * CorporateActionRate88}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SecondLevelTax2Rule"</li>
 	 * <li>
@@ -183,6 +179,10 @@ public class ConstraintSecondLevelTax2Rule {
 	 * definition} =
 	 * "Only a single occurrence of either SecondLevelTax/Amount or SecondLevelTax/Rate or SecondLevelTax/NotSpecifiedRate may be present, only one of these elements may be present. \r\n(MT 564 NVR C7)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionRate88> forCorporateActionRate88 = new MMConstraint<CorporateActionRate88>() {
@@ -205,10 +205,6 @@ public class ConstraintSecondLevelTax2Rule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RateDetails34 RateDetails34}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SecondLevelTax2Rule"</li>
 	 * <li>
@@ -216,6 +212,10 @@ public class ConstraintSecondLevelTax2Rule {
 	 * definition} =
 	 * "Only a single occurrence of either SecondLevelTax/Amount or SecondLevelTax/Rate or SecondLevelTax/NotSpecifiedRate may be present, only one of these elements may be present. \r\n(MT 564 NVR C7)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RateDetails34> forRateDetails34 = new MMConstraint<RateDetails34>() {
@@ -239,10 +239,6 @@ public class ConstraintSecondLevelTax2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate87
 	 * CorporateActionRate87}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SecondLevelTax2Rule"</li>
 	 * <li>
@@ -250,6 +246,10 @@ public class ConstraintSecondLevelTax2Rule {
 	 * definition} =
 	 * "Only a single occurrence of either SecondLevelTax/Amount or SecondLevelTax/Rate or SecondLevelTax/NotSpecifiedRate may be present, only one of these elements may be present. \r\n(MT 564 NVR C7)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionRate87> forCorporateActionRate87 = new MMConstraint<CorporateActionRate87>() {
@@ -273,10 +273,6 @@ public class ConstraintSecondLevelTax2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate86
 	 * CorporateActionRate86}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SecondLevelTax2Rule"</li>
 	 * <li>
@@ -284,6 +280,10 @@ public class ConstraintSecondLevelTax2Rule {
 	 * definition} =
 	 * "Only a single occurrence of either SecondLevelTax/Amount or SecondLevelTax/Rate or SecondLevelTax/NotSpecifiedRate may be present, only one of these elements may be present. \r\n(MT 564 NVR C7)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionRate86> forCorporateActionRate86 = new MMConstraint<CorporateActionRate86>() {
@@ -306,10 +306,6 @@ public class ConstraintSecondLevelTax2Rule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RateDetails31 RateDetails31}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SecondLevelTax2Rule"</li>
 	 * <li>
@@ -317,6 +313,10 @@ public class ConstraintSecondLevelTax2Rule {
 	 * definition} =
 	 * "Only a single occurrence of either SecondLevelTax/Amount or SecondLevelTax/Rate or SecondLevelTax/NotSpecifiedRate may be present, only one of these elements may be present. \r\n(MT 564 NVR C7)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RateDetails31> forRateDetails31 = new MMConstraint<RateDetails31>() {
@@ -340,10 +340,6 @@ public class ConstraintSecondLevelTax2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate92
 	 * CorporateActionRate92}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SecondLevelTax2Rule"</li>
 	 * <li>
@@ -351,6 +347,10 @@ public class ConstraintSecondLevelTax2Rule {
 	 * definition} =
 	 * "Only a single occurrence of either SecondLevelTax/Amount or SecondLevelTax/Rate or SecondLevelTax/NotSpecifiedRate may be present, only one of these elements may be present. \r\n(MT 564 NVR C7)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionRate92> forCorporateActionRate92 = new MMConstraint<CorporateActionRate92>() {

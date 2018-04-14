@@ -132,16 +132,16 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "ClearingSystemMemberIdentification2Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Choice of identifiers for a clearing system member, as assigned by the clearing system. In some clearing systems, the accounts of the clearing system members are also assigned an identifier."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -176,10 +176,6 @@ public class ClearingSystemMemberIdentification2Choice {
 	 * ClearingSystemMemberIdentification2Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "USCHU"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CHIPSUniversalIdentification"</li>
 	 * <li>
@@ -187,6 +183,10 @@ public class ClearingSystemMemberIdentification2Choice {
 	 * definition} =
 	 * "(United States) Clearing House Interbank Payments System (CHIPS) Universal Identification (UID) - identifies entities that own accounts at CHIPS participating financial institutions, through which CHIPS payments are effected. The CHIPS UID is assigned by the New York Clearing House."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ClearingSystemMemberIdentification2Choice, CHIPSUniversalIdentifier> mmCHIPSUniversalIdentification = new MMMessageAttribute<ClearingSystemMemberIdentification2Choice, CHIPSUniversalIdentifier>() {
@@ -237,10 +237,6 @@ public class ClearingSystemMemberIdentification2Choice {
 	 * ClearingSystemMemberIdentification2Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NZNCC"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NewZealandNCCIdentification"</li>
 	 * <li>
@@ -248,6 +244,10 @@ public class ClearingSystemMemberIdentification2Choice {
 	 * definition} =
 	 * "New Zealand Bank/Branch Code - identifies New Zealand institutions on the New Zealand national clearing system. The code is assigned by the New Zealand Bankers' Association (NZBA)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ClearingSystemMemberIdentification2Choice, NewZealandNCCIdentifier> mmNewZealandNCCIdentification = new MMMessageAttribute<ClearingSystemMemberIdentification2Choice, NewZealandNCCIdentifier>() {
@@ -298,10 +298,6 @@ public class ClearingSystemMemberIdentification2Choice {
 	 * ClearingSystemMemberIdentification2Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "IENSC"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IrishNSCIdentification"</li>
 	 * <li>
@@ -309,6 +305,10 @@ public class ClearingSystemMemberIdentification2Choice {
 	 * definition} =
 	 * "Irish National Sorting Code - identifies Irish financial institutions on the Irish national clearing system. The code is assigned by the Irish Payments Services Organisation (IPSO)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ClearingSystemMemberIdentification2Choice, IrishNSCIdentifier> mmIrishNSCIdentification = new MMMessageAttribute<ClearingSystemMemberIdentification2Choice, IrishNSCIdentifier>() {
@@ -359,10 +359,6 @@ public class ClearingSystemMemberIdentification2Choice {
 	 * ClearingSystemMemberIdentification2Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "GBSC"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UKDomesticSortCode"</li>
 	 * <li>
@@ -370,6 +366,10 @@ public class ClearingSystemMemberIdentification2Choice {
 	 * definition} =
 	 * "United Kingdom (UK) Sort Code - identifies British financial institutions on the British national clearing systems. The sort code is assigned by the Association for Payments and Clearing Services (APACS)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ClearingSystemMemberIdentification2Choice, UKDomesticSortCodeIdentifier> mmUKDomesticSortCode = new MMMessageAttribute<ClearingSystemMemberIdentification2Choice, UKDomesticSortCodeIdentifier>() {
@@ -420,10 +420,6 @@ public class ClearingSystemMemberIdentification2Choice {
 	 * ClearingSystemMemberIdentification2Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "USCH"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CHIPSParticipantIdentification"</li>
 	 * <li>
@@ -431,6 +427,10 @@ public class ClearingSystemMemberIdentification2Choice {
 	 * definition} =
 	 * "(United States) Clearing House Interbank Payment System (CHIPS) Participant Identifier (ID) - identifies financial institutions participating on CHIPS. The CHIPS Participant ID is assigned by the New York Clearing House."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ClearingSystemMemberIdentification2Choice, CHIPSParticipantIdentifier> mmCHIPSParticipantIdentification = new MMMessageAttribute<ClearingSystemMemberIdentification2Choice, CHIPSParticipantIdentifier>() {
@@ -481,10 +481,6 @@ public class ClearingSystemMemberIdentification2Choice {
 	 * ClearingSystemMemberIdentification2Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CHBC"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SwissBCIdentification"</li>
 	 * <li>
@@ -492,6 +488,10 @@ public class ClearingSystemMemberIdentification2Choice {
 	 * definition} =
 	 * "Swiss Bank Code - identifies Swiss institutions on the Swiss national clearing system."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ClearingSystemMemberIdentification2Choice, SwissBCIdentifier> mmSwissBCIdentification = new MMMessageAttribute<ClearingSystemMemberIdentification2Choice, SwissBCIdentifier>() {
@@ -542,10 +542,6 @@ public class ClearingSystemMemberIdentification2Choice {
 	 * ClearingSystemMemberIdentification2Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "USFW"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FedwireRoutingNumberIdentification"</li>
 	 * <li>
@@ -553,6 +549,10 @@ public class ClearingSystemMemberIdentification2Choice {
 	 * definition} =
 	 * "Fedwire Routing Number - identifies financial institutions, in the US, on the FedWire system. The routing number is assigned by the American Bankers Association (ABA)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ClearingSystemMemberIdentification2Choice, FedwireRoutingNumberIdentifier> mmFedwireRoutingNumberIdentification = new MMMessageAttribute<ClearingSystemMemberIdentification2Choice, FedwireRoutingNumberIdentifier>() {
@@ -603,10 +603,6 @@ public class ClearingSystemMemberIdentification2Choice {
 	 * ClearingSystemMemberIdentification2Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PTNCC"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PortugueseNCCIdentification"</li>
 	 * <li>
@@ -614,6 +610,10 @@ public class ClearingSystemMemberIdentification2Choice {
 	 * definition} =
 	 * "Portuguese National Clearing Code - identifies Portuguese financial institutions on the Portuguese national clearing system."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ClearingSystemMemberIdentification2Choice, PortugueseNCCIdentifier> mmPortugueseNCCIdentification = new MMMessageAttribute<ClearingSystemMemberIdentification2Choice, PortugueseNCCIdentifier>() {
@@ -664,10 +664,6 @@ public class ClearingSystemMemberIdentification2Choice {
 	 * ClearingSystemMemberIdentification2Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RUCB"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RussianCentralBankIdentificationCode"</li>
 	 * <li>
@@ -675,6 +671,10 @@ public class ClearingSystemMemberIdentification2Choice {
 	 * definition} =
 	 * "Russian Central Bank Identification Code - identifies Russian financial institutions on the Russian national clearing system."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ClearingSystemMemberIdentification2Choice, RussianCentralBankIdentificationCodeIdentifier> mmRussianCentralBankIdentificationCode = new MMMessageAttribute<ClearingSystemMemberIdentification2Choice, RussianCentralBankIdentificationCodeIdentifier>() {
@@ -725,10 +725,6 @@ public class ClearingSystemMemberIdentification2Choice {
 	 * ClearingSystemMemberIdentification2Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ITNCC"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ItalianDomesticIdentificationCode"</li>
 	 * <li>
@@ -736,6 +732,10 @@ public class ClearingSystemMemberIdentification2Choice {
 	 * definition} =
 	 * "Italian Domestic Identification Code - identifies Italian financial institutions on the Italian national clearing system. The code is assigned by the Associazione Bancaria Italiana (ABI)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ClearingSystemMemberIdentification2Choice, ItalianDomesticIdentifier> mmItalianDomesticIdentificationCode = new MMMessageAttribute<ClearingSystemMemberIdentification2Choice, ItalianDomesticIdentifier>() {
@@ -786,10 +786,6 @@ public class ClearingSystemMemberIdentification2Choice {
 	 * ClearingSystemMemberIdentification2Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ATBLZ"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AustrianBankleitzahlIdentification"</li>
 	 * <li>
@@ -797,6 +793,10 @@ public class ClearingSystemMemberIdentification2Choice {
 	 * definition} =
 	 * "Austrian Bankleitzahl - identifies Austrian financial institutions on the Austrian national clearing system."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ClearingSystemMemberIdentification2Choice, AustrianBankleitzahlIdentifier> mmAustrianBankleitzahlIdentification = new MMMessageAttribute<ClearingSystemMemberIdentification2Choice, AustrianBankleitzahlIdentifier>() {
@@ -847,10 +847,6 @@ public class ClearingSystemMemberIdentification2Choice {
 	 * ClearingSystemMemberIdentification2Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CACPA"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CanadianPaymentsAssociationRoutingNumberIdentification"</li>
 	 * <li>
@@ -858,6 +854,10 @@ public class ClearingSystemMemberIdentification2Choice {
 	 * definition} =
 	 * "Canadian Payments Association Routing Number - identifies Canadian financial institutions on the Canadian national clearing system."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ClearingSystemMemberIdentification2Choice, CanadianPaymentsARNIdentifier> mmCanadianPaymentsAssociationRoutingNumberIdentification = new MMMessageAttribute<ClearingSystemMemberIdentification2Choice, CanadianPaymentsARNIdentifier>() {
@@ -908,10 +908,6 @@ public class ClearingSystemMemberIdentification2Choice {
 	 * ClearingSystemMemberIdentification2Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CHSIC"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SwissSICIdentification"</li>
 	 * <li>
@@ -919,6 +915,10 @@ public class ClearingSystemMemberIdentification2Choice {
 	 * definition} =
 	 * "Swiss Interbank Clearing (SIC) Code - identifies Swiss financial institutions domestically, on the Swiss national clearing system."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ClearingSystemMemberIdentification2Choice, SwissSICIdentifier> mmSwissSICIdentification = new MMMessageAttribute<ClearingSystemMemberIdentification2Choice, SwissSICIdentifier>() {
@@ -969,10 +969,6 @@ public class ClearingSystemMemberIdentification2Choice {
 	 * ClearingSystemMemberIdentification2Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DEBLZ"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GermanBankleitzahlIdentification"</li>
 	 * <li>
@@ -980,6 +976,10 @@ public class ClearingSystemMemberIdentification2Choice {
 	 * definition} =
 	 * "German Bankleitzahl - identifies German financial institutions on the German national clearing systems."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ClearingSystemMemberIdentification2Choice, GermanBankleitzahlIdentifier> mmGermanBankleitzahlIdentification = new MMMessageAttribute<ClearingSystemMemberIdentification2Choice, GermanBankleitzahlIdentifier>() {
@@ -1030,10 +1030,6 @@ public class ClearingSystemMemberIdentification2Choice {
 	 * ClearingSystemMemberIdentification2Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ESNCC"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SpanishDomesticInterbankingIdentification"</li>
 	 * <li>
@@ -1041,6 +1037,10 @@ public class ClearingSystemMemberIdentification2Choice {
 	 * definition} =
 	 * "Spanish Domestic Interbanking Code - identifies Spanish financial institutions on the Spanish national clearing system. The code is assigned by the Centro de Cooperacion Interbancaria (CCI)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ClearingSystemMemberIdentification2Choice, SpanishDomesticInterbankingIdentifier> mmSpanishDomesticInterbankingIdentification = new MMMessageAttribute<ClearingSystemMemberIdentification2Choice, SpanishDomesticInterbankingIdentifier>() {
@@ -1091,10 +1091,6 @@ public class ClearingSystemMemberIdentification2Choice {
 	 * ClearingSystemMemberIdentification2Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ZANCC"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SouthAfricanNCCIdentification"</li>
 	 * <li>
@@ -1102,6 +1098,10 @@ public class ClearingSystemMemberIdentification2Choice {
 	 * definition} =
 	 * "South African National Clearing Code (NCC) - identifies South African financial institutions on the South African national clearing system. The code is assigned by the South African Bankers Services Company Ltd. (BankServ)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ClearingSystemMemberIdentification2Choice, SouthAfricanNCCIdentifier> mmSouthAfricanNCCIdentification = new MMMessageAttribute<ClearingSystemMemberIdentification2Choice, SouthAfricanNCCIdentifier>() {
@@ -1152,10 +1152,6 @@ public class ClearingSystemMemberIdentification2Choice {
 	 * ClearingSystemMemberIdentification2Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "HKNCC"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "HongKongBankCode"</li>
 	 * <li>
@@ -1163,6 +1159,10 @@ public class ClearingSystemMemberIdentification2Choice {
 	 * definition} =
 	 * "Hong Kong Bank Code - identifies Hong Kong financial institutions on the Hong Kong local clearing system."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ClearingSystemMemberIdentification2Choice, HongKongBankIdentifier> mmHongKongBankCode = new MMMessageAttribute<ClearingSystemMemberIdentification2Choice, HongKongBankIdentifier>() {
@@ -1213,10 +1213,6 @@ public class ClearingSystemMemberIdentification2Choice {
 	 * ClearingSystemMemberIdentification2Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AUBSBx"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AustralianExtensiveBranchNetworkIdentification"</li>
 	 * <li>
@@ -1224,6 +1220,10 @@ public class ClearingSystemMemberIdentification2Choice {
 	 * definition} =
 	 * "Extensive branch network list of the Australian Bank State Branch (BSB) Code. The codes are used for identifying Australian financial institutions, as assigned by the Australian Payments Clearing Association (APCA)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ClearingSystemMemberIdentification2Choice, ExtensiveBranchNetworkIdentifier> mmAustralianExtensiveBranchNetworkIdentification = new MMMessageAttribute<ClearingSystemMemberIdentification2Choice, ExtensiveBranchNetworkIdentifier>() {
@@ -1274,10 +1274,6 @@ public class ClearingSystemMemberIdentification2Choice {
 	 * ClearingSystemMemberIdentification2Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AUBSBs"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AustralianSmallNetworkIdentification"</li>
 	 * <li>
@@ -1285,6 +1281,10 @@ public class ClearingSystemMemberIdentification2Choice {
 	 * definition} =
 	 * "Small network list of the Australian Bank State Branch (BSB) Code. The codes are used for identifying Australian financial institutions, as assigned by the Australian Payments Clearing Association (APCA)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ClearingSystemMemberIdentification2Choice, SmallNetworkIdentifier> mmAustralianSmallNetworkIdentification = new MMMessageAttribute<ClearingSystemMemberIdentification2Choice, SmallNetworkIdentifier>() {
@@ -1335,10 +1335,6 @@ public class ClearingSystemMemberIdentification2Choice {
 	 * ClearingSystemMemberIdentification2Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "INIFSC"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IndianFinancialSystemCode"</li>
 	 * <li>
@@ -1346,6 +1342,10 @@ public class ClearingSystemMemberIdentification2Choice {
 	 * definition} =
 	 * "Indian Financial System Code - identifies Indian financial institutions on the Indian local clearing system."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ClearingSystemMemberIdentification2Choice, IndianFinancialSystemCodeIdentifier> mmIndianFinancialSystemCode = new MMMessageAttribute<ClearingSystemMemberIdentification2Choice, IndianFinancialSystemCodeIdentifier>() {
@@ -1396,10 +1396,6 @@ public class ClearingSystemMemberIdentification2Choice {
 	 * ClearingSystemMemberIdentification2Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "GRHEBIC"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "HellenicBankIdentificationCode"</li>
 	 * <li>
@@ -1407,6 +1403,10 @@ public class ClearingSystemMemberIdentification2Choice {
 	 * definition} =
 	 * "Hellenic Bank Identification Code - identifies Hellenic financial institutions on the Hellenic national clearing system."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ClearingSystemMemberIdentification2Choice, HellenicBankIdentificationCodeIdentifier> mmHellenicBankIdentificationCode = new MMMessageAttribute<ClearingSystemMemberIdentification2Choice, HellenicBankIdentificationCodeIdentifier>() {
@@ -1457,10 +1457,6 @@ public class ClearingSystemMemberIdentification2Choice {
 	 * ClearingSystemMemberIdentification2Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PLKNR"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PolishNationalClearingCode"</li>
 	 * <li>
@@ -1468,6 +1464,10 @@ public class ClearingSystemMemberIdentification2Choice {
 	 * definition} =
 	 * "Polish National Clearing Code - identifies Polish financial institutions on the Polish national clearing system."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ClearingSystemMemberIdentification2Choice, PolishNationalClearingCodeIdentifier> mmPolishNationalClearingCode = new MMMessageAttribute<ClearingSystemMemberIdentification2Choice, PolishNationalClearingCodeIdentifier>() {
@@ -1517,10 +1517,6 @@ public class ClearingSystemMemberIdentification2Choice {
 	 * ClearingSystemMemberIdentification2Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OthrClrCdId"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OtherClearingCodeIdentification"</li>
 	 * <li>
@@ -1528,6 +1524,10 @@ public class ClearingSystemMemberIdentification2Choice {
 	 * definition} =
 	 * "Identification Code for a clearing system, that has not yet been identified in the list of clearing systems."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ClearingSystemMemberIdentification2Choice, Max35Text> mmOtherClearingCodeIdentification = new MMMessageAttribute<ClearingSystemMemberIdentification2Choice, Max35Text>() {

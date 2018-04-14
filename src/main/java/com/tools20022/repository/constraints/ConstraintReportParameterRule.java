@@ -38,10 +38,6 @@ public class ConstraintReportParameterRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FundCashForecastParameters2
 	 * FundCashForecastParameters2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReportParameterRule"</li>
 	 * <li>
@@ -49,6 +45,10 @@ public class ConstraintReportParameterRule {
 	 * definition} =
 	 * "At least one element in the list (FinancialInstrumentDetails, TradeDateTime, DetailedReportParameter) must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FundCashForecastParameters2> forFundCashForecastParameters2 = new MMConstraint<FundCashForecastParameters2>() {
@@ -72,10 +72,6 @@ public class ConstraintReportParameterRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FundParameters2
 	 * FundParameters2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReportParameterRule"</li>
 	 * <li>
@@ -83,6 +79,10 @@ public class ConstraintReportParameterRule {
 	 * definition} =
 	 * "At least one element in the list (FundManagementCompany, FinancialInstrumentDetails, DateFrom) must be present. More than one element in the list (FundManagementCompany, FinancialInstrumentDetails, DateFrom) may be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FundParameters2> forFundParameters2 = new MMConstraint<FundParameters2>() {
@@ -106,10 +106,6 @@ public class ConstraintReportParameterRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FundParameters3
 	 * FundParameters3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReportParameterRule"</li>
 	 * <li>
@@ -117,6 +113,10 @@ public class ConstraintReportParameterRule {
 	 * definition} =
 	 * "Either FinancialInstrumentDetails or ValuationDateTime must be present. Both FinancialInstrumentDetails and ValuationDateTime may be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FundParameters3> forFundParameters3 = new MMConstraint<FundParameters3>() {

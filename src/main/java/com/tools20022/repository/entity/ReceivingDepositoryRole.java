@@ -48,16 +48,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "ReceivingDepositoryRole"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Organisation holding securities to enable book entry transfer of securities. These organisations may also carry out centralised comparison and transaction processing such as clearing and settlement of securities. The physical securities may be immobilised by the depository, or securities may be dematerialised (so that they exist only as electronic records). Also responsible for compliance of the portfolio with legal ratios etc. The depository may delegate custody to another entity (custodian)."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class ReceivingDepositoryRole extends ReceivingSettlementParty {

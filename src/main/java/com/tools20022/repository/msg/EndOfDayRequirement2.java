@@ -72,16 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "EndOfDayRequirement2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Obligations of a clearing member with respect to a central counterparty that are calculated based on end of day positions."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -112,10 +112,6 @@ public class EndOfDayRequirement2 {
 	 * EndOfDayRequirement2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "InitlMrgnRqrmnts"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InitialMarginRequirements"</li>
 	 * <li>
@@ -123,6 +119,10 @@ public class EndOfDayRequirement2 {
 	 * definition} =
 	 * "Liability and assets that arise for a clearing member with respect to a central counterparty."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<EndOfDayRequirement2, InitialMarginRequirement1> mmInitialMarginRequirements = new MMMessageAssociationEnd<EndOfDayRequirement2, InitialMarginRequirement1>() {
@@ -172,10 +172,6 @@ public class EndOfDayRequirement2 {
 	 * EndOfDayRequirement2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "VartnMrgnRqrmnts"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "VariationMarginRequirements"</li>
 	 * <li>
@@ -183,6 +179,10 @@ public class EndOfDayRequirement2 {
 	 * definition} =
 	 * "Total change in the mark-to-market value of the margin account from the previous day, net of changes in mark-to-market relating to the entry or exit of derivative positions not entered into at zero mark-to-market (such as option premiums and upsettled upfront fees). Indicates whether the variation margin is paid to clearing members."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<EndOfDayRequirement2, AmountAndDirection6> mmVariationMarginRequirements = new MMMessageAssociationEnd<EndOfDayRequirement2, AmountAndDirection6>() {
@@ -233,10 +233,6 @@ public class EndOfDayRequirement2 {
 	 * EndOfDayRequirement2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MrgnAcctId"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MarginAccountIdentification"</li>
 	 * <li>
@@ -244,6 +240,10 @@ public class EndOfDayRequirement2 {
 	 * definition} =
 	 * "Identification of account used to calculate margin requirements. Usage: In the context of a central counterparty, if reported at the client level (expected for gross omnibus and individual segregated accounts), will report the Client ID in the Internal ID field and choose 'ClientID' for the CCP Participant ID Type. If reported at the clearing member account level will report the account ID in the Internal ID field and choose 'AccountID' for the CCP Participant ID Type.\r\n\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<EndOfDayRequirement2, GenericIdentification165> mmMarginAccountIdentification = new MMMessageAssociationEnd<EndOfDayRequirement2, GenericIdentification165>() {

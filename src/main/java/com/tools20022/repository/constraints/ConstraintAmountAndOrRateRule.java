@@ -38,10 +38,6 @@ public class ConstraintAmountAndOrRateRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Tax17 Tax17}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AmountAndOrRateRule"</li>
 	 * <li>
@@ -49,6 +45,10 @@ public class ConstraintAmountAndOrRateRule {
 	 * definition} =
 	 * "If Amount is not present, then Rate is mandatory. If Amount is present, then Rate is optional."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Tax17> forTax17 = new MMConstraint<Tax17>() {
@@ -71,10 +71,6 @@ public class ConstraintAmountAndOrRateRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Tax8 Tax8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AmountAndOrRateRule"</li>
 	 * <li>
@@ -82,6 +78,10 @@ public class ConstraintAmountAndOrRateRule {
 	 * definition} =
 	 * "If Amount is not present, then Rate is mandatory. If Amount is present, then Rate is optional."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Tax8> forTax8 = new MMConstraint<Tax8>() {
@@ -104,10 +104,6 @@ public class ConstraintAmountAndOrRateRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PriceValue2 PriceValue2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AmountAndOrRateRule"</li>
 	 * <li>
@@ -115,6 +111,10 @@ public class ConstraintAmountAndOrRateRule {
 	 * definition} =
 	 * "If Amount is not present, then Rate is mandatory. If Amount is present, then Rate is optional."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PriceValue2> forPriceValue2 = new MMConstraint<PriceValue2>() {
@@ -138,10 +138,6 @@ public class ConstraintAmountAndOrRateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PriceValueChange1
 	 * PriceValueChange1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AmountAndOrRateRule"</li>
 	 * <li>
@@ -149,6 +145,10 @@ public class ConstraintAmountAndOrRateRule {
 	 * definition} =
 	 * "If Amount is not present, then Rate is mandatory. If Amount is present, then Rate is optional."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PriceValueChange1> forPriceValueChange1 = new MMConstraint<PriceValueChange1>() {

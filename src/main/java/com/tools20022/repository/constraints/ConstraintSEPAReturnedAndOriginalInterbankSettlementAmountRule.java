@@ -42,10 +42,6 @@ public class ConstraintSEPAReturnedAndOriginalInterbankSettlementAmountRule {
 	 * expression} =
 	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;SimpleRule xsi:type=\"SimpleRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToNode\"&gt;&lt;leftOperand&gt;/ReturnedInterbankSettlementAmount&lt;/leftOperand&gt;&lt;rightOperand&gt;/OriginalInterbankSettlementAmount&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;substring(/OriginalGroupInformation/OriginalMessageNameIdentification,1,8)&lt;/leftOperand&gt;&lt;rightOperand&gt;pacs.008&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;/SimpleRule&gt;&lt;/RuleDefinition&gt;\n"
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SEPAReturnedAndOriginalInterbankSettlementAmountRule"</li>
 	 * <li>
@@ -53,6 +49,10 @@ public class ConstraintSEPAReturnedAndOriginalInterbankSettlementAmountRule {
 	 * definition} =
 	 * "SEPA TVS 3.x Rule: \nOnly Applicable for SCT, therefore not injected in validation rules\nReturnInterbankSettlementAmount must be the same as the OriginalInterbankSettlementAmount."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PaymentTransactionInformation18> forPaymentTransactionInformation18 = new MMConstraint<PaymentTransactionInformation18>() {
@@ -81,10 +81,6 @@ public class ConstraintSEPAReturnedAndOriginalInterbankSettlementAmountRule {
 	 * expression} =
 	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;SimpleRule xsi:type=\"SimpleRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToNode\"&gt;&lt;leftOperand&gt;/ReturnedInterbankSettlementAmount&lt;/leftOperand&gt;&lt;rightOperand&gt;/OriginalInterbankSettlementAmount&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;substring(/OriginalGroupInformation/OriginalMessageNameIdentification,1,8)&lt;/leftOperand&gt;&lt;rightOperand&gt;pacs.003&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;/SimpleRule&gt;&lt;/RuleDefinition&gt;\n"
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SEPAReturnedAndOriginalInterbankSettlementAmountRule"</li>
 	 * <li>
@@ -92,6 +88,10 @@ public class ConstraintSEPAReturnedAndOriginalInterbankSettlementAmountRule {
 	 * definition} =
 	 * "SEPA TVS 3.x Rule: \nOnly Applicable for SCT, therefore not injected in validation rules\nReturnInterbankSettlementAmount must be the same as the OriginalInterbankSettlementAmount."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PaymentTransactionInformation23> forPaymentTransactionInformation23 = new MMConstraint<PaymentTransactionInformation23>() {

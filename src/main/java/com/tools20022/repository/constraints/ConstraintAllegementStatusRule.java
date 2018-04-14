@@ -39,10 +39,6 @@ public class ConstraintAllegementStatusRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails71
 	 * SecuritiesTradeDetails71}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AllegementStatusRule"</li>
 	 * <li>
@@ -50,6 +46,10 @@ public class ConstraintAllegementStatusRule {
 	 * definition} =
 	 * "Unless bilaterally agreed between the Sender and Receiver, if AllegementStatus is present, then the statement must be a delta statement (UpdateType: Delta). In a complete statement (UpdateType: Complete), a removed or cancelled allegement must not be reported."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -79,10 +79,6 @@ public class ConstraintAllegementStatusRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails42
 	 * SecuritiesTradeDetails42}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AllegementStatusRule"</li>
 	 * <li>
@@ -90,6 +86,10 @@ public class ConstraintAllegementStatusRule {
 	 * definition} =
 	 * "Unless bilaterally agreed between the Sender and Receiver, if AllegementStatus is present, then the statement must be a delta statement (UpdateType: Delta). In a complete statement (UpdateType: Complete), a removed or cancelled allegement must not be reported."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails42> forSecuritiesTradeDetails42 = new MMConstraint<SecuritiesTradeDetails42>() {
@@ -113,10 +113,6 @@ public class ConstraintAllegementStatusRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails22
 	 * SecuritiesTradeDetails22}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AllegementStatusRule"</li>
 	 * <li>
@@ -124,6 +120,10 @@ public class ConstraintAllegementStatusRule {
 	 * definition} =
 	 * "Unless bilaterally agreed between the Sender and Receiver, if AllegementStatus is present, then the statement must be a delta statement (UpdateType: Delta). In a complete statement (UpdateType: Complete), a removed or cancelled allegement must not be reported."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails22> forSecuritiesTradeDetails22 = new MMConstraint<SecuritiesTradeDetails22>() {
@@ -147,10 +147,6 @@ public class ConstraintAllegementStatusRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails68
 	 * SecuritiesTradeDetails68}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AllegementStatusRule"</li>
 	 * <li>
@@ -158,6 +154,10 @@ public class ConstraintAllegementStatusRule {
 	 * definition} =
 	 * "Unless bilaterally agreed between the Sender and Receiver, if AllegementStatus is present, then the statement must be a delta statement (UpdateType: Delta). In a complete statement (UpdateType: Complete), a removed or cancelled allegement must not be reported."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -196,10 +196,6 @@ public class ConstraintAllegementStatusRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails85
 	 * SecuritiesTradeDetails85}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AllegementStatusRule"</li>
 	 * <li>
@@ -207,6 +203,10 @@ public class ConstraintAllegementStatusRule {
 	 * definition} =
 	 * "Unless bilaterally agreed between the Sender and Receiver, if AllegementStatus is present, then the statement must be a delta statement (UpdateType: Delta). In a complete statement (UpdateType: Complete), a removed or cancelled allegement must not be reported."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails85> forSecuritiesTradeDetails85 = new MMConstraint<SecuritiesTradeDetails85>() {
@@ -230,10 +230,6 @@ public class ConstraintAllegementStatusRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails69
 	 * SecuritiesTradeDetails69}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AllegementStatusRule"</li>
 	 * <li>
@@ -241,6 +237,10 @@ public class ConstraintAllegementStatusRule {
 	 * definition} =
 	 * "Unless bilaterally agreed between the Sender and Receiver, if AllegementStatus is present, then the statement must be a delta statement (UpdateType: Delta). In a complete statement (UpdateType: Complete), a removed or cancelled allegement must not be reported."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails69> forSecuritiesTradeDetails69 = new MMConstraint<SecuritiesTradeDetails69>() {
@@ -264,10 +264,6 @@ public class ConstraintAllegementStatusRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails4
 	 * SecuritiesTradeDetails4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AllegementStatusRule"</li>
 	 * <li>
@@ -275,6 +271,10 @@ public class ConstraintAllegementStatusRule {
 	 * definition} =
 	 * "Unless bilaterally agreed between the Sender and Receiver, if AllegementStatus is present, then the statement must be a delta statement (UpdateType: Delta). In a complete statement (UpdateType: Complete), a removed or cancelled allegement must not be reported."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails4> forSecuritiesTradeDetails4 = new MMConstraint<SecuritiesTradeDetails4>() {
@@ -298,10 +298,6 @@ public class ConstraintAllegementStatusRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails23
 	 * SecuritiesTradeDetails23}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AllegementStatusRule"</li>
 	 * <li>
@@ -309,6 +305,10 @@ public class ConstraintAllegementStatusRule {
 	 * definition} =
 	 * "Unless bilaterally agreed between the Sender and Receiver, if AllegementStatus is present, then the statement must be a delta statement (UpdateType: Delta). In a complete statement (UpdateType: Complete), a removed or cancelled allegement must not be reported."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -341,10 +341,6 @@ public class ConstraintAllegementStatusRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails49
 	 * SecuritiesTradeDetails49}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AllegementStatusRule"</li>
 	 * <li>
@@ -352,6 +348,10 @@ public class ConstraintAllegementStatusRule {
 	 * definition} =
 	 * "Unless bilaterally agreed between the Sender and Receiver, if AllegementStatus is present, then the statement must be a delta statement (UpdateType: Delta). In a complete statement (UpdateType: Complete), a removed or cancelled allegement must not be reported."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -390,10 +390,6 @@ public class ConstraintAllegementStatusRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails29
 	 * SecuritiesTradeDetails29}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AllegementStatusRule"</li>
 	 * <li>
@@ -401,6 +397,10 @@ public class ConstraintAllegementStatusRule {
 	 * definition} =
 	 * "Unless bilaterally agreed between the Sender and Receiver, if AllegementStatus is present, then the statement must be a delta statement (UpdateType: Delta). In a complete statement (UpdateType: Complete), a removed or cancelled allegement must not be reported."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails29> forSecuritiesTradeDetails29 = new MMConstraint<SecuritiesTradeDetails29>() {
@@ -424,10 +424,6 @@ public class ConstraintAllegementStatusRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails10
 	 * SecuritiesTradeDetails10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AllegementStatusRule"</li>
 	 * <li>
@@ -435,6 +431,10 @@ public class ConstraintAllegementStatusRule {
 	 * definition} =
 	 * "Unless bilaterally agreed between the Sender and Receiver, if AllegementStatus is present, then the statement must be a delta statement (UpdateType: Delta). In a complete statement (UpdateType: Complete), a removed or cancelled allegement must not be reported."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails10> forSecuritiesTradeDetails10 = new MMConstraint<SecuritiesTradeDetails10>() {
@@ -458,10 +458,6 @@ public class ConstraintAllegementStatusRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails61
 	 * SecuritiesTradeDetails61}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AllegementStatusRule"</li>
 	 * <li>
@@ -469,6 +465,10 @@ public class ConstraintAllegementStatusRule {
 	 * definition} =
 	 * "Unless bilaterally agreed between the Sender and Receiver, if AllegementStatus is present, then the statement must be a delta statement (UpdateType: Delta). In a complete statement (UpdateType: Complete), a removed or cancelled allegement must not be reported."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails61> forSecuritiesTradeDetails61 = new MMConstraint<SecuritiesTradeDetails61>() {
@@ -492,10 +492,6 @@ public class ConstraintAllegementStatusRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails17
 	 * SecuritiesTradeDetails17}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AllegementStatusRule"</li>
 	 * <li>
@@ -503,6 +499,10 @@ public class ConstraintAllegementStatusRule {
 	 * definition} =
 	 * "Unless bilaterally agreed between the Sender and Receiver, if AllegementStatus is present, then the statement must be a delta statement (UpdateType: Delta). In a complete statement (UpdateType: Complete), a removed or cancelled allegement must not be reported."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails17> forSecuritiesTradeDetails17 = new MMConstraint<SecuritiesTradeDetails17>() {
@@ -526,10 +526,6 @@ public class ConstraintAllegementStatusRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails35
 	 * SecuritiesTradeDetails35}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AllegementStatusRule"</li>
 	 * <li>
@@ -537,6 +533,10 @@ public class ConstraintAllegementStatusRule {
 	 * definition} =
 	 * "Unless bilaterally agreed between the Sender and Receiver, if AllegementStatus is present, then the statement must be a delta statement (UpdateType: Delta). In a complete statement (UpdateType: Complete), a removed or cancelled allegement must not be reported."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>

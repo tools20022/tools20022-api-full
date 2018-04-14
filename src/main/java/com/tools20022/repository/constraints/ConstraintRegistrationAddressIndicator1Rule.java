@@ -42,10 +42,6 @@ public class ConstraintRegistrationAddressIndicator1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.AccountParties4Choice
 	 * AccountParties4Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RegistrationAddressIndicator1Rule"</li>
 	 * <li>
@@ -53,6 +49,10 @@ public class ConstraintRegistrationAddressIndicator1Rule {
 	 * definition} =
 	 * "If PrimaryOwner is present, then at least one occurrence of PrimaryOwner/Party/Organisation/PostalAddress/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes), or, at least one occurrence of PrimaryOwner/Party/IndividualPerson/PostalAddress/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes).\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -89,10 +89,6 @@ public class ConstraintRegistrationAddressIndicator1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountParties5
 	 * AccountParties5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RegistrationAddressIndicator1Rule"</li>
 	 * <li>
@@ -100,6 +96,10 @@ public class ConstraintRegistrationAddressIndicator1Rule {
 	 * definition} =
 	 * "If PrimaryOwner is present, then at least one occurrence of PrimaryOwner/Organisation/Address/RegistrationAddressIndicator or of PrimaryOwner/IndividualPerson/Address/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountParties5> forAccountParties5 = new MMConstraint<AccountParties5>() {
@@ -123,10 +123,6 @@ public class ConstraintRegistrationAddressIndicator1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.AccountParties3Choice
 	 * AccountParties3Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RegistrationAddressIndicator1Rule"</li>
 	 * <li>
@@ -134,6 +130,10 @@ public class ConstraintRegistrationAddressIndicator1Rule {
 	 * definition} =
 	 * "If PrimaryOwner is present, then at least one occurrence of Party/Organisation/ModifiedPostalAddress/PostalAddress/RegistrationAddressIndicator, or of \r\nParty/IndividualPerson/ModifiedPostalAddress/PostalAddress/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes).\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -166,10 +166,6 @@ public class ConstraintRegistrationAddressIndicator1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountParties7
 	 * AccountParties7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RegistrationAddressIndicator1Rule"</li>
 	 * <li>
@@ -177,6 +173,10 @@ public class ConstraintRegistrationAddressIndicator1Rule {
 	 * definition} =
 	 * "If PrimaryOwner is present, then at least one occurrence of PrimaryOwner/Organisation/ModifiedAddress/Address/RegistrationAddressIndicator or of PrimaryOwner/IndividualPerson/ModifiedAddress/Address/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountParties7> forAccountParties7 = new MMConstraint<AccountParties7>() {
@@ -200,10 +200,6 @@ public class ConstraintRegistrationAddressIndicator1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.AccountParties5Choice
 	 * AccountParties5Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RegistrationAddressIndicator1Rule"</li>
 	 * <li>
@@ -211,6 +207,10 @@ public class ConstraintRegistrationAddressIndicator1Rule {
 	 * definition} =
 	 * "If PrimaryOwner is present, then at least one occurrence of PrimaryOwner/Party/Organisation/PostalAddress/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes), or, at least one occurrence of PrimaryOwner/Party/IndividualPerson/PostalAddress/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes).\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -240,10 +240,6 @@ public class ConstraintRegistrationAddressIndicator1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountParties6
 	 * AccountParties6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RegistrationAddressIndicator1Rule"</li>
 	 * <li>
@@ -251,6 +247,10 @@ public class ConstraintRegistrationAddressIndicator1Rule {
 	 * definition} =
 	 * "If PrimaryOwner is present, then at least one occurrence of PrimaryOwner/Organisation/Address/RegistrationAddressIndicator or of PrimaryOwner/IndividualPerson/Address/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountParties6> forAccountParties6 = new MMConstraint<AccountParties6>() {
@@ -274,10 +274,6 @@ public class ConstraintRegistrationAddressIndicator1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.AccountParties7Choice
 	 * AccountParties7Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RegistrationAddressIndicator1Rule"</li>
 	 * <li>
@@ -285,6 +281,10 @@ public class ConstraintRegistrationAddressIndicator1Rule {
 	 * definition} =
 	 * "If PrimaryOwner is present, then at least one occurrence of PrimaryOwner/Party/Organisation/PostalAddress/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes), or, at least one occurrence of PrimaryOwner/Party/IndividualPerson/PostalAddress/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes).\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -314,10 +314,6 @@ public class ConstraintRegistrationAddressIndicator1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountParties2
 	 * AccountParties2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RegistrationAddressIndicator1Rule"</li>
 	 * <li>
@@ -325,6 +321,10 @@ public class ConstraintRegistrationAddressIndicator1Rule {
 	 * definition} =
 	 * "If PrimaryOwner is present, then at least one occurrence of PrimaryOwner/Organisation/Address/RegistrationAddressIndicator or of PrimaryOwner/IndividualPerson/Address/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountParties2> forAccountParties2 = new MMConstraint<AccountParties2>() {
@@ -348,10 +348,6 @@ public class ConstraintRegistrationAddressIndicator1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountParties4
 	 * AccountParties4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RegistrationAddressIndicator1Rule"</li>
 	 * <li>
@@ -359,6 +355,10 @@ public class ConstraintRegistrationAddressIndicator1Rule {
 	 * definition} =
 	 * "If PrimaryOwner is present, then at least one occurrence of PrimaryOwner/Organisation/ModifiedAddress/Address/RegistrationAddressIndicator or of PrimaryOwner/IndividualPerson/ModifiedAddress/Address/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountParties4> forAccountParties4 = new MMConstraint<AccountParties4>() {
@@ -382,10 +382,6 @@ public class ConstraintRegistrationAddressIndicator1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.AccountParties6Choice
 	 * AccountParties6Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RegistrationAddressIndicator1Rule"</li>
 	 * <li>
@@ -393,6 +389,10 @@ public class ConstraintRegistrationAddressIndicator1Rule {
 	 * definition} =
 	 * "If PrimaryOwner is present, then at least one occurrence of Party/Organisation/ModifiedPostalAddress/PostalAddress/RegistrationAddressIndicator, or of \r\nParty/IndividualPerson/ModifiedPostalAddress/PostalAddress/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes).\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -422,10 +422,6 @@ public class ConstraintRegistrationAddressIndicator1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountParties3
 	 * AccountParties3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RegistrationAddressIndicator1Rule"</li>
 	 * <li>
@@ -433,6 +429,10 @@ public class ConstraintRegistrationAddressIndicator1Rule {
 	 * definition} =
 	 * "If PrimaryOwner is present, then at least one occurrence of PrimaryOwner/Organisation/ModifiedAddress/Address/RegistrationAddressIndicator or of PrimaryOwner/IndividualPerson/ModifiedAddress/Address/RegistrationAddressIndicator must be \"true\" or \"1\" (Yes)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountParties3> forAccountParties3 = new MMConstraint<AccountParties3>() {

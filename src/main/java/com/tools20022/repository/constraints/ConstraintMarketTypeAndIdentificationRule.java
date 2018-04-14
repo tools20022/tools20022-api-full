@@ -39,10 +39,6 @@ public class ConstraintMarketTypeAndIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.MarketIdentification82
 	 * MarketIdentification82}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MarketTypeAndIdentificationRule"</li>
 	 * <li>
@@ -50,6 +46,10 @@ public class ConstraintMarketTypeAndIdentificationRule {
 	 * definition} =
 	 * "If Type/Code is OverTheCounter (OTCO) and if Identification is present, then Identification/Description must specify a system.\r\nIf Type/Code is Exchange (EXCH) and if Identification is present, then Identification/MarketIdentifierCode must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<MarketIdentification82> forMarketIdentification82 = new MMConstraint<MarketIdentification82>() {
@@ -73,10 +73,6 @@ public class ConstraintMarketTypeAndIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.MarketIdentification84
 	 * MarketIdentification84}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MarketTypeAndIdentificationRule"</li>
 	 * <li>
@@ -84,6 +80,10 @@ public class ConstraintMarketTypeAndIdentificationRule {
 	 * definition} =
 	 * "If Type/Code is OverTheCounter (OTCO) and if Identification is present, then Identification/Description must specify a system.\r\nIf Type/Code is Exchange (EXCH) and if Identification is present, then Identification/MarketIdentifierCode must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -113,10 +113,6 @@ public class ConstraintMarketTypeAndIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.MarketIdentification9
 	 * MarketIdentification9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MarketTypeAndIdentificationRule"</li>
 	 * <li>
@@ -124,6 +120,10 @@ public class ConstraintMarketTypeAndIdentificationRule {
 	 * definition} =
 	 * "If Market Type is OverTheCounter (OTCO), then Identification/Description must specify a system.\r\nIf Market Type is Exchange (EXCH), then Identification/MarketIdentificationCode must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<MarketIdentification9> forMarketIdentification9 = new MMConstraint<MarketIdentification9>() {
@@ -147,10 +147,6 @@ public class ConstraintMarketTypeAndIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.MarketIdentification4
 	 * MarketIdentification4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MarketTypeAndIdentificationRule"</li>
 	 * <li>
@@ -158,6 +154,10 @@ public class ConstraintMarketTypeAndIdentificationRule {
 	 * definition} =
 	 * "If Market Type is OverTheCounter (OTCO), then Identification/Description must specify a system.\r\nIf Market Type is Exchange (EXCH), then Identification/MarketIdentificationCode must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -190,10 +190,6 @@ public class ConstraintMarketTypeAndIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.MarketIdentification20
 	 * MarketIdentification20}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MarketTypeAndIdentificationRule"</li>
 	 * <li>
@@ -201,6 +197,10 @@ public class ConstraintMarketTypeAndIdentificationRule {
 	 * definition} =
 	 * "If MarketType is OverTheCounter (OTCO), then Identification/Description must specify a system. If MarketType is Exchange (EXCH), then Identification/MarketIdentificationCode must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -233,10 +233,6 @@ public class ConstraintMarketTypeAndIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.MarketIdentification88
 	 * MarketIdentification88}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MarketTypeAndIdentificationRule"</li>
 	 * <li>
@@ -244,6 +240,10 @@ public class ConstraintMarketTypeAndIdentificationRule {
 	 * definition} =
 	 * "If Market Type is OverTheCounter (OTCO), then Identification/Description must specify a system.\r\nIf Market Type is Exchange (EXCH), then Identification/MarketIdentificationCode must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<MarketIdentification88> forMarketIdentification88 = new MMConstraint<MarketIdentification88>() {
@@ -267,10 +267,6 @@ public class ConstraintMarketTypeAndIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.MarketIdentification80
 	 * MarketIdentification80}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MarketTypeAndIdentificationRule"</li>
 	 * <li>
@@ -278,6 +274,10 @@ public class ConstraintMarketTypeAndIdentificationRule {
 	 * definition} =
 	 * "If Type/Code is OverTheCounter (OTCO) and if Identification is present, then Identification/Description must specify a system.\r\nIf Type/Code is Exchange (EXCH) and if Identification is present, then Identification/MarketIdentifierCode must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -307,10 +307,6 @@ public class ConstraintMarketTypeAndIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.MarketIdentification13
 	 * MarketIdentification13}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MarketTypeAndIdentificationRule"</li>
 	 * <li>
@@ -318,6 +314,10 @@ public class ConstraintMarketTypeAndIdentificationRule {
 	 * definition} =
 	 * "If Market Type is OverTheCounter (OTCO), then Identification/Description must specify a system.\r\nIf Market Type is Exchange (EXCH), then Identification/MarketIdentificationCode must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -350,10 +350,6 @@ public class ConstraintMarketTypeAndIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.MarketIdentification90
 	 * MarketIdentification90}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MarketTypeAndIdentificationRule"</li>
 	 * <li>
@@ -361,6 +357,10 @@ public class ConstraintMarketTypeAndIdentificationRule {
 	 * definition} =
 	 * "If Type/Code is OverTheCounter (OTCO) and if Identification is present, then Identification/Description must specify a system.\r\nIf Type/Code is Exchange (EXCH) and if Identification is present, then Identification/MarketIdentifierCode must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<MarketIdentification90> forMarketIdentification90 = new MMConstraint<MarketIdentification90>() {
@@ -384,10 +384,6 @@ public class ConstraintMarketTypeAndIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.MarketIdentification79
 	 * MarketIdentification79}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MarketTypeAndIdentificationRule"</li>
 	 * <li>
@@ -395,6 +391,10 @@ public class ConstraintMarketTypeAndIdentificationRule {
 	 * definition} =
 	 * "If Type/Code is OverTheCounter (OTCO) and if Identification is present, then Identification/Description must specify a system.\r\nIf Type/Code is Exchange (EXCH) and if Identification is present, then Identification/MarketIdentifierCode must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -424,10 +424,6 @@ public class ConstraintMarketTypeAndIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.MarketIdentification77
 	 * MarketIdentification77}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MarketTypeAndIdentificationRule"</li>
 	 * <li>
@@ -435,6 +431,10 @@ public class ConstraintMarketTypeAndIdentificationRule {
 	 * definition} =
 	 * "If Market Type is OverTheCounter (OTCO), then Identification/Description must specify a system.\r\nIf Market Type is Exchange (EXCH), then Identification/MarketIdentificationCode must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -467,10 +467,6 @@ public class ConstraintMarketTypeAndIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.MarketIdentification78
 	 * MarketIdentification78}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MarketTypeAndIdentificationRule"</li>
 	 * <li>
@@ -478,6 +474,10 @@ public class ConstraintMarketTypeAndIdentificationRule {
 	 * definition} =
 	 * "If Type/Code is OverTheCounter (OTCO) and if Identification is present, then Identification/Description must specify a system.\r\nIf Type/Code is Exchange (EXCH) and if Identification is present, then Identification/MarketIdentifierCode must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -507,10 +507,6 @@ public class ConstraintMarketTypeAndIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.MarketIdentification5
 	 * MarketIdentification5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MarketTypeAndIdentificationRule"</li>
 	 * <li>
@@ -518,6 +514,10 @@ public class ConstraintMarketTypeAndIdentificationRule {
 	 * definition} =
 	 * "If Market Type is OverTheCounter (OTCO), then Identification/Description must specify a system.\r\nIf Market Type is Exchange (EXCH), then Identification/MarketIdentificationCode must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<MarketIdentification5> forMarketIdentification5 = new MMConstraint<MarketIdentification5>() {
@@ -541,10 +541,6 @@ public class ConstraintMarketTypeAndIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.MarketIdentification85
 	 * MarketIdentification85}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MarketTypeAndIdentificationRule"</li>
 	 * <li>
@@ -552,6 +548,10 @@ public class ConstraintMarketTypeAndIdentificationRule {
 	 * definition} =
 	 * "If Type/Code is OverTheCounter (OTCO) and if Identification is present, then Identification/Description must specify a system.\r\nIf Type/Code is Exchange (EXCH) and if Identification is present, then Identification/MarketIdentifierCode must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -581,10 +581,6 @@ public class ConstraintMarketTypeAndIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.MarketIdentification21
 	 * MarketIdentification21}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MarketTypeAndIdentificationRule"</li>
 	 * <li>
@@ -592,6 +588,10 @@ public class ConstraintMarketTypeAndIdentificationRule {
 	 * definition} =
 	 * "If MarketType is OverTheCounter (OTCO), then Identification/Description must specify a system.\r\nIf MarketType is Exchange (EXCH), then Identification/MarketIdentificationCode must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -624,10 +624,6 @@ public class ConstraintMarketTypeAndIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.MarketIdentification8
 	 * MarketIdentification8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MarketTypeAndIdentificationRule"</li>
 	 * <li>
@@ -635,6 +631,10 @@ public class ConstraintMarketTypeAndIdentificationRule {
 	 * definition} =
 	 * "If Market Type is OverTheCounter (OTCO), then Identification/Description must specify a system.\r\nIf Market Type is Exchange (EXCH), then Identification/MarketIdentificationCode must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<MarketIdentification8> forMarketIdentification8 = new MMConstraint<MarketIdentification8>() {

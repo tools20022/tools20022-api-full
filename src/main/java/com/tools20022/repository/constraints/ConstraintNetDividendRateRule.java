@@ -43,10 +43,6 @@ public class ConstraintNetDividendRateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate12
 	 * CorporateActionRate12}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NetDividendRateRule"</li>
 	 * <li>
@@ -54,6 +50,10 @@ public class ConstraintNetDividendRateRule {
 	 * definition} =
 	 * "If NettDividendRate is repeated, then:\r\n- NettDividendRate/RateTypeAndAmountAndRateStatus must be present and\r\n- RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NettDividendRate.\r\n\r\n(MT 564 NVR C8 and C9)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionRate12> forCorporateActionRate12 = new MMConstraint<CorporateActionRate12>() {
@@ -77,10 +77,6 @@ public class ConstraintNetDividendRateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate4
 	 * CorporateActionRate4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NetDividendRateRule"</li>
 	 * <li>
@@ -88,6 +84,10 @@ public class ConstraintNetDividendRateRule {
 	 * definition} =
 	 * "If NettDividendRate is repeated, then:\r\n- NettDividendRate/RateTypeAndAmountAndRateStatus must be present and\r\n- RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NettDividendRate.\r\n\r\n(MT 566 NVR C3 and C4)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionRate4> forCorporateActionRate4 = new MMConstraint<CorporateActionRate4>() {
@@ -111,10 +111,6 @@ public class ConstraintNetDividendRateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate5
 	 * CorporateActionRate5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NetDividendRateRule"</li>
 	 * <li>
@@ -122,6 +118,10 @@ public class ConstraintNetDividendRateRule {
 	 * definition} =
 	 * "If NettDividendRate is repeated, then:\r\n- NettDividendRate/RateTypeAndAmountAndRateStatus must be present and\r\n- RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NettDividendRate.\r\n\r\n(MT 564 NVR C8 and C9)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionRate5> forCorporateActionRate5 = new MMConstraint<CorporateActionRate5>() {
@@ -145,10 +145,6 @@ public class ConstraintNetDividendRateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate10
 	 * CorporateActionRate10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NetDividendRateRule"</li>
 	 * <li>
@@ -156,6 +152,10 @@ public class ConstraintNetDividendRateRule {
 	 * definition} =
 	 * "If NettDividendRate is repeated, then:\r\n- NettDividendRate/RateTypeAndAmountAndRateStatus must be present and\r\n- RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NettDividendRate.\r\n\r\n(MT 566 NVR C3 and C4)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionRate10> forCorporateActionRate10 = new MMConstraint<CorporateActionRate10>() {

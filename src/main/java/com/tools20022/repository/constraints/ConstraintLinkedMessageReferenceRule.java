@@ -38,10 +38,6 @@ public class ConstraintLinkedMessageReferenceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RejectionReason3
 	 * RejectionReason3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LinkedMessageReferenceRule"</li>
 	 * <li>
@@ -49,6 +45,10 @@ public class ConstraintLinkedMessageReferenceRule {
 	 * definition} =
 	 * "If Reason is InvalidOrUnrecognisedReference, then LinkedMessageReference is mandatory. If Reason is not InvalidOrUnrecognisedReference, then LinkedMessageReference is optional."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RejectionReason3> forRejectionReason3 = new MMConstraint<RejectionReason3>() {
@@ -72,10 +72,6 @@ public class ConstraintLinkedMessageReferenceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RejectionReason1
 	 * RejectionReason1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LinkedMessageReferenceRule"</li>
 	 * <li>
@@ -83,6 +79,10 @@ public class ConstraintLinkedMessageReferenceRule {
 	 * definition} =
 	 * "If Reason is InvalidOrUnrecognisedReference, then LinkedMessageReference is mandatory. If Reason is not InvalidOrUnrecognisedReference, then LinkedMessageReference is optional."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RejectionReason1> forRejectionReason1 = new MMConstraint<RejectionReason1>() {

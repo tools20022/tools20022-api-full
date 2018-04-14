@@ -40,10 +40,6 @@ public class ConstraintInvestmentAccountDetailsRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SwitchOrder7 SwitchOrder7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InvestmentAccountDetailsRule"</li>
 	 * <li>
@@ -51,6 +47,10 @@ public class ConstraintInvestmentAccountDetailsRule {
 	 * definition} =
 	 * "Either InvestmentAccountDetails or all occurrences of SubscriptionLegDetails/InvestmentAccountDetails and RedemptionLegDetails/InvestmentAccountDetails must be present, but not both.\r\nEither InvestmentAccountDetails or all occurrences of SubscriptionLegDetails/InvestmentAccountDetails and RedemptionLegDetails/InvestmentAccountDetails must be present, but not both.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -79,10 +79,6 @@ public class ConstraintInvestmentAccountDetailsRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SwitchOrder4 SwitchOrder4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InvestmentAccountDetailsRule"</li>
 	 * <li>
@@ -90,6 +86,10 @@ public class ConstraintInvestmentAccountDetailsRule {
 	 * definition} =
 	 * "Either InvestmentAccountDetails or (all occurrences of SubscriptionLegDetails/InvestmentAccountDetails and of RedemptionLegDetails/InvestmentAccountDetails) must be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -122,10 +122,6 @@ public class ConstraintInvestmentAccountDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SwitchExecution7
 	 * SwitchExecution7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InvestmentAccountDetailsRule"</li>
 	 * <li>
@@ -133,6 +129,10 @@ public class ConstraintInvestmentAccountDetailsRule {
 	 * definition} =
 	 * "Either InvestmentAccountDetails or all occurrences of SubscriptionLegDetails/InvestmentAccountDetails and RedemptionLegDetails/InvestmentAccountDetails must be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -161,10 +161,6 @@ public class ConstraintInvestmentAccountDetailsRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SwitchOrder3 SwitchOrder3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InvestmentAccountDetailsRule"</li>
 	 * <li>
@@ -172,6 +168,10 @@ public class ConstraintInvestmentAccountDetailsRule {
 	 * definition} =
 	 * "Either InvestmentAccountDetails or (all occurrences of SubscriptionLegDetails/InvestmentAccountDetails and of RedemptionLegDetails/InvestmentAccountDetails) must be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SwitchOrder3> forSwitchOrder3 = new MMConstraint<SwitchOrder3>() {
@@ -195,10 +195,6 @@ public class ConstraintInvestmentAccountDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SwitchExecution4
 	 * SwitchExecution4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InvestmentAccountDetailsRule"</li>
 	 * <li>
@@ -206,6 +202,10 @@ public class ConstraintInvestmentAccountDetailsRule {
 	 * definition} =
 	 * "Either InvestmentAccountDetails or (all occurrences of SubscriptionLegDetails/InvestmentAccountDetails and of RedemptionLegDetails/InvestmentAccountDetails) must be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>

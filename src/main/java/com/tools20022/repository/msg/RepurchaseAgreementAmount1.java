@@ -59,16 +59,16 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "RepurchaseAgreementAmount1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Agreement between two parties to sell a financial instrument or set of financial instruments and repurchase at an agreed later date."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -94,10 +94,6 @@ public class RepurchaseAgreementAmount1 {
 	 * RepurchaseAgreementAmount1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "HghlyLqdDfltdCtrPtyAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "HighlyLiquidDefaultedCounterpartyAmount"</li>
 	 * <li>
@@ -105,6 +101,10 @@ public class RepurchaseAgreementAmount1 {
 	 * definition} =
 	 * "Current market value (post-haircut) of flows of highly liquid marketable financial instruments that are held by the CCP as security through reverse repo against counterparties assumed to be defaulting under the stress scenario. Indicates if the balance or flows were positive (true) or negative (false). \r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<RepurchaseAgreementAmount1, AmountAndDirection6> mmHighlyLiquidDefaultedCounterpartyAmount = new MMMessageAssociationEnd<RepurchaseAgreementAmount1, AmountAndDirection6>() {
@@ -148,10 +148,6 @@ public class RepurchaseAgreementAmount1 {
 	 * RepurchaseAgreementAmount1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NonHghlyLqdDfltdCtrPtyAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NonHighlyLiquidDefaultedCounterpartyAmount"</li>
 	 * <li>
@@ -159,6 +155,10 @@ public class RepurchaseAgreementAmount1 {
 	 * definition} =
 	 * "Current market value (post-haircut) of flows of non-highly liquid marketable financial instruments that are held by the CCP as security through reverse repo against counterparties assumed to be defaulting under the stress scenario. Indicates if the balance or flows were positive (true) or negative (false)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<RepurchaseAgreementAmount1, AmountAndDirection6> mmNonHighlyLiquidDefaultedCounterpartyAmount = new MMMessageAssociationEnd<RepurchaseAgreementAmount1, AmountAndDirection6>() {
@@ -202,10 +202,6 @@ public class RepurchaseAgreementAmount1 {
 	 * RepurchaseAgreementAmount1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "HghlyLqdNonDfltdCtrPtyAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "HighlyLiquidNonDefaultedCounterpartyAmount"</li>
 	 * <li>
@@ -213,6 +209,10 @@ public class RepurchaseAgreementAmount1 {
 	 * definition} =
 	 * "Current market value (post-haircut) of flows of highly liquid marketable financial instruments that are held by the CCP as security through reverse repo against counterparties not assumed to be defaulting under the stress scenario. Indicates if the balance or flows were positive (true) or negative (false)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<RepurchaseAgreementAmount1, AmountAndDirection6> mmHighlyLiquidNonDefaultedCounterpartyAmount = new MMMessageAssociationEnd<RepurchaseAgreementAmount1, AmountAndDirection6>() {
@@ -256,10 +256,6 @@ public class RepurchaseAgreementAmount1 {
 	 * RepurchaseAgreementAmount1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NonHghlyLqdNonDfltdCtrPtyAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NonHighlyLiquidNonDefaultedCounterpartyAmount"</li>
 	 * <li>
@@ -267,6 +263,10 @@ public class RepurchaseAgreementAmount1 {
 	 * definition} =
 	 * "Current market value (post-haircut) of flows of non-highly liquid marketable financial instruments that are held by the CCP as security through reverse repo against counterparties not assumed to be defaulting under the stress scenario. Indicates if the balance or flows were positive (true) or negative (false)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<RepurchaseAgreementAmount1, AmountAndDirection6> mmNonHighlyLiquidNonDefaultedCounterpartyAmount = new MMMessageAssociationEnd<RepurchaseAgreementAmount1, AmountAndDirection6>() {

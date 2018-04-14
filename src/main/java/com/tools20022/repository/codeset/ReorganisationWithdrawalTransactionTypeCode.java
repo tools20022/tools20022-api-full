@@ -62,14 +62,14 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "ReorganisationWithdrawalTransactionTypeCode"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Specifies the type of withdrawal reorganisation transaction."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -87,10 +87,6 @@ public class ReorganisationWithdrawalTransactionTypeCode extends MMCode {
 	 * ReorganisationWithdrawalTransactionTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "PROW"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ProtectWithdrawalTransaction"</li>
 	 * <li>
@@ -98,6 +94,10 @@ public class ReorganisationWithdrawalTransactionTypeCode extends MMCode {
 	 * definition} =
 	 * "The reorganisation instruction cancellation is a protect withdrawal transaction."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final ReorganisationWithdrawalTransactionTypeCode ProtectWithdrawalTransaction = new ReorganisationWithdrawalTransactionTypeCode() {
@@ -120,10 +120,6 @@ public class ReorganisationWithdrawalTransactionTypeCode extends MMCode {
 	 * ReorganisationWithdrawalTransactionTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "PRPW"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "WithdrawalProtectOnBehalfOfAnotherParticipant"</li>
 	 * <li>
@@ -131,6 +127,10 @@ public class ReorganisationWithdrawalTransactionTypeCode extends MMCode {
 	 * definition} =
 	 * "The reorganisation instruction cancellation is a withdrawal protect transaction on behalf of another participant."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final ReorganisationWithdrawalTransactionTypeCode WithdrawalProtectOnBehalfOfAnotherParticipant = new ReorganisationWithdrawalTransactionTypeCode() {
@@ -153,10 +153,6 @@ public class ReorganisationWithdrawalTransactionTypeCode extends MMCode {
 	 * ReorganisationWithdrawalTransactionTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "VOIW"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "VoluntaryOfferInstructionWithdrawal"</li>
 	 * <li>
@@ -164,6 +160,10 @@ public class ReorganisationWithdrawalTransactionTypeCode extends MMCode {
 	 * definition} =
 	 * "The reorganisation instruction cancellation is a voluntary offer instruction withdrawal transaction."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final ReorganisationWithdrawalTransactionTypeCode VoluntaryOfferInstructionWithdrawal = new ReorganisationWithdrawalTransactionTypeCode() {

@@ -35,10 +35,6 @@ public class ConstraintOriginalInterbankSettlementAmountRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.pain.PaymentCancellationRequestV01
 	 * PaymentCancellationRequestV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OriginalInterbankSettlementAmountRule"</li>
 	 * <li>
@@ -46,6 +42,10 @@ public class ConstraintOriginalInterbankSettlementAmountRule {
 	 * definition} =
 	 * "TransactionInformation/OriginalInterbankSettlementAmount is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PaymentCancellationRequestV01> for_pain_PaymentCancellationRequestV01 = new MMConstraint<PaymentCancellationRequestV01>() {

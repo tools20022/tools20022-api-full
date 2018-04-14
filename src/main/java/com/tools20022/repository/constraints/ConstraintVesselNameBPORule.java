@@ -36,10 +36,6 @@ public class ConstraintVesselNameBPORule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SingleTransport8
 	 * SingleTransport8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "VesselNameBPORule"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintVesselNameBPORule {
 	 * definition} =
 	 * "In case of transport by sea, VesselName must be present if PaymentObligation (BPO) is used in this transaction.”."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SingleTransport8> forSingleTransport8 = new MMConstraint<SingleTransport8>() {

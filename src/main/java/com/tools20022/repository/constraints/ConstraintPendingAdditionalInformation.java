@@ -36,10 +36,6 @@ public class ConstraintPendingAdditionalInformation {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransferCancellationStatus
 	 * TransferCancellationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PendingAdditionalInformation"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintPendingAdditionalInformation {
 	 * definition} =
 	 * "If Status is Pending, then AdditionalInformation is allowed. If Status is not Pending, then AdditionalInformation is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransferCancellationStatus> forTransferCancellationStatus = new MMConstraint<TransferCancellationStatus>() {

@@ -58,6 +58,10 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "ForeignExchangeTradeTypeCode"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} = "Specifies the type of foreign exchange trade."</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,10 +71,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "ForeignExchangeTradeTypeCode"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Specifies the type of foreign exchange trade."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -87,15 +87,15 @@ public class ForeignExchangeTradeTypeCode extends MMCode {
 	 * ForeignExchangeTradeTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "CONF"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Trade"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates that the trade is a spot or forward agreement."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
 	 * </ul>
 	 */
 	public static final ForeignExchangeTradeTypeCode Trade = new ForeignExchangeTradeTypeCode() {
@@ -117,15 +117,15 @@ public class ForeignExchangeTradeTypeCode extends MMCode {
 	 * ForeignExchangeTradeTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "SWAP"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Swap"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Trade is part of a swap agreement."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
 	 * </ul>
 	 */
 	public static final ForeignExchangeTradeTypeCode Swap = new ForeignExchangeTradeTypeCode() {
@@ -148,10 +148,6 @@ public class ForeignExchangeTradeTypeCode extends MMCode {
 	 * ForeignExchangeTradeTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "OPEN"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Opening"</li>
 	 * <li>
@@ -159,6 +155,10 @@ public class ForeignExchangeTradeTypeCode extends MMCode {
 	 * definition} =
 	 * "Trade is eligible to be closed by one or more 'reverse' trades, ie, in the opposite direction."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
 	 * </ul>
 	 */
 	public static final ForeignExchangeTradeTypeCode Opening = new ForeignExchangeTradeTypeCode() {
@@ -181,10 +181,6 @@ public class ForeignExchangeTradeTypeCode extends MMCode {
 	 * ForeignExchangeTradeTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "PCLO"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PartialClosing"</li>
 	 * <li>
@@ -192,6 +188,10 @@ public class ForeignExchangeTradeTypeCode extends MMCode {
 	 * definition} =
 	 * "Trade is a partial closing of another trade, for the same pair of currencies, and for the same value date."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
 	 * </ul>
 	 */
 	public static final ForeignExchangeTradeTypeCode PartialClosing = new ForeignExchangeTradeTypeCode() {
@@ -216,10 +216,6 @@ public class ForeignExchangeTradeTypeCode extends MMCode {
 	 * ForeignExchangeTradeTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "FCLO"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FinalClosing"</li>
 	 * <li>
@@ -227,6 +223,10 @@ public class ForeignExchangeTradeTypeCode extends MMCode {
 	 * definition} =
 	 * "Trade is the final closing of another trade, ie, in the opposite direction, for the same pair of currencies and for the same value date. This trade agreement contains the net settlement amount that has to be paid by one of the parties as a result of netting of several agreements."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
 	 * </ul>
 	 */
 	public static final ForeignExchangeTradeTypeCode FinalClosing = new ForeignExchangeTradeTypeCode() {

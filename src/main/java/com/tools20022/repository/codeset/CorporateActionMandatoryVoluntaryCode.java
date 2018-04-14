@@ -61,6 +61,12 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "CorporateActionMandatoryVoluntaryCode"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} =
+ * "Specifies whether the event is mandatory, mandatory with options or voluntary."
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -71,12 +77,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "CorporateActionMandatoryVoluntaryCode"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} =
- * "Specifies whether the event is mandatory, mandatory with options or voluntary."
- * </li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -94,10 +94,6 @@ public class CorporateActionMandatoryVoluntaryCode extends MMCode {
 	 * CorporateActionMandatoryVoluntaryCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "MAND"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Mandatory"</li>
 	 * <li>
@@ -105,6 +101,10 @@ public class CorporateActionMandatoryVoluntaryCode extends MMCode {
 	 * definition} =
 	 * "Participation in CA event is mandatory. Further instructions from the account owner are not required."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionMandatoryVoluntaryCode Mandatory = new CorporateActionMandatoryVoluntaryCode() {
@@ -128,10 +128,6 @@ public class CorporateActionMandatoryVoluntaryCode extends MMCode {
 	 * CorporateActionMandatoryVoluntaryCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "CHOS"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MandatoryWithOptions"</li>
 	 * <li>
@@ -139,6 +135,10 @@ public class CorporateActionMandatoryVoluntaryCode extends MMCode {
 	 * definition} =
 	 * "Participation in the corporate action is mandatory and further instructions from the account owner are required, unless a default option has been specified."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionMandatoryVoluntaryCode MandatoryWithOptions = new CorporateActionMandatoryVoluntaryCode() {
@@ -162,10 +162,6 @@ public class CorporateActionMandatoryVoluntaryCode extends MMCode {
 	 * CorporateActionMandatoryVoluntaryCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "VOLU"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Voluntary"</li>
 	 * <li>
@@ -173,6 +169,10 @@ public class CorporateActionMandatoryVoluntaryCode extends MMCode {
 	 * definition} =
 	 * "Participation in the corporate action is voluntary. If the owner wishes to take part in the event, instructions from the account owner are required."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionMandatoryVoluntaryCode Voluntary = new CorporateActionMandatoryVoluntaryCode() {

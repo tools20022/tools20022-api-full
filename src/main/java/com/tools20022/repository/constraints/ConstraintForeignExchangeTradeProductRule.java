@@ -36,10 +36,6 @@ public class ConstraintForeignExchangeTradeProductRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Trade2 Trade2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ForeignExchangeTradeProductRule"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintForeignExchangeTradeProductRule {
 	 * definition} =
 	 * "If Foreign Exchange Trade Product is equal to 'FORW'or'NDFO'or'SPOT', then ForeignExchangeDetails must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Trade2> forTrade2 = new MMConstraint<Trade2>() {
@@ -69,10 +69,6 @@ public class ConstraintForeignExchangeTradeProductRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Trade1 Trade1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ForeignExchangeTradeProductRule"</li>
 	 * <li>
@@ -80,6 +76,10 @@ public class ConstraintForeignExchangeTradeProductRule {
 	 * definition} =
 	 * "If ForeignExchangeTradeProduct is present, then TradingCurrency SettlementCurrency TradingMode and PlaceOfConfirmation must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Trade1> forTrade1 = new MMConstraint<Trade1>() {

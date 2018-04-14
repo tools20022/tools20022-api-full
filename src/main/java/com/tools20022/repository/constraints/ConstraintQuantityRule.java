@@ -38,10 +38,6 @@ public class ConstraintQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AdditionalInformation9
 	 * AdditionalInformation9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "QuantityRule"</li>
 	 * <li>
@@ -49,6 +45,10 @@ public class ConstraintQuantityRule {
 	 * definition} =
 	 * "If pre-agreed between account servicer and account owner, then Quantity will be used to instruct the quantity of securities that should be partially processed, for example, partially authorised."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -87,10 +87,6 @@ public class ConstraintQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AdditionalInformation11
 	 * AdditionalInformation11}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "QuantityRule"</li>
 	 * <li>
@@ -98,6 +94,10 @@ public class ConstraintQuantityRule {
 	 * definition} =
 	 * "If pre-agreed between account servicer and account owner, then Quantity will be used to instruct the quantity of securities that should be partially processed, for example, partially authorised."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -136,10 +136,6 @@ public class ConstraintQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AdditionalInformation4
 	 * AdditionalInformation4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "QuantityRule"</li>
 	 * <li>
@@ -147,6 +143,10 @@ public class ConstraintQuantityRule {
 	 * definition} =
 	 * "If pre-agreed between account servicer and account owner, then Quantity will be used to instruct the quantity of securities that should be partially processed, for example, partially authorised."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AdditionalInformation4> forAdditionalInformation4 = new MMConstraint<AdditionalInformation4>() {
@@ -170,10 +170,6 @@ public class ConstraintQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AdditionalInformation3
 	 * AdditionalInformation3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "QuantityRule"</li>
 	 * <li>
@@ -181,6 +177,10 @@ public class ConstraintQuantityRule {
 	 * definition} =
 	 * "If pre-agreed between account servicer and account owner, then Quantity will be used to instruct the quantity of securities that should be partially processed, for example, partially authorised."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AdditionalInformation3> forAdditionalInformation3 = new MMConstraint<AdditionalInformation3>() {
@@ -204,10 +204,6 @@ public class ConstraintQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AdditionalInformation12
 	 * AdditionalInformation12}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "QuantityRule"</li>
 	 * <li>
@@ -215,6 +211,10 @@ public class ConstraintQuantityRule {
 	 * definition} =
 	 * "If pre-agreed between account servicer and account owner, then Quantity will be used to instruct the quantity of securities that should be partially processed, for example, partially authorised."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AdditionalInformation12> forAdditionalInformation12 = new MMConstraint<AdditionalInformation12>() {
@@ -238,10 +238,6 @@ public class ConstraintQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AdditionalInformation7
 	 * AdditionalInformation7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "QuantityRule"</li>
 	 * <li>
@@ -249,6 +245,10 @@ public class ConstraintQuantityRule {
 	 * definition} =
 	 * "If pre-agreed between account servicer and account owner, then Quantity will be used to instruct the quantity of securities that should be partially processed, for example, partially authorised."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -281,10 +281,6 @@ public class ConstraintQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AdditionalInformation8
 	 * AdditionalInformation8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "QuantityRule"</li>
 	 * <li>
@@ -292,6 +288,10 @@ public class ConstraintQuantityRule {
 	 * definition} =
 	 * "If pre-agreed between account servicer and account owner, then Quantity will be used to instruct the quantity of securities that should be partially processed, for example, partially authorised."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AdditionalInformation8> forAdditionalInformation8 = new MMConstraint<AdditionalInformation8>() {
@@ -315,10 +315,6 @@ public class ConstraintQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AdditionalInformation10
 	 * AdditionalInformation10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "QuantityRule"</li>
 	 * <li>
@@ -326,6 +322,10 @@ public class ConstraintQuantityRule {
 	 * definition} =
 	 * "If pre-agreed between account servicer and account owner, then Quantity will be used to instruct the quantity of securities that should be partially processed, for example, partially authorised."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AdditionalInformation10> forAdditionalInformation10 = new MMConstraint<AdditionalInformation10>() {
@@ -349,10 +349,6 @@ public class ConstraintQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AdditionalInformation13
 	 * AdditionalInformation13}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "QuantityRule"</li>
 	 * <li>
@@ -360,6 +356,10 @@ public class ConstraintQuantityRule {
 	 * definition} =
 	 * "If pre-agreed between account servicer and account owner, then Quantity will be used to instruct the quantity of securities that should be partially processed, for example, partially authorised."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -389,10 +389,6 @@ public class ConstraintQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AdditionalInformation14
 	 * AdditionalInformation14}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "QuantityRule"</li>
 	 * <li>
@@ -400,6 +396,10 @@ public class ConstraintQuantityRule {
 	 * definition} =
 	 * "If pre-agreed between account servicer and account owner, then Quantity will be used to instruct the quantity of securities that should be partially processed, for example, partially authorised."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AdditionalInformation14> forAdditionalInformation14 = new MMConstraint<AdditionalInformation14>() {

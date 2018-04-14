@@ -83,16 +83,16 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "ValuationDealingProcessingCharacteristics2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Valuation dealing processing characteristics linked to the instrument, ie, not to the market."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -124,15 +124,15 @@ public class ValuationDealingProcessingCharacteristics2 {
 	 * ValuationDealingProcessingCharacteristics2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ValtnFrqcy"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ValuationFrequency"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Frequency of the valuation."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ValuationDealingProcessingCharacteristics2, EventFrequency5Code> mmValuationFrequency = new MMMessageAttribute<ValuationDealingProcessingCharacteristics2, EventFrequency5Code>() {
@@ -177,10 +177,6 @@ public class ValuationDealingProcessingCharacteristics2 {
 	 * ValuationDealingProcessingCharacteristics2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ValtnFrqcyDesc"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ValuationFrequencyDescription"</li>
 	 * <li>
@@ -188,6 +184,10 @@ public class ValuationDealingProcessingCharacteristics2 {
 	 * definition} =
 	 * "Further details regarding the dealing frequency, eg, Tuesday (for weekly dealing) or last business day of the month."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ValuationDealingProcessingCharacteristics2, Max350Text> mmValuationFrequencyDescription = new MMMessageAttribute<ValuationDealingProcessingCharacteristics2, Max350Text>() {
@@ -236,10 +236,6 @@ public class ValuationDealingProcessingCharacteristics2 {
 	 * ValuationDealingProcessingCharacteristics2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DcmlstnUnits"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DecimalisationUnits"</li>
 	 * <li>
@@ -247,6 +243,10 @@ public class ValuationDealingProcessingCharacteristics2 {
 	 * definition} =
 	 * "Number of decimal places to which quantities of units/shares are rounded."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ValuationDealingProcessingCharacteristics2, Number> mmDecimalisationUnits = new MMMessageAttribute<ValuationDealingProcessingCharacteristics2, Number>() {
@@ -296,10 +296,6 @@ public class ValuationDealingProcessingCharacteristics2 {
 	 * ValuationDealingProcessingCharacteristics2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DcmlstnPric"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DecimalisationPrice"</li>
 	 * <li>
@@ -307,6 +303,10 @@ public class ValuationDealingProcessingCharacteristics2 {
 	 * definition} =
 	 * "Number of decimal places to which quantities of units/shares are rounded."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ValuationDealingProcessingCharacteristics2, Number> mmDecimalisationPrice = new MMMessageAttribute<ValuationDealingProcessingCharacteristics2, Number>() {
@@ -357,15 +357,15 @@ public class ValuationDealingProcessingCharacteristics2 {
 	 * ValuationDealingProcessingCharacteristics2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DualFndInd"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DualFundIndicator"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates whether the fund has two prices."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ValuationDealingProcessingCharacteristics2, YesNoIndicator> mmDualFundIndicator = new MMMessageAttribute<ValuationDealingProcessingCharacteristics2, YesNoIndicator>() {
@@ -416,15 +416,15 @@ public class ValuationDealingProcessingCharacteristics2 {
 	 * ValuationDealingProcessingCharacteristics2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PricMtd"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PriceMethod"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Type of pricing calculation method."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ValuationDealingProcessingCharacteristics2, PriceMethod1Code> mmPriceMethod = new MMMessageAttribute<ValuationDealingProcessingCharacteristics2, PriceMethod1Code>() {
@@ -475,10 +475,6 @@ public class ValuationDealingProcessingCharacteristics2 {
 	 * ValuationDealingProcessingCharacteristics2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PricCcy"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PriceCurrency"</li>
 	 * <li>
@@ -486,6 +482,10 @@ public class ValuationDealingProcessingCharacteristics2 {
 	 * definition} =
 	 * "Currencies in which the prices for the investment fund class are published by the fund management company."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ValuationDealingProcessingCharacteristics2, List<ActiveCurrencyCode>> mmPriceCurrency = new MMMessageAttribute<ValuationDealingProcessingCharacteristics2, List<ActiveCurrencyCode>>() {

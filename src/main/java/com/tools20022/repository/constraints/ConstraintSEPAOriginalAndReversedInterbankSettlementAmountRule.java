@@ -41,10 +41,6 @@ public class ConstraintSEPAOriginalAndReversedInterbankSettlementAmountRule {
 	 * expression} =
 	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToNode\"&gt;&lt;leftOperand&gt;/OriginalInterbankSettlementAmount&lt;/leftOperand&gt;&lt;rightOperand&gt;/ReversedInterbankSettlementAmount&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/OriginalInterbankSettlementAmount&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SEPAOriginalAndReversedInterbankSettlementAmountRule"</li>
 	 * <li>
@@ -52,6 +48,10 @@ public class ConstraintSEPAOriginalAndReversedInterbankSettlementAmountRule {
 	 * definition} =
 	 * "SEA TVS 3.x Rule: \nReversed Interbank Settlement Amount must be the same as the Amount of the Collection (AT-06) (i.e OriginalInterbankSettlementAmount)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PaymentTransactionInformation20> forPaymentTransactionInformation20 = new MMConstraint<PaymentTransactionInformation20>() {
@@ -80,10 +80,6 @@ public class ConstraintSEPAOriginalAndReversedInterbankSettlementAmountRule {
 	 * expression} =
 	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToNode\"&gt;&lt;leftOperand&gt;/OriginalInterbankSettlementAmount&lt;/leftOperand&gt;&lt;rightOperand&gt;/ReversedInterbankSettlementAmount&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/OriginalInterbankSettlementAmount&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SEPAOriginalAndReversedInterbankSettlementAmountRule"</li>
 	 * <li>
@@ -91,6 +87,10 @@ public class ConstraintSEPAOriginalAndReversedInterbankSettlementAmountRule {
 	 * definition} =
 	 * "SEA TVS 3.x Rule: \nReversed Interbank Settlement Amount must be the same as the Amount of the Collection (AT-06) (i.e OriginalInterbankSettlementAmount)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PaymentTransactionInformation24> forPaymentTransactionInformation24 = new MMConstraint<PaymentTransactionInformation24>() {

@@ -58,14 +58,14 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "ATMSecurityConfiguration2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Configuration of the cryptographic keys."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
  * nextVersions} =
  * <ul>
@@ -102,10 +102,6 @@ public class ATMSecurityConfiguration2 {
 	 * ATMSecurityConfiguration2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MaxSmmtrcKey"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MaximumSymmetricKey"</li>
 	 * <li>
@@ -113,6 +109,10 @@ public class ATMSecurityConfiguration2 {
 	 * definition} =
 	 * "Maximum number of symmetric keys the security module is able to manage."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ATMSecurityConfiguration2, Optional<Number>> mmMaximumSymmetricKey = new MMMessageAttribute<ATMSecurityConfiguration2, Optional<Number>>() {
@@ -156,10 +156,6 @@ public class ATMSecurityConfiguration2 {
 	 * ATMSecurityConfiguration2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MaxAsmmtrcKey"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MaximumAsymmetricKey"</li>
 	 * <li>
@@ -167,6 +163,10 @@ public class ATMSecurityConfiguration2 {
 	 * definition} =
 	 * "Maximum number of asymmetric keys the security module is able to manage."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ATMSecurityConfiguration2, Optional<Number>> mmMaximumAsymmetricKey = new MMMessageAttribute<ATMSecurityConfiguration2, Optional<Number>>() {
@@ -210,10 +210,6 @@ public class ATMSecurityConfiguration2 {
 	 * ATMSecurityConfiguration2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MaxRSAKeyLngth"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MaximumRSAKeyLength"</li>
 	 * <li>
@@ -221,6 +217,10 @@ public class ATMSecurityConfiguration2 {
 	 * definition} =
 	 * "Maximum RSA key length (in number of bytes), the security module is able to manage."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ATMSecurityConfiguration2, Optional<Number>> mmMaximumRSAKeyLength = new MMMessageAttribute<ATMSecurityConfiguration2, Optional<Number>>() {
@@ -264,10 +264,6 @@ public class ATMSecurityConfiguration2 {
 	 * ATMSecurityConfiguration2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MaxRootKeyLngth"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MaximumRootKeyLength"</li>
 	 * <li>
@@ -275,6 +271,10 @@ public class ATMSecurityConfiguration2 {
 	 * definition} =
 	 * "Maximum RSA root key length (in number of bytes), the security module is able to manage, if different from the maximum RSA key length."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ATMSecurityConfiguration2, Optional<Number>> mmMaximumRootKeyLength = new MMMessageAttribute<ATMSecurityConfiguration2, Optional<Number>>() {

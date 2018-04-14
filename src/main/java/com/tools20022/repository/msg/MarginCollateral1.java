@@ -69,16 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "MarginCollateral1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Provides details about the collateral held, in transit or that still needs to be agreed by both parties."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -110,16 +110,16 @@ public class MarginCollateral1 {
 	 * MarginCollateral1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "HeldByPtyA"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "HeldByPartyA"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Post haircut market value of all margin collateral held by party A."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<MarginCollateral1, Optional<ActiveCurrencyAndAmount>> mmHeldByPartyA = new MMMessageAttribute<MarginCollateral1, Optional<ActiveCurrencyAndAmount>>() {
@@ -170,16 +170,16 @@ public class MarginCollateral1 {
 	 * MarginCollateral1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "HeldByPtyB"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "HeldByPartyB"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Post haircut market value of all margin collateral held by party B."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<MarginCollateral1, Optional<ActiveCurrencyAndAmount>> mmHeldByPartyB = new MMMessageAttribute<MarginCollateral1, Optional<ActiveCurrencyAndAmount>>() {
@@ -230,10 +230,6 @@ public class MarginCollateral1 {
 	 * MarginCollateral1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrrAgrdToPtyA"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PriorAgreedToPartyA"</li>
 	 * <li>
@@ -241,6 +237,10 @@ public class MarginCollateral1 {
 	 * definition} =
 	 * "Sum of all margin agreed amounts due to party A from prior days’ collateral calls where collateral movements have not yet been agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<MarginCollateral1, Optional<ActiveCurrencyAndAmount>> mmPriorAgreedToPartyA = new MMMessageAttribute<MarginCollateral1, Optional<ActiveCurrencyAndAmount>>() {
@@ -291,10 +291,6 @@ public class MarginCollateral1 {
 	 * MarginCollateral1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrrAgrdToPtyB"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PriorAgreedToPartyB"</li>
 	 * <li>
@@ -302,6 +298,10 @@ public class MarginCollateral1 {
 	 * definition} =
 	 * "Sum of all margin agreed amounts due to party B from prior days’ collateral calls where collateral movements have not yet been agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<MarginCollateral1, Optional<ActiveCurrencyAndAmount>> mmPriorAgreedToPartyB = new MMMessageAttribute<MarginCollateral1, Optional<ActiveCurrencyAndAmount>>() {
@@ -352,10 +352,6 @@ public class MarginCollateral1 {
 	 * MarginCollateral1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "InTrnstToPtyA"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InTransitToPartyA"</li>
 	 * <li>
@@ -363,6 +359,10 @@ public class MarginCollateral1 {
 	 * definition} =
 	 * "Sum of all margin collateral movements due to party A in progress but not yet settled."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<MarginCollateral1, Optional<ActiveCurrencyAndAmount>> mmInTransitToPartyA = new MMMessageAttribute<MarginCollateral1, Optional<ActiveCurrencyAndAmount>>() {
@@ -413,10 +413,6 @@ public class MarginCollateral1 {
 	 * MarginCollateral1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "InTrnstToPtyB"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InTransitToPartyB"</li>
 	 * <li>
@@ -424,6 +420,10 @@ public class MarginCollateral1 {
 	 * definition} =
 	 * "Sum of all margin collateral movements due to party B in progress but not yet settled."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<MarginCollateral1, Optional<ActiveCurrencyAndAmount>> mmInTransitToPartyB = new MMMessageAttribute<MarginCollateral1, Optional<ActiveCurrencyAndAmount>>() {

@@ -37,10 +37,6 @@ public class ConstraintTotalEligibleCollateralValueRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TotalValueInPageAndStatement3
 	 * TotalValueInPageAndStatement3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TotalEligibleCollateralValueRule"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintTotalEligibleCollateralValueRule {
 	 * definition} =
 	 * "Total eligible collateral value is only to be used in (I)CSD-participant communication or if bilaterally agreed between the sender and receiver."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TotalValueInPageAndStatement3> forTotalValueInPageAndStatement3 = new MMConstraint<TotalValueInPageAndStatement3>() {
@@ -71,10 +71,6 @@ public class ConstraintTotalEligibleCollateralValueRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TotalValueInPageAndStatement1
 	 * TotalValueInPageAndStatement1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TotalEligibleCollateralValueRule"</li>
 	 * <li>
@@ -82,6 +78,10 @@ public class ConstraintTotalEligibleCollateralValueRule {
 	 * definition} =
 	 * "Total eligible collateral value is only to be used in (I)CSD-participant communication or if bilaterally agreed between the sender and receiver."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TotalValueInPageAndStatement1> forTotalValueInPageAndStatement1 = new MMConstraint<TotalValueInPageAndStatement1>() {

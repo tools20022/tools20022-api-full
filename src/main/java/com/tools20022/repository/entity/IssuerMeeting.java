@@ -79,16 +79,16 @@ import java.util.Objects;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "IssuerMeeting"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Information about the meeting, specifying the participation requirements and the voting procedures."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class IssuerMeeting extends Meeting {
@@ -147,10 +147,6 @@ public class IssuerMeeting extends Meeting {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.IssuerMeeting IssuerMeeting}
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IssuerMeetingIdentification"</li>
 	 * <li>
@@ -158,6 +154,10 @@ public class IssuerMeeting extends Meeting {
 	 * definition} =
 	 * "Identification assigned to a meeting by the issuer. It must be unique for the issuer."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<IssuerMeeting, Max35Text> mmIssuerMeetingIdentification = new MMBusinessAttribute<IssuerMeeting, Max35Text>() {
@@ -201,10 +201,6 @@ public class IssuerMeeting extends Meeting {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.IssuerMeeting IssuerMeeting}
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NomineePowerOfAttorneyIndicator"</li>
 	 * <li>
@@ -212,6 +208,10 @@ public class IssuerMeeting extends Meeting {
 	 * definition} =
 	 * "Indicates that a power of attorney must be provided by the beneficial owner to the nominee in order for the nominee to vote on behalf of the beneficial owner."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<IssuerMeeting, YesNoIndicator> mmNomineePowerOfAttorneyIndicator = new MMBusinessAttribute<IssuerMeeting, YesNoIndicator>() {
@@ -252,10 +252,6 @@ public class IssuerMeeting extends Meeting {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.IssuerMeeting IssuerMeeting}
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NomineeVotingIndicator"</li>
 	 * <li>
@@ -263,6 +259,10 @@ public class IssuerMeeting extends Meeting {
 	 * definition} =
 	 * "Indicates whether an agent can vote on behalf of the beneficial owners."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<IssuerMeeting, YesNoIndicator> mmNomineeVotingIndicator = new MMBusinessAttribute<IssuerMeeting, YesNoIndicator>() {
@@ -303,10 +303,6 @@ public class IssuerMeeting extends Meeting {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.IssuerMeeting IssuerMeeting}
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NomineeBeneficialOwnerIndicator"</li>
 	 * <li>
@@ -314,6 +310,10 @@ public class IssuerMeeting extends Meeting {
 	 * definition} =
 	 * "Indicates whether the beneficiary details, for example, name and address, must be supplied in order to take part in the event."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<IssuerMeeting, YesNoIndicator> mmNomineeBeneficialOwnerIndicator = new MMBusinessAttribute<IssuerMeeting, YesNoIndicator>() {
@@ -354,10 +354,6 @@ public class IssuerMeeting extends Meeting {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.IssuerMeeting IssuerMeeting}
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ProxyVotingIndicator"</li>
 	 * <li>
@@ -365,6 +361,10 @@ public class IssuerMeeting extends Meeting {
 	 * definition} =
 	 * "Indicates that the beneficial owner may give authority to a third party to vote on his behalf."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<IssuerMeeting, YesNoIndicator> mmProxyVotingIndicator = new MMBusinessAttribute<IssuerMeeting, YesNoIndicator>() {
@@ -405,10 +405,6 @@ public class IssuerMeeting extends Meeting {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.IssuerMeeting IssuerMeeting}
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ProxyBeneficialOwnerIndicator"</li>
 	 * <li>
@@ -416,6 +412,10 @@ public class IssuerMeeting extends Meeting {
 	 * definition} =
 	 * "Indicates whether the beneficiary details of the proxy, for example, name and address, must be supplied in order to take part in the event."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<IssuerMeeting, YesNoIndicator> mmProxyBeneficialOwnerIndicator = new MMBusinessAttribute<IssuerMeeting, YesNoIndicator>() {
@@ -456,10 +456,6 @@ public class IssuerMeeting extends Meeting {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.IssuerMeeting IssuerMeeting}
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ProxyPowerOfAttorneyIndicator"</li>
 	 * <li>
@@ -467,6 +463,10 @@ public class IssuerMeeting extends Meeting {
 	 * definition} =
 	 * "Indicates that a power of attorney must be provided by the beneficial owner to the proxy in order for the proxy to vote on behalf of the beneficial owner."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<IssuerMeeting, YesNoIndicator> mmProxyPowerOfAttorneyIndicator = new MMBusinessAttribute<IssuerMeeting, YesNoIndicator>() {
@@ -507,10 +507,6 @@ public class IssuerMeeting extends Meeting {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.IssuerMeeting IssuerMeeting}
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ValidCreditorIndicator"</li>
 	 * <li>
@@ -518,6 +514,10 @@ public class IssuerMeeting extends Meeting {
 	 * definition} =
 	 * "Indicates that the participant must be a creditor of the company in order to vote on the resolutions of the meeting."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<IssuerMeeting, YesNoIndicator> mmValidCreditorIndicator = new MMBusinessAttribute<IssuerMeeting, YesNoIndicator>() {
@@ -558,10 +558,6 @@ public class IssuerMeeting extends Meeting {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.IssuerMeeting IssuerMeeting}
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CapitalStock"</li>
 	 * <li>
@@ -569,6 +565,10 @@ public class IssuerMeeting extends Meeting {
 	 * definition} =
 	 * "Total amount of stock, common or preferred, that a corporation has issued uder its certificate of incorporation or charter."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<IssuerMeeting, CurrencyAndAmount> mmCapitalStock = new MMBusinessAttribute<IssuerMeeting, CurrencyAndAmount>() {

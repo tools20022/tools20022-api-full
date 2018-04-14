@@ -40,10 +40,6 @@ public class ConstraintEntitlementDate1Guideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV05
 	 * MeetingNotificationV05}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EntitlementDate1Guideline"</li>
 	 * <li>
@@ -51,6 +47,10 @@ public class ConstraintEntitlementDate1Guideline {
 	 * definition} =
 	 * "If both EntitlementSpecification/EntitlementFixingDate and Security/Position/HoldingBalance/Date are present, it is recommended that both date values be identical."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -80,10 +80,6 @@ public class ConstraintEntitlementDate1Guideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV04
 	 * MeetingNotificationV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EntitlementDate1Guideline"</li>
 	 * <li>
@@ -91,6 +87,10 @@ public class ConstraintEntitlementDate1Guideline {
 	 * definition} =
 	 * "If both EntitlementSpecification/EntitlementFixingDate and Security/Position/HoldingBalance/Date are present, it is recommended that both date values be identical."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -123,10 +123,6 @@ public class ConstraintEntitlementDate1Guideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV03
 	 * MeetingNotificationV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EntitlementDate1Guideline"</li>
 	 * <li>
@@ -134,6 +130,10 @@ public class ConstraintEntitlementDate1Guideline {
 	 * definition} =
 	 * "If both EntitlementSpecification/EntitlementFixingDate and Security/Position/HoldingBalance/Date are present, it is recommended that both date values be identical."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<MeetingNotificationV03> for_seev_MeetingNotificationV03 = new MMConstraint<MeetingNotificationV03>() {

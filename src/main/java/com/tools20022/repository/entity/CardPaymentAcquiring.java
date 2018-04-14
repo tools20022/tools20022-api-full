@@ -466,14 +466,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CardPaymentAcquiring"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Payment processes initiated by a payment card."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class CardPaymentAcquiring {
@@ -486,6 +486,10 @@ public class CardPaymentAcquiring {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.PointOfInteraction
+	 * PointOfInteraction}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.PointOfInteraction#mmCardPaymentAcquiring
@@ -493,10 +497,6 @@ public class CardPaymentAcquiring {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.PointOfInteraction
-	 * PointOfInteraction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -747,10 +747,6 @@ public class CardPaymentAcquiring {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
 	 * CardPaymentAcquiring}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PointOfInteraction"</li>
 	 * <li>
@@ -758,6 +754,10 @@ public class CardPaymentAcquiring {
 	 * definition} =
 	 * "Describes the Point of Interaction through which the payment by card was initiated."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<CardPaymentAcquiring, Optional<PointOfInteraction>> mmPointOfInteraction = new MMBusinessAssociationEnd<CardPaymentAcquiring, Optional<PointOfInteraction>>() {
@@ -1249,15 +1249,15 @@ public class CardPaymentAcquiring {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
 	 * CardPaymentAcquiring}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CardPaymentService"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Type of service provided by the transaction."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CardPaymentAcquiring, CardPaymentServiceTypeCode> mmCardPaymentService = new MMBusinessAttribute<CardPaymentAcquiring, CardPaymentServiceTypeCode>() {
@@ -1638,10 +1638,6 @@ public class CardPaymentAcquiring {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
 	 * CardPaymentAcquiring}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TransactionIdentification"</li>
 	 * <li>
@@ -1649,6 +1645,10 @@ public class CardPaymentAcquiring {
 	 * definition} =
 	 * "Identification of the transaction assigned by the POI (Point Of Interaction)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CardPaymentAcquiring, Max35Text> mmTransactionIdentification = new MMBusinessAttribute<CardPaymentAcquiring, Max35Text>() {
@@ -1747,10 +1747,6 @@ public class CardPaymentAcquiring {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
 	 * CardPaymentAcquiring}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TransactionDateTime"</li>
 	 * <li>
@@ -1758,6 +1754,10 @@ public class CardPaymentAcquiring {
 	 * definition} =
 	 * "Local date and time of the transaction assigned by the POI (Point Of Interaction)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CardPaymentAcquiring, ISODateTime> mmTransactionDateTime = new MMBusinessAttribute<CardPaymentAcquiring, ISODateTime>() {
@@ -1941,10 +1941,6 @@ public class CardPaymentAcquiring {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
 	 * CardPaymentAcquiring}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ICCRelatedData"</li>
 	 * <li>
@@ -1952,6 +1948,10 @@ public class CardPaymentAcquiring {
 	 * definition} =
 	 * "Data related to the interface of an integrated circuit card application."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CardPaymentAcquiring, Max10000Binary> mmICCRelatedData = new MMBusinessAttribute<CardPaymentAcquiring, Max10000Binary>() {
@@ -1995,6 +1995,10 @@ public class CardPaymentAcquiring {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.CardPayment
+	 * CardPayment}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.CardPayment#mmCardPaymentAcquiring
@@ -2002,10 +2006,6 @@ public class CardPaymentAcquiring {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.CardPayment
-	 * CardPayment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2028,16 +2028,16 @@ public class CardPaymentAcquiring {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
 	 * CardPaymentAcquiring}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RelatedCardPayment"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Card payment which is at the origin of the acquiring process."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<CardPaymentAcquiring, Optional<CardPayment>> mmRelatedCardPayment = new MMBusinessAssociationEnd<CardPaymentAcquiring, Optional<CardPayment>>() {
@@ -2164,10 +2164,6 @@ public class CardPaymentAcquiring {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
 	 * CardPaymentAcquiring}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CardPresent"</li>
 	 * <li>
@@ -2175,6 +2171,10 @@ public class CardPaymentAcquiring {
 	 * definition} =
 	 * "Indicates whether the transaction has been initiated by a card physically present or not."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CardPaymentAcquiring, TrueFalseIndicator> mmCardPresent = new MMBusinessAttribute<CardPaymentAcquiring, TrueFalseIndicator>() {
@@ -2303,10 +2303,6 @@ public class CardPaymentAcquiring {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
 	 * CardPaymentAcquiring}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CardholderPresent"</li>
 	 * <li>
@@ -2314,6 +2310,10 @@ public class CardPaymentAcquiring {
 	 * definition} =
 	 * "Indicates whether the transaction has been initiated in presence of the cardholder or not."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CardPaymentAcquiring, TrueFalseIndicator> mmCardholderPresent = new MMBusinessAttribute<CardPaymentAcquiring, TrueFalseIndicator>() {
@@ -2416,15 +2416,15 @@ public class CardPaymentAcquiring {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
 	 * CardPaymentAcquiring}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OnLineContext"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "On-line or off-line context of the transaction."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CardPaymentAcquiring, TrueFalseIndicator> mmOnLineContext = new MMBusinessAttribute<CardPaymentAcquiring, TrueFalseIndicator>() {
@@ -2572,16 +2572,16 @@ public class CardPaymentAcquiring {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
 	 * CardPaymentAcquiring}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AttendanceContext"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Human attendance at the POI location during the transaction."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CardPaymentAcquiring, AttendanceContextCode> mmAttendanceContext = new MMBusinessAttribute<CardPaymentAcquiring, AttendanceContextCode>() {
@@ -2712,15 +2712,15 @@ public class CardPaymentAcquiring {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
 	 * CardPaymentAcquiring}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TransactionEnvironment"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates the environment of the transaction."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CardPaymentAcquiring, TransactionEnvironmentCode> mmTransactionEnvironment = new MMBusinessAttribute<CardPaymentAcquiring, TransactionEnvironmentCode>() {
@@ -2850,10 +2850,6 @@ public class CardPaymentAcquiring {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
 	 * CardPaymentAcquiring}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TransactionChannel"</li>
 	 * <li>
@@ -2861,6 +2857,10 @@ public class CardPaymentAcquiring {
 	 * definition} =
 	 * "Identifies the type of the communication channels used by the cardholder to the acceptor system."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CardPaymentAcquiring, TransactionChannelCode> mmTransactionChannel = new MMBusinessAttribute<CardPaymentAcquiring, TransactionChannelCode>() {
@@ -2963,10 +2963,6 @@ public class CardPaymentAcquiring {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
 	 * CardPaymentAcquiring}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AttendantMessageCapable"</li>
 	 * <li>
@@ -2974,6 +2970,10 @@ public class CardPaymentAcquiring {
 	 * definition} =
 	 * "Indicates whether a message can be sent or not on an attendant display (attendant display present or not)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CardPaymentAcquiring, TrueFalseIndicator> mmAttendantMessageCapable = new MMBusinessAttribute<CardPaymentAcquiring, TrueFalseIndicator>() {
@@ -3074,15 +3074,15 @@ public class CardPaymentAcquiring {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
 	 * CardPaymentAcquiring}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AttendantLanguage"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Language used to display messages to the attendant."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CardPaymentAcquiring, ISO2ALanguageCode> mmAttendantLanguage = new MMBusinessAttribute<CardPaymentAcquiring, ISO2ALanguageCode>() {
@@ -3210,15 +3210,15 @@ public class CardPaymentAcquiring {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
 	 * CardPaymentAcquiring}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CardDataEntryMode"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Entry mode of the card data."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CardPaymentAcquiring, CardDataReadingCode> mmCardDataEntryMode = new MMBusinessAttribute<CardPaymentAcquiring, CardDataReadingCode>() {
@@ -3291,15 +3291,15 @@ public class CardPaymentAcquiring {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
 	 * CardPaymentAcquiring}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FallbackIndicator"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicator of a transaction fallback."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CardPaymentAcquiring, TrueFalseIndicator> mmFallbackIndicator = new MMBusinessAttribute<CardPaymentAcquiring, TrueFalseIndicator>() {
@@ -3333,6 +3333,11 @@ public class CardPaymentAcquiring {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} =
+	 * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem
+	 * TerminalManagementSystem}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#mmCardPaymentAcquiring
@@ -3340,11 +3345,6 @@ public class CardPaymentAcquiring {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} =
-	 * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem
-	 * TerminalManagementSystem}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -3430,10 +3430,6 @@ public class CardPaymentAcquiring {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
 	 * CardPaymentAcquiring}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TMSTrigger"</li>
 	 * <li>
@@ -3441,6 +3437,10 @@ public class CardPaymentAcquiring {
 	 * definition} =
 	 * "Instructs the POI (Point Of Interaction) how to contact the host of the terminal management system (TMS), to initiate the maintenance of the terminal."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<CardPaymentAcquiring, List<TerminalManagementSystem>> mmTMSTrigger = new MMBusinessAssociationEnd<CardPaymentAcquiring, List<TerminalManagementSystem>>() {
@@ -3576,10 +3576,6 @@ public class CardPaymentAcquiring {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
 	 * CardPaymentAcquiring}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InitiatorTransactionIdentifier"</li>
 	 * <li>
@@ -3587,6 +3583,10 @@ public class CardPaymentAcquiring {
 	 * definition} =
 	 * "Identification of the transaction assigned by the initiating party for the recipient party."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CardPaymentAcquiring, Max35Text> mmInitiatorTransactionIdentifier = new MMBusinessAttribute<CardPaymentAcquiring, Max35Text>() {
@@ -3714,10 +3714,6 @@ public class CardPaymentAcquiring {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
 	 * CardPaymentAcquiring}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Reversal"</li>
 	 * <li>
@@ -3725,6 +3721,10 @@ public class CardPaymentAcquiring {
 	 * definition} =
 	 * "Notify that a previous transaction has to be reversed if this original transaction has been approved by the acquirer."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CardPaymentAcquiring, TrueFalseIndicator> mmReversal = new MMBusinessAttribute<CardPaymentAcquiring, TrueFalseIndicator>() {
@@ -3888,15 +3888,15 @@ public class CardPaymentAcquiring {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
 	 * CardPaymentAcquiring}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InterchangeData"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Interchange information related to the card scheme."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CardPaymentAcquiring, Max35Text> mmInterchangeData = new MMBusinessAttribute<CardPaymentAcquiring, Max35Text>() {
@@ -4019,10 +4019,6 @@ public class CardPaymentAcquiring {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
 	 * CardPaymentAcquiring}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnattendedLevelCategory"</li>
 	 * <li>
@@ -4030,6 +4026,10 @@ public class CardPaymentAcquiring {
 	 * definition} =
 	 * "Transaction category level on an unattended POI (Point Of Interaction)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CardPaymentAcquiring, Max35NumericText> mmUnattendedLevelCategory = new MMBusinessAttribute<CardPaymentAcquiring, Max35NumericText>() {
@@ -4069,6 +4069,11 @@ public class CardPaymentAcquiring {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} =
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentValidation
+	 * CardPaymentValidation}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.CardPaymentValidation#mmCardPayment
@@ -4076,11 +4081,6 @@ public class CardPaymentAcquiring {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentValidation
-	 * CardPaymentValidation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -4223,15 +4223,15 @@ public class CardPaymentAcquiring {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
 	 * CardPaymentAcquiring}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Validation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Results and parameters of the card payment verification."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<CardPaymentAcquiring, List<CardPaymentValidation>> mmValidation = new MMBusinessAssociationEnd<CardPaymentAcquiring, List<CardPaymentValidation>>() {
@@ -4298,10 +4298,6 @@ public class CardPaymentAcquiring {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
 	 * CardPaymentAcquiring}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CompletionRequired"</li>
 	 * <li>
@@ -4309,6 +4305,10 @@ public class CardPaymentAcquiring {
 	 * definition} =
 	 * "Indicates whether the acquirer requires a further exchange after the completion of the transaction."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CardPaymentAcquiring, TrueFalseIndicator> mmCompletionRequired = new MMBusinessAttribute<CardPaymentAcquiring, TrueFalseIndicator>() {
@@ -4371,10 +4371,6 @@ public class CardPaymentAcquiring {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
 	 * CardPaymentAcquiring}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ActionType"</li>
 	 * <li>
@@ -4382,6 +4378,10 @@ public class CardPaymentAcquiring {
 	 * definition} =
 	 * "Type of action to be performed by the POI (Point Of Interaction) system."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CardPaymentAcquiring, ActionTypeCode> mmActionType = new MMBusinessAttribute<CardPaymentAcquiring, ActionTypeCode>() {
@@ -4456,16 +4456,16 @@ public class CardPaymentAcquiring {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
 	 * CardPaymentAcquiring}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ActionMessage"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Message to be displayed or printed to the cardholder or the cashier."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CardPaymentAcquiring, Max256Text> mmActionMessage = new MMBusinessAttribute<CardPaymentAcquiring, Max256Text>() {
@@ -4508,15 +4508,15 @@ public class CardPaymentAcquiring {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
 	 * CardPaymentAcquiring}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CaptureIndicator"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates whether the transaction is captured or not."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CardPaymentAcquiring, TrueFalseIndicator> mmCaptureIndicator = new MMBusinessAttribute<CardPaymentAcquiring, TrueFalseIndicator>() {
@@ -4556,10 +4556,6 @@ public class CardPaymentAcquiring {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
 	 * CardPaymentAcquiring}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RecipientTransactionIdentification"</li>
 	 * <li>
@@ -4567,6 +4563,10 @@ public class CardPaymentAcquiring {
 	 * definition} =
 	 * "Identification of the transaction assigned by the recipient party for the initiating party."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CardPaymentAcquiring, Max35Text> mmRecipientTransactionIdentification = new MMBusinessAttribute<CardPaymentAcquiring, Max35Text>() {
@@ -4615,10 +4615,6 @@ public class CardPaymentAcquiring {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
 	 * CardPaymentAcquiring}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Location"</li>
 	 * <li>
@@ -4626,6 +4622,10 @@ public class CardPaymentAcquiring {
 	 * definition} =
 	 * "Location category of the place where the merchant actually performed the transaction."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CardPaymentAcquiring, LocationCategoryCode> mmLocation = new MMBusinessAttribute<CardPaymentAcquiring, LocationCategoryCode>() {
@@ -4658,6 +4658,9 @@ public class CardPaymentAcquiring {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.Country Country}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.Country#mmRelatedCardPayment
@@ -4666,23 +4669,20 @@ public class CardPaymentAcquiring {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.Country Country}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring
 	 * CardPaymentAcquiring}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Country"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Country of the merchant where the transaction took place."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<CardPaymentAcquiring, Optional<Country>> mmCountry = new MMBusinessAssociationEnd<CardPaymentAcquiring, Optional<Country>>() {

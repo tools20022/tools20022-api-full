@@ -178,16 +178,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "InvestmentFundOrderExecution"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Creation/cancellation of investment units on the books of the fund or its designated agent, as a result of executing an investment fund order."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
@@ -200,6 +200,10 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
+	 * SecuritiesQuantity}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmRelatedOrderExecution
@@ -207,10 +211,6 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
-	 * SecuritiesQuantity}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -369,15 +369,15 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution
 	 * InvestmentFundOrderExecution}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnitsNumber"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Number of investment fund units subscribed or redeemed."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<InvestmentFundOrderExecution, SecuritiesQuantity> mmUnitsNumber = new MMBusinessAssociationEnd<InvestmentFundOrderExecution, SecuritiesQuantity>() {
@@ -612,10 +612,6 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution
 	 * InvestmentFundOrderExecution}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NonStandardSettlementInformation"</li>
 	 * <li>
@@ -623,6 +619,10 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 * definition} =
 	 * "Additional specific settlement information for non-regulated traded funds."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvestmentFundOrderExecution, Max350Text> mmNonStandardSettlementInformation = new MMBusinessAttribute<InvestmentFundOrderExecution, Max350Text>() {
@@ -671,6 +671,10 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.InvestmentFundOrder
+	 * InvestmentFundOrder}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmInvestmentFundOrderExecution
@@ -678,10 +682,6 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.InvestmentFundOrder
-	 * InvestmentFundOrder}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -710,15 +710,15 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution
 	 * InvestmentFundOrderExecution}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Order"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Order which is executed."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<InvestmentFundOrderExecution, Optional<InvestmentFundOrder>> mmOrder = new MMBusinessAssociationEnd<InvestmentFundOrderExecution, Optional<InvestmentFundOrder>>() {
@@ -860,10 +860,6 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution
 	 * InvestmentFundOrderExecution}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DealIdentification"</li>
 	 * <li>
@@ -871,6 +867,10 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 * definition} =
 	 * "Unique and unambiguous identifier for an order execution, as assigned by a confirming party."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvestmentFundOrderExecution, Max35Text> mmDealIdentification = new MMBusinessAttribute<InvestmentFundOrderExecution, Max35Text>() {
@@ -909,6 +909,10 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesPricing
+	 * SecuritiesPricing}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmFundOrderRelatedToExecutedPrice
@@ -916,10 +920,6 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesPricing
-	 * SecuritiesPricing}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1015,15 +1015,15 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution
 	 * InvestmentFundOrderExecution}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ExecutedTradePrice"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Price at which the order was executed."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<InvestmentFundOrderExecution, SecuritiesPricing> mmExecutedTradePrice = new MMBusinessAssociationEnd<InvestmentFundOrderExecution, SecuritiesPricing>() {
@@ -1135,10 +1135,6 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution
 	 * InvestmentFundOrderExecution}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PartiallyExecutedIndicator"</li>
 	 * <li>
@@ -1146,6 +1142,10 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 * definition} =
 	 * "Indicates whether the order has been partially executed, ie, the confirmed quantity does not match the ordered quantity for a given financial instrument."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvestmentFundOrderExecution, YesNoIndicator> mmPartiallyExecutedIndicator = new MMBusinessAttribute<InvestmentFundOrderExecution, YesNoIndicator>() {
@@ -1268,10 +1268,6 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution
 	 * InvestmentFundOrderExecution}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InterimProfitAmount"</li>
 	 * <li>
@@ -1279,6 +1275,10 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 * definition} =
 	 * "Part of the price deemed as accrued income or profit rather than capital. The interim profit amount is used for tax purposes."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvestmentFundOrderExecution, CurrencyAndAmount> mmInterimProfitAmount = new MMBusinessAttribute<InvestmentFundOrderExecution, CurrencyAndAmount>() {
@@ -1316,6 +1316,10 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesPricing
+	 * SecuritiesPricing}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmFundOrderRelatedToInformativePrice
@@ -1323,10 +1327,6 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesPricing
-	 * SecuritiesPricing}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1373,16 +1373,16 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution
 	 * InvestmentFundOrderExecution}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InformativePrice"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Other quoted price than the one at which the order was executed."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<InvestmentFundOrderExecution, SecuritiesPricing> mmInformativePrice = new MMBusinessAssociationEnd<InvestmentFundOrderExecution, SecuritiesPricing>() {
@@ -1464,10 +1464,6 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution
 	 * InvestmentFundOrderExecution}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BestExecution"</li>
 	 * <li>
@@ -1475,6 +1471,10 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 * definition} =
 	 * "Specifies that the execution was subject to best execution rules as defined by MiFID."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvestmentFundOrderExecution, BestExecutionCode> mmBestExecution = new MMBusinessAttribute<InvestmentFundOrderExecution, BestExecutionCode>() {
@@ -1552,15 +1552,15 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution
 	 * InvestmentFundOrderExecution}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PartialSettlementOfUnits"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Percentage of units partially settled."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvestmentFundOrderExecution, PercentageRate> mmPartialSettlementOfUnits = new MMBusinessAttribute<InvestmentFundOrderExecution, PercentageRate>() {
@@ -1639,15 +1639,15 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution
 	 * InvestmentFundOrderExecution}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PartialSettlementOfCash"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Percentage of cash partially settled."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvestmentFundOrderExecution, PercentageRate> mmPartialSettlementOfCash = new MMBusinessAttribute<InvestmentFundOrderExecution, PercentageRate>() {
@@ -1726,16 +1726,16 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution
 	 * InvestmentFundOrderExecution}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LateReport"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies whether the order execution confirmation is late."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvestmentFundOrderExecution, LateReportCode> mmLateReport = new MMBusinessAttribute<InvestmentFundOrderExecution, LateReportCode>() {
@@ -1792,10 +1792,6 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution
 	 * InvestmentFundOrderExecution}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SettledIndicator"</li>
 	 * <li>
@@ -1803,6 +1799,10 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 * definition} =
 	 * "Indicates whether the cash payment with respect to the executed order is settled."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvestmentFundOrderExecution, YesNoIndicator> mmSettledIndicator = new MMBusinessAttribute<InvestmentFundOrderExecution, YesNoIndicator>() {
@@ -1858,10 +1858,6 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution
 	 * InvestmentFundOrderExecution}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RegisteredIndicator"</li>
 	 * <li>
@@ -1869,6 +1865,10 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 * definition} =
 	 * "Indicates whether the executed order has a registered status on the books of the transfer agent."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvestmentFundOrderExecution, YesNoIndicator> mmRegisteredIndicator = new MMBusinessAttribute<InvestmentFundOrderExecution, YesNoIndicator>() {
@@ -1933,10 +1933,6 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution
 	 * InvestmentFundOrderExecution}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ExecutedAmount"</li>
 	 * <li>
@@ -1944,6 +1940,10 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 * definition} =
 	 * "Amount of money invested or redeemed as a result of an investment fund order."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvestmentFundOrderExecution, CurrencyAndAmount> mmExecutedAmount = new MMBusinessAttribute<InvestmentFundOrderExecution, CurrencyAndAmount>() {
@@ -1977,6 +1977,11 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} =
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction
+	 * InvestmentFundTransaction}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#mmInvestmentFundOrderExecution
@@ -1984,11 +1989,6 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction
-	 * InvestmentFundTransaction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -2011,15 +2011,15 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution
 	 * InvestmentFundOrderExecution}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InvestmentFundTransaction"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Transaction which is executed."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<InvestmentFundOrderExecution, Optional<InvestmentFundTransaction>> mmInvestmentFundTransaction = new MMBusinessAssociationEnd<InvestmentFundOrderExecution, Optional<InvestmentFundTransaction>>() {
@@ -2055,6 +2055,10 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.FundsCashFlow
+	 * FundsCashFlow}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.FundsCashFlow#mmRelatedOrder
@@ -2063,24 +2067,20 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.FundsCashFlow
-	 * FundsCashFlow}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution
 	 * InvestmentFundOrderExecution}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CashFlow"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies the cash flow resulting from the execution of an order."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<InvestmentFundOrderExecution, List<FundsCashFlow>> mmCashFlow = new MMBusinessAssociationEnd<InvestmentFundOrderExecution, List<FundsCashFlow>>() {
@@ -2139,15 +2139,15 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution
 	 * InvestmentFundOrderExecution}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SourceOfCash"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Source of cash used for the settlement of the execution."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvestmentFundOrderExecution, SourceOfCashCode> mmSourceOfCash = new MMBusinessAttribute<InvestmentFundOrderExecution, SourceOfCashCode>() {

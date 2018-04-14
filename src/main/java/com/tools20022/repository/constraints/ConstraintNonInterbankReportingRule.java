@@ -41,10 +41,6 @@ public class ConstraintNonInterbankReportingRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CounterpartyIdentification3Choice
 	 * CounterpartyIdentification3Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NonInterbankReportingRule"</li>
 	 * <li>
@@ -52,6 +48,10 @@ public class ConstraintNonInterbankReportingRule {
 	 * definition} =
 	 * "When the reported transaction is not an interbank transaction and the counterparty is not a supranational authority and the transaction is not conducted via a central clearing counterparty, please refer to the relevant reporting instructions. \r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -82,10 +82,6 @@ public class ConstraintNonInterbankReportingRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CounterpartyIdentification1Choice
 	 * CounterpartyIdentification1Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NonInterbankReportingRule"</li>
 	 * <li>
@@ -93,6 +89,10 @@ public class ConstraintNonInterbankReportingRule {
 	 * definition} =
 	 * "When the reported transaction is not an interbank transaction and the counterparty is not a supranational authority and the transaction is not conducted via a central clearing counterparty, the counterparty must not be identified with the LEI."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -126,10 +126,6 @@ public class ConstraintNonInterbankReportingRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.CounterpartyIdentification2Choice
 	 * CounterpartyIdentification2Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NonInterbankReportingRule"</li>
 	 * <li>
@@ -137,6 +133,10 @@ public class ConstraintNonInterbankReportingRule {
 	 * definition} =
 	 * "When the reported transaction is not an interbank transaction and the counterparty is not a supranational authority and the transaction is not conducted via a central clearing counterparty, please refer to the relevant reporting instructions. \r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>

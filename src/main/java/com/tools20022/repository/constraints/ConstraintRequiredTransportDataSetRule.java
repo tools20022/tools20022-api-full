@@ -37,10 +37,6 @@ public class ConstraintRequiredTransportDataSetRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RequiredSubmission1
 	 * RequiredSubmission1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RequiredTransportDataSetRule"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintRequiredTransportDataSetRule {
 	 * definition} =
 	 * "If RequiredCommercialDataSet is FALSE, then RequiredTransportDataSet must be FALSE. If RequiredCommercialDataSet is TRUE, then RequiredTransportDataSet may be FALSE or TRUE."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RequiredSubmission1> forRequiredSubmission1 = new MMConstraint<RequiredSubmission1>() {

@@ -41,10 +41,6 @@ public class ConstraintCancellation3Guideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV03
 	 * MeetingInstructionCancellationRequestV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Cancellation3Guideline"</li>
 	 * <li>
@@ -52,6 +48,10 @@ public class ConstraintCancellation3Guideline {
 	 * definition} =
 	 * "It is recommended to cancel an instruction message by using PreviousReference only. It is recommended to avoid the repetition of optional building blocks, unless otherwise specified by market practise rules and or legislation."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<MeetingInstructionCancellationRequestV03> for_seev_MeetingInstructionCancellationRequestV03 = new MMConstraint<MeetingInstructionCancellationRequestV03>() {
@@ -75,10 +75,6 @@ public class ConstraintCancellation3Guideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV05
 	 * MeetingInstructionCancellationRequestV05}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Cancellation3Guideline"</li>
 	 * <li>
@@ -86,6 +82,10 @@ public class ConstraintCancellation3Guideline {
 	 * definition} =
 	 * "It is recommended to cancel an instruction message by using PreviousReference only. It is recommended to avoid the repetition of optional building blocks, unless otherwise specified by market practise rules and or legislation. If any information is present in the optional building blocks, it must be identical to the information being present into the instruction message being cancelled."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -116,10 +116,6 @@ public class ConstraintCancellation3Guideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV04
 	 * MeetingInstructionCancellationRequestV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Cancellation3Guideline"</li>
 	 * <li>
@@ -127,6 +123,10 @@ public class ConstraintCancellation3Guideline {
 	 * definition} =
 	 * "It is recommended to cancel an instruction message by using PreviousReference only. It is recommended to avoid the repetition of optional building blocks, unless otherwise specified by market practise rules and or legislation."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -160,10 +160,6 @@ public class ConstraintCancellation3Guideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV02
 	 * MeetingInstructionCancellationRequestV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Cancellation3Guideline"</li>
 	 * <li>
@@ -171,6 +167,10 @@ public class ConstraintCancellation3Guideline {
 	 * definition} =
 	 * "It is recommended to cancel an instruction message by using PreviousReference only. It is recommended to avoid the repetition of optional building blocks, unless otherwise specified by market practise rules and or legislation."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<MeetingInstructionCancellationRequestV02> for_seev_MeetingInstructionCancellationRequestV02 = new MMConstraint<MeetingInstructionCancellationRequestV02>() {

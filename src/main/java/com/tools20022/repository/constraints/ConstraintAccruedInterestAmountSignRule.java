@@ -40,10 +40,6 @@ public class ConstraintAccruedInterestAmountSignRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation3
 	 * AggregateBalanceInformation3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccruedInterestAmountSignRule"</li>
 	 * <li>
@@ -51,6 +47,10 @@ public class ConstraintAccruedInterestAmountSignRule {
 	 * definition} =
 	 * "If AccruedInterestAmount is present, then AccruedInterestAmountSign must be present. If AccruedInterestAmount is not present, then AccruedInterestAmountSign may not be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AggregateBalanceInformation3> forAggregateBalanceInformation3 = new MMConstraint<AggregateBalanceInformation3>() {
@@ -74,10 +74,6 @@ public class ConstraintAccruedInterestAmountSignRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation4
 	 * AggregateBalanceInformation4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccruedInterestAmountSignRule"</li>
 	 * <li>
@@ -85,6 +81,10 @@ public class ConstraintAccruedInterestAmountSignRule {
 	 * definition} =
 	 * "if AccruedInterestAmount is present, then AccruedInterestAmountSign must be present. If AccruedInterestAmount is not present, then AccruedInterestAmountSign may not be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AggregateBalanceInformation4> forAggregateBalanceInformation4 = new MMConstraint<AggregateBalanceInformation4>() {
@@ -108,10 +108,6 @@ public class ConstraintAccruedInterestAmountSignRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace3
 	 * AggregateBalancePerSafekeepingPlace3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccruedInterestAmountSignRule"</li>
 	 * <li>
@@ -119,6 +115,10 @@ public class ConstraintAccruedInterestAmountSignRule {
 	 * definition} =
 	 * "If AccruedInterestAmount is present, then AccruedInterestAmountSign must be present. If AccruedInterestAmount is not present, then AccruedInterestAmountSign may not be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace3> forAggregateBalancePerSafekeepingPlace3 = new MMConstraint<AggregateBalancePerSafekeepingPlace3>() {
@@ -142,10 +142,6 @@ public class ConstraintAccruedInterestAmountSignRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace4
 	 * AggregateBalancePerSafekeepingPlace4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccruedInterestAmountSignRule"</li>
 	 * <li>
@@ -153,6 +149,10 @@ public class ConstraintAccruedInterestAmountSignRule {
 	 * definition} =
 	 * "If AccruedInterestAmount is present, then AccruedInterestAmountSign must be present. If AccruedInterestAmount is not present, then AccruedInterestAmountSign may not be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace4> forAggregateBalancePerSafekeepingPlace4 = new MMConstraint<AggregateBalancePerSafekeepingPlace4>() {

@@ -36,10 +36,6 @@ public class ConstraintNotificationCancellationRequestStatusRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01
 	 * AgentCANotificationStatusAdviceV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NotificationCancellationRequestStatusRule"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintNotificationCancellationRequestStatusRule {
 	 * definition} =
 	 * "If AgentCANotificationCancellationRequestIdentification is present then NotificationCancellationRequestStatus must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AgentCANotificationStatusAdviceV01> for_seev_AgentCANotificationStatusAdviceV01 = new MMConstraint<AgentCANotificationStatusAdviceV01>() {

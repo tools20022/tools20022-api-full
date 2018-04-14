@@ -36,10 +36,6 @@ public class ConstraintDateElementRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ExpectedExecutionDetails4
 	 * ExpectedExecutionDetails4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DateElementRule"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintDateElementRule {
 	 * definition} =
 	 * "Either ExpectedTradeDateTime or ExpectedCashSettlementDate must be present. Both may be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ExpectedExecutionDetails4> forExpectedExecutionDetails4 = new MMConstraint<ExpectedExecutionDetails4>() {

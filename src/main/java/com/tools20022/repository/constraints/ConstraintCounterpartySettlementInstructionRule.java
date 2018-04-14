@@ -35,10 +35,6 @@ public class ConstraintCounterpartySettlementInstructionRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.NetObligation1 NetObligation1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CounterpartySettlementInstructionRule"</li>
 	 * <li>
@@ -46,6 +42,10 @@ public class ConstraintCounterpartySettlementInstructionRule {
 	 * definition} =
 	 * "The CounterpartySettlementInstructions must not be present when the obligation direction value is DBIT."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<NetObligation1> forNetObligation1 = new MMConstraint<NetObligation1>() {

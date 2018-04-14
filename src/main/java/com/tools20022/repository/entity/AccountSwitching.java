@@ -85,16 +85,16 @@ import java.util.Objects;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "AccountSwitching"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "The Account Switch Service support the guaranteed switch of a customer’s account and the transfer of payments arrangements associated with the account from one payment institution to another payment institution."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class AccountSwitching extends CashAccountService {
@@ -123,10 +123,6 @@ public class AccountSwitching extends CashAccountService {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AccountSwitching
 	 * AccountSwitching}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SwitchReceivedDateTime"</li>
 	 * <li>
@@ -134,6 +130,10 @@ public class AccountSwitching extends CashAccountService {
 	 * definition} =
 	 * "Date and time that the request was received by the central switch service."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<AccountSwitching, ISODateTime> mmSwitchReceivedDateTime = new MMBusinessAttribute<AccountSwitching, ISODateTime>() {
@@ -184,10 +184,6 @@ public class AccountSwitching extends CashAccountService {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AccountSwitching
 	 * AccountSwitching}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SwitchDate"</li>
 	 * <li>
@@ -195,6 +191,10 @@ public class AccountSwitching extends CashAccountService {
 	 * definition} =
 	 * "Date on which the account switch is expected to have completed. The value is the same as the targeted switch date if the switch completes in the expected timeline."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<AccountSwitching, ISODate> mmSwitchDate = new MMBusinessAttribute<AccountSwitching, ISODate>() {
@@ -244,16 +244,16 @@ public class AccountSwitching extends CashAccountService {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AccountSwitching
 	 * AccountSwitching}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SwitchStatus"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "State of the account switch at the time the message is sent."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<AccountSwitching, SwitchStatusCode> mmSwitchStatus = new MMBusinessAttribute<AccountSwitching, SwitchStatusCode>() {
@@ -305,10 +305,6 @@ public class AccountSwitching extends CashAccountService {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AccountSwitching
 	 * AccountSwitching}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UniqueReferenceNumber"</li>
 	 * <li>
@@ -316,6 +312,10 @@ public class AccountSwitching extends CashAccountService {
 	 * definition} =
 	 * "Unique number that provides unique and unambiguous identification of the account switch. "
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<AccountSwitching, Max35Text> mmUniqueReferenceNumber = new MMBusinessAttribute<AccountSwitching, Max35Text>() {
@@ -365,10 +365,6 @@ public class AccountSwitching extends CashAccountService {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AccountSwitching
 	 * AccountSwitching}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SwitchType"</li>
 	 * <li>
@@ -376,6 +372,10 @@ public class AccountSwitching extends CashAccountService {
 	 * definition} =
 	 * "Indicates whether the account switch is a full switch or a partial switch."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<AccountSwitching, SwitchTypeCode> mmSwitchType = new MMBusinessAttribute<AccountSwitching, SwitchTypeCode>() {
@@ -425,10 +425,6 @@ public class AccountSwitching extends CashAccountService {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AccountSwitching
 	 * AccountSwitching}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BalanceTransferWindow"</li>
 	 * <li>
@@ -436,6 +432,10 @@ public class AccountSwitching extends CashAccountService {
 	 * definition} =
 	 * "Identifies the processing window in which the balance transfer will be processed on the day of the account switch."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<AccountSwitching, BalanceTransferWindowCode> mmBalanceTransferWindow = new MMBusinessAttribute<AccountSwitching, BalanceTransferWindowCode>() {

@@ -39,10 +39,6 @@ public class ConstraintAdditonalDetailsGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PartyTextInformation3
 	 * PartyTextInformation3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditonalDetailsGuideline"</li>
 	 * <li>
@@ -50,6 +46,10 @@ public class ConstraintAdditonalDetailsGuideline {
 	 * definition} =
 	 * "Unless bilaterally agreed between the Sender and Receiver, DeclarationlDetails, RegistrationDetails and PartyContactDetails must not contain information that can be provided in a structured field."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PartyTextInformation3> forPartyTextInformation3 = new MMConstraint<PartyTextInformation3>() {
@@ -73,10 +73,6 @@ public class ConstraintAdditonalDetailsGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PartyTextInformation5
 	 * PartyTextInformation5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditonalDetailsGuideline"</li>
 	 * <li>
@@ -84,6 +80,10 @@ public class ConstraintAdditonalDetailsGuideline {
 	 * definition} =
 	 * "Unless bilaterally agreed between the Sender and Receiver, DeclarationlDetails and PartyContactDetails must not contain information that can be provided in a structured field."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PartyTextInformation5> forPartyTextInformation5 = new MMConstraint<PartyTextInformation5>() {
@@ -107,10 +107,6 @@ public class ConstraintAdditonalDetailsGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PartyTextInformation1
 	 * PartyTextInformation1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditonalDetailsGuideline"</li>
 	 * <li>
@@ -118,6 +114,10 @@ public class ConstraintAdditonalDetailsGuideline {
 	 * definition} =
 	 * "Unless bilaterally agreed between the Sender and Receiver, DeclarationlDetails, RegistrationDetails and PartyContactDetails must not contain information that can be provided in a structured field."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PartyTextInformation1> forPartyTextInformation1 = new MMConstraint<PartyTextInformation1>() {

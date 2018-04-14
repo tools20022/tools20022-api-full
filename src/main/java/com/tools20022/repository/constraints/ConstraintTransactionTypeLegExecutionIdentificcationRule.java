@@ -37,10 +37,6 @@ public class ConstraintTransactionTypeLegExecutionIdentificcationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.InvestmentFundTransaction2
 	 * InvestmentFundTransaction2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TransactionTypeLegExecutionIdentificcationRule"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintTransactionTypeLegExecutionIdentificcationRule {
 	 * definition} =
 	 * "If TransactionType is SWII or SWIO, then LegExecutionIdentification is optional. If TransactionType is not SWII and not SWIO, then LegExecutionIdentification is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<InvestmentFundTransaction2> forInvestmentFundTransaction2 = new MMConstraint<InvestmentFundTransaction2>() {

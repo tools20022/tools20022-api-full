@@ -37,10 +37,6 @@ public class ConstraintGroupCancellationAndTransactionInformationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.pacs.PaymentCancellationRequestV01
 	 * PaymentCancellationRequestV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GroupCancellationAndTransactionInformationRule"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintGroupCancellationAndTransactionInformationRule {
 	 * definition} =
 	 * "If GroupHeader/GroupCancellation is true, then TransactionInformation is not allowed.\nIf GroupHeader/GroupCancellation is false, then at least one occurrence of TransactionInformation must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PaymentCancellationRequestV01> for_pacs_PaymentCancellationRequestV01 = new MMConstraint<PaymentCancellationRequestV01>() {

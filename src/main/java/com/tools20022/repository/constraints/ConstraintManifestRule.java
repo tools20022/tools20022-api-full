@@ -39,10 +39,6 @@ public class ConstraintManifestRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMConstraint#getExpressionLanguage
 	 * expressionLanguage} = " "</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ManifestRule"</li>
 	 * <li>
@@ -50,6 +46,10 @@ public class ConstraintManifestRule {
 	 * definition} =
 	 * "When a signature is created for a message component that contains IDREFs or IDs, a manifest must be used to include the referenced data."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QualifiedPartyAndXMLSignature1> forQualifiedPartyAndXMLSignature1 = new MMConstraint<QualifiedPartyAndXMLSignature1>() {

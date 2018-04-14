@@ -303,6 +303,10 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "PartyIssuerCode"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} = "Identifies the institution having originated a party."</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -313,10 +317,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "PartyIssuerCode"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Identifies the institution having originated a party."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -331,12 +331,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ClearstreamBankLuxemburg"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ClearstreamBankLuxemburg"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode ClearstreamBankLuxemburg = new PartyIssuerCode() {
@@ -355,12 +355,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CajaDeValores"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CajaDeValores"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode CajaDeValores = new PartyIssuerCode() {
@@ -379,12 +379,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AustraclearLtd"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AustraclearLtd"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode AustraclearLtd = new PartyIssuerCode() {
@@ -403,12 +403,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AustralianBankStateBranch"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AustralianBankStateBranch"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode AustralianBankStateBranch = new PartyIssuerCode() {
@@ -427,12 +427,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ClearingHouseElectronicSettlementSystems"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ClearingHouseElectronicSettlementSystems"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode ClearingHouseElectronicSettlementSystems = new PartyIssuerCode() {
@@ -451,12 +451,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AustrianBankLeitzahl"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AustrianBankLeitzahl"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode AustrianBankLeitzahl = new PartyIssuerCode() {
@@ -475,12 +475,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OesterreichischeKontrollbank"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "OesterreichischeKontrollbank"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode OesterreichischeKontrollbank = new PartyIssuerCode() {
@@ -499,12 +499,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CaisseInterprofessionelleDepotsVirementsTitres"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CaisseInterprofessionelleDepotsVirementsTitres"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode CaisseInterprofessionelleDepotsVirementsTitres = new PartyIssuerCode() {
@@ -523,12 +523,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Euroclear"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Euroclear"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode Euroclear = new PartyIssuerCode() {
@@ -547,12 +547,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BanqueNationaleDeBelgique"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BanqueNationaleDeBelgique"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode BanqueNationaleDeBelgique = new PartyIssuerCode() {
@@ -571,12 +571,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CamaraLiquidacaoCustodia"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CamaraLiquidacaoCustodia"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode CamaraLiquidacaoCustodia = new PartyIssuerCode() {
@@ -595,12 +595,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CanadianDepositorySecuritiesLtd"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CanadianDepositorySecuritiesLtd"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode CanadianDepositorySecuritiesLtd = new PartyIssuerCode() {
@@ -619,12 +619,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CanadianPaymentsAssociation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CanadianPaymentsAssociation"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode CanadianPaymentsAssociation = new PartyIssuerCode() {
@@ -643,12 +643,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CentralSecuritiesDepositoryDepositoCentralValores"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CentralSecuritiesDepositoryDepositoCentralValores"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode CentralSecuritiesDepositoryDepositoCentralValores = new PartyIssuerCode() {
@@ -667,12 +667,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ShanghaiSecuritiesCentralClearingRegistrationCompany"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ShanghaiSecuritiesCentralClearingRegistrationCompany"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode ShanghaiSecuritiesCentralClearingRegistrationCompany = new PartyIssuerCode() {
@@ -691,12 +691,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ShenzhenSecuritiesClearingCompany"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ShenzhenSecuritiesClearingCompany"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode ShenzhenSecuritiesClearingCompany = new PartyIssuerCode() {
@@ -715,12 +715,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ColombiaCentralDepositorySystem"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ColombiaCentralDepositorySystem"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode ColombiaCentralDepositorySystem = new PartyIssuerCode() {
@@ -739,12 +739,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DenmarkVaerdipapircentralen"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DenmarkVaerdipapircentralen"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode DenmarkVaerdipapircentralen = new PartyIssuerCode() {
@@ -763,12 +763,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "FinnishCentralSecuritiesDepositoryLtd"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "FinnishCentralSecuritiesDepositoryLtd"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode FinnishCentralSecuritiesDepositoryLtd = new PartyIssuerCode() {
@@ -787,12 +787,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "FranceRIB"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "FranceRIB"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode FranceRIB = new PartyIssuerCode() {
@@ -811,12 +811,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SICOVAM"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SICOVAM"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode SICOVAM = new PartyIssuerCode() {
@@ -835,12 +835,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PragueStockExchange"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PragueStockExchange"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode PragueStockExchange = new PartyIssuerCode() {
@@ -859,12 +859,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BundesausichtsamtWertpapierhandel"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BundesausichtsamtWertpapierhandel"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode BundesausichtsamtWertpapierhandel = new PartyIssuerCode() {
@@ -883,12 +883,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DeutscheBoerseAGDeutscheTerminborse"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DeutscheBoerseAGDeutscheTerminborse"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode DeutscheBoerseAGDeutscheTerminborse = new PartyIssuerCode() {
@@ -907,12 +907,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DeutscheBoerseAGFrankfurterWertpapierborse"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DeutscheBoerseAGFrankfurterWertpapierborse"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode DeutscheBoerseAGFrankfurterWertpapierborse = new PartyIssuerCode() {
@@ -931,12 +931,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DeutscheBoerseAGXETRA"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DeutscheBoerseAGXETRA"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode DeutscheBoerseAGXETRA = new PartyIssuerCode() {
@@ -955,12 +955,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DeutscheBorseClearingAG"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DeutscheBorseClearingAG"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode DeutscheBorseClearingAG = new PartyIssuerCode() {
@@ -979,12 +979,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DeutscheBundesbank"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DeutscheBundesbank"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode DeutscheBundesbank = new PartyIssuerCode() {
@@ -1003,12 +1003,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "GermanBankleitzahl"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "GermanBankleitzahl"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode GermanBankleitzahl = new PartyIssuerCode() {
@@ -1027,12 +1027,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ZentralerKreditausschuss"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ZentralerKreditausschuss"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode ZentralerKreditausschuss = new PartyIssuerCode() {
@@ -1051,12 +1051,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "HongKongCentralClearingSecuritiesSettlementSystem"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "HongKongCentralClearingSecuritiesSettlementSystem"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode HongKongCentralClearingSecuritiesSettlementSystem = new PartyIssuerCode() {
@@ -1075,12 +1075,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "HongKongNationalClearing"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "HongKongNationalClearing"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode HongKongNationalClearing = new PartyIssuerCode() {
@@ -1099,12 +1099,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "IndianNationalSecuritiesDepository"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "IndianNationalSecuritiesDepository"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode IndianNationalSecuritiesDepository = new PartyIssuerCode() {
@@ -1123,12 +1123,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "IndonesianSecuritiesCentralDepository"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "IndonesianSecuritiesCentralDepository"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode IndonesianSecuritiesCentralDepository = new PartyIssuerCode() {
@@ -1147,12 +1147,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "IrishNationalClearing"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "IrishNationalClearing"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode IrishNationalClearing = new PartyIssuerCode() {
@@ -1171,12 +1171,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TelAvivStockExchange"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "TelAvivStockExchange"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode TelAvivStockExchange = new PartyIssuerCode() {
@@ -1195,12 +1195,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ItalianDomesticIdentification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ItalianDomesticIdentification"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode ItalianDomesticIdentification = new PartyIssuerCode() {
@@ -1219,12 +1219,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "MonteTitoli"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "MonteTitoli"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode MonteTitoli = new PartyIssuerCode() {
@@ -1243,12 +1243,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "JapanSecuritiesClearingCorporation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "JapanSecuritiesClearingCorporation"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode JapanSecuritiesClearingCorporation = new PartyIssuerCode() {
@@ -1267,12 +1267,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "JapanSecuritiesDepositoryCenter"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "JapanSecuritiesDepositoryCenter"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode JapanSecuritiesDepositoryCenter = new PartyIssuerCode() {
@@ -1291,12 +1291,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "KoreanSecuritiesDepository"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "KoreanSecuritiesDepository"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode KoreanSecuritiesDepository = new PartyIssuerCode() {
@@ -1315,12 +1315,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "MalaysianCentralDepository"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "MalaysianCentralDepository"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode MalaysianCentralDepository = new PartyIssuerCode() {
@@ -1339,12 +1339,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "IndevalSA"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "IndevalSA"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode IndevalSA = new PartyIssuerCode() {
@@ -1363,12 +1363,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AmsterdamseEffectenbeurs"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AmsterdamseEffectenbeurs"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode AmsterdamseEffectenbeurs = new PartyIssuerCode() {
@@ -1387,12 +1387,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NECIGEF"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "NECIGEF"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode NECIGEF = new PartyIssuerCode() {
@@ -1411,12 +1411,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NewZealandNationalClearing"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "NewZealandNationalClearing"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode NewZealandNationalClearing = new PartyIssuerCode() {
@@ -1435,12 +1435,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NewZealandStockExchange"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "NewZealandStockExchange"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode NewZealandStockExchange = new PartyIssuerCode() {
@@ -1459,12 +1459,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Verdipapirsentralen"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Verdipapirsentralen"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode Verdipapirsentralen = new PartyIssuerCode() {
@@ -1483,12 +1483,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PhilippineCentralDepository"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PhilippineCentralDepository"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode PhilippineCentralDepository = new PartyIssuerCode() {
@@ -1507,12 +1507,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PolandNationalDepositorySecurities"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PolandNationalDepositorySecurities"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode PolandNationalDepositorySecurities = new PartyIssuerCode() {
@@ -1531,12 +1531,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CentralValoresMobiliaros"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CentralValoresMobiliaros"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode CentralValoresMobiliaros = new PartyIssuerCode() {
@@ -1555,12 +1555,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PortugueseNationalClearing"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PortugueseNationalClearing"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode PortugueseNationalClearing = new PartyIssuerCode() {
@@ -1579,12 +1579,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "INTERBOLSA"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "INTERBOLSA"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode INTERBOLSA = new PartyIssuerCode() {
@@ -1603,12 +1603,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RussianCentralBankIdentification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "RussianCentralBankIdentification"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode RussianCentralBankIdentification = new PartyIssuerCode() {
@@ -1627,12 +1627,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SingaporeCentralDepositoryLtd"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SingaporeCentralDepositoryLtd"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode SingaporeCentralDepositoryLtd = new PartyIssuerCode() {
@@ -1651,12 +1651,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SingaporeInternationalMonetaryExchange"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SingaporeInternationalMonetaryExchange"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode SingaporeInternationalMonetaryExchange = new PartyIssuerCode() {
@@ -1675,12 +1675,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BratislavaStockExchange"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BratislavaStockExchange"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode BratislavaStockExchange = new PartyIssuerCode() {
@@ -1699,12 +1699,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SouthAfricanNationalClearing"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SouthAfricanNationalClearing"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode SouthAfricanNationalClearing = new PartyIssuerCode() {
@@ -1723,12 +1723,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "StrateClearingSettlementLtd"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "StrateClearingSettlementLtd"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode StrateClearingSettlementLtd = new PartyIssuerCode() {
@@ -1747,12 +1747,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BancoEspana"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BancoEspana"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode BancoEspana = new PartyIssuerCode() {
@@ -1771,12 +1771,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ServicioCompensacionLiquidacionValores"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ServicioCompensacionLiquidacionValores"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode ServicioCompensacionLiquidacionValores = new PartyIssuerCode() {
@@ -1795,12 +1795,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SpanishDomesticInterbanking"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SpanishDomesticInterbanking"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode SpanishDomesticInterbanking = new PartyIssuerCode() {
@@ -1819,12 +1819,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Vardepapperscentralen"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Vardepapperscentralen"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode Vardepapperscentralen = new PartyIssuerCode() {
@@ -1843,12 +1843,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SISSEGAIntersettle"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SISSEGAIntersettle"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode SISSEGAIntersettle = new PartyIssuerCode() {
@@ -1867,12 +1867,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SwissClearingCode"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SwissClearingCode"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode SwissClearingCode = new PartyIssuerCode() {
@@ -1891,12 +1891,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ThailandSecuritiesDepositoryCompany"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ThailandSecuritiesDepositoryCompany"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode ThailandSecuritiesDepositoryCompany = new PartyIssuerCode() {
@@ -1915,12 +1915,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TaiwanSecuritiesCentralDepository"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "TaiwanSecuritiesCentralDepository"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode TaiwanSecuritiesCentralDepository = new PartyIssuerCode() {
@@ -1939,12 +1939,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Takasbank"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Takasbank"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode Takasbank = new PartyIssuerCode() {
@@ -1963,12 +1963,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "UKDomesticSort"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "UKDomesticSort"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode UKDomesticSort = new PartyIssuerCode() {
@@ -1987,12 +1987,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BankOfEnglandCMO"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BankOfEnglandCMO"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode BankOfEnglandCMO = new PartyIssuerCode() {
@@ -2011,12 +2011,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CrestCo"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CrestCo"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode CrestCo = new PartyIssuerCode() {
@@ -2035,12 +2035,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "FinancialServicesAuthority"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "FinancialServicesAuthority"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode FinancialServicesAuthority = new PartyIssuerCode() {
@@ -2059,12 +2059,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "LondonClearingHouse"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "LondonClearingHouse"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode LondonClearingHouse = new PartyIssuerCode() {
@@ -2083,12 +2083,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InternationalSecuritiesMarketAssociation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "InternationalSecuritiesMarketAssociation"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode InternationalSecuritiesMarketAssociation = new PartyIssuerCode() {
@@ -2107,12 +2107,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "LondonStockExchange"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "LondonStockExchange"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode LondonStockExchange = new PartyIssuerCode() {
@@ -2131,12 +2131,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AmericanStockExchange"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AmericanStockExchange"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode AmericanStockExchange = new PartyIssuerCode() {
@@ -2155,12 +2155,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DepositoryTrustCompany"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DepositoryTrustCompany"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode DepositoryTrustCompany = new PartyIssuerCode() {
@@ -2179,12 +2179,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "EmergingMarketsClearingCorporation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "EmergingMarketsClearingCorporation"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode EmergingMarketsClearingCorporation = new PartyIssuerCode() {
@@ -2203,12 +2203,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "FedwireRoutingNumber"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "FedwireRoutingNumber"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode FedwireRoutingNumber = new PartyIssuerCode() {
@@ -2227,12 +2227,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "GovernmentSecuritiesClearingCorporation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "GovernmentSecuritiesClearingCorporation"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode GovernmentSecuritiesClearingCorporation = new PartyIssuerCode() {
@@ -2251,12 +2251,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InternationalSecuritiesClearingCorporation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "InternationalSecuritiesClearingCorporation"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode InternationalSecuritiesClearingCorporation = new PartyIssuerCode() {
@@ -2275,12 +2275,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "MortgageBackedSecuritiesClearingCorporation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "MortgageBackedSecuritiesClearingCorporation"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode MortgageBackedSecuritiesClearingCorporation = new PartyIssuerCode() {
@@ -2299,12 +2299,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NationalAssociationSecuritiesDealers"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "NationalAssociationSecuritiesDealers"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode NationalAssociationSecuritiesDealers = new PartyIssuerCode() {
@@ -2323,12 +2323,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NASDAQ"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "NASDAQ"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode NASDAQ = new PartyIssuerCode() {
@@ -2347,12 +2347,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NationalSecuritiesClearingCorporation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "NationalSecuritiesClearingCorporation"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode NationalSecuritiesClearingCorporation = new PartyIssuerCode() {
@@ -2371,12 +2371,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NewYorkClearingHouse"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "NewYorkClearingHouse"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode NewYorkClearingHouse = new PartyIssuerCode() {
@@ -2395,12 +2395,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NewYorkStockExchange"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "NewYorkStockExchange"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode NewYorkStockExchange = new PartyIssuerCode() {
@@ -2419,12 +2419,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OptionsClearingCorporation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "OptionsClearingCorporation"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode OptionsClearingCorporation = new PartyIssuerCode() {
@@ -2443,12 +2443,12 @@ public class PartyIssuerCode extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIssuerCode
 	 * PartyIssuerCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ParticipantTrustCompany"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ParticipantTrustCompany"</li>
 	 * </ul>
 	 */
 	public static final PartyIssuerCode ParticipantTrustCompany = new PartyIssuerCode() {

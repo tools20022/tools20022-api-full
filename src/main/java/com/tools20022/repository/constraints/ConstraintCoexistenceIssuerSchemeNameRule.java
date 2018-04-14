@@ -38,10 +38,6 @@ public class ConstraintCoexistenceIssuerSchemeNameRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.GenericIdentification24
 	 * GenericIdentification24}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceIssuerSchemeNameRule"</li>
 	 * <li>
@@ -49,6 +45,10 @@ public class ConstraintCoexistenceIssuerSchemeNameRule {
 	 * definition} =
 	 * "During ISO 15022-20022 coexistence, Issuer length must be 4 characters and SchemeName length must be 4 characters or less. Issuer and Scheme Name must be an ISO registered Issuer and SchemeName. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<GenericIdentification24> forGenericIdentification24 = new MMConstraint<GenericIdentification24>() {
@@ -72,10 +72,6 @@ public class ConstraintCoexistenceIssuerSchemeNameRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ProprietaryQuantity5
 	 * ProprietaryQuantity5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceIssuerSchemeNameRule"</li>
 	 * <li>
@@ -83,6 +79,10 @@ public class ConstraintCoexistenceIssuerSchemeNameRule {
 	 * definition} =
 	 * "During ISO 15022-20022 coexistence, Issuer length must be 4 characters and SchemeName length must be 4 characters or less. Issuer and Scheme Name must be an ISO registered Issuer and SchemeName. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ProprietaryQuantity5> forProprietaryQuantity5 = new MMConstraint<ProprietaryQuantity5>() {
@@ -106,10 +106,6 @@ public class ConstraintCoexistenceIssuerSchemeNameRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.GenericIdentification34
 	 * GenericIdentification34}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceIssuerSchemeNameRule"</li>
 	 * <li>
@@ -117,6 +113,10 @@ public class ConstraintCoexistenceIssuerSchemeNameRule {
 	 * definition} =
 	 * "During ISO 15022-20022 coexistence, Issuer length must be 4 characters and SchemeName length must be 4 characters or less. Issuer and Scheme Name must be an ISO registered Issuer and SchemeName."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<GenericIdentification34> forGenericIdentification34 = new MMConstraint<GenericIdentification34>() {
@@ -140,10 +140,6 @@ public class ConstraintCoexistenceIssuerSchemeNameRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ProprietaryQuantity3
 	 * ProprietaryQuantity3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceIssuerSchemeNameRule"</li>
 	 * <li>
@@ -151,6 +147,10 @@ public class ConstraintCoexistenceIssuerSchemeNameRule {
 	 * definition} =
 	 * "During ISO 15022-20022 coexistence, Issuer length must be 4 characters and SchemeName length must be 4 characters or less. Issuer and Scheme Name must be an ISO registered Issuer and SchemeName."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ProprietaryQuantity3> forProprietaryQuantity3 = new MMConstraint<ProprietaryQuantity3>() {
@@ -174,10 +174,6 @@ public class ConstraintCoexistenceIssuerSchemeNameRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.GenericIdentification20
 	 * GenericIdentification20}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceIssuerSchemeNameRule"</li>
 	 * <li>
@@ -185,6 +181,10 @@ public class ConstraintCoexistenceIssuerSchemeNameRule {
 	 * definition} =
 	 * "During ISO 15022-20022 coexistence, Issuer length must be 4 characters and SchemeName length must be 4 characters or less. Issuer and Scheme Name must be an ISO registered Issuer and SchemeName."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<GenericIdentification20> forGenericIdentification20 = new MMConstraint<GenericIdentification20>() {
@@ -208,10 +208,6 @@ public class ConstraintCoexistenceIssuerSchemeNameRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesCertificate1
 	 * SecuritiesCertificate1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceIssuerSchemeNameRule"</li>
 	 * <li>
@@ -219,6 +215,10 @@ public class ConstraintCoexistenceIssuerSchemeNameRule {
 	 * definition} =
 	 * "During ISO 15022-20022 coexistence, Issuer length must be 4 characters and SchemeName length must be 4 characters or less. Issuer and Scheme Name must be an ISO registered Issuer and SchemeName."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesCertificate1> forSecuritiesCertificate1 = new MMConstraint<SecuritiesCertificate1>() {
@@ -242,10 +242,6 @@ public class ConstraintCoexistenceIssuerSchemeNameRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.GenericIdentification22
 	 * GenericIdentification22}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceIssuerSchemeNameRule"</li>
 	 * <li>
@@ -253,6 +249,10 @@ public class ConstraintCoexistenceIssuerSchemeNameRule {
 	 * definition} =
 	 * "During ISO 15022-20022 coexistence, Issuer length must be 4 characters and SchemeName length must be 4 characters or less. Issuer and Scheme Name must be an ISO registered Issuer and SchemeName."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<GenericIdentification22> forGenericIdentification22 = new MMConstraint<GenericIdentification22>() {
@@ -276,10 +276,6 @@ public class ConstraintCoexistenceIssuerSchemeNameRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ProprietaryQuantity6
 	 * ProprietaryQuantity6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceIssuerSchemeNameRule"</li>
 	 * <li>
@@ -287,6 +283,10 @@ public class ConstraintCoexistenceIssuerSchemeNameRule {
 	 * definition} =
 	 * "During ISO 15022-20022 coexistence, Issuer length must be 4 characters and SchemeName length must be 4 characters or less. Issuer and Scheme Name must be an ISO registered Issuer and SchemeName."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ProprietaryQuantity6> forProprietaryQuantity6 = new MMConstraint<ProprietaryQuantity6>() {
@@ -310,10 +310,6 @@ public class ConstraintCoexistenceIssuerSchemeNameRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ProprietaryQuantity2
 	 * ProprietaryQuantity2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceIssuerSchemeNameRule"</li>
 	 * <li>
@@ -321,6 +317,10 @@ public class ConstraintCoexistenceIssuerSchemeNameRule {
 	 * definition} =
 	 * "During ISO 15022-20022 coexistence, Issuer length must be 4 characters and SchemeName length must be 4 characters or less. Issuer and Scheme Name must be an ISO registered Issuer and SchemeName."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ProprietaryQuantity2> forProprietaryQuantity2 = new MMConstraint<ProprietaryQuantity2>() {
@@ -344,10 +344,6 @@ public class ConstraintCoexistenceIssuerSchemeNameRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ProprietaryQuantity4
 	 * ProprietaryQuantity4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceIssuerSchemeNameRule"</li>
 	 * <li>
@@ -355,6 +351,10 @@ public class ConstraintCoexistenceIssuerSchemeNameRule {
 	 * definition} =
 	 * "During ISO 15022-20022 coexistence, Issuer length must be 4 characters and SchemeName length must be 4 characters or less. Issuer and Scheme Name must be an ISO registered Issuer and SchemeName. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ProprietaryQuantity4> forProprietaryQuantity4 = new MMConstraint<ProprietaryQuantity4>() {
@@ -378,10 +378,6 @@ public class ConstraintCoexistenceIssuerSchemeNameRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.GenericIdentification23
 	 * GenericIdentification23}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceIssuerSchemeNameRule"</li>
 	 * <li>
@@ -389,6 +385,10 @@ public class ConstraintCoexistenceIssuerSchemeNameRule {
 	 * definition} =
 	 * "During ISO 15022-20022 coexistence, Issuer length must be 4 characters and SchemeName length must be 4 characters or less. Issuer and Scheme Name must be an ISO registered Issuer and SchemeName. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<GenericIdentification23> forGenericIdentification23 = new MMConstraint<GenericIdentification23>() {
@@ -412,10 +412,6 @@ public class ConstraintCoexistenceIssuerSchemeNameRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.GenericIdentification51
 	 * GenericIdentification51}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceIssuerSchemeNameRule"</li>
 	 * <li>
@@ -423,6 +419,10 @@ public class ConstraintCoexistenceIssuerSchemeNameRule {
 	 * definition} =
 	 * "During ISO 15022-20022 coexistence, Issuer length must be 4 characters and SchemeName length must be 4 characters or less. Issuer and Scheme Name must be an ISO registered Issuer and SchemeName."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<GenericIdentification51> forGenericIdentification51 = new MMConstraint<GenericIdentification51>() {
@@ -446,10 +446,6 @@ public class ConstraintCoexistenceIssuerSchemeNameRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.GenericIdentification28
 	 * GenericIdentification28}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceIssuerSchemeNameRule"</li>
 	 * <li>
@@ -457,6 +453,10 @@ public class ConstraintCoexistenceIssuerSchemeNameRule {
 	 * definition} =
 	 * "During ISO 15022-20022 coexistence, Issuer length must be 4 characters and SchemeName length must be 4 characters or less. Issuer and Scheme Name must be an ISO registered Issuer and SchemeName. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<GenericIdentification28> forGenericIdentification28 = new MMConstraint<GenericIdentification28>() {
@@ -480,10 +480,6 @@ public class ConstraintCoexistenceIssuerSchemeNameRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.GenericIdentification25
 	 * GenericIdentification25}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceIssuerSchemeNameRule"</li>
 	 * <li>
@@ -491,6 +487,10 @@ public class ConstraintCoexistenceIssuerSchemeNameRule {
 	 * definition} =
 	 * "During ISO 15022-20022 coexistence, Issuer length must be 4 characters and SchemeName length must be 4 characters or less. Issuer and Scheme Name must be an ISO registered Issuer and SchemeName. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<GenericIdentification25> forGenericIdentification25 = new MMConstraint<GenericIdentification25>() {
@@ -514,10 +514,6 @@ public class ConstraintCoexistenceIssuerSchemeNameRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.GenericIdentification19
 	 * GenericIdentification19}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceIssuerSchemeNameRule"</li>
 	 * <li>
@@ -525,6 +521,10 @@ public class ConstraintCoexistenceIssuerSchemeNameRule {
 	 * definition} =
 	 * "During ISO 15022-20022 coexistence, Issuer length must be 4 characters and SchemeName length must be 4 characters or less. Issuer and Scheme Name must be an ISO registered Issuer and SchemeName."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<GenericIdentification19> forGenericIdentification19 = new MMConstraint<GenericIdentification19>() {
@@ -548,10 +548,6 @@ public class ConstraintCoexistenceIssuerSchemeNameRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesCertificate2
 	 * SecuritiesCertificate2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceIssuerSchemeNameRule"</li>
 	 * <li>
@@ -559,6 +555,10 @@ public class ConstraintCoexistenceIssuerSchemeNameRule {
 	 * definition} =
 	 * "During ISO 15022-20022 coexistence, Issuer length must be 4 characters and SchemeName length must be 4 characters or less. Issuer and Scheme Name must be an ISO registered Issuer and SchemeName. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesCertificate2> forSecuritiesCertificate2 = new MMConstraint<SecuritiesCertificate2>() {

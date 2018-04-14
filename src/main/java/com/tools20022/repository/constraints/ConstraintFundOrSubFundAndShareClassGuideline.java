@@ -42,10 +42,6 @@ public class ConstraintFundOrSubFundAndShareClassGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV04
 	 * FundConfirmedCashForecastReportV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FundOrSubFundAndShareClassGuideline"</li>
 	 * <li>
@@ -53,6 +49,10 @@ public class ConstraintFundOrSubFundAndShareClassGuideline {
 	 * definition} =
 	 * "When using the message to provide cash in and cash out amounts for more than one fund/sub fund, and more than one share classes, (two or more FundOrSubFundDetails sequences and two or more FundCashForecastDetails sequences and used), in this usage there is no way to determine which share class belongs to which fund/sub fund from the message content itself, which may not be desirable and this type of usage should be bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FundConfirmedCashForecastReportV04> for_camt_FundConfirmedCashForecastReportV04 = new MMConstraint<FundConfirmedCashForecastReportV04>() {
@@ -76,10 +76,6 @@ public class ConstraintFundOrSubFundAndShareClassGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FundConfirmedCashForecastReport3
 	 * FundConfirmedCashForecastReport3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FundOrSubFundAndShareClassGuideline"</li>
 	 * <li>
@@ -87,6 +83,10 @@ public class ConstraintFundOrSubFundAndShareClassGuideline {
 	 * definition} =
 	 * "When using the message to provide cash in and cash out amounts for more than one fund/sub fund, and more than one share classes, (two or more FundOrSubFundDetails sequences and two or more FundCashForecastDetails sequences and used), in this usage there is no way to determine which share class belongs to which fund/sub fund from the message content itself, which may not be desirable and this type of usage should be bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FundConfirmedCashForecastReport3> forFundConfirmedCashForecastReport3 = new MMConstraint<FundConfirmedCashForecastReport3>() {
@@ -110,10 +110,6 @@ public class ConstraintFundOrSubFundAndShareClassGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04
 	 * FundEstimatedCashForecastReportV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FundOrSubFundAndShareClassGuideline"</li>
 	 * <li>
@@ -121,6 +117,10 @@ public class ConstraintFundOrSubFundAndShareClassGuideline {
 	 * definition} =
 	 * "When using the message to provide cash in and cash out amounts for more than one fund/sub fund, and more than one share classes, (two or more FundOrSubFundDetails sequences and two or more EstimatedFundCashForecastDetails sequences and used), in this usage there is no way to determine which share class belongs to which fund/sub fund from the message content itself, which may not be desirable and this type of usage should be bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FundEstimatedCashForecastReportV04> for_camt_FundEstimatedCashForecastReportV04 = new MMConstraint<FundEstimatedCashForecastReportV04>() {

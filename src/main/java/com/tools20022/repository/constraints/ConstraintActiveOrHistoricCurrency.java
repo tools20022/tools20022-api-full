@@ -38,10 +38,6 @@ public class ConstraintActiveOrHistoricCurrency {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode
 	 * ActiveOrHistoricCurrencyCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ActiveOrHistoricCurrency"</li>
 	 * <li>
@@ -49,6 +45,10 @@ public class ConstraintActiveOrHistoricCurrency {
 	 * definition} =
 	 * "The Currency Code must be registered, or have already been registered. Valid active or historic currency codes are registered with the ISO 4217 Maintenance Agency, consist of three (3) contiguous letters, and may be or not be withdrawn on the day the message containing the Currency is exchanged."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ActiveOrHistoricCurrencyCode> forActiveOrHistoricCurrencyCode = new MMConstraint<ActiveOrHistoricCurrencyCode>() {

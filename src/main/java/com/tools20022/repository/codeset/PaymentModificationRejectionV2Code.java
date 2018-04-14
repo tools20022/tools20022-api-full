@@ -133,6 +133,11 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "PaymentModificationRejectionV2Code"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} =
+ * "Specifies the reason for the reject of a modification request."</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -143,11 +148,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "PaymentModificationRejectionV2Code"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} =
- * "Specifies the reason for the reject of a modification request."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -164,15 +164,15 @@ public class PaymentModificationRejectionV2Code extends MMCode {
 	 * PaymentModificationRejectionV2Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "UM01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnableToModifyRelatedReference"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Related transaction reference cannot be modified."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final PaymentModificationRejectionV2Code UnableToModifyRelatedReference = new PaymentModificationRejectionV2Code() {
@@ -195,10 +195,6 @@ public class PaymentModificationRejectionV2Code extends MMCode {
 	 * PaymentModificationRejectionV2Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "UM02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnableToModifyPaymentServiceLevel"</li>
 	 * <li>
@@ -206,6 +202,10 @@ public class PaymentModificationRejectionV2Code extends MMCode {
 	 * definition} =
 	 * "Service level element of payment type cannot be modified(former UnableToModifyBankOperationCode)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final PaymentModificationRejectionV2Code UnableToModifyPaymentServiceLevel = new PaymentModificationRejectionV2Code() {
@@ -228,10 +228,6 @@ public class PaymentModificationRejectionV2Code extends MMCode {
 	 * PaymentModificationRejectionV2Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "UM03"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnableToModifyCategoryPurpose"</li>
 	 * <li>
@@ -239,6 +235,10 @@ public class PaymentModificationRejectionV2Code extends MMCode {
 	 * definition} =
 	 * "Category purpose element of payment type cannot be modified (former UnableToModifyInstructionCode)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final PaymentModificationRejectionV2Code UnableToModifyCategoryPurpose = new PaymentModificationRejectionV2Code() {
@@ -260,15 +260,15 @@ public class PaymentModificationRejectionV2Code extends MMCode {
 	 * PaymentModificationRejectionV2Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "UM04"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnableToModifyRequestedExecutionDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "RequestedExecutionDate cannot be modified."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final PaymentModificationRejectionV2Code UnableToModifyRequestedExecutionDate = new PaymentModificationRejectionV2Code() {
@@ -291,10 +291,6 @@ public class PaymentModificationRejectionV2Code extends MMCode {
 	 * PaymentModificationRejectionV2Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "UM05"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnableToModifyInterbankSettlementDate"</li>
 	 * <li>
@@ -302,6 +298,10 @@ public class PaymentModificationRejectionV2Code extends MMCode {
 	 * definition} =
 	 * "InterbankSettlementDate cannot be modified (former UnableToModifyValueDate)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final PaymentModificationRejectionV2Code UnableToModifyInterbankSettlementDate = new PaymentModificationRejectionV2Code() {
@@ -324,10 +324,6 @@ public class PaymentModificationRejectionV2Code extends MMCode {
 	 * PaymentModificationRejectionV2Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "UM06"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnableToModifyInterbankSettlementAccount"</li>
 	 * <li>
@@ -335,6 +331,10 @@ public class PaymentModificationRejectionV2Code extends MMCode {
 	 * definition} =
 	 * "SettlementAccount cannot be modified (former UnableToModifyInterbankSettlementAccount)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final PaymentModificationRejectionV2Code UnableToModifyInterbankSettlementAccount = new PaymentModificationRejectionV2Code() {
@@ -356,15 +356,15 @@ public class PaymentModificationRejectionV2Code extends MMCode {
 	 * PaymentModificationRejectionV2Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "UM07"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnableToModifyDebtor"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Debtor cannot be modified."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final PaymentModificationRejectionV2Code UnableToModifyDebtor = new PaymentModificationRejectionV2Code() {
@@ -386,15 +386,15 @@ public class PaymentModificationRejectionV2Code extends MMCode {
 	 * PaymentModificationRejectionV2Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "UM08"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnableToModifyDebtorAccount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "DebtorAccount cannot be modified."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final PaymentModificationRejectionV2Code UnableToModifyDebtorAccount = new PaymentModificationRejectionV2Code() {
@@ -417,10 +417,6 @@ public class PaymentModificationRejectionV2Code extends MMCode {
 	 * PaymentModificationRejectionV2Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "UM09"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnableToModifyInstructedReimbursementAgent"</li>
 	 * <li>
@@ -428,6 +424,10 @@ public class PaymentModificationRejectionV2Code extends MMCode {
 	 * definition} =
 	 * "InstructedReimbursementAgent cannot be modified (former UnableToModifyReceiverCorrespondent)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final PaymentModificationRejectionV2Code UnableToModifyInstructedReimbursementAgent = new PaymentModificationRejectionV2Code() {
@@ -450,10 +450,6 @@ public class PaymentModificationRejectionV2Code extends MMCode {
 	 * PaymentModificationRejectionV2Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "UM10"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnableToModifyThirdReimbursementAgent"</li>
 	 * <li>
@@ -461,6 +457,10 @@ public class PaymentModificationRejectionV2Code extends MMCode {
 	 * definition} =
 	 * "ThirdReimbursementAgent cannot be modified (former UnableToModifyThirdReimbursementInstitution)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final PaymentModificationRejectionV2Code UnableToModifyThirdReimbursementAgent = new PaymentModificationRejectionV2Code() {
@@ -483,10 +483,6 @@ public class PaymentModificationRejectionV2Code extends MMCode {
 	 * PaymentModificationRejectionV2Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "UM11"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnableToModifyPaymentClearingChannel"</li>
 	 * <li>
@@ -494,6 +490,10 @@ public class PaymentModificationRejectionV2Code extends MMCode {
 	 * definition} =
 	 * "Clearing Channel element of payment type cannot be modified (former UnableToModifyPaymentScheme)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final PaymentModificationRejectionV2Code UnableToModifyPaymentClearingChannel = new PaymentModificationRejectionV2Code() {
@@ -516,10 +516,6 @@ public class PaymentModificationRejectionV2Code extends MMCode {
 	 * PaymentModificationRejectionV2Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "UM12"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnableToModifyCreditorAgentAccount"</li>
 	 * <li>
@@ -527,6 +523,10 @@ public class PaymentModificationRejectionV2Code extends MMCode {
 	 * definition} =
 	 * "Creditor agent account cannot be modified (former UnableToModifyAccountOfBeneficiaryInstitution)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final PaymentModificationRejectionV2Code UnableToModifyCreditorAgentAccount = new PaymentModificationRejectionV2Code() {
@@ -548,15 +548,15 @@ public class PaymentModificationRejectionV2Code extends MMCode {
 	 * PaymentModificationRejectionV2Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "UM13"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnableToModifyCreditor"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Creditor cannot be modified."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final PaymentModificationRejectionV2Code UnableToModifyCreditor = new PaymentModificationRejectionV2Code() {
@@ -578,15 +578,15 @@ public class PaymentModificationRejectionV2Code extends MMCode {
 	 * PaymentModificationRejectionV2Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "UM14"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnableToModifyCreditorAccount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Creditor account cannot be modified."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final PaymentModificationRejectionV2Code UnableToModifyCreditorAccount = new PaymentModificationRejectionV2Code() {
@@ -608,15 +608,15 @@ public class PaymentModificationRejectionV2Code extends MMCode {
 	 * PaymentModificationRejectionV2Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "UM15"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnableToModifyRemittanceInformation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Remittance information cannot be modified."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final PaymentModificationRejectionV2Code UnableToModifyRemittanceInformation = new PaymentModificationRejectionV2Code() {
@@ -638,15 +638,15 @@ public class PaymentModificationRejectionV2Code extends MMCode {
 	 * PaymentModificationRejectionV2Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "UM16"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnableToModifyPaymentPurpose"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "PaymentPurpose cannot be modified."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final PaymentModificationRejectionV2Code UnableToModifyPaymentPurpose = new PaymentModificationRejectionV2Code() {
@@ -668,10 +668,6 @@ public class PaymentModificationRejectionV2Code extends MMCode {
 	 * PaymentModificationRejectionV2Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "UM17"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnableToModifyChargeBearer"</li>
 	 * <li>
@@ -679,6 +675,10 @@ public class PaymentModificationRejectionV2Code extends MMCode {
 	 * definition} =
 	 * "Charge bearer cannot be modified (former UnableToModifyDetailsOfCharges)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final PaymentModificationRejectionV2Code UnableToModifyChargeBearer = new PaymentModificationRejectionV2Code() {
@@ -701,10 +701,6 @@ public class PaymentModificationRejectionV2Code extends MMCode {
 	 * PaymentModificationRejectionV2Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "UM18"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnableToModifyInstructionForNextAgent"</li>
 	 * <li>
@@ -712,6 +708,10 @@ public class PaymentModificationRejectionV2Code extends MMCode {
 	 * definition} =
 	 * "Instruction for next agent cannot be modified (former UnableToModifySenderToReceiver)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final PaymentModificationRejectionV2Code UnableToModifyInstructionForNextAgent = new PaymentModificationRejectionV2Code() {
@@ -734,10 +734,6 @@ public class PaymentModificationRejectionV2Code extends MMCode {
 	 * PaymentModificationRejectionV2Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "UM19"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnableToModifyInstructionForCreditorAgent"</li>
 	 * <li>
@@ -745,6 +741,10 @@ public class PaymentModificationRejectionV2Code extends MMCode {
 	 * definition} =
 	 * "Instruction for creditor agent cannot be modified. (former UnableToModifyInstructionForFinalAgent)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final PaymentModificationRejectionV2Code UnableToModifyInstructionForCreditorAgent = new PaymentModificationRejectionV2Code() {
@@ -768,10 +768,6 @@ public class PaymentModificationRejectionV2Code extends MMCode {
 	 * PaymentModificationRejectionV2Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "UM20"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InstructionCancelledSubmitNewInstruction"</li>
 	 * <li>
@@ -779,6 +775,10 @@ public class PaymentModificationRejectionV2Code extends MMCode {
 	 * definition} =
 	 * "Used to inform of cancellation and request a new payment instruction. This should only be used if an agent does not want to modify a pending payment."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final PaymentModificationRejectionV2Code InstructionCancelledSubmitNewInstruction = new PaymentModificationRejectionV2Code() {
@@ -800,16 +800,16 @@ public class PaymentModificationRejectionV2Code extends MMCode {
 	 * PaymentModificationRejectionV2Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "UM21"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnableToModifySubmitCancellation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Modification is not possible and the cancellation is requested."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final PaymentModificationRejectionV2Code UnableToModifySubmitCancellation = new PaymentModificationRejectionV2Code() {
@@ -831,10 +831,6 @@ public class PaymentModificationRejectionV2Code extends MMCode {
 	 * PaymentModificationRejectionV2Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "UM22"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnableToModifyDebtorAgentAccount"</li>
 	 * <li>
@@ -842,6 +838,10 @@ public class PaymentModificationRejectionV2Code extends MMCode {
 	 * definition} =
 	 * "Debtor agent account cannot be modified (applicable for direct debits)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final PaymentModificationRejectionV2Code UnableToModifyDebtorAgentAccount = new PaymentModificationRejectionV2Code() {
@@ -863,15 +863,15 @@ public class PaymentModificationRejectionV2Code extends MMCode {
 	 * PaymentModificationRejectionV2Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "UM23"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnableToModifyInterbankSettlementAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Interbank settlement amount cannot be modified."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final PaymentModificationRejectionV2Code UnableToModifyInterbankSettlementAmount = new PaymentModificationRejectionV2Code() {
@@ -894,10 +894,6 @@ public class PaymentModificationRejectionV2Code extends MMCode {
 	 * PaymentModificationRejectionV2Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "UM24"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnableToModifyInstructionForDebtorAgent"</li>
 	 * <li>
@@ -905,6 +901,10 @@ public class PaymentModificationRejectionV2Code extends MMCode {
 	 * definition} =
 	 * "Instruction for debtor agent cannot be modified (applicable for direct debits)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final PaymentModificationRejectionV2Code UnableToModifyInstructionForDebtorAgent = new PaymentModificationRejectionV2Code() {
@@ -927,10 +927,6 @@ public class PaymentModificationRejectionV2Code extends MMCode {
 	 * PaymentModificationRejectionV2Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "UM25"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnableToModifyRequestedCollectionDate"</li>
 	 * <li>
@@ -938,6 +934,10 @@ public class PaymentModificationRejectionV2Code extends MMCode {
 	 * definition} =
 	 * "Requested collection date cannot be modified (applicable for direct debits)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final PaymentModificationRejectionV2Code UnableToModifyRequestedCollectionDate = new PaymentModificationRejectionV2Code() {
@@ -959,15 +959,15 @@ public class PaymentModificationRejectionV2Code extends MMCode {
 	 * PaymentModificationRejectionV2Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "UM26"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnableToModifyPaymentType"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Payment type cannot be modified."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final PaymentModificationRejectionV2Code UnableToModifyPaymentType = new PaymentModificationRejectionV2Code() {
@@ -989,15 +989,15 @@ public class PaymentModificationRejectionV2Code extends MMCode {
 	 * PaymentModificationRejectionV2Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "UM27"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnableToModifyInstructedAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Instructed or equivalent amount cannot be modified."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final PaymentModificationRejectionV2Code UnableToModifyInstructedAmount = new PaymentModificationRejectionV2Code() {

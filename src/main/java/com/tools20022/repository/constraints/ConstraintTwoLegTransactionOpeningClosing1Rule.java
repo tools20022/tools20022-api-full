@@ -82,10 +82,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails26
 	 * TransactionDetails26}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -93,6 +89,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails26> forTransactionDetails26 = new MMConstraint<TransactionDetails26>() {
@@ -116,10 +116,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails90
 	 * TransactionDetails90}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -127,6 +123,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails90> forTransactionDetails90 = new MMConstraint<TransactionDetails90>() {
@@ -150,10 +150,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails71
 	 * SecuritiesTradeDetails71}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -161,6 +157,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -191,10 +191,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails96
 	 * TransactionDetails96}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -202,6 +198,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -240,10 +240,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails5
 	 * TransactionDetails5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -251,6 +247,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails5> forTransactionDetails5 = new MMConstraint<TransactionDetails5>() {
@@ -274,10 +274,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails104
 	 * TransactionDetails104}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -285,6 +281,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -314,10 +314,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails42
 	 * SecuritiesTradeDetails42}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -325,6 +321,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails42> forSecuritiesTradeDetails42 = new MMConstraint<SecuritiesTradeDetails42>() {
@@ -348,10 +348,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails18
 	 * TransactionDetails18}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -359,6 +355,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails18> forTransactionDetails18 = new MMConstraint<TransactionDetails18>() {
@@ -382,10 +382,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V08
 	 * SecuritiesSettlementTransactionConfirmation002V08}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -393,6 +389,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionConfirmation002V08> for_sese_SecuritiesSettlementTransactionConfirmation002V08 = new MMConstraint<SecuritiesSettlementTransactionConfirmation002V08>() {
@@ -416,10 +416,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails63
 	 * TransactionDetails63}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -427,6 +423,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -465,10 +465,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails27
 	 * TransactionDetails27}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -476,6 +472,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails27> forTransactionDetails27 = new MMConstraint<TransactionDetails27>() {
@@ -499,10 +499,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails22
 	 * SecuritiesTradeDetails22}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -510,6 +506,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails22> forSecuritiesTradeDetails22 = new MMConstraint<SecuritiesTradeDetails22>() {
@@ -533,10 +533,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V06
 	 * SecuritiesSettlementTransactionAllegementNotification002V06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -544,6 +540,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionAllegementNotification002V06> for_sese_SecuritiesSettlementTransactionAllegementNotification002V06 = new MMConstraint<SecuritiesSettlementTransactionAllegementNotification002V06>() {
@@ -567,10 +567,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails66
 	 * TransactionDetails66}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -578,6 +574,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails66> forTransactionDetails66 = new MMConstraint<TransactionDetails66>() {
@@ -601,10 +601,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails72
 	 * TransactionDetails72}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -612,6 +608,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails72> forTransactionDetails72 = new MMConstraint<TransactionDetails72>() {
@@ -635,10 +635,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails103
 	 * TransactionDetails103}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -646,6 +642,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -675,10 +675,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails111
 	 * TransactionDetails111}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -686,6 +682,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails111> forTransactionDetails111 = new MMConstraint<TransactionDetails111>() {
@@ -709,10 +709,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V06
 	 * SecuritiesSettlementTransactionInstruction002V06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -720,6 +716,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstruction002V06> for_sese_SecuritiesSettlementTransactionInstruction002V06 = new MMConstraint<SecuritiesSettlementTransactionInstruction002V06>() {
@@ -743,10 +743,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails68
 	 * SecuritiesTradeDetails68}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -754,6 +750,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -794,10 +794,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails105
 	 * TransactionDetails105}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -805,6 +801,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -834,10 +834,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails51
 	 * TransactionDetails51}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -845,6 +841,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -877,10 +877,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails85
 	 * SecuritiesTradeDetails85}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -888,6 +884,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails85> forSecuritiesTradeDetails85 = new MMConstraint<SecuritiesTradeDetails85>() {
@@ -911,10 +911,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails16
 	 * TransactionDetails16}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -922,6 +918,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails16> forTransactionDetails16 = new MMConstraint<TransactionDetails16>() {
@@ -945,10 +945,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV08
 	 * SecuritiesSettlementTransactionInstructionV08}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -956,6 +952,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -986,10 +986,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails58
 	 * TransactionDetails58}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -997,6 +993,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails58> forTransactionDetails58 = new MMConstraint<TransactionDetails58>() {
@@ -1020,10 +1020,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails69
 	 * SecuritiesTradeDetails69}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -1031,6 +1027,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails69> forSecuritiesTradeDetails69 = new MMConstraint<SecuritiesTradeDetails69>() {
@@ -1054,10 +1054,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails4
 	 * SecuritiesTradeDetails4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -1065,6 +1061,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails4> forSecuritiesTradeDetails4 = new MMConstraint<SecuritiesTradeDetails4>() {
@@ -1088,10 +1088,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails6
 	 * TransactionDetails6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -1099,6 +1095,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails6> forTransactionDetails6 = new MMConstraint<TransactionDetails6>() {
@@ -1122,10 +1122,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails34
 	 * TransactionDetails34}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -1133,6 +1129,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails34> forTransactionDetails34 = new MMConstraint<TransactionDetails34>() {
@@ -1156,10 +1156,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails23
 	 * SecuritiesTradeDetails23}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -1167,6 +1163,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1200,10 +1200,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV04
 	 * SecuritiesSettlementTransactionConfirmationV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -1211,6 +1207,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1244,10 +1244,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails110
 	 * TransactionDetails110}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -1255,6 +1251,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails110> forTransactionDetails110 = new MMConstraint<TransactionDetails110>() {
@@ -1278,10 +1278,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV05
 	 * SecuritiesSettlementTransactionAllegementNotificationV05}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -1289,6 +1285,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1329,10 +1329,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails70
 	 * TransactionDetails70}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -1340,6 +1336,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1378,10 +1378,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails23
 	 * TransactionDetails23}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -1389,6 +1385,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails23> forTransactionDetails23 = new MMConstraint<TransactionDetails23>() {
@@ -1412,10 +1412,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails78
 	 * TransactionDetails78}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -1423,6 +1419,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1461,10 +1461,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV03
 	 * SecuritiesSettlementTransactionInstructionV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -1472,6 +1468,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV03> for_sese_SecuritiesSettlementTransactionInstructionV03 = new MMConstraint<SecuritiesSettlementTransactionInstructionV03>() {
@@ -1495,10 +1495,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails49
 	 * SecuritiesTradeDetails49}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -1506,6 +1502,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1546,10 +1546,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails91
 	 * TransactionDetails91}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -1557,6 +1553,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails91> forTransactionDetails91 = new MMConstraint<TransactionDetails91>() {
@@ -1580,10 +1580,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV04
 	 * SecuritiesSettlementTransactionAllegementNotificationV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -1591,6 +1587,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1631,10 +1631,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV01
 	 * SecuritiesSettlementTransactionConfirmationV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -1642,6 +1638,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionConfirmationV01> for_sese_SecuritiesSettlementTransactionConfirmationV01 = new MMConstraint<SecuritiesSettlementTransactionConfirmationV01>() {
@@ -1665,10 +1665,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV05
 	 * SecuritiesSettlementTransactionInstructionV05}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -1676,6 +1672,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1716,10 +1716,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V06
 	 * SecuritiesSettlementTransactionConfirmation002V06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -1727,6 +1723,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionConfirmation002V06> for_sese_SecuritiesSettlementTransactionConfirmation002V06 = new MMConstraint<SecuritiesSettlementTransactionConfirmation002V06>() {
@@ -1750,10 +1750,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails71
 	 * TransactionDetails71}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -1761,6 +1757,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails71> forTransactionDetails71 = new MMConstraint<TransactionDetails71>() {
@@ -1784,10 +1784,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails100
 	 * TransactionDetails100}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -1795,6 +1791,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails100> forTransactionDetails100 = new MMConstraint<TransactionDetails100>() {
@@ -1818,10 +1818,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails59
 	 * TransactionDetails59}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -1829,6 +1825,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails59> forTransactionDetails59 = new MMConstraint<TransactionDetails59>() {
@@ -1852,10 +1852,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails112
 	 * TransactionDetails112}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -1863,6 +1859,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails112> forTransactionDetails112 = new MMConstraint<TransactionDetails112>() {
@@ -1886,10 +1886,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails60
 	 * TransactionDetails60}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -1897,6 +1893,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails60> forTransactionDetails60 = new MMConstraint<TransactionDetails60>() {
@@ -1920,10 +1920,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails99
 	 * TransactionDetails99}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -1931,6 +1927,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails99> forTransactionDetails99 = new MMConstraint<TransactionDetails99>() {
@@ -1954,10 +1954,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails93
 	 * TransactionDetails93}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -1965,6 +1961,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -2003,10 +2003,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails68
 	 * TransactionDetails68}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -2014,6 +2010,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails68> forTransactionDetails68 = new MMConstraint<TransactionDetails68>() {
@@ -2037,10 +2037,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV07
 	 * SecuritiesSettlementTransactionInstructionV07}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -2048,6 +2044,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -2088,10 +2088,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV06
 	 * SecuritiesSettlementTransactionConfirmationV06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -2099,6 +2095,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -2139,10 +2139,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails7
 	 * TransactionDetails7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -2150,6 +2146,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails7> forTransactionDetails7 = new MMConstraint<TransactionDetails7>() {
@@ -2173,10 +2173,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails98
 	 * TransactionDetails98}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -2184,6 +2180,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails98> forTransactionDetails98 = new MMConstraint<TransactionDetails98>() {
@@ -2207,10 +2207,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails29
 	 * SecuritiesTradeDetails29}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -2218,6 +2214,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails29> forSecuritiesTradeDetails29 = new MMConstraint<SecuritiesTradeDetails29>() {
@@ -2241,10 +2241,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails10
 	 * SecuritiesTradeDetails10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -2252,6 +2248,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails10> forSecuritiesTradeDetails10 = new MMConstraint<SecuritiesTradeDetails10>() {
@@ -2275,10 +2275,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V05
 	 * SecuritiesSettlementTransactionAllegementNotification002V05}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -2286,6 +2282,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionAllegementNotification002V05> for_sese_SecuritiesSettlementTransactionAllegementNotification002V05 = new MMConstraint<SecuritiesSettlementTransactionAllegementNotification002V05>() {
@@ -2309,10 +2309,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails39
 	 * TransactionDetails39}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -2320,6 +2316,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails39> forTransactionDetails39 = new MMConstraint<TransactionDetails39>() {
@@ -2343,10 +2343,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV07
 	 * SecuritiesSettlementTransactionAllegementNotificationV07}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -2354,6 +2350,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2384,10 +2384,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails61
 	 * SecuritiesTradeDetails61}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -2395,6 +2391,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails61> forSecuritiesTradeDetails61 = new MMConstraint<SecuritiesTradeDetails61>() {
@@ -2418,10 +2418,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV03
 	 * SecuritiesSettlementTransactionAllegementNotificationV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -2429,6 +2425,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -2462,10 +2462,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails48
 	 * TransactionDetails48}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -2473,6 +2469,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails48> forTransactionDetails48 = new MMConstraint<TransactionDetails48>() {
@@ -2496,10 +2496,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V07
 	 * SecuritiesSettlementTransactionAllegementNotification002V07}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -2507,6 +2503,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionAllegementNotification002V07> for_sese_SecuritiesSettlementTransactionAllegementNotification002V07 = new MMConstraint<SecuritiesSettlementTransactionAllegementNotification002V07>() {
@@ -2530,10 +2530,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails56
 	 * TransactionDetails56}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -2541,6 +2537,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -2573,10 +2573,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV01
 	 * SecuritiesSettlementTransactionAllegementNotificationV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -2584,6 +2580,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV01> for_sese_SecuritiesSettlementTransactionAllegementNotificationV01 = new MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV01>() {
@@ -2607,10 +2607,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails95
 	 * TransactionDetails95}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -2618,6 +2614,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -2656,10 +2656,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails61
 	 * TransactionDetails61}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -2667,6 +2663,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -2705,10 +2705,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV06
 	 * SecuritiesSettlementTransactionInstructionV06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -2716,6 +2712,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -2756,10 +2756,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails57
 	 * TransactionDetails57}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -2767,6 +2763,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -2799,10 +2799,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV01
 	 * SecuritiesSettlementTransactionInstructionV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -2810,6 +2806,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV01> for_sese_SecuritiesSettlementTransactionInstructionV01 = new MMConstraint<SecuritiesSettlementTransactionInstructionV01>() {
@@ -2833,10 +2833,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails53
 	 * TransactionDetails53}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -2844,6 +2840,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -2876,10 +2876,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails97
 	 * TransactionDetails97}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -2887,6 +2883,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -2925,10 +2925,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V07
 	 * SecuritiesSettlementTransactionConfirmation002V07}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -2936,6 +2932,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionConfirmation002V07> for_sese_SecuritiesSettlementTransactionConfirmation002V07 = new MMConstraint<SecuritiesSettlementTransactionConfirmation002V07>() {
@@ -2959,10 +2959,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV02
 	 * SecuritiesSettlementTransactionInstructionV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -2970,6 +2966,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV02> for_sese_SecuritiesSettlementTransactionInstructionV02 = new MMConstraint<SecuritiesSettlementTransactionInstructionV02>() {
@@ -2993,10 +2993,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails47
 	 * TransactionDetails47}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -3004,6 +3000,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails47> forTransactionDetails47 = new MMConstraint<TransactionDetails47>() {
@@ -3027,10 +3027,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails17
 	 * SecuritiesTradeDetails17}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -3038,6 +3034,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails17> forSecuritiesTradeDetails17 = new MMConstraint<SecuritiesTradeDetails17>() {
@@ -3061,10 +3061,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails67
 	 * TransactionDetails67}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -3072,6 +3068,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails67> forTransactionDetails67 = new MMConstraint<TransactionDetails67>() {
@@ -3095,10 +3095,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails24
 	 * TransactionDetails24}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -3106,6 +3102,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails24> forTransactionDetails24 = new MMConstraint<TransactionDetails24>() {
@@ -3129,10 +3129,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails22
 	 * TransactionDetails22}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -3140,6 +3136,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails22> forTransactionDetails22 = new MMConstraint<TransactionDetails22>() {
@@ -3163,10 +3163,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails79
 	 * TransactionDetails79}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -3174,6 +3170,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -3212,10 +3212,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV06
 	 * SecuritiesSettlementTransactionAllegementNotificationV06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -3223,6 +3219,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -3263,10 +3263,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV02
 	 * SecuritiesSettlementTransactionAllegementNotificationV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -3274,6 +3270,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV02> for_sese_SecuritiesSettlementTransactionAllegementNotificationV02 = new MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV02>() {
@@ -3297,10 +3297,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails37
 	 * TransactionDetails37}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -3308,6 +3304,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails37> forTransactionDetails37 = new MMConstraint<TransactionDetails37>() {
@@ -3331,10 +3331,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails102
 	 * TransactionDetails102}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -3342,6 +3338,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -3371,10 +3371,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V08
 	 * SecuritiesSettlementTransactionInstruction002V08}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -3382,6 +3378,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstruction002V08> for_sese_SecuritiesSettlementTransactionInstruction002V08 = new MMConstraint<SecuritiesSettlementTransactionInstruction002V08>() {
@@ -3405,10 +3405,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV05
 	 * SecuritiesSettlementTransactionConfirmationV05}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -3416,6 +3412,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -3456,10 +3456,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V07
 	 * SecuritiesSettlementTransactionInstruction002V07}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -3467,6 +3463,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstruction002V07> for_sese_SecuritiesSettlementTransactionInstruction002V07 = new MMConstraint<SecuritiesSettlementTransactionInstruction002V07>() {
@@ -3490,10 +3490,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV04
 	 * SecuritiesSettlementTransactionInstructionV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -3501,6 +3497,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -3534,10 +3534,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails50
 	 * TransactionDetails50}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -3545,6 +3541,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails50> forTransactionDetails50 = new MMConstraint<TransactionDetails50>() {
@@ -3568,10 +3568,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails35
 	 * SecuritiesTradeDetails35}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -3579,6 +3575,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -3619,10 +3619,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV03
 	 * SecuritiesSettlementTransactionConfirmationV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -3630,6 +3626,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionConfirmationV03> for_sese_SecuritiesSettlementTransactionConfirmationV03 = new MMConstraint<SecuritiesSettlementTransactionConfirmationV03>() {
@@ -3653,10 +3653,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails62
 	 * TransactionDetails62}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -3664,6 +3660,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -3702,10 +3702,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV02
 	 * SecuritiesSettlementTransactionConfirmationV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -3713,6 +3709,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionConfirmationV02> for_sese_SecuritiesSettlementTransactionConfirmationV02 = new MMConstraint<SecuritiesSettlementTransactionConfirmationV02>() {
@@ -3736,10 +3736,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails75
 	 * TransactionDetails75}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -3747,6 +3743,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -3785,10 +3785,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV07
 	 * SecuritiesSettlementTransactionConfirmationV07}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -3796,6 +3792,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -3836,10 +3836,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails36
 	 * TransactionDetails36}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -3847,6 +3843,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails36> forTransactionDetails36 = new MMConstraint<TransactionDetails36>() {
@@ -3870,10 +3870,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV08
 	 * SecuritiesSettlementTransactionConfirmationV08}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -3881,6 +3877,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -3911,10 +3911,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails69
 	 * TransactionDetails69}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -3922,6 +3918,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -3960,10 +3960,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails87
 	 * TransactionDetails87}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -3971,6 +3967,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails87> forTransactionDetails87 = new MMConstraint<TransactionDetails87>() {
@@ -3994,10 +3994,6 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails9
 	 * TransactionDetails9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransactionOpeningClosing1Rule"</li>
 	 * <li>
@@ -4005,6 +4001,10 @@ public class ConstraintTwoLegTransactionOpeningClosing1Rule {
 	 * definition} =
 	 * "For settlement of two parts transactions (Securities Financing), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: ReverseRepo (RVPO)\r\n\r\nTriParty Repo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\nTriParty Repo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyRepo (TRPO)\r\n\r\nTriParty Reverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\nTriParty Reverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: TriPartyReverseRepo (TRVO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransactionDetails9> forTransactionDetails9 = new MMConstraint<TransactionDetails9>() {

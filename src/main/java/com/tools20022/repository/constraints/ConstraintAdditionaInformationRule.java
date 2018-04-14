@@ -36,10 +36,6 @@ public class ConstraintAdditionaInformationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CancelledStatusReason16
 	 * CancelledStatusReason16}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionaInformationRule"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintAdditionaInformationRule {
 	 * definition} =
 	 * "The AdditionalInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CancelledStatusReason16> forCancelledStatusReason16 = new MMConstraint<CancelledStatusReason16>() {

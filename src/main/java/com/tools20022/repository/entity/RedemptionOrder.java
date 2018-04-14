@@ -198,16 +198,16 @@ import java.util.Objects;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "RedemptionOrder"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Instruction from an investor to sell investment fund units back to the fund."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class RedemptionOrder extends InvestmentFundOrder {
@@ -300,10 +300,6 @@ public class RedemptionOrder extends InvestmentFundOrder {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.RedemptionOrder
 	 * RedemptionOrder}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "HoldingsRedemptionRate"</li>
 	 * <li>
@@ -311,6 +307,10 @@ public class RedemptionOrder extends InvestmentFundOrder {
 	 * definition} =
 	 * "Portion of the investor's holdings, in a specific investment fund/ fund class, that is redeemed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<RedemptionOrder, PercentageRate> mmHoldingsRedemptionRate = new MMBusinessAttribute<RedemptionOrder, PercentageRate>() {

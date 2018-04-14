@@ -36,10 +36,6 @@ public class ConstraintOrderDataElementRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FundOrderData5 FundOrderData5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OrderDataElementRule"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintOrderDataElementRule {
 	 * definition} =
 	 * "One of the elements (InvestmentAccountDetails, FinancialInstrumentDetails, UnitsNumber, NetAmount, GrossAmount, HoldingsRedemptionRate, SettlementAmount, UnitCurrency, QuotedCurrency) must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FundOrderData5> forFundOrderData5 = new MMConstraint<FundOrderData5>() {

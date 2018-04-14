@@ -40,10 +40,6 @@ public class ConstraintRelatedReferenceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01
 	 * OrderConfirmationStatusReportV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RelatedReferenceGuideline"</li>
 	 * <li>
@@ -51,6 +47,10 @@ public class ConstraintRelatedReferenceGuideline {
 	 * definition} =
 	 * "If RelatedReference/MessageName is present, it must contain 515 or must start with setr.003, setr.006, setr.009, setr.012, setr.015, setr.047, setr.048, setr.049, setr.050, setr.051, setr.052, setr.053, setr.054, setr.055,setr.056 or setr.058 and RelatedReference/Reference must contain the reference of a message in this list."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<OrderConfirmationStatusReportV01> for_setr_OrderConfirmationStatusReportV01 = new MMConstraint<OrderConfirmationStatusReportV01>() {
@@ -74,10 +74,6 @@ public class ConstraintRelatedReferenceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV02
 	 * OrderInstructionStatusReportV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RelatedReferenceGuideline"</li>
 	 * <li>
@@ -85,6 +81,10 @@ public class ConstraintRelatedReferenceGuideline {
 	 * definition} =
 	 * "If RelatedReference/MessageName is present, it must contain 502 or must start with setr.001 or setr.004 or setr.007 or setr.010 or setr.013 or setr.025 and Reference must contain the business reference of a message in this list."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<OrderInstructionStatusReportV02> for_setr_OrderInstructionStatusReportV02 = new MMConstraint<OrderInstructionStatusReportV02>() {

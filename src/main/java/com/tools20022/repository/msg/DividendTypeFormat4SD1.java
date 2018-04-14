@@ -60,6 +60,12 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "DividendTypeFormat4SD1"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} =
+ * "Extension to specify additional information related to the type of dividend."
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
  * constraint} =
  * <ul>
@@ -78,12 +84,6 @@ import javax.xml.bind.annotation.XmlType;
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "DividendTypeFormat4SD1"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} =
- * "Extension to specify additional information related to the type of dividend."
- * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -109,10 +109,6 @@ public class DividendTypeFormat4SD1 {
 	 * DividendTypeFormat4SD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PlcAndNm"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PlaceAndName"</li>
 	 * <li>
@@ -120,6 +116,10 @@ public class DividendTypeFormat4SD1 {
 	 * definition} =
 	 * "Unambiguous reference to the location where the supplementary data must be inserted in the message instance. \r\n\r\nIn the case of XML, this is expressed by a valid XPath."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<DividendTypeFormat4SD1, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<DividendTypeFormat4SD1, Optional<Max350Text>>() {
@@ -164,10 +164,6 @@ public class DividendTypeFormat4SD1 {
 	 * DividendTypeFormat4SD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrvsnlDvddFlg"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ProvisionalDividendFlag"</li>
 	 * <li>
@@ -175,6 +171,10 @@ public class DividendTypeFormat4SD1 {
 	 * definition} =
 	 * "Specifies whether the dividend is provisional 予想区分.\r\nIf the value is No, then the dividend is actual.\r\nProvisionalDividendFlag can only be used with corporate action event type code DVCA."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<DividendTypeFormat4SD1, YesNoIndicator> mmProvisionalDividendFlag = new MMMessageAttribute<DividendTypeFormat4SD1, YesNoIndicator>() {
@@ -219,10 +219,6 @@ public class DividendTypeFormat4SD1 {
 	 * DividendTypeFormat4SD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CommrtvDvddFlg"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CommemorativeDividendFlag"</li>
 	 * <li>
@@ -230,6 +226,10 @@ public class DividendTypeFormat4SD1 {
 	 * definition} =
 	 * "Specifies whether the dividend includes commemorative dividend. 記念配当区分\r\nCommemorativeDividendFlag can only be used with corporate action event type code DVCA."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<DividendTypeFormat4SD1, YesNoIndicator> mmCommemorativeDividendFlag = new MMMessageAttribute<DividendTypeFormat4SD1, YesNoIndicator>() {
@@ -274,10 +274,6 @@ public class DividendTypeFormat4SD1 {
 	 * DividendTypeFormat4SD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SpclDvddFlg"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SpecialDividendFlag"</li>
 	 * <li>
@@ -285,6 +281,10 @@ public class DividendTypeFormat4SD1 {
 	 * definition} =
 	 * "Specifies whether the dividend includes special dividend.\r\n特別配当区分\r\nSpecialDividendFlag can only be used with corporate action event type code DVCA."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<DividendTypeFormat4SD1, YesNoIndicator> mmSpecialDividendFlag = new MMMessageAttribute<DividendTypeFormat4SD1, YesNoIndicator>() {

@@ -41,10 +41,6 @@ public class ConstraintInstrumentDescription1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument14
 	 * FinancialInstrument14}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InstrumentDescription1Rule"</li>
 	 * <li>
@@ -52,6 +48,10 @@ public class ConstraintInstrumentDescription1Rule {
 	 * definition} =
 	 * "InstrumentDescription may be present if either Identification/ISIN or Identification/OtherIdentification or UnderlyingInstrumentIdentification/ISIN or UnderlyingInstrumentIdentification/OtherIdentification is present. InstrumentDescription may not be present if Identification/InstrumentDescription or UnderlyingInstrumentIdentification/InstrumentDescription is present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrument14> forFinancialInstrument14 = new MMConstraint<FinancialInstrument14>() {
@@ -75,10 +75,6 @@ public class ConstraintInstrumentDescription1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument15
 	 * FinancialInstrument15}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InstrumentDescription1Rule"</li>
 	 * <li>
@@ -86,6 +82,10 @@ public class ConstraintInstrumentDescription1Rule {
 	 * definition} =
 	 * "InstrumentDescription may be present if either Identification/ISIN or Identification/OtherIdentification or UnderlyingInstrumentIdentification/ISIN or UnderlyingInstrumentIdentification/OtherIdentification is present. InstrumentDescription may not be present if Identification/InstrumentDescription or UnderlyingInstrumentIdentification/InstrumentDescription is present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrument15> forFinancialInstrument15 = new MMConstraint<FinancialInstrument15>() {

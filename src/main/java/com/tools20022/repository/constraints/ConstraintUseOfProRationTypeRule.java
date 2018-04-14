@@ -36,10 +36,6 @@ public class ConstraintUseOfProRationTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.OptionFeaturesFormat8SD1
 	 * OptionFeaturesFormat8SD1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UseOfProRationTypeRule"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintUseOfProRationTypeRule {
 	 * definition} =
 	 * "ProRationType should only be used when the corporate action event type code is TEND or BIDS."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<OptionFeaturesFormat8SD1> forOptionFeaturesFormat8SD1 = new MMConstraint<OptionFeaturesFormat8SD1>() {

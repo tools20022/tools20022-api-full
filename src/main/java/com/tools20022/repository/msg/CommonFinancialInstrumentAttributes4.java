@@ -211,14 +211,14 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CommonFinancialInstrumentAttributes4"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Tangible items of value to a business."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1
@@ -258,6 +258,12 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SctySts"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecurityStatus"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Specifies the status of the security within its lifecycle."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = FIXSynonym: 965</li>
@@ -265,12 +271,6 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SecurityStatus"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Specifies the status of the security within its lifecycle."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<SecurityStatus3Choice>> mmSecurityStatus = new MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<SecurityStatus3Choice>>() {
@@ -321,15 +321,15 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ISOSctyLngNm"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ISOSecurityLongName"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Name of the security."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<Max350Text>> mmISOSecurityLongName = new MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<Max350Text>>() {
@@ -379,15 +379,15 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ISOSctyShrtNm"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ISOSecurityShortName"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Short name of the security expressed as ISO 18773/18774."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<Max35Text>> mmISOSecurityShortName = new MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<Max35Text>>() {
@@ -438,16 +438,16 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NmVldFr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NameValidFrom"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Defines the date since when the name of the security is valid."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<DateAndDateTimeChoice>> mmNameValidFrom = new MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<DateAndDateTimeChoice>>() {
@@ -497,6 +497,11 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DnmtnCcy"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DenominationCurrency"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Currency in which a security is issued or redenominated."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = FIXSynonym: 15</li>
@@ -504,11 +509,6 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DenominationCurrency"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Currency in which a security is issued or redenominated."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CommonFinancialInstrumentAttributes4, CurrencyCode> mmDenominationCurrency = new MMMessageAttribute<CommonFinancialInstrumentAttributes4, CurrencyCode>() {
@@ -559,10 +559,6 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CertNb"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CertificateNumber"</li>
 	 * <li>
@@ -570,6 +566,10 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * definition} =
 	 * "Unique and unambiguous identifier of a certificate assigned by the issuer."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<Max35Text>> mmCertificateNumber = new MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<Max35Text>>() {
@@ -614,16 +614,16 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CtrctVrsnNb"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ContractVersionNumber"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Version number assigned to the contract associated with the security."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<Number>> mmContractVersionNumber = new MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<Number>>() {
@@ -673,15 +673,15 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CpnAttchdNb"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CouponAttachedNumber"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Number of the coupon attached to the physical security."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<Max3NumericText>> mmCouponAttachedNumber = new MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<Max3NumericText>>() {
@@ -732,10 +732,6 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TaxLotNb"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxLotNumber"</li>
 	 * <li>
@@ -743,6 +739,10 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * definition} =
 	 * "Identification, for tax purposes, of a lot of identical securities that are bought at a certain date and at a certain price."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<Max15NumericText>> mmTaxLotNumber = new MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<Max15NumericText>>() {
@@ -793,13 +793,6 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PoolNb"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = FIXSynonym: 691</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PoolNumber"</li>
 	 * <li>
@@ -807,6 +800,13 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * definition} =
 	 * "Number identifying a group of underlying assets assigned by the issuer of a factored security."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 691</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<Max15NumericText>> mmPoolNumber = new MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<Max15NumericText>>() {
@@ -858,10 +858,6 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CvrdInd"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoveredIndicator"</li>
 	 * <li>
@@ -869,6 +865,10 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * definition} =
 	 * "Indicates whether the derivative product is covered or not by an underlying financial instrument position."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<YesNoIndicator>> mmCoveredIndicator = new MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<YesNoIndicator>>() {
@@ -919,16 +919,16 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "LglRstrctns"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LegalRestrictions"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies the regulatory restrictions applicable to a security."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<LegalRestrictions4Choice>> mmLegalRestrictions = new MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<LegalRestrictions4Choice>>() {
@@ -979,13 +979,6 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PosLmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = FIXSynonym: 970</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PositionLimit"</li>
 	 * <li>
@@ -993,6 +986,13 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * definition} =
 	 * "Position limits are created for the purpose of maintaining stable and fair markets. Contracts held by one individual investor with different brokers may be combined in order to gauge accurately the level of control held by one party. \n\nEach option and futures contract will have varying position limits."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 970</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<FinancialInstrumentQuantity1Choice>> mmPositionLimit = new MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<FinancialInstrumentQuantity1Choice>>() {
@@ -1044,6 +1044,11 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NearTermPosLmt"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NearTermPositionLimit"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Near-term position limit for the instrument."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = FIXSynonym: 971</li>
@@ -1051,11 +1056,6 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "NearTermPositionLimit"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Near-term position limit for the instrument."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<FinancialInstrumentQuantity1Choice>> mmNearTermPositionLimit = new MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<FinancialInstrumentQuantity1Choice>>() {
@@ -1106,10 +1106,6 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ListgDt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ListingDate"</li>
 	 * <li>
@@ -1117,6 +1113,10 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * definition} =
 	 * "Original Date/time at which the security is listed at the specific exchange or trading venue."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<ISODate>> mmListingDate = new MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<ISODate>>() {
@@ -1166,10 +1166,6 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RcrdDt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RecordDate"</li>
 	 * <li>
@@ -1177,6 +1173,10 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * definition} =
 	 * "Date/time at which positions are struck to note which parties are entitled to receive the entitlement to a corporate event or vote at a meeting."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<ISODateTime>> mmRecordDate = new MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<ISODateTime>>() {
@@ -1226,15 +1226,15 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "XpryDt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ExpiryDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date on which a privilege expires."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<ISODate>> mmExpiryDate = new MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<ISODate>>() {
@@ -1284,16 +1284,16 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Purp"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Purpose"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Reason for which money is raised through the issuance of a security."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<Max256Text>> mmPurpose = new MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<Max256Text>>() {
@@ -1344,10 +1344,6 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ClssfctnTp"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ClassificationType"</li>
 	 * <li>
@@ -1355,6 +1351,10 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * definition} =
 	 * "Information allowing the classification of a financial instrument, for example, with its ISO CFI (Classification of Financial Instrument) or product type."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<ClassificationType2>> mmClassificationType = new MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<ClassificationType2>>() {
@@ -1402,15 +1402,15 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Issnc"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Issuance"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Details regarding the issuance of an asset."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<CommonFinancialInstrumentAttributes4, Optional<Issuance3>> mmIssuance = new MMMessageAssociationEnd<CommonFinancialInstrumentAttributes4, Optional<Issuance3>>() {
@@ -1460,15 +1460,15 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TradgMkt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradingMarket"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Market(s) on which the security is traded."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<CommonFinancialInstrumentAttributes4, List<TradingParameters1>> mmTradingMarket = new MMMessageAssociationEnd<CommonFinancialInstrumentAttributes4, List<TradingParameters1>>() {
@@ -1512,10 +1512,6 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SprdAndBchmkCrv"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SpreadAndBenchmarkCurve"</li>
 	 * <li>
@@ -1523,6 +1519,10 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * definition} =
 	 * "Indicates the spread to benchmark details of an indication of interest."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<CommonFinancialInstrumentAttributes4, List<BenchmarkCurve4>> mmSpreadAndBenchmarkCurve = new MMMessageAssociationEnd<CommonFinancialInstrumentAttributes4, List<BenchmarkCurve4>>() {
@@ -1567,15 +1567,15 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PutTp"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PutType"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Represents the type of put."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<PutType3Choice>> mmPutType = new MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<PutType3Choice>>() {
@@ -1620,15 +1620,15 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CallTp"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CallType"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Represents the type of call."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<CallType3Choice>> mmCallType = new MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<CallType3Choice>>() {
@@ -1673,10 +1673,6 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "FngbInd"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FungibleIndicator"</li>
 	 * <li>
@@ -1684,6 +1680,10 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * definition} =
 	 * "Indicates whether a security is interchangeable, ie, the security is allowed to be replaced by another security, without loss of value."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<YesNoIndicator>> mmFungibleIndicator = new MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<YesNoIndicator>>() {
@@ -1728,10 +1728,6 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Cnfdtl"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Confidential"</li>
 	 * <li>
@@ -1739,6 +1735,10 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * definition} =
 	 * "Indicates whether the details of the security are to be made available to the market, or kept private between ICSDs and agency network."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<YesNoIndicator>> mmConfidential = new MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<YesNoIndicator>>() {
@@ -1783,10 +1783,6 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrvtPlcmnt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PrivatePlacement"</li>
 	 * <li>
@@ -1794,6 +1790,10 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * definition} =
 	 * "The sale of securities directly to private persons, institutional investors, or both outside a public offering. Such non-public deals (often without a publicly available prospectus) closing through the ICSDs are placed directly with investors."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<YesNoIndicator>> mmPrivatePlacement = new MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<YesNoIndicator>>() {
@@ -1838,16 +1838,16 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ConvtblInd"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ConvertibleIndicator"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Indicates whether the investor or the issuer has a conversion option."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<YesNoIndicator>> mmConvertibleIndicator = new MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<YesNoIndicator>>() {
@@ -1892,10 +1892,6 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ConvsPrd"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ConversionPeriod"</li>
 	 * <li>
@@ -1903,6 +1899,10 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * definition} =
 	 * "Period during which a convertible security may be converted according to the terms of the issue."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<DateTimePeriodDetails>> mmConversionPeriod = new MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<DateTimePeriodDetails>>() {
@@ -1947,15 +1947,15 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ConvsRatioNmrtr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ConversionRatioNumerator"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Number of target securities for the conversion."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<FinancialInstrumentQuantity1Choice>> mmConversionRatioNumerator = new MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<FinancialInstrumentQuantity1Choice>>() {
@@ -2000,15 +2000,15 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ConvsRatioDnmtr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ConversionRatioDenominator"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Number of held securities for the conversion."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<FinancialInstrumentQuantity1Choice>> mmConversionRatioDenominator = new MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<FinancialInstrumentQuantity1Choice>>() {
@@ -2052,15 +2052,15 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PmryPlcOfDpst"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PrimaryPlaceOfDeposit"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Primary place of deposit."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<CommonFinancialInstrumentAttributes4, Optional<PartyIdentification71Choice>> mmPrimaryPlaceOfDeposit = new MMMessageAssociationEnd<CommonFinancialInstrumentAttributes4, Optional<PartyIdentification71Choice>>() {
@@ -2106,10 +2106,6 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TradgMtd"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradingMethod"</li>
 	 * <li>
@@ -2117,6 +2113,10 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * definition} =
 	 * "Indicates whether the notional amount value is to be traded in either an amount or in units."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<UnitOrFaceAmount1Choice>> mmTradingMethod = new MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<UnitOrFaceAmount1Choice>>() {
@@ -2161,16 +2161,16 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TEFRARule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TEFRARule"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Indicates the TEFRA rule under which the security is issued."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<TEFRARules3Choice>> mmTEFRARule = new MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<TEFRARules3Choice>>() {
@@ -2214,15 +2214,15 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SrNb"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SerieNumber"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identifies the series number."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<Max16Text>> mmSerieNumber = new MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<Max16Text>>() {
@@ -2266,15 +2266,15 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Clss"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Class"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identifier that links multiple security classes."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<Max16Text>> mmClass_ = new MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<Max16Text>>() {
@@ -2318,10 +2318,6 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "WhldgTaxRgm"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "WithholdingTaxRegime"</li>
 	 * <li>
@@ -2329,6 +2325,10 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * definition} =
 	 * "Amount or percentage of a cash distribution that will be withheld by a tax authority."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<CommonFinancialInstrumentAttributes4, List<SecurityWithHoldingTax1>> mmWithholdingTaxRegime = new MMMessageAssociationEnd<CommonFinancialInstrumentAttributes4, List<SecurityWithHoldingTax1>>() {
@@ -2373,15 +2373,15 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PmtSts"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PaymentStatus"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Status of payment of a security at a particular time."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<SecuritiesPaymentStatus7Choice>> mmPaymentStatus = new MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<SecuritiesPaymentStatus7Choice>>() {
@@ -2426,16 +2426,16 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "InitlPhysForm"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InitialPhysicalForm"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Indicates the physical form of the securities on the closing date."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<InitialPhysicalForm4Choice>> mmInitialPhysicalForm = new MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<InitialPhysicalForm4Choice>>() {
@@ -2480,10 +2480,6 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AftrXchgPhysForm"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AfterExchangePhysicalForm"</li>
 	 * <li>
@@ -2491,6 +2487,10 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * definition} =
 	 * "Indicates the physical form of the securities after the exchange of the initial certificate issued on the closing date."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<InitialPhysicalForm3Choice>> mmAfterExchangePhysicalForm = new MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<InitialPhysicalForm3Choice>>() {
@@ -2535,10 +2535,6 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CmonSfkpr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CommonSafekeeper"</li>
 	 * <li>
@@ -2546,6 +2542,10 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * definition} =
 	 * "Entity appointed by the ICSDs to provide safekeeping for securities in new global note (NGN) form."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<AnyBICIdentifier>> mmCommonSafekeeper = new MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<AnyBICIdentifier>>() {
@@ -2590,15 +2590,15 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RedTp"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RedemptionType"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates the type of redemption at maturity."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<MaturityRedemptionType3Choice>> mmRedemptionType = new MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<MaturityRedemptionType3Choice>>() {
@@ -2643,15 +2643,15 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RedPmtCcy"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RedemptionPaymentCurrency"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "ISO currency for the payment of the cash proceeds."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<ActiveCurrencyCode>> mmRedemptionPaymentCurrency = new MMMessageAttribute<CommonFinancialInstrumentAttributes4, Optional<ActiveCurrencyCode>>() {
@@ -2694,15 +2694,15 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Rstrctn"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Restriction"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Regulatory restriction(s) linked to the security."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<CommonFinancialInstrumentAttributes4, List<SecurityRestriction2>> mmRestriction = new MMMessageAssociationEnd<CommonFinancialInstrumentAttributes4, List<SecurityRestriction2>>() {
@@ -2746,10 +2746,6 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SttlmInf"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SettlementInformation"</li>
 	 * <li>
@@ -2757,6 +2753,10 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * definition} =
 	 * "Settlement of the securities in a securities transaction, that is, the instruction to deliver or receive securities, involving the payment of an amount of money or not."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<CommonFinancialInstrumentAttributes4, List<SettlementInformation17>> mmSettlementInformation = new MMMessageAssociationEnd<CommonFinancialInstrumentAttributes4, List<SettlementInformation17>>() {
@@ -2800,15 +2800,15 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "FinInstrmForm"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FinancialInstrumentForm"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates the form of the financial Instrument."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<CommonFinancialInstrumentAttributes4, Optional<FinancialInstrumentForm2>> mmFinancialInstrumentForm = new MMMessageAssociationEnd<CommonFinancialInstrumentAttributes4, Optional<FinancialInstrumentForm2>>() {
@@ -2852,10 +2852,6 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CtctNm"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ContactName"</li>
 	 * <li>
@@ -2863,6 +2859,10 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * definition} =
 	 * "Details (name, e-mail address and/or telephone number) of the person requesting the allocation of the ISIN used as a point of reference in case further clarifications are required."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<CommonFinancialInstrumentAttributes4, Optional<Organisation27>> mmContactName = new MMMessageAssociationEnd<CommonFinancialInstrumentAttributes4, Optional<Organisation27>>() {
@@ -2906,10 +2906,6 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "LeadMgr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LeadManager"</li>
 	 * <li>
@@ -2917,6 +2913,10 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * definition} =
 	 * "Entity appointed by the issuer to structure and lead the placement of a syndicated issue."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<CommonFinancialInstrumentAttributes4, Optional<Organisation27>> mmLeadManager = new MMMessageAssociationEnd<CommonFinancialInstrumentAttributes4, Optional<Organisation27>>() {
@@ -2960,10 +2960,6 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrncplPngAgt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PrincipalPayingAgent"</li>
 	 * <li>
@@ -2971,6 +2967,10 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * definition} =
 	 * "Main party appointed to distribute payment or securities on behalf of the issuer."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<CommonFinancialInstrumentAttributes4, Optional<Organisation27>> mmPrincipalPayingAgent = new MMMessageAssociationEnd<CommonFinancialInstrumentAttributes4, Optional<Organisation27>>() {
@@ -3014,10 +3014,6 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PngAgt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PayingAgent"</li>
 	 * <li>
@@ -3025,6 +3021,10 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * definition} =
 	 * "Additional party appointed to distribute payment or securities on behalf of the issuer."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<CommonFinancialInstrumentAttributes4, Optional<Organisation27>> mmPayingAgent = new MMMessageAssociationEnd<CommonFinancialInstrumentAttributes4, Optional<Organisation27>>() {
@@ -3068,10 +3068,6 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Dpstry"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Depository"</li>
 	 * <li>
@@ -3079,6 +3075,10 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * definition} =
 	 * "Entity appointed by the relevant clearing system as a depository for instruments issued in global or definitive form. The depository keeps the securities for safekeeping purposes on behalf of the clearing system(s)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<CommonFinancialInstrumentAttributes4, Optional<Organisation27>> mmDepository = new MMMessageAssociationEnd<CommonFinancialInstrumentAttributes4, Optional<Organisation27>>() {
@@ -3122,10 +3122,6 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * CommonFinancialInstrumentAttributes4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "UndrlygRsk"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnderlyingRisk"</li>
 	 * <li>
@@ -3133,6 +3129,10 @@ public class CommonFinancialInstrumentAttributes4 {
 	 * definition} =
 	 * "Entity(ies), asset(s) or security(ies) on which the credit responsibility lies as identified in the documentation."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<CommonFinancialInstrumentAttributes4, Optional<Organisation27>> mmUnderlyingRisk = new MMMessageAssociationEnd<CommonFinancialInstrumentAttributes4, Optional<Organisation27>>() {

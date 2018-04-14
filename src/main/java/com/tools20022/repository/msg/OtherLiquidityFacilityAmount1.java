@@ -57,16 +57,16 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "OtherLiquidityFacilityAmount1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Liquidity facility that is not characterised by any other liquidity facility provided."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -96,10 +96,6 @@ public class OtherLiquidityFacilityAmount1 {
 	 * OtherLiquidityFacilityAmount1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ScrdAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SecuredAmount"</li>
 	 * <li>
@@ -107,6 +103,10 @@ public class OtherLiquidityFacilityAmount1 {
 	 * definition} =
 	 * "Specifies the total value of any flows of committed secured credit lines, committed repo lines or equivalents with counterparties other than the two defaulting members. Indicates if the balance or flows were positive (true) or negative (false)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<OtherLiquidityFacilityAmount1, AmountAndDirection6> mmSecuredAmount = new MMMessageAssociationEnd<OtherLiquidityFacilityAmount1, AmountAndDirection6>() {
@@ -156,10 +156,6 @@ public class OtherLiquidityFacilityAmount1 {
 	 * OtherLiquidityFacilityAmount1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "UscrdAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnsecuredAmount"</li>
 	 * <li>
@@ -167,6 +163,10 @@ public class OtherLiquidityFacilityAmount1 {
 	 * definition} =
 	 * "Specifies the total value of any flows of unsecured committed credit lines, unsecured committed repo lines or equivalents with counterparties other than the two defaulting members. Indicates if the balance or flows were positive (true) or negative (false)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<OtherLiquidityFacilityAmount1, AmountAndDirection6> mmUnsecuredAmount = new MMMessageAssociationEnd<OtherLiquidityFacilityAmount1, AmountAndDirection6>() {

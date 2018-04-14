@@ -109,16 +109,16 @@ import java.util.Objects;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "InvoiceFinancingStatus"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Status of an invoice financing transaction and of the instructions related to the invoice financing."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class InvoiceFinancingStatus extends Status {
@@ -148,15 +148,15 @@ public class InvoiceFinancingStatus extends Status {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingStatus
 	 * InvoiceFinancingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ValidationStatusReason"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "The reason for the validation status."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvoiceFinancingStatus, FinancingStatusReasonCode> mmValidationStatusReason = new MMBusinessAttribute<InvoiceFinancingStatus, FinancingStatusReasonCode>() {
@@ -206,10 +206,6 @@ public class InvoiceFinancingStatus extends Status {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingStatus
 	 * InvoiceFinancingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ValidationStatus"</li>
 	 * <li>
@@ -217,6 +213,10 @@ public class InvoiceFinancingStatus extends Status {
 	 * definition} =
 	 * "The result of the technical validation (e.g. Accepted, Reception error) executed on the  request message."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvoiceFinancingStatus, TechnicalValidationStatusCode> mmValidationStatus = new MMBusinessAttribute<InvoiceFinancingStatus, TechnicalValidationStatusCode>() {
@@ -266,15 +266,15 @@ public class InvoiceFinancingStatus extends Status {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingStatus
 	 * InvoiceFinancingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CancellationStatus"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Information on the business status of the cancellation."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvoiceFinancingStatus, TechnicalValidationStatusCode> mmCancellationStatus = new MMBusinessAttribute<InvoiceFinancingStatus, TechnicalValidationStatusCode>() {
@@ -324,15 +324,15 @@ public class InvoiceFinancingStatus extends Status {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingStatus
 	 * InvoiceFinancingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CancellationStatusReason"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "The reason for the cancellation status."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvoiceFinancingStatus, FinancingStatusReasonCode> mmCancellationStatusReason = new MMBusinessAttribute<InvoiceFinancingStatus, FinancingStatusReasonCode>() {
@@ -382,10 +382,6 @@ public class InvoiceFinancingStatus extends Status {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingStatus
 	 * InvoiceFinancingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FinancingTransactionStatus"</li>
 	 * <li>
@@ -393,6 +389,10 @@ public class InvoiceFinancingStatus extends Status {
 	 * definition} =
 	 * "Specifies the status of the financing request (e.g. financed. not financed)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvoiceFinancingStatus, RequestStatusCode> mmFinancingTransactionStatus = new MMBusinessAttribute<InvoiceFinancingStatus, RequestStatusCode>() {
@@ -441,10 +441,6 @@ public class InvoiceFinancingStatus extends Status {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingStatus
 	 * InvoiceFinancingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CancellationRequestReason"</li>
 	 * <li>
@@ -452,6 +448,10 @@ public class InvoiceFinancingStatus extends Status {
 	 * definition} =
 	 * "Further details on the cancellation request information, in an uncoded form."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvoiceFinancingStatus, Max105Text> mmCancellationRequestReason = new MMBusinessAttribute<InvoiceFinancingStatus, Max105Text>() {
@@ -484,6 +484,11 @@ public class InvoiceFinancingStatus extends Status {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} =
+	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement
+	 * InvoiceFinancingAgreement}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmInvoiceFinancingStatus
@@ -492,25 +497,20 @@ public class InvoiceFinancingStatus extends Status {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} =
-	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement
-	 * InvoiceFinancingAgreement}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingStatus
 	 * InvoiceFinancingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InvoiceFinancingTransaction"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the transaction for which a status is provided."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<InvoiceFinancingStatus, List<InvoiceFinancingAgreement>> mmInvoiceFinancingTransaction = new MMBusinessAssociationEnd<InvoiceFinancingStatus, List<InvoiceFinancingAgreement>>() {
@@ -566,10 +566,6 @@ public class InvoiceFinancingStatus extends Status {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingStatus
 	 * InvoiceFinancingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FinancingStatusReason"</li>
 	 * <li>
@@ -577,6 +573,10 @@ public class InvoiceFinancingStatus extends Status {
 	 * definition} =
 	 * "&lt;p&gt;Indicates the reasons that have determined the result of the single request.&lt;/p&gt;"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvoiceFinancingStatus, FinancingStatusReasonCode> mmFinancingStatusReason = new MMBusinessAttribute<InvoiceFinancingStatus, FinancingStatusReasonCode>() {

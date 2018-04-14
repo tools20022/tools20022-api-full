@@ -107,16 +107,16 @@ import java.util.Objects;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "LiquidityManagementLimit"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Cash management feature limiting the amount of liquidity needed to perform clearing and settlement operations. At any point in time during the process, the limit imposes the maximum amount of liquidity available for operations concerning the system or other managed elements, for example, transaction amount or counterparty."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class LiquidityManagementLimit extends Limit {
@@ -146,10 +146,6 @@ public class LiquidityManagementLimit extends Limit {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.LiquidityManagementLimit
 	 * LiquidityManagementLimit}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "VolatilityMargin"</li>
 	 * <li>
@@ -157,6 +153,10 @@ public class LiquidityManagementLimit extends Limit {
 	 * definition} =
 	 * "Margin used to decrease long positions and increase short positions for the calculation of the limit usage."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<LiquidityManagementLimit, PercentageRate> mmVolatilityMargin = new MMBusinessAttribute<LiquidityManagementLimit, PercentageRate>() {
@@ -189,6 +189,10 @@ public class LiquidityManagementLimit extends Limit {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.CurrencyExchange
+	 * CurrencyExchange}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmRelatedLimitManagement
@@ -196,10 +200,6 @@ public class LiquidityManagementLimit extends Limit {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.CurrencyExchange
-	 * CurrencyExchange}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -212,10 +212,6 @@ public class LiquidityManagementLimit extends Limit {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.LiquidityManagementLimit
 	 * LiquidityManagementLimit}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyExchange"</li>
 	 * <li>
@@ -223,6 +219,10 @@ public class LiquidityManagementLimit extends Limit {
 	 * definition} =
 	 * "Exchange rate used in the calculation of the limit when different currencies are involved."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<LiquidityManagementLimit, List<CurrencyExchange>> mmCurrencyExchange = new MMBusinessAssociationEnd<LiquidityManagementLimit, List<CurrencyExchange>>() {
@@ -256,6 +256,11 @@ public class LiquidityManagementLimit extends Limit {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} =
+	 * {@linkplain com.tools20022.repository.entity.CashManagementService
+	 * CashManagementService}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.CashManagementService#mmLiquidityManagementLimit
@@ -264,19 +269,10 @@ public class LiquidityManagementLimit extends Limit {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} =
-	 * {@linkplain com.tools20022.repository.entity.CashManagementService
-	 * CashManagementService}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.LiquidityManagementLimit
 	 * LiquidityManagementLimit}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RelatedCashServices"</li>
 	 * <li>
@@ -284,6 +280,10 @@ public class LiquidityManagementLimit extends Limit {
 	 * definition} =
 	 * "Cash management services which provide standing liquidity management facilities."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<LiquidityManagementLimit, CashManagementService> mmRelatedCashServices = new MMBusinessAssociationEnd<LiquidityManagementLimit, CashManagementService>() {
@@ -334,15 +334,15 @@ public class LiquidityManagementLimit extends Limit {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.LiquidityManagementLimit
 	 * LiquidityManagementLimit}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LiquidityLimitType"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Type of liquidity management limit."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<LiquidityManagementLimit, LiquidityLimitTypeCode> mmLiquidityLimitType = new MMBusinessAttribute<LiquidityManagementLimit, LiquidityLimitTypeCode>() {
@@ -384,16 +384,16 @@ public class LiquidityManagementLimit extends Limit {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.LiquidityManagementLimit
 	 * LiquidityManagementLimit}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RequiredAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Amount required to cover the needs of liquidity management."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<LiquidityManagementLimit, CurrencyAndAmount> mmRequiredAmount = new MMBusinessAttribute<LiquidityManagementLimit, CurrencyAndAmount>() {

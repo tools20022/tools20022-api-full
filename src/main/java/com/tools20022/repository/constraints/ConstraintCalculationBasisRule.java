@@ -37,10 +37,6 @@ public class ConstraintCalculationBasisRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.UnitPrice6 UnitPrice6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CalculationBasisRule"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintCalculationBasisRule {
 	 * definition} =
 	 * "If Type/Structured is not NonAdjustedUnpublished, then CalculationBasis is not allowed. If Type/Structured is NonAdjustedUnpublished, then CalculationBasis may be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<UnitPrice6> forUnitPrice6 = new MMConstraint<UnitPrice6>() {
@@ -70,10 +70,6 @@ public class ConstraintCalculationBasisRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.UnitPrice15 UnitPrice15}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CalculationBasisRule"</li>
 	 * <li>
@@ -81,6 +77,10 @@ public class ConstraintCalculationBasisRule {
 	 * definition} =
 	 * "If Type is not NonAdjustedUnpublished, then CalculationBasis is not allowed. If Type is NonAdjustedUnpublished, then CalculationBasis may be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<UnitPrice15> forUnitPrice15 = new MMConstraint<UnitPrice15>() {

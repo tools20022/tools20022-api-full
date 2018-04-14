@@ -37,10 +37,6 @@ public class ConstraintGroupCancellation3Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.pain.PaymentCancellationRequestV01
 	 * PaymentCancellationRequestV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GroupCancellation3Rule"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintGroupCancellation3Rule {
 	 * definition} =
 	 * "If GroupHeader/GroupCancellation is false, then GroupHeader/NumberOfTransactions specifies the number of occurrences of TransactionInformation.\n."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PaymentCancellationRequestV01> for_pain_PaymentCancellationRequestV01 = new MMConstraint<PaymentCancellationRequestV01>() {

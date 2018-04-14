@@ -37,10 +37,6 @@ public class ConstraintISINIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument16
 	 * FinancialInstrument16}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ISINIdentificationRule"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintISINIdentificationRule {
 	 * definition} =
 	 * "If CountryOfDomicile is AT, BE, CH, DE, ES, FR, GB, IE, IT, LU or NL then Identification\\ISIN must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrument16> forFinancialInstrument16 = new MMConstraint<FinancialInstrument16>() {
@@ -71,10 +71,6 @@ public class ConstraintISINIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument20
 	 * FinancialInstrument20}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ISINIdentificationRule"</li>
 	 * <li>
@@ -82,6 +78,10 @@ public class ConstraintISINIdentificationRule {
 	 * definition} =
 	 * "If CountryOfDomicile is AT, BE, CH, DE, ES, FR, GB, IE, IT, LU or NL then Identification\\ISIN must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrument20> forFinancialInstrument20 = new MMConstraint<FinancialInstrument20>() {

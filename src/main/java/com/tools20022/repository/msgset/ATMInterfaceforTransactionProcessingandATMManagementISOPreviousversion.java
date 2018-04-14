@@ -94,10 +94,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * businessProcessCatalogue} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#catalogue
  * GeneratedRepository.catalogue}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "ATM Interface for Transaction Processing and ATM Management - ISO - Previous version"
  * </li>
@@ -105,6 +101,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} =
  * "Messages that support any card related Automated Teller Machine (ATM) transactions, card related terminal management services and services between an ATM equipment and an ATM acquirer. These services include cash withdrawals, kiosk functions and card account management transactions."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class ATMInterfaceforTransactionProcessingandATMManagementISOPreviousversion {

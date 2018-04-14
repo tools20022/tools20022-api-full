@@ -42,10 +42,6 @@ public class ConstraintLinkedIdentificationGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.IdentificationReference11Choice
 	 * IdentificationReference11Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LinkedIdentificationGuideline"</li>
 	 * <li>
@@ -53,6 +49,10 @@ public class ConstraintLinkedIdentificationGuideline {
 	 * definition} =
 	 * "InstructingPartyTransactionIdentification, ExecutingPartyTransactionIdentification, MarketInfrastructureTransactionIdentification, ClientOrderLinkIdentification, PoolIdentification, BlockIdentification, AllocationIdentification, IndexIdentification, CommonIdentification, ComplianceIdentification and CancellationRequestIdentification must not appear more than once in the message."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IdentificationReference11Choice> forIdentificationReference11Choice = new MMConstraint<IdentificationReference11Choice>() {
@@ -76,10 +76,6 @@ public class ConstraintLinkedIdentificationGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.IdentificationReference8Choice
 	 * IdentificationReference8Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LinkedIdentificationGuideline"</li>
 	 * <li>
@@ -87,6 +83,10 @@ public class ConstraintLinkedIdentificationGuideline {
 	 * definition} =
 	 * "InstructingPartyTransactionIdentification, ExecutingPartyTransactionIdentification, MarketInfrastructureTransactionIdentification, ClientOrderLinkIdentification, PoolIdentification, BlockIdentification, AllocationIdentification, IndexIdentification, CommonIdentification and ComplianceIdentification must not appear more than once in the message."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IdentificationReference8Choice> forIdentificationReference8Choice = new MMConstraint<IdentificationReference8Choice>() {

@@ -74,15 +74,15 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "SettlementSubTotalCalculatedTax2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Specifies the subtotal calculated tax applicable for this settlement."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -112,15 +112,15 @@ public class SettlementSubTotalCalculatedTax2 {
 	 * SettlementSubTotalCalculatedTax2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TpCd"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TypeCode"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Type of tax applied."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SettlementSubTotalCalculatedTax2, Optional<Max4Text>> mmTypeCode = new MMMessageAttribute<SettlementSubTotalCalculatedTax2, Optional<Max4Text>>() {
@@ -170,16 +170,16 @@ public class SettlementSubTotalCalculatedTax2 {
 	 * SettlementSubTotalCalculatedTax2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ClctdRate"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CalculatedRate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Rate used to calculate the amount of this tax, levy or duty."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SettlementSubTotalCalculatedTax2, Optional<PercentageRate>> mmCalculatedRate = new MMMessageAttribute<SettlementSubTotalCalculatedTax2, Optional<PercentageRate>>() {
@@ -229,10 +229,6 @@ public class SettlementSubTotalCalculatedTax2 {
 	 * SettlementSubTotalCalculatedTax2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "BsisAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BasisAmount"</li>
 	 * <li>
@@ -240,6 +236,10 @@ public class SettlementSubTotalCalculatedTax2 {
 	 * definition} =
 	 * "Monetary value used as the basis on which this tax, levy or duty is calculated."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SettlementSubTotalCalculatedTax2, List<CurrencyAndAmount>> mmBasisAmount = new MMMessageAttribute<SettlementSubTotalCalculatedTax2, List<CurrencyAndAmount>>() {
@@ -288,10 +288,6 @@ public class SettlementSubTotalCalculatedTax2 {
 	 * SettlementSubTotalCalculatedTax2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ClctdAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CalculatedAmount"</li>
 	 * <li>
@@ -299,6 +295,10 @@ public class SettlementSubTotalCalculatedTax2 {
 	 * definition} =
 	 * "Monetary value resulting from the calculation of this tax, levy or duty."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SettlementSubTotalCalculatedTax2, List<CurrencyAndAmount>> mmCalculatedAmount = new MMMessageAttribute<SettlementSubTotalCalculatedTax2, List<CurrencyAndAmount>>() {
@@ -346,6 +346,13 @@ public class SettlementSubTotalCalculatedTax2 {
 	 * SettlementSubTotalCalculatedTax2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "XmptnRsnCd"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ExemptionReasonCode"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Reason for tax exemption expressed as a code, if invoice or card transaction is out of tax processing."
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
 	 * constraint} =
@@ -359,13 +366,6 @@ public class SettlementSubTotalCalculatedTax2 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ExemptionReasonCode"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Reason for tax exemption expressed as a code, if invoice or card transaction is out of tax processing."
-	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SettlementSubTotalCalculatedTax2, Optional<Max4Text>> mmExemptionReasonCode = new MMMessageAttribute<SettlementSubTotalCalculatedTax2, Optional<Max4Text>>() {
@@ -416,10 +416,6 @@ public class SettlementSubTotalCalculatedTax2 {
 	 * SettlementSubTotalCalculatedTax2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "XmptnRsnTxt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ExemptionReasonText"</li>
 	 * <li>
@@ -427,6 +423,10 @@ public class SettlementSubTotalCalculatedTax2 {
 	 * definition} =
 	 * "Reason for a tax exemption, if invoice or card transaction is out of tax processing."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SettlementSubTotalCalculatedTax2, Optional<Max500Text>> mmExemptionReasonText = new MMMessageAttribute<SettlementSubTotalCalculatedTax2, Optional<Max500Text>>() {
@@ -470,10 +470,6 @@ public class SettlementSubTotalCalculatedTax2 {
 	 * SettlementSubTotalCalculatedTax2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TaxCcyXchg"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxCurrencyExchange"</li>
 	 * <li>
@@ -481,6 +477,10 @@ public class SettlementSubTotalCalculatedTax2 {
 	 * definition} =
 	 * "If tax currency in tax calculation is different from invoice currency, then applied exchange rate is given in this message structure."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<SettlementSubTotalCalculatedTax2, Optional<CurrencyReference3>> mmTaxCurrencyExchange = new MMMessageAssociationEnd<SettlementSubTotalCalculatedTax2, Optional<CurrencyReference3>>() {

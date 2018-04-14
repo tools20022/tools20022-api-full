@@ -35,10 +35,6 @@ public class ConstraintUseOfProvisionalDividendFlagRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DividendTypeFormat4SD1
 	 * DividendTypeFormat4SD1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UseOfProvisionalDividendFlagRule"</li>
 	 * <li>
@@ -46,6 +42,10 @@ public class ConstraintUseOfProvisionalDividendFlagRule {
 	 * definition} =
 	 * "ProvisionalFlag can only be used with corporate action event type code DVCA."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<DividendTypeFormat4SD1> forDividendTypeFormat4SD1 = new MMConstraint<DividendTypeFormat4SD1>() {

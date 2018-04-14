@@ -37,10 +37,6 @@ public class ConstraintPersonElementRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.IndividualPerson31
 	 * IndividualPerson31}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PersonElementRule"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintPersonElementRule {
 	 * definition} =
 	 * "One of the elements (Name, BirthDate, CountryAndResidentialStatus, BeneficiaryCertificationCompletion, OtherIdentification) must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IndividualPerson31> forIndividualPerson31 = new MMConstraint<IndividualPerson31>() {
@@ -71,10 +71,6 @@ public class ConstraintPersonElementRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.IndividualPerson32
 	 * IndividualPerson32}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PersonElementRule"</li>
 	 * <li>
@@ -82,6 +78,10 @@ public class ConstraintPersonElementRule {
 	 * definition} =
 	 * "One of the elements (Name, BirthDate, CountryAndResidentialStatus, OtherIdentification) must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IndividualPerson32> forIndividualPerson32 = new MMConstraint<IndividualPerson32>() {

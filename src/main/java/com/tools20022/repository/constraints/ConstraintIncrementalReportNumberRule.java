@@ -38,10 +38,6 @@ public class ConstraintIncrementalReportNumberRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Statement13 Statement13}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IncrementalReportNumberRule"</li>
 	 * <li>
@@ -49,6 +45,10 @@ public class ConstraintIncrementalReportNumberRule {
 	 * definition} =
 	 * "Two statements of the same type sent one after the other to the same Receiver in relation to the same Safekeeping Account must have different incremental ReportNumbers. Eg, a daily statement sent on day 1 would have report number 1, on day 2, report number 2, etc."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Statement13> forStatement13 = new MMConstraint<Statement13>() {
@@ -71,10 +71,6 @@ public class ConstraintIncrementalReportNumberRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Statement18 Statement18}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IncrementalReportNumberRule"</li>
 	 * <li>
@@ -82,6 +78,10 @@ public class ConstraintIncrementalReportNumberRule {
 	 * definition} =
 	 * "Two statements of the same type sent one after the other to the same Receiver in relation to the same Safekeeping Account must have different incremental ReportNumbers. Eg, a daily statement sent on day 1 would have report number 1, on day 2, report number 2, etc."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Statement18> forStatement18 = new MMConstraint<Statement18>() {

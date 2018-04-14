@@ -37,10 +37,6 @@ public class ConstraintReasonElementRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ConfirmationRejectedStatus2
 	 * ConfirmationRejectedStatus2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReasonElementRule"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintReasonElementRule {
 	 * definition} =
 	 * "Either Reason or AdditionalInformation must be present. Both may be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ConfirmationRejectedStatus2> forConfirmationRejectedStatus2 = new MMConstraint<ConfirmationRejectedStatus2>() {
@@ -71,10 +71,6 @@ public class ConstraintReasonElementRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountStatusUpdateInstructionReason1
 	 * AccountStatusUpdateInstructionReason1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReasonElementRule"</li>
 	 * <li>
@@ -82,6 +78,10 @@ public class ConstraintReasonElementRule {
 	 * definition} =
 	 * "Either Code or AdditionalInformation must be present. Both may be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountStatusUpdateInstructionReason1> forAccountStatusUpdateInstructionReason1 = new MMConstraint<AccountStatusUpdateInstructionReason1>() {
@@ -105,10 +105,6 @@ public class ConstraintReasonElementRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RejectedStatus10
 	 * RejectedStatus10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReasonElementRule"</li>
 	 * <li>
@@ -116,6 +112,10 @@ public class ConstraintReasonElementRule {
 	 * definition} =
 	 * "Either Reason or AdditionalInformation must be present. Both may be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RejectedStatus10> forRejectedStatus10 = new MMConstraint<RejectedStatus10>() {

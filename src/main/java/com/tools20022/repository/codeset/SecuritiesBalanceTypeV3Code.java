@@ -180,6 +180,11 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "SecuritiesBalanceTypeV3Code"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} =
+ * "Specifies the nature of the securities or investment fund balance."</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -190,11 +195,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "SecuritiesBalanceTypeV3Code"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} =
- * "Specifies the nature of the securities or investment fund balance."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -212,10 +212,6 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * SecuritiesBalanceTypeV3Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "AWAS"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AvailableWithNoAdditionalStatus"</li>
 	 * <li>
@@ -223,6 +219,10 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * definition} =
 	 * "Balance of financial instruments that are freely available with no specific additional status."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceTypeV3Code AvailableWithNoAdditionalStatus = new SecuritiesBalanceTypeV3Code() {
@@ -244,15 +244,15 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * SecuritiesBalanceTypeV3Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "BLOK"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Blocked"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Balance of financial instruments that are blocked."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceTypeV3Code Blocked = new SecuritiesBalanceTypeV3Code() {
@@ -274,15 +274,15 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * SecuritiesBalanceTypeV3Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "AVAI"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Available"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Balance of financial instruments that are available."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceTypeV3Code Available = new SecuritiesBalanceTypeV3Code() {
@@ -305,10 +305,6 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * SecuritiesBalanceTypeV3Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "BLCA"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BlockedCorporateAction"</li>
 	 * <li>
@@ -316,6 +312,10 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * definition} =
 	 * "Balance of financial instrument blocked following a corporate action, including proxy activities."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceTypeV3Code BlockedCorporateAction = new SecuritiesBalanceTypeV3Code() {
@@ -337,16 +337,16 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * SecuritiesBalanceTypeV3Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "BLOT"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BlockedTrading"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Balance of financial instruments that are blocked for trading."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceTypeV3Code BlockedTrading = new SecuritiesBalanceTypeV3Code() {
@@ -369,10 +369,6 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * SecuritiesBalanceTypeV3Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "BLOV"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BlockedAuthenticity"</li>
 	 * <li>
@@ -380,6 +376,10 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * definition} =
 	 * "Balance of financial instruments that are blocked for verification of authenticity."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceTypeV3Code BlockedAuthenticity = new SecuritiesBalanceTypeV3Code() {
@@ -402,10 +402,6 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * SecuritiesBalanceTypeV3Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "BORR"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Borrowed"</li>
 	 * <li>
@@ -413,6 +409,10 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * definition} =
 	 * "Balance of financial instruments that have been borrowed from another party."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceTypeV3Code Borrowed = new SecuritiesBalanceTypeV3Code() {
@@ -435,10 +435,6 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * SecuritiesBalanceTypeV3Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "BODE"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PendingBorrowedDelivery"</li>
 	 * <li>
@@ -446,6 +442,10 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * definition} =
 	 * "Balance of financial instruments that are pending delivery in relation to a borrow transaction."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceTypeV3Code PendingBorrowedDelivery = new SecuritiesBalanceTypeV3Code() {
@@ -468,10 +468,6 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * SecuritiesBalanceTypeV3Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "BORE"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PendingBorrowedReceipt"</li>
 	 * <li>
@@ -479,6 +475,10 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * definition} =
 	 * "Balance of financial instruments that are pending receipt in relation to a borrow transaction."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceTypeV3Code PendingBorrowedReceipt = new SecuritiesBalanceTypeV3Code() {
@@ -501,10 +501,6 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * SecuritiesBalanceTypeV3Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "COLI"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CollateralIn"</li>
 	 * <li>
@@ -512,6 +508,10 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * definition} =
 	 * "Balance of securities that belong to a third party and that are held for the purpose of collateralisation."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceTypeV3Code CollateralIn = new SecuritiesBalanceTypeV3Code() {
@@ -535,10 +535,6 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * SecuritiesBalanceTypeV3Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "COLO"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CollateralOut"</li>
 	 * <li>
@@ -546,6 +542,10 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * definition} =
 	 * "Balance of securities that belong to the safekeeping account indicated within this message, and are deposited with a third party for the purpose of collateralisation."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceTypeV3Code CollateralOut = new SecuritiesBalanceTypeV3Code() {
@@ -567,10 +567,6 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * SecuritiesBalanceTypeV3Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "COLA"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EligibleForCollateralPurposes"</li>
 	 * <li>
@@ -578,6 +574,10 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * definition} =
 	 * "Balance of securities that are eligible for use for collateral purposes."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceTypeV3Code EligibleForCollateralPurposes = new SecuritiesBalanceTypeV3Code() {
@@ -599,15 +599,15 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * SecuritiesBalanceTypeV3Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "LOAN"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OnLoan"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Loan for consumption."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceTypeV3Code OnLoan = new SecuritiesBalanceTypeV3Code() {
@@ -630,10 +630,6 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * SecuritiesBalanceTypeV3Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "LODE"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PendingOnLoanDelivery"</li>
 	 * <li>
@@ -641,6 +637,10 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * definition} =
 	 * "Balance of financial instruments that are pending delivery in relation to a lending transaction."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceTypeV3Code PendingOnLoanDelivery = new SecuritiesBalanceTypeV3Code() {
@@ -663,10 +663,6 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * SecuritiesBalanceTypeV3Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "LORE"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PendingOnLoanReceipt"</li>
 	 * <li>
@@ -674,6 +670,10 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * definition} =
 	 * "Balance of financial instruments that are pending receipt in relation to a lending transaction."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceTypeV3Code PendingOnLoanReceipt = new SecuritiesBalanceTypeV3Code() {
@@ -695,15 +695,15 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * SecuritiesBalanceTypeV3Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "MARG"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DerivativesMargin"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Account is used when financing is by the broker/dealer."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceTypeV3Code DerivativesMargin = new SecuritiesBalanceTypeV3Code() {
@@ -725,10 +725,6 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * SecuritiesBalanceTypeV3Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "PDMT"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PendingDeliveryMatchedBalance"</li>
 	 * <li>
@@ -736,6 +732,10 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * definition} =
 	 * "Balance of financial instruments pending delivery that have been matched."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceTypeV3Code PendingDeliveryMatchedBalance = new SecuritiesBalanceTypeV3Code() {
@@ -758,10 +758,6 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * SecuritiesBalanceTypeV3Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "PDUM"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PendingDeliveryUnmatchedBalance"</li>
 	 * <li>
@@ -769,6 +765,10 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * definition} =
 	 * "Balance of financial instruments pending delivery that have been unmatched."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceTypeV3Code PendingDeliveryUnmatchedBalance = new SecuritiesBalanceTypeV3Code() {
@@ -790,10 +790,6 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * SecuritiesBalanceTypeV3Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "PRMT"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PendingReceiptMatchedBalance"</li>
 	 * <li>
@@ -801,6 +797,10 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * definition} =
 	 * "Balance of financial instruments pending receipt that have been matched."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceTypeV3Code PendingReceiptMatchedBalance = new SecuritiesBalanceTypeV3Code() {
@@ -822,16 +822,16 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * SecuritiesBalanceTypeV3Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "PRUM"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PendingReceiptUnmatchedBalance"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Balance of financial instruments pending receipt that are unmatched."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceTypeV3Code PendingReceiptUnmatchedBalance = new SecuritiesBalanceTypeV3Code() {
@@ -854,10 +854,6 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * SecuritiesBalanceTypeV3Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "PECA"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PendingCorporateActionReceipt"</li>
 	 * <li>
@@ -865,6 +861,10 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * definition} =
 	 * "Balance of financial instrument pending receipt following a corporate action."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceTypeV3Code PendingCorporateActionReceipt = new SecuritiesBalanceTypeV3Code() {
@@ -887,10 +887,6 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * SecuritiesBalanceTypeV3Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "PEDA"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PendingCorporateActionDelivery"</li>
 	 * <li>
@@ -898,6 +894,10 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * definition} =
 	 * "Balance of financial instrument pending delivery following a corporate action."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceTypeV3Code PendingCorporateActionDelivery = new SecuritiesBalanceTypeV3Code() {
@@ -919,15 +919,15 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * SecuritiesBalanceTypeV3Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "PEND"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PendingDelivery"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Processing has not been completed."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceTypeV3Code PendingDelivery = new SecuritiesBalanceTypeV3Code() {
@@ -950,10 +950,6 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * SecuritiesBalanceTypeV3Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "PENR"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PendingReceipt"</li>
 	 * <li>
@@ -961,6 +957,10 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * definition} =
 	 * "The instruction is pending receipt of securities, for example, from a purchase, loan etc."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceTypeV3Code PendingReceipt = new SecuritiesBalanceTypeV3Code() {
@@ -983,10 +983,6 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * SecuritiesBalanceTypeV3Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "PLED"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Pledged"</li>
 	 * <li>
@@ -994,6 +990,10 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * definition} =
 	 * "Balance of securities that belong to and is kept in the safekeeping account indicated within this message, and that are pledged."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceTypeV3Code Pledged = new SecuritiesBalanceTypeV3Code() {
@@ -1017,10 +1017,6 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * SecuritiesBalanceTypeV3Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "REGO"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OutForRegistration"</li>
 	 * <li>
@@ -1028,6 +1024,10 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * definition} =
 	 * "Balance of financial instruments currently being processed by the institution responsible for registering the new beneficial owner (or nominee)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceTypeV3Code OutForRegistration = new SecuritiesBalanceTypeV3Code() {
@@ -1050,10 +1050,6 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * SecuritiesBalanceTypeV3Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "RSTR"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Restricted"</li>
 	 * <li>
@@ -1061,6 +1057,10 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * definition} =
 	 * "Balance of financial instruments that may only be sold under certain conditions or require legal documents."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceTypeV3Code Restricted = new SecuritiesBalanceTypeV3Code() {
@@ -1082,15 +1082,15 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * SecuritiesBalanceTypeV3Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "OTHR"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Unclassified"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Other. See Narrative."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceTypeV3Code Unclassified = new SecuritiesBalanceTypeV3Code() {
@@ -1113,10 +1113,6 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * SecuritiesBalanceTypeV3Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "TRAN"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InTransshipment"</li>
 	 * <li>
@@ -1124,6 +1120,10 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * definition} =
 	 * "Transaction has been generated due to transformation following a corporate action."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceTypeV3Code InTransshipment = new SecuritiesBalanceTypeV3Code() {
@@ -1145,15 +1145,15 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * SecuritiesBalanceTypeV3Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "DRAW"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Drawn"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Settlement transactions relates to drawn securities."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceTypeV3Code Drawn = new SecuritiesBalanceTypeV3Code() {
@@ -1175,15 +1175,15 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * SecuritiesBalanceTypeV3Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "CLEN"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxExempt"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Tax-exempt financial instruments are to be settled."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceTypeV3Code TaxExempt = new SecuritiesBalanceTypeV3Code() {
@@ -1205,15 +1205,15 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * SecuritiesBalanceTypeV3Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "DIRT"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NonTaxExempt"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Taxable financial instruments are to be settled."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceTypeV3Code NonTaxExempt = new SecuritiesBalanceTypeV3Code() {
@@ -1236,10 +1236,6 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * SecuritiesBalanceTypeV3Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "NOMI"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Registered"</li>
 	 * <li>
@@ -1247,6 +1243,10 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * definition} =
 	 * "Balance of financial instruments that are registered (in nominee name or in the name of the beneficial owner)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceTypeV3Code Registered = new SecuritiesBalanceTypeV3Code() {
@@ -1269,10 +1269,6 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * SecuritiesBalanceTypeV3Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "SPOS"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "StreetPosition"</li>
 	 * <li>
@@ -1280,6 +1276,10 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * definition} =
 	 * "Balance of financial instruments that remain registered in the name of the prior beneficial owner."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceTypeV3Code StreetPosition = new SecuritiesBalanceTypeV3Code() {
@@ -1302,10 +1302,6 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * SecuritiesBalanceTypeV3Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "UNRG"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Unregistered"</li>
 	 * <li>
@@ -1313,6 +1309,10 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * definition} =
 	 * "Balance of securities that could not be registered due to foreign ownership limitation."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceTypeV3Code Unregistered = new SecuritiesBalanceTypeV3Code() {
@@ -1336,10 +1336,6 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * SecuritiesBalanceTypeV3Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "WDOC"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "WaitingDocumentation"</li>
 	 * <li>
@@ -1347,6 +1343,10 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * definition} =
 	 * "Financial instrument is unavailable due to missing or incomplete documentation pertaining to the account, or due to a missing or incomplete order."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceTypeV3Code WaitingDocumentation = new SecuritiesBalanceTypeV3Code() {
@@ -1369,10 +1369,6 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * SecuritiesBalanceTypeV3Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "BTRA"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BeingTransferred"</li>
 	 * <li>
@@ -1380,6 +1376,10 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * definition} =
 	 * "Financial instrument is unavailable as a result of a transfer order, pending movement in the shareholders' register."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceTypeV3Code BeingTransferred = new SecuritiesBalanceTypeV3Code() {
@@ -1402,10 +1402,6 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * SecuritiesBalanceTypeV3Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "ISSU"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Issued"</li>
 	 * <li>
@@ -1413,6 +1409,10 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * definition} =
 	 * "In issuer agent / depository communication, balance of issued financial instruments for which legal documentation has been received."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceTypeV3Code Issued = new SecuritiesBalanceTypeV3Code() {
@@ -1435,10 +1435,6 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * SecuritiesBalanceTypeV3Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "QUAS"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "QuasiIssued"</li>
 	 * <li>
@@ -1446,6 +1442,10 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * definition} =
 	 * "In Issuer Agent / Depository communication, balance of issued financial instruments for which legal documentation has not yet been received."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceTypeV3Code QuasiIssued = new SecuritiesBalanceTypeV3Code() {
@@ -1468,10 +1468,6 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * SecuritiesBalanceTypeV3Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "OPNT"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OverdueNetPending"</li>
 	 * <li>
@@ -1479,6 +1475,10 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * definition} =
 	 * "Net balance of financial instrument that is traded pending settlement and settlement is overdue."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceTypeV3Code OverdueNetPending = new SecuritiesBalanceTypeV3Code() {
@@ -1500,16 +1500,16 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * SecuritiesBalanceTypeV3Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "PNET"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NetPending"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Net balance of financial instrument that is traded pending settlement."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceTypeV3Code NetPending = new SecuritiesBalanceTypeV3Code() {
@@ -1532,10 +1532,6 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * SecuritiesBalanceTypeV3Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "GRP1"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PurchasedInvestmentFundTaxGroupUnit1"</li>
 	 * <li>
@@ -1543,6 +1539,10 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * definition} =
 	 * "Purchased investment fund units that were purchased prior to the last ex-div date.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceTypeV3Code PurchasedInvestmentFundTaxGroupUnit1 = new SecuritiesBalanceTypeV3Code() {
@@ -1565,10 +1565,6 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * SecuritiesBalanceTypeV3Code}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "GRP2"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PurchasedInvestmentFundTaxGroupUnit2"</li>
 	 * <li>
@@ -1576,6 +1572,10 @@ public class SecuritiesBalanceTypeV3Code extends MMCode {
 	 * definition} =
 	 * "Purchased investment fund units that were purchased since the ex-div date, and that benefit from the tax exemption."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SecuritiesBalanceTypeV3Code PurchasedInvestmentFundTaxGroupUnit2 = new SecuritiesBalanceTypeV3Code() {

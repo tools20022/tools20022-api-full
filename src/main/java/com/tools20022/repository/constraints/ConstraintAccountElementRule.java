@@ -46,10 +46,6 @@ public class ConstraintAccountElementRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount63
 	 * InvestmentAccount63}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountElementRule"</li>
 	 * <li>
@@ -57,6 +53,10 @@ public class ConstraintAccountElementRule {
 	 * definition} =
 	 * "One of the elements (AccountStatusUpdateInstruction, Name, Designation, Type, OwnershipType, TaxExemption, StatementFrequency, ReferenceCurrency, Language, IncomePreference, ReinvestmentDetails, TaxWithholdingMethod, TaxReporting, LetterIntentDetails, AccumulationRightReference, RequiredSignatoriesNumber, FundFamilyName, ModifiedFinancialInstrumentDetails, RoundingDetails, Account Servicer, BlockedStatus, AccountUsageType, ForeignStatusCertification, AccountSignatureDateTime, TransactionChannelType, InvestmentAccountCategory, Pledging, Collateral, ThirdPartyRights, PowerOfAttorneyLevelOfControl, AccountingStatus, OpeningDate, ClosingDate, NegativeIndicator, ProcessingOrder, Liability, ModifiedInvestorProfile, FiscalYear) must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<InvestmentAccount63> forInvestmentAccount63 = new MMConstraint<InvestmentAccount63>() {
@@ -80,10 +80,6 @@ public class ConstraintAccountElementRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount60
 	 * InvestmentAccount60}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccountElementRule"</li>
 	 * <li>
@@ -91,6 +87,10 @@ public class ConstraintAccountElementRule {
 	 * definition} =
 	 * "Either AccountIdentification or Type must be present. Both may be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<InvestmentAccount60> forInvestmentAccount60 = new MMConstraint<InvestmentAccount60>() {

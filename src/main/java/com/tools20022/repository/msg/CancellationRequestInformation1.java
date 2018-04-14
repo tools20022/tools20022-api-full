@@ -92,16 +92,16 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CancellationRequestInformation1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Set of information related to the cancellation request, such as actors involved and identification of the original multiple invoice financing request to which the cancellation request is referring."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -128,10 +128,6 @@ public class CancellationRequestInformation1 {
 	 * CancellationRequestInformation1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OrgnlGrpId"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OriginalGroupIdentification"</li>
 	 * <li>
@@ -139,6 +135,10 @@ public class CancellationRequestInformation1 {
 	 * definition} =
 	 * "Unique and unambiguous identifier of the original financing request message as assigned by the original sending party."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CancellationRequestInformation1, Max35Text> mmOriginalGroupIdentification = new MMMessageAttribute<CancellationRequestInformation1, Max35Text>() {
@@ -182,10 +182,6 @@ public class CancellationRequestInformation1 {
 	 * CancellationRequestInformation1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OrgnlCreDtTm"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OriginalCreationDateTime"</li>
 	 * <li>
@@ -193,6 +189,10 @@ public class CancellationRequestInformation1 {
 	 * definition} =
 	 * "Date and time at which the original financing request message was created."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CancellationRequestInformation1, ISODateTime> mmOriginalCreationDateTime = new MMMessageAttribute<CancellationRequestInformation1, ISODateTime>() {
@@ -237,10 +237,6 @@ public class CancellationRequestInformation1 {
 	 * CancellationRequestInformation1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NbOfInvcReqs"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NumberOfInvoiceRequests"</li>
 	 * <li>
@@ -248,6 +244,10 @@ public class CancellationRequestInformation1 {
 	 * definition} =
 	 * "Specifies the number of single invoice financing requests included in the original financing request message."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CancellationRequestInformation1, Optional<Max15NumericText>> mmNumberOfInvoiceRequests = new MMMessageAttribute<CancellationRequestInformation1, Optional<Max15NumericText>>() {
@@ -292,10 +292,6 @@ public class CancellationRequestInformation1 {
 	 * CancellationRequestInformation1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TtlBlkInvcAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TotalBulkInvoiceAmount"</li>
 	 * <li>
@@ -303,6 +299,10 @@ public class CancellationRequestInformation1 {
 	 * definition} =
 	 * "Total amount of the bulk invoice financing request. It is composed by the sum of the total amounts of all invoices included in the original financing request message."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CancellationRequestInformation1, Optional<ActiveCurrencyAndAmount>> mmTotalBulkInvoiceAmount = new MMMessageAttribute<CancellationRequestInformation1, Optional<ActiveCurrencyAndAmount>>() {
@@ -351,10 +351,6 @@ public class CancellationRequestInformation1 {
 	 * CancellationRequestInformation1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CxlRsn"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CancellationReason"</li>
 	 * <li>
@@ -362,6 +358,10 @@ public class CancellationRequestInformation1 {
 	 * definition} =
 	 * "Further details on the cancellation request information, in an uncoded form."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CancellationRequestInformation1, Max105Text> mmCancellationReason = new MMMessageAttribute<CancellationRequestInformation1, Max105Text>() {
@@ -411,10 +411,6 @@ public class CancellationRequestInformation1 {
 	 * CancellationRequestInformation1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "FincgRqstr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FinancingRequestor"</li>
 	 * <li>
@@ -422,6 +418,10 @@ public class CancellationRequestInformation1 {
 	 * definition} =
 	 * "Party that requests the cancellation of a financing request previously sent."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<CancellationRequestInformation1, Optional<PartyIdentificationAndAccount6>> mmFinancingRequestor = new MMMessageAssociationEnd<CancellationRequestInformation1, Optional<PartyIdentificationAndAccount6>>() {
@@ -472,10 +472,6 @@ public class CancellationRequestInformation1 {
 	 * CancellationRequestInformation1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "IntrmyAgt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IntermediaryAgent"</li>
 	 * <li>
@@ -483,6 +479,10 @@ public class CancellationRequestInformation1 {
 	 * definition} =
 	 * "Financial institution that receives the request from the financing requestor and forwards it to the first agent for execution."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<CancellationRequestInformation1, Optional<FinancialInstitutionIdentification6>> mmIntermediaryAgent = new MMMessageAssociationEnd<CancellationRequestInformation1, Optional<FinancialInstitutionIdentification6>>() {
@@ -533,10 +533,6 @@ public class CancellationRequestInformation1 {
 	 * CancellationRequestInformation1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "FrstAgt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FirstAgent"</li>
 	 * <li>
@@ -544,6 +540,10 @@ public class CancellationRequestInformation1 {
 	 * definition} =
 	 * "Financial institution of financing requestor to which an invoice financing cancellation request is addressed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<CancellationRequestInformation1, Optional<FinancialInstitutionIdentification6>> mmFirstAgent = new MMMessageAssociationEnd<CancellationRequestInformation1, Optional<FinancialInstitutionIdentification6>>() {

@@ -180,6 +180,12 @@ import java.util.Objects;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "CashClearingSystemMember"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} =
+ * "Unique and unambiguous identifier for a clearing system member, as assigned by the clearing system. In some clearing systems, the accounts of the clearing system members are also assigned an identifier. The identifier can be used when transmitting, reconciling and confirming payment orders or security transfer instructions prior to settlement, and may include the netting of instructions and the establishment of final positions for settlement."
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
  * semanticMarkup} = type=BusinessComment, BusinessComment=|Definition given by
@@ -193,12 +199,6 @@ import java.util.Objects;
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "CashClearingSystemMember"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} =
- * "Unique and unambiguous identifier for a clearing system member, as assigned by the clearing system. In some clearing systems, the accounts of the clearing system members are also assigned an identifier. The identifier can be used when transmitting, reconciling and confirming payment orders or security transfer instructions prior to settlement, and may include the netting of instructions and the establishment of final positions for settlement."
- * </li>
  * </ul>
  */
 public class CashClearingSystemMember {
@@ -211,6 +211,11 @@ public class CashClearingSystemMember {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} =
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification
+	 * OrganisationIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmClearingSystemMemberIdentificationType
@@ -219,19 +224,10 @@ public class CashClearingSystemMember {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification
-	 * OrganisationIdentification}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
 	 * CashClearingSystemMember}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OrganisationIdentification"</li>
 	 * <li>
@@ -239,6 +235,10 @@ public class CashClearingSystemMember {
 	 * definition} =
 	 * "Identification parameters which include clearing system member identification."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<CashClearingSystemMember, OrganisationIdentification> mmOrganisationIdentification = new MMBusinessAssociationEnd<CashClearingSystemMember, OrganisationIdentification>() {
@@ -297,10 +297,6 @@ public class CashClearingSystemMember {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
 	 * CashClearingSystemMember}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CHIPSUniversalIdentification"</li>
 	 * <li>
@@ -308,6 +304,10 @@ public class CashClearingSystemMember {
 	 * definition} =
 	 * "(United States) Clearing House Interbank Payments System (CHIPS) Universal Identification (UID) - identifies entities that own accounts at CHIPS participating financial institutions, through which CHIPS payments are effected. The CHIPS UID is assigned by the New York Clearing House."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CashClearingSystemMember, CHIPSUniversalIdentifier> mmCHIPSUniversalIdentification = new MMBusinessAttribute<CashClearingSystemMember, CHIPSUniversalIdentifier>() {
@@ -364,10 +364,6 @@ public class CashClearingSystemMember {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
 	 * CashClearingSystemMember}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NewZealandNCC"</li>
 	 * <li>
@@ -375,6 +371,10 @@ public class CashClearingSystemMember {
 	 * definition} =
 	 * "New Zealand Bank/Branch Code - identifies New Zealand institutions on the New Zealand national clearing system. The code is assigned by the New Zealand Bankers' Association (NZBA)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CashClearingSystemMember, NewZealandNCCIdentifier> mmNewZealandNCC = new MMBusinessAttribute<CashClearingSystemMember, NewZealandNCCIdentifier>() {
@@ -431,10 +431,6 @@ public class CashClearingSystemMember {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
 	 * CashClearingSystemMember}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IrishNSC"</li>
 	 * <li>
@@ -442,6 +438,10 @@ public class CashClearingSystemMember {
 	 * definition} =
 	 * "Irish National Sorting Code - identifies Irish financial institutions on the Irish national clearing system. The code is assigned by the Irish Payments Services Organisation (IPSO)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CashClearingSystemMember, IrishNSCIdentifier> mmIrishNSC = new MMBusinessAttribute<CashClearingSystemMember, IrishNSCIdentifier>() {
@@ -501,10 +501,6 @@ public class CashClearingSystemMember {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
 	 * CashClearingSystemMember}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UKSortCode"</li>
 	 * <li>
@@ -512,6 +508,10 @@ public class CashClearingSystemMember {
 	 * definition} =
 	 * "United Kingdom (UK) Sort Code - identifies British financial institutions on the British national clearing systems. The sort code is assigned by the Association for Payments and Clearing Services (APACS)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CashClearingSystemMember, UKDomesticSortCodeIdentifier> mmUKSortCode = new MMBusinessAttribute<CashClearingSystemMember, UKDomesticSortCodeIdentifier>() {
@@ -571,10 +571,6 @@ public class CashClearingSystemMember {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
 	 * CashClearingSystemMember}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CHIPSParticipantIdentification"</li>
 	 * <li>
@@ -582,6 +578,10 @@ public class CashClearingSystemMember {
 	 * definition} =
 	 * "(United States) Clearing House Interbank Payment System (CHIPS) Participant Identifier (ID) - identifies financial institutions participating on CHIPS. The CHIPS Participant ID is assigned by the New York Clearing House."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CashClearingSystemMember, CHIPSParticipantIdentifier> mmCHIPSParticipantIdentification = new MMBusinessAttribute<CashClearingSystemMember, CHIPSParticipantIdentifier>() {
@@ -638,10 +638,6 @@ public class CashClearingSystemMember {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
 	 * CashClearingSystemMember}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SwissBC"</li>
 	 * <li>
@@ -649,6 +645,10 @@ public class CashClearingSystemMember {
 	 * definition} =
 	 * "Swiss Bank Code - identifies Swiss institutions on the Swiss national clearing system."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CashClearingSystemMember, SwissBCIdentifier> mmSwissBC = new MMBusinessAttribute<CashClearingSystemMember, SwissBCIdentifier>() {
@@ -708,10 +708,6 @@ public class CashClearingSystemMember {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
 	 * CashClearingSystemMember}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FedwireRoutingNumber"</li>
 	 * <li>
@@ -719,6 +715,10 @@ public class CashClearingSystemMember {
 	 * definition} =
 	 * "Fed wire Routing Number - identifies financial institutions, in the US, on the Fed wire system. The routing number is assigned by the American Bankers Association (ABA)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CashClearingSystemMember, FedwireRoutingNumberIdentifier> mmFedwireRoutingNumber = new MMBusinessAttribute<CashClearingSystemMember, FedwireRoutingNumberIdentifier>() {
@@ -775,10 +775,6 @@ public class CashClearingSystemMember {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
 	 * CashClearingSystemMember}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PortugueseNCC"</li>
 	 * <li>
@@ -786,6 +782,10 @@ public class CashClearingSystemMember {
 	 * definition} =
 	 * "Portuguese National Clearing Code - identifies Portuguese financial institutions on the Portuguese national clearing system."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CashClearingSystemMember, PortugueseNCCIdentifier> mmPortugueseNCC = new MMBusinessAttribute<CashClearingSystemMember, PortugueseNCCIdentifier>() {
@@ -845,10 +845,6 @@ public class CashClearingSystemMember {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
 	 * CashClearingSystemMember}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RussianCentralBankIdentificationCode"</li>
 	 * <li>
@@ -856,6 +852,10 @@ public class CashClearingSystemMember {
 	 * definition} =
 	 * "Russian Central Bank Identification Code - identifies Russian financial institutions on the Russian national clearing system."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CashClearingSystemMember, RussianCentralBankIdentificationCodeIdentifier> mmRussianCentralBankIdentificationCode = new MMBusinessAttribute<CashClearingSystemMember, RussianCentralBankIdentificationCodeIdentifier>() {
@@ -915,10 +915,6 @@ public class CashClearingSystemMember {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
 	 * CashClearingSystemMember}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ItalianDomesticIdentificationCode"</li>
 	 * <li>
@@ -926,6 +922,10 @@ public class CashClearingSystemMember {
 	 * definition} =
 	 * "Italian Domestic Identification Code - identifies Italian financial institutions on the Italian national clearing system. The code is assigned by the Associazione Bancaria Italiana (ABI)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CashClearingSystemMember, ItalianDomesticIdentifier> mmItalianDomesticIdentificationCode = new MMBusinessAttribute<CashClearingSystemMember, ItalianDomesticIdentifier>() {
@@ -985,10 +985,6 @@ public class CashClearingSystemMember {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
 	 * CashClearingSystemMember}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AustrianBankleitzahl"</li>
 	 * <li>
@@ -996,6 +992,10 @@ public class CashClearingSystemMember {
 	 * definition} =
 	 * "Austrian Bankleitzahl - identifies Austrian financial institutions on the Austrian national clearing system."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CashClearingSystemMember, AustrianBankleitzahlIdentifier> mmAustrianBankleitzahl = new MMBusinessAttribute<CashClearingSystemMember, AustrianBankleitzahlIdentifier>() {
@@ -1055,10 +1055,6 @@ public class CashClearingSystemMember {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
 	 * CashClearingSystemMember}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CanadianPaymentsAssociationRoutingNumber"</li>
 	 * <li>
@@ -1066,6 +1062,10 @@ public class CashClearingSystemMember {
 	 * definition} =
 	 * "Canadian Payments Association Routing Number - identifies Canadian financial institutions on the Canadian national clearing system."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CashClearingSystemMember, CanadianPaymentsARNIdentifier> mmCanadianPaymentsAssociationRoutingNumber = new MMBusinessAttribute<CashClearingSystemMember, CanadianPaymentsARNIdentifier>() {
@@ -1122,10 +1122,6 @@ public class CashClearingSystemMember {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
 	 * CashClearingSystemMember}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SwissSIC"</li>
 	 * <li>
@@ -1133,6 +1129,10 @@ public class CashClearingSystemMember {
 	 * definition} =
 	 * "Swiss Interbank Clearing (SIC) Code - identifies Swiss financial institutions domestically, on the Swiss national clearing system."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CashClearingSystemMember, SwissSICIdentifier> mmSwissSIC = new MMBusinessAttribute<CashClearingSystemMember, SwissSICIdentifier>() {
@@ -1192,10 +1192,6 @@ public class CashClearingSystemMember {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
 	 * CashClearingSystemMember}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GermanBankleitzahl"</li>
 	 * <li>
@@ -1203,6 +1199,10 @@ public class CashClearingSystemMember {
 	 * definition} =
 	 * "German Bankleitzahl - identifies German financial institutions on the German national clearing systems."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CashClearingSystemMember, GermanBankleitzahlIdentifier> mmGermanBankleitzahl = new MMBusinessAttribute<CashClearingSystemMember, GermanBankleitzahlIdentifier>() {
@@ -1262,10 +1262,6 @@ public class CashClearingSystemMember {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
 	 * CashClearingSystemMember}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SpanishDomesticInterbankingCode"</li>
 	 * <li>
@@ -1273,6 +1269,10 @@ public class CashClearingSystemMember {
 	 * definition} =
 	 * "Spanish Domestic Interbanking Code - identifies Spanish financial institutions on the Spanish national clearing system. The code is assigned by the Centro de Cooperacion Interbancaria (CCI)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CashClearingSystemMember, SpanishDomesticInterbankingIdentifier> mmSpanishDomesticInterbankingCode = new MMBusinessAttribute<CashClearingSystemMember, SpanishDomesticInterbankingIdentifier>() {
@@ -1332,10 +1332,6 @@ public class CashClearingSystemMember {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
 	 * CashClearingSystemMember}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SouthAfricanNCC"</li>
 	 * <li>
@@ -1343,6 +1339,10 @@ public class CashClearingSystemMember {
 	 * definition} =
 	 * "South African National Clearing Code (NCC) - identifies South African financial institutions on the South African national clearing system. The code is assigned by the South African Bankers Services Company Ltd. (BankServ)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CashClearingSystemMember, SouthAfricanNCCIdentifier> mmSouthAfricanNCC = new MMBusinessAttribute<CashClearingSystemMember, SouthAfricanNCCIdentifier>() {
@@ -1399,10 +1399,6 @@ public class CashClearingSystemMember {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
 	 * CashClearingSystemMember}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "HongKongBankCode"</li>
 	 * <li>
@@ -1410,6 +1406,10 @@ public class CashClearingSystemMember {
 	 * definition} =
 	 * "Hong Kong Bank Code - identifies Hong Kong financial institutions on the Hong Kong local clearing system."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CashClearingSystemMember, HongKongBankIdentifier> mmHongKongBankCode = new MMBusinessAttribute<CashClearingSystemMember, HongKongBankIdentifier>() {
@@ -1442,6 +1442,10 @@ public class CashClearingSystemMember {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.ClearingMemberRole
+	 * ClearingMemberRole}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.ClearingMemberRole#mmClearingSystemMemberIdentification
@@ -1450,18 +1454,10 @@ public class CashClearingSystemMember {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.ClearingMemberRole
-	 * ClearingMemberRole}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
 	 * CashClearingSystemMember}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ClearingMember"</li>
 	 * <li>
@@ -1469,6 +1465,10 @@ public class CashClearingSystemMember {
 	 * definition} =
 	 * "Clearing system member for which a clearing system member identification is specified."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<CashClearingSystemMember, ClearingMemberRole> mmClearingMember = new MMBusinessAssociationEnd<CashClearingSystemMember, ClearingMemberRole>() {
@@ -1519,10 +1519,6 @@ public class CashClearingSystemMember {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
 	 * CashClearingSystemMember}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IndianFinancialSystemCode"</li>
 	 * <li>
@@ -1530,6 +1526,10 @@ public class CashClearingSystemMember {
 	 * definition} =
 	 * "Indian Financial System Code - identifies Indian financial institutions on the Indian local clearing system."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CashClearingSystemMember, IndianFinancialSystemCodeIdentifier> mmIndianFinancialSystemCode = new MMBusinessAttribute<CashClearingSystemMember, IndianFinancialSystemCodeIdentifier>() {
@@ -1580,10 +1580,6 @@ public class CashClearingSystemMember {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
 	 * CashClearingSystemMember}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "HellenicBankIdentificationCode"</li>
 	 * <li>
@@ -1591,6 +1587,10 @@ public class CashClearingSystemMember {
 	 * definition} =
 	 * "Hellenic Bank Identification Code - identifies Hellenic financial institutions on the Hellenic national clearing system."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CashClearingSystemMember, HellenicBankIdentificationCodeIdentifier> mmHellenicBankIdentificationCode = new MMBusinessAttribute<CashClearingSystemMember, HellenicBankIdentificationCodeIdentifier>() {
@@ -1640,10 +1640,6 @@ public class CashClearingSystemMember {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
 	 * CashClearingSystemMember}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PolishNationalClearingCode"</li>
 	 * <li>
@@ -1651,6 +1647,10 @@ public class CashClearingSystemMember {
 	 * definition} =
 	 * "Polish National Clearing Code - identifies Polish financial institutions on the Polish national clearing system."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CashClearingSystemMember, PolishNationalClearingCodeIdentifier> mmPolishNationalClearingCode = new MMBusinessAttribute<CashClearingSystemMember, PolishNationalClearingCodeIdentifier>() {
@@ -1683,6 +1683,11 @@ public class CashClearingSystemMember {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} =
+	 * {@linkplain com.tools20022.repository.entity.AustralianBSBIdentification
+	 * AustralianBSBIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.AustralianBSBIdentification#mmClearingSystemMemberIdentificationType
@@ -1691,19 +1696,10 @@ public class CashClearingSystemMember {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} =
-	 * {@linkplain com.tools20022.repository.entity.AustralianBSBIdentification
-	 * AustralianBSBIdentification}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
 	 * CashClearingSystemMember}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AustralianBSBCode"</li>
 	 * <li>
@@ -1711,6 +1707,10 @@ public class CashClearingSystemMember {
 	 * definition} =
 	 * "Australian Bank State Branch (BSB) Code - identifies Australian financial institutions on the Australian national clearing system. The code is assigned by the Australian Payments Clearing Association (APCA)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<CashClearingSystemMember, AustralianBSBIdentification> mmAustralianBSBCode = new MMBusinessAssociationEnd<CashClearingSystemMember, AustralianBSBIdentification>() {

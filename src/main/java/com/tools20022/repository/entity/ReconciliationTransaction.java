@@ -148,16 +148,16 @@ import java.util.Objects;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "ReconciliationTransaction"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Totals performed during the reconciliation period, for a certain type of transaction."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class ReconciliationTransaction extends Reconciliation {
@@ -417,10 +417,6 @@ public class ReconciliationTransaction extends Reconciliation {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction
 	 * ReconciliationTransaction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReconciliationIdentification"</li>
 	 * <li>
@@ -428,6 +424,10 @@ public class ReconciliationTransaction extends Reconciliation {
 	 * definition} =
 	 * "Unique identification of the reconciliation period between the acceptor and the acquirer. This identification might be linked to the identification of the settlement for further verification by the merchant."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<ReconciliationTransaction, Max35Text> mmReconciliationIdentification = new MMBusinessAttribute<ReconciliationTransaction, Max35Text>() {
@@ -507,15 +507,15 @@ public class ReconciliationTransaction extends Reconciliation {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction
 	 * ReconciliationTransaction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Currency"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Currency associated with thecumulative amount."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<ReconciliationTransaction, CurrencyCode> mmCurrency = new MMBusinessAttribute<ReconciliationTransaction, CurrencyCode>() {
@@ -570,15 +570,15 @@ public class ReconciliationTransaction extends Reconciliation {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction
 	 * ReconciliationTransaction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TransactionType"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identification of the type of transaction."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<ReconciliationTransaction, TypeTransactionTotalsCode> mmTransactionType = new MMBusinessAttribute<ReconciliationTransaction, TypeTransactionTotalsCode>() {
@@ -630,16 +630,16 @@ public class ReconciliationTransaction extends Reconciliation {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction
 	 * ReconciliationTransaction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TotalNumber"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Total number of transactions during a reconciliation period."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<ReconciliationTransaction, Max35Text> mmTotalNumber = new MMBusinessAttribute<ReconciliationTransaction, Max35Text>() {
@@ -698,15 +698,15 @@ public class ReconciliationTransaction extends Reconciliation {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction
 	 * ReconciliationTransaction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CumulativeAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Total amount of a collection of transactions."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<ReconciliationTransaction, ImpliedCurrencyAndAmount> mmCumulativeAmount = new MMBusinessAttribute<ReconciliationTransaction, ImpliedCurrencyAndAmount>() {
@@ -756,10 +756,6 @@ public class ReconciliationTransaction extends Reconciliation {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction
 	 * ReconciliationTransaction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ClosePeriod"</li>
 	 * <li>
@@ -767,6 +763,10 @@ public class ReconciliationTransaction extends Reconciliation {
 	 * definition} =
 	 * "Indicates if the exchange requires a closure of the reconciliation period."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<ReconciliationTransaction, TrueFalseIndicator> mmClosePeriod = new MMBusinessAttribute<ReconciliationTransaction, TrueFalseIndicator>() {
@@ -799,6 +799,10 @@ public class ReconciliationTransaction extends Reconciliation {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.CardPayment
+	 * CardPayment}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.CardPayment#mmReconciliation
@@ -806,10 +810,6 @@ public class ReconciliationTransaction extends Reconciliation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.CardPayment
-	 * CardPayment}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -841,10 +841,6 @@ public class ReconciliationTransaction extends Reconciliation {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction
 	 * ReconciliationTransaction}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CardPaymentTotal"</li>
 	 * <li>
@@ -852,6 +848,10 @@ public class ReconciliationTransaction extends Reconciliation {
 	 * definition} =
 	 * "Specifies the card payments which are part of the transaction reconciliation."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<ReconciliationTransaction, List<CardPayment>> mmCardPaymentTotal = new MMBusinessAssociationEnd<ReconciliationTransaction, List<CardPayment>>() {

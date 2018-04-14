@@ -76,6 +76,10 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "DisputeResolutionTypeCode"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} = "Specifies the nature of the disputed collateral amount."</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -86,10 +90,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "DisputeResolutionTypeCode"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Specifies the nature of the disputed collateral amount."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -107,10 +107,6 @@ public class DisputeResolutionTypeCode extends MMCode {
 	 * DisputeResolutionTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "RECO"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReconcileCollateral"</li>
 	 * <li>
@@ -118,6 +114,10 @@ public class DisputeResolutionTypeCode extends MMCode {
 	 * definition} =
 	 * "Indicates that the disputed collateral amount should be confirmed through reconciliation of the collateral."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final DisputeResolutionTypeCode ReconcileCollateral = new DisputeResolutionTypeCode() {
@@ -140,10 +140,6 @@ public class DisputeResolutionTypeCode extends MMCode {
 	 * DisputeResolutionTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "REEX"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReconcileExposure"</li>
 	 * <li>
@@ -151,6 +147,10 @@ public class DisputeResolutionTypeCode extends MMCode {
 	 * definition} =
 	 * "Indicates that the disputed collateral amount should be confirmed through reconciliation of the exposure."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final DisputeResolutionTypeCode ReconcileExposure = new DisputeResolutionTypeCode() {
@@ -173,10 +173,6 @@ public class DisputeResolutionTypeCode extends MMCode {
 	 * DisputeResolutionTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "RETH"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReconcileThreshold"</li>
 	 * <li>
@@ -184,6 +180,10 @@ public class DisputeResolutionTypeCode extends MMCode {
 	 * definition} =
 	 * "Indicates that the disputed collateral amount should be confirmed through reconciliation of the threshold."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final DisputeResolutionTypeCode ReconcileThreshold = new DisputeResolutionTypeCode() {
@@ -206,10 +206,6 @@ public class DisputeResolutionTypeCode extends MMCode {
 	 * DisputeResolutionTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "RMTA"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReconcileMinimumTransferAmount"</li>
 	 * <li>
@@ -217,6 +213,10 @@ public class DisputeResolutionTypeCode extends MMCode {
 	 * definition} =
 	 * "Indicates that the disputed collateral amount should be confirmed through reconciliation of the minimum transfer amount."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final DisputeResolutionTypeCode ReconcileMinimumTransferAmount = new DisputeResolutionTypeCode() {
@@ -239,10 +239,6 @@ public class DisputeResolutionTypeCode extends MMCode {
 	 * DisputeResolutionTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "RERO"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReconcileRounding"</li>
 	 * <li>
@@ -250,6 +246,10 @@ public class DisputeResolutionTypeCode extends MMCode {
 	 * definition} =
 	 * "Indicates that the disputed collateral amount should be confirmed through reconciliation of the rounding."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final DisputeResolutionTypeCode ReconcileRounding = new DisputeResolutionTypeCode() {
@@ -272,10 +272,6 @@ public class DisputeResolutionTypeCode extends MMCode {
 	 * DisputeResolutionTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "REVF"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReconcileValuationFrequency"</li>
 	 * <li>
@@ -283,6 +279,10 @@ public class DisputeResolutionTypeCode extends MMCode {
 	 * definition} =
 	 * "Indicates that the disputed collateral amount should be confirmed through reconciliation of the valuation frequency."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final DisputeResolutionTypeCode ReconcileValuationFrequency = new DisputeResolutionTypeCode() {
@@ -305,10 +305,6 @@ public class DisputeResolutionTypeCode extends MMCode {
 	 * DisputeResolutionTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "RNIA"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReconcileNettedIndependentAmount"</li>
 	 * <li>
@@ -316,6 +312,10 @@ public class DisputeResolutionTypeCode extends MMCode {
 	 * definition} =
 	 * "Indicates that the disputed collateral amount should be confirmed through reconciliation of the independent amount."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final DisputeResolutionTypeCode ReconcileNettedIndependentAmount = new DisputeResolutionTypeCode() {
@@ -338,10 +338,6 @@ public class DisputeResolutionTypeCode extends MMCode {
 	 * DisputeResolutionTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "RESA"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReconcileSegregatedIndependentAmount"</li>
 	 * <li>
@@ -349,6 +345,10 @@ public class DisputeResolutionTypeCode extends MMCode {
 	 * definition} =
 	 * "Indicates that the disputed collateral amount should be confirmed through reconciliation of the initial margin."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final DisputeResolutionTypeCode ReconcileSegregatedIndependentAmount = new DisputeResolutionTypeCode() {

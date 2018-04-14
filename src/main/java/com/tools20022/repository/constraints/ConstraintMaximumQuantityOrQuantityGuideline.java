@@ -35,10 +35,6 @@ public class ConstraintMaximumQuantityOrQuantityGuideline {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuoteSide1 QuoteSide1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MaximumQuantityOrQuantityGuideline"</li>
 	 * <li>
@@ -46,6 +42,10 @@ public class ConstraintMaximumQuantityOrQuantityGuideline {
 	 * definition} =
 	 * "It is recommended that Quantity is not used with MinimumQuantity and/or with MaximumQuantity."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuoteSide1> forQuoteSide1 = new MMConstraint<QuoteSide1>() {

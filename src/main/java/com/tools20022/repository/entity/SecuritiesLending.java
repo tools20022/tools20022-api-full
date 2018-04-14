@@ -140,16 +140,16 @@ import java.util.Objects;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "SecuritiesLending"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Lending of securities by one party to another. The terms of the loan are governed by an agreement that requires the borrower to provide the lender with collateral of value equal to or greater than the loaned securities. As payment for the loan, the parties negotiate a fee, quoted as an annualised percentage of the value of the loaned securities."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class SecuritiesLending extends SecuritiesFinancing {
@@ -179,10 +179,6 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesLending
 	 * SecuritiesLending}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BorrowingFee"</li>
 	 * <li>
@@ -190,6 +186,10 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 * definition} =
 	 * "Amount to be paid by the borrower to the lender for the securities borrowed calculated based on the bond loan rate."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesLending, CurrencyAndAmount> mmBorrowingFee = new MMBusinessAttribute<SecuritiesLending, CurrencyAndAmount>() {
@@ -239,15 +239,15 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesLending
 	 * SecuritiesLending}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CallableTradeIndicator"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates whether the trade is callable or not."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesLending, YesNoIndicator> mmCallableTradeIndicator = new MMBusinessAttribute<SecuritiesLending, YesNoIndicator>() {
@@ -300,15 +300,15 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesLending
 	 * SecuritiesLending}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LendingTransactionMethod"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Method applied to a lending transaction."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesLending, LendingTransactionMethodCode> mmLendingTransactionMethod = new MMBusinessAttribute<SecuritiesLending, LendingTransactionMethodCode>() {
@@ -361,10 +361,6 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesLending
 	 * SecuritiesLending}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BorrowingReason"</li>
 	 * <li>
@@ -372,6 +368,10 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 * definition} =
 	 * "Underlying reason for the borrowing, for instance, sale on my behalf or on behalf of a third party."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesLending, BorrowingReasonCode> mmBorrowingReason = new MMBusinessAttribute<SecuritiesLending, BorrowingReasonCode>() {
@@ -424,10 +424,6 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesLending
 	 * SecuritiesLending}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Reversible"</li>
 	 * <li>
@@ -435,6 +431,10 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 * definition} =
 	 * "Indicates the possibility to terminate the securitiesc lending contract either by the borrower or lender before the expiration date."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesLending, ReversibleCode> mmReversible = new MMBusinessAttribute<SecuritiesLending, ReversibleCode>() {
@@ -487,15 +487,15 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesLending
 	 * SecuritiesLending}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SecuritiesLendingType"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Type of securities lending."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesLending, SecuritiesLendingTypeCode> mmSecuritiesLendingType = new MMBusinessAttribute<SecuritiesLending, SecuritiesLendingTypeCode>() {
@@ -545,10 +545,6 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesLending
 	 * SecuritiesLending}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LendingWithCollateral"</li>
 	 * <li>
@@ -556,6 +552,10 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 * definition} =
 	 * "Indicates if the contract is with or without an exchange of collateral."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesLending, YesNoIndicator> mmLendingWithCollateral = new MMBusinessAttribute<SecuritiesLending, YesNoIndicator>() {
@@ -604,10 +604,6 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesLending
 	 * SecuritiesLending}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MinimumDateForCallBack"</li>
 	 * <li>
@@ -615,6 +611,10 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 * definition} =
 	 * "Minimum date at which the borrower is allowed to give back the securities."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesLending, ISODate> mmMinimumDateForCallBack = new MMBusinessAttribute<SecuritiesLending, ISODate>() {
@@ -664,10 +664,6 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesLending
 	 * SecuritiesLending}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NumberOfDaysLendingBorrowing"</li>
 	 * <li>
@@ -675,6 +671,10 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 * definition} =
 	 * "Number of days the securities are lent or borrowed for a contract which has an agreed closing date."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesLending, Max4NumericText> mmNumberOfDaysLendingBorrowing = new MMBusinessAttribute<SecuritiesLending, Max4NumericText>() {
@@ -716,10 +716,6 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesLending
 	 * SecuritiesLending}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PeriodicPayment"</li>
 	 * <li>
@@ -727,6 +723,10 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 * definition} =
 	 * "Indicates whether the securities lending fees can be paid periodically or at the end of the contract."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesLending, YesNoIndicator> mmPeriodicPayment = new MMBusinessAttribute<SecuritiesLending, YesNoIndicator>() {
@@ -775,15 +775,15 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesLending
 	 * SecuritiesLending}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Rollover"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates that the contract can be rolled over."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesLending, YesNoIndicator> mmRollover = new MMBusinessAttribute<SecuritiesLending, YesNoIndicator>() {
@@ -825,16 +825,16 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesLending
 	 * SecuritiesLending}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BorrowingRate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Rate paid by the borrower to the lender for the securities borrowed."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesLending, PercentageRate> mmBorrowingRate = new MMBusinessAttribute<SecuritiesLending, PercentageRate>() {
@@ -866,6 +866,11 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesDeliveryObligation
+	 * SecuritiesDeliveryObligation}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesDeliveryObligation#mmSecuritiesLending
@@ -874,24 +879,19 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesDeliveryObligation
-	 * SecuritiesDeliveryObligation}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesLending
 	 * SecuritiesLending}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SecuritiesDeliveryObligation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Obligation covered by the lending of securities."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesLending, com.tools20022.repository.entity.SecuritiesDeliveryObligation> mmSecuritiesDeliveryObligation = new MMBusinessAssociationEnd<SecuritiesLending, com.tools20022.repository.entity.SecuritiesDeliveryObligation>() {

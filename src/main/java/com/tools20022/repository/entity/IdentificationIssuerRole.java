@@ -344,14 +344,14 @@ import java.util.Objects;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "IdentificationIssuerRole"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Entity that assigns the identification."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class IdentificationIssuerRole extends InformationPartyRole {
@@ -396,15 +396,15 @@ public class IdentificationIssuerRole extends InformationPartyRole {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.IdentificationIssuerRole
 	 * IdentificationIssuerRole}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Country"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Country of the proprietary identification scheme."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<IdentificationIssuerRole, CountryCode> mmCountry = new MMBusinessAttribute<IdentificationIssuerRole, CountryCode>() {
@@ -479,15 +479,15 @@ public class IdentificationIssuerRole extends InformationPartyRole {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.IdentificationIssuerRole
 	 * IdentificationIssuerRole}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EntityName"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Entity that issues the proprietary identification."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<IdentificationIssuerRole, Max35Text> mmEntityName = new MMBusinessAttribute<IdentificationIssuerRole, Max35Text>() {
@@ -530,10 +530,6 @@ public class IdentificationIssuerRole extends InformationPartyRole {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.IdentificationIssuerRole
 	 * IdentificationIssuerRole}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OwnerCode"</li>
 	 * <li>
@@ -541,6 +537,10 @@ public class IdentificationIssuerRole extends InformationPartyRole {
 	 * definition} =
 	 * "Code representing the organisation that owns and is responsible of an enumerated code list, for example ISO."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<IdentificationIssuerRole, Max35Text> mmOwnerCode = new MMBusinessAttribute<IdentificationIssuerRole, Max35Text>() {

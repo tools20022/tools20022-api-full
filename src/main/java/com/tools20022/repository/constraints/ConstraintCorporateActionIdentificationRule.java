@@ -37,10 +37,6 @@ public class ConstraintCorporateActionIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionInformation1
 	 * CorporateActionInformation1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CorporateActionIdentificationRule"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintCorporateActionIdentificationRule {
 	 * definition} =
 	 * "At least one element in the list (IssuerCorporateActionReference, OfficialCorporateActionReference, CorporateActionProcessingIdentifier) must be present. They may all be may be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionInformation1> forCorporateActionInformation1 = new MMConstraint<CorporateActionInformation1>() {

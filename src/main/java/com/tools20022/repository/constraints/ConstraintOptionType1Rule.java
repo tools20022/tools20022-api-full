@@ -40,10 +40,6 @@ public class ConstraintOptionType1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption13
 	 * CorporateActionOption13}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionType1Rule"</li>
 	 * <li>
@@ -51,6 +47,10 @@ public class ConstraintOptionType1Rule {
 	 * definition} =
 	 * "If for an exercise of warrants or an exercise of rights, the proceeds are known, the more precise OptionType/Code values like CASH, SECU, CASE or NOAC must be used. \r\nIf the proceeds are at issuer choice, ie, the proceeds are not known upfront, then OptionType/Code EXER must be used."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption13> forCorporateActionOption13 = new MMConstraint<CorporateActionOption13>() {
@@ -74,10 +74,6 @@ public class ConstraintOptionType1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption5
 	 * CorporateActionOption5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionType1Rule"</li>
 	 * <li>
@@ -85,6 +81,10 @@ public class ConstraintOptionType1Rule {
 	 * definition} =
 	 * "If for an exercise of warrants or an exercise of rights, the proceeds are known, the more precise OptionType/Code values like CASH, SECU, CASE or NOAC must be used. \r\nIf the proceeds are at issuer choice, ie, the proceeds are not known upfront, then OptionType/Code EXER must be used."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption5> forCorporateActionOption5 = new MMConstraint<CorporateActionOption5>() {

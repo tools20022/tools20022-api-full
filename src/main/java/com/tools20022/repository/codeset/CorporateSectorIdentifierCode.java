@@ -76,16 +76,16 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CorporateSectorIdentifierCode"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Identifies the corporate sector of the counterparty for reporting to trade repositories."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -103,10 +103,6 @@ public class CorporateSectorIdentifierCode extends MMCode {
 	 * CorporateSectorIdentifierCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "A"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Assurance"</li>
 	 * <li>
@@ -114,6 +110,10 @@ public class CorporateSectorIdentifierCode extends MMCode {
 	 * definition} =
 	 * "Assurance undertaking authorised in accordance with European Securities and Markets Authority (ESMA) Directive 2002/83/EC."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateSectorIdentifierCode Assurance = new CorporateSectorIdentifierCode() {
@@ -136,10 +136,6 @@ public class CorporateSectorIdentifierCode extends MMCode {
 	 * CorporateSectorIdentifierCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "C"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CreditInstitution"</li>
 	 * <li>
@@ -147,6 +143,10 @@ public class CorporateSectorIdentifierCode extends MMCode {
 	 * definition} =
 	 * "Credit Institution authorised in accordance with European Securities and Markets Authority (ESMA) Directive 2006/48/EC."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateSectorIdentifierCode CreditInstitution = new CorporateSectorIdentifierCode() {
@@ -169,10 +169,6 @@ public class CorporateSectorIdentifierCode extends MMCode {
 	 * CorporateSectorIdentifierCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "F"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InvestmentFirm"</li>
 	 * <li>
@@ -180,6 +176,10 @@ public class CorporateSectorIdentifierCode extends MMCode {
 	 * definition} =
 	 * "Investment firm in accordance with European Securities and Markets Authority (ESMA) Directive 2004/39/EC."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateSectorIdentifierCode InvestmentFirm = new CorporateSectorIdentifierCode() {
@@ -202,10 +202,6 @@ public class CorporateSectorIdentifierCode extends MMCode {
 	 * CorporateSectorIdentifierCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "I"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Insurance"</li>
 	 * <li>
@@ -213,6 +209,10 @@ public class CorporateSectorIdentifierCode extends MMCode {
 	 * definition} =
 	 * "Insurance undertaking in accordance with European Securities and Markets Authority (ESMA) Directive 73/239/EEC."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateSectorIdentifierCode Insurance = new CorporateSectorIdentifierCode() {
@@ -236,10 +236,6 @@ public class CorporateSectorIdentifierCode extends MMCode {
 	 * CorporateSectorIdentifierCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "L"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AlternativeInvestmentFund"</li>
 	 * <li>
@@ -247,6 +243,10 @@ public class CorporateSectorIdentifierCode extends MMCode {
 	 * definition} =
 	 * "Alternative investment fund managed by an Alternative Investment Fund Manager (AIFM) authorised or registered in accordance with European Securities and Markets Authority (ESMA) Directive 2011/61/EU."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateSectorIdentifierCode AlternativeInvestmentFund = new CorporateSectorIdentifierCode() {
@@ -270,10 +270,6 @@ public class CorporateSectorIdentifierCode extends MMCode {
 	 * CorporateSectorIdentifierCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "O"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OccupationalRetirementProvision"</li>
 	 * <li>
@@ -281,6 +277,10 @@ public class CorporateSectorIdentifierCode extends MMCode {
 	 * definition} =
 	 * "Institution for occupational retirement provision within the meaning of Article 6(a) of European Securities and Markets Authority (ESMA) Directive 2003/41/EC."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateSectorIdentifierCode OccupationalRetirementProvision = new CorporateSectorIdentifierCode() {
@@ -303,10 +303,6 @@ public class CorporateSectorIdentifierCode extends MMCode {
 	 * CorporateSectorIdentifierCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "R"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Reinsurance"</li>
 	 * <li>
@@ -314,6 +310,10 @@ public class CorporateSectorIdentifierCode extends MMCode {
 	 * definition} =
 	 * "Reinsurance undertaking authorised in accordance with European Securities and Markets Authority (ESMA) Directive 2005/68/EC."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateSectorIdentifierCode Reinsurance = new CorporateSectorIdentifierCode() {
@@ -337,10 +337,6 @@ public class CorporateSectorIdentifierCode extends MMCode {
 	 * CorporateSectorIdentifierCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "U"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UCITS"</li>
 	 * <li>
@@ -348,6 +344,10 @@ public class CorporateSectorIdentifierCode extends MMCode {
 	 * definition} =
 	 * "Undertakings for Collective Investment in Transferable Securities (UCITS) and its management company, authorised in accordance with European Securities and Markets Authority (ESMA) Directive 2009/95/EC."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateSectorIdentifierCode UCITS = new CorporateSectorIdentifierCode() {

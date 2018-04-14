@@ -98,16 +98,16 @@ import java.util.Objects;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CorporateActionCashEntitlement"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Rights for cash entitled to the account owner based on the terms of the corporate action event and the balance of underlying securities."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class CorporateActionCashEntitlement extends CorporateActionEntitlement {
@@ -263,16 +263,16 @@ public class CorporateActionCashEntitlement extends CorporateActionEntitlement {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionCashEntitlement
 	 * CorporateActionCashEntitlement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GrossCashAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Amount of money before any deductions and allowances have been made."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CorporateActionCashEntitlement, CurrencyAndAmount> mmGrossCashAmount = new MMBusinessAttribute<CorporateActionCashEntitlement, CurrencyAndAmount>() {
@@ -456,10 +456,6 @@ public class CorporateActionCashEntitlement extends CorporateActionEntitlement {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionCashEntitlement
 	 * CorporateActionCashEntitlement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NetCashAmount"</li>
 	 * <li>
@@ -467,6 +463,10 @@ public class CorporateActionCashEntitlement extends CorporateActionEntitlement {
 	 * definition} =
 	 * "Amount of money after deductions and allowances have been made, if any, ie, the total amount +/- charges/fees."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CorporateActionCashEntitlement, CurrencyAndAmount> mmNetCashAmount = new MMBusinessAttribute<CorporateActionCashEntitlement, CurrencyAndAmount>() {
@@ -656,16 +656,16 @@ public class CorporateActionCashEntitlement extends CorporateActionEntitlement {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionCashEntitlement
 	 * CorporateActionCashEntitlement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CashInLieuOfShare"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Cash disbursement in lieu of a fractional quantity of, eg, equity."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CorporateActionCashEntitlement, CurrencyAndAmount> mmCashInLieuOfShare = new MMBusinessAttribute<CorporateActionCashEntitlement, CurrencyAndAmount>() {
@@ -852,16 +852,16 @@ public class CorporateActionCashEntitlement extends CorporateActionEntitlement {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionCashEntitlement
 	 * CorporateActionCashEntitlement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CapitalGain"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Amount of money distributed as the result of a capital gain."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CorporateActionCashEntitlement, CurrencyAndAmount> mmCapitalGain = new MMBusinessAttribute<CorporateActionCashEntitlement, CurrencyAndAmount>() {
@@ -1006,10 +1006,6 @@ public class CorporateActionCashEntitlement extends CorporateActionEntitlement {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionCashEntitlement
 	 * CorporateActionCashEntitlement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EntitledCashAmount"</li>
 	 * <li>
@@ -1017,6 +1013,10 @@ public class CorporateActionCashEntitlement extends CorporateActionEntitlement {
 	 * definition} =
 	 * "Cash amount based on terms of corporate action event and balance of underlying securities, entitled to/from account owner (which may be positive or negative)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CorporateActionCashEntitlement, CurrencyAndAmount> mmEntitledCashAmount = new MMBusinessAttribute<CorporateActionCashEntitlement, CurrencyAndAmount>() {
@@ -1055,6 +1055,10 @@ public class CorporateActionCashEntitlement extends CorporateActionEntitlement {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.CurrencyExchange
+	 * CurrencyExchange}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmCurrencyExchangeForCorporateActionCashEntitlement
@@ -1063,18 +1067,10 @@ public class CorporateActionCashEntitlement extends CorporateActionEntitlement {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.CurrencyExchange
-	 * CurrencyExchange}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionCashEntitlement
 	 * CorporateActionCashEntitlement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ExchangeRate"</li>
 	 * <li>
@@ -1082,6 +1078,10 @@ public class CorporateActionCashEntitlement extends CorporateActionEntitlement {
 	 * definition} =
 	 * "Specifies the exchange rate used to convert the cash entitlement value in another currency."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<CorporateActionCashEntitlement, List<CurrencyExchange>> mmExchangeRate = new MMBusinessAssociationEnd<CorporateActionCashEntitlement, List<CurrencyExchange>>() {

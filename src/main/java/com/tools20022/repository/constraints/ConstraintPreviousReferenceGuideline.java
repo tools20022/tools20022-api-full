@@ -42,10 +42,6 @@ public class ConstraintPreviousReferenceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.RequestForOrderConfirmationStatusReportV02
 	 * RequestForOrderConfirmationStatusReportV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PreviousReferenceGuideline"</li>
 	 * <li>
@@ -53,6 +49,10 @@ public class ConstraintPreviousReferenceGuideline {
 	 * definition} =
 	 * "If RequestDetails/Reference/PreviousReference/MessageName is present, it must contain 502 or must start with setr.047, setr.049, setr.051, setr.053, or setr.055 and RequestDetails/Reference/PreviousReference/Reference must contain the reference of a message in this list."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RequestForOrderConfirmationStatusReportV02> for_setr_RequestForOrderConfirmationStatusReportV02 = new MMConstraint<RequestForOrderConfirmationStatusReportV02>() {
@@ -76,10 +76,6 @@ public class ConstraintPreviousReferenceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference4
 	 * MessageAndBusinessReference4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PreviousReferenceGuideline"</li>
 	 * <li>
@@ -87,6 +83,10 @@ public class ConstraintPreviousReferenceGuideline {
 	 * definition} =
 	 * "If PreviousReference/MessageName is present, it must contain 502 or must start with setr.001, setr.002, setr.004, setr.005, setr.007, setr.008, setr.010, setr.011, setr.013 or setr.014 and PreviousReference/Reference must contain the reference of a message in this list."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<MessageAndBusinessReference4> forMessageAndBusinessReference4 = new MMConstraint<MessageAndBusinessReference4>() {
@@ -110,10 +110,6 @@ public class ConstraintPreviousReferenceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountManagementMessageReference2
 	 * AccountManagementMessageReference2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PreviousReferenceGuideline"</li>
 	 * <li>
@@ -121,6 +117,10 @@ public class ConstraintPreviousReferenceGuideline {
 	 * definition} =
 	 * "If LinkedReference/PreviousReference/MessageName is present, it must start with acmt.001 or acmt.003 and Reference must contain the business reference of a message in this list."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -161,10 +161,6 @@ public class ConstraintPreviousReferenceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountManagementMessageReference1
 	 * AccountManagementMessageReference1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PreviousReferenceGuideline"</li>
 	 * <li>
@@ -172,6 +168,10 @@ public class ConstraintPreviousReferenceGuideline {
 	 * definition} =
 	 * "If PreviousReference/MessageName is present, it must start with acmt.001 or acmt.003 and Reference must contain the business reference of a message in this list."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -205,10 +205,6 @@ public class ConstraintPreviousReferenceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference5
 	 * MessageAndBusinessReference5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PreviousReferenceGuideline"</li>
 	 * <li>
@@ -216,6 +212,10 @@ public class ConstraintPreviousReferenceGuideline {
 	 * definition} =
 	 * "If PreviousReference/MessageName is present, it must contain 515 or must start with setr.003, setr.006, setr.009, setr.012, setr.015, setr.047, setr.048, setr.049, setr.050, setr.051, setr.052, setr.053, setr.054, setr.055 or setr.056 and PreviousReference/Reference must contain the reference of a message in this list."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<MessageAndBusinessReference5> forMessageAndBusinessReference5 = new MMConstraint<MessageAndBusinessReference5>() {
@@ -239,10 +239,6 @@ public class ConstraintPreviousReferenceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.LinkedMessage4Choice
 	 * LinkedMessage4Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PreviousReferenceGuideline"</li>
 	 * <li>
@@ -250,6 +246,10 @@ public class ConstraintPreviousReferenceGuideline {
 	 * definition} =
 	 * "If PreviousReference/MessageName is present, it must start with acmt.001 or acmt.003 and PreviousReference/Reference must contain the business reference of a message."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<LinkedMessage4Choice> forLinkedMessage4Choice = new MMConstraint<LinkedMessage4Choice>() {
@@ -273,10 +273,6 @@ public class ConstraintPreviousReferenceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.RequestForOrderStatusReportV04
 	 * RequestForOrderStatusReportV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PreviousReferenceGuideline"</li>
 	 * <li>
@@ -284,6 +280,10 @@ public class ConstraintPreviousReferenceGuideline {
 	 * definition} =
 	 * "If RequestDetails/Reference/PreviousReference/MessageName is present, it must contain 502 or must start with setr.001, setr.002, setr.004, setr.005, setr.007, setr.008, setr.010, setr.011, setr.013 or setr.014 and RequestDetails/Reference/PreviousReference/Reference must contain the reference of a message in this list."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RequestForOrderStatusReportV04> for_setr_RequestForOrderStatusReportV04 = new MMConstraint<RequestForOrderStatusReportV04>() {
@@ -307,10 +307,6 @@ public class ConstraintPreviousReferenceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountManagementMessageReference3
 	 * AccountManagementMessageReference3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PreviousReferenceGuideline"</li>
 	 * <li>
@@ -318,6 +314,10 @@ public class ConstraintPreviousReferenceGuideline {
 	 * definition} =
 	 * "If LinkedReference/PreviousReference/MessageName is present, it must start with acmt.001 or acmt.003 and Reference must contain the business reference of a message in this list."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -348,10 +348,6 @@ public class ConstraintPreviousReferenceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountManagementMessageReference
 	 * AccountManagementMessageReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PreviousReferenceGuideline"</li>
 	 * <li>
@@ -359,6 +355,10 @@ public class ConstraintPreviousReferenceGuideline {
 	 * definition} =
 	 * "If PreviousReference/MessageName is present, it must start with acmt.001 or acmt.003 and Reference must contain the business reference of a message in this list."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountManagementMessageReference> forAccountManagementMessageReference = new MMConstraint<AccountManagementMessageReference>() {
@@ -382,10 +382,6 @@ public class ConstraintPreviousReferenceGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference2
 	 * MessageAndBusinessReference2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PreviousReferenceGuideline"</li>
 	 * <li>
@@ -393,6 +389,10 @@ public class ConstraintPreviousReferenceGuideline {
 	 * definition} =
 	 * "If PreviousReference/MessageName is present, it must contain 502 or must start with setr.001 or setr.002 or setr.004 or setr.005 or setr.007 or setr.008 or setr.010 or setr.011 or setr.013 or setr.014 and Reference must contain the business reference of a message in this list."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<MessageAndBusinessReference2> forMessageAndBusinessReference2 = new MMConstraint<MessageAndBusinessReference2>() {

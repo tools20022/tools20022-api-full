@@ -37,10 +37,6 @@ public class ConstraintCarrierNameBPORule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SingleTransport8
 	 * SingleTransport8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CarrierNameBPORule"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintCarrierNameBPORule {
 	 * definition} =
 	 * "At least one of AirCarrierName / SeaCarrierName / RoadCarrierName / RailCarrierName must be present if PaymentObligation (BPO) is used in this transaction."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SingleTransport8> forSingleTransport8 = new MMConstraint<SingleTransport8>() {

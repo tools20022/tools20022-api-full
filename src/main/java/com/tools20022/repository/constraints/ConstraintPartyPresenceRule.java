@@ -35,10 +35,6 @@ public class ConstraintPartyPresenceRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PartyStatus1 PartyStatus1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PartyPresenceRule"</li>
 	 * <li>
@@ -46,6 +42,10 @@ public class ConstraintPartyPresenceRule {
 	 * definition} =
 	 * "If Status equals 'Completed' then RelatedPartyIdentification must be present and ResponsiblePartyIdentification must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PartyStatus1> forPartyStatus1 = new MMConstraint<PartyStatus1>() {

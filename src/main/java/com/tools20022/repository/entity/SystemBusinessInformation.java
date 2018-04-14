@@ -146,14 +146,14 @@ import java.util.Optional;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "SystemBusinessInformation"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Details about business information related to a system."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class SystemBusinessInformation {
@@ -166,6 +166,11 @@ public class SystemBusinessInformation {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} =
+	 * {@linkplain com.tools20022.repository.entity.InformationQualifier
+	 * InformationQualifier}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.InformationQualifier#mmSystemBusinessInformation
@@ -173,11 +178,6 @@ public class SystemBusinessInformation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} =
-	 * {@linkplain com.tools20022.repository.entity.InformationQualifier
-	 * InformationQualifier}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -200,6 +200,13 @@ public class SystemBusinessInformation {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SystemBusinessInformation
 	 * SystemBusinessInformation}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Qualifier"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Further information about the criticality or importance of a general business information system."
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = type=SampleData, SampleData=<?xml version="1.0"
@@ -215,13 +222,6 @@ public class SystemBusinessInformation {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Qualifier"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Further information about the criticality or importance of a general business information system."
-	 * </li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SystemBusinessInformation, InformationQualifier> mmQualifier = new MMBusinessAssociationEnd<SystemBusinessInformation, InformationQualifier>() {
@@ -288,6 +288,13 @@ public class SystemBusinessInformation {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SystemBusinessInformation
 	 * SystemBusinessInformation}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Subject"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Subject line of an item of general business information, summarizing the topic and intended destination of the information."
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = type=SampleData, SampleData=<?xml version="1.0"
@@ -303,13 +310,6 @@ public class SystemBusinessInformation {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Subject"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Subject line of an item of general business information, summarizing the topic and intended destination of the information."
-	 * </li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SystemBusinessInformation, Max35Text> mmSubject = new MMBusinessAttribute<SystemBusinessInformation, Max35Text>() {
@@ -368,6 +368,11 @@ public class SystemBusinessInformation {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SystemBusinessInformation
 	 * SystemBusinessInformation}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SubjectDetails"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "General business information, in unstructured form."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = type=SampleData, SampleData=<?xml version="1.0"
@@ -383,11 +388,6 @@ public class SystemBusinessInformation {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SubjectDetails"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "General business information, in unstructured form."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SystemBusinessInformation, Max350Text> mmSubjectDetails = new MMBusinessAttribute<SystemBusinessInformation, Max350Text>() {
@@ -455,10 +455,6 @@ public class SystemBusinessInformation {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SystemBusinessInformation
 	 * SystemBusinessInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Identification"</li>
 	 * <li>
@@ -466,6 +462,10 @@ public class SystemBusinessInformation {
 	 * definition} =
 	 * "Unique and unambiguous identification of a general business information system, as assigned by the system transaction administrator."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SystemBusinessInformation, Max35Text> mmIdentification = new MMBusinessAttribute<SystemBusinessInformation, Max35Text>() {
@@ -518,6 +518,13 @@ public class SystemBusinessInformation {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SystemBusinessInformation
 	 * SystemBusinessInformation}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Reference"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Unique and unambiguous reference assigned to a general business information system."
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = type=SampleData, SampleData=<?xml version="1.0"
@@ -533,13 +540,6 @@ public class SystemBusinessInformation {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Reference"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Unique and unambiguous reference assigned to a general business information system."
-	 * </li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SystemBusinessInformation, Max35Text> mmReference = new MMBusinessAttribute<SystemBusinessInformation, Max35Text>() {
@@ -579,6 +579,9 @@ public class SystemBusinessInformation {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.System System}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.System#mmSystemGeneratedInformation
@@ -587,22 +590,19 @@ public class SystemBusinessInformation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.System System}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SystemBusinessInformation
 	 * SystemBusinessInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "System"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "System for which business information is generated."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SystemBusinessInformation, Optional<System>> mmSystem = new MMBusinessAssociationEnd<SystemBusinessInformation, Optional<System>>() {

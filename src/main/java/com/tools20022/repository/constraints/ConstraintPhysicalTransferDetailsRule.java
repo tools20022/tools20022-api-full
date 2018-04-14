@@ -37,10 +37,6 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation7
 	 * ReceiveInformation7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PhysicalTransferDetailsRule"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransfer is \"PHYS\", then PhysicalTransferDetails must be present. If PhysicalTransfer is \"DEMT\", then PhysicalTransferDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ReceiveInformation7> forReceiveInformation7 = new MMConstraint<ReceiveInformation7>() {
@@ -71,10 +71,6 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation8
 	 * ReceiveInformation8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PhysicalTransferDetailsRule"</li>
 	 * <li>
@@ -82,6 +78,10 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransfer is \"PHYS\", then PhysicalTransferDetails must be present. If PhysicalTransfer is \"DEMT\", then PhysicalTransferDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ReceiveInformation8> forReceiveInformation8 = new MMConstraint<ReceiveInformation8>() {
@@ -105,10 +105,6 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation5
 	 * ReceiveInformation5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PhysicalTransferDetailsRule"</li>
 	 * <li>
@@ -116,6 +112,10 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransfer is \"PHYS\", then PhysicalTransferDetails must be present. If PhysicalTransfer is \"DEMT\", then PhysicalTransferDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ReceiveInformation5> forReceiveInformation5 = new MMConstraint<ReceiveInformation5>() {
@@ -139,10 +139,6 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation4
 	 * ReceiveInformation4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PhysicalTransferDetailsRule"</li>
 	 * <li>
@@ -150,6 +146,10 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransferIndicator is \"true\" or \"1\" (Yes), then PhysicalTransferDetails must be present. If PhysicalTransferIndicator is \"false\" or \"0\" (No), then PhysicalTransferDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ReceiveInformation4> forReceiveInformation4 = new MMConstraint<ReceiveInformation4>() {
@@ -173,10 +173,6 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation14
 	 * ReceiveInformation14}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PhysicalTransferDetailsRule"</li>
 	 * <li>
@@ -184,6 +180,10 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransfer is \"PHYS\", then PhysicalTransferDetails must be present. If PhysicalTransfer is \"DEMT\", then PhysicalTransferDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -222,10 +222,6 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation13
 	 * ReceiveInformation13}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PhysicalTransferDetailsRule"</li>
 	 * <li>
@@ -233,6 +229,10 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransfer is \"PHYS\", then PhysicalTransferDetails must be present. If PhysicalTransfer is \"DEMT\", then PhysicalTransferDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -271,10 +271,6 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation12
 	 * ReceiveInformation12}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PhysicalTransferDetailsRule"</li>
 	 * <li>
@@ -282,6 +278,10 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransfer is \"PHYS\", then PhysicalTransferDetails must be present. If PhysicalTransfer is \"DEMT\", then PhysicalTransferDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -320,10 +320,6 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DeliverInformation9
 	 * DeliverInformation9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PhysicalTransferDetailsRule"</li>
 	 * <li>
@@ -331,6 +327,10 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransfer is \"PHYS\", then PhysicalTransferDetails must be present. If PhysicalTransfer is \"DEMT\", then PhysicalTransferDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -363,10 +363,6 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DeliverInformation12
 	 * DeliverInformation12}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PhysicalTransferDetailsRule"</li>
 	 * <li>
@@ -374,6 +370,10 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransfer is \"PHYS\", then PhysicalTransferDetails must be present. If PhysicalTransfer is \"DEMT\", then PhysicalTransferDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -412,10 +412,6 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DeliverInformation1
 	 * DeliverInformation1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PhysicalTransferDetailsRule"</li>
 	 * <li>
@@ -423,6 +419,10 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransferIndicator is \"true\" or \"1\" (Yes), then PhysicalTransferDetails must be present. If PhysicalTransferIndicator is \"false\" or \"0\" (No), then PhysicalTransferDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<DeliverInformation1> forDeliverInformation1 = new MMConstraint<DeliverInformation1>() {
@@ -446,10 +446,6 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation18
 	 * ReceiveInformation18}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PhysicalTransferDetailsRule"</li>
 	 * <li>
@@ -457,6 +453,10 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransfer is PHYS (Physical), then PhysicalTransferDetails must be present. If PhysicalTransfer is DEMT (Dematerialised), then PhysicalTransferDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -486,10 +486,6 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DeliverInformation19
 	 * DeliverInformation19}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PhysicalTransferDetailsRule"</li>
 	 * <li>
@@ -497,6 +493,10 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransfer is PHYS (Physical), then PhysicalTransferDetails must be present. If PhysicalTransfer is DEMT (Dematerialised), then PhysicalTransferDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -526,10 +526,6 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation6
 	 * ReceiveInformation6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PhysicalTransferDetailsRule"</li>
 	 * <li>
@@ -537,6 +533,10 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransfer is \"PHYS\", then PhysicalTransferDetails must be present. If PhysicalTransfer is \"DEMT\", then PhysicalTransferDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ReceiveInformation6> forReceiveInformation6 = new MMConstraint<ReceiveInformation6>() {
@@ -560,10 +560,6 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DeliverInformation11
 	 * DeliverInformation11}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PhysicalTransferDetailsRule"</li>
 	 * <li>
@@ -571,6 +567,10 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransfer is \"PHYS\", then PhysicalTransferDetails must be present. If PhysicalTransfer is \"DEMT\", then PhysicalTransferDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -603,10 +603,6 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation9
 	 * ReceiveInformation9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PhysicalTransferDetailsRule"</li>
 	 * <li>
@@ -614,6 +610,10 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransfer is \"PHYS\", then PhysicalTransferDetails must be present. If PhysicalTransfer is \"DEMT\", then PhysicalTransferDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -646,10 +646,6 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation1
 	 * ReceiveInformation1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PhysicalTransferDetailsRule"</li>
 	 * <li>
@@ -657,6 +653,10 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransferIndicator is \"true\" or \"1\" (Yes), then PhysicalTransferDetails must be present. If PhysicalTransferIndicator is \"false\" or \"0\" (No), then PhysicalTransferDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ReceiveInformation1> forReceiveInformation1 = new MMConstraint<ReceiveInformation1>() {
@@ -680,10 +680,6 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation15
 	 * ReceiveInformation15}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PhysicalTransferDetailsRule"</li>
 	 * <li>
@@ -691,6 +687,10 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransfer is \"PHYS\", then PhysicalTransferDetails must be present. If PhysicalTransfer is \"DEMT\", then PhysicalTransferDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -729,10 +729,6 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation3
 	 * ReceiveInformation3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PhysicalTransferDetailsRule"</li>
 	 * <li>
@@ -740,6 +736,10 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransferIndicator is \"true\" or \"1\" (Yes), then PhysicalTransferDetails must be present. If PhysicalTransferIndicator is \"false\" or \"0\" (No), then PhysicalTransferDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ReceiveInformation3> forReceiveInformation3 = new MMConstraint<ReceiveInformation3>() {
@@ -763,10 +763,6 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation19
 	 * ReceiveInformation19}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PhysicalTransferDetailsRule"</li>
 	 * <li>
@@ -774,6 +770,10 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransfer is PHYS (Physical), then PhysicalTransferDetails must be present. If PhysicalTransfer is DEMT (Dematerialised), then PhysicalTransferDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -803,10 +803,6 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation2
 	 * ReceiveInformation2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PhysicalTransferDetailsRule"</li>
 	 * <li>
@@ -814,6 +810,10 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransferIndicator is \"true\" or \"1\" (Yes), then PhysicalTransferDetails must be present. If PhysicalTransferIndicator is \"false\" or \"0\" (No), then PhysicalTransferDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ReceiveInformation2> forReceiveInformation2 = new MMConstraint<ReceiveInformation2>() {
@@ -837,10 +837,6 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DeliverInformation7
 	 * DeliverInformation7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PhysicalTransferDetailsRule"</li>
 	 * <li>
@@ -848,6 +844,10 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransfer is \"PHYS\", then PhysicalTransferDetails must be present. If PhysicalTransfer is \"DEMT\", then PhysicalTransferDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<DeliverInformation7> forDeliverInformation7 = new MMConstraint<DeliverInformation7>() {
@@ -871,10 +871,6 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DeliverInformation15
 	 * DeliverInformation15}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PhysicalTransferDetailsRule"</li>
 	 * <li>
@@ -882,6 +878,10 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransfer is \"PHYS\", then PhysicalTransferDetails must be present. If PhysicalTransfer is \"DEMT\", then PhysicalTransferDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -920,10 +920,6 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DeliverInformation16
 	 * DeliverInformation16}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PhysicalTransferDetailsRule"</li>
 	 * <li>
@@ -931,6 +927,10 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransfer is PHYS (Physical), then PhysicalTransferDetails must be present. If PhysicalTransfer is DEMT (Dematerialised), then PhysicalTransferDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -969,10 +969,6 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DeliverInformation2
 	 * DeliverInformation2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PhysicalTransferDetailsRule"</li>
 	 * <li>
@@ -980,6 +976,10 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransferIndicator is \"true\" or \"1\" (Yes), then PhysicalTransferDetails must be present. If PhysicalTransferIndicator is \"false\" or \"0\" (No), then PhysicalTransferDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<DeliverInformation2> forDeliverInformation2 = new MMConstraint<DeliverInformation2>() {
@@ -1003,10 +1003,6 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DeliverInformation4
 	 * DeliverInformation4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PhysicalTransferDetailsRule"</li>
 	 * <li>
@@ -1014,6 +1010,10 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransferIndicator is \"true\" or \"1\" (Yes), then PhysicalTransferDetails must be present. If PhysicalTransferIndicator is \"false\" or \"0\" (No), then PhysicalTransferDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<DeliverInformation4> forDeliverInformation4 = new MMConstraint<DeliverInformation4>() {
@@ -1037,10 +1037,6 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DeliverInformation13
 	 * DeliverInformation13}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PhysicalTransferDetailsRule"</li>
 	 * <li>
@@ -1048,6 +1044,10 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransfer is \"PHYS\", then PhysicalTransferDetails must be present. If PhysicalTransfer is \"DEMT\", then PhysicalTransferDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1086,10 +1086,6 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DeliverInformation8
 	 * DeliverInformation8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PhysicalTransferDetailsRule"</li>
 	 * <li>
@@ -1097,6 +1093,10 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransfer is \"PHYS\", then PhysicalTransferDetails must be present. If PhysicalTransfer is \"DEMT\", then PhysicalTransferDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<DeliverInformation8> forDeliverInformation8 = new MMConstraint<DeliverInformation8>() {
@@ -1120,10 +1120,6 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DeliverInformation3
 	 * DeliverInformation3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PhysicalTransferDetailsRule"</li>
 	 * <li>
@@ -1131,6 +1127,10 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransferIndicator is \"true\" or \"1\" (Yes), then PhysicalTransferDetails must be present. If PhysicalTransferIndicator is \"false\" or \"0\" (No), then PhysicalTransferDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<DeliverInformation3> forDeliverInformation3 = new MMConstraint<DeliverInformation3>() {
@@ -1154,10 +1154,6 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DeliverInformation14
 	 * DeliverInformation14}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PhysicalTransferDetailsRule"</li>
 	 * <li>
@@ -1165,6 +1161,10 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransfer is \"PHYS\", then PhysicalTransferDetails must be present. If PhysicalTransfer is \"DEMT\", then PhysicalTransferDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1203,10 +1203,6 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DeliverInformation17
 	 * DeliverInformation17}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PhysicalTransferDetailsRule"</li>
 	 * <li>
@@ -1214,6 +1210,10 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransfer is PHYS (Physical), then PhysicalTransferDetails must be present. If PhysicalTransfer is DEMT (Dematerialised), then PhysicalTransferDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1252,10 +1252,6 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DeliverInformation18
 	 * DeliverInformation18}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PhysicalTransferDetailsRule"</li>
 	 * <li>
@@ -1263,6 +1259,10 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransfer is PHYS (Physical), then PhysicalTransferDetails must be present. If PhysicalTransfer is DEMT (Dematerialised), then PhysicalTransferDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1292,10 +1292,6 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DeliverInformation6
 	 * DeliverInformation6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PhysicalTransferDetailsRule"</li>
 	 * <li>
@@ -1303,6 +1299,10 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransfer is \"PHYS\", then PhysicalTransferDetails must be present. If PhysicalTransfer is \"DEMT\", then PhysicalTransferDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<DeliverInformation6> forDeliverInformation6 = new MMConstraint<DeliverInformation6>() {
@@ -1326,10 +1326,6 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation11
 	 * ReceiveInformation11}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PhysicalTransferDetailsRule"</li>
 	 * <li>
@@ -1337,6 +1333,10 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransfer is \"PHYS\", then PhysicalTransferDetails must be present. If PhysicalTransfer is \"DEMT\", then PhysicalTransferDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1369,10 +1369,6 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation16
 	 * ReceiveInformation16}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PhysicalTransferDetailsRule"</li>
 	 * <li>
@@ -1380,6 +1376,10 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransfer is PHYS (Physical), then PhysicalTransferDetails must be present. If PhysicalTransfer is DEMT (Dematerialised), then PhysicalTransferDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1418,10 +1418,6 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DeliverInformation5
 	 * DeliverInformation5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PhysicalTransferDetailsRule"</li>
 	 * <li>
@@ -1429,6 +1425,10 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransfer is \"PHYS\", then PhysicalTransferDetails must be present. If PhysicalTransfer is \"DEMT\", then PhysicalTransferDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<DeliverInformation5> forDeliverInformation5 = new MMConstraint<DeliverInformation5>() {
@@ -1452,10 +1452,6 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation17
 	 * ReceiveInformation17}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PhysicalTransferDetailsRule"</li>
 	 * <li>
@@ -1463,6 +1459,10 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransfer is PHYS (Physical), then PhysicalTransferDetails must be present. If PhysicalTransfer is DEMT (Dematerialised), then PhysicalTransferDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>

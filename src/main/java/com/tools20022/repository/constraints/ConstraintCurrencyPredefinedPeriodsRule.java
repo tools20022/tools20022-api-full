@@ -41,10 +41,6 @@ public class ConstraintCurrencyPredefinedPeriodsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ValuationStatistics3
 	 * ValuationStatistics3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyPredefinedPeriodsRule"</li>
 	 * <li>
@@ -52,6 +48,10 @@ public class ConstraintCurrencyPredefinedPeriodsRule {
 	 * definition} =
 	 * "Currency in ByPredefinedTimePeriods/HighestPriceValue12Months/Amount, ByPredefinedTimePeriods/LowestPriceValue12Months/Amount, ByPredefinedTimePeriods/OneYearPriceChange/Amount, ByPredefinedTimePeriods/ThreeYearPriceChange/Amount and ByPredefinedTimePeriods/FiveYearPriceChange/Amount must be the same as Currency."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ValuationStatistics3> forValuationStatistics3 = new MMConstraint<ValuationStatistics3>() {
@@ -75,10 +75,6 @@ public class ConstraintCurrencyPredefinedPeriodsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ValuationStatistics2
 	 * ValuationStatistics2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyPredefinedPeriodsRule"</li>
 	 * <li>
@@ -86,6 +82,10 @@ public class ConstraintCurrencyPredefinedPeriodsRule {
 	 * definition} =
 	 * "Currency in ByPredefinedTimePeriods/HighestPriceValue12Months/Amount, ByPredefinedTimePeriods/LowestPriceValue12Months/Amount, ByPredefinedTimePeriods/OneYearPriceChange/Amount, ByPredefinedTimePeriods/ThreeYearPriceChange/Amount and ByPredefinedTimePeriods/FiveYearPriceChange/Amount must be the same as Currency."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ValuationStatistics2> forValuationStatistics2 = new MMConstraint<ValuationStatistics2>() {

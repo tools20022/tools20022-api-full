@@ -37,10 +37,6 @@ public class ConstraintDigestPresenceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QualifiedDocumentInformation1
 	 * QualifiedDocumentInformation1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DigestPresenceRule"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintDigestPresenceRule {
 	 * definition} =
 	 * "When a referenced document is part of the element signed by a digital signature and the document is not directly present in the message, the digest of the document SHOULD be used to provide integrity protection."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QualifiedDocumentInformation1> forQualifiedDocumentInformation1 = new MMConstraint<QualifiedDocumentInformation1>() {

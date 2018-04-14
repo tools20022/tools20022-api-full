@@ -36,10 +36,6 @@ public class ConstraintParty1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SafekeepingPlaceAsCodeAndPartyIdentification
 	 * SafekeepingPlaceAsCodeAndPartyIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Party1Rule"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintParty1Rule {
 	 * definition} =
 	 * "If PlaceSafekeeping is not SHHE, then Party is mandatory. If PlaceSafekeeping is SHHE, then Party is optional."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SafekeepingPlaceAsCodeAndPartyIdentification> forSafekeepingPlaceAsCodeAndPartyIdentification = new MMConstraint<SafekeepingPlaceAsCodeAndPartyIdentification>() {

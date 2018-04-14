@@ -37,10 +37,6 @@ public class ConstraintCounterpartyIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.camt.NetReportV01
 	 * NetReportV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CounterpartyIdentificationRule"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintCounterpartyIdentificationRule {
 	 * definition} =
 	 * "NetServiceCounterpartyIdentification must only be used at this level if all of the underlying obligations are with a single counterparty."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<NetReportV01> for_camt_NetReportV01 = new MMConstraint<NetReportV01>() {
@@ -70,10 +70,6 @@ public class ConstraintCounterpartyIdentificationRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.NetObligation1 NetObligation1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CounterpartyIdentificationRule"</li>
 	 * <li>
@@ -81,6 +77,10 @@ public class ConstraintCounterpartyIdentificationRule {
 	 * definition} =
 	 * "NetServiceCounterpartyIdentification must be present at this level in all obligations if one or more counterparties are involved in the calculation of the net report, i.e.NetServiceCounterpartyIdentification is not used in NetReport level."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<NetObligation1> forNetObligation1 = new MMConstraint<NetObligation1>() {

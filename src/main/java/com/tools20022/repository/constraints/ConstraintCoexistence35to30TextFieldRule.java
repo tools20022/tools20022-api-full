@@ -42,10 +42,6 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SafekeepingPlaceTypeAndText2
 	 * SafekeepingPlaceTypeAndText2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Coexistence35to30TextFieldRule"</li>
 	 * <li>
@@ -53,6 +49,10 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Identification must be 30 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SafekeepingPlaceTypeAndText2> forSafekeepingPlaceTypeAndText2 = new MMConstraint<SafekeepingPlaceTypeAndText2>() {
@@ -76,10 +76,6 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.MarketIdentification7
 	 * MarketIdentification7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Coexistence35to30TextFieldRule"</li>
 	 * <li>
@@ -87,6 +83,10 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, MarketIdentification/Description must be 30 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<MarketIdentification7> forMarketIdentification7 = new MMConstraint<MarketIdentification7>() {
@@ -110,10 +110,6 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.MarketIdentification82
 	 * MarketIdentification82}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Coexistence35to30TextFieldRule"</li>
 	 * <li>
@@ -121,6 +117,10 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, MarketIdentification/Description must be 30 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<MarketIdentification82> forMarketIdentification82 = new MMConstraint<MarketIdentification82>() {
@@ -144,10 +144,6 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.GenericIdentification26
 	 * GenericIdentification26}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Coexistence35to30TextFieldRule"</li>
 	 * <li>
@@ -155,6 +151,10 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Identification must be 30 characters or less. The field must not start or end with a slash ‘/’ or contain two cons\tecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<GenericIdentification26> forGenericIdentification26 = new MMConstraint<GenericIdentification26>() {
@@ -178,10 +178,6 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesCertificate1
 	 * SecuritiesCertificate1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Coexistence35to30TextFieldRule"</li>
 	 * <li>
@@ -189,6 +185,10 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, number must be 30 characters or less. The field must not start or end with a slash ‘/’ or contain two cons\tecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesCertificate1> forSecuritiesCertificate1 = new MMConstraint<SecuritiesCertificate1>() {
@@ -212,10 +212,6 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SafekeepingPlaceTypeAndText5
 	 * SafekeepingPlaceTypeAndText5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Coexistence35to30TextFieldRule"</li>
 	 * <li>
@@ -223,6 +219,10 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Identification must be 30 characters or less. The field must not start or end with a slash ‘/’ or contain two cons\tecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SafekeepingPlaceTypeAndText5> forSafekeepingPlaceTypeAndText5 = new MMConstraint<SafekeepingPlaceTypeAndText5>() {
@@ -246,10 +246,6 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.MarketIdentification9
 	 * MarketIdentification9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Coexistence35to30TextFieldRule"</li>
 	 * <li>
@@ -257,6 +253,10 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, MarketIdentification/Description must be 30 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<MarketIdentification9> forMarketIdentification9 = new MMConstraint<MarketIdentification9>() {
@@ -280,10 +280,6 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.MarketIdentification4
 	 * MarketIdentification4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Coexistence35to30TextFieldRule"</li>
 	 * <li>
@@ -291,6 +287,10 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, MarketIdentification/Description must be 30 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -323,10 +323,6 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.Number2Choice Number2Choice}
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Coexistence35to30TextFieldRule"</li>
 	 * <li>
@@ -334,6 +330,10 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, (long) number must be 30 characters or less. The field must not start or end with a slash ‘/’ or contain two cons\tecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Number2Choice> forNumber2Choice = new MMConstraint<Number2Choice>() {
@@ -357,10 +357,6 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.MarketIdentification10
 	 * MarketIdentification10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Coexistence35to30TextFieldRule"</li>
 	 * <li>
@@ -368,6 +364,10 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, MarketIdentification/Description must be 30 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<MarketIdentification10> forMarketIdentification10 = new MMConstraint<MarketIdentification10>() {
@@ -391,10 +391,6 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AlternatePartyIdentification2
 	 * AlternatePartyIdentification2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Coexistence35to30TextFieldRule"</li>
 	 * <li>
@@ -402,6 +398,10 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, AlternateIdentification must be 30 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AlternatePartyIdentification2> forAlternatePartyIdentification2 = new MMConstraint<AlternatePartyIdentification2>() {
@@ -425,10 +425,6 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.MarketIdentification2
 	 * MarketIdentification2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Coexistence35to30TextFieldRule"</li>
 	 * <li>
@@ -436,6 +432,10 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, MarketIdentification/Description must be 30 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<MarketIdentification2> forMarketIdentification2 = new MMConstraint<MarketIdentification2>() {
@@ -459,10 +459,6 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.Number4Choice Number4Choice}
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Coexistence35to30TextFieldRule"</li>
 	 * <li>
@@ -470,6 +466,10 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, (long) number must be 30 characters or less. The field must not start or end with a slash ‘/’ or contain two cons\tecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Number4Choice> forNumber4Choice = new MMConstraint<Number4Choice>() {
@@ -493,10 +493,6 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SafekeepingPlaceTypeAndText4
 	 * SafekeepingPlaceTypeAndText4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Coexistence35to30TextFieldRule"</li>
 	 * <li>
@@ -504,6 +500,10 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Identification must be 30 characters or less. The field must not start or end with a slash ‘/’ or contain two cons\tecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SafekeepingPlaceTypeAndText4> forSafekeepingPlaceTypeAndText4 = new MMConstraint<SafekeepingPlaceTypeAndText4>() {
@@ -527,10 +527,6 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.ClassificationType3Choice
 	 * ClassificationType3Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Coexistence35to30TextFieldRule"</li>
 	 * <li>
@@ -538,6 +534,10 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, AlternateClassification identification must be 30 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ClassificationType3Choice> forClassificationType3Choice = new MMConstraint<ClassificationType3Choice>() {
@@ -561,10 +561,6 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.MarketIdentification78
 	 * MarketIdentification78}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Coexistence35to30TextFieldRule"</li>
 	 * <li>
@@ -572,6 +568,10 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, MarketIdentification/Description must be 30 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -601,10 +601,6 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.GenericIdentification21
 	 * GenericIdentification21}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Coexistence35to30TextFieldRule"</li>
 	 * <li>
@@ -612,6 +608,10 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Identification must be 30 characters or less. The field must not start or end with a slash ‘/’ or contain two cons\tecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<GenericIdentification21> forGenericIdentification21 = new MMConstraint<GenericIdentification21>() {
@@ -635,10 +635,6 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AlternatePartyIdentification3
 	 * AlternatePartyIdentification3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Coexistence35to30TextFieldRule"</li>
 	 * <li>
@@ -646,6 +642,10 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, AlternateIdentification must be 30 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AlternatePartyIdentification3> forAlternatePartyIdentification3 = new MMConstraint<AlternatePartyIdentification3>() {
@@ -669,10 +669,6 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.ClassificationType2Choice
 	 * ClassificationType2Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Coexistence35to30TextFieldRule"</li>
 	 * <li>
@@ -680,6 +676,10 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, AlternateClassification identification must be 30 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ClassificationType2Choice> forClassificationType2Choice = new MMConstraint<ClassificationType2Choice>() {
@@ -703,10 +703,6 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesCertificate2
 	 * SecuritiesCertificate2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Coexistence35to30TextFieldRule"</li>
 	 * <li>
@@ -714,6 +710,10 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, number must be 30 characters or less. The field must not start or end with a slash ‘/’ or contain two cons\tecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesCertificate2> forSecuritiesCertificate2 = new MMConstraint<SecuritiesCertificate2>() {
@@ -737,10 +737,6 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SafekeepingPlaceTypeAndText3
 	 * SafekeepingPlaceTypeAndText3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Coexistence35to30TextFieldRule"</li>
 	 * <li>
@@ -748,6 +744,10 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Identification must be 30 characters or less. The field must not start or end with a slash ‘/’ or contain two cons\tecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SafekeepingPlaceTypeAndText3> forSafekeepingPlaceTypeAndText3 = new MMConstraint<SafekeepingPlaceTypeAndText3>() {
@@ -771,10 +771,6 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.MarketIdentification5
 	 * MarketIdentification5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Coexistence35to30TextFieldRule"</li>
 	 * <li>
@@ -782,6 +778,10 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, MarketIdentification/Description must be 30 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<MarketIdentification5> forMarketIdentification5 = new MMConstraint<MarketIdentification5>() {
@@ -805,10 +805,6 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.MarketIdentification6
 	 * MarketIdentification6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Coexistence35to30TextFieldRule"</li>
 	 * <li>
@@ -816,6 +812,10 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, MarketIdentification/Description must be 30 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<MarketIdentification6> forMarketIdentification6 = new MMConstraint<MarketIdentification6>() {
@@ -839,10 +839,6 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.MarketIdentification8
 	 * MarketIdentification8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Coexistence35to30TextFieldRule"</li>
 	 * <li>
@@ -850,6 +846,10 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, MarketIdentification/Description must be 30 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<MarketIdentification8> forMarketIdentification8 = new MMConstraint<MarketIdentification8>() {

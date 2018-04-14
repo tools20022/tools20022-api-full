@@ -44,10 +44,6 @@ public class ConstraintPEPISARule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.RequestForPEPOrISAOrPortfolioInformationV01
 	 * RequestForPEPOrISAOrPortfolioInformationV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PEPISARule"</li>
 	 * <li>
@@ -55,6 +51,10 @@ public class ConstraintPEPISARule {
 	 * definition} =
 	 * "If ProductTransfer\\ISA or ProductTransfer\\PEP is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed.\n\nIf ProductTransfer\\ISA or ProductTransfer\\PEP is present then the message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RequestForPEPOrISAOrPortfolioInformationV01> for_sese_RequestForPEPOrISAOrPortfolioInformationV01 = new MMConstraint<RequestForPEPOrISAOrPortfolioInformationV01>() {
@@ -78,10 +78,6 @@ public class ConstraintPEPISARule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferInstructionV02
 	 * PEPOrISAOrPortfolioTransferInstructionV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PEPISARule"</li>
 	 * <li>
@@ -89,6 +85,10 @@ public class ConstraintPEPISARule {
 	 * definition} =
 	 * "If ProductTransfer\\ISA or ProductTransfer\\PEP is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed.\n\nIf ProductTransfer\\ISA or ProductTransfer\\PEP is present then the message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PEPOrISAOrPortfolioTransferInstructionV02> for_sese_PEPOrISAOrPortfolioTransferInstructionV02 = new MMConstraint<PEPOrISAOrPortfolioTransferInstructionV02>() {
@@ -112,10 +112,6 @@ public class ConstraintPEPISARule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PEPISATransfer7
 	 * PEPISATransfer7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PEPISARule"</li>
 	 * <li>
@@ -123,6 +119,10 @@ public class ConstraintPEPISARule {
 	 * definition} =
 	 * "If ProductTransfer\\ISA or ProductTransfer\\PEP is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed.\n\nIf ProductTransfer\\ISA or ProductTransfer\\PEP is present then the message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PEPISATransfer7> forPEPISATransfer7 = new MMConstraint<PEPISATransfer7>() {
@@ -146,10 +146,6 @@ public class ConstraintPEPISARule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioInformationV01
 	 * PEPOrISAOrPortfolioInformationV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PEPISARule"</li>
 	 * <li>
@@ -157,6 +153,10 @@ public class ConstraintPEPISARule {
 	 * definition} =
 	 * "If ProductTransfer\\ISA or ProductTransfer\\PEP is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed.\n\nIf ProductTransfer\\ISA or ProductTransfer\\PEP is present then the message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PEPOrISAOrPortfolioInformationV01> for_sese_PEPOrISAOrPortfolioInformationV01 = new MMConstraint<PEPOrISAOrPortfolioInformationV01>() {
@@ -180,10 +180,6 @@ public class ConstraintPEPISARule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferConfirmationV02
 	 * PEPOrISAOrPortfolioTransferConfirmationV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PEPISARule"</li>
 	 * <li>
@@ -191,6 +187,10 @@ public class ConstraintPEPISARule {
 	 * definition} =
 	 * "If ProductTransfer\\ISA or ProductTransfer\\PEP is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed.\n\nIf ProductTransfer\\ISA or ProductTransfer\\PEP is present then the message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PEPOrISAOrPortfolioTransferConfirmationV02> for_sese_PEPOrISAOrPortfolioTransferConfirmationV02 = new MMConstraint<PEPOrISAOrPortfolioTransferConfirmationV02>() {

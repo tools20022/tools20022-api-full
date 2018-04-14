@@ -88,16 +88,16 @@ import java.util.Objects;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "ForeignExchangeSwap"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Combination of two foreign exchange trades, in opposite directions, for different value dates and for the same pair(s) of currencies."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class ForeignExchangeSwap extends TreasuryTrade {
@@ -132,10 +132,6 @@ public class ForeignExchangeSwap extends TreasuryTrade {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeSwap
 	 * ForeignExchangeSwap}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LinkSwapIdentification"</li>
 	 * <li>
@@ -143,6 +139,10 @@ public class ForeignExchangeSwap extends TreasuryTrade {
 	 * definition} =
 	 * "Correlation identification for the near and far leg of a swap transaction."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<ForeignExchangeSwap, Max35Text> mmLinkSwapIdentification = new MMBusinessAttribute<ForeignExchangeSwap, Max35Text>() {
@@ -175,6 +175,11 @@ public class ForeignExchangeSwap extends TreasuryTrade {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} =
+	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade
+	 * ForeignExchangeTrade}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmRelatedSwap
@@ -183,19 +188,10 @@ public class ForeignExchangeSwap extends TreasuryTrade {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} =
-	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade
-	 * ForeignExchangeTrade}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeSwap
 	 * ForeignExchangeSwap}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SwapLeg"</li>
 	 * <li>
@@ -203,6 +199,10 @@ public class ForeignExchangeSwap extends TreasuryTrade {
 	 * definition} =
 	 * "One-side of a pair of foreign exchange trades executed as part of a swap agreement."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<ForeignExchangeSwap, List<ForeignExchangeTrade>> mmSwapLeg = new MMBusinessAssociationEnd<ForeignExchangeSwap, List<ForeignExchangeTrade>>() {

@@ -95,16 +95,16 @@ import java.util.Optional;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "SecuritiesSwapLeg"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Contains the details of one of the legs of a swap, both in time (spot versus [partial] forward details) and the side (sell versus buy)."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class SecuritiesSwapLeg {
@@ -126,10 +126,6 @@ public class SecuritiesSwapLeg {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesSwapLeg
 	 * SecuritiesSwapLeg}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Amount"</li>
 	 * <li>
@@ -137,6 +133,10 @@ public class SecuritiesSwapLeg {
 	 * definition} =
 	 * "Contains the currency and amount of a buy or sell leg of a swap for the spot or the forward."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesSwapLeg, CurrencyAndAmount> mmAmount = new MMBusinessAttribute<SecuritiesSwapLeg, CurrencyAndAmount>() {
@@ -177,10 +177,6 @@ public class SecuritiesSwapLeg {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesSwapLeg
 	 * SecuritiesSwapLeg}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Benchmark"</li>
 	 * <li>
@@ -188,6 +184,10 @@ public class SecuritiesSwapLeg {
 	 * definition} =
 	 * "Contains the benchmark used for a buy or sell leg of a swap for the spot or the forward."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesSwapLeg, BenchmarkCurveNameCode> mmBenchmark = new MMBusinessAttribute<SecuritiesSwapLeg, BenchmarkCurveNameCode>() {
@@ -227,6 +227,11 @@ public class SecuritiesSwapLeg {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesSwapLeg
 	 * SecuritiesSwapLeg}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CurvePoint"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Identifies a point on a benchmark curve."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = FIXSynonym: 222</li>
@@ -234,11 +239,6 @@ public class SecuritiesSwapLeg {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CurvePoint"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Identifies a point on a benchmark curve."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesSwapLeg, Max256Text> mmCurvePoint = new MMBusinessAttribute<SecuritiesSwapLeg, Max256Text>() {
@@ -280,10 +280,6 @@ public class SecuritiesSwapLeg {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesSwapLeg
 	 * SecuritiesSwapLeg}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BenchmarkYield"</li>
 	 * <li>
@@ -291,6 +287,10 @@ public class SecuritiesSwapLeg {
 	 * definition} =
 	 * "Contains the yield against a benchmark for a buy or sell leg of a swap for the spot or the forward."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesSwapLeg, PercentageRate> mmBenchmarkYield = new MMBusinessAttribute<SecuritiesSwapLeg, PercentageRate>() {
@@ -330,10 +330,6 @@ public class SecuritiesSwapLeg {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesSwapLeg
 	 * SecuritiesSwapLeg}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BenchmarkOffset"</li>
 	 * <li>
@@ -341,6 +337,10 @@ public class SecuritiesSwapLeg {
 	 * definition} =
 	 * "Contains the offset in basis points against a benchmark for a buy or sell leg of a swap for the spot or the forward."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesSwapLeg, BaseOneRate> mmBenchmarkOffset = new MMBusinessAttribute<SecuritiesSwapLeg, BaseOneRate>() {
@@ -372,6 +372,11 @@ public class SecuritiesSwapLeg {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} =
+	 * {@linkplain com.tools20022.repository.entity.FinancialInstrumentSwap
+	 * FinancialInstrumentSwap}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.FinancialInstrumentSwap#mmSpotSell
@@ -380,24 +385,19 @@ public class SecuritiesSwapLeg {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} =
-	 * {@linkplain com.tools20022.repository.entity.FinancialInstrumentSwap
-	 * FinancialInstrumentSwap}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesSwapLeg
 	 * SecuritiesSwapLeg}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SpotSellSwap"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Swap for which a spot sell leg is specified."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesSwapLeg, Optional<FinancialInstrumentSwap>> mmSpotSellSwap = new MMBusinessAssociationEnd<SecuritiesSwapLeg, Optional<FinancialInstrumentSwap>>() {
@@ -431,6 +431,11 @@ public class SecuritiesSwapLeg {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} =
+	 * {@linkplain com.tools20022.repository.entity.FinancialInstrumentSwap
+	 * FinancialInstrumentSwap}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.FinancialInstrumentSwap#mmSpotBuy
@@ -439,24 +444,19 @@ public class SecuritiesSwapLeg {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} =
-	 * {@linkplain com.tools20022.repository.entity.FinancialInstrumentSwap
-	 * FinancialInstrumentSwap}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesSwapLeg
 	 * SecuritiesSwapLeg}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SpotBuySwap"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Swap for which a spot buy leg is specified."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesSwapLeg, Optional<FinancialInstrumentSwap>> mmSpotBuySwap = new MMBusinessAssociationEnd<SecuritiesSwapLeg, Optional<FinancialInstrumentSwap>>() {
@@ -490,6 +490,11 @@ public class SecuritiesSwapLeg {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} =
+	 * {@linkplain com.tools20022.repository.entity.FinancialInstrumentSwap
+	 * FinancialInstrumentSwap}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.FinancialInstrumentSwap#mmForwardBuyBack
@@ -498,24 +503,19 @@ public class SecuritiesSwapLeg {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} =
-	 * {@linkplain com.tools20022.repository.entity.FinancialInstrumentSwap
-	 * FinancialInstrumentSwap}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesSwapLeg
 	 * SecuritiesSwapLeg}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ForwardBuyBackSwap"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Swap for which a forward buy back leg is specified."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesSwapLeg, Optional<FinancialInstrumentSwap>> mmForwardBuyBackSwap = new MMBusinessAssociationEnd<SecuritiesSwapLeg, Optional<FinancialInstrumentSwap>>() {
@@ -549,6 +549,11 @@ public class SecuritiesSwapLeg {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} =
+	 * {@linkplain com.tools20022.repository.entity.FinancialInstrumentSwap
+	 * FinancialInstrumentSwap}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.FinancialInstrumentSwap#mmForwardSellBack
@@ -557,24 +562,19 @@ public class SecuritiesSwapLeg {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} =
-	 * {@linkplain com.tools20022.repository.entity.FinancialInstrumentSwap
-	 * FinancialInstrumentSwap}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesSwapLeg
 	 * SecuritiesSwapLeg}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ForwardSellBackSwap"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Swap for which a forward sell back leg is specified."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesSwapLeg, Optional<FinancialInstrumentSwap>> mmForwardSellBackSwap = new MMBusinessAssociationEnd<SecuritiesSwapLeg, Optional<FinancialInstrumentSwap>>() {

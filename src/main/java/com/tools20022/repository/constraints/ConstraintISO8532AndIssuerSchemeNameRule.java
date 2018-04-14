@@ -37,10 +37,6 @@ public class ConstraintISO8532AndIssuerSchemeNameRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesCertificate4
 	 * SecuritiesCertificate4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ISO8532AndIssuerSchemeNameRule"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintISO8532AndIssuerSchemeNameRule {
 	 * definition} =
 	 * "If Number is ISO 8532 (Format for transmission of certificate numbers), then Issuer and SchemeName must not be used."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -77,10 +77,6 @@ public class ConstraintISO8532AndIssuerSchemeNameRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesCertificate1
 	 * SecuritiesCertificate1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ISO8532AndIssuerSchemeNameRule"</li>
 	 * <li>
@@ -88,6 +84,10 @@ public class ConstraintISO8532AndIssuerSchemeNameRule {
 	 * definition} =
 	 * "If Number is ISO 8532 (Format for transmission of certificate numbers), then Issuer and SchemeName must not be used."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -120,10 +120,6 @@ public class ConstraintISO8532AndIssuerSchemeNameRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesCertificate2
 	 * SecuritiesCertificate2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ISO8532AndIssuerSchemeNameRule"</li>
 	 * <li>
@@ -131,6 +127,10 @@ public class ConstraintISO8532AndIssuerSchemeNameRule {
 	 * definition} =
 	 * "If Number is ISO 8532 (Format for transmission of certificate numbers), then Issuer and SchemeName must not be used."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesCertificate2> forSecuritiesCertificate2 = new MMConstraint<SecuritiesCertificate2>() {
@@ -154,10 +154,6 @@ public class ConstraintISO8532AndIssuerSchemeNameRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesCertificate5
 	 * SecuritiesCertificate5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ISO8532AndIssuerSchemeNameRule"</li>
 	 * <li>
@@ -165,6 +161,10 @@ public class ConstraintISO8532AndIssuerSchemeNameRule {
 	 * definition} =
 	 * "If Number is ISO 8532 (Format for transmission of certificate numbers), then Issuer and SchemeName must not be used."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesCertificate5> forSecuritiesCertificate5 = new MMConstraint<SecuritiesCertificate5>() {
@@ -188,10 +188,6 @@ public class ConstraintISO8532AndIssuerSchemeNameRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesCertificate3
 	 * SecuritiesCertificate3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ISO8532AndIssuerSchemeNameRule"</li>
 	 * <li>
@@ -199,6 +195,10 @@ public class ConstraintISO8532AndIssuerSchemeNameRule {
 	 * definition} =
 	 * "If Number is ISO 8532 (Format for transmission of certificate numbers), then Issuer and SchemeName must not be used."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesCertificate3> forSecuritiesCertificate3 = new MMConstraint<SecuritiesCertificate3>() {

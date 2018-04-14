@@ -39,10 +39,6 @@ public class ConstraintCorporateActionEventIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV05
 	 * CorporateActionInstructionV05}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CorporateActionEventIdentificationRule"</li>
 	 * <li>
@@ -50,6 +46,10 @@ public class ConstraintCorporateActionEventIdentificationRule {
 	 * definition} =
 	 * "If the CorporateActionInstruction message is unsolicited (that is, this instruction has not been preceded by an CorporateActionNotification), then, CorporateActionGeneralInformation/CorporateActionEventIdentification must be NONREF."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -90,10 +90,6 @@ public class ConstraintCorporateActionEventIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV06
 	 * CorporateActionInstructionV06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CorporateActionEventIdentificationRule"</li>
 	 * <li>
@@ -101,6 +97,10 @@ public class ConstraintCorporateActionEventIdentificationRule {
 	 * definition} =
 	 * "If the CorporateActionInstruction message is unsolicited (that is, this instruction has not been preceded by an CorporateActionNotification), then, CorporateActionGeneralInformation/CorporateActionEventIdentification must be NONREF."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -141,10 +141,6 @@ public class ConstraintCorporateActionEventIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestV04
 	 * CorporateActionInstructionCancellationRequestV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CorporateActionEventIdentificationRule"</li>
 	 * <li>
@@ -152,6 +148,10 @@ public class ConstraintCorporateActionEventIdentificationRule {
 	 * definition} =
 	 * "If the CorporateActionInstruction message was unsolicited (that is, this instruction has not been preceded by a CorporateActionNotification), then, CorporateActionGeneralInformation/CorporateActionEventIdentification must be NONREF."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -185,10 +185,6 @@ public class ConstraintCorporateActionEventIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestV02
 	 * CorporateActionInstructionCancellationRequestV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CorporateActionEventIdentificationRule"</li>
 	 * <li>
@@ -196,6 +192,10 @@ public class ConstraintCorporateActionEventIdentificationRule {
 	 * definition} =
 	 * "If the CorporateActionInstruction message was unsolicited (that is, this instruction has not been preceded by a CorporateActionNotification), then, CorporateActionGeneralInformation/CorporateActionEventIdentification must be NONREF."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionInstructionCancellationRequestV02> for_seev_CorporateActionInstructionCancellationRequestV02 = new MMConstraint<CorporateActionInstructionCancellationRequestV02>() {
@@ -219,10 +219,6 @@ public class ConstraintCorporateActionEventIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestV03
 	 * CorporateActionInstructionCancellationRequestV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CorporateActionEventIdentificationRule"</li>
 	 * <li>
@@ -230,6 +226,10 @@ public class ConstraintCorporateActionEventIdentificationRule {
 	 * definition} =
 	 * "If the CorporateActionInstruction message was unsolicited (that is, this instruction has not been preceded by a CorporateActionNotification), then, CorporateActionGeneralInformation/CorporateActionEventIdentification must be NONREF."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionInstructionCancellationRequestV03> for_seev_CorporateActionInstructionCancellationRequestV03 = new MMConstraint<CorporateActionInstructionCancellationRequestV03>() {
@@ -253,10 +253,6 @@ public class ConstraintCorporateActionEventIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV03
 	 * CorporateActionInstructionV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CorporateActionEventIdentificationRule"</li>
 	 * <li>
@@ -264,6 +260,10 @@ public class ConstraintCorporateActionEventIdentificationRule {
 	 * definition} =
 	 * "If the CorporateActionInstruction message is unsolicited (that is, this instruction has not been preceded by an CorporateActionNotification), then, CorporateActionGeneralInformation/CorporateActionEventIdentification must be NONREF."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionInstructionV03> for_seev_CorporateActionInstructionV03 = new MMConstraint<CorporateActionInstructionV03>() {
@@ -287,10 +287,6 @@ public class ConstraintCorporateActionEventIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestV07
 	 * CorporateActionInstructionCancellationRequestV07}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CorporateActionEventIdentificationRule"</li>
 	 * <li>
@@ -298,6 +294,10 @@ public class ConstraintCorporateActionEventIdentificationRule {
 	 * definition} =
 	 * "If the CorporateActionInstruction message was unsolicited (that is, this instruction has not been preceded by a CorporateActionNotification), then, CorporateActionGeneralInformation/CorporateActionEventIdentification must be NONREF."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -328,10 +328,6 @@ public class ConstraintCorporateActionEventIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV02
 	 * CorporateActionInstructionV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CorporateActionEventIdentificationRule"</li>
 	 * <li>
@@ -339,6 +335,10 @@ public class ConstraintCorporateActionEventIdentificationRule {
 	 * definition} =
 	 * "If the CorporateActionInstruction message is unsolicited (that is, this instruction has not been preceded by an CorporateActionNotification), then, CorporateActionGeneralInformation/CorporateActionEventIdentification must be NONREF."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionInstructionV02> for_seev_CorporateActionInstructionV02 = new MMConstraint<CorporateActionInstructionV02>() {
@@ -362,10 +362,6 @@ public class ConstraintCorporateActionEventIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstruction002V06
 	 * CorporateActionInstruction002V06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CorporateActionEventIdentificationRule"</li>
 	 * <li>
@@ -373,6 +369,10 @@ public class ConstraintCorporateActionEventIdentificationRule {
 	 * definition} =
 	 * "If the CorporateActionInstruction message is unsolicited (that is, this instruction has not been preceded by an CorporateActionNotification), then, CorporateActionGeneralInformation/CorporateActionEventIdentification must be NONREF."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionInstruction002V06> for_seev_CorporateActionInstruction002V06 = new MMConstraint<CorporateActionInstruction002V06>() {
@@ -396,10 +396,6 @@ public class ConstraintCorporateActionEventIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequest002V07
 	 * CorporateActionInstructionCancellationRequest002V07}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CorporateActionEventIdentificationRule"</li>
 	 * <li>
@@ -407,6 +403,10 @@ public class ConstraintCorporateActionEventIdentificationRule {
 	 * definition} =
 	 * "If the CorporateActionInstruction message was unsolicited (that is, this instruction has not been preceded by a CorporateActionNotification), then, CorporateActionGeneralInformation/CorporateActionEventIdentification must be NONREF."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionInstructionCancellationRequest002V07> for_seev_CorporateActionInstructionCancellationRequest002V07 = new MMConstraint<CorporateActionInstructionCancellationRequest002V07>() {
@@ -430,10 +430,6 @@ public class ConstraintCorporateActionEventIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV04
 	 * CorporateActionInstructionV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CorporateActionEventIdentificationRule"</li>
 	 * <li>
@@ -441,6 +437,10 @@ public class ConstraintCorporateActionEventIdentificationRule {
 	 * definition} =
 	 * "If the CorporateActionInstruction message is unsolicited (that is, this instruction has not been preceded by an CorporateActionNotification), then, CorporateActionGeneralInformation/CorporateActionEventIdentification must be NONREF."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -474,10 +474,6 @@ public class ConstraintCorporateActionEventIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV01
 	 * CorporateActionInstructionV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CorporateActionEventIdentificationRule"</li>
 	 * <li>
@@ -485,6 +481,10 @@ public class ConstraintCorporateActionEventIdentificationRule {
 	 * definition} =
 	 * "If the CorporateActionInstruction message is unsolicited (that is, this instruction has not been preceded by an CorporateActionNotification), then, CorporateActionGeneralInformation/CorporateActionEventIdentification must be NONREF."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionInstructionV01> for_seev_CorporateActionInstructionV01 = new MMConstraint<CorporateActionInstructionV01>() {
@@ -508,10 +508,6 @@ public class ConstraintCorporateActionEventIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestV01
 	 * CorporateActionInstructionCancellationRequestV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CorporateActionEventIdentificationRule"</li>
 	 * <li>
@@ -519,6 +515,10 @@ public class ConstraintCorporateActionEventIdentificationRule {
 	 * definition} =
 	 * "If the CorporateActionInstruction message was unsolicited (that is, this instruction has not been preceded by a CorporateActionNotification), then, CorporateActionGeneralInformation/CorporateActionEventIdentification must be NONREF."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionInstructionCancellationRequestV01> for_seev_CorporateActionInstructionCancellationRequestV01 = new MMConstraint<CorporateActionInstructionCancellationRequestV01>() {
@@ -542,10 +542,6 @@ public class ConstraintCorporateActionEventIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV07
 	 * CorporateActionInstructionV07}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CorporateActionEventIdentificationRule"</li>
 	 * <li>
@@ -553,6 +549,10 @@ public class ConstraintCorporateActionEventIdentificationRule {
 	 * definition} =
 	 * "If the CorporateActionInstruction message is unsolicited (that is, this instruction has not been preceded by an CorporateActionNotification), then, CorporateActionGeneralInformation/CorporateActionEventIdentification must be NONREF."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -593,10 +593,6 @@ public class ConstraintCorporateActionEventIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestV05
 	 * CorporateActionInstructionCancellationRequestV05}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CorporateActionEventIdentificationRule"</li>
 	 * <li>
@@ -604,6 +600,10 @@ public class ConstraintCorporateActionEventIdentificationRule {
 	 * definition} =
 	 * "If the CorporateActionInstruction message was unsolicited (that is, this instruction has not been preceded by a CorporateActionNotification), then, CorporateActionGeneralInformation/CorporateActionEventIdentification must be NONREF."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -644,10 +644,6 @@ public class ConstraintCorporateActionEventIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestV06
 	 * CorporateActionInstructionCancellationRequestV06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CorporateActionEventIdentificationRule"</li>
 	 * <li>
@@ -655,6 +651,10 @@ public class ConstraintCorporateActionEventIdentificationRule {
 	 * definition} =
 	 * "If the CorporateActionInstruction message was unsolicited (that is, this instruction has not been preceded by a CorporateActionNotification), then, CorporateActionGeneralInformation/CorporateActionEventIdentification must be NONREF."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -695,10 +695,6 @@ public class ConstraintCorporateActionEventIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV08
 	 * CorporateActionInstructionV08}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CorporateActionEventIdentificationRule"</li>
 	 * <li>
@@ -706,6 +702,10 @@ public class ConstraintCorporateActionEventIdentificationRule {
 	 * definition} =
 	 * "If the CorporateActionInstruction message is unsolicited (that is, this instruction has not been preceded by an CorporateActionNotification), then, CorporateActionGeneralInformation/CorporateActionEventIdentification must be NONREF."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -736,10 +736,6 @@ public class ConstraintCorporateActionEventIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstruction002V08
 	 * CorporateActionInstruction002V08}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CorporateActionEventIdentificationRule"</li>
 	 * <li>
@@ -747,6 +743,10 @@ public class ConstraintCorporateActionEventIdentificationRule {
 	 * definition} =
 	 * "If the CorporateActionInstruction message is unsolicited (that is, this instruction has not been preceded by an CorporateActionNotification), then, CorporateActionGeneralInformation/CorporateActionEventIdentification must be NONREF."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionInstruction002V08> for_seev_CorporateActionInstruction002V08 = new MMConstraint<CorporateActionInstruction002V08>() {

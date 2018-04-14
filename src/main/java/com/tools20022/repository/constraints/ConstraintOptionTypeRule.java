@@ -38,10 +38,6 @@ public class ConstraintOptionTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV05
 	 * CorporateActionInstructionV05}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionTypeRule"</li>
 	 * <li>
@@ -49,6 +45,10 @@ public class ConstraintOptionTypeRule {
 	 * definition} =
 	 * "If CorporateActionInstruction/OptionType/Code value is TAXI, then at least one occurrence of BeneficialOwnerDetails must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -87,10 +87,6 @@ public class ConstraintOptionTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV06
 	 * CorporateActionInstructionV06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionTypeRule"</li>
 	 * <li>
@@ -98,6 +94,10 @@ public class ConstraintOptionTypeRule {
 	 * definition} =
 	 * "If CorporateActionInstruction/OptionType/Code value is TAXI (Tax Instruction), then at least one occurrence of BeneficialOwnerDetails must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -136,10 +136,6 @@ public class ConstraintOptionTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption18
 	 * CorporateActionOption18}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionTypeRule"</li>
 	 * <li>
@@ -147,6 +143,10 @@ public class ConstraintOptionTypeRule {
 	 * definition} =
 	 * "If for an exercise of warrants or an exercise of rights, the proceeds are known, the more precise OptionType/Code values like CASH, SECU, CASE or NOAC must be used. \r\nIf the proceeds are at issuer choice, ie, the proceeds are not known upfront, then OptionType/Code EXER must be used."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption18> forCorporateActionOption18 = new MMConstraint<CorporateActionOption18>() {
@@ -170,10 +170,6 @@ public class ConstraintOptionTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption12
 	 * CorporateActionOption12}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionTypeRule"</li>
 	 * <li>
@@ -181,6 +177,10 @@ public class ConstraintOptionTypeRule {
 	 * definition} =
 	 * "If for an exercise of warrants or an exercise of rights, the proceeds are known, the more precise OptionType/Code values like CASH, SECU, CASE or NOAC must be used. \r\nIf the proceeds are at issuer choice, ie, the proceeds are not known upfront, then OptionType/Code EXER must be used."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption12> forCorporateActionOption12 = new MMConstraint<CorporateActionOption12>() {
@@ -204,10 +204,6 @@ public class ConstraintOptionTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption15
 	 * CorporateActionOption15}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionTypeRule"</li>
 	 * <li>
@@ -215,6 +211,10 @@ public class ConstraintOptionTypeRule {
 	 * definition} =
 	 * "If for an exercise of warrants or an exercise of rights, the proceeds are known, the more precise OptionType/Code values like CASH, SECU, CASE or NOAC must be used. \r\nIf the proceeds are at issuer choice, ie, the proceeds are not known upfront, then OptionType/Code EXER must be used."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption15> forCorporateActionOption15 = new MMConstraint<CorporateActionOption15>() {
@@ -238,10 +238,6 @@ public class ConstraintOptionTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption6
 	 * CorporateActionOption6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionTypeRule"</li>
 	 * <li>
@@ -249,6 +245,10 @@ public class ConstraintOptionTypeRule {
 	 * definition} =
 	 * "If for an exercise of warrants or an exercise of rights, the proceeds are known, the more precise OptionType/Code values like CASH, SECU, CASE or NOAC must be used. \r\nIf the proceeds are at issuer choice, ie, the proceeds are not known upfront, then OptionType/Code EXER must be used."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption6> forCorporateActionOption6 = new MMConstraint<CorporateActionOption6>() {
@@ -272,10 +272,6 @@ public class ConstraintOptionTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption17
 	 * CorporateActionOption17}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionTypeRule"</li>
 	 * <li>
@@ -283,6 +279,10 @@ public class ConstraintOptionTypeRule {
 	 * definition} =
 	 * "If for an exercise of warrants or an exercise of rights, the proceeds are known, the more precise OptionType/Code values like CASH, SECU, CASE or NOAC must be used. \r\nIf the proceeds are at issuer choice, ie, the proceeds are not known upfront, then OptionType/Code EXER must be used."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption17> forCorporateActionOption17 = new MMConstraint<CorporateActionOption17>() {
@@ -306,10 +306,6 @@ public class ConstraintOptionTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV03
 	 * CorporateActionInstructionV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionTypeRule"</li>
 	 * <li>
@@ -317,6 +313,10 @@ public class ConstraintOptionTypeRule {
 	 * definition} =
 	 * "If CorporateActionInstruction/OptionType/Code value is TAXI, then at least one occurrence of BeneficialOwnerDetails must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionInstructionV03> for_seev_CorporateActionInstructionV03 = new MMConstraint<CorporateActionInstructionV03>() {
@@ -340,10 +340,6 @@ public class ConstraintOptionTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption3
 	 * CorporateActionOption3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionTypeRule"</li>
 	 * <li>
@@ -351,6 +347,10 @@ public class ConstraintOptionTypeRule {
 	 * definition} =
 	 * "If for an exercise of warrants or an exercise of rights, the proceeds are known, the more precise OptionType/Code values like CASH, SECU, CASE or NOAC must be used. \r\nIf the proceeds are at issuer choice, ie, the proceeds are not known upfront, then OptionType/Code EXER must be used."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption3> forCorporateActionOption3 = new MMConstraint<CorporateActionOption3>() {
@@ -374,10 +374,6 @@ public class ConstraintOptionTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV02
 	 * CorporateActionInstructionV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionTypeRule"</li>
 	 * <li>
@@ -385,6 +381,10 @@ public class ConstraintOptionTypeRule {
 	 * definition} =
 	 * "If CorporateActionInstruction/OptionType/Code value is TAXI, then at least one occurrence of BeneficialOwnerDetails must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionInstructionV02> for_seev_CorporateActionInstructionV02 = new MMConstraint<CorporateActionInstructionV02>() {
@@ -408,10 +408,6 @@ public class ConstraintOptionTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstruction002V06
 	 * CorporateActionInstruction002V06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionTypeRule"</li>
 	 * <li>
@@ -419,6 +415,10 @@ public class ConstraintOptionTypeRule {
 	 * definition} =
 	 * "If CorporateActionInstruction/OptionType/Code value is TAXI (Tax Instruction), then at least one occurrence of BeneficialOwnerDetails must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionInstruction002V06> for_seev_CorporateActionInstruction002V06 = new MMConstraint<CorporateActionInstruction002V06>() {
@@ -442,10 +442,6 @@ public class ConstraintOptionTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV04
 	 * CorporateActionInstructionV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionTypeRule"</li>
 	 * <li>
@@ -453,6 +449,10 @@ public class ConstraintOptionTypeRule {
 	 * definition} =
 	 * "If CorporateActionInstruction/OptionType/Code value is TAXI, then at least one occurrence of BeneficialOwnerDetails must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -485,10 +485,6 @@ public class ConstraintOptionTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV01
 	 * CorporateActionInstructionV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionTypeRule"</li>
 	 * <li>
@@ -496,6 +492,10 @@ public class ConstraintOptionTypeRule {
 	 * definition} =
 	 * "If CorporateActionInstruction/OptionType/Code value is TAXI, then at least one occurrence of BeneficialOwnerDetails must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionInstructionV01> for_seev_CorporateActionInstructionV01 = new MMConstraint<CorporateActionInstructionV01>() {
@@ -519,10 +519,6 @@ public class ConstraintOptionTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption9
 	 * CorporateActionOption9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionTypeRule"</li>
 	 * <li>
@@ -530,6 +526,10 @@ public class ConstraintOptionTypeRule {
 	 * definition} =
 	 * "If for an exercise of warrants or an exercise of rights, the proceeds are known, the more precise OptionType/Code values like CASH, SECU, CASE or NOAC must be used. \r\nIf the proceeds are at issuer choice, ie, the proceeds are not known upfront, then OptionType/Code EXER must be used."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption9> forCorporateActionOption9 = new MMConstraint<CorporateActionOption9>() {
@@ -553,10 +553,6 @@ public class ConstraintOptionTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV07
 	 * CorporateActionInstructionV07}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionTypeRule"</li>
 	 * <li>
@@ -564,6 +560,10 @@ public class ConstraintOptionTypeRule {
 	 * definition} =
 	 * "If CorporateActionInstruction/OptionType/Code value is TAXI (Tax Instruction), then at least one occurrence of BeneficialOwnerDetails must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -602,10 +602,6 @@ public class ConstraintOptionTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption16
 	 * CorporateActionOption16}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionTypeRule"</li>
 	 * <li>
@@ -613,6 +609,10 @@ public class ConstraintOptionTypeRule {
 	 * definition} =
 	 * "If for an exercise of warrants or an exercise of rights, the proceeds are known, the more precise OptionType/Code values like CASH, SECU, CASE or NOAC must be used. \r\nIf the proceeds are at issuer choice, ie, the proceeds are not known upfront, then OptionType/Code EXER must be used."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption16> forCorporateActionOption16 = new MMConstraint<CorporateActionOption16>() {
@@ -636,10 +636,6 @@ public class ConstraintOptionTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption4
 	 * CorporateActionOption4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionTypeRule"</li>
 	 * <li>
@@ -647,6 +643,10 @@ public class ConstraintOptionTypeRule {
 	 * definition} =
 	 * "If for an exercise of warrants or an exercise of rights, the proceeds are known, the more precise OptionType/Code values like CASH, SECU, CASE or NOAC must be used. \r\nIf the proceeds are at issuer choice, ie, the proceeds are not known upfront, then OptionType/Code EXER must be used."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption4> forCorporateActionOption4 = new MMConstraint<CorporateActionOption4>() {
@@ -670,10 +670,6 @@ public class ConstraintOptionTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption7
 	 * CorporateActionOption7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionTypeRule"</li>
 	 * <li>
@@ -681,6 +677,10 @@ public class ConstraintOptionTypeRule {
 	 * definition} =
 	 * "If for an exercise of warrants or an exercise of rights, the proceeds are known, the more precise OptionType/Code values like CASH, SECU, CASE or NOAC must be used. \r\nIf the proceeds are at issuer choice, ie, the proceeds are not known upfront, then OptionType/Code EXER must be used."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption7> forCorporateActionOption7 = new MMConstraint<CorporateActionOption7>() {
@@ -704,10 +704,6 @@ public class ConstraintOptionTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionAdviceV01
 	 * AgentCAElectionAdviceV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionTypeRule"</li>
 	 * <li>
@@ -715,6 +711,10 @@ public class ConstraintOptionTypeRule {
 	 * definition} =
 	 * "If ElectionDetails/OptionType is present, then OptionType is not allowed in any occurrences of ElectionDetails/SecuritiesMovementDetails/DebitAccountDetails and/or ElectionDetails/SecuritiesMovementDetails/CreditAccountDetails.\n\nIf ElectionDetails/SecuritiesMovementDetails/DebitAccountDetails/OptionType is present at least once and/or ElectionDetails/SecuritiesMovementDetails/CreditAccountDetails/OptionType is present at least once then ElectionDetails/CorporateActionOptionType is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AgentCAElectionAdviceV01> for_seev_AgentCAElectionAdviceV01 = new MMConstraint<AgentCAElectionAdviceV01>() {
@@ -738,10 +738,6 @@ public class ConstraintOptionTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption10
 	 * CorporateActionOption10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionTypeRule"</li>
 	 * <li>
@@ -749,6 +745,10 @@ public class ConstraintOptionTypeRule {
 	 * definition} =
 	 * "If for an exercise of warrants or an exercise of rights, the proceeds are known, the more precise OptionType/Code values like CASH, SECU, CASE or NOAC must be used. \r\nIf the proceeds are at issuer choice, ie, the proceeds are not known upfront, then OptionType/Code EXER must be used."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption10> forCorporateActionOption10 = new MMConstraint<CorporateActionOption10>() {
@@ -772,10 +772,6 @@ public class ConstraintOptionTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV08
 	 * CorporateActionInstructionV08}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionTypeRule"</li>
 	 * <li>
@@ -783,6 +779,10 @@ public class ConstraintOptionTypeRule {
 	 * definition} =
 	 * "If CorporateActionInstruction/OptionType/Code value is TAXI (Tax Instruction), then at least one occurrence of BeneficialOwnerDetails must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -812,10 +812,6 @@ public class ConstraintOptionTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstruction002V08
 	 * CorporateActionInstruction002V08}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionTypeRule"</li>
 	 * <li>
@@ -823,6 +819,10 @@ public class ConstraintOptionTypeRule {
 	 * definition} =
 	 * "If CorporateActionInstruction/OptionType/Code value is TAXI (Tax Instruction), then at least one occurrence of BeneficialOwnerDetails must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionInstruction002V08> for_seev_CorporateActionInstruction002V08 = new MMConstraint<CorporateActionInstruction002V08>() {
@@ -846,10 +846,6 @@ public class ConstraintOptionTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption14
 	 * CorporateActionOption14}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionTypeRule"</li>
 	 * <li>
@@ -857,6 +853,10 @@ public class ConstraintOptionTypeRule {
 	 * definition} =
 	 * "If for an exercise of warrants or an exercise of rights, the proceeds are known, the more precise OptionType/Code values like CASH, SECU, CASE or NOAC must be used. \r\nIf the proceeds are at issuer choice, ie, the proceeds are not known upfront, then OptionType/Code EXER must be used."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption14> forCorporateActionOption14 = new MMConstraint<CorporateActionOption14>() {

@@ -53,14 +53,14 @@ import java.util.Objects;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "SecuritiesBlockingDeadline"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Date by which the securities should be blocked."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class SecuritiesBlockingDeadline extends Deadline {
@@ -108,10 +108,6 @@ public class SecuritiesBlockingDeadline extends Deadline {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesBlockingDeadline
 	 * SecuritiesBlockingDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BlockingPeriod"</li>
 	 * <li>
@@ -119,6 +115,10 @@ public class SecuritiesBlockingDeadline extends Deadline {
 	 * definition} =
 	 * "Period during which the securities are blocked, ie, not available for exchange."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesBlockingDeadline, DateTimePeriod> mmBlockingPeriod = new MMBusinessAttribute<SecuritiesBlockingDeadline, DateTimePeriod>() {

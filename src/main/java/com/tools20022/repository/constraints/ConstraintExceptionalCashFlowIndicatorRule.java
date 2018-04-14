@@ -38,10 +38,6 @@ public class ConstraintExceptionalCashFlowIndicatorRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FundCashForecast7
 	 * FundCashForecast7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ExceptionalCashFlowIndicatorRule"</li>
 	 * <li>
@@ -49,6 +45,10 @@ public class ConstraintExceptionalCashFlowIndicatorRule {
 	 * definition} =
 	 * "If Exceptional NetCashFlow Indicator is \"true\" or \"1\" (Yes), then CashInForecastDetails/ExceptionalCashFlowIndicator and CashOutForecastDetails/ ExceptionalCashFlowIndicator must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -78,10 +78,6 @@ public class ConstraintExceptionalCashFlowIndicatorRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FundCashForecast3
 	 * FundCashForecast3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ExceptionalCashFlowIndicatorRule"</li>
 	 * <li>
@@ -89,6 +85,10 @@ public class ConstraintExceptionalCashFlowIndicatorRule {
 	 * definition} =
 	 * "If Exceptional NetCashFlow Indicator is \"true\" or \"1\" (Yes), then CashInForecastDetails/ExceptionalCashFlowIndicator and CashOutForecastDetails/ ExceptionalCashFlowIndicator must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -121,10 +121,6 @@ public class ConstraintExceptionalCashFlowIndicatorRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.EstimatedFundCashForecast5
 	 * EstimatedFundCashForecast5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ExceptionalCashFlowIndicatorRule"</li>
 	 * <li>
@@ -132,6 +128,10 @@ public class ConstraintExceptionalCashFlowIndicatorRule {
 	 * definition} =
 	 * "If ExceptionalNetCashFlowIndicator is \"true\" or \"1\" (Yes), then at least one or more of the following must be present:\r\nBreakdownByParty/CashInForecast/ExceptionalCashFlowIndicator, or\r\nBreakdownByParty/CashOutForecast/ExceptionalCashFlowIndicator, or\r\nBreakdownByCountry/CashInForecast/ExceptionalCashFlowIndicator, or\r\nBreakdownByCountry/CashOutForecast/ExceptionalCashFlowIndicator, or\r\nBreakdownByCurrency/CashInForecast/ExceptionalCashFlowIndicator, or\r\nBreakdownByCurrency/CashOutForecast/ExceptionalCashFlowIndicator, or\r\nBreakdownByUserDefinedParameter/CashInForecast/ExceptionalCashFlowIndicator, or\r\nBreakdownByUserDefinedParameter/CashOutForecast/ExceptionalCashFlowIndicator."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -162,10 +162,6 @@ public class ConstraintExceptionalCashFlowIndicatorRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.EstimatedFundCashForecast2
 	 * EstimatedFundCashForecast2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ExceptionalCashFlowIndicatorRule"</li>
 	 * <li>
@@ -173,6 +169,10 @@ public class ConstraintExceptionalCashFlowIndicatorRule {
 	 * definition} =
 	 * "If Exceptional NetCashFlowIndicator is \"true\" or \"1\" (Yes), then either SortingCriteriaDetails/ForecastBreakdownDetails/EstimatedCashInForecastDetails/ExceptionalCashFlowIndicator or SortingCriteriaDetails/ForecastBreakdownDetails/EstimatedCashOutForecastDetails/ExceptionalCashFlowIndicator, or both, must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<EstimatedFundCashForecast2> forEstimatedFundCashForecast2 = new MMConstraint<EstimatedFundCashForecast2>() {
@@ -196,10 +196,6 @@ public class ConstraintExceptionalCashFlowIndicatorRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FundCashForecast6
 	 * FundCashForecast6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ExceptionalCashFlowIndicatorRule"</li>
 	 * <li>
@@ -207,6 +203,10 @@ public class ConstraintExceptionalCashFlowIndicatorRule {
 	 * definition} =
 	 * "If ExceptionalNetCashFlowIndicator is \"true\" or \"1\" (Yes), then at least one or more of the following must be present:\r\nBreakdownByParty/CashInForecast/ExceptionalCashFlowIndicator, or\r\nBreakdownByParty/CashOutForecast/ExceptionalCashFlowIndicator, or\r\nBreakdownByCountry/CashInForecast/ExceptionalCashFlowIndicator, or\r\nBreakdownByCountry/CashOutForecast/ExceptionalCashFlowIndicator, or\r\nBreakdownByCurrency/CashInForecast/ExceptionalCashFlowIndicator, or\r\nBreakdownByCurrency/CashOutForecast/ExceptionalCashFlowIndicator, or\r\nBreakdownByUserDefinedParameter/CashInForecast/ExceptionalCashFlowIndicator, or\r\nBreakdownByUserDefinedParameter/CashOutForecast/ExceptionalCashFlowIndicator.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -236,10 +236,6 @@ public class ConstraintExceptionalCashFlowIndicatorRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.EstimatedFundCashForecast6
 	 * EstimatedFundCashForecast6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ExceptionalCashFlowIndicatorRule"</li>
 	 * <li>
@@ -247,6 +243,10 @@ public class ConstraintExceptionalCashFlowIndicatorRule {
 	 * definition} =
 	 * "If Exceptional NetCashFlowIndicator is \"true\" or \"1\" (Yes), then either EstimatedCashInForecastDetails/ExceptionalCashFlowIndicator or EstimatedCashOutForecastDetails/ExceptionalCashFlowIndicator must be present. Both may be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -277,10 +277,6 @@ public class ConstraintExceptionalCashFlowIndicatorRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FundCashForecast4
 	 * FundCashForecast4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ExceptionalCashFlowIndicatorRule"</li>
 	 * <li>
@@ -288,6 +284,10 @@ public class ConstraintExceptionalCashFlowIndicatorRule {
 	 * definition} =
 	 * "If ExceptionalNetCashFlowIndicator is \"true\" or \"1\" (Yes), then one of the following must be present: \nBreakdownByParty/CashInForecast/ExceptionalCashFlowIndicator, or\nBreakdownByParty/CashOutForecast/ExceptionalCashFlowIndicator, or\nBreakdownByCountry/CashInForecast/ExceptionalCashFlowIndicator, or\nBreakdownByCountry/CashOutForecast/ExceptionalCashFlowIndicator, or\nBreakdownByCurrency/CashInForecast/ExceptionalCashFlowIndicator, or\nBreakdownByCurrency/CashOutForecast/ExceptionalCashFlowIndicator, or\nBreakdownByUserDefinedParameter/CashInForecast/ExceptionalCashFlowIndicator, or\nBreakdownByUserDefinedParameter/CashOutForecast/ExceptionalCashFlowIndicator."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -320,10 +320,6 @@ public class ConstraintExceptionalCashFlowIndicatorRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.EstimatedFundCashForecast4
 	 * EstimatedFundCashForecast4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ExceptionalCashFlowIndicatorRule"</li>
 	 * <li>
@@ -331,6 +327,10 @@ public class ConstraintExceptionalCashFlowIndicatorRule {
 	 * definition} =
 	 * "If ExceptionalNetCashFlowIndicator is \"true\" or \"1\" (Yes), then one of the following must be present: \nBreakdownByParty/CashInForecast/ExceptionalCashFlowIndicator, or\nBreakdownByParty/CashOutForecast/ExceptionalCashFlowIndicator, or\nBreakdownByCountry/CashInForecast/ExceptionalCashFlowIndicator, or\nBreakdownByCountry/CashOutForecast/ExceptionalCashFlowIndicator, or\nBreakdownByCurrency/CashInForecast/ExceptionalCashFlowIndicator, or\nBreakdownByCurrency/CashOutForecast/ExceptionalCashFlowIndicator, or\nBreakdownByUserDefinedParameter/CashInForecast/ExceptionalCashFlowIndicator, or\nBreakdownByUserDefinedParameter/CashOutForecast/ExceptionalCashFlowIndicator."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -364,10 +364,6 @@ public class ConstraintExceptionalCashFlowIndicatorRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FundCashForecast2
 	 * FundCashForecast2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ExceptionalCashFlowIndicatorRule"</li>
 	 * <li>
@@ -375,6 +371,10 @@ public class ConstraintExceptionalCashFlowIndicatorRule {
 	 * definition} =
 	 * "If ExceptionalNetCashFlowIndicator is \"true\" or \"1\" (Yes), then either SortingCriteriaDetails/ForecastBreakdownDetails/CashInForecastDetails/ExceptionalCashFlowIndicator or SortingCriteriaDetails/ForecastBreakdownDetails/CashOutForecastDetails/ExceptionalCashFlowIndicator, or both, must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FundCashForecast2> forFundCashForecast2 = new MMConstraint<FundCashForecast2>() {
@@ -398,10 +398,6 @@ public class ConstraintExceptionalCashFlowIndicatorRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.EstimatedFundCashForecast3
 	 * EstimatedFundCashForecast3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ExceptionalCashFlowIndicatorRule"</li>
 	 * <li>
@@ -409,6 +405,10 @@ public class ConstraintExceptionalCashFlowIndicatorRule {
 	 * definition} =
 	 * "If Exceptional NetCashFlowIndicator is \"true\" or \"1\" (Yes), then either EstimatedCashInForecastDetails/ExceptionalCashFlowIndicator and EstimatedCashOutForecastDetails/ExceptionalCashFlowIndicator, or both, must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -442,10 +442,6 @@ public class ConstraintExceptionalCashFlowIndicatorRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.EstimatedFundCashForecast1
 	 * EstimatedFundCashForecast1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ExceptionalCashFlowIndicatorRule"</li>
 	 * <li>
@@ -453,6 +449,10 @@ public class ConstraintExceptionalCashFlowIndicatorRule {
 	 * definition} =
 	 * "If Exceptional NetCashFlowIndicator is \"true\" or \"1\" (Yes), then either EstimatedCashInForecastDetails/ExceptionalCashFlowIndicator and EstimatedCashOutForecastDetails/ExceptionalCashFlowIndicator, or both, must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<EstimatedFundCashForecast1> forEstimatedFundCashForecast1 = new MMConstraint<EstimatedFundCashForecast1>() {
@@ -476,10 +476,6 @@ public class ConstraintExceptionalCashFlowIndicatorRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FundCashForecast1
 	 * FundCashForecast1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ExceptionalCashFlowIndicatorRule"</li>
 	 * <li>
@@ -487,6 +483,10 @@ public class ConstraintExceptionalCashFlowIndicatorRule {
 	 * definition} =
 	 * "If Exceptional NetCashFlow Indicator is \"true\" or \"1\" (Yes), then CashInForecastDetails/ExceptionalCashFlowIndicator and CashOutForecastDetails/ ExceptionalCashFlowIndicator must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FundCashForecast1> forFundCashForecast1 = new MMConstraint<FundCashForecast1>() {

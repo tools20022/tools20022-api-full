@@ -79,16 +79,16 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "AuthorityExchangeReason1Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Specifies the reason for the exchange with the national competent authority."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -103,12 +103,12 @@ public class AuthorityExchangeReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AuthorityExchangeReason1Code
 	 * AuthorityExchangeReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CompetentAuthorityForInstrument"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CompetentAuthorityForInstrument"</li>
 	 * </ul>
 	 */
 	public static final AuthorityExchangeReason1Code CompetentAuthorityForInstrument = new AuthorityExchangeReason1Code() {
@@ -127,12 +127,12 @@ public class AuthorityExchangeReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AuthorityExchangeReason1Code
 	 * AuthorityExchangeReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AdHocRequest"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AdHocRequest"</li>
 	 * </ul>
 	 */
 	public static final AuthorityExchangeReason1Code AdHocRequest = new AuthorityExchangeReason1Code() {
@@ -151,12 +151,12 @@ public class AuthorityExchangeReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AuthorityExchangeReason1Code
 	 * AuthorityExchangeReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CompetentAuthorityForBasketConstituent"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CompetentAuthorityForBasketConstituent"</li>
 	 * </ul>
 	 */
 	public static final AuthorityExchangeReason1Code CompetentAuthorityForBasketConstituent = new AuthorityExchangeReason1Code() {
@@ -175,12 +175,12 @@ public class AuthorityExchangeReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AuthorityExchangeReason1Code
 	 * AuthorityExchangeReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CompetentAuthorityForBuyerBranch"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CompetentAuthorityForBuyerBranch"</li>
 	 * </ul>
 	 */
 	public static final AuthorityExchangeReason1Code CompetentAuthorityForBuyerBranch = new AuthorityExchangeReason1Code() {
@@ -199,12 +199,12 @@ public class AuthorityExchangeReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AuthorityExchangeReason1Code
 	 * AuthorityExchangeReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CompetentAuthorityForDecisionMakingBranch"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CompetentAuthorityForDecisionMakingBranch"</li>
 	 * </ul>
 	 */
 	public static final AuthorityExchangeReason1Code CompetentAuthorityForDecisionMakingBranch = new AuthorityExchangeReason1Code() {
@@ -223,12 +223,12 @@ public class AuthorityExchangeReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AuthorityExchangeReason1Code
 	 * AuthorityExchangeReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CompetentAuthorityForDirectUnderlying"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CompetentAuthorityForDirectUnderlying"</li>
 	 * </ul>
 	 */
 	public static final AuthorityExchangeReason1Code CompetentAuthorityForDirectUnderlying = new AuthorityExchangeReason1Code() {
@@ -247,12 +247,12 @@ public class AuthorityExchangeReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AuthorityExchangeReason1Code
 	 * AuthorityExchangeReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CompetentAuthorityForExecutingBranch"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CompetentAuthorityForExecutingBranch"</li>
 	 * </ul>
 	 */
 	public static final AuthorityExchangeReason1Code CompetentAuthorityForExecutingBranch = new AuthorityExchangeReason1Code() {
@@ -271,12 +271,12 @@ public class AuthorityExchangeReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AuthorityExchangeReason1Code
 	 * AuthorityExchangeReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CompetentAuthorityForIndex"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CompetentAuthorityForIndex"</li>
 	 * </ul>
 	 */
 	public static final AuthorityExchangeReason1Code CompetentAuthorityForIndex = new AuthorityExchangeReason1Code() {
@@ -295,12 +295,12 @@ public class AuthorityExchangeReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AuthorityExchangeReason1Code
 	 * AuthorityExchangeReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CompetentAuthorityForMembershipBranch"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CompetentAuthorityForMembershipBranch"</li>
 	 * </ul>
 	 */
 	public static final AuthorityExchangeReason1Code CompetentAuthorityForMembershipBranch = new AuthorityExchangeReason1Code() {
@@ -319,12 +319,12 @@ public class AuthorityExchangeReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AuthorityExchangeReason1Code
 	 * AuthorityExchangeReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CompetentAuthorityForSellerBranch"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CompetentAuthorityForSellerBranch"</li>
 	 * </ul>
 	 */
 	public static final AuthorityExchangeReason1Code CompetentAuthorityForSellerBranch = new AuthorityExchangeReason1Code() {
@@ -343,12 +343,12 @@ public class AuthorityExchangeReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.AuthorityExchangeReason1Code
 	 * AuthorityExchangeReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CompetentAuthorityForTradingVenue"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CompetentAuthorityForTradingVenue"</li>
 	 * </ul>
 	 */
 	public static final AuthorityExchangeReason1Code CompetentAuthorityForTradingVenue = new AuthorityExchangeReason1Code() {

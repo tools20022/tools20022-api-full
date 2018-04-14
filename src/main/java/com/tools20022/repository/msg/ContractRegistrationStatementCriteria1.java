@@ -60,16 +60,16 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "ContractRegistrationStatementCriteria1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Provides the list of criteria to be returned in the contract registration statement."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -96,10 +96,6 @@ public class ContractRegistrationStatementCriteria1 {
 	 * ContractRegistrationStatementCriteria1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TxJrnl"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TransactionJournal"</li>
 	 * <li>
@@ -107,6 +103,10 @@ public class ContractRegistrationStatementCriteria1 {
 	 * definition} =
 	 * "Indicates whether the journal of the transactions recorded under the registered currency control contract must be returned or not."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ContractRegistrationStatementCriteria1, Optional<TrueFalseIndicator>> mmTransactionJournal = new MMMessageAttribute<ContractRegistrationStatementCriteria1, Optional<TrueFalseIndicator>>() {
@@ -151,10 +151,6 @@ public class ContractRegistrationStatementCriteria1 {
 	 * ContractRegistrationStatementCriteria1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SpprtgDocJrnl"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SupportingDocumentJournal"</li>
 	 * <li>
@@ -162,6 +158,10 @@ public class ContractRegistrationStatementCriteria1 {
 	 * definition} =
 	 * "Indicates whether the journal of the supporting documents recorded under the registered currency control contract must be returned or not."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ContractRegistrationStatementCriteria1, Optional<TrueFalseIndicator>> mmSupportingDocumentJournal = new MMMessageAttribute<ContractRegistrationStatementCriteria1, Optional<TrueFalseIndicator>>() {
@@ -206,10 +206,6 @@ public class ContractRegistrationStatementCriteria1 {
 	 * ContractRegistrationStatementCriteria1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AddtlSpprtgDocJrnl"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalSupportingDocumentJournal"</li>
 	 * <li>
@@ -217,6 +213,10 @@ public class ContractRegistrationStatementCriteria1 {
 	 * definition} =
 	 * "Indicates whether the journal of additional supporting documents recorded under the registered currency control contract must be returned or not."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ContractRegistrationStatementCriteria1, Optional<TrueFalseIndicator>> mmAdditionalSupportingDocumentJournal = new MMMessageAttribute<ContractRegistrationStatementCriteria1, Optional<TrueFalseIndicator>>() {
@@ -261,10 +261,6 @@ public class ContractRegistrationStatementCriteria1 {
 	 * ContractRegistrationStatementCriteria1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RgltryRuleVldtn"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RegulatoryRuleValidation"</li>
 	 * <li>
@@ -272,6 +268,10 @@ public class ContractRegistrationStatementCriteria1 {
 	 * definition} =
 	 * "Indicates whether the details on the currency control rule against which has been violated must be returned or not."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ContractRegistrationStatementCriteria1, Optional<TrueFalseIndicator>> mmRegulatoryRuleValidation = new MMMessageAttribute<ContractRegistrationStatementCriteria1, Optional<TrueFalseIndicator>>() {

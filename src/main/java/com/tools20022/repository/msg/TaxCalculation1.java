@@ -70,14 +70,14 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "TaxCalculation1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Specifies the details for the tax calculation."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -109,10 +109,6 @@ public class TaxCalculation1 {
 	 * TaxCalculation1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "HstCcy"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "HostCurrency"</li>
 	 * <li>
@@ -120,6 +116,10 @@ public class TaxCalculation1 {
 	 * definition} =
 	 * "Currency that all totals for taxable services must be converted to for calculating taxes owed for this tax region. This also is the currency in which the payment of tax obligations is usually submitted to the taxing authority."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<TaxCalculation1, ActiveOrHistoricCurrencyCode> mmHostCurrency = new MMMessageAttribute<TaxCalculation1, ActiveOrHistoricCurrencyCode>() {
@@ -170,10 +170,6 @@ public class TaxCalculation1 {
 	 * TaxCalculation1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TaxblSvcChrgConvs"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxableServiceChargeConversion"</li>
 	 * <li>
@@ -181,6 +177,10 @@ public class TaxCalculation1 {
 	 * definition} =
 	 * "Taxable service charge amount conversions to host currency. \n\nUsage: One occurrence must be present for each different service pricing currency in the statement."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<TaxCalculation1, List<BillingServicesAmount3>> mmTaxableServiceChargeConversion = new MMMessageAttribute<TaxCalculation1, List<BillingServicesAmount3>>() {
@@ -228,10 +228,6 @@ public class TaxCalculation1 {
 	 * TaxCalculation1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TtlTaxblSvcChrgHstAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TotalTaxableServiceChargeHostAmount"</li>
 	 * <li>
@@ -239,6 +235,10 @@ public class TaxCalculation1 {
 	 * definition} =
 	 * "Total of all services subject to tax for a specific tax region. \n\nUsage: \nThis field will equal the sum of all the separate host tax charge for service equivalent totals for each individual currency. It is expressed in the tax region’s Host currency. This total is used to determine the tax due by calculating using each tax identifications rate."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<TaxCalculation1, AmountAndDirection34> mmTotalTaxableServiceChargeHostAmount = new MMMessageAssociationEnd<TaxCalculation1, AmountAndDirection34>() {
@@ -289,10 +289,6 @@ public class TaxCalculation1 {
 	 * TaxCalculation1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TaxId"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxIdentification"</li>
 	 * <li>
@@ -300,6 +296,10 @@ public class TaxCalculation1 {
 	 * definition} =
 	 * "Provides for the specific tax identification within the same tax region. \n\nUsage: A maximum of three specific tax identifications may be provided. These elements use the total host currency taxable amount as the basis of the calculation. \nThis element is only valid for method C."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<TaxCalculation1, List<BillingServicesTax3>> mmTaxIdentification = new MMMessageAttribute<TaxCalculation1, List<BillingServicesTax3>>() {
@@ -347,10 +347,6 @@ public class TaxCalculation1 {
 	 * TaxCalculation1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TtlTax"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TotalTax"</li>
 	 * <li>
@@ -358,6 +354,10 @@ public class TaxCalculation1 {
 	 * definition} =
 	 * "Total amount of all taxes for a specific customer within the tax region. This is a sum of all individual total tax amounts for tax identification ’s expressed in the tax region’s host currency."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<TaxCalculation1, AmountAndDirection34> mmTotalTax = new MMMessageAssociationEnd<TaxCalculation1, AmountAndDirection34>() {

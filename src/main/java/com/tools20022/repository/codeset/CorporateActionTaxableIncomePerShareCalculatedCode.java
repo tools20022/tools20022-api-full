@@ -61,6 +61,12 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "CorporateActionTaxableIncomePerShareCalculatedCode"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} =
+ * "Specifies whether the fund calculates the taxable income per dividend/taxable income per share (TID/TIS)."
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -71,12 +77,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "CorporateActionTaxableIncomePerShareCalculatedCode"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} =
- * "Specifies whether the fund calculates the taxable income per dividend/taxable income per share (TID/TIS)."
- * </li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -94,10 +94,6 @@ public class CorporateActionTaxableIncomePerShareCalculatedCode extends MMCode {
 	 * CorporateActionTaxableIncomePerShareCalculatedCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "TDIY"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Calculated"</li>
 	 * <li>
@@ -105,6 +101,10 @@ public class CorporateActionTaxableIncomePerShareCalculatedCode extends MMCode {
 	 * definition} =
 	 * "Fund is calculating the taxable income per dividend/taxable income per share."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionTaxableIncomePerShareCalculatedCode Calculated = new CorporateActionTaxableIncomePerShareCalculatedCode() {
@@ -127,10 +127,6 @@ public class CorporateActionTaxableIncomePerShareCalculatedCode extends MMCode {
 	 * CorporateActionTaxableIncomePerShareCalculatedCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "TDIN"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NotCalculated"</li>
 	 * <li>
@@ -138,6 +134,10 @@ public class CorporateActionTaxableIncomePerShareCalculatedCode extends MMCode {
 	 * definition} =
 	 * "Fund is not calculating the taxable income per dividend/taxable income per share."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionTaxableIncomePerShareCalculatedCode NotCalculated = new CorporateActionTaxableIncomePerShareCalculatedCode() {
@@ -160,10 +160,6 @@ public class CorporateActionTaxableIncomePerShareCalculatedCode extends MMCode {
 	 * CorporateActionTaxableIncomePerShareCalculatedCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "UKWN"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Unknown"</li>
 	 * <li>
@@ -171,6 +167,10 @@ public class CorporateActionTaxableIncomePerShareCalculatedCode extends MMCode {
 	 * definition} =
 	 * "Unknown whether the fund is calculating the taxable income per dividend/taxable income per share."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final CorporateActionTaxableIncomePerShareCalculatedCode Unknown = new CorporateActionTaxableIncomePerShareCalculatedCode() {

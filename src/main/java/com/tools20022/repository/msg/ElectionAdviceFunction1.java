@@ -70,6 +70,12 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "ElectionAdviceFunction1"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} =
+ * "Provides information about the type of election advice and linked messages."
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
  * constraint} =
  * <ul>
@@ -82,12 +88,6 @@ import javax.xml.bind.annotation.XmlType;
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "ElectionAdviceFunction1"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} =
- * "Provides information about the type of election advice and linked messages."
- * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -114,15 +114,15 @@ public class ElectionAdviceFunction1 {
 	 * ElectionAdviceFunction1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ElctnTp"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ElectionType"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Type of election advice."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ElectionAdviceFunction1, ElectionType1Code> mmElectionType = new MMMessageAttribute<ElectionAdviceFunction1, ElectionType1Code>() {
@@ -167,10 +167,6 @@ public class ElectionAdviceFunction1 {
 	 * ElectionAdviceFunction1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrvsAgtCAElctnAdvcId"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PreviousAgentCAElectionAdviceIdentification"</li>
 	 * <li>
@@ -178,6 +174,10 @@ public class ElectionAdviceFunction1 {
 	 * definition} =
 	 * "Identification of the previous Agent Corporate Action Election Advice that is being amended."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ElectionAdviceFunction1, Optional<DocumentIdentification8>> mmPreviousAgentCAElectionAdviceIdentification = new MMMessageAttribute<ElectionAdviceFunction1, Optional<DocumentIdentification8>>() {
@@ -222,10 +222,6 @@ public class ElectionAdviceFunction1 {
 	 * ElectionAdviceFunction1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AgtCAElctnStsAdvcId"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AgentCAElectionStatusAdviceIdentification"</li>
 	 * <li>
@@ -233,6 +229,10 @@ public class ElectionAdviceFunction1 {
 	 * definition} =
 	 * "Identification of the Agent Corporate Action Election Status Advice by which the issuer (agent) accepts the election amendment request."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ElectionAdviceFunction1, Optional<DocumentIdentification8>> mmAgentCAElectionStatusAdviceIdentification = new MMMessageAttribute<ElectionAdviceFunction1, Optional<DocumentIdentification8>>() {
@@ -277,10 +277,6 @@ public class ElectionAdviceFunction1 {
 	 * ElectionAdviceFunction1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AgtCAElctnAmdmntReqId"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AgentCAElectionAmendmentRequestIdentification"</li>
 	 * <li>
@@ -288,6 +284,10 @@ public class ElectionAdviceFunction1 {
 	 * definition} =
 	 * "Identification of the Agent Corporate Action Election Amendment Request by which the CSD request the authorisation to amend an election."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<ElectionAdviceFunction1, Optional<DocumentIdentification8>> mmAgentCAElectionAmendmentRequestIdentification = new MMMessageAttribute<ElectionAdviceFunction1, Optional<DocumentIdentification8>>() {

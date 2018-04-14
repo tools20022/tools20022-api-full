@@ -277,16 +277,16 @@ import java.util.Objects;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "BeneficialOwner"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Characteristics of an individual or entity that is ultimately entitled to the benefit of income and rights in a security, as opposed to a nominal or legal owner."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class BeneficialOwner extends SecuritiesPartyRole {
@@ -568,15 +568,15 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.BeneficialOwner
 	 * BeneficialOwner}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CertificationType"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Type of certification which is required."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<BeneficialOwner, BeneficiaryCertificationTypeCode> mmCertificationType = new MMBusinessAttribute<BeneficialOwner, BeneficiaryCertificationTypeCode>() {
@@ -629,6 +629,9 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.Country Country}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.Country#mmCountryForBeneficialOwner
@@ -636,9 +639,6 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.Country Country}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -751,10 +751,6 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.BeneficialOwner
 	 * BeneficialOwner}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NonDomicileCountry"</li>
 	 * <li>
@@ -762,6 +758,10 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 	 * definition} =
 	 * "The holder of the security has to certify, in line with the terms of the corporate action, that it is not domiciled in the country indicated."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<BeneficialOwner, Country> mmNonDomicileCountry = new MMBusinessAssociationEnd<BeneficialOwner, Country>() {
@@ -971,10 +971,6 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.BeneficialOwner
 	 * BeneficialOwner}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CertificationIndicator"</li>
 	 * <li>
@@ -982,6 +978,10 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 	 * definition} =
 	 * "Indicates whether or not certification is required from the account owner, for instance a certification is required to participate to a corporate action event.\r\nY: certification required \r\nN: no certification required"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<BeneficialOwner, YesNoIndicator> mmCertificationIndicator = new MMBusinessAttribute<BeneficialOwner, YesNoIndicator>() {
@@ -1073,10 +1073,6 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.BeneficialOwner
 	 * BeneficialOwner}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CertificationFormat"</li>
 	 * <li>
@@ -1084,6 +1080,10 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 	 * definition} =
 	 * "Specifies the certification format required, that is, physical or electronic format."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<BeneficialOwner, CertificationFormatTypeCode> mmCertificationFormat = new MMBusinessAttribute<BeneficialOwner, CertificationFormatTypeCode>() {
@@ -1138,16 +1138,16 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.BeneficialOwner
 	 * BeneficialOwner}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ERISAEligibility"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Eligibility to federal Employee Retirement Income Security Act."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<BeneficialOwner, ERISAEligibilityCode> mmERISAEligibility = new MMBusinessAttribute<BeneficialOwner, ERISAEligibilityCode>() {
@@ -1200,16 +1200,16 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.BeneficialOwner
 	 * BeneficialOwner}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ERISARate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Federal Employee Retirement Income Security Act (ERISA) rate."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<BeneficialOwner, PercentageRate> mmERISARate = new MMBusinessAttribute<BeneficialOwner, PercentageRate>() {
@@ -1262,16 +1262,16 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.BeneficialOwner
 	 * BeneficialOwner}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BenefitPlanDeclarationIndicator"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Indicates whether the investor is a benefit plan investor."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<BeneficialOwner, YesNoIndicator> mmBenefitPlanDeclarationIndicator = new MMBusinessAttribute<BeneficialOwner, YesNoIndicator>() {

@@ -36,10 +36,6 @@ public class ConstraintStandingInstructionCancellationRequestStatusRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01
 	 * AgentCAStandingInstructionStatusAdviceV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "StandingInstructionCancellationRequestStatusRule"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintStandingInstructionCancellationRequestStatusRule {
 	 * definition} =
 	 * "If AgentCAStandingInstructionCancellationRequestIdentification is present, then StandingInstructionCancellationRequestStatus must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AgentCAStandingInstructionStatusAdviceV01> for_seev_AgentCAStandingInstructionStatusAdviceV01 = new MMConstraint<AgentCAStandingInstructionStatusAdviceV01>() {

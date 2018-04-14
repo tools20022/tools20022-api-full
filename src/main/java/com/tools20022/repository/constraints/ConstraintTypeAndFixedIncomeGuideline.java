@@ -37,10 +37,6 @@ public class ConstraintTypeAndFixedIncomeGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.OrderParameters1
 	 * OrderParameters1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TypeAndFixedIncomeGuideline"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintTypeAndFixedIncomeGuideline {
 	 * definition} =
 	 * "It is recommended that for fixed income orders, Type only contains the value MRKT(Market) or LMTO (Limit) or PRQT (PreviouslyQuoted) or PRID (PreviouslyIndicated)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<OrderParameters1> forOrderParameters1 = new MMConstraint<OrderParameters1>() {

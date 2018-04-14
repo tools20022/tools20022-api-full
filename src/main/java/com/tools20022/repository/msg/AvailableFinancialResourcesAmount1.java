@@ -78,16 +78,16 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "AvailableFinancialResourcesAmount1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Construct used by a central counterparty to define the size of the aggregate quantum of resources available from a clearing member."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -119,10 +119,6 @@ public class AvailableFinancialResourcesAmount1 {
 	 * AvailableFinancialResourcesAmount1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TtlInitlMrgn"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TotalInitialMargin"</li>
 	 * <li>
@@ -130,6 +126,10 @@ public class AvailableFinancialResourcesAmount1 {
 	 * definition} =
 	 * "Total value of the initial margin (IM) requirement for all members at the last business day of the month.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<AvailableFinancialResourcesAmount1, ActiveCurrencyAndAmount> mmTotalInitialMargin = new MMMessageAttribute<AvailableFinancialResourcesAmount1, ActiveCurrencyAndAmount>() {
@@ -175,10 +175,6 @@ public class AvailableFinancialResourcesAmount1 {
 	 * AvailableFinancialResourcesAmount1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TtlPrfnddDfltFnd"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TotalPrefundedDefaultFund"</li>
 	 * <li>
@@ -186,6 +182,10 @@ public class AvailableFinancialResourcesAmount1 {
 	 * definition} =
 	 * "Total value of the clearing member pre-funded default fund, excluding pre-funded contributions to the default fund from the CCP.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<AvailableFinancialResourcesAmount1, ActiveCurrencyAndAmount> mmTotalPrefundedDefaultFund = new MMMessageAttribute<AvailableFinancialResourcesAmount1, ActiveCurrencyAndAmount>() {
@@ -230,10 +230,6 @@ public class AvailableFinancialResourcesAmount1 {
 	 * AvailableFinancialResourcesAmount1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CCPSkinInTheGame"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CCPSkinInTheGame"</li>
 	 * <li>
@@ -241,6 +237,10 @@ public class AvailableFinancialResourcesAmount1 {
 	 * definition} =
 	 * "Value of the CCP’s own contribution to the default waterfall junior to the pre-funded default fund contributions of the non-defaulting clearing members.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<AvailableFinancialResourcesAmount1, ActiveCurrencyAndAmount> mmCCPSkinInTheGame = new MMMessageAttribute<AvailableFinancialResourcesAmount1, ActiveCurrencyAndAmount>() {
@@ -285,10 +285,6 @@ public class AvailableFinancialResourcesAmount1 {
 	 * AvailableFinancialResourcesAmount1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OthrDfltFndCntrbtn"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OtherDefaultFundContribution"</li>
 	 * <li>
@@ -296,6 +292,10 @@ public class AvailableFinancialResourcesAmount1 {
 	 * definition} =
 	 * "Total value of other contributions to the pre-funded default fund, not received from clearing members, including any contribution from the CCP that is pari-passu with the default fund contributions of the non-defaulting clearing members.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<AvailableFinancialResourcesAmount1, ActiveCurrencyAndAmount> mmOtherDefaultFundContribution = new MMMessageAttribute<AvailableFinancialResourcesAmount1, ActiveCurrencyAndAmount>() {
@@ -340,10 +340,6 @@ public class AvailableFinancialResourcesAmount1 {
 	 * AvailableFinancialResourcesAmount1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "UfnddMmbCmmtmnt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnfundedMemberCommitment"</li>
 	 * <li>
@@ -351,6 +347,10 @@ public class AvailableFinancialResourcesAmount1 {
 	 * definition} =
 	 * "Total value of all legally‐bound commitments for members to provide additional resources to available to mutualise losses on exhaustion of the default fund.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<AvailableFinancialResourcesAmount1, ActiveCurrencyAndAmount> mmUnfundedMemberCommitment = new MMMessageAttribute<AvailableFinancialResourcesAmount1, ActiveCurrencyAndAmount>() {
@@ -395,10 +395,6 @@ public class AvailableFinancialResourcesAmount1 {
 	 * AvailableFinancialResourcesAmount1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "UfnddThrdPtyCmmtmnt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnfundedThirdPartyCommitment"</li>
 	 * <li>
@@ -406,6 +402,10 @@ public class AvailableFinancialResourcesAmount1 {
 	 * definition} =
 	 * "Total value of any third‐party commitments to provide additional resources to absorb losses, for example, from insurers.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<AvailableFinancialResourcesAmount1, ActiveCurrencyAndAmount> mmUnfundedThirdPartyCommitment = new MMMessageAttribute<AvailableFinancialResourcesAmount1, ActiveCurrencyAndAmount>() {

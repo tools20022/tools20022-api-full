@@ -92,16 +92,16 @@ import java.util.Objects;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "NonDisclosedListTrading"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "List trading by which the buy-side provides details to the sell-side information about the sector, country, index and potential market impact of the financial instrument to be bought or sold. Using this information, the sell-side firms bid for the trade."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class NonDisclosedListTrading extends ListTrading {
@@ -133,13 +133,6 @@ public class NonDisclosedListTrading extends ListTrading {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.NonDisclosedListTrading
 	 * NonDisclosedListTrading}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = FIXSynonym: 399 and 400</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BidByCurrency"</li>
 	 * <li>
@@ -147,6 +140,13 @@ public class NonDisclosedListTrading extends ListTrading {
 	 * definition} =
 	 * "Identifies a type of bid based on a common characteristic (the currency) of all securities of a list."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 399 and 400</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<NonDisclosedListTrading, CountryCode> mmBidByCurrency = new MMBusinessAttribute<NonDisclosedListTrading, CountryCode>() {
@@ -199,13 +199,6 @@ public class NonDisclosedListTrading extends ListTrading {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.NonDisclosedListTrading
 	 * NonDisclosedListTrading}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = FIXSynonym: 399 and 400</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BidBySector"</li>
 	 * <li>
@@ -213,6 +206,13 @@ public class NonDisclosedListTrading extends ListTrading {
 	 * definition} =
 	 * "Identifies a type of bid based on a common characteristic (the sector) of all securities of a list."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 399 and 400</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<NonDisclosedListTrading, Max140Text> mmBidBySector = new MMBusinessAttribute<NonDisclosedListTrading, Max140Text>() {
@@ -265,13 +265,6 @@ public class NonDisclosedListTrading extends ListTrading {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.NonDisclosedListTrading
 	 * NonDisclosedListTrading}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = FIXSynonym: 399 and 400</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BidByIndex"</li>
 	 * <li>
@@ -279,6 +272,13 @@ public class NonDisclosedListTrading extends ListTrading {
 	 * definition} =
 	 * "Identifies a type of bid based on a common characteristic (the index) of all securities of a list."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 399 and 400</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<NonDisclosedListTrading, Max140Text> mmBidByIndex = new MMBusinessAttribute<NonDisclosedListTrading, Max140Text>() {
@@ -328,16 +328,16 @@ public class NonDisclosedListTrading extends ListTrading {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.NonDisclosedListTrading
 	 * NonDisclosedListTrading}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NumberOfBidders"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Indicates the total number of bidders participating to a list trade."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<NonDisclosedListTrading, Number> mmNumberOfBidders = new MMBusinessAttribute<NonDisclosedListTrading, Number>() {
@@ -390,13 +390,6 @@ public class NonDisclosedListTrading extends ListTrading {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.NonDisclosedListTrading
 	 * NonDisclosedListTrading}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = FIXSynonym: 396, FIXSynonym: 397</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SideValue"</li>
 	 * <li>
@@ -404,6 +397,13 @@ public class NonDisclosedListTrading extends ListTrading {
 	 * definition} =
 	 * "Indicates the monetary value in either direction (buy or sell) without revealing whether it is the intention to buy or sell."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 396, FIXSynonym: 397</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<NonDisclosedListTrading, CurrencyAndAmount> mmSideValue = new MMBusinessAttribute<NonDisclosedListTrading, CurrencyAndAmount>() {

@@ -38,10 +38,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption116
 	 * CorporateActionOption116}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -49,6 +45,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -87,10 +87,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountAndBalance35
 	 * AccountAndBalance35}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -98,6 +94,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -127,10 +127,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountAndBalance9
 	 * AccountAndBalance9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -138,6 +134,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountAndBalance9> forAccountAndBalance9 = new MMConstraint<AccountAndBalance9>() {
@@ -161,10 +161,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount51
 	 * QuantityAndAccount51}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -172,6 +168,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -204,10 +204,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount55
 	 * QuantityAndAccount55}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -215,6 +211,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -247,10 +247,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount72
 	 * QuantityAndAccount72}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -258,6 +254,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount72> forQuantityAndAccount72 = new MMConstraint<QuantityAndAccount72>() {
@@ -281,10 +281,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountIdentification20
 	 * AccountIdentification20}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -292,6 +288,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountIdentification20> forAccountIdentification20 = new MMConstraint<AccountIdentification20>() {
@@ -315,10 +315,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountIdentification35
 	 * AccountIdentification35}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -326,6 +322,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountIdentification35> forAccountIdentification35 = new MMConstraint<AccountIdentification35>() {
@@ -349,10 +349,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount33
 	 * QuantityAndAccount33}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -360,6 +356,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount33> forQuantityAndAccount33 = new MMConstraint<QuantityAndAccount33>() {
@@ -383,10 +383,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount14
 	 * QuantityAndAccount14}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -394,6 +390,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount14> forQuantityAndAccount14 = new MMConstraint<QuantityAndAccount14>() {
@@ -417,10 +417,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountAndBalance18
 	 * AccountAndBalance18}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -428,6 +424,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountAndBalance18> forAccountAndBalance18 = new MMConstraint<AccountAndBalance18>() {
@@ -451,10 +451,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption144
 	 * CorporateActionOption144}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -462,6 +458,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "SafekeepingPlace must only be used by global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption144> forCorporateActionOption144 = new MMConstraint<CorporateActionOption144>() {
@@ -485,10 +485,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount65
 	 * QuantityAndAccount65}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -496,6 +492,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -525,10 +525,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount30
 	 * QuantityAndAccount30}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -536,6 +532,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -568,10 +568,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountAndBalance7
 	 * AccountAndBalance7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -579,6 +575,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountAndBalance7> forAccountAndBalance7 = new MMConstraint<AccountAndBalance7>() {
@@ -602,10 +602,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption18
 	 * CorporateActionOption18}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -613,6 +609,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption18> forCorporateActionOption18 = new MMConstraint<CorporateActionOption18>() {
@@ -636,10 +636,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountIdentification24
 	 * AccountIdentification24}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -647,6 +643,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountIdentification24> forAccountIdentification24 = new MMConstraint<AccountIdentification24>() {
@@ -670,10 +670,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption27
 	 * CorporateActionOption27}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -681,6 +677,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption27> forCorporateActionOption27 = new MMConstraint<CorporateActionOption27>() {
@@ -704,10 +704,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount68
 	 * QuantityAndAccount68}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -715,6 +711,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -744,10 +744,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount12
 	 * QuantityAndAccount12}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -755,6 +751,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount12> forQuantityAndAccount12 = new MMConstraint<QuantityAndAccount12>() {
@@ -778,10 +778,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount5
 	 * QuantityAndAccount5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -789,6 +785,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount5> forQuantityAndAccount5 = new MMConstraint<QuantityAndAccount5>() {
@@ -812,10 +812,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountIdentification32
 	 * AccountIdentification32}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -823,6 +819,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -852,10 +852,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountAndBalance6
 	 * AccountAndBalance6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -863,6 +859,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountAndBalance6> forAccountAndBalance6 = new MMConstraint<AccountAndBalance6>() {
@@ -886,10 +886,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountIdentification37
 	 * AccountIdentification37}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -897,6 +893,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountIdentification37> forAccountIdentification37 = new MMConstraint<AccountIdentification37>() {
@@ -920,10 +920,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountAndBalance5
 	 * AccountAndBalance5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -931,6 +927,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountAndBalance5> forAccountAndBalance5 = new MMConstraint<AccountAndBalance5>() {
@@ -954,10 +954,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption26
 	 * CorporateActionOption26}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -965,6 +961,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption26> forCorporateActionOption26 = new MMConstraint<CorporateActionOption26>() {
@@ -988,10 +988,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountIdentification43
 	 * AccountIdentification43}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -999,6 +995,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1028,10 +1028,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountIdentification29
 	 * AccountIdentification29}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -1039,6 +1035,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountIdentification29> forAccountIdentification29 = new MMConstraint<AccountIdentification29>() {
@@ -1062,10 +1062,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountIdentification11
 	 * AccountIdentification11}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -1073,6 +1069,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountIdentification11> forAccountIdentification11 = new MMConstraint<AccountIdentification11>() {
@@ -1096,10 +1096,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount69
 	 * QuantityAndAccount69}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -1107,6 +1103,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount69> forQuantityAndAccount69 = new MMConstraint<QuantityAndAccount69>() {
@@ -1130,10 +1130,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountIdentification9
 	 * AccountIdentification9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -1141,6 +1137,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountIdentification9> forAccountIdentification9 = new MMConstraint<AccountIdentification9>() {
@@ -1164,10 +1164,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountAndBalance22
 	 * AccountAndBalance22}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -1175,6 +1171,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1207,10 +1207,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountIdentification13
 	 * AccountIdentification13}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -1218,6 +1214,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountIdentification13> forAccountIdentification13 = new MMConstraint<AccountIdentification13>() {
@@ -1241,10 +1241,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount17
 	 * QuantityAndAccount17}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -1252,6 +1248,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount17> forQuantityAndAccount17 = new MMConstraint<QuantityAndAccount17>() {
@@ -1275,10 +1275,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountAndBalance15
 	 * AccountAndBalance15}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -1286,6 +1282,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountAndBalance15> forAccountAndBalance15 = new MMConstraint<AccountAndBalance15>() {
@@ -1309,10 +1309,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount42
 	 * QuantityAndAccount42}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -1320,6 +1316,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1358,10 +1358,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption50
 	 * CorporateActionOption50}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -1369,6 +1365,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption50> forCorporateActionOption50 = new MMConstraint<CorporateActionOption50>() {
@@ -1392,10 +1392,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountIdentification31
 	 * AccountIdentification31}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -1403,6 +1399,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1432,10 +1432,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount28
 	 * QuantityAndAccount28}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -1443,6 +1439,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1475,10 +1475,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountIdentification33
 	 * AccountIdentification33}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -1486,6 +1482,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1524,10 +1524,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount3
 	 * QuantityAndAccount3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -1535,6 +1531,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount3> forQuantityAndAccount3 = new MMConstraint<QuantityAndAccount3>() {
@@ -1558,10 +1558,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountAndBalance11
 	 * AccountAndBalance11}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -1569,6 +1565,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountAndBalance11> forAccountAndBalance11 = new MMConstraint<AccountAndBalance11>() {
@@ -1592,10 +1592,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountAndBalance39
 	 * AccountAndBalance39}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -1603,6 +1599,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountAndBalance39> forAccountAndBalance39 = new MMConstraint<AccountAndBalance39>() {
@@ -1626,10 +1626,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountAndBalance33
 	 * AccountAndBalance33}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -1637,6 +1633,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1666,10 +1666,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountAndBalance38
 	 * AccountAndBalance38}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -1677,6 +1673,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountAndBalance38> forAccountAndBalance38 = new MMConstraint<AccountAndBalance38>() {
@@ -1700,10 +1700,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount71
 	 * QuantityAndAccount71}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -1711,6 +1707,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount71> forQuantityAndAccount71 = new MMConstraint<QuantityAndAccount71>() {
@@ -1734,10 +1734,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountIdentification25
 	 * AccountIdentification25}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -1745,6 +1741,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1777,10 +1777,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount47
 	 * QuantityAndAccount47}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -1788,6 +1784,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1820,10 +1820,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountIdentification7
 	 * AccountIdentification7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -1831,6 +1827,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountIdentification7> forAccountIdentification7 = new MMConstraint<AccountIdentification7>() {
@@ -1854,10 +1854,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountAndBalance13
 	 * AccountAndBalance13}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -1865,6 +1861,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountAndBalance13> forAccountAndBalance13 = new MMConstraint<AccountAndBalance13>() {
@@ -1888,10 +1888,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountAndBalance20
 	 * AccountAndBalance20}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -1899,6 +1895,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountAndBalance20> forAccountAndBalance20 = new MMConstraint<AccountAndBalance20>() {
@@ -1922,10 +1922,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountAndBalance2
 	 * AccountAndBalance2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -1933,6 +1929,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountAndBalance2> forAccountAndBalance2 = new MMConstraint<AccountAndBalance2>() {
@@ -1956,10 +1956,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount4
 	 * QuantityAndAccount4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -1967,6 +1963,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount4> forQuantityAndAccount4 = new MMConstraint<QuantityAndAccount4>() {
@@ -1990,10 +1990,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount58
 	 * QuantityAndAccount58}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -2001,6 +1997,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2030,10 +2030,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount41
 	 * QuantityAndAccount41}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -2041,6 +2037,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -2079,10 +2079,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountIdentification15
 	 * AccountIdentification15}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -2090,6 +2086,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -2122,10 +2122,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount22
 	 * QuantityAndAccount22}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -2133,6 +2129,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount22> forQuantityAndAccount22 = new MMConstraint<QuantityAndAccount22>() {
@@ -2156,10 +2156,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountAndBalance29
 	 * AccountAndBalance29}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -2167,6 +2163,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountAndBalance29> forAccountAndBalance29 = new MMConstraint<AccountAndBalance29>() {
@@ -2190,10 +2190,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountIdentification16
 	 * AccountIdentification16}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -2201,6 +2197,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountIdentification16> forAccountIdentification16 = new MMConstraint<AccountIdentification16>() {
@@ -2224,10 +2224,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountIdentification41
 	 * AccountIdentification41}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -2235,6 +2231,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountIdentification41> forAccountIdentification41 = new MMConstraint<AccountIdentification41>() {
@@ -2258,10 +2258,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountIdentification14
 	 * AccountIdentification14}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -2269,6 +2265,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountIdentification14> forAccountIdentification14 = new MMConstraint<AccountIdentification14>() {
@@ -2292,10 +2292,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount39
 	 * QuantityAndAccount39}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -2303,6 +2299,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -2341,10 +2341,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption22
 	 * CorporateActionOption22}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -2352,6 +2348,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption22> forCorporateActionOption22 = new MMConstraint<CorporateActionOption22>() {
@@ -2375,10 +2375,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountAndBalance10
 	 * AccountAndBalance10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -2386,6 +2382,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountAndBalance10> forAccountAndBalance10 = new MMConstraint<AccountAndBalance10>() {
@@ -2409,10 +2409,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount67
 	 * QuantityAndAccount67}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -2420,6 +2416,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2449,10 +2449,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount49
 	 * QuantityAndAccount49}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -2460,6 +2456,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -2492,10 +2492,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount45
 	 * QuantityAndAccount45}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -2503,6 +2499,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -2541,10 +2541,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount70
 	 * QuantityAndAccount70}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -2552,6 +2548,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount70> forQuantityAndAccount70 = new MMConstraint<QuantityAndAccount70>() {
@@ -2575,10 +2575,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption29
 	 * CorporateActionOption29}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -2586,6 +2582,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption29> forCorporateActionOption29 = new MMConstraint<CorporateActionOption29>() {
@@ -2609,10 +2609,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount60
 	 * QuantityAndAccount60}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -2620,6 +2616,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2649,10 +2649,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountIdentification34
 	 * AccountIdentification34}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -2660,6 +2656,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountIdentification34> forAccountIdentification34 = new MMConstraint<AccountIdentification34>() {
@@ -2683,10 +2683,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount25
 	 * QuantityAndAccount25}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -2694,6 +2690,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -2726,10 +2726,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountAndBalance25
 	 * AccountAndBalance25}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -2737,6 +2733,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -2775,10 +2775,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount34
 	 * QuantityAndAccount34}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -2786,6 +2782,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount34> forQuantityAndAccount34 = new MMConstraint<QuantityAndAccount34>() {
@@ -2809,10 +2809,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountAndBalance23
 	 * AccountAndBalance23}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -2820,6 +2816,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountAndBalance23> forAccountAndBalance23 = new MMConstraint<AccountAndBalance23>() {
@@ -2843,10 +2843,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount15
 	 * QuantityAndAccount15}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -2854,6 +2850,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount15> forQuantityAndAccount15 = new MMConstraint<QuantityAndAccount15>() {
@@ -2877,10 +2877,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount43
 	 * QuantityAndAccount43}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -2888,6 +2884,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -2926,10 +2926,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount8
 	 * QuantityAndAccount8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -2937,6 +2933,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount8> forQuantityAndAccount8 = new MMConstraint<QuantityAndAccount8>() {
@@ -2960,10 +2960,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountIdentification40
 	 * AccountIdentification40}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -2971,6 +2967,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -3009,10 +3009,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountIdentification17
 	 * AccountIdentification17}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -3020,6 +3016,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountIdentification17> forAccountIdentification17 = new MMConstraint<AccountIdentification17>() {
@@ -3043,10 +3043,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount1
 	 * QuantityAndAccount1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -3054,6 +3050,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount1> forQuantityAndAccount1 = new MMConstraint<QuantityAndAccount1>() {
@@ -3077,10 +3077,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountAndBalance37
 	 * AccountAndBalance37}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -3088,6 +3084,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountAndBalance37> forAccountAndBalance37 = new MMConstraint<AccountAndBalance37>() {
@@ -3111,10 +3111,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption121
 	 * CorporateActionOption121}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -3122,6 +3118,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption121> forCorporateActionOption121 = new MMConstraint<CorporateActionOption121>() {
@@ -3145,10 +3145,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountIdentification44
 	 * AccountIdentification44}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -3156,6 +3152,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountIdentification44> forAccountIdentification44 = new MMConstraint<AccountIdentification44>() {
@@ -3179,10 +3179,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountAndBalance3
 	 * AccountAndBalance3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -3190,6 +3186,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountAndBalance3> forAccountAndBalance3 = new MMConstraint<AccountAndBalance3>() {
@@ -3213,10 +3213,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount63
 	 * QuantityAndAccount63}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -3224,6 +3220,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -3253,10 +3253,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount57
 	 * QuantityAndAccount57}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -3264,6 +3260,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -3293,10 +3293,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption9
 	 * CorporateActionOption9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -3304,6 +3300,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption9> forCorporateActionOption9 = new MMConstraint<CorporateActionOption9>() {
@@ -3327,10 +3327,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountIdentification6
 	 * AccountIdentification6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -3338,6 +3334,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountIdentification6> forAccountIdentification6 = new MMConstraint<AccountIdentification6>() {
@@ -3361,10 +3361,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountAndBalance24
 	 * AccountAndBalance24}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -3372,6 +3368,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountAndBalance24> forAccountAndBalance24 = new MMConstraint<AccountAndBalance24>() {
@@ -3395,10 +3395,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountIdentification18
 	 * AccountIdentification18}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -3406,6 +3402,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -3438,10 +3438,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount13
 	 * QuantityAndAccount13}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -3449,6 +3445,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount13> forQuantityAndAccount13 = new MMConstraint<QuantityAndAccount13>() {
@@ -3472,10 +3472,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount56
 	 * QuantityAndAccount56}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -3483,6 +3479,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -3512,10 +3512,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount27
 	 * QuantityAndAccount27}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -3523,6 +3519,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -3555,10 +3555,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountIdentification21
 	 * AccountIdentification21}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -3566,6 +3562,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountIdentification21> forAccountIdentification21 = new MMConstraint<AccountIdentification21>() {
@@ -3589,10 +3589,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountAndBalance26
 	 * AccountAndBalance26}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -3600,6 +3596,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -3638,10 +3638,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountAndBalance1
 	 * AccountAndBalance1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -3649,6 +3645,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountAndBalance1> forAccountAndBalance1 = new MMConstraint<AccountAndBalance1>() {
@@ -3672,10 +3672,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountAndBalance17
 	 * AccountAndBalance17}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -3683,6 +3679,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -3715,10 +3715,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountAndBalance21
 	 * AccountAndBalance21}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -3726,6 +3722,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -3758,10 +3758,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount35
 	 * QuantityAndAccount35}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -3769,6 +3765,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount35> forQuantityAndAccount35 = new MMConstraint<QuantityAndAccount35>() {
@@ -3792,10 +3792,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountAndBalance19
 	 * AccountAndBalance19}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -3803,6 +3799,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountAndBalance19> forAccountAndBalance19 = new MMConstraint<AccountAndBalance19>() {
@@ -3826,10 +3826,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount50
 	 * QuantityAndAccount50}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -3837,6 +3833,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount50> forQuantityAndAccount50 = new MMConstraint<QuantityAndAccount50>() {
@@ -3860,10 +3860,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount9
 	 * QuantityAndAccount9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -3871,6 +3867,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount9> forQuantityAndAccount9 = new MMConstraint<QuantityAndAccount9>() {
@@ -3894,10 +3894,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountAndBalance12
 	 * AccountAndBalance12}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -3905,6 +3901,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountAndBalance12> forAccountAndBalance12 = new MMConstraint<AccountAndBalance12>() {
@@ -3928,10 +3928,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount64
 	 * QuantityAndAccount64}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -3939,6 +3935,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -3968,10 +3968,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountIdentification19
 	 * AccountIdentification19}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -3979,6 +3975,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountIdentification19> forAccountIdentification19 = new MMConstraint<AccountIdentification19>() {
@@ -4002,10 +4002,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountIdentification23
 	 * AccountIdentification23}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -4013,6 +4009,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountIdentification23> forAccountIdentification23 = new MMConstraint<AccountIdentification23>() {
@@ -4036,10 +4036,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount76
 	 * QuantityAndAccount76}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -4047,6 +4043,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount76> forQuantityAndAccount76 = new MMConstraint<QuantityAndAccount76>() {
@@ -4070,10 +4070,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountIdentification39
 	 * AccountIdentification39}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -4081,6 +4077,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -4113,10 +4113,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountAndBalance32
 	 * AccountAndBalance32}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -4124,6 +4120,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountAndBalance32> forAccountAndBalance32 = new MMConstraint<AccountAndBalance32>() {
@@ -4147,10 +4147,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountAndBalance34
 	 * AccountAndBalance34}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -4158,6 +4154,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -4187,10 +4187,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountAndBalance14
 	 * AccountAndBalance14}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -4198,6 +4194,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountAndBalance14> forAccountAndBalance14 = new MMConstraint<AccountAndBalance14>() {
@@ -4221,10 +4221,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption41
 	 * CorporateActionOption41}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -4232,6 +4228,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -4264,10 +4264,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountIdentification42
 	 * AccountIdentification42}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -4275,6 +4271,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -4304,10 +4304,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount20
 	 * QuantityAndAccount20}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -4315,6 +4311,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount20> forQuantityAndAccount20 = new MMConstraint<QuantityAndAccount20>() {
@@ -4338,10 +4338,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountAndBalance16
 	 * AccountAndBalance16}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -4349,6 +4345,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountAndBalance16> forAccountAndBalance16 = new MMConstraint<AccountAndBalance16>() {
@@ -4372,10 +4372,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount24
 	 * QuantityAndAccount24}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -4383,6 +4379,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount24> forQuantityAndAccount24 = new MMConstraint<QuantityAndAccount24>() {
@@ -4406,10 +4406,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountIdentification22
 	 * AccountIdentification22}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -4417,6 +4413,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountIdentification22> forAccountIdentification22 = new MMConstraint<AccountIdentification22>() {
@@ -4440,10 +4440,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount36
 	 * QuantityAndAccount36}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -4451,6 +4447,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount36> forQuantityAndAccount36 = new MMConstraint<QuantityAndAccount36>() {
@@ -4474,10 +4474,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption141
 	 * CorporateActionOption141}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -4485,6 +4481,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "SafekeepingPlace must only be used by global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -4514,10 +4514,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount26
 	 * QuantityAndAccount26}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -4525,6 +4521,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -4557,10 +4557,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount2
 	 * QuantityAndAccount2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -4568,6 +4564,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount2> forQuantityAndAccount2 = new MMConstraint<QuantityAndAccount2>() {
@@ -4591,10 +4591,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount37
 	 * QuantityAndAccount37}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -4602,6 +4598,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount37> forQuantityAndAccount37 = new MMConstraint<QuantityAndAccount37>() {
@@ -4625,10 +4625,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountIdentification12
 	 * AccountIdentification12}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -4636,6 +4632,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountIdentification12> forAccountIdentification12 = new MMConstraint<AccountIdentification12>() {
@@ -4659,10 +4659,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountIdentification8
 	 * AccountIdentification8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -4670,6 +4666,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountIdentification8> forAccountIdentification8 = new MMConstraint<AccountIdentification8>() {
@@ -4693,10 +4693,6 @@ public class ConstraintSafekeepingPlaceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount23
 	 * QuantityAndAccount23}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SafekeepingPlaceRule"</li>
 	 * <li>
@@ -4704,6 +4700,10 @@ public class ConstraintSafekeepingPlaceRule {
 	 * definition} =
 	 * "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuantityAndAccount23> forQuantityAndAccount23 = new MMConstraint<QuantityAndAccount23>() {

@@ -36,10 +36,6 @@ public class ConstraintUseOfPlannedQuantityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity4SD2
 	 * CorporateActionQuantity4SD2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UseOfPlannedQuantityRule"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintUseOfPlannedQuantityRule {
 	 * definition} =
 	 * "PlannedQuantityCode can only be used with corporate action event type codes TEND or BIDS."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionQuantity4SD2> forCorporateActionQuantity4SD2 = new MMConstraint<CorporateActionQuantity4SD2>() {

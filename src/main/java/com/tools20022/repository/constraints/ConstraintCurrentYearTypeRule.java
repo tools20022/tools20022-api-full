@@ -38,10 +38,6 @@ public class ConstraintCurrentYearTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue3
 	 * ISAYearsOfIssue3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrentYearTypeRule"</li>
 	 * <li>
@@ -49,6 +45,10 @@ public class ConstraintCurrentYearTypeRule {
 	 * definition} =
 	 * "If CurrentYearType or ExtendedCurrentYearType is not present then PreviousYears is mandatory. If CurrentYearType or ExtendedCurrentYearType is present then PreviousYears is optional."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ISAYearsOfIssue3> forISAYearsOfIssue3 = new MMConstraint<ISAYearsOfIssue3>() {
@@ -72,10 +72,6 @@ public class ConstraintCurrentYearTypeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue2
 	 * ISAYearsOfIssue2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrentYearTypeRule"</li>
 	 * <li>
@@ -83,6 +79,10 @@ public class ConstraintCurrentYearTypeRule {
 	 * definition} =
 	 * "If CurrentYearType or ExtendedCurrentYearType is not present, then PreviousYears is mandatory. If CurrentYearType or ExtendedCurrentYearType is present then PreviousYears is optional."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ISAYearsOfIssue2> forISAYearsOfIssue2 = new MMConstraint<ISAYearsOfIssue2>() {

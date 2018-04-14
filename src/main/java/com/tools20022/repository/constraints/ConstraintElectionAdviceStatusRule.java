@@ -36,10 +36,6 @@ public class ConstraintElectionAdviceStatusRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionStatusAdviceV01
 	 * AgentCAElectionStatusAdviceV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ElectionAdviceStatusRule"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintElectionAdviceStatusRule {
 	 * definition} =
 	 * "If AgentCAElectionAdviceIdentification is present, then ElectionAdviceStatus must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AgentCAElectionStatusAdviceV01> for_seev_AgentCAElectionStatusAdviceV01 = new MMConstraint<AgentCAElectionStatusAdviceV01>() {

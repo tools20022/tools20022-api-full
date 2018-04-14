@@ -68,6 +68,12 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "NumberAndSumOfTransactionsPerBankTransactionCode1"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} =
+ * "Set of elements providing the total sum of entries per bank transaction code."
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
  * constraint} =
  * <ul>
@@ -81,12 +87,6 @@ import javax.xml.bind.annotation.XmlType;
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "NumberAndSumOfTransactionsPerBankTransactionCode1"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} =
- * "Set of elements providing the total sum of entries per bank transaction code."
- * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -113,15 +113,15 @@ public class NumberAndSumOfTransactionsPerBankTransactionCode1 {
 	 * NumberAndSumOfTransactionsPerBankTransactionCode1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NbOfNtries"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NumberOfEntries"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Number of individual entries contained in the report."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<NumberAndSumOfTransactionsPerBankTransactionCode1, Optional<Max15NumericText>> mmNumberOfEntries = new MMMessageAttribute<NumberAndSumOfTransactionsPerBankTransactionCode1, Optional<Max15NumericText>>() {
@@ -166,15 +166,15 @@ public class NumberAndSumOfTransactionsPerBankTransactionCode1 {
 	 * NumberAndSumOfTransactionsPerBankTransactionCode1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Sum"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Sum"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Total of all individual entries included in the report."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<NumberAndSumOfTransactionsPerBankTransactionCode1, Optional<DecimalNumber>> mmSum = new MMMessageAttribute<NumberAndSumOfTransactionsPerBankTransactionCode1, Optional<DecimalNumber>>() {
@@ -219,10 +219,6 @@ public class NumberAndSumOfTransactionsPerBankTransactionCode1 {
 	 * NumberAndSumOfTransactionsPerBankTransactionCode1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TtlNetNtryAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TotalNetEntryAmount"</li>
 	 * <li>
@@ -230,6 +226,10 @@ public class NumberAndSumOfTransactionsPerBankTransactionCode1 {
 	 * definition} =
 	 * "Resulting amount of the netted amounts for all debit and credit entries per bank transaction code."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<NumberAndSumOfTransactionsPerBankTransactionCode1, Optional<DecimalNumber>> mmTotalNetEntryAmount = new MMMessageAttribute<NumberAndSumOfTransactionsPerBankTransactionCode1, Optional<DecimalNumber>>() {
@@ -274,10 +274,6 @@ public class NumberAndSumOfTransactionsPerBankTransactionCode1 {
 	 * NumberAndSumOfTransactionsPerBankTransactionCode1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CdtDbtInd"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CreditDebitIndicator"</li>
 	 * <li>
@@ -285,6 +281,10 @@ public class NumberAndSumOfTransactionsPerBankTransactionCode1 {
 	 * definition} =
 	 * "Indicates whether the total net entry amount is a credit or a debit amount."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<NumberAndSumOfTransactionsPerBankTransactionCode1, Optional<CreditDebitCode>> mmCreditDebitIndicator = new MMMessageAttribute<NumberAndSumOfTransactionsPerBankTransactionCode1, Optional<CreditDebitCode>>() {
@@ -328,10 +328,6 @@ public class NumberAndSumOfTransactionsPerBankTransactionCode1 {
 	 * NumberAndSumOfTransactionsPerBankTransactionCode1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "BkTxCd"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BankTransactionCode"</li>
 	 * <li>
@@ -339,6 +335,10 @@ public class NumberAndSumOfTransactionsPerBankTransactionCode1 {
 	 * definition} =
 	 * "Set of elements to fully identify the type of underlying transaction resulting in an entry."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<NumberAndSumOfTransactionsPerBankTransactionCode1, BankTransactionCodeStructure1> mmBankTransactionCode = new MMMessageAssociationEnd<NumberAndSumOfTransactionsPerBankTransactionCode1, BankTransactionCodeStructure1>() {
@@ -383,10 +383,6 @@ public class NumberAndSumOfTransactionsPerBankTransactionCode1 {
 	 * NumberAndSumOfTransactionsPerBankTransactionCode1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Avlbty"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Availability"</li>
 	 * <li>
@@ -394,6 +390,10 @@ public class NumberAndSumOfTransactionsPerBankTransactionCode1 {
 	 * definition} =
 	 * "Set of elements used to indicate when the booked amount of money will become available, ie can be accessed and start generating interest."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<NumberAndSumOfTransactionsPerBankTransactionCode1, List<CashBalanceAvailability1>> mmAvailability = new MMMessageAssociationEnd<NumberAndSumOfTransactionsPerBankTransactionCode1, List<CashBalanceAvailability1>>() {

@@ -42,10 +42,6 @@ public class ConstraintVoteInstructionType1Guideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV05
 	 * MeetingNotificationV05}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "VoteInstructionType1Guideline"</li>
 	 * <li>
@@ -53,6 +49,10 @@ public class ConstraintVoteInstructionType1Guideline {
 	 * definition} =
 	 * "If all of the vote instructions types are to be the same for all resolutions, it is recommended to use only the element Vote/VoteInstructionType. If the vote instruction types are not going to be the same for each resolution, then, it is recommended to use only the element Resolution/VoteInstructionType in each occurrence of Resolution."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -82,10 +82,6 @@ public class ConstraintVoteInstructionType1Guideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV04
 	 * MeetingNotificationV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "VoteInstructionType1Guideline"</li>
 	 * <li>
@@ -93,6 +89,10 @@ public class ConstraintVoteInstructionType1Guideline {
 	 * definition} =
 	 * "If all of the vote instructions types are to be the same for all resolutions, it is recommended to use only the element Vote/Vote InstructionType. If the vote instruction types are not going to be the same for each resolution, then, it is recommended to use only the element Resolution/VoteInstructionType in each occurrence of Resolution."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -125,10 +125,6 @@ public class ConstraintVoteInstructionType1Guideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV03
 	 * MeetingNotificationV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "VoteInstructionType1Guideline"</li>
 	 * <li>
@@ -136,6 +132,10 @@ public class ConstraintVoteInstructionType1Guideline {
 	 * definition} =
 	 * "If all of the vote instructions types are to be the same for all resolutions, it is recommended to use only the element Vote/Vote InstructionType. If the vote instruction types are not going to be the same for each resolution, then, it is recommended to use only the element Resolution/VoteInstructionType in each occurrence of Resolution."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<MeetingNotificationV03> for_seev_MeetingNotificationV03 = new MMConstraint<MeetingNotificationV03>() {

@@ -44,10 +44,6 @@ public class ConstraintCreditorAndOrCreditorAccountRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionInformation1
 	 * PaymentInstructionInformation1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CreditorAndOrCreditorAccountRule"</li>
 	 * <li>
@@ -55,6 +51,10 @@ public class ConstraintCreditorAndOrCreditorAccountRule {
 	 * definition} =
 	 * "If PaymentMethod is CHK, then CreditTransferTransactionInformation/CreditorAccount is not allowed. \n\nIf PaymentMethod is different from CHK and if CreditTransferTransactionInformation/Creditor is not present, then CreditTransferTransactionInformation/CreditorAccount is mandatory. \n\nIf PaymentMethod is different from CHK and if CreditTransferTransactionInformation/Creditor is present, then CreditTransferTransactionInformation/CreditorAccount is optional."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PaymentInstructionInformation1> forPaymentInstructionInformation1 = new MMConstraint<PaymentInstructionInformation1>() {

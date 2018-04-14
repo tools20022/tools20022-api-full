@@ -38,10 +38,6 @@ public class ConstraintEDSMessagingEligibilityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD12
 	 * CorporateActionGeneralInformationSD12}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EDSMessagingEligibilityRule"</li>
 	 * <li>
@@ -49,6 +45,10 @@ public class ConstraintEDSMessagingEligibilityRule {
 	 * definition} =
 	 * "Applies only to distribution events that may be eligible for EDS ISO 20022 messaging services. It will not be present for Redemption or Reorganisation events."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -89,10 +89,6 @@ public class ConstraintEDSMessagingEligibilityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD18
 	 * CorporateActionGeneralInformationSD18}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EDSMessagingEligibilityRule"</li>
 	 * <li>
@@ -100,6 +96,10 @@ public class ConstraintEDSMessagingEligibilityRule {
 	 * definition} =
 	 * "Applies only to distribution events that may be eligible for EDS ISO 20022 messaging services. It will not be present for Redemption or Reorganisation events."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -140,10 +140,6 @@ public class ConstraintEDSMessagingEligibilityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD23
 	 * CorporateActionGeneralInformationSD23}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EDSMessagingEligibilityRule"</li>
 	 * <li>
@@ -151,6 +147,10 @@ public class ConstraintEDSMessagingEligibilityRule {
 	 * definition} =
 	 * "Applies only to distribution events that may be eligible for EDS ISO 20022 messaging services. It will not be present for Redemption or Reorganisation events."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -191,10 +191,6 @@ public class ConstraintEDSMessagingEligibilityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD13
 	 * CorporateActionGeneralInformationSD13}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EDSMessagingEligibilityRule"</li>
 	 * <li>
@@ -202,6 +198,10 @@ public class ConstraintEDSMessagingEligibilityRule {
 	 * definition} =
 	 * "Applies only to distribution events that may be eligible for EDS ISO 20022 messaging services. It will not be present for Redemption or Reorganisation events."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -232,10 +232,6 @@ public class ConstraintEDSMessagingEligibilityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD22
 	 * CorporateActionGeneralInformationSD22}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EDSMessagingEligibilityRule"</li>
 	 * <li>
@@ -243,6 +239,10 @@ public class ConstraintEDSMessagingEligibilityRule {
 	 * definition} =
 	 * "Applies only to distribution events that may be eligible for EDS ISO 20022 messaging services. It will not be present for Redemption or Reorganisation events."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -283,10 +283,6 @@ public class ConstraintEDSMessagingEligibilityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD10
 	 * CorporateActionGeneralInformationSD10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EDSMessagingEligibilityRule"</li>
 	 * <li>
@@ -294,6 +290,10 @@ public class ConstraintEDSMessagingEligibilityRule {
 	 * definition} =
 	 * "Applies only to distribution events that may be eligible for EDS ISO 20022 messaging services. It will not be present for Redemption or Reorganisation events."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -327,10 +327,6 @@ public class ConstraintEDSMessagingEligibilityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD11
 	 * CorporateActionGeneralInformationSD11}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EDSMessagingEligibilityRule"</li>
 	 * <li>
@@ -338,6 +334,10 @@ public class ConstraintEDSMessagingEligibilityRule {
 	 * definition} =
 	 * "Applies only to distribution events that may be eligible for EDS ISO 20022 messaging services. It will not be present for Redemption or Reorganisation events."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -371,10 +371,6 @@ public class ConstraintEDSMessagingEligibilityRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD28
 	 * CorporateActionGeneralInformationSD28}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EDSMessagingEligibilityRule"</li>
 	 * <li>
@@ -382,6 +378,10 @@ public class ConstraintEDSMessagingEligibilityRule {
 	 * definition} =
 	 * "Applies only to distribution events that may be eligible for EDS ISO 20022 messaging services. It will not be present for Redemption or Reorganisation events."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =

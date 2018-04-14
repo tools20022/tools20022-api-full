@@ -63,14 +63,14 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "SecuritiesTransactionTransmission2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Specifies the securities order transmission attributes.\r\n"</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -97,10 +97,6 @@ public class SecuritiesTransactionTransmission2 {
 	 * SecuritiesTransactionTransmission2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TrnsmssnInd"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TransmissionIndicator"</li>
 	 * <li>
@@ -108,6 +104,10 @@ public class SecuritiesTransactionTransmission2 {
 	 * definition} =
 	 * "Indication as to whether the transaction results from an order transmitted by the reporting of a client to a third party.\r\n\r\nUsage: Only applicable when the conditions for transmission are not satisfied."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SecuritiesTransactionTransmission2, TrueFalseIndicator> mmTransmissionIndicator = new MMMessageAttribute<SecuritiesTransactionTransmission2, TrueFalseIndicator>() {
@@ -157,10 +157,6 @@ public class SecuritiesTransactionTransmission2 {
 	 * SecuritiesTransactionTransmission2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TrnsmttgBuyr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TransmittingBuyer"</li>
 	 * <li>
@@ -168,6 +164,10 @@ public class SecuritiesTransactionTransmission2 {
 	 * definition} =
 	 * "Identifies the buyer transmitting the order to the reporting firm. \r\n\r\nUsage: Only required for reporting firms reporting transactions on behalf of order transmitting firm."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SecuritiesTransactionTransmission2, Optional<LEIIdentifier>> mmTransmittingBuyer = new MMMessageAttribute<SecuritiesTransactionTransmission2, Optional<LEIIdentifier>>() {
@@ -218,10 +218,6 @@ public class SecuritiesTransactionTransmission2 {
 	 * SecuritiesTransactionTransmission2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TrnsmttgSellr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TransmittingSeller"</li>
 	 * <li>
@@ -229,6 +225,10 @@ public class SecuritiesTransactionTransmission2 {
 	 * definition} =
 	 * "Identifies the seller transmitting the order to the reporting firm. \r\n\r\nUsage: Only required for reporting firms reporting transactions on behalf of order transmitting firm."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SecuritiesTransactionTransmission2, Optional<LEIIdentifier>> mmTransmittingSeller = new MMMessageAttribute<SecuritiesTransactionTransmission2, Optional<LEIIdentifier>>() {

@@ -36,10 +36,6 @@ public class ConstraintGroupReversal3Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.pain.CustomerPaymentReversalV01
 	 * CustomerPaymentReversalV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GroupReversal3Rule"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintGroupReversal3Rule {
 	 * definition} =
 	 * "If GroupHeader/GroupReversal is false, then NumberOfTransactions must equal the number of occurrences of TransactionInformation."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CustomerPaymentReversalV01> for_pain_CustomerPaymentReversalV01 = new MMConstraint<CustomerPaymentReversalV01>() {

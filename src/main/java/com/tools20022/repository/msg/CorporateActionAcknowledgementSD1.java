@@ -83,16 +83,16 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CorporateActionAcknowledgementSD1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Acknowledgement information relative to corporate action reorganisation instructions."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -120,10 +120,6 @@ public class CorporateActionAcknowledgementSD1 {
 	 * CorporateActionAcknowledgementSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TermsAckInd"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TermsAcknowledgementIndicator"</li>
 	 * <li>
@@ -131,6 +127,10 @@ public class CorporateActionAcknowledgementSD1 {
 	 * definition} =
 	 * "Indicates whether the participant agrees to all terms of the event.\r\nYes: the participant agrees.\r\nNo: the participant does not agree."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAcknowledgementSD1, Optional<YesNoIndicator>> mmTermsAcknowledgementIndicator = new MMMessageAttribute<CorporateActionAcknowledgementSD1, Optional<YesNoIndicator>>() {
@@ -175,10 +175,6 @@ public class CorporateActionAcknowledgementSD1 {
 	 * CorporateActionAcknowledgementSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Cond1Ind"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Condition1Indicator"</li>
 	 * <li>
@@ -186,6 +182,10 @@ public class CorporateActionAcknowledgementSD1 {
 	 * definition} =
 	 * "Indicates whether condition 1 of this tender offer is being accepted.\r\nYes: accept.\r\nNo: decline."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAcknowledgementSD1, Optional<YesNoIndicator>> mmCondition1Indicator = new MMMessageAttribute<CorporateActionAcknowledgementSD1, Optional<YesNoIndicator>>() {
@@ -230,10 +230,6 @@ public class CorporateActionAcknowledgementSD1 {
 	 * CorporateActionAcknowledgementSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Cond2Ind"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Condition2Indicator"</li>
 	 * <li>
@@ -241,6 +237,10 @@ public class CorporateActionAcknowledgementSD1 {
 	 * definition} =
 	 * "Indicates whether condition 2 of this tender offer is being accepted.\r\nYes: accept.\r\nNo: decline."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAcknowledgementSD1, Optional<YesNoIndicator>> mmCondition2Indicator = new MMMessageAttribute<CorporateActionAcknowledgementSD1, Optional<YesNoIndicator>>() {
@@ -285,10 +285,6 @@ public class CorporateActionAcknowledgementSD1 {
 	 * CorporateActionAcknowledgementSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Cond3Ind"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Condition3Indicator"</li>
 	 * <li>
@@ -296,6 +292,10 @@ public class CorporateActionAcknowledgementSD1 {
 	 * definition} =
 	 * "Indicates whether condition 3 of this tender offer is being accepted.\r\nYes: accept.\r\nNo: decline."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAcknowledgementSD1, Optional<YesNoIndicator>> mmCondition3Indicator = new MMMessageAttribute<CorporateActionAcknowledgementSD1, Optional<YesNoIndicator>>() {
@@ -340,10 +340,6 @@ public class CorporateActionAcknowledgementSD1 {
 	 * CorporateActionAcknowledgementSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Cond4Ind"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Condition4Indicator"</li>
 	 * <li>
@@ -351,6 +347,10 @@ public class CorporateActionAcknowledgementSD1 {
 	 * definition} =
 	 * "Indicates whether condition 4 of this tender offer is being accepted.\r\nYes: accept.\r\nNo: decline."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAcknowledgementSD1, Optional<YesNoIndicator>> mmCondition4Indicator = new MMMessageAttribute<CorporateActionAcknowledgementSD1, Optional<YesNoIndicator>>() {
@@ -395,10 +395,6 @@ public class CorporateActionAcknowledgementSD1 {
 	 * CorporateActionAcknowledgementSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Cond5Ind"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Condition5Indicator"</li>
 	 * <li>
@@ -406,6 +402,10 @@ public class CorporateActionAcknowledgementSD1 {
 	 * definition} =
 	 * "Indicates whether condition 5 of this tender offer is being accepted.\r\nYes: accept.\r\nNo: decline."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAcknowledgementSD1, Optional<YesNoIndicator>> mmCondition5Indicator = new MMMessageAttribute<CorporateActionAcknowledgementSD1, Optional<YesNoIndicator>>() {
@@ -450,10 +450,6 @@ public class CorporateActionAcknowledgementSD1 {
 	 * CorporateActionAcknowledgementSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Cond6Ind"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Condition6Indicator"</li>
 	 * <li>
@@ -461,6 +457,10 @@ public class CorporateActionAcknowledgementSD1 {
 	 * definition} =
 	 * "Indicates whether condition 6 of this tender offer is being accepted.\r\nYes: accept.\r\nNo: decline."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAcknowledgementSD1, Optional<YesNoIndicator>> mmCondition6Indicator = new MMMessageAttribute<CorporateActionAcknowledgementSD1, Optional<YesNoIndicator>>() {
@@ -505,10 +505,6 @@ public class CorporateActionAcknowledgementSD1 {
 	 * CorporateActionAcknowledgementSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AdjdctnOfIncmptncyAckInd"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdjudicationOfIncompetencyAcknowledgementIndicator"</li>
 	 * <li>
@@ -516,6 +512,10 @@ public class CorporateActionAcknowledgementSD1 {
 	 * definition} =
 	 * "Indicates whether there is an acknowledgement that the beneficial owner has been deemed incompetent. Acknowledgement is related to CD early redemption instructions.\r\nYes: acknowledged.\r\nNo: not acknowledged."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAcknowledgementSD1, Optional<YesNoIndicator>> mmAdjudicationOfIncompetencyAcknowledgementIndicator = new MMMessageAttribute<CorporateActionAcknowledgementSD1, Optional<YesNoIndicator>>() {
@@ -560,10 +560,6 @@ public class CorporateActionAcknowledgementSD1 {
 	 * CorporateActionAcknowledgementSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "LglDcmnttnThrtyMnthsRtntnAckInd"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LegalDocumentationThirtyMonthsRetentionAcknowledgementIndicator"
 	 * </li>
@@ -572,6 +568,10 @@ public class CorporateActionAcknowledgementSD1 {
 	 * definition} =
 	 * "Indicates whether there is an acknowledgement that this CD Early Redemption request is an exempt request, that the identification of the beneficial owner and required legal documentation is correct and that you agree to maintain such documentation for at least 30 months following payment of the request and will make it available to the CD Issuer upon request. \r\nYes: acknowledged.\r\nNo: not acknowledged."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAcknowledgementSD1, Optional<YesNoIndicator>> mmLegalDocumentationThirtyMonthsRetentionAcknowledgementIndicator = new MMMessageAttribute<CorporateActionAcknowledgementSD1, Optional<YesNoIndicator>>() {
@@ -616,10 +616,6 @@ public class CorporateActionAcknowledgementSD1 {
 	 * CorporateActionAcknowledgementSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "InstrDeltnAckInd"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InstructionDeletionAcknowledgementIndicator"</li>
 	 * <li>
@@ -627,6 +623,10 @@ public class CorporateActionAcknowledgementSD1 {
 	 * definition} =
 	 * "Indicates whether there is an acknowledgement that this CD Early Redemption instruction will automatically be deleted by the close of the fifth business day subsequent to submission if the appropriate legal documents, for example, death certificate, affidavit of domicile, are not received by DTC at that time. \r\nYes: acknowledged.\r\nNo: not acknowledged."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAcknowledgementSD1, Optional<YesNoIndicator>> mmInstructionDeletionAcknowledgementIndicator = new MMMessageAttribute<CorporateActionAcknowledgementSD1, Optional<YesNoIndicator>>() {
@@ -671,10 +671,6 @@ public class CorporateActionAcknowledgementSD1 {
 	 * CorporateActionAcknowledgementSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PotntlLossAckInd"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PotentialLossAcknowledgementIndicator"</li>
 	 * <li>
@@ -682,6 +678,10 @@ public class CorporateActionAcknowledgementSD1 {
 	 * definition} =
 	 * "Indicates whether there is an acknowledgement that the warrant or conversion instruction being sent could lead to a potential loss due to pricing factors.\r\nYes: acknowledged.\r\nNo: not acknowledged."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<CorporateActionAcknowledgementSD1, Optional<YesNoIndicator>> mmPotentialLossAcknowledgementIndicator = new MMMessageAttribute<CorporateActionAcknowledgementSD1, Optional<YesNoIndicator>>() {

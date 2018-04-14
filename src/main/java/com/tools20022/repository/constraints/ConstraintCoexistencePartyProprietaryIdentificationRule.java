@@ -39,10 +39,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PartyIdentification16Choice
 	 * PartyIdentification16Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -50,6 +46,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PartyIdentification16Choice> forPartyIdentification16Choice = new MMConstraint<PartyIdentification16Choice>() {
@@ -73,10 +73,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PartyIdentification62Choice
 	 * PartyIdentification62Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -84,6 +80,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PartyIdentification62Choice> forPartyIdentification62Choice = new MMConstraint<PartyIdentification62Choice>() {
@@ -107,10 +107,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PartyIdentification63Choice
 	 * PartyIdentification63Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -118,6 +114,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PartyIdentification63Choice> forPartyIdentification63Choice = new MMConstraint<PartyIdentification63Choice>() {
@@ -140,10 +140,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.OtherParties12 OtherParties12}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -151,6 +147,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<OtherParties12> forOtherParties12 = new MMConstraint<OtherParties12>() {
@@ -174,10 +174,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PartyIdentification87Choice
 	 * PartyIdentification87Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -185,6 +181,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PartyIdentification87Choice> forPartyIdentification87Choice = new MMConstraint<PartyIdentification87Choice>() {
@@ -208,10 +208,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PartyIdentification43Choice
 	 * PartyIdentification43Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -219,6 +215,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PartyIdentification43Choice> forPartyIdentification43Choice = new MMConstraint<PartyIdentification43Choice>() {
@@ -242,10 +242,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PartyIdentification61Choice
 	 * PartyIdentification61Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -253,6 +249,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PartyIdentification61Choice> forPartyIdentification61Choice = new MMConstraint<PartyIdentification61Choice>() {
@@ -276,10 +276,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PartyIdentification10Choice
 	 * PartyIdentification10Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -287,6 +283,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PartyIdentification10Choice> forPartyIdentification10Choice = new MMConstraint<PartyIdentification10Choice>() {
@@ -309,10 +309,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.OtherParties7 OtherParties7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -320,6 +316,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<OtherParties7> forOtherParties7 = new MMConstraint<OtherParties7>() {
@@ -343,10 +343,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PartyIdentification66Choice
 	 * PartyIdentification66Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -354,6 +350,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PartyIdentification66Choice> forPartyIdentification66Choice = new MMConstraint<PartyIdentification66Choice>() {
@@ -377,10 +377,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PartyIdentification67Choice
 	 * PartyIdentification67Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -388,6 +384,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PartyIdentification67Choice> forPartyIdentification67Choice = new MMConstraint<PartyIdentification67Choice>() {
@@ -411,10 +411,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PartyIdentification45Choice
 	 * PartyIdentification45Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -422,6 +418,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PartyIdentification45Choice> forPartyIdentification45Choice = new MMConstraint<PartyIdentification45Choice>() {
@@ -445,10 +445,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PartyIdentification18Choice
 	 * PartyIdentification18Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -456,6 +452,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PartyIdentification18Choice> forPartyIdentification18Choice = new MMConstraint<PartyIdentification18Choice>() {
@@ -479,10 +479,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PartyIdentification51Choice
 	 * PartyIdentification51Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -490,6 +486,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PartyIdentification51Choice> forPartyIdentification51Choice = new MMConstraint<PartyIdentification51Choice>() {
@@ -512,10 +512,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.OtherParties15 OtherParties15}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -523,6 +519,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<OtherParties15> forOtherParties15 = new MMConstraint<OtherParties15>() {
@@ -546,10 +546,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PartyIdentification54Choice
 	 * PartyIdentification54Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -557,6 +553,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PartyIdentification54Choice> forPartyIdentification54Choice = new MMConstraint<PartyIdentification54Choice>() {
@@ -579,10 +579,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.OtherParties24 OtherParties24}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -590,6 +586,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<OtherParties24> forOtherParties24 = new MMConstraint<OtherParties24>() {
@@ -613,10 +613,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PartyIdentification31Choice
 	 * PartyIdentification31Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -624,6 +620,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PartyIdentification31Choice> forPartyIdentification31Choice = new MMConstraint<PartyIdentification31Choice>() {
@@ -647,10 +647,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PartyIdentification46Choice
 	 * PartyIdentification46Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -658,6 +654,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PartyIdentification46Choice> forPartyIdentification46Choice = new MMConstraint<PartyIdentification46Choice>() {
@@ -681,10 +681,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PartyIdentification60Choice
 	 * PartyIdentification60Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -692,6 +688,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PartyIdentification60Choice> forPartyIdentification60Choice = new MMConstraint<PartyIdentification60Choice>() {
@@ -715,10 +715,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PartyIdentification89Choice
 	 * PartyIdentification89Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -726,6 +722,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PartyIdentification89Choice> forPartyIdentification89Choice = new MMConstraint<PartyIdentification89Choice>() {
@@ -749,10 +749,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PartyIdentification49Choice
 	 * PartyIdentification49Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -760,6 +756,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PartyIdentification49Choice> forPartyIdentification49Choice = new MMConstraint<PartyIdentification49Choice>() {
@@ -783,10 +783,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PartyIdentification48Choice
 	 * PartyIdentification48Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -794,6 +790,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PartyIdentification48Choice> forPartyIdentification48Choice = new MMConstraint<PartyIdentification48Choice>() {
@@ -817,10 +817,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PartyIdentification30Choice
 	 * PartyIdentification30Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -828,6 +824,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PartyIdentification30Choice> forPartyIdentification30Choice = new MMConstraint<PartyIdentification30Choice>() {
@@ -851,10 +851,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PartyIdentification14Choice
 	 * PartyIdentification14Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -862,6 +858,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PartyIdentification14Choice> forPartyIdentification14Choice = new MMConstraint<PartyIdentification14Choice>() {
@@ -885,10 +885,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PartyIdentification41Choice
 	 * PartyIdentification41Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -896,6 +892,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PartyIdentification41Choice> forPartyIdentification41Choice = new MMConstraint<PartyIdentification41Choice>() {
@@ -919,10 +919,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PartyIdentification37Choice
 	 * PartyIdentification37Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -930,6 +926,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PartyIdentification37Choice> forPartyIdentification37Choice = new MMConstraint<PartyIdentification37Choice>() {
@@ -953,10 +953,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PartyIdentification65Choice
 	 * PartyIdentification65Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -964,6 +960,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PartyIdentification65Choice> forPartyIdentification65Choice = new MMConstraint<PartyIdentification65Choice>() {
@@ -987,10 +987,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PartyIdentification42Choice
 	 * PartyIdentification42Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -998,6 +994,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PartyIdentification42Choice> forPartyIdentification42Choice = new MMConstraint<PartyIdentification42Choice>() {
@@ -1020,10 +1020,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.OtherParties9 OtherParties9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -1031,6 +1027,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<OtherParties9> forOtherParties9 = new MMConstraint<OtherParties9>() {
@@ -1053,10 +1053,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.OtherParties8 OtherParties8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -1064,6 +1060,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<OtherParties8> forOtherParties8 = new MMConstraint<OtherParties8>() {
@@ -1087,10 +1087,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PartyIdentification56Choice
 	 * PartyIdentification56Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -1098,6 +1094,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PartyIdentification56Choice> forPartyIdentification56Choice = new MMConstraint<PartyIdentification56Choice>() {
@@ -1121,10 +1121,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PartyIdentification15Choice
 	 * PartyIdentification15Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -1132,6 +1128,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PartyIdentification15Choice> forPartyIdentification15Choice = new MMConstraint<PartyIdentification15Choice>() {
@@ -1155,10 +1155,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PartyIdentification64Choice
 	 * PartyIdentification64Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -1166,6 +1162,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PartyIdentification64Choice> forPartyIdentification64Choice = new MMConstraint<PartyIdentification64Choice>() {
@@ -1189,10 +1189,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PartyIdentification57Choice
 	 * PartyIdentification57Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -1200,6 +1196,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PartyIdentification57Choice> forPartyIdentification57Choice = new MMConstraint<PartyIdentification57Choice>() {
@@ -1223,10 +1223,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PartyIdentification50Choice
 	 * PartyIdentification50Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -1234,6 +1230,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PartyIdentification50Choice> forPartyIdentification50Choice = new MMConstraint<PartyIdentification50Choice>() {
@@ -1257,10 +1257,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PartyIdentification88Choice
 	 * PartyIdentification88Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -1268,6 +1264,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PartyIdentification88Choice> forPartyIdentification88Choice = new MMConstraint<PartyIdentification88Choice>() {
@@ -1290,10 +1290,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.OtherParties17 OtherParties17}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -1301,6 +1297,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<OtherParties17> forOtherParties17 = new MMConstraint<OtherParties17>() {
@@ -1323,10 +1323,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.OtherParties19 OtherParties19}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -1334,6 +1330,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<OtherParties19> forOtherParties19 = new MMConstraint<OtherParties19>() {
@@ -1357,10 +1357,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PartyIdentification55Choice
 	 * PartyIdentification55Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -1368,6 +1364,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PartyIdentification55Choice> forPartyIdentification55Choice = new MMConstraint<PartyIdentification55Choice>() {
@@ -1391,10 +1391,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PartyIdentification40Choice
 	 * PartyIdentification40Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -1402,6 +1398,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PartyIdentification40Choice> forPartyIdentification40Choice = new MMConstraint<PartyIdentification40Choice>() {
@@ -1425,10 +1425,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PartyIdentification47Choice
 	 * PartyIdentification47Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -1436,6 +1432,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PartyIdentification47Choice> forPartyIdentification47Choice = new MMConstraint<PartyIdentification47Choice>() {
@@ -1459,10 +1459,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PartyIdentification36Choice
 	 * PartyIdentification36Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -1470,6 +1466,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PartyIdentification36Choice> forPartyIdentification36Choice = new MMConstraint<PartyIdentification36Choice>() {
@@ -1493,10 +1493,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PartyIdentification52Choice
 	 * PartyIdentification52Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -1504,6 +1500,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PartyIdentification52Choice> forPartyIdentification52Choice = new MMConstraint<PartyIdentification52Choice>() {
@@ -1527,10 +1527,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PartyIdentification38Choice
 	 * PartyIdentification38Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -1538,6 +1534,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PartyIdentification38Choice> forPartyIdentification38Choice = new MMConstraint<PartyIdentification38Choice>() {
@@ -1561,10 +1561,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PartyIdentification59Choice
 	 * PartyIdentification59Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -1572,6 +1568,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PartyIdentification59Choice> forPartyIdentification59Choice = new MMConstraint<PartyIdentification59Choice>() {
@@ -1595,10 +1595,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.PartyIdentification13Choice
 	 * PartyIdentification13Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -1606,6 +1602,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PartyIdentification13Choice> forPartyIdentification13Choice = new MMConstraint<PartyIdentification13Choice>() {
@@ -1628,10 +1628,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.OtherParties14 OtherParties14}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -1639,6 +1635,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<OtherParties14> forOtherParties14 = new MMConstraint<OtherParties14>() {
@@ -1661,10 +1661,6 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.OtherParties2 OtherParties2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistencePartyProprietaryIdentificationRule"</li>
 	 * <li>
@@ -1672,6 +1668,10 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<OtherParties2> forOtherParties2 = new MMConstraint<OtherParties2>() {

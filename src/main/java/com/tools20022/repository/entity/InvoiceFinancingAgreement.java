@@ -146,16 +146,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "InvoiceFinancingAgreement"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Set of characteristics that unambiguously identify an invoice financing agreement. An invoice financing agreement between a factor and its client allows to transfer a payment obligation that exists between the client and a third party from the client to the factor."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class InvoiceFinancingAgreement extends Agreement {
@@ -184,10 +184,6 @@ public class InvoiceFinancingAgreement extends Agreement {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement
 	 * InvoiceFinancingAgreement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Authorisation"</li>
 	 * <li>
@@ -195,6 +191,10 @@ public class InvoiceFinancingAgreement extends Agreement {
 	 * definition} =
 	 * "User identification or any user key that allows to check if the financing requestor is allowed to ask for invoice financing.\r\nUsage: the content is not of a technical nature, but reflects the organisational structure at the requesting side. The authorisation element can typically be used in case the financing requestor acts on behalf of one or more suppliers."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvoiceFinancingAgreement, Max128Text> mmAuthorisation = new MMBusinessAttribute<InvoiceFinancingAgreement, Max128Text>() {
@@ -243,10 +243,6 @@ public class InvoiceFinancingAgreement extends Agreement {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement
 	 * InvoiceFinancingAgreement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FinancingMethod"</li>
 	 * <li>
@@ -254,6 +250,10 @@ public class InvoiceFinancingAgreement extends Agreement {
 	 * definition} =
 	 * "Specifies the financing method related to invoice financing (eg collection mandate)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvoiceFinancingAgreement, Max350Text> mmFinancingMethod = new MMBusinessAttribute<InvoiceFinancingAgreement, Max350Text>() {
@@ -312,10 +312,6 @@ public class InvoiceFinancingAgreement extends Agreement {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement
 	 * InvoiceFinancingAgreement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RequestedAmount"</li>
 	 * <li>
@@ -323,6 +319,10 @@ public class InvoiceFinancingAgreement extends Agreement {
 	 * definition} =
 	 * "Amount requested by the requestor party, related to a single invoice to be financed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvoiceFinancingAgreement, CurrencyAndAmount> mmRequestedAmount = new MMBusinessAttribute<InvoiceFinancingAgreement, CurrencyAndAmount>() {
@@ -372,10 +372,6 @@ public class InvoiceFinancingAgreement extends Agreement {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement
 	 * InvoiceFinancingAgreement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RequestedPercentage"</li>
 	 * <li>
@@ -383,6 +379,10 @@ public class InvoiceFinancingAgreement extends Agreement {
 	 * definition} =
 	 * "Percentage of the amount requested by the requestor party, related to a single invoice, to be financed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvoiceFinancingAgreement, PercentageRate> mmRequestedPercentage = new MMBusinessAttribute<InvoiceFinancingAgreement, PercentageRate>() {
@@ -432,16 +432,16 @@ public class InvoiceFinancingAgreement extends Agreement {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement
 	 * InvoiceFinancingAgreement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AppliedPercentage"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "The percentage rate applied to calculate the amount financed."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvoiceFinancingAgreement, PercentageRate> mmAppliedPercentage = new MMBusinessAttribute<InvoiceFinancingAgreement, PercentageRate>() {
@@ -491,10 +491,6 @@ public class InvoiceFinancingAgreement extends Agreement {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement
 	 * InvoiceFinancingAgreement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FinancedAmount"</li>
 	 * <li>
@@ -502,6 +498,10 @@ public class InvoiceFinancingAgreement extends Agreement {
 	 * definition} =
 	 * "Specifies the amount financed which is derived from the applied percentage and the invoice amount.."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvoiceFinancingAgreement, CurrencyAndAmount> mmFinancedAmount = new MMBusinessAttribute<InvoiceFinancingAgreement, CurrencyAndAmount>() {
@@ -559,15 +559,15 @@ public class InvoiceFinancingAgreement extends Agreement {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement
 	 * InvoiceFinancingAgreement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Identification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identifies unambiguously the financing transaction."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvoiceFinancingAgreement, Max35Text> mmIdentification = new MMBusinessAttribute<InvoiceFinancingAgreement, Max35Text>() {
@@ -600,6 +600,11 @@ public class InvoiceFinancingAgreement extends Agreement {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} =
+	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingPartyRole
+	 * InvoiceFinancingPartyRole}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingPartyRole#mmInvoiceFinancingTransaction
@@ -608,25 +613,20 @@ public class InvoiceFinancingAgreement extends Agreement {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} =
-	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingPartyRole
-	 * InvoiceFinancingPartyRole}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement
 	 * InvoiceFinancingAgreement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InvoiceFinancingPartyRole"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Role played by a party in the context of financing an invoice."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<InvoiceFinancingAgreement, List<InvoiceFinancingPartyRole>> mmInvoiceFinancingPartyRole = new MMBusinessAssociationEnd<InvoiceFinancingAgreement, List<InvoiceFinancingPartyRole>>() {
@@ -659,6 +659,11 @@ public class InvoiceFinancingAgreement extends Agreement {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} =
+	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingStatus
+	 * InvoiceFinancingStatus}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingStatus#mmInvoiceFinancingTransaction
@@ -666,11 +671,6 @@ public class InvoiceFinancingAgreement extends Agreement {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} =
-	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingStatus
-	 * InvoiceFinancingStatus}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -717,10 +717,6 @@ public class InvoiceFinancingAgreement extends Agreement {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement
 	 * InvoiceFinancingAgreement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InvoiceFinancingStatus"</li>
 	 * <li>
@@ -728,6 +724,10 @@ public class InvoiceFinancingAgreement extends Agreement {
 	 * definition} =
 	 * "Status of the invoice financing transaction and of the different requests linked to it."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<InvoiceFinancingAgreement, com.tools20022.repository.entity.InvoiceFinancingStatus> mmInvoiceFinancingStatus = new MMBusinessAssociationEnd<InvoiceFinancingAgreement, com.tools20022.repository.entity.InvoiceFinancingStatus>() {
@@ -765,6 +765,9 @@ public class InvoiceFinancingAgreement extends Agreement {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.Invoice Invoice}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.Invoice#mmInvoiceFinancingTransaction
@@ -772,9 +775,6 @@ public class InvoiceFinancingAgreement extends Agreement {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.Invoice Invoice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -791,15 +791,15 @@ public class InvoiceFinancingAgreement extends Agreement {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement
 	 * InvoiceFinancingAgreement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Invoice"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Invoice to which is referred financing request."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<InvoiceFinancingAgreement, List<Invoice>> mmInvoice = new MMBusinessAssociationEnd<InvoiceFinancingAgreement, List<Invoice>>() {
@@ -833,6 +833,10 @@ public class InvoiceFinancingAgreement extends Agreement {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.CashEntry CashEntry}
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.CashEntry#mmRelatedInvoiceFinancingTransaction
@@ -841,18 +845,10 @@ public class InvoiceFinancingAgreement extends Agreement {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.CashEntry CashEntry}
-	 * </li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement
 	 * InvoiceFinancingAgreement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ResultingCashEntry"</li>
 	 * <li>
@@ -860,6 +856,10 @@ public class InvoiceFinancingAgreement extends Agreement {
 	 * definition} =
 	 * "Information related to the crediting of the amount financed, such as dates, amount, charges..."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<InvoiceFinancingAgreement, Optional<CashEntry>> mmResultingCashEntry = new MMBusinessAssociationEnd<InvoiceFinancingAgreement, Optional<CashEntry>>() {
@@ -893,6 +893,10 @@ public class InvoiceFinancingAgreement extends Agreement {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.Assignment
+	 * Assignment}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.Assignment#mmFinancingAgreement
@@ -901,24 +905,20 @@ public class InvoiceFinancingAgreement extends Agreement {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.Assignment
-	 * Assignment}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement
 	 * InvoiceFinancingAgreement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Assignment"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Assignments resulting from an invoice financing agreement."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<InvoiceFinancingAgreement, List<Assignment>> mmAssignment = new MMBusinessAssociationEnd<InvoiceFinancingAgreement, List<Assignment>>() {

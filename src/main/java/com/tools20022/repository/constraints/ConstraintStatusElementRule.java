@@ -35,10 +35,6 @@ public class ConstraintStatusElementRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountStatus2 AccountStatus2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "StatusElementRule"</li>
 	 * <li>
@@ -46,6 +42,10 @@ public class ConstraintStatusElementRule {
 	 * definition} =
 	 * "One of the elements (Enabled, Disabled, Pending, PendingOpening, Proforma, Closed, ClosurePending, Other) must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountStatus2> forAccountStatus2 = new MMConstraint<AccountStatus2>() {

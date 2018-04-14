@@ -273,15 +273,15 @@ import java.util.Optional;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "AcceptorConfiguration"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Acceptor parameters to be downloaded from the terminal management system."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class AcceptorConfiguration {
@@ -349,15 +349,15 @@ public class AcceptorConfiguration {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
 	 * AcceptorConfiguration}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ApplicationIdentification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identification of the payment application."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<AcceptorConfiguration, Max35Text> mmApplicationIdentification = new MMBusinessAttribute<AcceptorConfiguration, Max35Text>() {
@@ -419,16 +419,16 @@ public class AcceptorConfiguration {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
 	 * AcceptorConfiguration}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FinancialCapture"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Mode for the financial capture of the transaction by the acquirer."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<AcceptorConfiguration, FinancialCaptureCode> mmFinancialCapture = new MMBusinessAttribute<AcceptorConfiguration, FinancialCaptureCode>() {
@@ -509,15 +509,15 @@ public class AcceptorConfiguration {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
 	 * AcceptorConfiguration}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BatchTransferContent"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Types of transaction to include in the batch."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<AcceptorConfiguration, BatchTransactionTypeCode> mmBatchTransferContent = new MMBusinessAttribute<AcceptorConfiguration, BatchTransactionTypeCode>() {
@@ -587,15 +587,15 @@ public class AcceptorConfiguration {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
 	 * AcceptorConfiguration}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ExchangePolicy"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Exchange policy between parties."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<AcceptorConfiguration, ExchangePolicyCode> mmExchangePolicy = new MMBusinessAttribute<AcceptorConfiguration, ExchangePolicyCode>() {
@@ -663,15 +663,15 @@ public class AcceptorConfiguration {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
 	 * AcceptorConfiguration}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MaximumNumber"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Maximum number of transactions without exchange."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<AcceptorConfiguration, Number> mmMaximumNumber = new MMBusinessAttribute<AcceptorConfiguration, Number>() {
@@ -740,16 +740,16 @@ public class AcceptorConfiguration {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
 	 * AcceptorConfiguration}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MaximumAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Maximum cumulative amount of the transactions without exchange."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<AcceptorConfiguration, ImpliedCurrencyAndAmount> mmMaximumAmount = new MMBusinessAttribute<AcceptorConfiguration, ImpliedCurrencyAndAmount>() {
@@ -818,10 +818,6 @@ public class AcceptorConfiguration {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
 	 * AcceptorConfiguration}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReconciliationByAcquirer"</li>
 	 * <li>
@@ -829,6 +825,10 @@ public class AcceptorConfiguration {
 	 * definition} =
 	 * "Indicates the reconciliation period is assigned by the acquirer instead of the acceptor."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<AcceptorConfiguration, TrueFalseIndicator> mmReconciliationByAcquirer = new MMBusinessAttribute<AcceptorConfiguration, TrueFalseIndicator>() {
@@ -898,16 +898,16 @@ public class AcceptorConfiguration {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
 	 * AcceptorConfiguration}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TotalsPerCurrency"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Indicates the reconciliation total amounts are computed per currency."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<AcceptorConfiguration, TrueFalseIndicator> mmTotalsPerCurrency = new MMBusinessAttribute<AcceptorConfiguration, TrueFalseIndicator>() {
@@ -976,16 +976,16 @@ public class AcceptorConfiguration {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
 	 * AcceptorConfiguration}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ProtectCardData"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Indicator to require protection of sensitive card data in messages."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<AcceptorConfiguration, TrueFalseIndicator> mmProtectCardData = new MMBusinessAttribute<AcceptorConfiguration, TrueFalseIndicator>() {
@@ -1042,15 +1042,15 @@ public class AcceptorConfiguration {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
 	 * AcceptorConfiguration}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RetailerParameters"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Acceptor parameters dedicated to the retailer."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<AcceptorConfiguration, Max10000Binary> mmRetailerParameters = new MMBusinessAttribute<AcceptorConfiguration, Max10000Binary>() {
@@ -1118,16 +1118,16 @@ public class AcceptorConfiguration {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
 	 * AcceptorConfiguration}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ApplicationParameters"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Configuration parameters attached to the payment application."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<AcceptorConfiguration, Max10000Binary> mmApplicationParameters = new MMBusinessAttribute<AcceptorConfiguration, Max10000Binary>() {
@@ -1161,6 +1161,11 @@ public class AcceptorConfiguration {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} =
+	 * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem
+	 * TerminalManagementSystem}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#mmAcceptorConfiguration
@@ -1168,11 +1173,6 @@ public class AcceptorConfiguration {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} =
-	 * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem
-	 * TerminalManagementSystem}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1225,10 +1225,6 @@ public class AcceptorConfiguration {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
 	 * AcceptorConfiguration}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TerminalManagementSystem"</li>
 	 * <li>
@@ -1236,6 +1232,10 @@ public class AcceptorConfiguration {
 	 * definition} =
 	 * "Terminal management system for which an acceptor configuration is provided."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<AcceptorConfiguration, Optional<TerminalManagementSystem>> mmTerminalManagementSystem = new MMBusinessAssociationEnd<AcceptorConfiguration, Optional<TerminalManagementSystem>>() {
@@ -1281,15 +1281,15 @@ public class AcceptorConfiguration {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
 	 * AcceptorConfiguration}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ApplicationVersion"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Version of the application."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<AcceptorConfiguration, Max35Text> mmApplicationVersion = new MMBusinessAttribute<AcceptorConfiguration, Max35Text>() {

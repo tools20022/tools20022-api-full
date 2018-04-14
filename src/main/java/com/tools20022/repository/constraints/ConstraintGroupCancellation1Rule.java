@@ -36,10 +36,6 @@ public class ConstraintGroupCancellation1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.pacs.PaymentCancellationRequestV01
 	 * PaymentCancellationRequestV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GroupCancellation1Rule"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintGroupCancellation1Rule {
 	 * definition} =
 	 * "If GroupHeader/GroupCancellation is true, then OriginalGroupInformation/CancellationReasonInformation/CancellationReason must present.\n."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<com.tools20022.repository.area.pacs.PaymentCancellationRequestV01> for_pacs_PaymentCancellationRequestV01 = new MMConstraint<com.tools20022.repository.area.pacs.PaymentCancellationRequestV01>() {
@@ -70,10 +70,6 @@ public class ConstraintGroupCancellation1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.pain.PaymentCancellationRequestV01
 	 * PaymentCancellationRequestV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GroupCancellation1Rule"</li>
 	 * <li>
@@ -81,6 +77,10 @@ public class ConstraintGroupCancellation1Rule {
 	 * definition} =
 	 * "If GroupHeader/GroupCancellation is true, then TransactionInformation is not allowed.\nIf GroupHeader/GroupCancellation is false, then at least one occurrence of TransactionInformation must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<com.tools20022.repository.area.pain.PaymentCancellationRequestV01> for_pain_PaymentCancellationRequestV01 = new MMConstraint<com.tools20022.repository.area.pain.PaymentCancellationRequestV01>() {

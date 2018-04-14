@@ -37,10 +37,6 @@ public class ConstraintDefaultOptionRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationAdviceV01
 	 * AgentCANotificationAdviceV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DefaultOptionRule"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintDefaultOptionRule {
 	 * definition} =
 	 * "If the value of CorporateActionGeneralInformation/MandatoryVoluntaryEventType is Mandatory, then CorporateActionDetails/DefaultOptionNumber and CorporateActionDetails/DefaultOptionType must be present.\n."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AgentCANotificationAdviceV01> for_seev_AgentCANotificationAdviceV01 = new MMConstraint<AgentCANotificationAdviceV01>() {

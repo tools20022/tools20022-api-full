@@ -39,10 +39,6 @@ public class ConstraintEffectiveDateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61
 	 * CorporateActionDate61}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EffectiveDateRule"</li>
 	 * <li>
@@ -50,6 +46,10 @@ public class ConstraintEffectiveDateRule {
 	 * definition} =
 	 * "Effective date is to be used in events where there is no concept of entitlement, for example Name Change (CHAN) or Place of Incorporation (PLAC), and in events where there is a sense of eligibility but with a legal obligation, for example Merger (MRGR)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -79,10 +79,6 @@ public class ConstraintEffectiveDateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58
 	 * CorporateActionDate58}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EffectiveDateRule"</li>
 	 * <li>
@@ -90,6 +86,10 @@ public class ConstraintEffectiveDateRule {
 	 * definition} =
 	 * "Effective date is to be used in events where there is no concept of entitlement, for instance Name Change (CHAN) or Place of Incorporation (PLAC), and in events where there is a sense of eligibility but with a legal obligation, for instance Merger (MRGR)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionDate58> forCorporateActionDate58 = new MMConstraint<CorporateActionDate58>() {
@@ -113,10 +113,6 @@ public class ConstraintEffectiveDateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate28
 	 * CorporateActionDate28}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EffectiveDateRule"</li>
 	 * <li>
@@ -124,6 +120,10 @@ public class ConstraintEffectiveDateRule {
 	 * definition} =
 	 * "Effective date is to be used in events where there is no concept of entitlement, for instance Name Change (CHAN) or Place of Incorporation (PLAC), and in events where there is a sense of eligibility but with a legal obligation, for instance Merger (MRGR)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionDate28> forCorporateActionDate28 = new MMConstraint<CorporateActionDate28>() {
@@ -147,10 +147,6 @@ public class ConstraintEffectiveDateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate13
 	 * CorporateActionDate13}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EffectiveDateRule"</li>
 	 * <li>
@@ -158,6 +154,10 @@ public class ConstraintEffectiveDateRule {
 	 * definition} =
 	 * "Effective date is to be used in events where there is no concept of entitlement, for instance Name Change (CHAN) or Place of Incorporation (PLAC), and in events where there is a sense of eligibility but with a legal obligation, for instance Merger (MRGR)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionDate13> forCorporateActionDate13 = new MMConstraint<CorporateActionDate13>() {
@@ -181,10 +181,6 @@ public class ConstraintEffectiveDateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate21
 	 * CorporateActionDate21}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EffectiveDateRule"</li>
 	 * <li>
@@ -192,6 +188,10 @@ public class ConstraintEffectiveDateRule {
 	 * definition} =
 	 * "Effective date is to be used in events where there is no concept of entitlement, for instance Name Change (CHAN) or Place of Incorporation (PLAC), and in events where there is a sense of eligibility but with a legal obligation, for instance Merger (MRGR)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionDate21> forCorporateActionDate21 = new MMConstraint<CorporateActionDate21>() {
@@ -215,10 +215,6 @@ public class ConstraintEffectiveDateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate14
 	 * CorporateActionDate14}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EffectiveDateRule"</li>
 	 * <li>
@@ -226,6 +222,10 @@ public class ConstraintEffectiveDateRule {
 	 * definition} =
 	 * "Effective date is to be used in events where there is no concept of entitlement, for instance Name Change (CHAN) or Place of Incorporation (PLAC), and in events where there is a sense of eligibility but with a legal obligation, for instance Merger (MRGR)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionDate14> forCorporateActionDate14 = new MMConstraint<CorporateActionDate14>() {
@@ -249,10 +249,6 @@ public class ConstraintEffectiveDateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate25
 	 * CorporateActionDate25}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EffectiveDateRule"</li>
 	 * <li>
@@ -260,6 +256,10 @@ public class ConstraintEffectiveDateRule {
 	 * definition} =
 	 * "Effective date is to be used in events where there is no concept of entitlement, for instance Name Change (CHAN) or Place of Incorporation (PLAC), and in events where there is a sense of eligibility but with a legal obligation, for instance Merger (MRGR)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionDate25> forCorporateActionDate25 = new MMConstraint<CorporateActionDate25>() {
@@ -283,10 +283,6 @@ public class ConstraintEffectiveDateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate22
 	 * CorporateActionDate22}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EffectiveDateRule"</li>
 	 * <li>
@@ -294,6 +290,10 @@ public class ConstraintEffectiveDateRule {
 	 * definition} =
 	 * "Effective date is to be used in events where there is no concept of entitlement, for instance Name Change (CHAN) or Place of Incorporation (PLAC), and in events where there is a sense of eligibility but with a legal obligation, for instance Merger (MRGR)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionDate22> forCorporateActionDate22 = new MMConstraint<CorporateActionDate22>() {
@@ -317,10 +317,6 @@ public class ConstraintEffectiveDateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate74
 	 * CorporateActionDate74}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EffectiveDateRule"</li>
 	 * <li>
@@ -328,6 +324,10 @@ public class ConstraintEffectiveDateRule {
 	 * definition} =
 	 * "Effective date is to be used in events where there is no concept of entitlement, for example Name Change (CHAN) or Place of Incorporation (PLAC), and in events where there is a sense of eligibility but with a legal obligation, for example Merger (MRGR)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionDate74> forCorporateActionDate74 = new MMConstraint<CorporateActionDate74>() {
@@ -351,10 +351,6 @@ public class ConstraintEffectiveDateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27
 	 * CorporateActionDate27}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EffectiveDateRule"</li>
 	 * <li>
@@ -362,6 +358,10 @@ public class ConstraintEffectiveDateRule {
 	 * definition} =
 	 * "Effective date is to be used in events where there is no concept of entitlement, for instance Name Change (CHAN) or Place of Incorporation (PLAC), and in events where there is a sense of eligibility but with a legal obligation, for instance Merger (MRGR)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -394,10 +394,6 @@ public class ConstraintEffectiveDateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate44
 	 * CorporateActionDate44}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EffectiveDateRule"</li>
 	 * <li>
@@ -405,6 +401,10 @@ public class ConstraintEffectiveDateRule {
 	 * definition} =
 	 * "Effective date is to be used in events where there is no concept of entitlement, for instance Name Change (CHAN) or Place of Incorporation (PLAC), and in events where there is a sense of eligibility but with a legal obligation, for instance Merger (MRGR)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -443,10 +443,6 @@ public class ConstraintEffectiveDateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate1
 	 * CorporateActionDate1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EffectiveDateRule"</li>
 	 * <li>
@@ -454,6 +450,10 @@ public class ConstraintEffectiveDateRule {
 	 * definition} =
 	 * "Effective date is to be used in events where there is no concept of entitlement, for instance Name Change (CHAN) or Place of Incorporation (PLAC), and in events where there is a sense of eligibility but with a legal obligation, for instance Merger (MRGR)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionDate1> forCorporateActionDate1 = new MMConstraint<CorporateActionDate1>() {

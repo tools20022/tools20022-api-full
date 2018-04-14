@@ -98,16 +98,16 @@ import java.util.Optional;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "MarginAmountRequirement"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Amount of expected margin required by any of the parties of the margin calculation."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class MarginAmountRequirement {
@@ -120,6 +120,10 @@ public class MarginAmountRequirement {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.ExposureCalculation
+	 * ExposureCalculation}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.ExposureCalculation#mmVariationMarginAmountRequirement
@@ -128,24 +132,20 @@ public class MarginAmountRequirement {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.ExposureCalculation
-	 * ExposureCalculation}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.MarginAmountRequirement
 	 * MarginAmountRequirement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "VariationMarginAmountRequirementCalculation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Exposure valuation which takes into account amount requirements."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<MarginAmountRequirement, Optional<ExposureCalculation>> mmVariationMarginAmountRequirementCalculation = new MMBusinessAssociationEnd<MarginAmountRequirement, Optional<ExposureCalculation>>() {
@@ -199,10 +199,6 @@ public class MarginAmountRequirement {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.MarginAmountRequirement
 	 * MarginAmountRequirement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DeliverMarginAmount"</li>
 	 * <li>
@@ -210,6 +206,10 @@ public class MarginAmountRequirement {
 	 * definition} =
 	 * "Amount of new Variation Margin that will be delivered to one party by the other party after rounding, threshold and minimum transfer amount are taken into account."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<MarginAmountRequirement, CurrencyAndAmount> mmDeliverMarginAmount = new MMBusinessAttribute<MarginAmountRequirement, CurrencyAndAmount>() {
@@ -259,10 +259,6 @@ public class MarginAmountRequirement {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.MarginAmountRequirement
 	 * MarginAmountRequirement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReturnMarginAmount"</li>
 	 * <li>
@@ -270,6 +266,10 @@ public class MarginAmountRequirement {
 	 * definition} =
 	 * "Amount of new Variation Margin that will be recalled to one party from the other party after rounding, threshold and minimum transfer amount are taken into account."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<MarginAmountRequirement, CurrencyAndAmount> mmReturnMarginAmount = new MMBusinessAttribute<MarginAmountRequirement, CurrencyAndAmount>() {
@@ -302,6 +302,10 @@ public class MarginAmountRequirement {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.ExposureCalculation
+	 * ExposureCalculation}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.ExposureCalculation#mmSegregatedAmountRequirement
@@ -310,24 +314,20 @@ public class MarginAmountRequirement {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.ExposureCalculation
-	 * ExposureCalculation}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.MarginAmountRequirement
 	 * MarginAmountRequirement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SegregatedAmountRequirementCalculation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Exposure valuation which takes into account amount requirements."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<MarginAmountRequirement, Optional<ExposureCalculation>> mmSegregatedAmountRequirementCalculation = new MMBusinessAssociationEnd<MarginAmountRequirement, Optional<ExposureCalculation>>() {
@@ -370,10 +370,6 @@ public class MarginAmountRequirement {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.MarginAmountRequirement
 	 * MarginAmountRequirement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IntraDayMarginCall"</li>
 	 * <li>
@@ -381,6 +377,10 @@ public class MarginAmountRequirement {
 	 * definition} =
 	 * "Total aggregate value of collateral called intraday, excluding repayments.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<MarginAmountRequirement, CurrencyAndAmount> mmIntraDayMarginCall = new MMBusinessAttribute<MarginAmountRequirement, CurrencyAndAmount>() {
@@ -421,10 +421,6 @@ public class MarginAmountRequirement {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.MarginAmountRequirement
 	 * MarginAmountRequirement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PeakInitialMarginLiability"</li>
 	 * <li>
@@ -432,6 +428,10 @@ public class MarginAmountRequirement {
 	 * definition} =
 	 * "Peak increase in initial margin liability for the account during the day."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<MarginAmountRequirement, CurrencyAndAmount> mmPeakInitialMarginLiability = new MMBusinessAttribute<MarginAmountRequirement, CurrencyAndAmount>() {
@@ -472,10 +472,6 @@ public class MarginAmountRequirement {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.MarginAmountRequirement
 	 * MarginAmountRequirement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AggregatePeakLiability"</li>
 	 * <li>
@@ -483,6 +479,10 @@ public class MarginAmountRequirement {
 	 * definition} =
 	 * "Peak intraday liability (sum of increase in initial margin relative to end of day plus sum of decrease in variation margin relative to end of day) for a margin account during the day. Liabilities are shown as positive integers."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<MarginAmountRequirement, CurrencyAndAmount> mmAggregatePeakLiability = new MMBusinessAttribute<MarginAmountRequirement, CurrencyAndAmount>() {
@@ -523,10 +523,6 @@ public class MarginAmountRequirement {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.MarginAmountRequirement
 	 * MarginAmountRequirement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PeakVariationMarginLiability"</li>
 	 * <li>
@@ -534,6 +530,10 @@ public class MarginAmountRequirement {
 	 * definition} =
 	 * "Peak loss uncollateralised variation margin liability on the margin account during the day."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<MarginAmountRequirement, CurrencyAndAmount> mmPeakVariationMarginLiability = new MMBusinessAttribute<MarginAmountRequirement, CurrencyAndAmount>() {

@@ -113,7 +113,7 @@ class ListBuilderForISOArchive_01 {
 		list.add((T) AcceptorConfigurationUpdateV03.mmObject());
 		list.add((T) ManagementPlanReplacementV03.mmObject());
 		list.add((T) AcceptorAuthorisationResponseV03.mmObject());
-		list.add((T) StatusReportV03.mmObject());
+		list.add((T) com.tools20022.repository.area.catm.StatusReportV03.mmObject());
 		list.add((T) RemittanceLocationAdviceV01.mmObject());
 		list.add((T) RemittanceAdviceV01.mmObject());
 		list.add((T) AccountOpeningInstructionV05.mmObject());

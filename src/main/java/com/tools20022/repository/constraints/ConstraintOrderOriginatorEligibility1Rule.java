@@ -35,10 +35,6 @@ public class ConstraintOrderOriginatorEligibility1Rule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Intermediary40 Intermediary40}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OrderOriginatorEligibility1Rule"</li>
 	 * <li>
@@ -46,6 +42,10 @@ public class ConstraintOrderOriginatorEligibility1Rule {
 	 * definition} =
 	 * "OrderOriginatorEligibility may only be present if Role is either UCL1 (UnderlyingClient1) or UCL2 (UnderlyingClient2)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Intermediary40> forIntermediary40 = new MMConstraint<Intermediary40>() {
@@ -68,10 +68,6 @@ public class ConstraintOrderOriginatorEligibility1Rule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Intermediary29 Intermediary29}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OrderOriginatorEligibility1Rule"</li>
 	 * <li>
@@ -79,6 +75,10 @@ public class ConstraintOrderOriginatorEligibility1Rule {
 	 * definition} =
 	 * "OrderOriginatorEligibility may only be present if Role is either UCL1 or UCL2."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Intermediary29> forIntermediary29 = new MMConstraint<Intermediary29>() {
@@ -101,10 +101,6 @@ public class ConstraintOrderOriginatorEligibility1Rule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Intermediary9 Intermediary9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OrderOriginatorEligibility1Rule"</li>
 	 * <li>
@@ -112,6 +108,10 @@ public class ConstraintOrderOriginatorEligibility1Rule {
 	 * definition} =
 	 * "OrderOriginatorEligibility may only be present if Role is either UCL1 or UCL2."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Intermediary9> forIntermediary9 = new MMConstraint<Intermediary9>() {
@@ -134,10 +134,6 @@ public class ConstraintOrderOriginatorEligibility1Rule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Intermediary39 Intermediary39}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OrderOriginatorEligibility1Rule"</li>
 	 * <li>
@@ -145,6 +141,10 @@ public class ConstraintOrderOriginatorEligibility1Rule {
 	 * definition} =
 	 * "OrderOriginatorEligibility may only be present if Role is either UCL1 (UnderlyingClient1) or UCL2 (UnderlyingClient2)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Intermediary39> forIntermediary39 = new MMConstraint<Intermediary39>() {
@@ -167,10 +167,6 @@ public class ConstraintOrderOriginatorEligibility1Rule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Intermediary8 Intermediary8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OrderOriginatorEligibility1Rule"</li>
 	 * <li>
@@ -178,6 +174,10 @@ public class ConstraintOrderOriginatorEligibility1Rule {
 	 * definition} =
 	 * "OrderOriginatorEligibility may only be present if Role is either UCL1 or UCL2."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Intermediary8> forIntermediary8 = new MMConstraint<Intermediary8>() {

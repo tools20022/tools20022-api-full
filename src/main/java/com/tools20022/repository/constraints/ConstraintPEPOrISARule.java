@@ -38,10 +38,6 @@ public class ConstraintPEPOrISARule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PEPISACashTransfer1
 	 * PEPISACashTransfer1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PEPOrISARule"</li>
 	 * <li>
@@ -49,6 +45,10 @@ public class ConstraintPEPOrISARule {
 	 * definition} =
 	 * " If Type is PEPT, then Year/PEP is mandatory. If Type is PEPT, then Year/ISA is not allowed. If Type is ISAT then Year/ISA is mandatory. If Type is ISAT, then Year/PEP is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PEPISACashTransfer1> forPEPISACashTransfer1 = new MMConstraint<PEPISACashTransfer1>() {
@@ -72,10 +72,6 @@ public class ConstraintPEPOrISARule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PEPISACashTransfer2
 	 * PEPISACashTransfer2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PEPOrISARule"</li>
 	 * <li>
@@ -83,6 +79,10 @@ public class ConstraintPEPOrISARule {
 	 * definition} =
 	 * " If Type is PEPT, then Year/PEP is mandatory. If Type is PEPT, then Year/ISA is not allowed. If Type is ISAT then Year/ISA is mandatory. If Type is ISAT, then Year/PEP is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PEPISACashTransfer2> forPEPISACashTransfer2 = new MMConstraint<PEPISACashTransfer2>() {

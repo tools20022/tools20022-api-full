@@ -38,10 +38,6 @@ public class ConstraintOptionNumber2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption123
 	 * CorporateActionOption123}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionNumber2Rule"</li>
 	 * <li>
@@ -49,6 +45,10 @@ public class ConstraintOptionNumber2Rule {
 	 * definition} =
 	 * "When the CorporateActionInstruction is unsolicited, ie, the instruction has not been preceded by an Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption123> forCorporateActionOption123 = new MMConstraint<CorporateActionOption123>() {
@@ -72,10 +72,6 @@ public class ConstraintOptionNumber2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption131
 	 * CorporateActionOption131}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionNumber2Rule"</li>
 	 * <li>
@@ -83,6 +79,10 @@ public class ConstraintOptionNumber2Rule {
 	 * definition} =
 	 * "When the CorporateActionInstruction is unsolicited, ie, the instruction has not been preceded by an Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -121,10 +121,6 @@ public class ConstraintOptionNumber2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption146
 	 * CorporateActionOption146}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionNumber2Rule"</li>
 	 * <li>
@@ -132,6 +128,10 @@ public class ConstraintOptionNumber2Rule {
 	 * definition} =
 	 * "When the CorporateActionInstruction is unsolicited, that is, the instruction has not been preceded by a Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption146> forCorporateActionOption146 = new MMConstraint<CorporateActionOption146>() {
@@ -155,10 +155,6 @@ public class ConstraintOptionNumber2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption57
 	 * CorporateActionOption57}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionNumber2Rule"</li>
 	 * <li>
@@ -166,6 +162,10 @@ public class ConstraintOptionNumber2Rule {
 	 * definition} =
 	 * "When the CorporateActionInstruction is unsolicited, ie, the instruction has not been preceded by an Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -198,10 +198,6 @@ public class ConstraintOptionNumber2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption13
 	 * CorporateActionOption13}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionNumber2Rule"</li>
 	 * <li>
@@ -209,6 +205,10 @@ public class ConstraintOptionNumber2Rule {
 	 * definition} =
 	 * "When the CorporateActionInstruction is unsolicited, ie, the instruction has not been preceded by an Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption13> forCorporateActionOption13 = new MMConstraint<CorporateActionOption13>() {
@@ -232,10 +232,6 @@ public class ConstraintOptionNumber2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption38
 	 * CorporateActionOption38}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionNumber2Rule"</li>
 	 * <li>
@@ -243,6 +239,10 @@ public class ConstraintOptionNumber2Rule {
 	 * definition} =
 	 * "When the CorporateActionInstruction is unsolicited, ie, the instruction has not been preceded by an Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption38> forCorporateActionOption38 = new MMConstraint<CorporateActionOption38>() {
@@ -266,10 +266,6 @@ public class ConstraintOptionNumber2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption103
 	 * CorporateActionOption103}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionNumber2Rule"</li>
 	 * <li>
@@ -277,6 +273,10 @@ public class ConstraintOptionNumber2Rule {
 	 * definition} =
 	 * "When the CorporateActionInstruction is unsolicited, ie, the instruction has not been preceded by an Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -315,10 +315,6 @@ public class ConstraintOptionNumber2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption142
 	 * CorporateActionOption142}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionNumber2Rule"</li>
 	 * <li>
@@ -326,6 +322,10 @@ public class ConstraintOptionNumber2Rule {
 	 * definition} =
 	 * "When the CorporateActionInstruction is unsolicited, that is, the instruction has not been preceded by a Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -355,10 +355,6 @@ public class ConstraintOptionNumber2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption118
 	 * CorporateActionOption118}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionNumber2Rule"</li>
 	 * <li>
@@ -366,6 +362,10 @@ public class ConstraintOptionNumber2Rule {
 	 * definition} =
 	 * "When the CorporateActionInstruction is unsolicited, ie, the instruction has not been preceded by an Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -404,10 +404,6 @@ public class ConstraintOptionNumber2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption5
 	 * CorporateActionOption5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionNumber2Rule"</li>
 	 * <li>
@@ -415,6 +411,10 @@ public class ConstraintOptionNumber2Rule {
 	 * definition} =
 	 * "When the CorporateActionInstruction is unsolicited, ie, the instruction has not been preceded by an Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption5> forCorporateActionOption5 = new MMConstraint<CorporateActionOption5>() {
@@ -438,10 +438,6 @@ public class ConstraintOptionNumber2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption6
 	 * CorporateActionOption6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionNumber2Rule"</li>
 	 * <li>
@@ -449,6 +445,10 @@ public class ConstraintOptionNumber2Rule {
 	 * definition} =
 	 * "When the CorporateActionInstruction is unsolicited, ie, the instruction has not been preceded by an Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption6> forCorporateActionOption6 = new MMConstraint<CorporateActionOption6>() {
@@ -472,10 +472,6 @@ public class ConstraintOptionNumber2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption120
 	 * CorporateActionOption120}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionNumber2Rule"</li>
 	 * <li>
@@ -483,6 +479,10 @@ public class ConstraintOptionNumber2Rule {
 	 * definition} =
 	 * "When the CorporateActionInstruction is unsolicited, ie, the instruction has not been preceded by an Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -512,10 +512,6 @@ public class ConstraintOptionNumber2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption42
 	 * CorporateActionOption42}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionNumber2Rule"</li>
 	 * <li>
@@ -523,6 +519,10 @@ public class ConstraintOptionNumber2Rule {
 	 * definition} =
 	 * "When the CorporateActionInstruction is unsolicited, ie, the instruction has not been preceded by an Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -555,10 +555,6 @@ public class ConstraintOptionNumber2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption58
 	 * CorporateActionOption58}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionNumber2Rule"</li>
 	 * <li>
@@ -566,6 +562,10 @@ public class ConstraintOptionNumber2Rule {
 	 * definition} =
 	 * "When the CorporateActionInstruction is unsolicited, ie, the instruction has not been preceded by an Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption58> forCorporateActionOption58 = new MMConstraint<CorporateActionOption58>() {
@@ -589,10 +589,6 @@ public class ConstraintOptionNumber2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption107
 	 * CorporateActionOption107}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionNumber2Rule"</li>
 	 * <li>
@@ -600,6 +596,10 @@ public class ConstraintOptionNumber2Rule {
 	 * definition} =
 	 * "When the CorporateActionInstruction is unsolicited, ie, the instruction has not been preceded by an Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption107> forCorporateActionOption107 = new MMConstraint<CorporateActionOption107>() {
@@ -623,10 +623,6 @@ public class ConstraintOptionNumber2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption134
 	 * CorporateActionOption134}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionNumber2Rule"</li>
 	 * <li>
@@ -634,6 +630,10 @@ public class ConstraintOptionNumber2Rule {
 	 * definition} =
 	 * "When the CorporateActionInstruction is unsolicited, ie, the instruction has not been preceded by an Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption134> forCorporateActionOption134 = new MMConstraint<CorporateActionOption134>() {
@@ -657,10 +657,6 @@ public class ConstraintOptionNumber2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption30
 	 * CorporateActionOption30}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionNumber2Rule"</li>
 	 * <li>
@@ -668,6 +664,10 @@ public class ConstraintOptionNumber2Rule {
 	 * definition} =
 	 * "When the CorporateActionInstruction is unsolicited, ie, the instruction has not been preceded by an Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption30> forCorporateActionOption30 = new MMConstraint<CorporateActionOption30>() {
@@ -691,10 +691,6 @@ public class ConstraintOptionNumber2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption28
 	 * CorporateActionOption28}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionNumber2Rule"</li>
 	 * <li>
@@ -702,6 +698,10 @@ public class ConstraintOptionNumber2Rule {
 	 * definition} =
 	 * "When the CorporateActionInstruction is unsolicited, ie, the instruction has not been preceded by an Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption28> forCorporateActionOption28 = new MMConstraint<CorporateActionOption28>() {
@@ -725,10 +725,6 @@ public class ConstraintOptionNumber2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption43
 	 * CorporateActionOption43}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionNumber2Rule"</li>
 	 * <li>
@@ -736,6 +732,10 @@ public class ConstraintOptionNumber2Rule {
 	 * definition} =
 	 * "When the CorporateActionInstruction is unsolicited, ie, the instruction has not been preceded by an Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption43> forCorporateActionOption43 = new MMConstraint<CorporateActionOption43>() {
@@ -759,10 +759,6 @@ public class ConstraintOptionNumber2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption25
 	 * CorporateActionOption25}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionNumber2Rule"</li>
 	 * <li>
@@ -770,6 +766,10 @@ public class ConstraintOptionNumber2Rule {
 	 * definition} =
 	 * "When the CorporateActionInstruction is unsolicited, ie, the instruction has not been preceded by an Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption25> forCorporateActionOption25 = new MMConstraint<CorporateActionOption25>() {
@@ -793,10 +793,6 @@ public class ConstraintOptionNumber2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption47
 	 * CorporateActionOption47}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionNumber2Rule"</li>
 	 * <li>
@@ -804,6 +800,10 @@ public class ConstraintOptionNumber2Rule {
 	 * definition} =
 	 * "When the CorporateActionInstruction is unsolicited, ie, the instruction has not been preceded by an Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption47> forCorporateActionOption47 = new MMConstraint<CorporateActionOption47>() {
@@ -827,10 +827,6 @@ public class ConstraintOptionNumber2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption128
 	 * CorporateActionOption128}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionNumber2Rule"</li>
 	 * <li>
@@ -838,6 +834,10 @@ public class ConstraintOptionNumber2Rule {
 	 * definition} =
 	 * "When the CorporateActionInstruction is unsolicited, ie, the instruction has not been preceded by an Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption128> forCorporateActionOption128 = new MMConstraint<CorporateActionOption128>() {
@@ -861,10 +861,6 @@ public class ConstraintOptionNumber2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption7
 	 * CorporateActionOption7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionNumber2Rule"</li>
 	 * <li>
@@ -872,6 +868,10 @@ public class ConstraintOptionNumber2Rule {
 	 * definition} =
 	 * "When the CorporateActionInstruction is unsolicited, ie, the instruction has not been preceded by an Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption7> forCorporateActionOption7 = new MMConstraint<CorporateActionOption7>() {
@@ -895,10 +895,6 @@ public class ConstraintOptionNumber2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption21
 	 * CorporateActionOption21}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionNumber2Rule"</li>
 	 * <li>
@@ -906,6 +902,10 @@ public class ConstraintOptionNumber2Rule {
 	 * definition} =
 	 * "When the CorporateActionInstruction is unsolicited, ie, the instruction has not been preceded by an Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption21> forCorporateActionOption21 = new MMConstraint<CorporateActionOption21>() {

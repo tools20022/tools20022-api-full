@@ -36,10 +36,6 @@ public class ConstraintPreviousOrOtherReferenceOrAccountApplicationIdentificatio
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountManagementMessageReference1
 	 * AccountManagementMessageReference1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PreviousOrOtherReferenceOrAccountApplicationIdentificationRule"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintPreviousOrOtherReferenceOrAccountApplicationIdentificatio
 	 * definition} =
 	 * "At least one message element in the list (PreviousReference, OtherReference, AccountApplicationIdentification) must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountManagementMessageReference1> forAccountManagementMessageReference1 = new MMConstraint<AccountManagementMessageReference1>() {

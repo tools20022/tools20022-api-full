@@ -154,8 +154,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.area.camt.NotificationToReceiveStatusReportV02
  * NotificationToReceiveStatusReportV02}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV03
- * RequestToModifyPaymentV03}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV03_replaced
+ * RequestToModifyPaymentV03_replaced}</li>
  * <li>{@linkplain com.tools20022.repository.area.camt.UnableToApplyV03
  * UnableToApplyV03}</li>
  * <li>{@linkplain com.tools20022.repository.area.camt.ClaimNonReceiptV03
@@ -251,16 +251,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * businessProcessCatalogue} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#catalogue
  * GeneratedRepository.catalogue}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "Cash Management - Archive - master"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Messages that support the reporting and advicing of the cash side of any financial transactions, including cash movements, transactions and balances, plus any exceptions and investigations related to cash transactions."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class CashManagementArchive {
@@ -284,7 +284,7 @@ public class CashManagementArchive {
 						FundEstimatedCashForecastReportV02.mmObject(), RequestToModifyPayment.mmObject(), RequestToCancelPayment.mmObject(), UnableToApply.mmObject(), ClaimNonReceipt.mmObject(), AdditionalPaymentInformation.mmObject(),
 						ResolutionOfInvestigation.mmObject(), NotificationOfCaseAssignment.mmObject(), RejectCaseAssignment.mmObject(), RequestForDuplicateInstruction.mmObject(), DebitAuthorisationResponse.mmObject(),
 						DebitAuthorisationRequest.mmObject(), CaseStatusReportRequest.mmObject(), CaseStatusReport.mmObject(), CancelCaseAssignment.mmObject(), AccountReportingRequestV02.mmObject(), NotificationToReceiveV02.mmObject(),
-						NotificationToReceiveCancellationAdviceV02.mmObject(), NotificationToReceiveStatusReportV02.mmObject(), RequestToModifyPaymentV03.mmObject(), UnableToApplyV03.mmObject(), ClaimNonReceiptV03.mmObject(),
+						NotificationToReceiveCancellationAdviceV02.mmObject(), NotificationToReceiveStatusReportV02.mmObject(), RequestToModifyPaymentV03_replaced.mmObject(), UnableToApplyV03.mmObject(), ClaimNonReceiptV03.mmObject(),
 						AdditionalPaymentInformationV03.mmObject(), ResolutionOfInvestigationV03.mmObject(), RejectInvestigationV03.mmObject(), RequestForDuplicateV03.mmObject(), DuplicateV03.mmObject(),
 						ProprietaryFormatInvestigationV02.mmObject(), DebitAuthorisationResponseV02.mmObject(), DebitAuthorisationRequestV03.mmObject(), UnableToApplyV04.mmObject(), ClaimNonReceiptV04.mmObject(),
 						AdditionalPaymentInformationV04.mmObject(), ResolutionOfInvestigationV04.mmObject(), DebitAuthorisationRequestV04.mmObject(), RequestToModifyPaymentV01.mmObject(), NotificationToReceiveV03.mmObject(),

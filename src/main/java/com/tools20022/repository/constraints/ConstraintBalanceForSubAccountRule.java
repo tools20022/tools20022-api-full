@@ -37,10 +37,6 @@ public class ConstraintBalanceForSubAccountRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification2
 	 * SubAccountIdentification2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BalanceForSubAccountRule"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintBalanceForSubAccountRule {
 	 * definition} =
 	 * "If SubAccountIdentification2/ActivityIndicator is \"true\" or \"1\" (Yes), then SubAccountIdentification2/BalanceForSubAccount must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubAccountIdentification2> forSubAccountIdentification2 = new MMConstraint<SubAccountIdentification2>() {
@@ -71,10 +71,6 @@ public class ConstraintBalanceForSubAccountRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification1
 	 * SubAccountIdentification1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BalanceForSubAccountRule"</li>
 	 * <li>
@@ -82,6 +78,10 @@ public class ConstraintBalanceForSubAccountRule {
 	 * definition} =
 	 * "If SubAccountIdentification/ActivityIndicator is \"true\" or \"1\" (Yes), then SubAccountIdentification/ BalanceForSubAccount must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubAccountIdentification1> forSubAccountIdentification1 = new MMConstraint<SubAccountIdentification1>() {

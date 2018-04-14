@@ -38,10 +38,6 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrderInstruction2
 	 * SubscriptionBulkOrderInstruction2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RelatedPartiesDetailsRule"</li>
 	 * <li>
@@ -49,6 +45,10 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 * definition} =
 	 * "Either RelatedPartiesDetails or BulkOrderDetails/IndividualOrderDetails/RelatedPartiesDetails may be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubscriptionBulkOrderInstruction2> forSubscriptionBulkOrderInstruction2 = new MMConstraint<SubscriptionBulkOrderInstruction2>() {
@@ -72,10 +72,6 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationAmendmentV01
 	 * SubscriptionBulkOrderConfirmationAmendmentV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RelatedPartiesDetailsRule"</li>
 	 * <li>
@@ -83,6 +79,10 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 * definition} =
 	 * "Either RelatedPartiesDetails or BulkExecutionDetails/IndividualExecutionDetails/RelatedPartiesDetails may be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubscriptionBulkOrderConfirmationAmendmentV01> for_setr_SubscriptionBulkOrderConfirmationAmendmentV01 = new MMConstraint<SubscriptionBulkOrderConfirmationAmendmentV01>() {
@@ -106,10 +106,6 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV03
 	 * RedemptionBulkOrderConfirmationV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RelatedPartiesDetailsRule"</li>
 	 * <li>
@@ -117,6 +113,10 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 * definition} =
 	 * "Either RelatedPartiesDetails or BulkExecutionDetails/IndividualExecutionDetails/RelatedPartiesDetails may be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RedemptionBulkOrderConfirmationV03> for_setr_RedemptionBulkOrderConfirmationV03 = new MMConstraint<RedemptionBulkOrderConfirmationV03>() {
@@ -140,10 +140,6 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrderInstruction2
 	 * RedemptionMultipleOrderInstruction2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RelatedPartiesDetailsRule"</li>
 	 * <li>
@@ -151,6 +147,10 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 * definition} =
 	 * "Either RelatedPartiesDetails or MultipleOrderDetails/IndividualOrderDetails/RelatedPartiesDetails may be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RedemptionMultipleOrderInstruction2> forRedemptionMultipleOrderInstruction2 = new MMConstraint<RedemptionMultipleOrderInstruction2>() {
@@ -174,10 +174,6 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderConfirmationAmendmentV01
 	 * RedemptionOrderConfirmationAmendmentV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RelatedPartiesDetailsRule"</li>
 	 * <li>
@@ -185,6 +181,10 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 * definition} =
 	 * "Either RelatedPartiesDetails or MultipleExecutionDetails/IndividualExecutionDetails/RelatedPartiesDetails may be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RedemptionOrderConfirmationAmendmentV01> for_setr_RedemptionOrderConfirmationAmendmentV01 = new MMConstraint<RedemptionOrderConfirmationAmendmentV01>() {
@@ -208,10 +208,6 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RedemptionOrderConfirmation1
 	 * RedemptionOrderConfirmation1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RelatedPartiesDetailsRule"</li>
 	 * <li>
@@ -219,6 +215,10 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 * definition} =
 	 * "Either RelatedPartiesDetails or MultipleExecutionDetails/IndividualExecutionDetails/RelatedPartiesDetails may be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RedemptionOrderConfirmation1> forRedemptionOrderConfirmation1 = new MMConstraint<RedemptionOrderConfirmation1>() {
@@ -242,10 +242,6 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.OrderConfirmationDetails1
 	 * OrderConfirmationDetails1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RelatedPartiesDetailsRule"</li>
 	 * <li>
@@ -253,6 +249,10 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 * definition} =
 	 * "Either RelatedPartiesDetails or BulkExecutionDetails/IndividualExecutionDetails/RelatedPartiesDetails may be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<OrderConfirmationDetails1> forOrderConfirmationDetails1 = new MMConstraint<OrderConfirmationDetails1>() {
@@ -276,10 +276,6 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrderConfirmation1
 	 * SubscriptionOrderConfirmation1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RelatedPartiesDetailsRule"</li>
 	 * <li>
@@ -287,6 +283,10 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 * definition} =
 	 * "Either RelatedPartiesDetails or MultipleExecutionDetails/IndividualExecutionDetails/RelatedPartiesDetails may be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubscriptionOrderConfirmation1> forSubscriptionOrderConfirmation1 = new MMConstraint<SubscriptionOrderConfirmation1>() {
@@ -310,10 +310,6 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrderInstruction2
 	 * SubscriptionMultipleOrderInstruction2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RelatedPartiesDetailsRule"</li>
 	 * <li>
@@ -321,6 +317,10 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 * definition} =
 	 * "Either RelatedPartiesDetails or MultipleOrderDetails/IndividualOrderDetails/RelatedPartiesDetails may be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubscriptionMultipleOrderInstruction2> forSubscriptionMultipleOrderInstruction2 = new MMConstraint<SubscriptionMultipleOrderInstruction2>() {
@@ -344,10 +344,6 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderV03
 	 * SubscriptionBulkOrderV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RelatedPartiesDetailsRule"</li>
 	 * <li>
@@ -355,6 +351,10 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 * definition} =
 	 * "Either RelatedPartiesDetails or BulkOrderDetails/IndividualOrderDetails/RelatedPartiesDetails may be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubscriptionBulkOrderV03> for_setr_SubscriptionBulkOrderV03 = new MMConstraint<SubscriptionBulkOrderV03>() {
@@ -378,10 +378,6 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrderConfirmation1
 	 * SubscriptionBulkOrderConfirmation1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RelatedPartiesDetailsRule"</li>
 	 * <li>
@@ -389,6 +385,10 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 * definition} =
 	 * "Either RelatedPartiesDetails or BulkExecutionDetails/IndividualExecutionDetails/RelatedPartiesDetails may be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubscriptionBulkOrderConfirmation1> forSubscriptionBulkOrderConfirmation1 = new MMConstraint<SubscriptionBulkOrderConfirmation1>() {
@@ -412,10 +412,6 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RedemptionBulkOrderInstruction2
 	 * RedemptionBulkOrderInstruction2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RelatedPartiesDetailsRule"</li>
 	 * <li>
@@ -423,6 +419,10 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 * definition} =
 	 * "Either RelatedPartiesDetails or BulkOrderDetails/IndividualOrderDetails/RelatedPartiesDetails may be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RedemptionBulkOrderInstruction2> forRedemptionBulkOrderInstruction2 = new MMConstraint<RedemptionBulkOrderInstruction2>() {
@@ -446,10 +446,6 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderV03
 	 * RedemptionOrderV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RelatedPartiesDetailsRule"</li>
 	 * <li>
@@ -457,6 +453,10 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 * definition} =
 	 * "Either RelatedPartiesDetails or MultipleOrderDetails/IndividualOrderDetails/RelatedPartiesDetails may be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RedemptionOrderV03> for_setr_RedemptionOrderV03 = new MMConstraint<RedemptionOrderV03>() {
@@ -480,10 +480,6 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderV03
 	 * RedemptionBulkOrderV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RelatedPartiesDetailsRule"</li>
 	 * <li>
@@ -491,6 +487,10 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 * definition} =
 	 * "Either RelatedPartiesDetails or BulkOrderDetails/IndividualOrderDetails/RelatedPartiesDetails may be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RedemptionBulkOrderV03> for_setr_RedemptionBulkOrderV03 = new MMConstraint<RedemptionBulkOrderV03>() {
@@ -514,10 +514,6 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderV03
 	 * SubscriptionOrderV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RelatedPartiesDetailsRule"</li>
 	 * <li>
@@ -525,6 +521,10 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 * definition} =
 	 * "Either RelatedPartiesDetails or MultipleOrderDetails/IndividualOrderDetails/RelatedPartiesDetails may be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubscriptionOrderV03> for_setr_SubscriptionOrderV03 = new MMConstraint<SubscriptionOrderV03>() {
@@ -548,10 +548,6 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationAmendmentV01
 	 * RedemptionBulkOrderConfirmationAmendmentV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RelatedPartiesDetailsRule"</li>
 	 * <li>
@@ -559,6 +555,10 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 * definition} =
 	 * "Either RelatedPartiesDetails or BulkExecutionDetails/IndividualExecutionDetails/RelatedPartiesDetails may be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RedemptionBulkOrderConfirmationAmendmentV01> for_setr_RedemptionBulkOrderConfirmationAmendmentV01 = new MMConstraint<RedemptionBulkOrderConfirmationAmendmentV01>() {
@@ -582,10 +582,6 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV03
 	 * SubscriptionBulkOrderConfirmationV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RelatedPartiesDetailsRule"</li>
 	 * <li>
@@ -593,6 +589,10 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 * definition} =
 	 * "Either RelatedPartiesDetails or BulkExecutionDetails/IndividualExecutionDetails/RelatedPartiesDetails may be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubscriptionBulkOrderConfirmationV03> for_setr_SubscriptionBulkOrderConfirmationV03 = new MMConstraint<SubscriptionBulkOrderConfirmationV03>() {
@@ -616,10 +616,6 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderConfirmationV03
 	 * RedemptionOrderConfirmationV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RelatedPartiesDetailsRule"</li>
 	 * <li>
@@ -627,6 +623,10 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 * definition} =
 	 * "Either RelatedPartiesDetails or MultipleExecutionDetails/IndividualExecutionDetails/RelatedPartiesDetails may be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RedemptionOrderConfirmationV03> for_setr_RedemptionOrderConfirmationV03 = new MMConstraint<RedemptionOrderConfirmationV03>() {
@@ -650,10 +650,6 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationAmendmentV01
 	 * SubscriptionOrderConfirmationAmendmentV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RelatedPartiesDetailsRule"</li>
 	 * <li>
@@ -661,6 +657,10 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 * definition} =
 	 * "Either RelatedPartiesDetails or MultipleExecutionDetails/IndividualExecutionDetails/RelatedPartiesDetails may be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubscriptionOrderConfirmationAmendmentV01> for_setr_SubscriptionOrderConfirmationAmendmentV01 = new MMConstraint<SubscriptionOrderConfirmationAmendmentV01>() {
@@ -684,10 +684,6 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationV03
 	 * SubscriptionOrderConfirmationV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RelatedPartiesDetailsRule"</li>
 	 * <li>
@@ -695,6 +691,10 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 * definition} =
 	 * "Either RelatedPartiesDetails or MultipleExecutionDetails/IndividualExecutionDetails/RelatedPartiesDetails may be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubscriptionOrderConfirmationV03> for_setr_SubscriptionOrderConfirmationV03 = new MMConstraint<SubscriptionOrderConfirmationV03>() {

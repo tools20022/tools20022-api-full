@@ -125,6 +125,10 @@ import java.util.Objects;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "BuyOrSellIndicationOfInterest"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} = "Intention to buy or sell a financial Instrument."</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
  * semanticMarkup} = type=BusinessComment, BusinessComment=Intention to buy or
@@ -133,10 +137,6 @@ import java.util.Objects;
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "BuyOrSellIndicationOfInterest"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Intention to buy or sell a financial Instrument."</li>
  * </ul>
  */
 public class BuyOrSellIndicationOfInterest {
@@ -149,6 +149,10 @@ public class BuyOrSellIndicationOfInterest {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.Negotiation
+	 * Negotiation}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.Negotiation#mmIndicationOfInterest
@@ -157,24 +161,20 @@ public class BuyOrSellIndicationOfInterest {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.Negotiation
-	 * Negotiation}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.BuyOrSellIndicationOfInterest
 	 * BuyOrSellIndicationOfInterest}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NegotiationDetails"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Negotiation details associated with an indication of interest."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<BuyOrSellIndicationOfInterest, Negotiation> mmNegotiationDetails = new MMBusinessAssociationEnd<BuyOrSellIndicationOfInterest, Negotiation>() {
@@ -208,6 +208,10 @@ public class BuyOrSellIndicationOfInterest {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.Organisation
+	 * Organisation}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.Organisation#mmRelatedIndicationOfInterest
@@ -216,18 +220,10 @@ public class BuyOrSellIndicationOfInterest {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.Organisation
-	 * Organisation}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.BuyOrSellIndicationOfInterest
 	 * BuyOrSellIndicationOfInterest}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Organisations"</li>
 	 * <li>
@@ -235,6 +231,10 @@ public class BuyOrSellIndicationOfInterest {
 	 * definition} =
 	 * "Organisations to be included from the targeted list of firms, managed by the vendor, receiving indications."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<BuyOrSellIndicationOfInterest, List<Organisation>> mmOrganisations = new MMBusinessAssociationEnd<BuyOrSellIndicationOfInterest, List<Organisation>>() {
@@ -276,6 +276,11 @@ public class BuyOrSellIndicationOfInterest {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.BuyOrSellIndicationOfInterest
 	 * BuyOrSellIndicationOfInterest}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RelativeSize"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Indicates a quantity in relative size."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = FIXSynonym: 27</li>
@@ -283,11 +288,6 @@ public class BuyOrSellIndicationOfInterest {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "RelativeSize"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Indicates a quantity in relative size."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<BuyOrSellIndicationOfInterest, RelativeSizeCode> mmRelativeSize = new MMBusinessAttribute<BuyOrSellIndicationOfInterest, RelativeSizeCode>() {
@@ -337,13 +337,6 @@ public class BuyOrSellIndicationOfInterest {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.BuyOrSellIndicationOfInterest
 	 * BuyOrSellIndicationOfInterest}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = FIXSynonym: 423 44 and 15</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Price"</li>
 	 * <li>
@@ -351,6 +344,13 @@ public class BuyOrSellIndicationOfInterest {
 	 * definition} =
 	 * "Indicates the price of the instrument, applicable to the indication of interest."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 423 44 and 15</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<BuyOrSellIndicationOfInterest, SecuritiesPricing> mmPrice = new MMBusinessAttribute<BuyOrSellIndicationOfInterest, SecuritiesPricing>() {
@@ -401,6 +401,12 @@ public class BuyOrSellIndicationOfInterest {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.BuyOrSellIndicationOfInterest
 	 * BuyOrSellIndicationOfInterest}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "QualityIndication"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Indicates the relative quality of the indication of interest."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = FIXSynonym: 25</li>
@@ -408,12 +414,6 @@ public class BuyOrSellIndicationOfInterest {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "QualityIndication"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Indicates the relative quality of the indication of interest."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<BuyOrSellIndicationOfInterest, QualityIndicationCode> mmQualityIndication = new MMBusinessAttribute<BuyOrSellIndicationOfInterest, QualityIndicationCode>() {
@@ -464,13 +464,6 @@ public class BuyOrSellIndicationOfInterest {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.BuyOrSellIndicationOfInterest
 	 * BuyOrSellIndicationOfInterest}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = FIXSynonym: 130</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NaturalIndicator"</li>
 	 * <li>
@@ -478,6 +471,13 @@ public class BuyOrSellIndicationOfInterest {
 	 * definition} =
 	 * "Indicates whether or not the indication of interest is the result of an existing agency order or a facilitation position resulting from an agency order, not from principal trading or order solicitation activity."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 130</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<BuyOrSellIndicationOfInterest, TrueFalseIndicator> mmNaturalIndicator = new MMBusinessAttribute<BuyOrSellIndicationOfInterest, TrueFalseIndicator>() {
@@ -528,6 +528,11 @@ public class BuyOrSellIndicationOfInterest {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.BuyOrSellIndicationOfInterest
 	 * BuyOrSellIndicationOfInterest}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Qualifier"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Qualifies the use of the indication of interest."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
 	 * semanticMarkup} = FIXSynonym: 104</li>
@@ -535,11 +540,6 @@ public class BuyOrSellIndicationOfInterest {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Qualifier"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Qualifies the use of the indication of interest."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<BuyOrSellIndicationOfInterest, QualifierCode> mmQualifier = new MMBusinessAttribute<BuyOrSellIndicationOfInterest, QualifierCode>() {
@@ -589,10 +589,6 @@ public class BuyOrSellIndicationOfInterest {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.BuyOrSellIndicationOfInterest
 	 * BuyOrSellIndicationOfInterest}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NumberOfLegs"</li>
 	 * <li>
@@ -600,6 +596,10 @@ public class BuyOrSellIndicationOfInterest {
 	 * definition} =
 	 * "In case of multilegs indication of interest, indicates number of instrumentLeg repeating group ."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<BuyOrSellIndicationOfInterest, Number> mmNumberOfLegs = new MMBusinessAttribute<BuyOrSellIndicationOfInterest, Number>() {
@@ -632,6 +632,9 @@ public class BuyOrSellIndicationOfInterest {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.Spread Spread}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.Spread#mmRelatedIndicationOfInterest
@@ -639,9 +642,6 @@ public class BuyOrSellIndicationOfInterest {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.Spread Spread}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -658,10 +658,6 @@ public class BuyOrSellIndicationOfInterest {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.BuyOrSellIndicationOfInterest
 	 * BuyOrSellIndicationOfInterest}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SpreadToBenchmark"</li>
 	 * <li>
@@ -669,6 +665,10 @@ public class BuyOrSellIndicationOfInterest {
 	 * definition} =
 	 * "Indicates the spread to benchmark details of an indication of interest."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<BuyOrSellIndicationOfInterest, Spread> mmSpreadToBenchmark = new MMBusinessAssociationEnd<BuyOrSellIndicationOfInterest, Spread>() {
@@ -703,6 +703,9 @@ public class BuyOrSellIndicationOfInterest {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.Spread Spread}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.Spread#mmIndicationOfInterest
@@ -711,23 +714,20 @@ public class BuyOrSellIndicationOfInterest {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.Spread Spread}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.BuyOrSellIndicationOfInterest
 	 * BuyOrSellIndicationOfInterest}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SwapSpread"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Indicates the swap spread details of an indication of interest."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<BuyOrSellIndicationOfInterest, Spread> mmSwapSpread = new MMBusinessAssociationEnd<BuyOrSellIndicationOfInterest, Spread>() {
@@ -761,6 +761,10 @@ public class BuyOrSellIndicationOfInterest {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesFinancing
+	 * SecuritiesFinancing}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmRelatedIndicationOfInterest
@@ -768,10 +772,6 @@ public class BuyOrSellIndicationOfInterest {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesFinancing
-	 * SecuritiesFinancing}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -785,10 +785,6 @@ public class BuyOrSellIndicationOfInterest {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.BuyOrSellIndicationOfInterest
 	 * BuyOrSellIndicationOfInterest}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TwoLegTransaction"</li>
 	 * <li>
@@ -796,6 +792,10 @@ public class BuyOrSellIndicationOfInterest {
 	 * definition} =
 	 * "Securities Financing is the process of lending or borrowing cash or securities against securities or cash collateral. It aims at optimising liquidity, support a trading strategy, or increase settlement efficiency."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<BuyOrSellIndicationOfInterest, List<SecuritiesFinancing>> mmTwoLegTransaction = new MMBusinessAssociationEnd<BuyOrSellIndicationOfInterest, List<SecuritiesFinancing>>() {
@@ -838,15 +838,15 @@ public class BuyOrSellIndicationOfInterest {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.BuyOrSellIndicationOfInterest
 	 * BuyOrSellIndicationOfInterest}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RoutingType"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates if the type of routing is allowed or blocked."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<BuyOrSellIndicationOfInterest, RoutingTypeCode> mmRoutingType = new MMBusinessAttribute<BuyOrSellIndicationOfInterest, RoutingTypeCode>() {
@@ -886,15 +886,15 @@ public class BuyOrSellIndicationOfInterest {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.BuyOrSellIndicationOfInterest
 	 * BuyOrSellIndicationOfInterest}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OrganisationListName"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Name of the organisation list."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<BuyOrSellIndicationOfInterest, Max35Text> mmOrganisationListName = new MMBusinessAttribute<BuyOrSellIndicationOfInterest, Max35Text>() {

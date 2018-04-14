@@ -40,10 +40,6 @@ public class ConstraintStatusCancelledGuideline {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV02
 	 * OrderInstructionStatusReportV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "StatusCancelledGuideline"</li>
 	 * <li>
@@ -51,6 +47,10 @@ public class ConstraintStatusCancelledGuideline {
 	 * definition} =
 	 * "Status 'cancelled' must be used to report a cancellation that is not originated by the instructing party.\n\nIf a cancellation has been originated by the instructing party then the message OrderCancellationStatusReport must be used to report the status of this cancellation request."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<OrderInstructionStatusReportV02> for_setr_OrderInstructionStatusReportV02 = new MMConstraint<OrderInstructionStatusReportV02>() {

@@ -36,16 +36,16 @@ public class ConstraintReferenceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.InvestmentFundOrderExecution2
 	 * InvestmentFundOrderExecution2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReferenceRule"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "At least OrderReference or DealReference must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<InvestmentFundOrderExecution2> forInvestmentFundOrderExecution2 = new MMConstraint<InvestmentFundOrderExecution2>() {
@@ -69,10 +69,6 @@ public class ConstraintReferenceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DocumentNumber9
 	 * DocumentNumber9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReferenceRule"</li>
 	 * <li>
@@ -80,6 +76,10 @@ public class ConstraintReferenceRule {
 	 * definition} =
 	 * "The reference used to identify the transaction must be in line with the identification available for the status advice requested by the SecuritiesTransactionStatusQuery. For example, a SecuritiesTransactionStatusQuery must not request a SecuritiesSettlementTransactionStatusAdvice using a CorporateActionEventIdentification."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -112,10 +112,6 @@ public class ConstraintReferenceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DocumentNumber12
 	 * DocumentNumber12}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReferenceRule"</li>
 	 * <li>
@@ -123,6 +119,10 @@ public class ConstraintReferenceRule {
 	 * definition} =
 	 * "The reference used to identify the transaction must be in line with the identification available for the status advice requested by the SecuritiesTransactionStatusQuery. For example, a SecuritiesTransactionStatusQuery must not request a SecuritiesSettlementTransactionStatusAdvice using a CorporateActionEventIdentification."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -152,10 +152,6 @@ public class ConstraintReferenceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DocumentNumber4
 	 * DocumentNumber4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReferenceRule"</li>
 	 * <li>
@@ -163,6 +159,10 @@ public class ConstraintReferenceRule {
 	 * definition} =
 	 * "The reference used to identify the transaction must be in line with the identification available for the status advice requested by the SecuritiesTransactionStatusQuery. For example, a SecuritiesTransactionStatusQuery must not request a SecuritiesSettlementTransactionStatusAdvice using a CorporateActionEventIdentification."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<DocumentNumber4> forDocumentNumber4 = new MMConstraint<DocumentNumber4>() {
@@ -186,10 +186,6 @@ public class ConstraintReferenceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DocumentNumber2
 	 * DocumentNumber2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReferenceRule"</li>
 	 * <li>
@@ -197,6 +193,10 @@ public class ConstraintReferenceRule {
 	 * definition} =
 	 * "The reference used to identify the transaction must be in line with the identification available for the status advice requested by the SecuritiesTransactionStatusQuery. For example, a SecuritiesTransactionStatusQuery must not request a SecuritiesSettlementTransactionStatusAdvice using a CorporateActionEventIdentification."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<DocumentNumber2> forDocumentNumber2 = new MMConstraint<DocumentNumber2>() {
@@ -220,10 +220,6 @@ public class ConstraintReferenceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DocumentNumber6
 	 * DocumentNumber6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReferenceRule"</li>
 	 * <li>
@@ -231,6 +227,10 @@ public class ConstraintReferenceRule {
 	 * definition} =
 	 * "The reference used to identify the transaction must be in line with the identification available for the status advice requested by the SecuritiesTransactionStatusQuery. For example, a SecuritiesTransactionStatusQuery must not request a SecuritiesSettlementTransactionStatusAdvice using a CorporateActionEventIdentification."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<DocumentNumber6> forDocumentNumber6 = new MMConstraint<DocumentNumber6>() {
@@ -254,10 +254,6 @@ public class ConstraintReferenceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DocumentNumber8
 	 * DocumentNumber8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReferenceRule"</li>
 	 * <li>
@@ -265,6 +261,10 @@ public class ConstraintReferenceRule {
 	 * definition} =
 	 * "The reference used to identify the transaction must be in line with the identification available for the status advice requested by the SecuritiesTransactionStatusQuery. For example, a SecuritiesTransactionStatusQuery must not request a SecuritiesSettlementTransactionStatusAdvice using a CorporateActionEventIdentification."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<DocumentNumber8> forDocumentNumber8 = new MMConstraint<DocumentNumber8>() {
@@ -288,10 +288,6 @@ public class ConstraintReferenceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DocumentNumber11
 	 * DocumentNumber11}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReferenceRule"</li>
 	 * <li>
@@ -299,6 +295,10 @@ public class ConstraintReferenceRule {
 	 * definition} =
 	 * "The reference used to identify the transaction must be in line with the identification available for the status advice requested by the SecuritiesTransactionStatusQuery. For example, a SecuritiesTransactionStatusQuery must not request a SecuritiesSettlementTransactionStatusAdvice using a CorporateActionEventIdentification."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<DocumentNumber11> forDocumentNumber11 = new MMConstraint<DocumentNumber11>() {
@@ -322,10 +322,6 @@ public class ConstraintReferenceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DocumentNumber5
 	 * DocumentNumber5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReferenceRule"</li>
 	 * <li>
@@ -333,6 +329,10 @@ public class ConstraintReferenceRule {
 	 * definition} =
 	 * "The reference used to identify the transaction must be in line with the identification available for the status advice requested by the SecuritiesTransactionStatusQuery. For example, a SecuritiesTransactionStatusQuery must not request a SecuritiesSettlementTransactionStatusAdvice using a CorporateActionEventIdentification."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<DocumentNumber5> forDocumentNumber5 = new MMConstraint<DocumentNumber5>() {
@@ -356,10 +356,6 @@ public class ConstraintReferenceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DocumentNumber15
 	 * DocumentNumber15}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReferenceRule"</li>
 	 * <li>
@@ -367,6 +363,10 @@ public class ConstraintReferenceRule {
 	 * definition} =
 	 * "The reference used to identify the transaction must be in line with the identification available for the status advice requested by the SecuritiesTransactionStatusQuery. For example, a SecuritiesTransactionStatusQuery must not request a SecuritiesSettlementTransactionStatusAdvice using a CorporateActionEventIdentification."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<DocumentNumber15> forDocumentNumber15 = new MMConstraint<DocumentNumber15>() {
@@ -390,10 +390,6 @@ public class ConstraintReferenceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.DocumentNumber7
 	 * DocumentNumber7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReferenceRule"</li>
 	 * <li>
@@ -401,6 +397,10 @@ public class ConstraintReferenceRule {
 	 * definition} =
 	 * "The reference used to identify the transaction must be in line with the identification available for the status advice requested by the SecuritiesTransactionStatusQuery. For example, a SecuritiesTransactionStatusQuery must not request a SecuritiesSettlementTransactionStatusAdvice using a CorporateActionEventIdentification."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<DocumentNumber7> forDocumentNumber7 = new MMConstraint<DocumentNumber7>() {
@@ -424,10 +424,6 @@ public class ConstraintReferenceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransferReference6
 	 * TransferReference6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReferenceRule"</li>
 	 * <li>
@@ -435,6 +431,10 @@ public class ConstraintReferenceRule {
 	 * definition} =
 	 * "At least TransferReference or TransferConfirmationReference must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -473,10 +473,6 @@ public class ConstraintReferenceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransferReference2
 	 * TransferReference2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReferenceRule"</li>
 	 * <li>
@@ -484,6 +480,10 @@ public class ConstraintReferenceRule {
 	 * definition} =
 	 * "At least TransferReference or TransferConfirmationReference must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -516,10 +516,6 @@ public class ConstraintReferenceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransferReference10
 	 * TransferReference10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReferenceRule"</li>
 	 * <li>
@@ -527,6 +523,10 @@ public class ConstraintReferenceRule {
 	 * definition} =
 	 * "At least TransferReference or TransferConfirmationReference must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =

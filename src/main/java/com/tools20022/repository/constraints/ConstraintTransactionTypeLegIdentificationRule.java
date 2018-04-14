@@ -40,10 +40,6 @@ public class ConstraintTransactionTypeLegIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.InvestmentFundTransaction3
 	 * InvestmentFundTransaction3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TransactionTypeLegIdentificationRule"</li>
 	 * <li>
@@ -51,6 +47,10 @@ public class ConstraintTransactionTypeLegIdentificationRule {
 	 * definition} =
 	 * "If TransactionType is SWII or SWIO, then LegIdentification is optional. If TransactionType is neither SWII nor SWIO, then LegIdentification is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -84,10 +84,6 @@ public class ConstraintTransactionTypeLegIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.InvestmentFundTransaction4
 	 * InvestmentFundTransaction4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TransactionTypeLegIdentificationRule"</li>
 	 * <li>
@@ -95,6 +91,10 @@ public class ConstraintTransactionTypeLegIdentificationRule {
 	 * definition} =
 	 * "If TransactionType is SWII or SWIO, then LegIdentification is optional. If TransactionType is neither SWII nor SWIO, then LegIdentification is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -125,10 +125,6 @@ public class ConstraintTransactionTypeLegIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.InvestmentFundTransaction2
 	 * InvestmentFundTransaction2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TransactionTypeLegIdentificationRule"</li>
 	 * <li>
@@ -136,6 +132,10 @@ public class ConstraintTransactionTypeLegIdentificationRule {
 	 * definition} =
 	 * "If TransactionType is SWII or SWIO, then LegIdentification is mandatory. If TransactionType is not SWII and not SWIO, then LegIdentification is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<InvestmentFundTransaction2> forInvestmentFundTransaction2 = new MMConstraint<InvestmentFundTransaction2>() {

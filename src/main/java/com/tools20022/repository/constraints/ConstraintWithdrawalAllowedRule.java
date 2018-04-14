@@ -36,10 +36,6 @@ public class ConstraintWithdrawalAllowedRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption1
 	 * CorporateActionOption1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "WithdrawalAllowedRule"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintWithdrawalAllowedRule {
 	 * definition} =
 	 * "If the value of WithdrawalAllowedIndicator is true, then PeriodDetails/RevocabilityPeriod is Mandatory."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionOption1> forCorporateActionOption1 = new MMConstraint<CorporateActionOption1>() {

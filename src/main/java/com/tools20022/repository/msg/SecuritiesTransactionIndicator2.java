@@ -63,14 +63,14 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "SecuritiesTransactionIndicator2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Provides additional indicators on the transaction."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -97,10 +97,6 @@ public class SecuritiesTransactionIndicator2 {
 	 * SecuritiesTransactionIndicator2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "WvrInd"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "WaiverIndicator"</li>
 	 * <li>
@@ -108,6 +104,10 @@ public class SecuritiesTransactionIndicator2 {
 	 * definition} =
 	 * "Indicates whether the transaction was executed under a pre-trade waiver."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SecuritiesTransactionIndicator2, List<ReportingWaiverType1Code>> mmWaiverIndicator = new MMMessageAttribute<SecuritiesTransactionIndicator2, List<ReportingWaiverType1Code>>() {
@@ -150,10 +150,6 @@ public class SecuritiesTransactionIndicator2 {
 	 * SecuritiesTransactionIndicator2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ShrtSellgInd"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ShortSellingIndicator"</li>
 	 * <li>
@@ -161,6 +157,10 @@ public class SecuritiesTransactionIndicator2 {
 	 * definition} =
 	 * "Indicates a short sell concluded by the investment agent on its own accounts or on behalf of a client, as described in the local regulation."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SecuritiesTransactionIndicator2, Optional<Side5Code>> mmShortSellingIndicator = new MMMessageAttribute<SecuritiesTransactionIndicator2, Optional<Side5Code>>() {
@@ -205,10 +205,6 @@ public class SecuritiesTransactionIndicator2 {
 	 * SecuritiesTransactionIndicator2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OTCPstTradInd"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OTCPostTradeIndicator"</li>
 	 * <li>
@@ -216,6 +212,10 @@ public class SecuritiesTransactionIndicator2 {
 	 * definition} =
 	 * "Indicates the type of transaction in accordance with the local regulation."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SecuritiesTransactionIndicator2, List<ReportingWaiverType3Code>> mmOTCPostTradeIndicator = new MMMessageAttribute<SecuritiesTransactionIndicator2, List<ReportingWaiverType3Code>>() {
@@ -259,10 +259,6 @@ public class SecuritiesTransactionIndicator2 {
 	 * SecuritiesTransactionIndicator2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RskRdcgTx"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RiskReducingTransaction"</li>
 	 * <li>
@@ -270,6 +266,10 @@ public class SecuritiesTransactionIndicator2 {
 	 * definition} =
 	 * "Indicates whether the transaction is objectively measurable as reducing risks directly relating to the commercial activity of the entity executing the transaction."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SecuritiesTransactionIndicator2, Optional<TrueFalseIndicator>> mmRiskReducingTransaction = new MMMessageAttribute<SecuritiesTransactionIndicator2, Optional<TrueFalseIndicator>>() {
@@ -314,10 +314,6 @@ public class SecuritiesTransactionIndicator2 {
 	 * SecuritiesTransactionIndicator2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SctiesFincgTxInd"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SecuritiesFinancingTransactionIndicator"</li>
 	 * <li>
@@ -325,6 +321,10 @@ public class SecuritiesTransactionIndicator2 {
 	 * definition} =
 	 * "Indicates whether the transaction falls within the scope of activity to be reported under the Securities Financing Transactions Regulation."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SecuritiesTransactionIndicator2, TrueFalseIndicator> mmSecuritiesFinancingTransactionIndicator = new MMMessageAttribute<SecuritiesTransactionIndicator2, TrueFalseIndicator>() {

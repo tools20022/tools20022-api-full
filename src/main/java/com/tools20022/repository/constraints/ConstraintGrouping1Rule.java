@@ -39,10 +39,6 @@ public class ConstraintGrouping1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.pain.CreditorPaymentActivationRequestV02
 	 * CreditorPaymentActivationRequestV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Grouping1Rule"</li>
 	 * <li>
@@ -50,6 +46,10 @@ public class ConstraintGrouping1Rule {
 	 * definition} =
 	 * "If GroupHeader/Grouping is present and equals GRPD, then one and only one occurrence of PaymentInformation must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CreditorPaymentActivationRequestV02> for_pain_CreditorPaymentActivationRequestV02 = new MMConstraint<CreditorPaymentActivationRequestV02>() {
@@ -73,10 +73,6 @@ public class ConstraintGrouping1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.pain.CustomerCreditTransferInitiationV02
 	 * CustomerCreditTransferInitiationV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Grouping1Rule"</li>
 	 * <li>
@@ -84,6 +80,10 @@ public class ConstraintGrouping1Rule {
 	 * definition} =
 	 * "If GroupHeader/Grouping is present and equals GRPD, then one and only one occurrence of PaymentInformation must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CustomerCreditTransferInitiationV02> for_pain_CustomerCreditTransferInitiationV02 = new MMConstraint<CustomerCreditTransferInitiationV02>() {
@@ -107,10 +107,6 @@ public class ConstraintGrouping1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.pain.CustomerDirectDebitInitiationV01
 	 * CustomerDirectDebitInitiationV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Grouping1Rule"</li>
 	 * <li>
@@ -118,6 +114,10 @@ public class ConstraintGrouping1Rule {
 	 * definition} =
 	 * "If GroupHeader/Grouping is present and equals GRPD, then one and only one occurrence of PaymentInformation must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CustomerDirectDebitInitiationV01> for_pain_CustomerDirectDebitInitiationV01 = new MMConstraint<CustomerDirectDebitInitiationV01>() {
@@ -141,10 +141,6 @@ public class ConstraintGrouping1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.pain.CreditorPaymentActivationRequestV01
 	 * CreditorPaymentActivationRequestV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Grouping1Rule"</li>
 	 * <li>
@@ -152,6 +148,10 @@ public class ConstraintGrouping1Rule {
 	 * definition} =
 	 * "If GroupHeader/Grouping is present and equals GRPD, then one and only one occurrence of PaymentInformation must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CreditorPaymentActivationRequestV01> for_pain_CreditorPaymentActivationRequestV01 = new MMConstraint<CreditorPaymentActivationRequestV01>() {

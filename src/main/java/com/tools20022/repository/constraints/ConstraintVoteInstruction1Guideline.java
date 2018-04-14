@@ -42,10 +42,6 @@ public class ConstraintVoteInstruction1Guideline {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Instruction2 Instruction2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "VoteInstruction1Guideline"</li>
 	 * <li>
@@ -53,6 +49,10 @@ public class ConstraintVoteInstruction1Guideline {
 	 * definition} =
 	 * "If instructions are provided via a proxy, then it is recommended that vote instructions are provided via the element Proxy/VoteInstructionForAgendaResolution/VoteInstruction or Proxy/VoteInstructionForAgendaResolution/GlobalVoteInstruction.\nIf instructions are not provided via a proxy, then it is recommended to use the element VoteDetails/VoteInstructionForAgendaResolution/VoteInstruction or VoteDetails/VoteInstructionForAgendaResolution/GlobalVoteInstruction."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -84,10 +84,6 @@ public class ConstraintVoteInstruction1Guideline {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Instruction3 Instruction3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "VoteInstruction1Guideline"</li>
 	 * <li>
@@ -95,6 +91,10 @@ public class ConstraintVoteInstruction1Guideline {
 	 * definition} =
 	 * "If instructions are provided via a proxy, then it is recommended that vote instructions are provided via the element Proxy/VoteInstructionForAgendaResolution/VoteInstruction or Proxy/VoteInstructionForAgendaResolution/GlobalVoteInstruction.\nIf instructions are not provided via a proxy, then it is recommended to use the element VoteDetails/VoteInstructionForAgendaResolution/VoteInstruction or VoteDetails/VoteInstructionForAgendaResolution/GlobalVoteInstruction."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =

@@ -216,6 +216,10 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "RejectedConfirmationStatusReason1Code"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} = "Specifies the reason for a confirmation rejected status."</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -226,10 +230,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "RejectedConfirmationStatusReason1Code"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Specifies the reason for a confirmation rejected status."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -244,12 +244,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DifferentInvestmentAccountDetails"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DifferentInvestmentAccountDetails"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code DifferentInvestmentAccountDetails = new RejectedConfirmationStatusReason1Code() {
@@ -268,12 +268,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DifferentFinancialInstrumentDetails"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DifferentFinancialInstrumentDetails"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code DifferentFinancialInstrumentDetails = new RejectedConfirmationStatusReason1Code() {
@@ -292,12 +292,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DifferentBeneficiaryDetails"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DifferentBeneficiaryDetails"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code DifferentBeneficiaryDetails = new RejectedConfirmationStatusReason1Code() {
@@ -316,12 +316,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DifferentPlaceOfTrade"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DifferentPlaceOfTrade"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code DifferentPlaceOfTrade = new RejectedConfirmationStatusReason1Code() {
@@ -340,12 +340,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DifferentOrderDateTime"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DifferentOrderDateTime"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code DifferentOrderDateTime = new RejectedConfirmationStatusReason1Code() {
@@ -364,12 +364,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DifferentCancellationRight"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DifferentCancellationRight"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code DifferentCancellationRight = new RejectedConfirmationStatusReason1Code() {
@@ -388,12 +388,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DifferentUnitsNumber"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DifferentUnitsNumber"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code DifferentUnitsNumber = new RejectedConfirmationStatusReason1Code() {
@@ -412,12 +412,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DifferentOrderType"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DifferentOrderType"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code DifferentOrderType = new RejectedConfirmationStatusReason1Code() {
@@ -436,12 +436,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DifferentRounding"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DifferentRounding"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code DifferentRounding = new RejectedConfirmationStatusReason1Code() {
@@ -460,12 +460,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DifferentNetAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DifferentNetAmount"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code DifferentNetAmount = new RejectedConfirmationStatusReason1Code() {
@@ -484,12 +484,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DifferentGrossAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DifferentGrossAmount"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code DifferentGrossAmount = new RejectedConfirmationStatusReason1Code() {
@@ -508,12 +508,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DifferentHoldingsRedemptionRate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DifferentHoldingsRedemptionRate"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code DifferentHoldingsRedemptionRate = new RejectedConfirmationStatusReason1Code() {
@@ -532,12 +532,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DifferentGroup1Or2Units"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DifferentGroup1Or2Units"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code DifferentGroup1Or2Units = new RejectedConfirmationStatusReason1Code() {
@@ -556,12 +556,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DifferentIncomePreference"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DifferentIncomePreference"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code DifferentIncomePreference = new RejectedConfirmationStatusReason1Code() {
@@ -580,12 +580,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DifferentLetterIntentReference"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DifferentLetterIntentReference"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code DifferentLetterIntentReference = new RejectedConfirmationStatusReason1Code() {
@@ -604,12 +604,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DifferentAccumulationRightReference"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DifferentAccumulationRightReference"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code DifferentAccumulationRightReference = new RejectedConfirmationStatusReason1Code() {
@@ -628,12 +628,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DifferentPhysicalDeliveryIndicator"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DifferentPhysicalDeliveryIndicator"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code DifferentPhysicalDeliveryIndicator = new RejectedConfirmationStatusReason1Code() {
@@ -652,12 +652,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DifferentRequestedSettlementCurrency"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DifferentRequestedSettlementCurrency"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code DifferentRequestedSettlementCurrency = new RejectedConfirmationStatusReason1Code() {
@@ -676,12 +676,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DifferentRequestedNAVCurrency"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DifferentRequestedNAVCurrency"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code DifferentRequestedNAVCurrency = new RejectedConfirmationStatusReason1Code() {
@@ -700,12 +700,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DifferentForeignExchangeDetails"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DifferentForeignExchangeDetails"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code DifferentForeignExchangeDetails = new RejectedConfirmationStatusReason1Code() {
@@ -724,12 +724,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DifferentChargeDetails"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DifferentChargeDetails"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code DifferentChargeDetails = new RejectedConfirmationStatusReason1Code() {
@@ -748,12 +748,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DifferentCommissionDetails"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DifferentCommissionDetails"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code DifferentCommissionDetails = new RejectedConfirmationStatusReason1Code() {
@@ -772,12 +772,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DifferentTaxDetails"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DifferentTaxDetails"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code DifferentTaxDetails = new RejectedConfirmationStatusReason1Code() {
@@ -796,12 +796,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DifferentPhysicalDeliveryDetails"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DifferentPhysicalDeliveryDetails"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code DifferentPhysicalDeliveryDetails = new RejectedConfirmationStatusReason1Code() {
@@ -820,12 +820,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DifferentSettlementAndCustodyDetails"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DifferentSettlementAndCustodyDetails"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code DifferentSettlementAndCustodyDetails = new RejectedConfirmationStatusReason1Code() {
@@ -844,12 +844,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DifferentPaymentInstrumentDetails"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DifferentPaymentInstrumentDetails"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code DifferentPaymentInstrumentDetails = new RejectedConfirmationStatusReason1Code() {
@@ -868,12 +868,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DifferentSettlementAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DifferentSettlementAmount"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code DifferentSettlementAmount = new RejectedConfirmationStatusReason1Code() {
@@ -892,12 +892,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DifferentSettlementDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DifferentSettlementDate"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code DifferentSettlementDate = new RejectedConfirmationStatusReason1Code() {
@@ -916,12 +916,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DifferentExtensionDetails"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DifferentExtensionDetails"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code DifferentExtensionDetails = new RejectedConfirmationStatusReason1Code() {
@@ -940,12 +940,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DifferentIntermediaryDetails"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DifferentIntermediaryDetails"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code DifferentIntermediaryDetails = new RejectedConfirmationStatusReason1Code() {
@@ -964,12 +964,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DifferentTotalRedemptionAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DifferentTotalRedemptionAmount"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code DifferentTotalRedemptionAmount = new RejectedConfirmationStatusReason1Code() {
@@ -988,12 +988,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DifferentTotalSubscriptionAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DifferentTotalSubscriptionAmount"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code DifferentTotalSubscriptionAmount = new RejectedConfirmationStatusReason1Code() {
@@ -1012,12 +1012,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DifferentAdditionalCashIn"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DifferentAdditionalCashIn"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code DifferentAdditionalCashIn = new RejectedConfirmationStatusReason1Code() {
@@ -1036,12 +1036,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DifferentResultingCashOut"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DifferentResultingCashOut"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code DifferentResultingCashOut = new RejectedConfirmationStatusReason1Code() {
@@ -1060,12 +1060,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DifferentPercentageOfTotalSubscriptionAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DifferentPercentageOfTotalSubscriptionAmount"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code DifferentPercentageOfTotalSubscriptionAmount = new RejectedConfirmationStatusReason1Code() {
@@ -1084,12 +1084,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DifferentPercentageOfTotalRedemptionAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DifferentPercentageOfTotalRedemptionAmount"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code DifferentPercentageOfTotalRedemptionAmount = new RejectedConfirmationStatusReason1Code() {
@@ -1108,12 +1108,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DifferentLegIdentification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DifferentLegIdentification"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code DifferentLegIdentification = new RejectedConfirmationStatusReason1Code() {
@@ -1132,12 +1132,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DifferentOrderReference"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DifferentOrderReference"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code DifferentOrderReference = new RejectedConfirmationStatusReason1Code() {
@@ -1156,12 +1156,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "UnknownLinkagesReference"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "UnknownLinkagesReference"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code UnknownLinkagesReference = new RejectedConfirmationStatusReason1Code() {
@@ -1180,12 +1180,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DuplicateDealReference"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DuplicateDealReference"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code DuplicateDealReference = new RejectedConfirmationStatusReason1Code() {
@@ -1204,12 +1204,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ReceivingAgent"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ReceivingAgent"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code ReceivingAgent = new RejectedConfirmationStatusReason1Code() {
@@ -1228,12 +1228,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ReceiversCustodian"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ReceiversCustodian"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code ReceiversCustodian = new RejectedConfirmationStatusReason1Code() {
@@ -1252,12 +1252,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ReceiversIntermediary"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ReceiversIntermediary"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code ReceiversIntermediary = new RejectedConfirmationStatusReason1Code() {
@@ -1276,12 +1276,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DeliveringAgent"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DeliveringAgent"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code DeliveringAgent = new RejectedConfirmationStatusReason1Code() {
@@ -1300,12 +1300,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DeliverersCustodian"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DeliverersCustodian"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code DeliverersCustodian = new RejectedConfirmationStatusReason1Code() {
@@ -1324,12 +1324,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DeliverersIntermediary"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DeliverersIntermediary"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code DeliverersIntermediary = new RejectedConfirmationStatusReason1Code() {
@@ -1348,12 +1348,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InvalidCreditTransfer"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "InvalidCreditTransfer"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code InvalidCreditTransfer = new RejectedConfirmationStatusReason1Code() {
@@ -1372,12 +1372,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementAmount"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code SettlementAmount = new RejectedConfirmationStatusReason1Code() {
@@ -1396,12 +1396,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SettlementDate"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code SettlementDate = new RejectedConfirmationStatusReason1Code() {
@@ -1420,12 +1420,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NotCompliantWithSLA"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "NotCompliantWithSLA"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code NotCompliantWithSLA = new RejectedConfirmationStatusReason1Code() {
@@ -1444,12 +1444,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "MissingEUTaxInformation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "MissingEUTaxInformation"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code MissingEUTaxInformation = new RejectedConfirmationStatusReason1Code() {
@@ -1468,12 +1468,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "MissingCommission"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "MissingCommission"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code MissingCommission = new RejectedConfirmationStatusReason1Code() {
@@ -1492,12 +1492,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "MissingCharge"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "MissingCharge"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code MissingCharge = new RejectedConfirmationStatusReason1Code() {
@@ -1516,12 +1516,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "MissingTaxInformation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "MissingTaxInformation"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code MissingTaxInformation = new RejectedConfirmationStatusReason1Code() {
@@ -1540,12 +1540,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NotAllowedtoAmend"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "NotAllowedtoAmend"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code NotAllowedtoAmend = new RejectedConfirmationStatusReason1Code() {
@@ -1564,12 +1564,12 @@ public class RejectedConfirmationStatusReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code
 	 * RejectedConfirmationStatusReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AmendmentTooLate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AmendmentTooLate"</li>
 	 * </ul>
 	 */
 	public static final RejectedConfirmationStatusReason1Code AmendmentTooLate = new RejectedConfirmationStatusReason1Code() {

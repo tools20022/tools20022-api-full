@@ -40,10 +40,6 @@ public class ConstraintPaymentInstructionStatusRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Transactions4 Transactions4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PaymentInstructionStatusRule"</li>
 	 * <li>
@@ -51,6 +47,10 @@ public class ConstraintPaymentInstructionStatusRule {
 	 * definition} =
 	 * "If PaymentCommonInformation/PaymentInstructionStatus is present, then TransactionReport/Transaction/Payment/InstructionStatus/PaymentInstructionStatus is not allowed.\nIf PaymentCommonInformation/PaymentInstructionStatus is not present, then TransactionReport/Transaction/Payment/InstructionStatus/PaymentInstructionStatus is optional."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Transactions4> forTransactions4 = new MMConstraint<Transactions4>() {
@@ -77,10 +77,6 @@ public class ConstraintPaymentInstructionStatusRule {
 	 * expression} =
 	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/TransactionReport[*]/TransactionOrError/Transaction/Payment/Status[1]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/PaymentCommonInformation/CommonStatus[1]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PaymentInstructionStatusRule"</li>
 	 * <li>
@@ -88,6 +84,10 @@ public class ConstraintPaymentInstructionStatusRule {
 	 * definition} =
 	 * "If PaymentCommonInformation/PaymentInstructionStatus is present, then TransactionReport/Transaction/Payment/InstructionStatus/PaymentInstructionStatus is not allowed.\nIf PaymentCommonInformation/PaymentInstructionStatus is not present, then TransactionReport/Transaction/Payment/InstructionStatus/PaymentInstructionStatus is optional."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -124,10 +124,6 @@ public class ConstraintPaymentInstructionStatusRule {
 	 * expression} =
 	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/TransactionReport[*]/TransactionOrError/Transaction/Payment/Status[1]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/PaymentCommonInformation/CommonStatus[1]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PaymentInstructionStatusRule"</li>
 	 * <li>
@@ -135,6 +131,10 @@ public class ConstraintPaymentInstructionStatusRule {
 	 * definition} =
 	 * "If PaymentCommonInformation/PaymentInstructionStatus is present, then TransactionReport/Transaction/Payment/InstructionStatus/PaymentInstructionStatus is not allowed.\nIf PaymentCommonInformation/PaymentInstructionStatus is not present, then TransactionReport/Transaction/Payment/InstructionStatus/PaymentInstructionStatus is optional."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -173,10 +173,6 @@ public class ConstraintPaymentInstructionStatusRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Transactions3 Transactions3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PaymentInstructionStatusRule"</li>
 	 * <li>
@@ -184,6 +180,10 @@ public class ConstraintPaymentInstructionStatusRule {
 	 * definition} =
 	 * "If PaymentCommonInformation/PaymentInstructionStatus is present, then TransactionReport/Transaction/Payment/InstructionStatus/PaymentInstructionStatus is not allowed.\nIf PaymentCommonInformation/PaymentInstructionStatus is not present, then TransactionReport/Transaction/Payment/InstructionStatus/PaymentInstructionStatus is optional."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Transactions3> forTransactions3 = new MMConstraint<Transactions3>() {
@@ -210,10 +210,6 @@ public class ConstraintPaymentInstructionStatusRule {
 	 * expression} =
 	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/TransactionReport[*]/TransactionOrError/Transaction/Payment/Status[1]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/PaymentCommonInformation/CommonStatus[1]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PaymentInstructionStatusRule"</li>
 	 * <li>
@@ -221,6 +217,10 @@ public class ConstraintPaymentInstructionStatusRule {
 	 * definition} =
 	 * "If PaymentCommonInformation/PaymentInstructionStatus is present, then TransactionReport/Transaction/Payment/InstructionStatus/PaymentInstructionStatus is not allowed.\nIf PaymentCommonInformation/PaymentInstructionStatus is not present, then TransactionReport/Transaction/Payment/InstructionStatus/PaymentInstructionStatus is optional."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -250,10 +250,6 @@ public class ConstraintPaymentInstructionStatusRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Transactions2 Transactions2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PaymentInstructionStatusRule"</li>
 	 * <li>
@@ -261,6 +257,10 @@ public class ConstraintPaymentInstructionStatusRule {
 	 * definition} =
 	 * "If PaymentCommonInformation/PaymentInstructionStatus is present, then TransactionReport/Transaction/Payment/InstructionStatus/PaymentInstructionStatus is not allowed.\nIf PaymentCommonInformation/PaymentInstructionStatus is not present, then TransactionReport/Transaction/Payment/InstructionStatus/PaymentInstructionStatus is optional."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Transactions2> forTransactions2 = new MMConstraint<Transactions2>() {

@@ -36,10 +36,6 @@ public class ConstraintDeactivationCancellationRequestStatusRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.AgentCADeactivationStatusAdviceV01
 	 * AgentCADeactivationStatusAdviceV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DeactivationCancellationRequestStatusRule"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintDeactivationCancellationRequestStatusRule {
 	 * definition} =
 	 * "If AgentCADeactivationCancellationRequestIdentification is present, then DeactivationCancellationRequestStatus must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AgentCADeactivationStatusAdviceV01> for_seev_AgentCADeactivationStatusAdviceV01 = new MMConstraint<AgentCADeactivationStatusAdviceV01>() {

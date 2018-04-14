@@ -45,10 +45,6 @@ public class ConstraintCreditorAndOrCreditorAgentRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction19
 	 * PaymentInstruction19}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CreditorAndOrCreditorAgentRule"</li>
 	 * <li>
@@ -56,6 +52,10 @@ public class ConstraintCreditorAndOrCreditorAgentRule {
 	 * definition} =
 	 * "If PaymentMethod is CHK (Cheque), then CreditTransferTransaction/CreditorAccount is not allowed. \r\n\r\nIf PaymentMethod is different from CHK (Cheque) and if CreditTransferTransaction/Creditor is not present, then CreditTransferTransaction/CreditorAccount is mandatory. \r\n\r\nIf PaymentMethod is different from CHK (Cheque) and if CreditTransferTransaction/Creditor is present, then CreditTransferTransaction/CreditorAccount is optional."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -94,10 +94,6 @@ public class ConstraintCreditorAndOrCreditorAgentRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction5
 	 * PaymentInstruction5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CreditorAndOrCreditorAgentRule"</li>
 	 * <li>
@@ -105,6 +101,10 @@ public class ConstraintCreditorAndOrCreditorAgentRule {
 	 * definition} =
 	 * "If PaymentMethod is CHK, then CreditTransferTransaction/CreditorAccount is not allowed. \r\n\r\nIf PaymentMethod is different from CHK and if CreditTransferTransaction/Creditor is not present, then CreditTransferTransaction/CreditorAccount is mandatory. \r\n\r\nIf PaymentMethod is different from CHK and if CreditTransferTransaction/Creditor is present, then CreditTransferTransaction/CreditorAccount is optional."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PaymentInstruction5> forPaymentInstruction5 = new MMConstraint<PaymentInstruction5>() {
@@ -128,10 +128,6 @@ public class ConstraintCreditorAndOrCreditorAgentRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction23
 	 * PaymentInstruction23}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CreditorAndOrCreditorAgentRule"</li>
 	 * <li>
@@ -139,6 +135,10 @@ public class ConstraintCreditorAndOrCreditorAgentRule {
 	 * definition} =
 	 * "If PaymentMethod is CHK (Cheque), then CreditTransferTransaction/CreditorAccount is not allowed. \r\n\r\nIf PaymentMethod is different from CHK (Cheque) and if CreditTransferTransaction/Creditor is not present, then CreditTransferTransaction/CreditorAccount is mandatory. \r\n\r\nIf PaymentMethod is different from CHK (Cheque) and if CreditTransferTransaction/Creditor is present, then CreditTransferTransaction/CreditorAccount is optional."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -168,10 +168,6 @@ public class ConstraintCreditorAndOrCreditorAgentRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction17
 	 * PaymentInstruction17}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CreditorAndOrCreditorAgentRule"</li>
 	 * <li>
@@ -179,6 +175,10 @@ public class ConstraintCreditorAndOrCreditorAgentRule {
 	 * definition} =
 	 * "If PaymentMethod is CHK, then CreditTransferTransaction/CreditorAccount is not allowed. \r\n\r\nIf PaymentMethod is different from CHK and if CreditTransferTransaction/Creditor is not present, then CreditTransferTransaction/CreditorAccount is mandatory. \r\n\r\nIf PaymentMethod is different from CHK and if CreditTransferTransaction/Creditor is present, then CreditTransferTransaction/CreditorAccount is optional."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -217,10 +217,6 @@ public class ConstraintCreditorAndOrCreditorAgentRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction8
 	 * PaymentInstruction8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CreditorAndOrCreditorAgentRule"</li>
 	 * <li>
@@ -228,6 +224,10 @@ public class ConstraintCreditorAndOrCreditorAgentRule {
 	 * definition} =
 	 * "If PaymentMethod is CHK, then CreditTransferTransaction/CreditorAccount is not allowed. \r\n\r\nIf PaymentMethod is different from CHK and if CreditTransferTransaction/Creditor is not present, then CreditTransferTransaction/CreditorAccount is mandatory. \r\n\r\nIf PaymentMethod is different from CHK and if CreditTransferTransaction/Creditor is present, then CreditTransferTransaction/CreditorAccount is optional."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PaymentInstruction8> forPaymentInstruction8 = new MMConstraint<PaymentInstruction8>() {
@@ -251,10 +251,6 @@ public class ConstraintCreditorAndOrCreditorAgentRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction11
 	 * PaymentInstruction11}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CreditorAndOrCreditorAgentRule"</li>
 	 * <li>
@@ -262,6 +258,10 @@ public class ConstraintCreditorAndOrCreditorAgentRule {
 	 * definition} =
 	 * "If PaymentMethod is CHK, then CreditTransferTransaction/CreditorAccount is not allowed. \r\n\r\nIf PaymentMethod is different from CHK and if CreditTransferTransaction/Creditor is not present, then CreditTransferTransaction/CreditorAccount is mandatory. \r\n\r\nIf PaymentMethod is different from CHK and if CreditTransferTransaction/Creditor is present, then CreditTransferTransaction/CreditorAccount is optional."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>

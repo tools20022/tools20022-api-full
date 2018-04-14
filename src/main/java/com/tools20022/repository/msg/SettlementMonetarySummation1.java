@@ -81,15 +81,15 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "SettlementMonetarySummation1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Specifies a collection of monetary totals for this settlement."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -122,10 +122,6 @@ public class SettlementMonetarySummation1 {
 	 * SettlementMonetarySummation1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "LineTtlAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LineTotalAmount"</li>
 	 * <li>
@@ -133,6 +129,10 @@ public class SettlementMonetarySummation1 {
 	 * definition} =
 	 * "Monetary value of the line amount total being reported for this settlement."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SettlementMonetarySummation1, List<CurrencyAndAmount>> mmLineTotalAmount = new MMMessageAttribute<SettlementMonetarySummation1, List<CurrencyAndAmount>>() {
@@ -182,10 +182,6 @@ public class SettlementMonetarySummation1 {
 	 * SettlementMonetarySummation1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AllwncTtlAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AllowanceTotalAmount"</li>
 	 * <li>
@@ -193,6 +189,10 @@ public class SettlementMonetarySummation1 {
 	 * definition} =
 	 * "Monetary value of the allowance total being reported for this settlement."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SettlementMonetarySummation1, List<CurrencyAndAmount>> mmAllowanceTotalAmount = new MMMessageAttribute<SettlementMonetarySummation1, List<CurrencyAndAmount>>() {
@@ -242,10 +242,6 @@ public class SettlementMonetarySummation1 {
 	 * SettlementMonetarySummation1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TtlDscntAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TotalDiscountAmount"</li>
 	 * <li>
@@ -253,6 +249,10 @@ public class SettlementMonetarySummation1 {
 	 * definition} =
 	 * "Monetary value of the total discount being reported for this settlement."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SettlementMonetarySummation1, List<CurrencyAndAmount>> mmTotalDiscountAmount = new MMMessageAttribute<SettlementMonetarySummation1, List<CurrencyAndAmount>>() {
@@ -302,10 +302,6 @@ public class SettlementMonetarySummation1 {
 	 * SettlementMonetarySummation1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ChrgTtlAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ChargeTotalAmount"</li>
 	 * <li>
@@ -313,6 +309,10 @@ public class SettlementMonetarySummation1 {
 	 * definition} =
 	 * "Monetary value of the charge amount total being reported for this settlement."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SettlementMonetarySummation1, List<CurrencyAndAmount>> mmChargeTotalAmount = new MMMessageAttribute<SettlementMonetarySummation1, List<CurrencyAndAmount>>() {
@@ -362,10 +362,6 @@ public class SettlementMonetarySummation1 {
 	 * SettlementMonetarySummation1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TtlPrepdAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TotalPrepaidAmount"</li>
 	 * <li>
@@ -373,6 +369,10 @@ public class SettlementMonetarySummation1 {
 	 * definition} =
 	 * "Monetary value of the total prepaid amount being reported for this settlement."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SettlementMonetarySummation1, List<CurrencyAndAmount>> mmTotalPrepaidAmount = new MMMessageAttribute<SettlementMonetarySummation1, List<CurrencyAndAmount>>() {
@@ -422,10 +422,6 @@ public class SettlementMonetarySummation1 {
 	 * SettlementMonetarySummation1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TaxTtlAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxTotalAmount"</li>
 	 * <li>
@@ -433,6 +429,10 @@ public class SettlementMonetarySummation1 {
 	 * definition} =
 	 * "Monetary value of the total of all tax basis amounts being reported for this settlement."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SettlementMonetarySummation1, List<CurrencyAndAmount>> mmTaxTotalAmount = new MMMessageAttribute<SettlementMonetarySummation1, List<CurrencyAndAmount>>() {
@@ -482,10 +482,6 @@ public class SettlementMonetarySummation1 {
 	 * SettlementMonetarySummation1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TaxBsisAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxBasisAmount"</li>
 	 * <li>
@@ -493,6 +489,10 @@ public class SettlementMonetarySummation1 {
 	 * definition} =
 	 * "Monetary value of the total of all tax basis amounts being reported for this settlement."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SettlementMonetarySummation1, List<CurrencyAndAmount>> mmTaxBasisAmount = new MMMessageAttribute<SettlementMonetarySummation1, List<CurrencyAndAmount>>() {
@@ -537,10 +537,6 @@ public class SettlementMonetarySummation1 {
 	 * SettlementMonetarySummation1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RndgAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RoundingAmount"</li>
 	 * <li>
@@ -548,6 +544,10 @@ public class SettlementMonetarySummation1 {
 	 * definition} =
 	 * "Monetary value of a rounding amount being applied and reported for this settlement."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SettlementMonetarySummation1, List<CurrencyAndAmount>> mmRoundingAmount = new MMMessageAttribute<SettlementMonetarySummation1, List<CurrencyAndAmount>>() {
@@ -596,10 +596,6 @@ public class SettlementMonetarySummation1 {
 	 * SettlementMonetarySummation1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "GrdTtlAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GrandTotalAmount"</li>
 	 * <li>
@@ -607,6 +603,10 @@ public class SettlementMonetarySummation1 {
 	 * definition} =
 	 * "Monetary value of the grand total being reported for this settlement, to include addition and subtraction of individual summation amounts."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SettlementMonetarySummation1, List<CurrencyAndAmount>> mmGrandTotalAmount = new MMMessageAttribute<SettlementMonetarySummation1, List<CurrencyAndAmount>>() {
@@ -651,10 +651,6 @@ public class SettlementMonetarySummation1 {
 	 * SettlementMonetarySummation1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "InfAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InformationAmount"</li>
 	 * <li>
@@ -662,6 +658,10 @@ public class SettlementMonetarySummation1 {
 	 * definition} =
 	 * "Monetary value of an amount being reported as information for this settlement."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SettlementMonetarySummation1, List<CurrencyAndAmount>> mmInformationAmount = new MMMessageAttribute<SettlementMonetarySummation1, List<CurrencyAndAmount>>() {

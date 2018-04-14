@@ -38,10 +38,6 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceDetails20
 	 * CorporateActionBalanceDetails20}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AffectedAndUnaffectedBalanceRule"</li>
 	 * <li>
@@ -49,6 +45,10 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * definition} =
 	 * "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionBalanceDetails20> forCorporateActionBalanceDetails20 = new MMConstraint<CorporateActionBalanceDetails20>() {
@@ -72,10 +72,6 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceDetails31
 	 * CorporateActionBalanceDetails31}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AffectedAndUnaffectedBalanceRule"</li>
 	 * <li>
@@ -83,6 +79,10 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * definition} =
 	 * "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -113,10 +113,6 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceDetails29
 	 * CorporateActionBalanceDetails29}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AffectedAndUnaffectedBalanceRule"</li>
 	 * <li>
@@ -124,6 +120,10 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * definition} =
 	 * "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -154,10 +154,6 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceDetails18
 	 * CorporateActionBalanceDetails18}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AffectedAndUnaffectedBalanceRule"</li>
 	 * <li>
@@ -165,6 +161,10 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * definition} =
 	 * "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -198,10 +198,6 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceDetails21
 	 * CorporateActionBalanceDetails21}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AffectedAndUnaffectedBalanceRule"</li>
 	 * <li>
@@ -209,6 +205,10 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * definition} =
 	 * "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -249,10 +249,6 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceDetails35
 	 * CorporateActionBalanceDetails35}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AffectedAndUnaffectedBalanceRule"</li>
 	 * <li>
@@ -260,6 +256,10 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * definition} =
 	 * "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionBalanceDetails35> forCorporateActionBalanceDetails35 = new MMConstraint<CorporateActionBalanceDetails35>() {
@@ -283,10 +283,6 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceDetails7
 	 * CorporateActionBalanceDetails7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AffectedAndUnaffectedBalanceRule"</li>
 	 * <li>
@@ -294,6 +290,10 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * definition} =
 	 * "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionBalanceDetails7> forCorporateActionBalanceDetails7 = new MMConstraint<CorporateActionBalanceDetails7>() {
@@ -317,10 +317,6 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceDetails10
 	 * CorporateActionBalanceDetails10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AffectedAndUnaffectedBalanceRule"</li>
 	 * <li>
@@ -328,6 +324,10 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * definition} =
 	 * "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionBalanceDetails10> forCorporateActionBalanceDetails10 = new MMConstraint<CorporateActionBalanceDetails10>() {
@@ -351,10 +351,6 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceDetails36
 	 * CorporateActionBalanceDetails36}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AffectedAndUnaffectedBalanceRule"</li>
 	 * <li>
@@ -362,6 +358,10 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * definition} =
 	 * "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionBalanceDetails36> forCorporateActionBalanceDetails36 = new MMConstraint<CorporateActionBalanceDetails36>() {
@@ -385,10 +385,6 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceDetails28
 	 * CorporateActionBalanceDetails28}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AffectedAndUnaffectedBalanceRule"</li>
 	 * <li>
@@ -396,6 +392,10 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * definition} =
 	 * "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionBalanceDetails28> forCorporateActionBalanceDetails28 = new MMConstraint<CorporateActionBalanceDetails28>() {
@@ -419,10 +419,6 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceDetails2
 	 * CorporateActionBalanceDetails2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AffectedAndUnaffectedBalanceRule"</li>
 	 * <li>
@@ -430,6 +426,10 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * definition} =
 	 * "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionBalanceDetails2> forCorporateActionBalanceDetails2 = new MMConstraint<CorporateActionBalanceDetails2>() {
@@ -453,10 +453,6 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceDetails6
 	 * CorporateActionBalanceDetails6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AffectedAndUnaffectedBalanceRule"</li>
 	 * <li>
@@ -464,6 +460,10 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * definition} =
 	 * "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionBalanceDetails6> forCorporateActionBalanceDetails6 = new MMConstraint<CorporateActionBalanceDetails6>() {
@@ -487,10 +487,6 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceDetails1
 	 * CorporateActionBalanceDetails1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AffectedAndUnaffectedBalanceRule"</li>
 	 * <li>
@@ -498,6 +494,10 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * definition} =
 	 * "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionBalanceDetails1> forCorporateActionBalanceDetails1 = new MMConstraint<CorporateActionBalanceDetails1>() {
@@ -521,10 +521,6 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceDetails22
 	 * CorporateActionBalanceDetails22}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AffectedAndUnaffectedBalanceRule"</li>
 	 * <li>
@@ -532,6 +528,10 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * definition} =
 	 * "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -572,10 +572,6 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceDetails17
 	 * CorporateActionBalanceDetails17}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AffectedAndUnaffectedBalanceRule"</li>
 	 * <li>
@@ -583,6 +579,10 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * definition} =
 	 * "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -616,10 +616,6 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceDetails13
 	 * CorporateActionBalanceDetails13}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AffectedAndUnaffectedBalanceRule"</li>
 	 * <li>
@@ -627,6 +623,10 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * definition} =
 	 * "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionBalanceDetails13> forCorporateActionBalanceDetails13 = new MMConstraint<CorporateActionBalanceDetails13>() {
@@ -650,10 +650,6 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceDetails19
 	 * CorporateActionBalanceDetails19}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AffectedAndUnaffectedBalanceRule"</li>
 	 * <li>
@@ -661,6 +657,10 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * definition} =
 	 * "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionBalanceDetails19> forCorporateActionBalanceDetails19 = new MMConstraint<CorporateActionBalanceDetails19>() {
@@ -684,10 +684,6 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceDetails14
 	 * CorporateActionBalanceDetails14}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AffectedAndUnaffectedBalanceRule"</li>
 	 * <li>
@@ -695,6 +691,10 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * definition} =
 	 * "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionBalanceDetails14> forCorporateActionBalanceDetails14 = new MMConstraint<CorporateActionBalanceDetails14>() {
@@ -718,10 +718,6 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceDetails11
 	 * CorporateActionBalanceDetails11}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AffectedAndUnaffectedBalanceRule"</li>
 	 * <li>
@@ -729,6 +725,10 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * definition} =
 	 * "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionBalanceDetails11> forCorporateActionBalanceDetails11 = new MMConstraint<CorporateActionBalanceDetails11>() {
@@ -752,10 +752,6 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceDetails25
 	 * CorporateActionBalanceDetails25}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AffectedAndUnaffectedBalanceRule"</li>
 	 * <li>
@@ -763,6 +759,10 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * definition} =
 	 * "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionBalanceDetails25> forCorporateActionBalanceDetails25 = new MMConstraint<CorporateActionBalanceDetails25>() {

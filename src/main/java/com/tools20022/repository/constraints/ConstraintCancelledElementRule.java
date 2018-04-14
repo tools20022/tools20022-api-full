@@ -35,10 +35,6 @@ public class ConstraintCancelledElementRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CancelledStatusReason16
 	 * CancelledStatusReason16}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CancelledElementRule"</li>
 	 * <li>
@@ -46,6 +42,10 @@ public class ConstraintCancelledElementRule {
 	 * definition} =
 	 * "Either Reason or AdditionalInformation must be present. Both may be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CancelledStatusReason16> forCancelledStatusReason16 = new MMConstraint<CancelledStatusReason16>() {

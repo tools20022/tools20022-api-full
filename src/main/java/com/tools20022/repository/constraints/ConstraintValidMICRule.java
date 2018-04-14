@@ -36,10 +36,6 @@ public class ConstraintValidMICRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.TradingVenueIdentification1Choice
 	 * TradingVenueIdentification1Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ValidMICRule"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintValidMICRule {
 	 * definition} =
 	 * "Market Identification code must be an active market at the time of reporting."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TradingVenueIdentification1Choice> forTradingVenueIdentification1Choice = new MMConstraint<TradingVenueIdentification1Choice>() {
@@ -70,10 +70,6 @@ public class ConstraintValidMICRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TradingVenueAttributes1
 	 * TradingVenueAttributes1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ValidMICRule"</li>
 	 * <li>
@@ -81,6 +77,10 @@ public class ConstraintValidMICRule {
 	 * definition} =
 	 * "Market Identification code must be an active market at the time of reporting."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TradingVenueAttributes1> forTradingVenueAttributes1 = new MMConstraint<TradingVenueAttributes1>() {
@@ -104,10 +104,6 @@ public class ConstraintValidMICRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransparencyDataReport15
 	 * TransparencyDataReport15}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ValidMICRule"</li>
 	 * <li>
@@ -115,6 +111,10 @@ public class ConstraintValidMICRule {
 	 * definition} =
 	 * "Market Identification code must be an active market at the time of reporting."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransparencyDataReport15> forTransparencyDataReport15 = new MMConstraint<TransparencyDataReport15>() {
@@ -138,10 +138,6 @@ public class ConstraintValidMICRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.VolumeCapReport1
 	 * VolumeCapReport1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ValidMICRule"</li>
 	 * <li>
@@ -149,6 +145,10 @@ public class ConstraintValidMICRule {
 	 * definition} =
 	 * "Where populated, the market identification code must be an active market at the time of reporting."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<VolumeCapReport1> forVolumeCapReport1 = new MMConstraint<VolumeCapReport1>() {
@@ -172,10 +172,6 @@ public class ConstraintValidMICRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransparencyDataReport11
 	 * TransparencyDataReport11}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ValidMICRule"</li>
 	 * <li>
@@ -183,6 +179,10 @@ public class ConstraintValidMICRule {
 	 * definition} =
 	 * "Where reported, Market Identification code must be an active market for that reporting period."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransparencyDataReport11> forTransparencyDataReport11 = new MMConstraint<TransparencyDataReport11>() {
@@ -206,10 +206,6 @@ public class ConstraintValidMICRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransparencyDataReport10
 	 * TransparencyDataReport10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ValidMICRule"</li>
 	 * <li>
@@ -217,6 +213,10 @@ public class ConstraintValidMICRule {
 	 * definition} =
 	 * "Where reported, Market Identification code must be an active market for that reporting period."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransparencyDataReport10> forTransparencyDataReport10 = new MMConstraint<TransparencyDataReport10>() {
@@ -240,10 +240,6 @@ public class ConstraintValidMICRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransparencyDataReport13
 	 * TransparencyDataReport13}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ValidMICRule"</li>
 	 * <li>
@@ -251,6 +247,10 @@ public class ConstraintValidMICRule {
 	 * definition} =
 	 * "Market Identification code must be an active market at the time of reporting."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransparencyDataReport13> forTransparencyDataReport13 = new MMConstraint<TransparencyDataReport13>() {
@@ -274,10 +274,6 @@ public class ConstraintValidMICRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransparencyDataReport12
 	 * TransparencyDataReport12}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ValidMICRule"</li>
 	 * <li>
@@ -285,6 +281,10 @@ public class ConstraintValidMICRule {
 	 * definition} =
 	 * "Where reported, market Identification code must be an active market for that reporting period."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransparencyDataReport12> forTransparencyDataReport12 = new MMConstraint<TransparencyDataReport12>() {
@@ -307,10 +307,6 @@ public class ConstraintValidMICRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.MarketDetail2 MarketDetail2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ValidMICRule"</li>
 	 * <li>
@@ -318,6 +314,10 @@ public class ConstraintValidMICRule {
 	 * definition} =
 	 * "Market Identification code must be an active market at the time of reporting."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<MarketDetail2> forMarketDetail2 = new MMConstraint<MarketDetail2>() {
@@ -341,10 +341,6 @@ public class ConstraintValidMICRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TransparencyDataReport14
 	 * TransparencyDataReport14}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ValidMICRule"</li>
 	 * <li>
@@ -352,6 +348,10 @@ public class ConstraintValidMICRule {
 	 * definition} =
 	 * "Where reported, market Identification code must be an active market for that reporting period."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TransparencyDataReport14> forTransparencyDataReport14 = new MMConstraint<TransparencyDataReport14>() {

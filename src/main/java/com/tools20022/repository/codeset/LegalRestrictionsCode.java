@@ -76,6 +76,11 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "LegalRestrictionsCode"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} =
+ * "Specifies the regulatory restrictions applicable to a security."</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -86,11 +91,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "LegalRestrictionsCode"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} =
- * "Specifies the regulatory restrictions applicable to a security."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -108,10 +108,6 @@ public class LegalRestrictionsCode extends MMCode {
 	 * LegalRestrictionsCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "JURO"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "JurisdictionOwnership"</li>
 	 * <li>
@@ -119,6 +115,10 @@ public class LegalRestrictionsCode extends MMCode {
 	 * definition} =
 	 * "Investors outside this jurisdiction can purchase this security, for example, a Reg S security can only be held by an investor outside the US."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final LegalRestrictionsCode JurisdictionOwnership = new LegalRestrictionsCode() {
@@ -141,10 +141,6 @@ public class LegalRestrictionsCode extends MMCode {
 	 * LegalRestrictionsCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "PPLA"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PrivatePlacements"</li>
 	 * <li>
@@ -152,6 +148,10 @@ public class LegalRestrictionsCode extends MMCode {
 	 * definition} =
 	 * "Only investors qualified by the issuer in this jurisdiction may purchase this security."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final LegalRestrictionsCode PrivatePlacements = new LegalRestrictionsCode() {
@@ -174,10 +174,6 @@ public class LegalRestrictionsCode extends MMCode {
 	 * LegalRestrictionsCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "ACRI"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccreditedInvestor"</li>
 	 * <li>
@@ -185,6 +181,10 @@ public class LegalRestrictionsCode extends MMCode {
 	 * definition} =
 	 * "Only investors qualified by the regulator in this jurisdiction may purchase this security."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final LegalRestrictionsCode AccreditedInvestor = new LegalRestrictionsCode() {
@@ -207,10 +207,6 @@ public class LegalRestrictionsCode extends MMCode {
 	 * LegalRestrictionsCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "MARG"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Margin"</li>
 	 * <li>
@@ -218,6 +214,10 @@ public class LegalRestrictionsCode extends MMCode {
 	 * definition} =
 	 * "Issuer defines whether the security may be purchased with borrowed money (US and Japan)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final LegalRestrictionsCode Margin = new LegalRestrictionsCode() {
@@ -240,10 +240,6 @@ public class LegalRestrictionsCode extends MMCode {
 	 * LegalRestrictionsCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "PRIV"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Privilege"</li>
 	 * <li>
@@ -251,6 +247,10 @@ public class LegalRestrictionsCode extends MMCode {
 	 * definition} =
 	 * "Privileges, for example, voting rights, of holding the security may be restricted by the issuer."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final LegalRestrictionsCode Privilege = new LegalRestrictionsCode() {
@@ -273,10 +273,6 @@ public class LegalRestrictionsCode extends MMCode {
 	 * LegalRestrictionsCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "USLE"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "USLegal144A"</li>
 	 * <li>
@@ -284,6 +280,10 @@ public class LegalRestrictionsCode extends MMCode {
 	 * definition} =
 	 * "Ownership or transfer of an unregistered security issued, pursuant to US legal restrictions 144A."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final LegalRestrictionsCode USLegal144A = new LegalRestrictionsCode() {
@@ -305,10 +305,6 @@ public class LegalRestrictionsCode extends MMCode {
 	 * LegalRestrictionsCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "NORE"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NoRestrictions"</li>
 	 * <li>
@@ -316,6 +312,10 @@ public class LegalRestrictionsCode extends MMCode {
 	 * definition} =
 	 * "Ownership or transfer of a security that is not subject to restrictions."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final LegalRestrictionsCode NoRestrictions = new LegalRestrictionsCode() {
@@ -338,10 +338,6 @@ public class LegalRestrictionsCode extends MMCode {
 	 * LegalRestrictionsCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "REST"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Restrictions"</li>
 	 * <li>
@@ -349,6 +345,10 @@ public class LegalRestrictionsCode extends MMCode {
 	 * definition} =
 	 * "Ownership or transfer of a security that is subject to restrictions, and not pursuant to 144A."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final LegalRestrictionsCode Restrictions = new LegalRestrictionsCode() {

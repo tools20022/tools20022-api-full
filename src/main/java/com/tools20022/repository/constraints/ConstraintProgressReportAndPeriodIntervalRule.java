@@ -35,10 +35,6 @@ public class ConstraintProgressReportAndPeriodIntervalRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.List1 List1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ProgressReportAndPeriodIntervalRule"</li>
 	 * <li>
@@ -46,6 +42,10 @@ public class ConstraintProgressReportAndPeriodIntervalRule {
 	 * definition} =
 	 * "ProgressPeriodInterval may only be present if ProgressReport contains the value \"true\" or \"1\" (Yes)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<List1> forList1 = new MMConstraint<List1>() {

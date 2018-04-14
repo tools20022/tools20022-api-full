@@ -35,10 +35,6 @@ public class ConstraintForeignExchangeTradeProductRule1 {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Trade2 Trade2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ForeignExchangeTradeProductRule1"</li>
 	 * <li>
@@ -46,6 +42,10 @@ public class ConstraintForeignExchangeTradeProductRule1 {
 	 * definition} =
 	 * "If Foreign Exchange Trade Product is equal to 'SWAP', then SwapLeg must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Trade2> forTrade2 = new MMConstraint<Trade2>() {

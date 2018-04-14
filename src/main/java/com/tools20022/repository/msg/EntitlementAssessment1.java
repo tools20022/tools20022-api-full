@@ -117,6 +117,12 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "EntitlementAssessment1"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} =
+ * "Specifies the parameters, such as dates, used to calculate the entitlement to vote at a general meeting."
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
  * constraint} =
  * <ul>
@@ -130,12 +136,6 @@ import javax.xml.bind.annotation.XmlType;
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRemovalDate
  * removalDate} = September 9, 2016</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "EntitlementAssessment1"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} =
- * "Specifies the parameters, such as dates, used to calculate the entitlement to vote at a general meeting."
- * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -169,10 +169,6 @@ public class EntitlementAssessment1 {
 	 * EntitlementAssessment1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SctiesBlckgDdln"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SecuritiesBlockingDeadline"</li>
 	 * <li>
@@ -180,6 +176,10 @@ public class EntitlementAssessment1 {
 	 * definition} =
 	 * "Date by which the securities should be blocked. This deadline is set by an intermediary."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<EntitlementAssessment1, Optional<DateFormat2Choice>> mmSecuritiesBlockingDeadline = new MMMessageAttribute<EntitlementAssessment1, Optional<DateFormat2Choice>>() {
@@ -230,10 +230,6 @@ public class EntitlementAssessment1 {
 	 * EntitlementAssessment1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SctiesBlckgSTPDdln"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SecuritiesBlockingSTPDeadline"</li>
 	 * <li>
@@ -241,6 +237,10 @@ public class EntitlementAssessment1 {
 	 * definition} =
 	 * "Date by which the securities should be blocked. This deadline is set by the issuer. (STP mode)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<EntitlementAssessment1, Optional<DateFormat2Choice>> mmSecuritiesBlockingSTPDeadline = new MMMessageAttribute<EntitlementAssessment1, Optional<DateFormat2Choice>>() {
@@ -291,10 +291,6 @@ public class EntitlementAssessment1 {
 	 * EntitlementAssessment1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SctiesBlckgMktDdln"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SecuritiesBlockingMarketDeadline"</li>
 	 * <li>
@@ -302,6 +298,10 @@ public class EntitlementAssessment1 {
 	 * definition} =
 	 * "Date by which the securities should be blocked. This deadline is set by the issuer."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<EntitlementAssessment1, Optional<DateFormat2Choice>> mmSecuritiesBlockingMarketDeadline = new MMMessageAttribute<EntitlementAssessment1, Optional<DateFormat2Choice>>() {
@@ -351,16 +351,16 @@ public class EntitlementAssessment1 {
 	 * EntitlementAssessment1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SctiesBlckgPrdEndDt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SecuritiesBlockingPeriodEndDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Date by which the blocking period for the securities should end."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<EntitlementAssessment1, Optional<ISODateTime>> mmSecuritiesBlockingPeriodEndDate = new MMMessageAttribute<EntitlementAssessment1, Optional<ISODateTime>>() {
@@ -411,10 +411,6 @@ public class EntitlementAssessment1 {
 	 * EntitlementAssessment1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "EntitlmntFxgDt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EntitlementFixingDate"</li>
 	 * <li>
@@ -422,6 +418,10 @@ public class EntitlementAssessment1 {
 	 * definition} =
 	 * "Date at which the positions are struck to note which parties will receive the entitlement, e.g. record date, book close date."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<EntitlementAssessment1, Optional<DateFormat3Choice>> mmEntitlementFixingDate = new MMMessageAttribute<EntitlementAssessment1, Optional<DateFormat3Choice>>() {
@@ -472,10 +472,6 @@ public class EntitlementAssessment1 {
 	 * EntitlementAssessment1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RegnSctiesDdln"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RegistrationSecuritiesDeadline"</li>
 	 * <li>
@@ -483,6 +479,10 @@ public class EntitlementAssessment1 {
 	 * definition} =
 	 * "Date by which the securities have to be registered. This deadline is specified by an intermediary."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<EntitlementAssessment1, Optional<DateFormat2Choice>> mmRegistrationSecuritiesDeadline = new MMMessageAttribute<EntitlementAssessment1, Optional<DateFormat2Choice>>() {
@@ -533,10 +533,6 @@ public class EntitlementAssessment1 {
 	 * EntitlementAssessment1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RegnSctiesSTPDdln"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RegistrationSecuritiesSTPDeadline"</li>
 	 * <li>
@@ -544,6 +540,10 @@ public class EntitlementAssessment1 {
 	 * definition} =
 	 * "Date by which the securities have to be registered. This deadline is specified by an intermediary (STP mode)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<EntitlementAssessment1, Optional<DateFormat2Choice>> mmRegistrationSecuritiesSTPDeadline = new MMMessageAttribute<EntitlementAssessment1, Optional<DateFormat2Choice>>() {
@@ -594,10 +594,6 @@ public class EntitlementAssessment1 {
 	 * EntitlementAssessment1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RegnSctiesMktDdln"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RegistrationSecuritiesMarketDeadline"</li>
 	 * <li>
@@ -605,6 +601,10 @@ public class EntitlementAssessment1 {
 	 * definition} =
 	 * "Date by which the securities have to be registered. This deadline is set by the issuer."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<EntitlementAssessment1, Optional<DateFormat2Choice>> mmRegistrationSecuritiesMarketDeadline = new MMMessageAttribute<EntitlementAssessment1, Optional<DateFormat2Choice>>() {
@@ -655,10 +655,6 @@ public class EntitlementAssessment1 {
 	 * EntitlementAssessment1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RegnPrtcptnDdln"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RegistrationParticipationDeadline"</li>
 	 * <li>
@@ -666,6 +662,10 @@ public class EntitlementAssessment1 {
 	 * definition} =
 	 * "Date by which the holder needs to register its intention to participate in the meeting process in order to be allowed to participate in the meeting event. This deadline is specified by an intermediary."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<EntitlementAssessment1, Optional<DateFormat2Choice>> mmRegistrationParticipationDeadline = new MMMessageAttribute<EntitlementAssessment1, Optional<DateFormat2Choice>>() {
@@ -716,10 +716,6 @@ public class EntitlementAssessment1 {
 	 * EntitlementAssessment1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RegnPrtcptnSTPDdln"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RegistrationParticipationSTPDeadline"</li>
 	 * <li>
@@ -727,6 +723,10 @@ public class EntitlementAssessment1 {
 	 * definition} =
 	 * "Date by which the holder needs to register its intention to participate in the meeting process in order to be allowed to participate in the meeting event. This deadline is specified by an intermediary (STP mode)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<EntitlementAssessment1, Optional<DateFormat2Choice>> mmRegistrationParticipationSTPDeadline = new MMMessageAttribute<EntitlementAssessment1, Optional<DateFormat2Choice>>() {
@@ -777,10 +777,6 @@ public class EntitlementAssessment1 {
 	 * EntitlementAssessment1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RegnPrtcptnMktDdln"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RegistrationParticipationMarketDeadline"</li>
 	 * <li>
@@ -788,6 +784,10 @@ public class EntitlementAssessment1 {
 	 * definition} =
 	 * "Date by which the holder needs to register its intention to participate in the meeting process in order to be allowed to participate in the meeting event. This deadline is set by the issuer."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<EntitlementAssessment1, Optional<DateFormat2Choice>> mmRegistrationParticipationMarketDeadline = new MMMessageAttribute<EntitlementAssessment1, Optional<DateFormat2Choice>>() {
@@ -832,10 +832,6 @@ public class EntitlementAssessment1 {
 	 * EntitlementAssessment1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "EntitlmntDesc"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EntitlementDescription"</li>
 	 * <li>
@@ -843,6 +839,10 @@ public class EntitlementAssessment1 {
 	 * definition} =
 	 * "Specifies the calculation method of the number of votes assigned to one security. This element should be used when the entitlement calculation rule is complex."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<EntitlementAssessment1, Optional<Max350Text>> mmEntitlementDescription = new MMMessageAttribute<EntitlementAssessment1, Optional<Max350Text>>() {
@@ -892,15 +892,15 @@ public class EntitlementAssessment1 {
 	 * EntitlementAssessment1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "EntitlmntRatio"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EntitlementRatio"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Number of votes assigned to one security."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<EntitlementAssessment1, Optional<DecimalNumber>> mmEntitlementRatio = new MMMessageAttribute<EntitlementAssessment1, Optional<DecimalNumber>>() {
@@ -948,10 +948,6 @@ public class EntitlementAssessment1 {
 	 * EntitlementAssessment1.mmEntitlementRatio}</li>
 	 * </ul>
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EntitlementRatioOrEntitlementDescriptionRule"</li>
 	 * <li>
@@ -959,6 +955,10 @@ public class EntitlementAssessment1 {
 	 * definition} =
 	 * "Either EntitlementRatio or EntitlementDescription must be present, but not both."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMXor EntitlementRatioOrEntitlementDescriptionRule = new MMXor() {

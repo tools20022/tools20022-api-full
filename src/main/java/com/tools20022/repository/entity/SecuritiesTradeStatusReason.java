@@ -882,15 +882,15 @@ import java.util.Optional;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "SecuritiesTradeStatusReason"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Specifies the underlying reason for a status of a securities trade."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class SecuritiesTradeStatusReason extends StatusReason {
@@ -1162,15 +1162,15 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason
 	 * SecuritiesTradeStatusReason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnmatchedReason"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Reason for the unmatched status."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTradeStatusReason, UnmatchedReasonCode> mmUnmatchedReason = new MMBusinessAttribute<SecuritiesTradeStatusReason, UnmatchedReasonCode>() {
@@ -1597,15 +1597,15 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason
 	 * SecuritiesTradeStatusReason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DeniedReason"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the reason why the request was denied."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTradeStatusReason, DeniedReasonCode> mmDeniedReason = new MMBusinessAttribute<SecuritiesTradeStatusReason, DeniedReasonCode>() {
@@ -1658,6 +1658,11 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus
+	 * SecuritiesTradeStatus}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#mmReason
@@ -1666,19 +1671,10 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus
-	 * SecuritiesTradeStatus}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason
 	 * SecuritiesTradeStatusReason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SecuritiesTradeStatus"</li>
 	 * <li>
@@ -1686,6 +1682,10 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 	 * definition} =
 	 * "Status for which a reason is provided. It is derived from the association between StatusReason and Status."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesTradeStatusReason, Optional<SecuritiesTradeStatus>> mmSecuritiesTradeStatus = new MMBusinessAssociationEnd<SecuritiesTradeStatusReason, Optional<SecuritiesTradeStatus>>() {
@@ -1847,15 +1847,15 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason
 	 * SecuritiesTradeStatusReason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GeneratedReason"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the reason why the transaction was generated."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTradeStatusReason, GeneratedReasonCode> mmGeneratedReason = new MMBusinessAttribute<SecuritiesTradeStatusReason, GeneratedReasonCode>() {
@@ -1924,15 +1924,15 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason
 	 * SecuritiesTradeStatusReason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AllegementReason"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Reason why the instruction has an allegement status."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTradeStatusReason, AllegementReasonCode> mmAllegementReason = new MMBusinessAttribute<SecuritiesTradeStatusReason, AllegementReasonCode>() {
@@ -1997,15 +1997,15 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason
 	 * SecuritiesTradeStatusReason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PendingSettlementReason"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Reason for the settlement pending status."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTradeStatusReason, PendingSettlementStatusReasonCode> mmPendingSettlementReason = new MMBusinessAttribute<SecuritiesTradeStatusReason, PendingSettlementStatusReasonCode>() {
@@ -2149,16 +2149,16 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason
 	 * SecuritiesTradeStatusReason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RepoCallAcknowledgementReason"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies additional information about the processed instruction."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTradeStatusReason, RepoCallAcknowledgementReasonCode> mmRepoCallAcknowledgementReason = new MMBusinessAttribute<SecuritiesTradeStatusReason, RepoCallAcknowledgementReasonCode>() {
@@ -2595,16 +2595,16 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason
 	 * SecuritiesTradeStatusReason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RepairReason"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies the reason why the instruction/request has a repair status."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTradeStatusReason, RepairReasonV2Code> mmRepairReason = new MMBusinessAttribute<SecuritiesTradeStatusReason, RepairReasonV2Code>() {
@@ -2667,15 +2667,15 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason
 	 * SecuritiesTradeStatusReason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DeliveryReturnReason"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Reason why the trade was returned."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTradeStatusReason, DeliveryReturnCode> mmDeliveryReturnReason = new MMBusinessAttribute<SecuritiesTradeStatusReason, DeliveryReturnCode>() {
@@ -2753,10 +2753,6 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason
 	 * SecuritiesTradeStatusReason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CounterpartyStatusReason"</li>
 	 * <li>
@@ -2764,6 +2760,10 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 	 * definition} =
 	 * "Specifies the counterparty action which is the reason of the trade status."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTradeStatusReason, CounterpartyResponseStatusReasonCode> mmCounterpartyStatusReason = new MMBusinessAttribute<SecuritiesTradeStatusReason, CounterpartyResponseStatusReasonCode>() {
@@ -2865,16 +2865,16 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason
 	 * SecuritiesTradeStatusReason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ModifiedStatusReason"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies the reason why the related instruction is modified."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTradeStatusReason, ModifiedStatusReasonCode> mmModifiedStatusReason = new MMBusinessAttribute<SecuritiesTradeStatusReason, ModifiedStatusReasonCode>() {

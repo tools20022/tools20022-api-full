@@ -48,10 +48,6 @@ public class ConstraintCreditorAgentRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction19
 	 * PaymentInstruction19}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CreditorAgentRule"</li>
 	 * <li>
@@ -59,6 +55,10 @@ public class ConstraintCreditorAgentRule {
 	 * definition} =
 	 * "If PaymentMethod is CHK (Cheque) and if CreditTransferTransaction/ ChequeInstruction/DeliveryMethod is present and is equal to CRFA (CourierToFinalAgent), MLFA (MailToFinalAgent), PUFA (PickUpByFinalAgent) or RGFA (RegisteredMailToFinalAgent), then CreditTransferTransaction/CreditorAgent is mandatory. \r\n\r\nIf PaymentMethod is CHK (Cheque) and if CreditTransferTransaction/ ChequeInstruction/DeliveryMethod is not present or is not equal to CRFA (CourierToFinalAgent), MLFA (MailToFinalAgent), PUFA (PickUpByFinalAgent) or RGFA (RegisteredMailToFinalAgent), then CreditTransferTransaction/CreditorAgent is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -97,15 +97,15 @@ public class ConstraintCreditorAgentRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.pacs.PaymentCancellationRequestV01
 	 * PaymentCancellationRequestV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CreditorAgentRule"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "GroupHeader/CreditorAgent is not allowed."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PaymentCancellationRequestV01> for_pacs_PaymentCancellationRequestV01 = new MMConstraint<PaymentCancellationRequestV01>() {
@@ -129,10 +129,6 @@ public class ConstraintCreditorAgentRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionInformation1
 	 * PaymentInstructionInformation1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CreditorAgentRule"</li>
 	 * <li>
@@ -140,6 +136,10 @@ public class ConstraintCreditorAgentRule {
 	 * definition} =
 	 * "If PaymentMethod is CHK and if CreditTransferTransactionInformation/ ChequeInstruction/DeliveryMethod is present and is equal to MLFA, CRFA, RGFA or PUFA, then CreditTransferTransactionInformation/CreditorAgent is mandatory. \n\nIf PaymentMethod is CHK and if CreditTransferTransactionInformation/ ChequeInstruction/DeliveryMethod is not present or is not equal to MLFA, CRFA, RGFA or PUFA, then CreditTransferTransactionInformation/CreditorAgent is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PaymentInstructionInformation1> forPaymentInstructionInformation1 = new MMConstraint<PaymentInstructionInformation1>() {
@@ -163,10 +163,6 @@ public class ConstraintCreditorAgentRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction5
 	 * PaymentInstruction5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CreditorAgentRule"</li>
 	 * <li>
@@ -174,6 +170,10 @@ public class ConstraintCreditorAgentRule {
 	 * definition} =
 	 * "If PaymentMethod is CHK and if CreditTransferTransaction/ ChequeInstruction/DeliveryMethod is present and is equal to MLFA, CRFA, RGFA or PUFA, then CreditTransferTransaction/CreditorAgent is mandatory. \r\n\r\nIf PaymentMethod is CHK and if CreditTransferTransaction/ ChequeInstruction/DeliveryMethod is not present or is not equal to MLFA, CRFA, RGFA or PUFA, then CreditTransferTransaction/CreditorAgent is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PaymentInstruction5> forPaymentInstruction5 = new MMConstraint<PaymentInstruction5>() {
@@ -197,10 +197,6 @@ public class ConstraintCreditorAgentRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction23
 	 * PaymentInstruction23}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CreditorAgentRule"</li>
 	 * <li>
@@ -208,6 +204,10 @@ public class ConstraintCreditorAgentRule {
 	 * definition} =
 	 * "If PaymentMethod is CHK (Cheque) and if CreditTransferTransaction/ ChequeInstruction/DeliveryMethod is present and is equal to CRFA (CourierToFinalAgent), MLFA (MailToFinalAgent), PUFA (PickUpByFinalAgent) or RGFA (RegisteredMailToFinalAgent), then CreditTransferTransaction/CreditorAgent is mandatory. \r\n\r\nIf PaymentMethod is CHK (Cheque) and if CreditTransferTransaction/ ChequeInstruction/DeliveryMethod is not present or is not equal to CRFA (CourierToFinalAgent), MLFA (MailToFinalAgent), PUFA (PickUpByFinalAgent) or RGFA (RegisteredMailToFinalAgent), then CreditTransferTransaction/CreditorAgent is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -237,15 +237,15 @@ public class ConstraintCreditorAgentRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.pacs.PaymentStatusReportV02
 	 * PaymentStatusReportV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CreditorAgentRule"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "GroupHeader/CreditorAgent is not allowed."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PaymentStatusReportV02> for_pacs_PaymentStatusReportV02 = new MMConstraint<PaymentStatusReportV02>() {
@@ -269,10 +269,6 @@ public class ConstraintCreditorAgentRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction17
 	 * PaymentInstruction17}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CreditorAgentRule"</li>
 	 * <li>
@@ -280,6 +276,10 @@ public class ConstraintCreditorAgentRule {
 	 * definition} =
 	 * "If PaymentMethod is CHK and if CreditTransferTransaction/ ChequeInstruction/DeliveryMethod is present and is equal to MLFA, CRFA, RGFA or PUFA, then CreditTransferTransaction/CreditorAgent is mandatory. \r\n\r\nIf PaymentMethod is CHK and if CreditTransferTransaction/ ChequeInstruction/DeliveryMethod is not present or is not equal to MLFA, CRFA, RGFA or PUFA, then CreditTransferTransaction/CreditorAgent is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -318,10 +318,6 @@ public class ConstraintCreditorAgentRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction8
 	 * PaymentInstruction8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CreditorAgentRule"</li>
 	 * <li>
@@ -329,6 +325,10 @@ public class ConstraintCreditorAgentRule {
 	 * definition} =
 	 * "If PaymentMethod is CHK and if CreditTransferTransaction/ ChequeInstruction/DeliveryMethod is present and is equal to MLFA, CRFA, RGFA or PUFA, then CreditTransferTransaction/CreditorAgent is mandatory. \r\n\r\nIf PaymentMethod is CHK and if CreditTransferTransaction/ ChequeInstruction/DeliveryMethod is not present or is not equal to MLFA, CRFA, RGFA or PUFA, then CreditTransferTransaction/CreditorAgent is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PaymentInstruction8> forPaymentInstruction8 = new MMConstraint<PaymentInstruction8>() {
@@ -352,10 +352,6 @@ public class ConstraintCreditorAgentRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction11
 	 * PaymentInstruction11}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CreditorAgentRule"</li>
 	 * <li>
@@ -363,6 +359,10 @@ public class ConstraintCreditorAgentRule {
 	 * definition} =
 	 * "If PaymentMethod is CHK and if CreditTransferTransaction/ ChequeInstruction/DeliveryMethod is present and is equal to MLFA, CRFA, RGFA or PUFA, then CreditTransferTransaction/CreditorAgent is mandatory. \r\n\r\nIf PaymentMethod is CHK and if CreditTransferTransaction/ ChequeInstruction/DeliveryMethod is not present or is not equal to MLFA, CRFA, RGFA or PUFA, then CreditTransferTransaction/CreditorAgent is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>

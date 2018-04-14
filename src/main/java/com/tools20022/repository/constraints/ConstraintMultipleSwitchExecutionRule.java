@@ -41,10 +41,6 @@ public class ConstraintMultipleSwitchExecutionRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationV03
 	 * SwitchOrderConfirmationV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MultipleSwitchExecutionRule"</li>
 	 * <li>
@@ -52,6 +48,10 @@ public class ConstraintMultipleSwitchExecutionRule {
 	 * definition} =
 	 * "If SwitchExecutionDetails is present more than once, then SwitchExecutionDetails/RedemptionLegDetails and SwitchExecutionDetails/SubscriptionLegDetails may only be present once."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -85,10 +85,6 @@ public class ConstraintMultipleSwitchExecutionRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationV04
 	 * SwitchOrderConfirmationV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MultipleSwitchExecutionRule"</li>
 	 * <li>
@@ -96,6 +92,10 @@ public class ConstraintMultipleSwitchExecutionRule {
 	 * definition} =
 	 * "If SwitchExecutionDetails is present more than once, then SwitchExecutionDetails/RedemptionLegDetails and SwitchExecutionDetails/SubscriptionLegDetails must only be present once."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -126,10 +126,6 @@ public class ConstraintMultipleSwitchExecutionRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationAmendmentV01
 	 * SwitchOrderConfirmationAmendmentV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MultipleSwitchExecutionRule"</li>
 	 * <li>
@@ -137,6 +133,10 @@ public class ConstraintMultipleSwitchExecutionRule {
 	 * definition} =
 	 * "If SwitchExecutionDetails is present more than once, then SwitchExecutionDetails/RedemptionLegDetails and SwitchExecutionDetails/SubscriptionLegDetails may only be present once."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SwitchOrderConfirmationAmendmentV01> for_setr_SwitchOrderConfirmationAmendmentV01 = new MMConstraint<SwitchOrderConfirmationAmendmentV01>() {
@@ -160,10 +160,6 @@ public class ConstraintMultipleSwitchExecutionRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SwitchOrderConfirmation1
 	 * SwitchOrderConfirmation1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MultipleSwitchExecutionRule"</li>
 	 * <li>
@@ -171,6 +167,10 @@ public class ConstraintMultipleSwitchExecutionRule {
 	 * definition} =
 	 * "If SwitchExecutionDetails is present more than once, then SwitchExecutionDetails/RedemptionLegDetails and SwitchExecutionDetails/SubscriptionLegDetails may only be present once."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SwitchOrderConfirmation1> forSwitchOrderConfirmation1 = new MMConstraint<SwitchOrderConfirmation1>() {

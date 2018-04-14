@@ -218,16 +218,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "InvestmentFundClassProcessingCharacteristics"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Processing characteristics linked to the instrument, ie, not to  the market."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class InvestmentFundClassProcessingCharacteristics {
@@ -260,10 +260,6 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics
 	 * InvestmentFundClassProcessingCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReinvestmentFrequency"</li>
 	 * <li>
@@ -271,6 +267,10 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * definition} =
 	 * "Frequency with which the reinvestment takes place,  This is the same or less than the dividend frequency,"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, EventFrequencyCode> mmReinvestmentFrequency = new MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, EventFrequencyCode>() {
@@ -323,16 +323,16 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics
 	 * InvestmentFundClassProcessingCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FrontEndLoadIndicator"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Front end charge on subscription orders for this class can be applied."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, YesNoIndicator> mmFrontEndLoadIndicator = new MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, YesNoIndicator>() {
@@ -385,10 +385,6 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics
 	 * InvestmentFundClassProcessingCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BackEndLoadIndicator"</li>
 	 * <li>
@@ -396,6 +392,10 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * definition} =
 	 * "Exit charge (eg. CDSC) on redemption orders for this class can be applied."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, YesNoIndicator> mmBackEndLoadIndicator = new MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, YesNoIndicator>() {
@@ -448,10 +448,6 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics
 	 * InvestmentFundClassProcessingCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SwitchingFeeIndicator"</li>
 	 * <li>
@@ -459,6 +455,10 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * definition} =
 	 * "If a separate fee for switching between sub-funds of the same umbrella can be applied."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, YesNoIndicator> mmSwitchingFeeIndicator = new MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, YesNoIndicator>() {
@@ -507,10 +507,6 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics
 	 * InvestmentFundClassProcessingCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LimitedSubscriptionPeriod"</li>
 	 * <li>
@@ -518,6 +514,10 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * definition} =
 	 * "Specific period, eg, for some guaranteed funds, during which the units/shares may be subscribed to."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, Max350Text> mmLimitedSubscriptionPeriod = new MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, Max350Text>() {
@@ -566,10 +566,6 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics
 	 * InvestmentFundClassProcessingCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LimitedRedemptionPeriod"</li>
 	 * <li>
@@ -577,6 +573,10 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * definition} =
 	 * "Specific period, eg, for some guaranteed funds, during which the units/shares may be redeemed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, Max350Text> mmLimitedRedemptionPeriod = new MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, Max350Text>() {
@@ -634,10 +634,6 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics
 	 * InvestmentFundClassProcessingCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Decimalisation"</li>
 	 * <li>
@@ -645,6 +641,10 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * definition} =
 	 * "Number of decimal places to which quantities of units/shares are rounded."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, Number> mmDecimalisation = new MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, Number>() {
@@ -695,10 +695,6 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics
 	 * InvestmentFundClassProcessingCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "HoldingTransferableIndicator"</li>
 	 * <li>
@@ -706,6 +702,10 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * definition} =
 	 * "Indicates whether registered investors are able to transfer some or all of their holdings to third parties."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, YesNoIndicator> mmHoldingTransferableIndicator = new MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, YesNoIndicator>() {
@@ -754,15 +754,15 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics
 	 * InvestmentFundClassProcessingCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ApplicationForm"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Physical application form is required."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, YesNoIndicator> mmApplicationForm = new MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, YesNoIndicator>() {
@@ -841,10 +841,6 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics
 	 * InvestmentFundClassProcessingCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SignatureRequired"</li>
 	 * <li>
@@ -852,6 +848,10 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * definition} =
 	 * "Specifies which type of signature is required when completing an initial subscription, when completing a subsequent subscription, and when completing redemption."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, SignatureTypeCode> mmSignatureRequired = new MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, SignatureTypeCode>() {
@@ -909,16 +909,16 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics
 	 * InvestmentFundClassProcessingCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AmountIndicator"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Indicates whether subscriptions/redemption in amount are allowed."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, YesNoIndicator> mmAmountIndicator = new MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, YesNoIndicator>() {
@@ -974,10 +974,6 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics
 	 * InvestmentFundClassProcessingCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnitsIndicator"</li>
 	 * <li>
@@ -985,6 +981,10 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * definition} =
 	 * "Indicates whether subsciptions/redemption may be placed as a number of units."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, YesNoIndicator> mmUnitsIndicator = new MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, YesNoIndicator>() {
@@ -1039,10 +1039,6 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics
 	 * InvestmentFundClassProcessingCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OrderCutOffDateTime"</li>
 	 * <li>
@@ -1050,6 +1046,10 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * definition} =
 	 * "Last date/time at which an order to subscribe or an order to redeem can be given."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, ISODateTime> mmOrderCutOffDateTime = new MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, ISODateTime>() {
@@ -1082,6 +1082,10 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.TimeFrame TimeFrame}
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.TimeFrame#mmSubscriptionSettlementRelatedFundProcessing
@@ -1089,10 +1093,6 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.TimeFrame TimeFrame}
-	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1112,10 +1112,6 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics
 	 * InvestmentFundClassProcessingCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SettlementCycle"</li>
 	 * <li>
@@ -1123,6 +1119,10 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * definition} =
 	 * "An agreed number of days after the Trade date (T) used to define standard timeframes e.g T+3 settlement period \r\nWhere T = the date the price is applied to a transaction."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<InvestmentFundClassProcessingCharacteristics, TimeFrame> mmSettlementCycle = new MMBusinessAssociationEnd<InvestmentFundClassProcessingCharacteristics, TimeFrame>() {
@@ -1157,6 +1157,10 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.InvestmentFundClass
+	 * InvestmentFundClass}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmProcessingCharacteristics
@@ -1165,18 +1169,10 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.InvestmentFundClass
-	 * InvestmentFundClass}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics
 	 * InvestmentFundClassProcessingCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FundClass"</li>
 	 * <li>
@@ -1184,6 +1180,10 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * definition} =
 	 * "Investment fund class for which processing characteristics are specified."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<InvestmentFundClassProcessingCharacteristics, Optional<InvestmentFundClass>> mmFundClass = new MMBusinessAssociationEnd<InvestmentFundClassProcessingCharacteristics, Optional<InvestmentFundClass>>() {
@@ -1234,10 +1234,6 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics
 	 * InvestmentFundClassProcessingCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "HoldingTransferable"</li>
 	 * <li>
@@ -1245,6 +1241,10 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * definition} =
 	 * "Indicates whether registered investors are able to transfer some or all of their holdings to third parties."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, HoldingTransferableCode> mmHoldingTransferable = new MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, HoldingTransferableCode>() {
@@ -1297,16 +1297,16 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics
 	 * InvestmentFundClassProcessingCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DealingFrequency"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Frequency at which the subscriptions and redemptions are done."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, FrequencyCode> mmDealingFrequency = new MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, FrequencyCode>() {
@@ -1358,10 +1358,6 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics
 	 * InvestmentFundClassProcessingCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LimitedPeriod"</li>
 	 * <li>
@@ -1369,6 +1365,10 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * definition} =
 	 * "Specific period, eg, for some guaranteed funds, during which the units/shares may be redeemed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, Max350Text> mmLimitedPeriod = new MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, Max350Text>() {
@@ -1401,6 +1401,9 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.Account Account}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.Account#mmRelatedFundProcessingCharacteristics
@@ -1408,9 +1411,6 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.Account Account}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1424,15 +1424,15 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics
 	 * InvestmentFundClassProcessingCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SettlementAccount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Account used for settlement of fund transactions."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<InvestmentFundClassProcessingCharacteristics, List<Account>> mmSettlementAccount = new MMBusinessAssociationEnd<InvestmentFundClassProcessingCharacteristics, List<Account>>() {
@@ -1466,6 +1466,9 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.Country Country}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.Country#mmCountryRelatedInvestmentFundProcessing
@@ -1474,22 +1477,19 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.Country Country}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics
 	 * InvestmentFundClassProcessingCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Country"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Country in which the processing characteristic applies."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<InvestmentFundClassProcessingCharacteristics, Country> mmCountry = new MMBusinessAssociationEnd<InvestmentFundClassProcessingCharacteristics, Country>() {
@@ -1523,6 +1523,10 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.ContactPoint
+	 * ContactPoint}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.ContactPoint#mmInvestmentFundClassProcessing
@@ -1531,18 +1535,10 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.ContactPoint
-	 * ContactPoint}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics
 	 * InvestmentFundClassProcessingCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LocalMarketAnnex"</li>
 	 * <li>
@@ -1550,6 +1546,10 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * definition} =
 	 * "Context, or geographic environment, in which trading parties may meet in order to negotiate and execute trades among themselves."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<InvestmentFundClassProcessingCharacteristics, List<ContactPoint>> mmLocalMarketAnnex = new MMBusinessAssociationEnd<InvestmentFundClassProcessingCharacteristics, List<ContactPoint>>() {
@@ -1590,16 +1590,16 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics
 	 * InvestmentFundClassProcessingCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EffectiveDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Date/time as from which the processing characteristics are valid."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, ISODateTime> mmEffectiveDate = new MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, ISODateTime>() {
@@ -1640,10 +1640,6 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics
 	 * InvestmentFundClassProcessingCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SubsequentSubscriptionApplicationForm"</li>
 	 * <li>
@@ -1651,6 +1647,10 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * definition} =
 	 * "Physical application form for subsequent investments by the same investor."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, YesNoIndicator> mmSubsequentSubscriptionApplicationForm = new MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, YesNoIndicator>() {
@@ -1691,10 +1691,6 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics
 	 * InvestmentFundClassProcessingCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RedemptionForm"</li>
 	 * <li>
@@ -1702,6 +1698,10 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * definition} =
 	 * "Physical written instruction/renunciation form for redemption of units/shares by the investor."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, YesNoIndicator> mmRedemptionForm = new MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, YesNoIndicator>() {
@@ -1752,16 +1752,16 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics
 	 * InvestmentFundClassProcessingCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DealingCurrency"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Currency in which a subscription or redemption is accepted."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, CurrencyCode> mmDealingCurrency = new MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, CurrencyCode>() {
@@ -1794,6 +1794,10 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.TimeFrame TimeFrame}
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.TimeFrame#mmRelatedProcessingCharacteristics
@@ -1802,24 +1806,20 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.TimeFrame TimeFrame}
-	 * </li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics
 	 * InvestmentFundClassProcessingCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DealingCutOffTimeFrame"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies the number of days for cut off before or after an activity."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<InvestmentFundClassProcessingCharacteristics, TimeFrame> mmDealingCutOffTimeFrame = new MMBusinessAssociationEnd<InvestmentFundClassProcessingCharacteristics, TimeFrame>() {
@@ -1873,10 +1873,6 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics
 	 * InvestmentFundClassProcessingCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MinimumHoldingAmount"</li>
 	 * <li>
@@ -1884,6 +1880,10 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * definition} =
 	 * "Minimum value of units that must be maintained to avoid automatic redemption."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, ActiveCurrencyAndAmount> mmMinimumHoldingAmount = new MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, ActiveCurrencyAndAmount>() {
@@ -1936,10 +1936,6 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics
 	 * InvestmentFundClassProcessingCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MaximumRedemptionUnits"</li>
 	 * <li>
@@ -1947,6 +1943,10 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * definition} =
 	 * "Maximum number of shares/units that may be redeemed on a single dealing day."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, DecimalNumber> mmMaximumRedemptionUnits = new MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, DecimalNumber>() {
@@ -1999,10 +1999,6 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics
 	 * InvestmentFundClassProcessingCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MinimumHoldingUnits"</li>
 	 * <li>
@@ -2010,6 +2006,10 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * definition} =
 	 * "Minimum number of units that must be maintained to avoid automatic redemption."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, DecimalNumber> mmMinimumHoldingUnits = new MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, DecimalNumber>() {
@@ -2051,10 +2051,6 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics
 	 * InvestmentFundClassProcessingCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MinimumRemainingHoldingAmount"</li>
 	 * <li>
@@ -2062,6 +2058,10 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * definition} =
 	 * "Minimum value of units/shares that must be retained to avoid automatic redemption."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, CurrencyAndAmount> mmMinimumRemainingHoldingAmount = new MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, CurrencyAndAmount>() {
@@ -2102,10 +2102,6 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics
 	 * InvestmentFundClassProcessingCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MaximumRedemptionPercentage"</li>
 	 * <li>
@@ -2113,6 +2109,10 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * definition} =
 	 * "Maximum quantity of securities, expressed as a percentage that can be sold."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, PercentageRate> mmMaximumRedemptionPercentage = new MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, PercentageRate>() {
@@ -2164,10 +2164,6 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics
 	 * InvestmentFundClassProcessingCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MaximumRedemptionAmount"</li>
 	 * <li>
@@ -2175,6 +2171,10 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * definition} =
 	 * "Maximum quantity of securities, expressed as an amount that can be sold."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, CurrencyAndAmount> mmMaximumRedemptionAmount = new MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, CurrencyAndAmount>() {
@@ -2227,16 +2227,16 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics
 	 * InvestmentFundClassProcessingCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MinimumInitialSubscriptionUnits"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Minimum initial number of units/shares that must be purchased."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, DecimalNumber> mmMinimumInitialSubscriptionUnits = new MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, DecimalNumber>() {
@@ -2289,10 +2289,6 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics
 	 * InvestmentFundClassProcessingCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MinimumSubscriptionAmount"</li>
 	 * <li>
@@ -2300,6 +2296,10 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * definition} =
 	 * "Minimum quantity of securities, expressed as an amount that must be purchased."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, CurrencyAndAmount> mmMinimumSubscriptionAmount = new MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, CurrencyAndAmount>() {
@@ -2358,10 +2358,6 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics
 	 * InvestmentFundClassProcessingCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MinimumInitialSubscriptionAmount"</li>
 	 * <li>
@@ -2369,6 +2365,10 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * definition} =
 	 * "Minimum initial quantity of securities, expressed as an amount that must be purchased at subscription."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, CurrencyAndAmount> mmMinimumInitialSubscriptionAmount = new MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, CurrencyAndAmount>() {
@@ -2422,10 +2422,6 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics
 	 * InvestmentFundClassProcessingCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MinimumSubscriptionUnits"</li>
 	 * <li>
@@ -2433,6 +2429,10 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * definition} =
 	 * "Minimum number of units/shares that must be purchase by existing investors."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, DecimalNumber> mmMinimumSubscriptionUnits = new MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, DecimalNumber>() {
@@ -2484,10 +2484,6 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics
 	 * InvestmentFundClassProcessingCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MinimumHoldingPeriod"</li>
 	 * <li>
@@ -2495,6 +2491,10 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * definition} =
 	 * "Description of a period, that may be a number of days, weeks or descriptive period during which the units/shares must be held following their issue before redemption will be permitted."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, Max70Text> mmMinimumHoldingPeriod = new MMBusinessAttribute<InvestmentFundClassProcessingCharacteristics, Max70Text>() {

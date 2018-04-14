@@ -36,10 +36,6 @@ public class ConstraintStatisticsCurrency2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.StatisticsByUserDefinedTimePeriod1
 	 * StatisticsByUserDefinedTimePeriod1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "StatisticsCurrency2Rule"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintStatisticsCurrency2Rule {
 	 * definition} =
 	 * "If present, Currency in HighestPriceValue, LowestPriceValue and PriceChange must be the same."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<StatisticsByUserDefinedTimePeriod1> forStatisticsByUserDefinedTimePeriod1 = new MMConstraint<StatisticsByUserDefinedTimePeriod1>() {

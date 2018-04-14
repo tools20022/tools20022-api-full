@@ -40,10 +40,6 @@ public class ConstraintMiniOddLotOfferUsageRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV04
 	 * CorporateActionNotificationV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MiniOddLotOfferUsageRule"</li>
 	 * <li>
@@ -51,6 +47,10 @@ public class ConstraintMiniOddLotOfferUsageRule {
 	 * definition} =
 	 * "If CorporateActionDetails/OfferType/Code is present with the value MINI (MiniOddLotOffer) or if in any occurrence of CorporateActionOptionDetails/OfferType/Code is present with the value MINI (MiniOddLotOffer), then CorporateActionGeneralInformation/EventType/Code value must be ODLT (OddLotSalePurchase)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionNotificationV04> for_seev_CorporateActionNotificationV04 = new MMConstraint<CorporateActionNotificationV04>() {
@@ -74,10 +74,6 @@ public class ConstraintMiniOddLotOfferUsageRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV04
 	 * CorporateActionMovementPreliminaryAdviceV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MiniOddLotOfferUsageRule"</li>
 	 * <li>
@@ -85,6 +81,10 @@ public class ConstraintMiniOddLotOfferUsageRule {
 	 * definition} =
 	 * "If any occurrence of CorporateActionMovementDetails/OfferType/Code is present with the value MINI (MiniOddLotOffer), then CorporateActionGeneralInformation/EventType/Code value must be ODLT (OddLotSalePurchase)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionMovementPreliminaryAdviceV04> for_seev_CorporateActionMovementPreliminaryAdviceV04 = new MMConstraint<CorporateActionMovementPreliminaryAdviceV04>() {

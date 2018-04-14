@@ -90,14 +90,14 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "SecuritiesTransaction1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Provides the details of the reported transaction."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -129,15 +129,15 @@ public class SecuritiesTransaction1 {
 	 * SecuritiesTransaction1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TradDt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradeDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the date/time on which the trade was executed."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SecuritiesTransaction1, ISODateTime> mmTradeDate = new MMMessageAttribute<SecuritiesTransaction1, ISODateTime>() {
@@ -188,10 +188,6 @@ public class SecuritiesTransaction1 {
 	 * SecuritiesTransaction1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TradgCpcty"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradingCapacity"</li>
 	 * <li>
@@ -199,6 +195,10 @@ public class SecuritiesTransaction1 {
 	 * definition} =
 	 * "Indication of whether the transaction results from the reporting firm carrying out matched principal trading or dealing on own account under the local regulation, or where the transaction does not result from the reporting firm carrying out matched principal trading or dealing on own account, the field shall indicate that the transaction was carried out under any other capacity."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SecuritiesTransaction1, RegulatoryTradingCapacity1Code> mmTradingCapacity = new MMMessageAttribute<SecuritiesTransaction1, RegulatoryTradingCapacity1Code>() {
@@ -248,10 +248,6 @@ public class SecuritiesTransaction1 {
 	 * SecuritiesTransaction1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Qty"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Quantity"</li>
 	 * <li>
@@ -259,6 +255,10 @@ public class SecuritiesTransaction1 {
 	 * definition} =
 	 * "Number of units of the financial instrument, or the number of derivative contracts in the transaction."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<SecuritiesTransaction1, FinancialInstrumentQuantity25Choice> mmQuantity = new MMMessageAssociationEnd<SecuritiesTransaction1, FinancialInstrumentQuantity25Choice>() {
@@ -310,10 +310,6 @@ public class SecuritiesTransaction1 {
 	 * SecuritiesTransaction1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DerivNtnlChng"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DerivativeNotionalChange"</li>
 	 * <li>
@@ -321,6 +317,10 @@ public class SecuritiesTransaction1 {
 	 * definition} =
 	 * "Indicates as to whether an increase or a decrease of notional of derivative contracts has taken place."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SecuritiesTransaction1, Optional<VariationType1Code>> mmDerivativeNotionalChange = new MMMessageAttribute<SecuritiesTransaction1, Optional<VariationType1Code>>() {
@@ -370,10 +370,6 @@ public class SecuritiesTransaction1 {
 	 * SecuritiesTransaction1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Pric"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Price"</li>
 	 * <li>
@@ -381,6 +377,10 @@ public class SecuritiesTransaction1 {
 	 * definition} =
 	 * "Traded price of the transaction excluding, where applicable, commission and accrued interest.\r\nIn the case of option contracts, it is the premium of the derivative contract per underlying security or index point.\r\nIn the case of spread bets it should be the reference price of the direct underlying instrument.\r\nWhere price is currently not available but pending, the value should be ’PNDG’.\r\nFor CDS it should be the coupon in basis points. \r\nWhere price reported in monetary terms, it shall be provided in the major currency unit.\r\nWhere price is not applicable the field should be left blank.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<SecuritiesTransaction1, SecuritiesTransactionPrice4Choice> mmPrice = new MMMessageAssociationEnd<SecuritiesTransaction1, SecuritiesTransactionPrice4Choice>() {
@@ -432,10 +432,6 @@ public class SecuritiesTransaction1 {
 	 * SecuritiesTransaction1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NetAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NetAmount"</li>
 	 * <li>
@@ -443,6 +439,10 @@ public class SecuritiesTransaction1 {
 	 * definition} =
 	 * "Net amount of the transaction means the cash amount which is paid by the buyer of the debt instrument upon the settlement of the transaction."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SecuritiesTransaction1, Optional<ImpliedCurrencyAndAmount>> mmNetAmount = new MMMessageAttribute<SecuritiesTransaction1, Optional<ImpliedCurrencyAndAmount>>() {
@@ -493,10 +493,6 @@ public class SecuritiesTransaction1 {
 	 * SecuritiesTransaction1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TradVn"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradeVenue"</li>
 	 * <li>
@@ -504,6 +500,10 @@ public class SecuritiesTransaction1 {
 	 * definition} =
 	 * "Identification of the venue where the transaction was executed.\r\n\r\nUsage: \r\nUse the ISO 10383 segment MIC (4 characters) for financial instruments executed on a MiFID trading venue, System Internaliser (SI) or non-EU organised trading platform. Where the segment MIC does not exist, use the operating MIC. \r\n\r\nUse MIC code ‘XOFF’ for financial instruments admitted to trading or traded on a trading venue, where the transaction on that financial instrument is not executed on a MiFID trading venue, SI or non-EU organised trading platform, or where an investment firm does not know it is trading with another investment firm acting as an SI.\r\n\r\nUse MIC code ‘XXXX’ for financial instruments that are not admitted to trading or traded on a trading venue or for which no request for admission has been made and that are not traded on an non-EU organised trading platform but where the underlying is admitted to trading or traded on a trading venue.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SecuritiesTransaction1, MICIdentifier> mmTradeVenue = new MMMessageAttribute<SecuritiesTransaction1, MICIdentifier>() {
@@ -553,10 +553,6 @@ public class SecuritiesTransaction1 {
 	 * SecuritiesTransaction1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CtryOfBrnch"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CountryOfBranch"</li>
 	 * <li>
@@ -564,6 +560,10 @@ public class SecuritiesTransaction1 {
 	 * definition} =
 	 * "Country of the branch of the investment firm whose market membership was used to execute the transaction.\r\n\r\nTBC with item 46."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SecuritiesTransaction1, Optional<CountryCode>> mmCountryOfBranch = new MMMessageAttribute<SecuritiesTransaction1, Optional<CountryCode>>() {
@@ -612,10 +612,6 @@ public class SecuritiesTransaction1 {
 	 * SecuritiesTransaction1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "UpFrntPmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UpFrontPayment"</li>
 	 * <li>
@@ -623,6 +619,10 @@ public class SecuritiesTransaction1 {
 	 * definition} =
 	 * "Monetary value of any up-front payment in basis points of notional received or paid by the seller.\r\nWhere the seller receives the up-front payment, the value populated is positive. Where the seller pays the up-front payment, the value populated is negative.\r\nFor increase or decrease in notional derivative contracts, the number shall reflect the absolute value of the change and shall be expressed as a positive number.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<SecuritiesTransaction1, Optional<AmountAndDirection53>> mmUpFrontPayment = new MMMessageAssociationEnd<SecuritiesTransaction1, Optional<AmountAndDirection53>>() {
@@ -673,10 +673,6 @@ public class SecuritiesTransaction1 {
 	 * SecuritiesTransaction1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TradPlcMtchgId"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradePlaceMatchingIdentification"</li>
 	 * <li>
@@ -684,6 +680,10 @@ public class SecuritiesTransaction1 {
 	 * definition} =
 	 * "Common matching identification when executed on a trade place.\r\n\r\nUsage: Must be present when a trade venue has been provided."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SecuritiesTransaction1, Optional<Max52Text>> mmTradePlaceMatchingIdentification = new MMMessageAttribute<SecuritiesTransaction1, Optional<Max52Text>>() {
@@ -733,10 +733,6 @@ public class SecuritiesTransaction1 {
 	 * SecuritiesTransaction1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CmplxTradCmpntId"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ComplexTradeComponentIdentification"</li>
 	 * <li>
@@ -744,6 +740,10 @@ public class SecuritiesTransaction1 {
 	 * definition} =
 	 * "Identification, internal to the reporting party to identify all the reports related to the same execution of a combination of financial instruments. The code must be unique for the reporting party for the group of reports for the execution.\r\n\r\nUsage:\r\nField only applies when the instrument is complex.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SecuritiesTransaction1, Optional<Max35Text>> mmComplexTradeComponentIdentification = new MMMessageAttribute<SecuritiesTransaction1, Optional<Max35Text>>() {

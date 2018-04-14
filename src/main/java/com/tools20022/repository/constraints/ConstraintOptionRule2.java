@@ -39,10 +39,6 @@ public class ConstraintOptionRule2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementInstructionV01
 	 * AgentCAMovementInstructionV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptionRule2"</li>
 	 * <li>
@@ -50,6 +46,10 @@ public class ConstraintOptionRule2 {
 	 * definition} =
 	 * "IF MovementGeneralInformation/OrderType is not CHAN (OptionChangeOrder), then OptionNumber and OptionType must be present in MovementGeneralInformation and cannot be present in any occurrence of UnderlyingSecuritiesMovementDetails/CreditAccountDetails neither in UnderlyingSecuritiesMovement/DebitAccountDetails."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AgentCAMovementInstructionV01> for_seev_AgentCAMovementInstructionV01 = new MMConstraint<AgentCAMovementInstructionV01>() {

@@ -35,10 +35,6 @@ public class ConstraintGroupCancellationAndNumberOfTransactionsGuideline {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.GroupHeader7 GroupHeader7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GroupCancellationAndNumberOfTransactionsGuideline"</li>
 	 * <li>
@@ -46,6 +42,10 @@ public class ConstraintGroupCancellationAndNumberOfTransactionsGuideline {
 	 * definition} =
 	 * "If GroupCancellation is true, then NumberOfTransactions equals the number of transactions in the original message."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<GroupHeader7> forGroupHeader7 = new MMConstraint<GroupHeader7>() {

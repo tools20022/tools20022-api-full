@@ -107,14 +107,14 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "VoteParameters"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Information describing how the voting process is organised."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -146,15 +146,15 @@ public class VoteParameters {
 	 * {@linkplain com.tools20022.repository.msg.VoteParameters VoteParameters}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SctiesQtyReqrdToVote"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SecuritiesQuantityRequiredToVote"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Number of holdings required for a vote."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<VoteParameters, Optional<DecimalNumber>> mmSecuritiesQuantityRequiredToVote = new MMMessageAttribute<VoteParameters, Optional<DecimalNumber>>() {
@@ -204,15 +204,15 @@ public class VoteParameters {
 	 * {@linkplain com.tools20022.repository.msg.VoteParameters VoteParameters}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrtlVoteAllwd"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PartialVoteAllowed"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies whether partial vote is allowed or not."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<VoteParameters, Optional<YesNoIndicator>> mmPartialVoteAllowed = new MMMessageAttribute<VoteParameters, Optional<YesNoIndicator>>() {
@@ -262,15 +262,15 @@ public class VoteParameters {
 	 * {@linkplain com.tools20022.repository.msg.VoteParameters VoteParameters}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SpltVoteAllwd"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SplitVoteAllowed"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies whether split vote is allowed or not."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<VoteParameters, Optional<YesNoIndicator>> mmSplitVoteAllowed = new MMMessageAttribute<VoteParameters, Optional<YesNoIndicator>>() {
@@ -319,10 +319,6 @@ public class VoteParameters {
 	 * {@linkplain com.tools20022.repository.msg.VoteParameters VoteParameters}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "VoteDdln"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "VoteDeadline"</li>
 	 * <li>
@@ -330,6 +326,10 @@ public class VoteParameters {
 	 * definition} =
 	 * "Date and time by which the vote instructions should be submitted to the intermediary."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<VoteParameters, Optional<ISODateTime>> mmVoteDeadline = new MMMessageAttribute<VoteParameters, Optional<ISODateTime>>() {
@@ -378,10 +378,6 @@ public class VoteParameters {
 	 * {@linkplain com.tools20022.repository.msg.VoteParameters VoteParameters}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "VoteElctrncDdln"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "VoteElectronicDeadline"</li>
 	 * <li>
@@ -389,6 +385,10 @@ public class VoteParameters {
 	 * definition} =
 	 * "Date and time by which the vote instructions should be submitted to the intermediary (STP mode)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<VoteParameters, Optional<ISODateTime>> mmVoteElectronicDeadline = new MMMessageAttribute<VoteParameters, Optional<ISODateTime>>() {
@@ -437,10 +437,6 @@ public class VoteParameters {
 	 * {@linkplain com.tools20022.repository.msg.VoteParameters VoteParameters}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "VoteMktDdln"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "VoteMarketDeadline"</li>
 	 * <li>
@@ -448,6 +444,10 @@ public class VoteParameters {
 	 * definition} =
 	 * "Date and time by which the vote instructions should be submitted to the issuer."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<VoteParameters, Optional<ISODateTime>> mmVoteMarketDeadline = new MMMessageAttribute<VoteParameters, Optional<ISODateTime>>() {
@@ -495,16 +495,16 @@ public class VoteParameters {
 	 * {@linkplain com.tools20022.repository.msg.VoteParameters VoteParameters}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "VoteMthds"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "VoteMethods"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates the different methods that can be used to vote."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<VoteParameters, Optional<VoteMethods>> mmVoteMethods = new MMMessageAssociationEnd<VoteParameters, Optional<VoteMethods>>() {
@@ -553,10 +553,6 @@ public class VoteParameters {
 	 * {@linkplain com.tools20022.repository.msg.VoteParameters VoteParameters}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "VtngBlltElctrncAdr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "VotingBallotElectronicAddress"</li>
 	 * <li>
@@ -564,6 +560,10 @@ public class VoteParameters {
 	 * definition} =
 	 * "Electronic location, e-mail or URL address, where the voting ballot can be requested."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<VoteParameters, Optional<CommunicationAddress4>> mmVotingBallotElectronicAddress = new MMMessageAssociationEnd<VoteParameters, Optional<CommunicationAddress4>>() {
@@ -612,16 +612,16 @@ public class VoteParameters {
 	 * {@linkplain com.tools20022.repository.msg.VoteParameters VoteParameters}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "VtngBlltReqAdr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "VotingBallotRequestAddress"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies the postal address where the voting ballot can be requested."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<VoteParameters, Optional<PostalAddress1>> mmVotingBallotRequestAddress = new MMMessageAssociationEnd<VoteParameters, Optional<PostalAddress1>>() {
@@ -672,10 +672,6 @@ public class VoteParameters {
 	 * {@linkplain com.tools20022.repository.msg.VoteParameters VoteParameters}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "BnfclOwnrDsclsr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BeneficialOwnerDisclosure"</li>
 	 * <li>
@@ -683,6 +679,10 @@ public class VoteParameters {
 	 * definition} =
 	 * "Indicates whether beneficiary details (eg name and address) must be supplied in order to take part to a meeting."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<VoteParameters, Optional<YesNoIndicator>> mmBeneficialOwnerDisclosure = new MMMessageAttribute<VoteParameters, Optional<YesNoIndicator>>() {
@@ -726,10 +726,6 @@ public class VoteParameters {
 	 * {@linkplain com.tools20022.repository.msg.VoteParameters VoteParameters}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AddtlVtngRqrmnts"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalVotingRequirements"</li>
 	 * <li>
@@ -737,6 +733,10 @@ public class VoteParameters {
 	 * definition} =
 	 * "Additional information on specific requirements for allowing a person to vote."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<VoteParameters, Optional<Max350Text>> mmAdditionalVotingRequirements = new MMMessageAttribute<VoteParameters, Optional<Max350Text>>() {
@@ -783,15 +783,15 @@ public class VoteParameters {
 	 * {@linkplain com.tools20022.repository.msg.VoteParameters VoteParameters}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "IncntivPrm"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IncentivePremium"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Cash premium paid to the security holder when voting."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<VoteParameters, Optional<IncentivePremium1>> mmIncentivePremium = new MMMessageAssociationEnd<VoteParameters, Optional<IncentivePremium1>>() {
@@ -842,10 +842,6 @@ public class VoteParameters {
 	 * {@linkplain com.tools20022.repository.msg.VoteParameters VoteParameters}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "VoteInstrTp"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "VoteInstructionType"</li>
 	 * <li>
@@ -853,6 +849,10 @@ public class VoteParameters {
 	 * definition} =
 	 * "Identifies the possible types of voting instructions. When used at the resolution level, it supersedes the value specified in the meeting notice."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<VoteParameters, List<VoteInstruction2Code>> mmVoteInstructionType = new MMMessageAttribute<VoteParameters, List<VoteInstruction2Code>>() {
@@ -901,10 +901,6 @@ public class VoteParameters {
 	 * {@linkplain com.tools20022.repository.msg.VoteParameters VoteParameters}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "VoteWthPrmDdln"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "VoteWithPremiumDeadline"</li>
 	 * <li>
@@ -912,6 +908,10 @@ public class VoteParameters {
 	 * definition} =
 	 * "Date and time by which the vote instructions should be submitted to the intermediary to take advantage of the premium."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<VoteParameters, Optional<ISODateTime>> mmVoteWithPremiumDeadline = new MMMessageAttribute<VoteParameters, Optional<ISODateTime>>() {
@@ -960,10 +960,6 @@ public class VoteParameters {
 	 * {@linkplain com.tools20022.repository.msg.VoteParameters VoteParameters}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "VoteWthPrmElctrncDdln"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "VoteWithPremiumElectronicDeadline"</li>
 	 * <li>
@@ -971,6 +967,10 @@ public class VoteParameters {
 	 * definition} =
 	 * "Date and time by which the vote instructions should be submitted to the intermediary to take advantage of the premium (STP mode)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<VoteParameters, Optional<ISODateTime>> mmVoteWithPremiumElectronicDeadline = new MMMessageAttribute<VoteParameters, Optional<ISODateTime>>() {
@@ -1019,10 +1019,6 @@ public class VoteParameters {
 	 * {@linkplain com.tools20022.repository.msg.VoteParameters VoteParameters}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "VoteWthPrmMktDdln"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "VoteWithPremiumMarketDeadline"</li>
 	 * <li>
@@ -1030,6 +1026,10 @@ public class VoteParameters {
 	 * definition} =
 	 * "Date and time by which the vote instructions should be submitted to the issuer to take advantage of the premium."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<VoteParameters, Optional<ISODateTime>> mmVoteWithPremiumMarketDeadline = new MMMessageAttribute<VoteParameters, Optional<ISODateTime>>() {

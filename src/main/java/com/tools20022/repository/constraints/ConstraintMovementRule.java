@@ -36,10 +36,6 @@ public class ConstraintMovementRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.GlobalDistributionRequest1
 	 * GlobalDistributionRequest1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MovementRule"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintMovementRule {
 	 * definition} =
 	 * "At least one occurrence of either CashMovement or SecuritiesMovement must be present. Both may be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<GlobalDistributionRequest1> forGlobalDistributionRequest1 = new MMConstraint<GlobalDistributionRequest1>() {

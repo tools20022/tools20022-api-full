@@ -37,10 +37,6 @@ public class ConstraintMidSideRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuoteEntry1 QuoteEntry1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MidSideRule"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintMidSideRule {
 	 * definition} =
 	 * "If MidSide is present then MinimumQuantity, MaximumQuantity, Quantity and MarketPrice must not be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuoteEntry1> forQuoteEntry1 = new MMConstraint<QuoteEntry1>() {
@@ -70,10 +70,6 @@ public class ConstraintMidSideRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuoteEntry2 QuoteEntry2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MidSideRule"</li>
 	 * <li>
@@ -81,6 +77,10 @@ public class ConstraintMidSideRule {
 	 * definition} =
 	 * "If MidSide is present then MinimumQuantity, MaximumQuantity, Quantity and MarketPrice must not be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuoteEntry2> forQuoteEntry2 = new MMConstraint<QuoteEntry2>() {
@@ -103,10 +103,6 @@ public class ConstraintMidSideRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.QuoteSide1 QuoteSide1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MidSideRule"</li>
 	 * <li>
@@ -114,6 +110,10 @@ public class ConstraintMidSideRule {
 	 * definition} =
 	 * "If MidSide is present then MinimumQuantity, MaximumQuantity, Quantity and MarketPrice must not be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<QuoteSide1> forQuoteSide1 = new MMConstraint<QuoteSide1>() {

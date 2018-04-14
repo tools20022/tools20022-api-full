@@ -36,10 +36,6 @@ public class ConstraintTaxElementRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.InformativeTax1
 	 * InformativeTax1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxElementRule"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintTaxElementRule {
 	 * definition} =
 	 * "One of the elements (TaxableIncomePerDividend, EUCapitalGain, EUDividendStatus, PercentageOfDebtClaim, IndividualTax) must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<InformativeTax1> forInformativeTax1 = new MMConstraint<InformativeTax1>() {

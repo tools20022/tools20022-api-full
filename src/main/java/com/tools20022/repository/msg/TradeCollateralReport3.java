@@ -72,14 +72,14 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "TradeCollateralReport3"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Details of collateral agreement between counterparties."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -107,10 +107,6 @@ public class TradeCollateralReport3 {
 	 * TradeCollateralReport3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Collstn"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Collateralisation"</li>
 	 * <li>
@@ -118,6 +114,10 @@ public class TradeCollateralReport3 {
 	 * definition} =
 	 * "Information indicating the type of collateral agreement existing between counterparties."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<TradeCollateralReport3, Optional<CollateralisationType1Code>> mmCollateralisation = new MMMessageAttribute<TradeCollateralReport3, Optional<CollateralisationType1Code>>() {
@@ -161,10 +161,6 @@ public class TradeCollateralReport3 {
 	 * TradeCollateralReport3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Prtfl"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Portfolio"</li>
 	 * <li>
@@ -172,6 +168,10 @@ public class TradeCollateralReport3 {
 	 * definition} =
 	 * "A unique code determined by the reporting counterparty to identify the portfolio if collateral is reported on a portfolio basis."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<TradeCollateralReport3, Optional<Max52Text>> mmPortfolio = new MMMessageAttribute<TradeCollateralReport3, Optional<Max52Text>>() {
@@ -216,10 +216,6 @@ public class TradeCollateralReport3 {
 	 * TradeCollateralReport3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "InitlMrgnPstd"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InitialMarginPosted"</li>
 	 * <li>
@@ -227,6 +223,10 @@ public class TradeCollateralReport3 {
 	 * definition} =
 	 * "Value of the initial margin posted by the reporting counterparty to the other counterparty. \r\n\r\nUsage: Where initial margin is posted on a portfolio basis, this field should include the overall value of initial margin posted for the portfolio."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<TradeCollateralReport3, Optional<ActiveOrHistoricCurrencyAnd20Amount>> mmInitialMarginPosted = new MMMessageAttribute<TradeCollateralReport3, Optional<ActiveOrHistoricCurrencyAnd20Amount>>() {
@@ -271,10 +271,6 @@ public class TradeCollateralReport3 {
 	 * TradeCollateralReport3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "VartnMrgnPstd"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "VariationMarginPosted"</li>
 	 * <li>
@@ -282,6 +278,10 @@ public class TradeCollateralReport3 {
 	 * definition} =
 	 * "Value of the variation margin posted, including cash settled, by the reporting counterparty to the other counterparty. \r\n\r\nUsage: Where variation margin is posted on a portfolio basis, this field should include the overall value of variation margin posted for the portfolio."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<TradeCollateralReport3, Optional<ActiveOrHistoricCurrencyAnd20Amount>> mmVariationMarginPosted = new MMMessageAttribute<TradeCollateralReport3, Optional<ActiveOrHistoricCurrencyAnd20Amount>>() {
@@ -326,10 +326,6 @@ public class TradeCollateralReport3 {
 	 * TradeCollateralReport3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "InitlMrgnRcvd"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InitialMarginReceived"</li>
 	 * <li>
@@ -337,6 +333,10 @@ public class TradeCollateralReport3 {
 	 * definition} =
 	 * "Value of the initial margin received by the reporting counterparty from the other counterparty. \r\n\r\nUsage: Where initial margin is received on a portfolio basis, this field should include the overall value of initial margin received for the portfolio."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<TradeCollateralReport3, Optional<ActiveOrHistoricCurrencyAnd20Amount>> mmInitialMarginReceived = new MMMessageAttribute<TradeCollateralReport3, Optional<ActiveOrHistoricCurrencyAnd20Amount>>() {
@@ -381,10 +381,6 @@ public class TradeCollateralReport3 {
 	 * TradeCollateralReport3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "VartnMrgnRcvd"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "VariationMarginReceived"</li>
 	 * <li>
@@ -392,6 +388,10 @@ public class TradeCollateralReport3 {
 	 * definition} =
 	 * "Value of the variation margin received, including cash settled, by the reporting counterparty from the other counterparty. \r\n\r\nUsage: Where variation margin is received on a portfolio basis, this field should include the overall value of variation margin received for the portfolio."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<TradeCollateralReport3, Optional<ActiveOrHistoricCurrencyAnd20Amount>> mmVariationMarginReceived = new MMMessageAttribute<TradeCollateralReport3, Optional<ActiveOrHistoricCurrencyAnd20Amount>>() {
@@ -436,16 +436,16 @@ public class TradeCollateralReport3 {
 	 * TradeCollateralReport3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "XcssCollPstd"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ExcessCollateralPosted"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Value of collateral posted in excess of the required collateral."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<TradeCollateralReport3, Optional<ActiveOrHistoricCurrencyAnd20Amount>> mmExcessCollateralPosted = new MMMessageAttribute<TradeCollateralReport3, Optional<ActiveOrHistoricCurrencyAnd20Amount>>() {
@@ -490,16 +490,16 @@ public class TradeCollateralReport3 {
 	 * TradeCollateralReport3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "XcssCollRcvd"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ExcessCollateralReceived"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Value of collateral received in excess of the required collateral."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<TradeCollateralReport3, Optional<ActiveOrHistoricCurrencyAnd20Amount>> mmExcessCollateralReceived = new MMMessageAttribute<TradeCollateralReport3, Optional<ActiveOrHistoricCurrencyAnd20Amount>>() {

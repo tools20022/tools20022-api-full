@@ -462,16 +462,16 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "InstructionRejectionReason1Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Reason for rejection of a corporate action instruction or of an instruction cancellation."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -486,12 +486,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AcknowledgementNotAgreed"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AcknowledgementNotAgreed"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code AcknowledgementNotAgreed = new InstructionRejectionReason1Code() {
@@ -510,12 +510,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AcknowledgmentIndicatorMissing"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AcknowledgmentIndicatorMissing"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code AcknowledgmentIndicatorMissing = new InstructionRejectionReason1Code() {
@@ -534,12 +534,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BidPriceMissingOrInvalid"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BidPriceMissingOrInvalid"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code BidPriceMissingOrInvalid = new InstructionRejectionReason1Code() {
@@ -558,12 +558,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BidPriceOverflow"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BidPriceOverflow"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code BidPriceOverflow = new InstructionRejectionReason1Code() {
@@ -582,12 +582,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BidPriceUnderMinimumAllowed"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BidPriceUnderMinimumAllowed"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code BidPriceUnderMinimumAllowed = new InstructionRejectionReason1Code() {
@@ -606,12 +606,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BondCheckOnMasterTableNotAvailable"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BondCheckOnMasterTableNotAvailable"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code BondCheckOnMasterTableNotAvailable = new InstructionRejectionReason1Code() {
@@ -630,12 +630,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Condition1InvalidMustBeNo"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Condition1InvalidMustBeNo"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code Condition1InvalidMustBeNo = new InstructionRejectionReason1Code() {
@@ -654,12 +654,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Condition2InvalidMustBeNo"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Condition2InvalidMustBeNo"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code Condition2InvalidMustBeNo = new InstructionRejectionReason1Code() {
@@ -678,12 +678,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Condition1Required"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Condition1Required"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code Condition1Required = new InstructionRejectionReason1Code() {
@@ -702,12 +702,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Condition1InvalidMustBeYes"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Condition1InvalidMustBeYes"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code Condition1InvalidMustBeYes = new InstructionRejectionReason1Code() {
@@ -726,12 +726,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BidPriceZeroesRequired"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BidPriceZeroesRequired"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code BidPriceZeroesRequired = new InstructionRejectionReason1Code() {
@@ -750,12 +750,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BidPriceOverMaximumAllowed"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BidPriceOverMaximumAllowed"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code BidPriceOverMaximumAllowed = new InstructionRejectionReason1Code() {
@@ -774,12 +774,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Condition2InvalidMustBeYes"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Condition2InvalidMustBeYes"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code Condition2InvalidMustBeYes = new InstructionRejectionReason1Code() {
@@ -798,12 +798,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Condition2Required"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Condition2Required"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code Condition2Required = new InstructionRejectionReason1Code() {
@@ -822,12 +822,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Condition3InvalidMustBeNo"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Condition3InvalidMustBeNo"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code Condition3InvalidMustBeNo = new InstructionRejectionReason1Code() {
@@ -846,12 +846,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Condition3InvalidMustBeYes"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Condition3InvalidMustBeYes"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code Condition3InvalidMustBeYes = new InstructionRejectionReason1Code() {
@@ -870,12 +870,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Condition3Required"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Condition3Required"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code Condition3Required = new InstructionRejectionReason1Code() {
@@ -894,12 +894,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Condition4InvalidMustBeNo"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Condition4InvalidMustBeNo"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code Condition4InvalidMustBeNo = new InstructionRejectionReason1Code() {
@@ -918,12 +918,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Condition4InvalidMustBeYes"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Condition4InvalidMustBeYes"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code Condition4InvalidMustBeYes = new InstructionRejectionReason1Code() {
@@ -942,12 +942,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Condition4Required"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Condition4Required"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code Condition4Required = new InstructionRejectionReason1Code() {
@@ -966,12 +966,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Condition5InvalidMustBeYes"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Condition5InvalidMustBeYes"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code Condition5InvalidMustBeYes = new InstructionRejectionReason1Code() {
@@ -990,12 +990,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Condition5InvalidMustBeNo"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Condition5InvalidMustBeNo"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code Condition5InvalidMustBeNo = new InstructionRejectionReason1Code() {
@@ -1014,12 +1014,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Condition5Required"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Condition5Required"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code Condition5Required = new InstructionRejectionReason1Code() {
@@ -1038,12 +1038,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Condition6InvalidMustBeNo"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Condition6InvalidMustBeNo"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code Condition6InvalidMustBeNo = new InstructionRejectionReason1Code() {
@@ -1062,12 +1062,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Condition6InvalidMustBeYes"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Condition6InvalidMustBeYes"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code Condition6InvalidMustBeYes = new InstructionRejectionReason1Code() {
@@ -1086,12 +1086,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Condition6Required"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Condition6Required"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code Condition6Required = new InstructionRejectionReason1Code() {
@@ -1110,12 +1110,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ConditionalQuantityCannotBeZero"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ConditionalQuantityCannotBeZero"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code ConditionalQuantityCannotBeZero = new InstructionRejectionReason1Code() {
@@ -1134,12 +1134,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ConditionalQuantityDoesNotEqualTransactionQuantity"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ConditionalQuantityDoesNotEqualTransactionQuantity"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code ConditionalQuantityDoesNotEqualTransactionQuantity = new InstructionRejectionReason1Code() {
@@ -1158,12 +1158,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ConditionalQuantityExceedsTransactionQuantity"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ConditionalQuantityExceedsTransactionQuantity"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code ConditionalQuantityExceedsTransactionQuantity = new InstructionRejectionReason1Code() {
@@ -1182,12 +1182,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ConditionalQuantityMissingOrInvalid"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ConditionalQuantityMissingOrInvalid"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code ConditionalQuantityMissingOrInvalid = new InstructionRejectionReason1Code() {
@@ -1206,12 +1206,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ConditionalQuantityZeroesRequired"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ConditionalQuantityZeroesRequired"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code ConditionalQuantityZeroesRequired = new InstructionRejectionReason1Code() {
@@ -1230,12 +1230,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ContactNameMissing"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ContactNameMissing"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code ContactNameMissing = new InstructionRejectionReason1Code() {
@@ -1254,12 +1254,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ContactNameNotUsedWithEvent"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ContactNameNotUsedWithEvent"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code ContactNameNotUsedWithEvent = new InstructionRejectionReason1Code() {
@@ -1278,12 +1278,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ContactPhoneNumberMissing"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ContactPhoneNumberMissing"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code ContactPhoneNumberMissing = new InstructionRejectionReason1Code() {
@@ -1302,12 +1302,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ContactPhoneNumberNotUsedWithEvent"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ContactPhoneNumberNotUsedWithEvent"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code ContactPhoneNumberNotUsedWithEvent = new InstructionRejectionReason1Code() {
@@ -1326,12 +1326,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CoverQuantityGreaterThanProtectQuantity"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CoverQuantityGreaterThanProtectQuantity"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code CoverQuantityGreaterThanProtectQuantity = new InstructionRejectionReason1Code() {
@@ -1350,12 +1350,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CUSIPDepositoryDeliverChilled"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CUSIPDepositoryDeliverChilled"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code CUSIPDepositoryDeliverChilled = new InstructionRejectionReason1Code() {
@@ -1374,12 +1374,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CUSIPNotDTCEligible"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CUSIPNotDTCEligible"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code CUSIPNotDTCEligible = new InstructionRejectionReason1Code() {
@@ -1398,12 +1398,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CustomerIdentificationMissingOrInvalid"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CustomerIdentificationMissingOrInvalid"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code CustomerIdentificationMissingOrInvalid = new InstructionRejectionReason1Code() {
@@ -1422,12 +1422,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CustomerQuantitiesAndTotalRightsQuantitiesMismatch"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CustomerQuantitiesAndTotalRightsQuantitiesMismatch"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code CustomerQuantitiesAndTotalRightsQuantitiesMismatch = new InstructionRejectionReason1Code() {
@@ -1446,12 +1446,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CommentAreaInvalid"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CommentAreaInvalid"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code CommentAreaInvalid = new InstructionRejectionReason1Code() {
@@ -1470,12 +1470,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CorporateActionEventInvalid"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CorporateActionEventInvalid"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code CorporateActionEventInvalid = new InstructionRejectionReason1Code() {
@@ -1494,12 +1494,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CustomerSequenceNumberInvalid"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CustomerSequenceNumberInvalid"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code CustomerSequenceNumberInvalid = new InstructionRejectionReason1Code() {
@@ -1518,12 +1518,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OfferNotATOPEligible"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "OfferNotATOPEligible"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code OfferNotATOPEligible = new InstructionRejectionReason1Code() {
@@ -1542,12 +1542,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AdjudicationOfIncompetencyAcknowledgementIndicatorInvalid"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AdjudicationOfIncompetencyAcknowledgementIndicatorInvalid"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code AdjudicationOfIncompetencyAcknowledgementIndicatorInvalid = new InstructionRejectionReason1Code() {
@@ -1566,12 +1566,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AdjudicationOfIncompetencyAcknowledgmentIndicatorMissing"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AdjudicationOfIncompetencyAcknowledgmentIndicatorMissing"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code AdjudicationOfIncompetencyAcknowledgmentIndicatorMissing = new InstructionRejectionReason1Code() {
@@ -1590,12 +1590,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BeneficialOwnerDeathDateMissing"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BeneficialOwnerDeathDateMissing"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code BeneficialOwnerDeathDateMissing = new InstructionRejectionReason1Code() {
@@ -1614,12 +1614,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BeneficialOwnerNameMissing"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "BeneficialOwnerNameMissing"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code BeneficialOwnerNameMissing = new InstructionRejectionReason1Code() {
@@ -1638,12 +1638,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CertificateNameMissing"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CertificateNameMissing"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code CertificateNameMissing = new InstructionRejectionReason1Code() {
@@ -1662,12 +1662,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CertificateNumberInvalid"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CertificateNumberInvalid"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code CertificateNumberInvalid = new InstructionRejectionReason1Code() {
@@ -1686,12 +1686,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CertificateSequenceNumberInvalid"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CertificateSequenceNumberInvalid"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code CertificateSequenceNumberInvalid = new InstructionRejectionReason1Code() {
@@ -1710,14 +1710,14 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} =
 	 * "CoreInstructionOversubscriptionQuantityAndExtensionTransactionDetailsDifference"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code CoreInstructionOversubscriptionQuantityAndExtensionTransactionDetailsDifference = new InstructionRejectionReason1Code() {
@@ -1736,13 +1736,13 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CoreInstructionQuantityAndExtensionTransactionDetailsDifference"
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CoreInstructionQuantityAndExtensionTransactionDetailsDifference"
-	 * </li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code CoreInstructionQuantityAndExtensionTransactionDetailsDifference = new InstructionRejectionReason1Code() {
@@ -1761,12 +1761,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CurrentDatePassedProtectSubmissionEndDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CurrentDatePassedProtectSubmissionEndDate"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code CurrentDatePassedProtectSubmissionEndDate = new InstructionRejectionReason1Code() {
@@ -1785,12 +1785,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CurrentDatePrecedesProtectSubmissionStartDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CurrentDatePrecedesProtectSubmissionStartDate"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code CurrentDatePrecedesProtectSubmissionStartDate = new InstructionRejectionReason1Code() {
@@ -1809,12 +1809,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CUSIPMissingOrInvalid"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CUSIPMissingOrInvalid"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code CUSIPMissingOrInvalid = new InstructionRejectionReason1Code() {
@@ -1833,12 +1833,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CustomerAndTotalOversubscriptionQuantitiesMismatch"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CustomerAndTotalOversubscriptionQuantitiesMismatch"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code CustomerAndTotalOversubscriptionQuantitiesMismatch = new InstructionRejectionReason1Code() {
@@ -1857,12 +1857,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CustomerSequenceNumberAllZero"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CustomerSequenceNumberAllZero"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code CustomerSequenceNumberAllZero = new InstructionRejectionReason1Code() {
@@ -1881,12 +1881,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CutoffTimeCheckFailed"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CutoffTimeCheckFailed"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code CutoffTimeCheckFailed = new InstructionRejectionReason1Code() {
@@ -1905,12 +1905,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CutoffTimePassed"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CutoffTimePassed"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code CutoffTimePassed = new InstructionRejectionReason1Code() {
@@ -1929,12 +1929,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DeathCertificateMissing"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DeathCertificateMissing"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code DeathCertificateMissing = new InstructionRejectionReason1Code() {
@@ -1953,12 +1953,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DuplicateTransactionSequenceNumber"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DuplicateTransactionSequenceNumber"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code DuplicateTransactionSequenceNumber = new InstructionRejectionReason1Code() {
@@ -1977,12 +1977,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "EntryDateInvalid"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "EntryDateInvalid"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code EntryDateInvalid = new InstructionRejectionReason1Code() {
@@ -2001,12 +2001,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "EntryDatePassed"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "EntryDatePassed"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code EntryDatePassed = new InstructionRejectionReason1Code() {
@@ -2025,12 +2025,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "FractionalUnderlyingQuantity"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "FractionalUnderlyingQuantity"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code FractionalUnderlyingQuantity = new InstructionRejectionReason1Code() {
@@ -2049,12 +2049,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "FunctionNotAvailable"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "FunctionNotAvailable"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code FunctionNotAvailable = new InstructionRejectionReason1Code() {
@@ -2073,12 +2073,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "FunctionQuiesced"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "FunctionQuiesced"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code FunctionQuiesced = new InstructionRejectionReason1Code() {
@@ -2097,12 +2097,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InstructionDeletionAcknowledgementIndicatorInvalid"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "InstructionDeletionAcknowledgementIndicatorInvalid"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code InstructionDeletionAcknowledgementIndicatorInvalid = new InstructionRejectionReason1Code() {
@@ -2121,12 +2121,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InstructionDeletionAcknowledgementIndicatorMissing"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "InstructionDeletionAcknowledgementIndicatorMissing"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code InstructionDeletionAcknowledgementIndicatorMissing = new InstructionRejectionReason1Code() {
@@ -2145,12 +2145,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InsufficientPosition"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "InsufficientPosition"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code InsufficientPosition = new InstructionRejectionReason1Code() {
@@ -2169,12 +2169,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RecordTypeInvalid"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "RecordTypeInvalid"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code RecordTypeInvalid = new InstructionRejectionReason1Code() {
@@ -2193,12 +2193,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RightsQuantityInvalid"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "RightsQuantityInvalid"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code RightsQuantityInvalid = new InstructionRejectionReason1Code() {
@@ -2217,12 +2217,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TransactionTypeInvalid"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "TransactionTypeInvalid"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code TransactionTypeInvalid = new InstructionRejectionReason1Code() {
@@ -2241,12 +2241,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "IssuingJurisdictionMissing"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "IssuingJurisdictionMissing"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code IssuingJurisdictionMissing = new InstructionRejectionReason1Code() {
@@ -2265,12 +2265,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "KayDataNotFound"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "KayDataNotFound"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code KayDataNotFound = new InstructionRejectionReason1Code() {
@@ -2289,12 +2289,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "KeyInformationMissing"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "KeyInformationMissing"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code KeyInformationMissing = new InstructionRejectionReason1Code() {
@@ -2313,13 +2313,13 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} =
+	 * "LegalDocumentationThirtyMonthsRetentionAcknowledgementIndicatorInvalid"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} =
-	 * "LegalDocumentationThirtyMonthsRetentionAcknowledgementIndicatorInvalid"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code LegalDocumentationThirtyMonthsRetentionAcknowledgementIndicatorInvalid = new InstructionRejectionReason1Code() {
@@ -2338,13 +2338,13 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} =
+	 * "LegalDocumentationThirtyMonthsRetentionAcknowledgementIndicatorMissing"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} =
-	 * "LegalDocumentationThirtyMonthsRetentionAcknowledgementIndicatorMissing"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code LegalDocumentationThirtyMonthsRetentionAcknowledgementIndicatorMissing = new InstructionRejectionReason1Code() {
@@ -2363,12 +2363,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "MasterTablesNotAvailable"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "MasterTablesNotAvailable"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code MasterTablesNotAvailable = new InstructionRejectionReason1Code() {
@@ -2387,12 +2387,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NoWithdrawalPrivilege"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "NoWithdrawalPrivilege"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code NoWithdrawalPrivilege = new InstructionRejectionReason1Code() {
@@ -2411,12 +2411,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OddLotIndicatorMissingOrInvalid"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "OddLotIndicatorMissingOrInvalid"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code OddLotIndicatorMissingOrInvalid = new InstructionRejectionReason1Code() {
@@ -2435,12 +2435,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OfferInDatabase"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "OfferInDatabase"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code OfferInDatabase = new InstructionRejectionReason1Code() {
@@ -2459,12 +2459,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OfferNotEligibleForPuts"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "OfferNotEligibleForPuts"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code OfferNotEligibleForPuts = new InstructionRejectionReason1Code() {
@@ -2483,12 +2483,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OversubscriptionNotAllowed"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "OversubscriptionNotAllowed"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code OversubscriptionNotAllowed = new InstructionRejectionReason1Code() {
@@ -2507,12 +2507,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OversubscriptionQuantityExceeded"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "OversubscriptionQuantityExceeded"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code OversubscriptionQuantityExceeded = new InstructionRejectionReason1Code() {
@@ -2531,12 +2531,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OversubscriptionQuantityInvalid"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "OversubscriptionQuantityInvalid"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code OversubscriptionQuantityInvalid = new InstructionRejectionReason1Code() {
@@ -2555,12 +2555,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OversubscriptionQuantityNotUsed"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "OversubscriptionQuantityNotUsed"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code OversubscriptionQuantityNotUsed = new InstructionRejectionReason1Code() {
@@ -2579,12 +2579,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ParticipantDOChilled"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ParticipantDOChilled"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code ParticipantDOChilled = new InstructionRejectionReason1Code() {
@@ -2603,12 +2603,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OddLotIndicatorYesInvalid"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "OddLotIndicatorYesInvalid"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code OddLotIndicatorYesInvalid = new InstructionRejectionReason1Code() {
@@ -2627,12 +2627,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "WithdrawError"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "WithdrawError"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code WithdrawError = new InstructionRejectionReason1Code() {
@@ -2651,12 +2651,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "WithdrawalTransactionQuantityCannotBeZero"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "WithdrawalTransactionQuantityCannotBeZero"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code WithdrawalTransactionQuantityCannotBeZero = new InstructionRejectionReason1Code() {
@@ -2675,12 +2675,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "WithdrawalQuantityGreaterThanProtectQuantity"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "WithdrawalQuantityGreaterThanProtectQuantity"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code WithdrawalQuantityGreaterThanProtectQuantity = new InstructionRejectionReason1Code() {
@@ -2699,12 +2699,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "WithdrawalQuantityExceedsRemainingQuantity"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "WithdrawalQuantityExceedsRemainingQuantity"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code WithdrawalQuantityExceedsRemainingQuantity = new InstructionRejectionReason1Code() {
@@ -2723,12 +2723,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "WarrantSubscriptionChargeAmountInvalid"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "WarrantSubscriptionChargeAmountInvalid"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code WarrantSubscriptionChargeAmountInvalid = new InstructionRejectionReason1Code() {
@@ -2747,12 +2747,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "UnknownErrorCondition"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "UnknownErrorCondition"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code UnknownErrorCondition = new InstructionRejectionReason1Code() {
@@ -2771,12 +2771,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "UnderlyingShareQuantityMismatch"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "UnderlyingShareQuantityMismatch"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code UnderlyingShareQuantityMismatch = new InstructionRejectionReason1Code() {
@@ -2795,12 +2795,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "UnderlyingShareQuantityInvalid"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "UnderlyingShareQuantityInvalid"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code UnderlyingShareQuantityInvalid = new InstructionRejectionReason1Code() {
@@ -2819,12 +2819,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "UnderlyingSecurityCUSIPMismatch"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "UnderlyingSecurityCUSIPMismatch"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code UnderlyingSecurityCUSIPMismatch = new InstructionRejectionReason1Code() {
@@ -2843,12 +2843,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "UnderlyingSecurityCUSIPInvalid"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "UnderlyingSecurityCUSIPInvalid"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code UnderlyingSecurityCUSIPInvalid = new InstructionRejectionReason1Code() {
@@ -2867,12 +2867,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TransactionTypeMissing"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "TransactionTypeMissing"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code TransactionTypeMissing = new InstructionRejectionReason1Code() {
@@ -2891,12 +2891,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TransactionTypeAndEventIncompatible"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "TransactionTypeAndEventIncompatible"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code TransactionTypeAndEventIncompatible = new InstructionRejectionReason1Code() {
@@ -2915,12 +2915,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TransactionSequenceNumberInvalid"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "TransactionSequenceNumberInvalid"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code TransactionSequenceNumberInvalid = new InstructionRejectionReason1Code() {
@@ -2939,12 +2939,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TransactionQuantityLessThanTransactionMinimum"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "TransactionQuantityLessThanTransactionMinimum"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code TransactionQuantityLessThanTransactionMinimum = new InstructionRejectionReason1Code() {
@@ -2963,12 +2963,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SubmissionDatePassed"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SubmissionDatePassed"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code SubmissionDatePassed = new InstructionRejectionReason1Code() {
@@ -2987,12 +2987,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SolicitationFeeCommentsRequired"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SolicitationFeeCommentsRequired"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code SolicitationFeeCommentsRequired = new InstructionRejectionReason1Code() {
@@ -3011,12 +3011,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SequenceNumberOutOfSync"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SequenceNumberOutOfSync"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code SequenceNumberOutOfSync = new InstructionRejectionReason1Code() {
@@ -3035,12 +3035,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SequenceNumberMissing"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SequenceNumberMissing"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code SequenceNumberMissing = new InstructionRejectionReason1Code() {
@@ -3059,12 +3059,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SequenceNumberInvalidBounds"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SequenceNumberInvalidBounds"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code SequenceNumberInvalidBounds = new InstructionRejectionReason1Code() {
@@ -3083,12 +3083,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RTSProcessingInProgress"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "RTSProcessingInProgress"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code RTSProcessingInProgress = new InstructionRejectionReason1Code() {
@@ -3107,12 +3107,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RightsRatioNotFound"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "RightsRatioNotFound"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code RightsRatioNotFound = new InstructionRejectionReason1Code() {
@@ -3131,12 +3131,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RightsQuantityDivisibleByRights"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "RightsQuantityDivisibleByRights"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code RightsQuantityDivisibleByRights = new InstructionRejectionReason1Code() {
@@ -3155,12 +3155,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RightsCUSIPInsufficientPosition"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "RightsCUSIPInsufficientPosition"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code RightsCUSIPInsufficientPosition = new InstructionRejectionReason1Code() {
@@ -3179,12 +3179,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TransactionQuantityMissingOrInvalid"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "TransactionQuantityMissingOrInvalid"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code TransactionQuantityMissingOrInvalid = new InstructionRejectionReason1Code() {
@@ -3203,12 +3203,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TransactionQuantityCannotBeZero"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "TransactionQuantityCannotBeZero"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code TransactionQuantityCannotBeZero = new InstructionRejectionReason1Code() {
@@ -3227,12 +3227,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TransactionIdentificationInvalid"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "TransactionIdentificationInvalid"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code TransactionIdentificationInvalid = new InstructionRejectionReason1Code() {
@@ -3251,12 +3251,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SubmissionDateNotReached"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SubmissionDateNotReached"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code SubmissionDateNotReached = new InstructionRejectionReason1Code() {
@@ -3275,12 +3275,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SolicitationFeeIndicatorNotUsed"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SolicitationFeeIndicatorNotUsed"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code SolicitationFeeIndicatorNotUsed = new InstructionRejectionReason1Code() {
@@ -3299,12 +3299,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SolicitationFeeIndicatorRequired"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SolicitationFeeIndicatorRequired"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code SolicitationFeeIndicatorRequired = new InstructionRejectionReason1Code() {
@@ -3323,12 +3323,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RightsPositionCheckInvalid"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "RightsPositionCheckInvalid"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code RightsPositionCheckInvalid = new InstructionRejectionReason1Code() {
@@ -3347,12 +3347,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ProvidedByProtect"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ProvidedByProtect"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code ProvidedByProtect = new InstructionRejectionReason1Code() {
@@ -3371,12 +3371,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ProtectIdentificationNotUsed"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ProtectIdentificationNotUsed"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code ProtectIdentificationNotUsed = new InstructionRejectionReason1Code() {
@@ -3395,12 +3395,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ProtectIdentificationMissingOrInvalid"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ProtectIdentificationMissingOrInvalid"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code ProtectIdentificationMissingOrInvalid = new InstructionRejectionReason1Code() {
@@ -3419,12 +3419,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ProtectDateZero"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ProtectDateZero"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code ProtectDateZero = new InstructionRejectionReason1Code() {
@@ -3443,12 +3443,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ProtectDatePassed"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ProtectDatePassed"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code ProtectDatePassed = new InstructionRejectionReason1Code() {
@@ -3467,12 +3467,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ProtectDateInvalidOrMissing"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ProtectDateInvalidOrMissing"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code ProtectDateInvalidOrMissing = new InstructionRejectionReason1Code() {
@@ -3491,12 +3491,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PotentiaLossAcknowledgementIndicatorMissing"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PotentiaLossAcknowledgementIndicatorMissing"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code PotentiaLossAcknowledgementIndicatorMissing = new InstructionRejectionReason1Code() {
@@ -3515,12 +3515,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PotentiaLossAcknowledgementIndicatorInvalid"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PotentiaLossAcknowledgementIndicatorInvalid"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code PotentiaLossAcknowledgementIndicatorInvalid = new InstructionRejectionReason1Code() {
@@ -3539,12 +3539,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ParticipantNumberInvalid"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ParticipantNumberInvalid"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code ParticipantNumberInvalid = new InstructionRejectionReason1Code() {
@@ -3563,12 +3563,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ParticipantNoMatchOnProtectIdentification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ParticipantNoMatchOnProtectIdentification"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code ParticipantNoMatchOnProtectIdentification = new InstructionRejectionReason1Code() {
@@ -3587,12 +3587,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ParticipantLocked"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ParticipantLocked"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code ParticipantLocked = new InstructionRejectionReason1Code() {
@@ -3611,12 +3611,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ParticipantNotEligible"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ParticipantNotEligible"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code ParticipantNotEligible = new InstructionRejectionReason1Code() {
@@ -3635,12 +3635,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ParticipantEligibilityCheckNotAvailable"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ParticipantEligibilityCheckNotAvailable"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code ParticipantEligibilityCheckNotAvailable = new InstructionRejectionReason1Code() {
@@ -3659,12 +3659,12 @@ public class InstructionRejectionReason1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionRejectionReason1Code
 	 * InstructionRejectionReason1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "WithdrawalTransactionTypeInvalid"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "WithdrawalTransactionTypeInvalid"</li>
 	 * </ul>
 	 */
 	public static final InstructionRejectionReason1Code WithdrawalTransactionTypeInvalid = new InstructionRejectionReason1Code() {

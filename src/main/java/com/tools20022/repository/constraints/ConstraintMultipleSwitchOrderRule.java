@@ -40,10 +40,6 @@ public class ConstraintMultipleSwitchOrderRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV04
 	 * SwitchOrderV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MultipleSwitchOrderRule"</li>
 	 * <li>
@@ -51,6 +47,10 @@ public class ConstraintMultipleSwitchOrderRule {
 	 * definition} =
 	 * "If SwitchOrderDetails is present more than once, then SwitchOrderDetails/RedemptionLegDetails and SwitchOrderDetails/SubscriptionLegDetails must only be present once."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -80,10 +80,6 @@ public class ConstraintMultipleSwitchOrderRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SwitchOrderInstruction2
 	 * SwitchOrderInstruction2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MultipleSwitchOrderRule"</li>
 	 * <li>
@@ -91,6 +87,10 @@ public class ConstraintMultipleSwitchOrderRule {
 	 * definition} =
 	 * "If SwitchOrderDetails is present more than once, then SwitchOrderDetails/RedemptionLegDetails and SwitchOrderDetails/SubscriptionLegDetails may only be present once."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SwitchOrderInstruction2> forSwitchOrderInstruction2 = new MMConstraint<SwitchOrderInstruction2>() {
@@ -114,10 +114,6 @@ public class ConstraintMultipleSwitchOrderRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV03
 	 * SwitchOrderV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MultipleSwitchOrderRule"</li>
 	 * <li>
@@ -125,6 +121,10 @@ public class ConstraintMultipleSwitchOrderRule {
 	 * definition} =
 	 * "If SwitchOrderDetails is present more than once, then SwitchOrderDetails/RedemptionLegDetails and SwitchOrderDetails/SubscriptionLegDetails may only be present once."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>

@@ -36,10 +36,6 @@ public class ConstraintMovementCancellationStatusDetailsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01
 	 * AgentCAMovementStatusAdviceV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MovementCancellationStatusDetailsRule"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintMovementCancellationStatusDetailsRule {
 	 * definition} =
 	 * "If AgentCAMovementCancellationRequestIdentification is present then MovementCancellationStatusDetails must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AgentCAMovementStatusAdviceV01> for_seev_AgentCAMovementStatusAdviceV01 = new MMConstraint<AgentCAMovementStatusAdviceV01>() {

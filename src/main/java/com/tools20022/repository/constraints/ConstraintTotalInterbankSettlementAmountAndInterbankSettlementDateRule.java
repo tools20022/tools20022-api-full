@@ -38,10 +38,6 @@ public class ConstraintTotalInterbankSettlementAmountAndInterbankSettlementDateR
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.GroupHeader3 GroupHeader3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TotalInterbankSettlementAmountAndInterbankSettlementDateRule"</li>
 	 * <li>
@@ -49,6 +45,10 @@ public class ConstraintTotalInterbankSettlementAmountAndInterbankSettlementDateR
 	 * definition} =
 	 * "If TotalInterbankSettlementAmount is present, then InterbankSettlementDate must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<GroupHeader3> forGroupHeader3 = new MMConstraint<GroupHeader3>() {
@@ -71,10 +71,6 @@ public class ConstraintTotalInterbankSettlementAmountAndInterbankSettlementDateR
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.GroupHeader4 GroupHeader4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TotalInterbankSettlementAmountAndInterbankSettlementDateRule"</li>
 	 * <li>
@@ -82,6 +78,10 @@ public class ConstraintTotalInterbankSettlementAmountAndInterbankSettlementDateR
 	 * definition} =
 	 * "If TotalInterbankSettlementAmount is present, then InterbankSettlementDate must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<GroupHeader4> forGroupHeader4 = new MMConstraint<GroupHeader4>() {
@@ -104,10 +104,6 @@ public class ConstraintTotalInterbankSettlementAmountAndInterbankSettlementDateR
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.GroupHeader2 GroupHeader2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TotalInterbankSettlementAmountAndInterbankSettlementDateRule"</li>
 	 * <li>
@@ -115,6 +111,10 @@ public class ConstraintTotalInterbankSettlementAmountAndInterbankSettlementDateR
 	 * definition} =
 	 * "If TotalInterbankSettlementAmount is present, then InterbankSettlementDate must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<GroupHeader2> forGroupHeader2 = new MMConstraint<GroupHeader2>() {
@@ -141,10 +141,6 @@ public class ConstraintTotalInterbankSettlementAmountAndInterbankSettlementDateR
 	 * expression} =
 	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/InterbankSettlementDate&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/TotalInterbankSettlementAmount&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TotalInterbankSettlementAmountAndInterbankSettlementDateRule"</li>
 	 * <li>
@@ -152,6 +148,10 @@ public class ConstraintTotalInterbankSettlementAmountAndInterbankSettlementDateR
 	 * definition} =
 	 * "ISO20022 Rule: (not injected)\nIf TotalInterbankSettlementAmount is present, then InterbankSettlementDate must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<GroupHeader15> forGroupHeader15 = new MMConstraint<GroupHeader15>() {

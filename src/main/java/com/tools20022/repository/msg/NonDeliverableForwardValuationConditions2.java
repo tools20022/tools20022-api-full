@@ -87,16 +87,16 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "NonDeliverableForwardValuationConditions2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Set of parameters used to calculate the fixing rate to be applied to a non-deliverable agreement."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -128,10 +128,6 @@ public class NonDeliverableForwardValuationConditions2 {
 	 * NonDeliverableForwardValuationConditions2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SttlmCcy"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SettlementCurrency"</li>
 	 * <li>
@@ -139,6 +135,10 @@ public class NonDeliverableForwardValuationConditions2 {
 	 * definition} =
 	 * "Specifies the currency in which the non deliverable trade has to be settled ie the deliverable currency."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<NonDeliverableForwardValuationConditions2, ActiveOrHistoricCurrencyCode> mmSettlementCurrency = new MMMessageAttribute<NonDeliverableForwardValuationConditions2, ActiveOrHistoricCurrencyCode>() {
@@ -188,10 +188,6 @@ public class NonDeliverableForwardValuationConditions2 {
 	 * NonDeliverableForwardValuationConditions2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ValtnDt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ValuationDate"</li>
 	 * <li>
@@ -199,6 +195,10 @@ public class NonDeliverableForwardValuationConditions2 {
 	 * definition} =
 	 * "Date at which the rate used for calculating the net amount to be settled is observed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<NonDeliverableForwardValuationConditions2, ISODate> mmValuationDate = new MMMessageAttribute<NonDeliverableForwardValuationConditions2, ISODate>() {
@@ -243,10 +243,6 @@ public class NonDeliverableForwardValuationConditions2 {
 	 * NonDeliverableForwardValuationConditions2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AddtlValtnInf"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalValuationInformation"</li>
 	 * <li>
@@ -254,6 +250,10 @@ public class NonDeliverableForwardValuationConditions2 {
 	 * definition} =
 	 * "Free format text that may contain valuation information such as the place, the time or the source of the rate."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<NonDeliverableForwardValuationConditions2, Optional<Max140Text>> mmAdditionalValuationInformation = new MMMessageAttribute<NonDeliverableForwardValuationConditions2, Optional<Max140Text>>() {
@@ -303,10 +303,6 @@ public class NonDeliverableForwardValuationConditions2 {
 	 * NonDeliverableForwardValuationConditions2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SttlmPty"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SettlementParty"</li>
 	 * <li>
@@ -314,6 +310,10 @@ public class NonDeliverableForwardValuationConditions2 {
 	 * definition} =
 	 * "Party through which the settlement will take place. It may contain the BIC of a central settlement system eg CLSBUS33."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<NonDeliverableForwardValuationConditions2, Optional<PartyIdentification8Choice>> mmSettlementParty = new MMMessageAttribute<NonDeliverableForwardValuationConditions2, Optional<PartyIdentification8Choice>>() {

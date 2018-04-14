@@ -70,6 +70,10 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "DTCEntitlementCalculationMethodCode"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} = "Specifies the type of the calculation of entitlements."</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -80,10 +84,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "DTCEntitlementCalculationMethodCode"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Specifies the type of the calculation of entitlements."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -104,10 +104,6 @@ public class DTCEntitlementCalculationMethodCode extends MMCode {
 	 * DTCEntitlementCalculationMethodCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "SR15"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "StockRateFC15"</li>
 	 * <li>
@@ -115,6 +111,10 @@ public class DTCEntitlementCalculationMethodCode extends MMCode {
 	 * definition} =
 	 * "Per individual account X share holding per account X Cash Rate divided by the Stock Rate = Whole Shares + CIL of Fractions Example: 100 shares X.50 (Cash Rate) divided by $20.00 (Stock Rate)=2 whole shares and.500000 fractions Fractional Entitlement: If the price is $15.00 per share, you would calculate.500000 X $15.00 = $7.50 for CIL."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final DTCEntitlementCalculationMethodCode StockRateFC15 = new DTCEntitlementCalculationMethodCode() {
@@ -137,10 +137,6 @@ public class DTCEntitlementCalculationMethodCode extends MMCode {
 	 * DTCEntitlementCalculationMethodCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "CR17"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CashRateFC17"</li>
 	 * <li>
@@ -148,6 +144,10 @@ public class DTCEntitlementCalculationMethodCode extends MMCode {
 	 * definition} =
 	 * "Per individual account X share holding per account X Cash Rate = entitlement Example: 100 shares X.50 (Cash Rate) = $50.00 in cash."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final DTCEntitlementCalculationMethodCode CashRateFC17 = new DTCEntitlementCalculationMethodCode() {
@@ -172,10 +172,6 @@ public class DTCEntitlementCalculationMethodCode extends MMCode {
 	 * DTCEntitlementCalculationMethodCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "SR18"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "StockRateFC18"</li>
 	 * <li>
@@ -183,6 +179,10 @@ public class DTCEntitlementCalculationMethodCode extends MMCode {
 	 * definition} =
 	 * "Per individual account X share holding per account X Stock Rate = whole shares + CIL of Fractions Example: 150 shares X 5% (Stock Rate) = 7 whole shares and.500000 fractions Fractional Entitlement: If the CIL price is $10.00 per share, you would calculate.500000 X $10.00 = $5.00 for CIL."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final DTCEntitlementCalculationMethodCode StockRateFC18 = new DTCEntitlementCalculationMethodCode() {
@@ -207,10 +207,6 @@ public class DTCEntitlementCalculationMethodCode extends MMCode {
 	 * DTCEntitlementCalculationMethodCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "SC19"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "StockRateXCashRateFC19"</li>
 	 * <li>
@@ -218,6 +214,10 @@ public class DTCEntitlementCalculationMethodCode extends MMCode {
 	 * definition} =
 	 * "Per individual account X share holding per account X Stock Rate = whole shares + Fractions Example: 150 shares X 5% (Stock Rate) = 7 whole shares and.500000 fractions. Cash Entitlement: If the CIL price is $10.00 per share, you would calculate 7.500000 shares X $10.00 = $75.00 in cash."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final DTCEntitlementCalculationMethodCode StockRateXCashRateFC19 = new DTCEntitlementCalculationMethodCode() {
@@ -252,10 +252,6 @@ public class DTCEntitlementCalculationMethodCode extends MMCode {
 	 * DTCEntitlementCalculationMethodCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "SB20"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "StockRateEnableBuyUpToNextWholeShareFC20"</li>
 	 * <li>
@@ -263,6 +259,10 @@ public class DTCEntitlementCalculationMethodCode extends MMCode {
 	 * definition} =
 	 * "A) Per individual account X share holding per account X Stock Rate = Whole shares + CIL of Fractions (Note 1)Note 1- Then option is to buy fraction so as to round up to one (1) whole share B) Per individual account X (1 whole share-fractional issuable) = fractions to be bought X CIL Fraction Price= Cash to be charged to each individual account (Note 1) + 1 whole share to be added to the individual account (Note 2)Note 1- Appropriate cash adjustment decreasing a participants cash position will be transacted Note 2- Appropriate share adjustment increasing a participants share position will be transacted Special Note: The following two formulas relate to those situations whereby the option allows you to buy an additional fraction so as to round up to one (1) whole share. F/C 20-can be used for most fractions buy round ups. F/C 21-was once a mandatory fraction buy round up formula used by a agent. (The end result is the same if you use either F/C)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final DTCEntitlementCalculationMethodCode StockRateEnableBuyUpToNextWholeShareFC20 = new DTCEntitlementCalculationMethodCode() {
@@ -289,10 +289,6 @@ public class DTCEntitlementCalculationMethodCode extends MMCode {
 	 * DTCEntitlementCalculationMethodCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "SHST"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SharesXStock"</li>
 	 * <li>
@@ -300,6 +296,10 @@ public class DTCEntitlementCalculationMethodCode extends MMCode {
 	 * definition} =
 	 * "A) Per individual account X share holding per account X Stock Rate = Whole shares + Fractional Issuable Note: This is a Mandatory Agent calculation for fractional round-up B) Per individual account X (1 whole share X round out price (announce in Cash Rate)-(Fractional Issuable X Stock Rate) = Cash to be charged to each individual account + 1 whole share to be added to each individual account."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final DTCEntitlementCalculationMethodCode SharesXStock = new DTCEntitlementCalculationMethodCode() {

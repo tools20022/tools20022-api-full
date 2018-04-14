@@ -37,10 +37,6 @@ public class ConstraintQueryPeriodandTradeIdentificationRule2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeCaptureReportRequestV01
 	 * ForeignExchangeTradeCaptureReportRequestV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "QueryPeriodandTradeIdentificationRule2"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintQueryPeriodandTradeIdentificationRule2 {
 	 * definition} =
 	 * "If QueryByPeriod is \"false\" or \"0\" (No), then QueryTradeIdentification must be present. If QueryByPeriod is \"true\" or \"1\" (Yes), then QueryPeriod must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ForeignExchangeTradeCaptureReportRequestV01> for_fxtr_ForeignExchangeTradeCaptureReportRequestV01 = new MMConstraint<ForeignExchangeTradeCaptureReportRequestV01>() {

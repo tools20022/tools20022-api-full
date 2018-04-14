@@ -60,16 +60,16 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "StrategyStressTypeCode"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Scenario type based on the type of portfolio the scenario is designed to stress."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -93,10 +93,6 @@ public class StrategyStressTypeCode extends MMCode {
 	 * StrategyStressTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "FLEX"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Flex"</li>
 	 * <li>
@@ -104,6 +100,10 @@ public class StrategyStressTypeCode extends MMCode {
 	 * definition} =
 	 * "Scenario, either by design or otherwise, that primarily tests the sensitivity of a portfolio of derivatives with a common underlying to differences in the valuation of such derivatives caused by differences in the maturity of such contracts. Typically, flex scenarios are aimed at stressing the valuation of portfolios that are insensitive to small movements in an underlying but sensitive to differences in the reaction of such portfolios in time space. For instance, calendar spreads or flattening or steeping positions in interest rate space."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final StrategyStressTypeCode Flex = new StrategyStressTypeCode() {
@@ -128,10 +128,6 @@ public class StrategyStressTypeCode extends MMCode {
 	 * StrategyStressTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "PRLL"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Parallel"</li>
 	 * <li>
@@ -139,6 +135,10 @@ public class StrategyStressTypeCode extends MMCode {
 	 * definition} =
 	 * "Scenario, either by design or otherwise, that primarily tests the sensitivity of a portfolio of derivatives to changes in the value of a common underlying. For example as parallel shift of an interest rate curve."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final StrategyStressTypeCode Parallel = new StrategyStressTypeCode() {
@@ -165,10 +165,6 @@ public class StrategyStressTypeCode extends MMCode {
 	 * StrategyStressTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "SPRD"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Spread"</li>
 	 * <li>
@@ -176,6 +172,10 @@ public class StrategyStressTypeCode extends MMCode {
 	 * definition} =
 	 * "Scenario, either by design or otherwise, that primarily tests the sensitivity of a portfolio of derivatives with differing, but correlated underlyings. Typically, spread scenarios are aimed at stressing the valuation of portfolios that are insensitive to small co-movements in a set of underlyings but sensitive to differences in the reaction of such portfolios to breakdowns in historical correlations or covariance."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final StrategyStressTypeCode Spread = new StrategyStressTypeCode() {

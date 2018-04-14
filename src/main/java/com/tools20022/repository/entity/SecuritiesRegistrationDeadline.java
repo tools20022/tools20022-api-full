@@ -54,14 +54,14 @@ import java.util.Objects;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "SecuritiesRegistrationDeadline"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Date by which the securities have to be registered."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class SecuritiesRegistrationDeadline extends Deadline {
@@ -93,10 +93,6 @@ public class SecuritiesRegistrationDeadline extends Deadline {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesRegistrationDeadline
 	 * SecuritiesRegistrationDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RegistrationDate"</li>
 	 * <li>
@@ -104,6 +100,10 @@ public class SecuritiesRegistrationDeadline extends Deadline {
 	 * definition} =
 	 * "Date at which the voting positions are established (in some countries)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesRegistrationDeadline, ISODateTime> mmRegistrationDate = new MMBusinessAttribute<SecuritiesRegistrationDeadline, ISODateTime>() {

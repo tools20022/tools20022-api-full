@@ -35,10 +35,6 @@ public class ConstraintSwitchOrderDataElementRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FundOrderData6 FundOrderData6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SwitchOrderDataElementRule"</li>
 	 * <li>
@@ -46,6 +42,10 @@ public class ConstraintSwitchOrderDataElementRule {
 	 * definition} =
 	 * "One of the elements (SettlementAmount, SettlementMethod, AdditionalAmount, UnitCurrency, QuotedCurrency) must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FundOrderData6> forFundOrderData6 = new MMConstraint<FundOrderData6>() {

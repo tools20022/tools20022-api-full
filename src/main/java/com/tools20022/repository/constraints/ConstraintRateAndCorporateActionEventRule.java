@@ -48,10 +48,6 @@ public class ConstraintRateAndCorporateActionEventRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV03
 	 * CorporateActionNotificationV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RateAndCorporateActionEventRule"</li>
 	 * <li>
@@ -59,6 +55,10 @@ public class ConstraintRateAndCorporateActionEventRule {
 	 * definition} =
 	 * "If CorporateActionOptionDetails/RateAndAmountDetails/GrossDividendRate/NotSpecifiedRate/Code value or CorporateActionOptionDetails/RateAndAmountDetails/InterestRateUsedForPayment/NotSpecifiedRate/Code value is NILP (Nil Payment), then CorporateActionGeneralInformation/EventType/Code must be either DVCA (CashDividend) or INTR (InterestPayment).\r\nIf CorporateActionOptionDetails/CashMovementDetails/RateAndAmountDetails/GrossDividendRate/NotSpecifiedRate/Code value or CorporateActionOptionDetails/CashMovementDetails/RateAndAmountDetails/InterestRateUsedForPayment/NotSpecifiedRate/Code value is NILP (Nil Payment), then CorporateActionGeneralInformation/EventType/Code must be either DVCA (CashDividend) or INTR (InterestPayment)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionNotificationV03> for_seev_CorporateActionNotificationV03 = new MMConstraint<CorporateActionNotificationV03>() {
@@ -82,10 +82,6 @@ public class ConstraintRateAndCorporateActionEventRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV09
 	 * CorporateActionMovementPreliminaryAdviceV09}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RateAndCorporateActionEventRule"</li>
 	 * <li>
@@ -93,6 +89,10 @@ public class ConstraintRateAndCorporateActionEventRule {
 	 * definition} =
 	 * "If CorporateActionMovementDetails/RateAndAmountDetails/GrossDividendRate/NotSpecifiedRate Code value or CorporateActionMovementDetails/RateAndAmountDetails/InterestRateUsedForPayment/NotSpecifiedRate Code value is NILP (Nil Payment), then CorporateActionGeneralInformation/EventType/Code must be either DVCA (CashDividend) or INTR (InterestPayment).\r\nIf CorporateActionMovementDetails/CashMovementDetails/RateAndAmountDetails/GrossDividendRate/NotSpecifiedRate Code value or CorporateActionMovementDetails/CashMovementDetails/RateAndAmountDetails/InterestRateUsedForPayment/NotSpecifiedRate Code value is NILP (Nil Payment), then CorporateActionGeneralInformation/EventType/Code must be either DVCA (CashDividend) or INTR (InterestPayment)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -123,10 +123,6 @@ public class ConstraintRateAndCorporateActionEventRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotification002V06
 	 * CorporateActionNotification002V06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RateAndCorporateActionEventRule"</li>
 	 * <li>
@@ -134,6 +130,10 @@ public class ConstraintRateAndCorporateActionEventRule {
 	 * definition} =
 	 * "If CorporateActionOptionDetails/RateAndAmountDetails/GrossDividendRate/NotSpecifiedRate Code value or CorporateActionOptionDetails/RateAndAmountDetails/InterestRateUsedForPayment/NotSpecifiedRate Code value is NILP (Nil Payment), then CorporateActionGeneralInformation/EventType/Code must be either DVCA (CashDividend) or INTR (InterestPayment).\r\nIf CorporateActionOptionDetails/CashMovementDetails/RateAndAmountDetails/GrossDividendRate/NotSpecifiedRate Code value or CorporateActionOptionDetails/CashMovementDetails/RateAndAmountDetails/InterestRateUsedForPayment/NotSpecifiedRate Code value is NILP (Nil Payment), then CorporateActionGeneralInformation/EventType/Code must be either DVCA (CashDividend) or INTR (InterestPayment)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionNotification002V06> for_seev_CorporateActionNotification002V06 = new MMConstraint<CorporateActionNotification002V06>() {
@@ -157,10 +157,6 @@ public class ConstraintRateAndCorporateActionEventRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV08
 	 * CorporateActionNotificationV08}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RateAndCorporateActionEventRule"</li>
 	 * <li>
@@ -168,6 +164,10 @@ public class ConstraintRateAndCorporateActionEventRule {
 	 * definition} =
 	 * "If CorporateActionOptionDetails/RateAndAmountDetails/GrossDividendRate/NotSpecifiedRate Code value or CorporateActionOptionDetails/RateAndAmountDetails/InterestRateUsedForPayment/NotSpecifiedRate Code value is NILP (Nil Payment), then CorporateActionGeneralInformation/EventType/Code must be either DVCA (CashDividend) or INTR (InterestPayment).\r\nIf CorporateActionOptionDetails/CashMovementDetails/RateAndAmountDetails/GrossDividendRate/NotSpecifiedRate Code value or CorporateActionOptionDetails/CashMovementDetails/RateAndAmountDetails/InterestRateUsedForPayment/NotSpecifiedRate Code value is NILP (Nil Payment), then CorporateActionGeneralInformation/EventType/Code must be either DVCA (CashDividend) or INTR (InterestPayment)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -198,10 +198,6 @@ public class ConstraintRateAndCorporateActionEventRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdvice002V09
 	 * CorporateActionMovementPreliminaryAdvice002V09}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RateAndCorporateActionEventRule"</li>
 	 * <li>
@@ -209,6 +205,10 @@ public class ConstraintRateAndCorporateActionEventRule {
 	 * definition} =
 	 * "If CorporateActionMovementDetails/RateAndAmountDetails/GrossDividendRate/NotSpecifiedRate Code value or CorporateActionMovementDetails/RateAndAmountDetails/InterestRateUsedForPayment/NotSpecifiedRate Code value is NILP (Nil Payment), then CorporateActionGeneralInformation/EventType/Code must be either DVCA (CashDividend) or INTR (InterestPayment).\r\nIf CorporateActionMovementDetails/CashMovementDetails/RateAndAmountDetails/GrossDividendRate/NotSpecifiedRate Code value or CorporateActionMovementDetails/CashMovementDetails/RateAndAmountDetails/InterestRateUsedForPayment/NotSpecifiedRate Code value is NILP (Nil Payment), then CorporateActionGeneralInformation/EventType/Code must be either DVCA (CashDividend) or INTR (InterestPayment)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionMovementPreliminaryAdvice002V09> for_seev_CorporateActionMovementPreliminaryAdvice002V09 = new MMConstraint<CorporateActionMovementPreliminaryAdvice002V09>() {
@@ -232,10 +232,6 @@ public class ConstraintRateAndCorporateActionEventRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV05
 	 * CorporateActionMovementPreliminaryAdviceV05}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RateAndCorporateActionEventRule"</li>
 	 * <li>
@@ -243,6 +239,10 @@ public class ConstraintRateAndCorporateActionEventRule {
 	 * definition} =
 	 * "If CorporateActionMovementDetails/RateAndAmountDetails/GrossDividendRate/NotSpecifiedRate Code value or CorporateActionMovementDetails/RateAndAmountDetails/InterestRateUsedForPayment/NotSpecifiedRate Code value is NILP (Nil Payment), then CorporateActionGeneralInformation/EventType/Code must be either DVCA (CashDividend) or INTR (InterestPayment).\r\nIf CorporateActionMovementDetails/CashMovementDetails/RateAndAmountDetails/GrossDividendRate/NotSpecifiedRate Code value or CorporateActionMovementDetails/CashMovementDetails/RateAndAmountDetails/InterestRateUsedForPayment/NotSpecifiedRate Code value is NILP (Nil Payment), then CorporateActionGeneralInformation/EventType/Code must be either DVCA (CashDividend) or INTR (InterestPayment)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -283,10 +283,6 @@ public class ConstraintRateAndCorporateActionEventRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV06
 	 * CorporateActionNotificationV06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RateAndCorporateActionEventRule"</li>
 	 * <li>
@@ -294,6 +290,10 @@ public class ConstraintRateAndCorporateActionEventRule {
 	 * definition} =
 	 * "If CorporateActionOptionDetails/RateAndAmountDetails/GrossDividendRate/NotSpecifiedRate Code value or CorporateActionOptionDetails/RateAndAmountDetails/InterestRateUsedForPayment/NotSpecifiedRate Code value is NILP (Nil Payment), then CorporateActionGeneralInformation/EventType/Code must be either DVCA (CashDividend) or INTR (InterestPayment).\r\nIf CorporateActionOptionDetails/CashMovementDetails/RateAndAmountDetails/GrossDividendRate/NotSpecifiedRate Code value or CorporateActionOptionDetails/CashMovementDetails/RateAndAmountDetails/InterestRateUsedForPayment/NotSpecifiedRate Code value is NILP (Nil Payment), then CorporateActionGeneralInformation/EventType/Code must be either DVCA (CashDividend) or INTR (InterestPayment)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -334,10 +334,6 @@ public class ConstraintRateAndCorporateActionEventRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV02
 	 * CorporateActionMovementPreliminaryAdviceV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RateAndCorporateActionEventRule"</li>
 	 * <li>
@@ -345,6 +341,10 @@ public class ConstraintRateAndCorporateActionEventRule {
 	 * definition} =
 	 * "If CorporateActionMovementDetails/RateAndAmountDetails/GrossDividendRate/NotSpecifiedRate/Code value or CorporateActionMovementDetails/RateAndAmountDetails/InterestRateUsedForPayment/NotSpecifiedRate/Code value is NILP (Nil Payment), then CorporateActionGeneralInformation/EventType/Code must be either DVCA (CashDividend) or INTR (InterestPayment).\r\nIf CorporateActionMovementDetails/CashMovementDetails/RateAndAmountDetails/GrossDividendRate/NotSpecifiedRate/Code value or CorporateActionMovementDetails/CashMovementDetails/RateAndAmountDetails/InterestRateUsedForPayment/NotSpecifiedRate/Code value is NILP (Nil Payment), then CorporateActionGeneralInformation/EventType/Code must be either DVCA (CashDividend) or INTR (InterestPayment)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionMovementPreliminaryAdviceV02> for_seev_CorporateActionMovementPreliminaryAdviceV02 = new MMConstraint<CorporateActionMovementPreliminaryAdviceV02>() {
@@ -368,10 +368,6 @@ public class ConstraintRateAndCorporateActionEventRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV06
 	 * CorporateActionMovementPreliminaryAdviceV06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RateAndCorporateActionEventRule"</li>
 	 * <li>
@@ -379,6 +375,10 @@ public class ConstraintRateAndCorporateActionEventRule {
 	 * definition} =
 	 * "If CorporateActionMovementDetails/RateAndAmountDetails/GrossDividendRate/NotSpecifiedRate Code value or CorporateActionMovementDetails/RateAndAmountDetails/InterestRateUsedForPayment/NotSpecifiedRate Code value is NILP (Nil Payment), then CorporateActionGeneralInformation/EventType/Code must be either DVCA (CashDividend) or INTR (InterestPayment).\r\nIf CorporateActionMovementDetails/CashMovementDetails/RateAndAmountDetails/GrossDividendRate/NotSpecifiedRate Code value or CorporateActionMovementDetails/CashMovementDetails/RateAndAmountDetails/InterestRateUsedForPayment/NotSpecifiedRate Code value is NILP (Nil Payment), then CorporateActionGeneralInformation/EventType/Code must be either DVCA (CashDividend) or INTR (InterestPayment)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -419,10 +419,6 @@ public class ConstraintRateAndCorporateActionEventRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV07
 	 * CorporateActionNotificationV07}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RateAndCorporateActionEventRule"</li>
 	 * <li>
@@ -430,6 +426,10 @@ public class ConstraintRateAndCorporateActionEventRule {
 	 * definition} =
 	 * "If CorporateActionOptionDetails/RateAndAmountDetails/GrossDividendRate/NotSpecifiedRate Code value or CorporateActionOptionDetails/RateAndAmountDetails/InterestRateUsedForPayment/NotSpecifiedRate Code value is NILP (Nil Payment), then CorporateActionGeneralInformation/EventType/Code must be either DVCA (CashDividend) or INTR (InterestPayment).\r\nIf CorporateActionOptionDetails/CashMovementDetails/RateAndAmountDetails/GrossDividendRate/NotSpecifiedRate Code value or CorporateActionOptionDetails/CashMovementDetails/RateAndAmountDetails/InterestRateUsedForPayment/NotSpecifiedRate Code value is NILP (Nil Payment), then CorporateActionGeneralInformation/EventType/Code must be either DVCA (CashDividend) or INTR (InterestPayment)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -470,10 +470,6 @@ public class ConstraintRateAndCorporateActionEventRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07
 	 * CorporateActionMovementPreliminaryAdviceV07}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RateAndCorporateActionEventRule"</li>
 	 * <li>
@@ -481,6 +477,10 @@ public class ConstraintRateAndCorporateActionEventRule {
 	 * definition} =
 	 * "If CorporateActionMovementDetails/RateAndAmountDetails/GrossDividendRate/NotSpecifiedRate Code value or CorporateActionMovementDetails/RateAndAmountDetails/InterestRateUsedForPayment/NotSpecifiedRate Code value is NILP (Nil Payment), then CorporateActionGeneralInformation/EventType/Code must be either DVCA (CashDividend) or INTR (InterestPayment).\r\nIf CorporateActionMovementDetails/CashMovementDetails/RateAndAmountDetails/GrossDividendRate/NotSpecifiedRate Code value or CorporateActionMovementDetails/CashMovementDetails/RateAndAmountDetails/InterestRateUsedForPayment/NotSpecifiedRate Code value is NILP (Nil Payment), then CorporateActionGeneralInformation/EventType/Code must be either DVCA (CashDividend) or INTR (InterestPayment)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -521,10 +521,6 @@ public class ConstraintRateAndCorporateActionEventRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV05
 	 * CorporateActionNotificationV05}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RateAndCorporateActionEventRule"</li>
 	 * <li>
@@ -532,6 +528,10 @@ public class ConstraintRateAndCorporateActionEventRule {
 	 * definition} =
 	 * "If CorporateActionOptionDetails/RateAndAmountDetails/GrossDividendRate/NotSpecifiedRate Code value or CorporateActionOptionDetails/RateAndAmountDetails/InterestRateUsedForPayment/NotSpecifiedRate Code value is NILP (Nil Payment), then CorporateActionGeneralInformation/EventType/Code must be either DVCA (CashDividend) or INTR (InterestPayment).\r\nIf CorporateActionOptionDetails/CashMovementDetails/RateAndAmountDetails/GrossDividendRate/NotSpecifiedRate Code value or CorporateActionOptionDetails/CashMovementDetails/RateAndAmountDetails/InterestRateUsedForPayment/NotSpecifiedRate Code value is NILP (Nil Payment), then CorporateActionGeneralInformation/EventType/Code must be either DVCA (CashDividend) or INTR (InterestPayment)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -572,10 +572,6 @@ public class ConstraintRateAndCorporateActionEventRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08
 	 * CorporateActionMovementPreliminaryAdviceV08}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RateAndCorporateActionEventRule"</li>
 	 * <li>
@@ -583,6 +579,10 @@ public class ConstraintRateAndCorporateActionEventRule {
 	 * definition} =
 	 * "If CorporateActionMovementDetails/RateAndAmountDetails/GrossDividendRate/NotSpecifiedRate Code value or CorporateActionMovementDetails/RateAndAmountDetails/InterestRateUsedForPayment/NotSpecifiedRate Code value is NILP (Nil Payment), then CorporateActionGeneralInformation/EventType/Code must be either DVCA (CashDividend) or INTR (InterestPayment).\r\nIf CorporateActionMovementDetails/CashMovementDetails/RateAndAmountDetails/GrossDividendRate/NotSpecifiedRate Code value or CorporateActionMovementDetails/CashMovementDetails/RateAndAmountDetails/InterestRateUsedForPayment/NotSpecifiedRate Code value is NILP (Nil Payment), then CorporateActionGeneralInformation/EventType/Code must be either DVCA (CashDividend) or INTR (InterestPayment)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -623,10 +623,6 @@ public class ConstraintRateAndCorporateActionEventRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotification002V08
 	 * CorporateActionNotification002V08}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RateAndCorporateActionEventRule"</li>
 	 * <li>
@@ -634,6 +630,10 @@ public class ConstraintRateAndCorporateActionEventRule {
 	 * definition} =
 	 * "If CorporateActionOptionDetails/RateAndAmountDetails/GrossDividendRate/NotSpecifiedRate Code value or CorporateActionOptionDetails/RateAndAmountDetails/InterestRateUsedForPayment/NotSpecifiedRate Code value is NILP (Nil Payment), then CorporateActionGeneralInformation/EventType/Code must be either DVCA (CashDividend) or INTR (InterestPayment).\r\nIf CorporateActionOptionDetails/CashMovementDetails/RateAndAmountDetails/GrossDividendRate/NotSpecifiedRate Code value or CorporateActionOptionDetails/CashMovementDetails/RateAndAmountDetails/InterestRateUsedForPayment/NotSpecifiedRate Code value is NILP (Nil Payment), then CorporateActionGeneralInformation/EventType/Code must be either DVCA (CashDividend) or INTR (InterestPayment)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionNotification002V08> for_seev_CorporateActionNotification002V08 = new MMConstraint<CorporateActionNotification002V08>() {
@@ -657,10 +657,6 @@ public class ConstraintRateAndCorporateActionEventRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV04
 	 * CorporateActionNotificationV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RateAndCorporateActionEventRule"</li>
 	 * <li>
@@ -668,6 +664,10 @@ public class ConstraintRateAndCorporateActionEventRule {
 	 * definition} =
 	 * "If CorporateActionOptionDetails/RateAndAmountDetails/GrossDividendRate/NotSpecifiedRate/Code value or CorporateActionOptionDetails/RateAndAmountDetails/InterestRateUsedForPayment/NotSpecifiedRate/Code value is NILP (Nil Payment), then CorporateActionGeneralInformation/EventType/Code must be either DVCA (CashDividend) or INTR (InterestPayment).\r\nIf CorporateActionOptionDetails/CashMovementDetails/RateAndAmountDetails/GrossDividendRate/NotSpecifiedRate/Code value or CorporateActionOptionDetails/CashMovementDetails/RateAndAmountDetails/InterestRateUsedForPayment/NotSpecifiedRate/Code value is NILP (Nil Payment), then CorporateActionGeneralInformation/EventType/Code must be either DVCA (CashDividend) or INTR (InterestPayment)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -701,10 +701,6 @@ public class ConstraintRateAndCorporateActionEventRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV02
 	 * CorporateActionNotificationV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RateAndCorporateActionEventRule"</li>
 	 * <li>
@@ -712,6 +708,10 @@ public class ConstraintRateAndCorporateActionEventRule {
 	 * definition} =
 	 * "If CorporateActionOptionDetails/RateAndAmountDetails/GrossDividendRate/NotSpecifiedRate/Code value or CorporateActionOptionDetails/RateAndAmountDetails/InterestRateUsedForPayment/NotSpecifiedRate/Code value is NILP (Nil Payment), then CorporateActionGeneralInformation/EventType/Code must be either DVCA (CashDividend) or INTR (InterestPayment).\r\nIf CorporateActionOptionDetails/CashMovementDetails/RateAndAmountDetails/GrossDividendRate/NotSpecifiedRate/Code value or CorporateActionOptionDetails/CashMovementDetails/RateAndAmountDetails/InterestRateUsedForPayment/NotSpecifiedRate/Code value is NILP (Nil Payment), then CorporateActionGeneralInformation/EventType/Code must be either DVCA (CashDividend) or INTR (InterestPayment)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionNotificationV02> for_seev_CorporateActionNotificationV02 = new MMConstraint<CorporateActionNotificationV02>() {
@@ -735,10 +735,6 @@ public class ConstraintRateAndCorporateActionEventRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV03
 	 * CorporateActionMovementPreliminaryAdviceV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RateAndCorporateActionEventRule"</li>
 	 * <li>
@@ -746,6 +742,10 @@ public class ConstraintRateAndCorporateActionEventRule {
 	 * definition} =
 	 * "If CorporateActionMovementDetails/RateAndAmountDetails/GrossDividendRate/NotSpecifiedRate/Code value or CorporateActionMovementDetails/RateAndAmountDetails/InterestRateUsedForPayment/NotSpecifiedRate/Code value is NILP (Nil Payment), then CorporateActionGeneralInformation/EventType/Code must be either DVCA (CashDividend) or INTR (InterestPayment).\r\nIf CorporateActionMovementDetails/CashMovementDetails/RateAndAmountDetails/GrossDividendRate/NotSpecifiedRate/Code value or CorporateActionMovementDetails/CashMovementDetails/RateAndAmountDetails/InterestRateUsedForPayment/NotSpecifiedRate/Code value is NILP (Nil Payment), then CorporateActionGeneralInformation/EventType/Code must be either DVCA (CashDividend) or INTR (InterestPayment)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionMovementPreliminaryAdviceV03> for_seev_CorporateActionMovementPreliminaryAdviceV03 = new MMConstraint<CorporateActionMovementPreliminaryAdviceV03>() {
@@ -769,10 +769,6 @@ public class ConstraintRateAndCorporateActionEventRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV01
 	 * CorporateActionNotificationV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RateAndCorporateActionEventRule"</li>
 	 * <li>
@@ -780,6 +776,10 @@ public class ConstraintRateAndCorporateActionEventRule {
 	 * definition} =
 	 * "If CorporateActionOptionDetails/RateAndAmountDetails/GrossDividendRate/RateTypeAndAmountAndRateStatus/RateType/Code value or CorporateActionOptionDetails/RateAndAmountDetails/InterestRateUsedForPayment/RateTypeAndAmountAndRateStatus/RateType/Code value is NILP (Nil Payment), then CorporateActionGeneralInformation/EventType/Code must be either DVCA (CashDividend) or INTR (InterestPayment)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionNotificationV01> for_seev_CorporateActionNotificationV01 = new MMConstraint<CorporateActionNotificationV01>() {
@@ -803,10 +803,6 @@ public class ConstraintRateAndCorporateActionEventRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdvice002V07
 	 * CorporateActionMovementPreliminaryAdvice002V07}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RateAndCorporateActionEventRule"</li>
 	 * <li>
@@ -814,6 +810,10 @@ public class ConstraintRateAndCorporateActionEventRule {
 	 * definition} =
 	 * "If CorporateActionMovementDetails/RateAndAmountDetails/GrossDividendRate/NotSpecifiedRate Code value or CorporateActionMovementDetails/RateAndAmountDetails/InterestRateUsedForPayment/NotSpecifiedRate Code value is NILP (Nil Payment), then CorporateActionGeneralInformation/EventType/Code must be either DVCA (CashDividend) or INTR (InterestPayment).\r\nIf CorporateActionMovementDetails/CashMovementDetails/RateAndAmountDetails/GrossDividendRate/NotSpecifiedRate Code value or CorporateActionMovementDetails/CashMovementDetails/RateAndAmountDetails/InterestRateUsedForPayment/NotSpecifiedRate Code value is NILP (Nil Payment), then CorporateActionGeneralInformation/EventType/Code must be either DVCA (CashDividend) or INTR (InterestPayment)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionMovementPreliminaryAdvice002V07> for_seev_CorporateActionMovementPreliminaryAdvice002V07 = new MMConstraint<CorporateActionMovementPreliminaryAdvice002V07>() {
@@ -837,10 +837,6 @@ public class ConstraintRateAndCorporateActionEventRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV04
 	 * CorporateActionMovementPreliminaryAdviceV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RateAndCorporateActionEventRule"</li>
 	 * <li>
@@ -848,6 +844,10 @@ public class ConstraintRateAndCorporateActionEventRule {
 	 * definition} =
 	 * "If CorporateActionMovementDetails/RateAndAmountDetails/GrossDividendRate/NotSpecifiedRate/Code value or CorporateActionMovementDetails/RateAndAmountDetails/InterestRateUsedForPayment/NotSpecifiedRate/Code value is NILP (Nil Payment), then CorporateActionGeneralInformation/EventType/Code must be either DVCA (CashDividend) or INTR (InterestPayment).\r\nIf CorporateActionMovementDetails/CashMovementDetails/RateAndAmountDetails/GrossDividendRate/NotSpecifiedRate/Code value or CorporateActionMovementDetails/CashMovementDetails/RateAndAmountDetails/InterestRateUsedForPayment/NotSpecifiedRate/Code value is NILP (Nil Payment), then CorporateActionGeneralInformation/EventType/Code must be either DVCA (CashDividend) or INTR (InterestPayment)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>

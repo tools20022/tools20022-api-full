@@ -199,15 +199,15 @@ import java.util.Optional;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "TreasuryTradeSettlementStatus"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Specifies the status of a treasury trade at a specified time."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class TreasuryTradeSettlementStatus extends Status {
@@ -328,16 +328,16 @@ public class TreasuryTradeSettlementStatus extends Status {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus
 	 * TreasuryTradeSettlementStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradeStatus"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Status of a treasury trade in a central matching/settlement system."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<TreasuryTradeSettlementStatus, TradeStatusCode> mmTradeStatus = new MMBusinessAttribute<TreasuryTradeSettlementStatus, TradeStatusCode>() {
@@ -396,10 +396,6 @@ public class TreasuryTradeSettlementStatus extends Status {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus
 	 * TreasuryTradeSettlementStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AllegedTrade"</li>
 	 * <li>
@@ -407,6 +403,10 @@ public class TreasuryTradeSettlementStatus extends Status {
 	 * definition} =
 	 * "Specifies whether a trade is alleged (notified by the counterparty) or not."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<TreasuryTradeSettlementStatus, YesNoIndicator> mmAllegedTrade = new MMBusinessAttribute<TreasuryTradeSettlementStatus, YesNoIndicator>() {
@@ -439,6 +439,10 @@ public class TreasuryTradeSettlementStatus extends Status {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.TreasuryTrade
+	 * TreasuryTrade}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.TreasuryTrade#mmTreasuryTradeSettlementStatus
@@ -447,24 +451,20 @@ public class TreasuryTradeSettlementStatus extends Status {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.TreasuryTrade
-	 * TreasuryTrade}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus
 	 * TreasuryTradeSettlementStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TreasuryTrade"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Treasury trade for which a settlement status is provided."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<TreasuryTradeSettlementStatus, Optional<TreasuryTrade>> mmTreasuryTrade = new MMBusinessAssociationEnd<TreasuryTradeSettlementStatus, Optional<TreasuryTrade>>() {
@@ -518,10 +518,6 @@ public class TreasuryTradeSettlementStatus extends Status {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus
 	 * TreasuryTradeSettlementStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Settlement"</li>
 	 * <li>
@@ -529,6 +525,10 @@ public class TreasuryTradeSettlementStatus extends Status {
 	 * definition} =
 	 * "Specifies the status of a settlement eg rejected, settled or awaiting authorisation."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<TreasuryTradeSettlementStatus, SettlementStatusCode> mmSettlement = new MMBusinessAttribute<TreasuryTradeSettlementStatus, SettlementStatusCode>() {
@@ -581,16 +581,16 @@ public class TreasuryTradeSettlementStatus extends Status {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus
 	 * TreasuryTradeSettlementStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RejectedAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Amount that cannot be settled for instance by a settlement system."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<TreasuryTradeSettlementStatus, ActiveOrHistoricCurrencyAndAmount> mmRejectedAmount = new MMBusinessAttribute<TreasuryTradeSettlementStatus, ActiveOrHistoricCurrencyAndAmount>() {
@@ -643,15 +643,15 @@ public class TreasuryTradeSettlementStatus extends Status {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus
 	 * TreasuryTradeSettlementStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SettlementSuspended"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Cash settlement is suspended."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<TreasuryTradeSettlementStatus, YesNoIndicator> mmSettlementSuspended = new MMBusinessAttribute<TreasuryTradeSettlementStatus, YesNoIndicator>() {
@@ -702,15 +702,15 @@ public class TreasuryTradeSettlementStatus extends Status {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus
 	 * TreasuryTradeSettlementStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PendingSettlement"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Cash settlement is pending."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<TreasuryTradeSettlementStatus, YesNoIndicator> mmPendingSettlement = new MMBusinessAttribute<TreasuryTradeSettlementStatus, YesNoIndicator>() {
@@ -760,15 +760,15 @@ public class TreasuryTradeSettlementStatus extends Status {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus
 	 * TreasuryTradeSettlementStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SettlementDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date on which the trade is actually settled."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<TreasuryTradeSettlementStatus, ISODateTime> mmSettlementDate = new MMBusinessAttribute<TreasuryTradeSettlementStatus, ISODateTime>() {
@@ -809,15 +809,15 @@ public class TreasuryTradeSettlementStatus extends Status {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus
 	 * TreasuryTradeSettlementStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "WithdrawalReason"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Reason that an alleged trade is withdrawn."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<TreasuryTradeSettlementStatus, Max35Text> mmWithdrawalReason = new MMBusinessAttribute<TreasuryTradeSettlementStatus, Max35Text>() {

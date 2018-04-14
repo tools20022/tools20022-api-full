@@ -41,10 +41,6 @@ public class ConstraintNameChangeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV03
 	 * CorporateActionNotificationV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NameChangeRule"</li>
 	 * <li>
@@ -52,6 +48,10 @@ public class ConstraintNameChangeRule {
 	 * definition} =
 	 * "If CorporateActionDetails/AdditionalInformation/NewCompanyName/AdditionalInformation is present, then CorporateActionGeneralInformation/EventType/Code value CHAN must be present and CorporateActionDetails/ChangeType/Code value NAME must be present in at least one occurrence of CorporateActionDetails/ChangeType.\r\n(MT 564 NVR C11)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionNotificationV03> for_seev_CorporateActionNotificationV03 = new MMConstraint<CorporateActionNotificationV03>() {
@@ -75,10 +75,6 @@ public class ConstraintNameChangeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotification002V06
 	 * CorporateActionNotification002V06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NameChangeRule"</li>
 	 * <li>
@@ -86,6 +82,10 @@ public class ConstraintNameChangeRule {
 	 * definition} =
 	 * "If CorporateActionDetails/AdditionalInformation/NewCompanyName/AdditionalInformation is present, then CorporateActionGeneralInformation/EventType/Code value CHAN (Change) must be present and CorporateActionDetails/ChangeType/Code value NAME (Name) must be present in at least one occurrence of CorporateActionDetails/ChangeType.\r\n(MT 564 NVR C10)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionNotification002V06> for_seev_CorporateActionNotification002V06 = new MMConstraint<CorporateActionNotification002V06>() {
@@ -109,10 +109,6 @@ public class ConstraintNameChangeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV08
 	 * CorporateActionNotificationV08}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NameChangeRule"</li>
 	 * <li>
@@ -120,6 +116,10 @@ public class ConstraintNameChangeRule {
 	 * definition} =
 	 * "If CorporateActionDetails/AdditionalInformation/NewCompanyName/AdditionalInformation is present, then CorporateActionGeneralInformation/EventType/Code value CHAN (Change) must be present and CorporateActionDetails/ChangeType/Code value NAME (Name) must be present in at least one occurrence of CorporateActionDetails/ChangeType.\r\n(MT 564 NVR C10)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -149,10 +149,6 @@ public class ConstraintNameChangeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV06
 	 * CorporateActionNotificationV06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NameChangeRule"</li>
 	 * <li>
@@ -160,6 +156,10 @@ public class ConstraintNameChangeRule {
 	 * definition} =
 	 * "If CorporateActionDetails/AdditionalInformation/NewCompanyName/AdditionalInformation is present, then CorporateActionGeneralInformation/EventType/Code value CHAN (Change) must be present and CorporateActionDetails/ChangeType/Code value NAME (Name) must be present in at least one occurrence of CorporateActionDetails/ChangeType.\r\n(MT 564 NVR C10)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -198,10 +198,6 @@ public class ConstraintNameChangeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV07
 	 * CorporateActionNotificationV07}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NameChangeRule"</li>
 	 * <li>
@@ -209,6 +205,10 @@ public class ConstraintNameChangeRule {
 	 * definition} =
 	 * "If CorporateActionDetails/AdditionalInformation/NewCompanyName/AdditionalInformation is present, then CorporateActionGeneralInformation/EventType/Code value CHAN (Change) must be present and CorporateActionDetails/ChangeType/Code value NAME (Name) must be present in at least one occurrence of CorporateActionDetails/ChangeType.\r\n(MT 564 NVR C10)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -247,10 +247,6 @@ public class ConstraintNameChangeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV05
 	 * CorporateActionNotificationV05}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NameChangeRule"</li>
 	 * <li>
@@ -258,6 +254,10 @@ public class ConstraintNameChangeRule {
 	 * definition} =
 	 * "If CorporateActionDetails/AdditionalInformation/NewCompanyName/AdditionalInformation is present, then CorporateActionGeneralInformation/EventType/Code value CHAN must be present and CorporateActionDetails/ChangeType/Code value NAME must be present in at least one occurrence of CorporateActionDetails/ChangeType.\r\n(MT 564 NVR C11)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -296,10 +296,6 @@ public class ConstraintNameChangeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotification002V08
 	 * CorporateActionNotification002V08}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NameChangeRule"</li>
 	 * <li>
@@ -307,6 +303,10 @@ public class ConstraintNameChangeRule {
 	 * definition} =
 	 * "If CorporateActionDetails/AdditionalInformation/NewCompanyName/AdditionalInformation is present, then CorporateActionGeneralInformation/EventType/Code value CHAN (Change) must be present and CorporateActionDetails/ChangeType/Code value NAME (Name) must be present in at least one occurrence of CorporateActionDetails/ChangeType.\r\n(MT 564 NVR C10)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionNotification002V08> for_seev_CorporateActionNotification002V08 = new MMConstraint<CorporateActionNotification002V08>() {
@@ -330,10 +330,6 @@ public class ConstraintNameChangeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV04
 	 * CorporateActionNotificationV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NameChangeRule"</li>
 	 * <li>
@@ -341,6 +337,10 @@ public class ConstraintNameChangeRule {
 	 * definition} =
 	 * "If CorporateActionDetails/AdditionalInformation/NewCompanyName/AdditionalInformation is present, then CorporateActionGeneralInformation/EventType/Code value CHAN must be present and CorporateActionDetails/ChangeType/Code value NAME must be present in at least one occurrence of CorporateActionDetails/ChangeType.\r\n(MT 564 NVR C11)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -373,10 +373,6 @@ public class ConstraintNameChangeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV02
 	 * CorporateActionNotificationV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NameChangeRule"</li>
 	 * <li>
@@ -384,6 +380,10 @@ public class ConstraintNameChangeRule {
 	 * definition} =
 	 * "If CorporateActionDetails/AdditionalInformation/NewCompanyName/AdditionalInformation is present, then CorporateActionGeneralInformation/EventType/Code value CHAN must be present and CorporateActionDetails/ChangeType/Code value NAME must be present in at least one occurrence of CorporateActionDetails/ChangeType.\r\n(MT 564 NVR C11)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionNotificationV02> for_seev_CorporateActionNotificationV02 = new MMConstraint<CorporateActionNotificationV02>() {
@@ -407,10 +407,6 @@ public class ConstraintNameChangeRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV01
 	 * CorporateActionNotificationV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NameChangeRule"</li>
 	 * <li>
@@ -418,6 +414,10 @@ public class ConstraintNameChangeRule {
 	 * definition} =
 	 * "If CorporateActionDetails/AdditionalInformation/NewCompanyName/AdditionalInformation is present, then CorporateActionGeneralInformation/EventType/Code value CHAN must be present and CorporateActionDetails/ChangeType/Code value NAME must be present in at least one occurrence of CorporateActionDetails/ChangeType.\r\n(MT 564 NVR C11)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionNotificationV01> for_seev_CorporateActionNotificationV01 = new MMConstraint<CorporateActionNotificationV01>() {

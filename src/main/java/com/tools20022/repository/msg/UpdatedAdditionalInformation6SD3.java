@@ -61,6 +61,10 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "UpdatedAdditionalInformation6SD3"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} = "Extension for additional information."</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
  * constraint} =
  * <ul>
@@ -81,10 +85,6 @@ import javax.xml.bind.annotation.XmlType;
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "UpdatedAdditionalInformation6SD3"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Extension for additional information."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -110,10 +110,6 @@ public class UpdatedAdditionalInformation6SD3 {
 	 * UpdatedAdditionalInformation6SD3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PlcAndNm"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PlaceAndName"</li>
 	 * <li>
@@ -121,6 +117,10 @@ public class UpdatedAdditionalInformation6SD3 {
 	 * definition} =
 	 * "Unambiguous reference to the location where the supplementary data must be inserted in the message instance. \r\n\r\nIn the case of XML, this is expressed by a valid XPath."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<UpdatedAdditionalInformation6SD3, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<UpdatedAdditionalInformation6SD3, Optional<Max350Text>>() {
@@ -164,10 +164,6 @@ public class UpdatedAdditionalInformation6SD3 {
 	 * UpdatedAdditionalInformation6SD3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SctiesCdtAcctId"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SecuritiesCreditAccountIdentification"</li>
 	 * <li>
@@ -175,6 +171,10 @@ public class UpdatedAdditionalInformation6SD3 {
 	 * definition} =
 	 * "Specifies the securities account to be credited.\r\n会社法制の見直し要綱の、22ページ第３－１－①をご参照ください。."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<UpdatedAdditionalInformation6SD3, Optional<Max50Text>> mmSecuritiesCreditAccountIdentification = new MMMessageAttribute<UpdatedAdditionalInformation6SD3, Optional<Max50Text>>() {
@@ -219,10 +219,6 @@ public class UpdatedAdditionalInformation6SD3 {
 	 * UpdatedAdditionalInformation6SD3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OfferrShr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OfferorShare"</li>
 	 * <li>
@@ -230,6 +226,10 @@ public class UpdatedAdditionalInformation6SD3 {
 	 * definition} =
 	 * "ISIN of Offeror's share when the corporate action event type code is TEND."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<UpdatedAdditionalInformation6SD3, Optional<ISINIdentifier>> mmOfferorShare = new MMMessageAttribute<UpdatedAdditionalInformation6SD3, Optional<ISINIdentifier>>() {
@@ -274,10 +274,6 @@ public class UpdatedAdditionalInformation6SD3 {
 	 * UpdatedAdditionalInformation6SD3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OfferrShrLclCd"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OfferorShareLocalCode"</li>
 	 * <li>
@@ -285,6 +281,10 @@ public class UpdatedAdditionalInformation6SD3 {
 	 * definition} =
 	 * "Local code of Offeror's share when the corporate action event type code is TEND.\r\n買付者 銘柄コード."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<UpdatedAdditionalInformation6SD3, Optional<Max5AlphaNumericText>> mmOfferorShareLocalCode = new MMMessageAttribute<UpdatedAdditionalInformation6SD3, Optional<Max5AlphaNumericText>>() {
@@ -328,10 +328,6 @@ public class UpdatedAdditionalInformation6SD3 {
 	 * UpdatedAdditionalInformation6SD3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "LclLangNm"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LocalLanguageName"</li>
 	 * <li>
@@ -339,6 +335,10 @@ public class UpdatedAdditionalInformation6SD3 {
 	 * definition} =
 	 * "Name in the local language by which a party is known and which is usually used to identify that party."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<UpdatedAdditionalInformation6SD3, Optional<Max240Text>> mmLocalLanguageName = new MMMessageAttribute<UpdatedAdditionalInformation6SD3, Optional<Max240Text>>() {

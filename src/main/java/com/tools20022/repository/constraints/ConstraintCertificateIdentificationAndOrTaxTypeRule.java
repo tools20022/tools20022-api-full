@@ -35,10 +35,6 @@ public class ConstraintCertificateIdentificationAndOrTaxTypeRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TaxDetails TaxDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CertificateIdentificationAndOrTaxTypeRule"</li>
 	 * <li>
@@ -46,6 +42,10 @@ public class ConstraintCertificateIdentificationAndOrTaxTypeRule {
 	 * definition} =
 	 * "If CertificateIdentification is not present, then TaxType is mandatory.\nIf CertificateIdentification is present, then TaxType is optional."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TaxDetails> forTaxDetails = new MMConstraint<TaxDetails>() {

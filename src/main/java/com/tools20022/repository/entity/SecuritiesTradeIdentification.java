@@ -501,16 +501,16 @@ import java.util.Objects;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "SecuritiesTradeIdentification"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Specifies the different identifications associated with a securities transaction."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class SecuritiesTradeIdentification extends TradeIdentification {
@@ -523,6 +523,10 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesTrade
+	 * SecuritiesTrade}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#mmSecuritiesTradeRelatedIdentifications
@@ -531,24 +535,20 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesTrade
-	 * SecuritiesTrade}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification
 	 * SecuritiesTradeIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IdentifiedTrade"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Trade for which one or more identifications are provided."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesTradeIdentification, SecuritiesTrade> mmIdentifiedTrade = new MMBusinessAssociationEnd<SecuritiesTradeIdentification, SecuritiesTrade>() {
@@ -1196,10 +1196,6 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification
 	 * SecuritiesTradeIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MarketInfrastructureTransactionIdentification"</li>
 	 * <li>
@@ -1207,6 +1203,10 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 * definition} =
 	 * "Identification of a transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTradeIdentification, Max35Text> mmMarketInfrastructureTransactionIdentification = new MMBusinessAttribute<SecuritiesTradeIdentification, Max35Text>() {
@@ -1758,10 +1758,6 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification
 	 * SecuritiesTradeIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ProcessorTransactionIdentification"</li>
 	 * <li>
@@ -1769,6 +1765,10 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 * definition} =
 	 * "Identification of the transaction assigned by the processor of the instruction other than the account owner the account servicer and the market infrastructure."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTradeIdentification, Max35Text> mmProcessorTransactionIdentification = new MMBusinessAttribute<SecuritiesTradeIdentification, Max35Text>() {
@@ -2422,15 +2422,15 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification
 	 * SecuritiesTradeIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PoolIdentification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Collective reference identifying a set of messages."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTradeIdentification, Max35Text> mmPoolIdentification = new MMBusinessAttribute<SecuritiesTradeIdentification, Max35Text>() {
@@ -2841,15 +2841,15 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification
 	 * SecuritiesTradeIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CollateralTransactionIdentification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Unambiguous identification of a collateral transaction."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTradeIdentification, Max35Text> mmCollateralTransactionIdentification = new MMBusinessAttribute<SecuritiesTradeIdentification, Max35Text>() {
@@ -3339,10 +3339,6 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification
 	 * SecuritiesTradeIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ClientTripartyCollateralTransactionIdentification"</li>
 	 * <li>
@@ -3350,6 +3346,10 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 * definition} =
 	 * "Unique reference identifying the triparty collateral management transaction from the client's point of view."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTradeIdentification, Max35Text> mmClientTripartyCollateralTransactionIdentification = new MMBusinessAttribute<SecuritiesTradeIdentification, Max35Text>() {
@@ -3976,10 +3976,6 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification
 	 * SecuritiesTradeIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TripartyAgentCollateralTransactionIdentification"</li>
 	 * <li>
@@ -3987,6 +3983,10 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 * definition} =
 	 * "Unique reference identifying the triparty collateral management transaction from the triparty agent's point of view."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTradeIdentification, Max35Text> mmTripartyAgentCollateralTransactionIdentification = new MMBusinessAttribute<SecuritiesTradeIdentification, Max35Text>() {
@@ -4126,15 +4126,15 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification
 	 * SecuritiesTradeIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BasketIdentification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identification of a basket trade."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTradeIdentification, Max35Text> mmBasketIdentification = new MMBusinessAttribute<SecuritiesTradeIdentification, Max35Text>() {
@@ -4215,15 +4215,15 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification
 	 * SecuritiesTradeIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ProgramIdentification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Program reference which identifies a program trade."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTradeIdentification, Max35Text> mmProgramIdentification = new MMBusinessAttribute<SecuritiesTradeIdentification, Max35Text>() {
@@ -4277,10 +4277,6 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification
 	 * SecuritiesTradeIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BlockIdentification"</li>
 	 * <li>
@@ -4288,6 +4284,10 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 * definition} =
 	 * "Reference of the linked message at the trade/block level which identifies a centrally matched transaction."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTradeIdentification, Max35Text> mmBlockIdentification = new MMBusinessAttribute<SecuritiesTradeIdentification, Max35Text>() {
@@ -4360,15 +4360,15 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification
 	 * SecuritiesTradeIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AllocationIdentification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identification at the allocation level."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTradeIdentification, Max35Text> mmAllocationIdentification = new MMBusinessAttribute<SecuritiesTradeIdentification, Max35Text>() {
@@ -4425,10 +4425,6 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification
 	 * SecuritiesTradeIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ComplianceIdentification"</li>
 	 * <li>
@@ -4436,6 +4432,10 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 * definition} =
 	 * "Identification which represents this transaction for compliance purposes."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTradeIdentification, Max35Text> mmComplianceIdentification = new MMBusinessAttribute<SecuritiesTradeIdentification, Max35Text>() {
@@ -4476,10 +4476,6 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification
 	 * SecuritiesTradeIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CSDTransactionIdentification"</li>
 	 * <li>
@@ -4487,6 +4483,10 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 * definition} =
 	 * "Identification given by the central securities depository  to the transaction."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTradeIdentification, Max35Text> mmCSDTransactionIdentification = new MMBusinessAttribute<SecuritiesTradeIdentification, Max35Text>() {
@@ -4540,10 +4540,6 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification
 	 * SecuritiesTradeIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CentralCounterpartyTransactionIdentification"</li>
 	 * <li>
@@ -4551,6 +4547,10 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 * definition} =
 	 * "Identification of the transaction assigned by the central counterparty."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTradeIdentification, Max35Text> mmCentralCounterpartyTransactionIdentification = new MMBusinessAttribute<SecuritiesTradeIdentification, Max35Text>() {
@@ -4618,10 +4618,6 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification
 	 * SecuritiesTradeIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CancellationRequestIdentification"</li>
 	 * <li>
@@ -4629,6 +4625,10 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 * definition} =
 	 * "Unambiguous identification of the cancellation request as known by the instructing party."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTradeIdentification, Max35Text> mmCancellationRequestIdentification = new MMBusinessAttribute<SecuritiesTradeIdentification, Max35Text>() {

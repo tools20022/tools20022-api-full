@@ -39,10 +39,6 @@ public class ConstraintLimitCriteriaGuideline {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.LimitCriteria1 LimitCriteria1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LimitCriteriaGuideline"</li>
 	 * <li>
@@ -50,6 +46,10 @@ public class ConstraintLimitCriteriaGuideline {
 	 * definition} =
 	 * "If a bilateral limit regarding specific members in the system is required, then the identification of the bilateral counterpart should be given.\nBy default, if there is no identification of the bilateral counterpart and the current or default bilateral limit is required, then all the bilateral limits with the relevant counterpart identifications are returned."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<LimitCriteria1> forLimitCriteria1 = new MMConstraint<LimitCriteria1>() {
@@ -72,10 +72,6 @@ public class ConstraintLimitCriteriaGuideline {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.LimitCriteria2 LimitCriteria2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LimitCriteriaGuideline"</li>
 	 * <li>
@@ -83,6 +79,10 @@ public class ConstraintLimitCriteriaGuideline {
 	 * definition} =
 	 * "If a bilateral limit regarding specific members in the system is required, then the identification of the bilateral counterpart should be given.\nBy default, if there is no identification of the bilateral counterpart and the current or default bilateral limit is required, then all the bilateral limits with the relevant counterpart identifications are returned."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<LimitCriteria2> forLimitCriteria2 = new MMConstraint<LimitCriteria2>() {
@@ -105,10 +105,6 @@ public class ConstraintLimitCriteriaGuideline {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.LimitCriteria4 LimitCriteria4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LimitCriteriaGuideline"</li>
 	 * <li>
@@ -116,6 +112,10 @@ public class ConstraintLimitCriteriaGuideline {
 	 * definition} =
 	 * "If a bilateral limit regarding specific members in the system is required, then the identification of the bilateral counterpart should be given.\nBy default, if there is no identification of the bilateral counterpart and the current or default bilateral limit is required, then all the bilateral limits with the relevant counterpart identifications are returned."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -153,10 +153,6 @@ public class ConstraintLimitCriteriaGuideline {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.LimitCriteria3 LimitCriteria3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LimitCriteriaGuideline"</li>
 	 * <li>
@@ -164,6 +160,10 @@ public class ConstraintLimitCriteriaGuideline {
 	 * definition} =
 	 * "If a bilateral limit regarding specific members in the system is required, then the identification of the bilateral counterpart should be given.\nBy default, if there is no identification of the bilateral counterpart and the current or default bilateral limit is required, then all the bilateral limits with the relevant counterpart identifications are returned."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -195,10 +195,6 @@ public class ConstraintLimitCriteriaGuideline {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.LimitCriteria5 LimitCriteria5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LimitCriteriaGuideline"</li>
 	 * <li>
@@ -206,6 +202,10 @@ public class ConstraintLimitCriteriaGuideline {
 	 * definition} =
 	 * "If a bilateral limit regarding specific members in the system is required, then the identification of the bilateral counterpart should be given.\nBy default, if there is no identification of the bilateral counterpart and the current or default bilateral limit is required, then all the bilateral limits with the relevant counterpart identifications are returned."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =

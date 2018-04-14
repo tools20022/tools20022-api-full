@@ -368,6 +368,10 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "SystemBalanceTypeCode"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} = "Specifies the nature of the system balance."</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -378,10 +382,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "SystemBalanceTypeCode"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Specifies the nature of the system balance."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -402,10 +402,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "OPNG"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Opening"</li>
 	 * <li>
@@ -413,6 +409,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Book balance of the account at the beginning of the account servicer's business day. It always equals the closing book balance from the previous business day. \nNote: the available balance at the beginning of the account servicer's business day may be different from the closing book balance from the previous business day."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode Opening = new SystemBalanceTypeCode() {
@@ -437,10 +437,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "INTM"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Interim"</li>
 	 * <li>
@@ -448,6 +444,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance calculated in the course of the account servicer's business day, at the time specified, and subject to further changes during the business day. The interim balance is calculated on the basis of booked credit and debit items during the calculation time/period specified."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode Interim = new SystemBalanceTypeCode() {
@@ -471,10 +471,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "CLSG"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Closing"</li>
 	 * <li>
@@ -482,6 +478,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance of the account at the end of the account servicer's business day. It is the sum of the opening balance at the beginning of the day and all entries booked to the account during the account servicer's business day."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode Closing = new SystemBalanceTypeCode() {
@@ -503,16 +503,16 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "BOOK"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Book"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Balance that is registered in the books of the account servicer."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode Book = new SystemBalanceTypeCode() {
@@ -534,15 +534,15 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "CRRT"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Current"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Balance of the account at a precise moment in time."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode Current = new SystemBalanceTypeCode() {
@@ -566,10 +566,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "PDNG"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Pending"</li>
 	 * <li>
@@ -577,6 +573,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance of securities pending delivery, such as the orders to sell securities have been executed but settlement of the open transactions has not been confirmed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode Pending = new SystemBalanceTypeCode() {
@@ -599,10 +599,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "LRLD"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LimitRelated"</li>
 	 * <li>
@@ -610,6 +606,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance of a specific limit value, such as a bilateral balance is calculated in relation to a given bilateral limit."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode LimitRelated = new SystemBalanceTypeCode() {
@@ -632,10 +632,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "AVLB"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Available"</li>
 	 * <li>
@@ -643,6 +639,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance of money or securities that is at the disposal of the account owner on the date specified."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode Available = new SystemBalanceTypeCode() {
@@ -665,10 +665,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "LTSF"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LiquidityTransfer"</li>
 	 * <li>
@@ -676,6 +672,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance composed of the sum of all liquidity transfers made to or from an account."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode LiquidityTransfer = new SystemBalanceTypeCode() {
@@ -697,10 +697,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "CRDT"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Credit"</li>
 	 * <li>
@@ -708,6 +704,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance representing the sum of all credit entries booked to an account."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode Credit = new SystemBalanceTypeCode() {
@@ -731,10 +731,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "EAST"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EligibleAssets"</li>
 	 * <li>
@@ -742,6 +738,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance representing the potential loan a Central Bank would make in cash if the collateral is pledged, such as securities available and eligible as collateral with the central bank."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode EligibleAssets = new SystemBalanceTypeCode() {
@@ -766,10 +766,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "PYMT"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Payment"</li>
 	 * <li>
@@ -777,6 +773,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance representing the sum of entries as a result of payments processing. Entries relating to fees, interest, or other movements not a result of payments sent or received by the account owner are not included."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode Payment = new SystemBalanceTypeCode() {
@@ -802,10 +802,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "BLCK"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Blocked"</li>
 	 * <li>
@@ -813,6 +809,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance representing the regulatory reserve that a financial institution must have with the account servicing institution, such as the minimum credit balance a financial institution is to keep with its Central Bank for mandatory reserve purposes. In some countries, a blocked balance is known as a 'reserve' balance."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode Blocked = new SystemBalanceTypeCode() {
@@ -836,10 +836,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "XPCD"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Expected"</li>
 	 * <li>
@@ -847,6 +843,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance, composed of booked entries and pending items known at the time of calculation, which projects the end of day balance if everything is booked on the account and no other entry is posted."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode Expected = new SystemBalanceTypeCode() {
@@ -870,10 +870,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "DLOD"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DaylightOverdraft"</li>
 	 * <li>
@@ -881,6 +877,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance representing the intra day overdraft granted by the central bank to financial institutions participating in a RTGS system. This balance may vary over time and shall be offset at the end of the day."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode DaylightOverdraft = new SystemBalanceTypeCode() {
@@ -904,10 +904,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "XCRD"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ExpectedCredit"</li>
 	 * <li>
@@ -915,6 +911,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance, composed of booked entries and pending items known at the time of calculation, which projects the end of day credit balance if everything books to the account and no other credit entry is posted."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode ExpectedCredit = new SystemBalanceTypeCode() {
@@ -938,10 +938,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "XDBT"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ExpectedDebit"</li>
 	 * <li>
@@ -949,6 +945,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance, composed of booked entries and pending items known at the time of calculation, which projects the end of day debit balance if everything books to the account and no other debit entry is posted."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode ExpectedDebit = new SystemBalanceTypeCode() {
@@ -972,10 +972,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "ADJT"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Adjustment"</li>
 	 * <li>
@@ -983,6 +979,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Average balance to be held in the settlement account at the end of each day in order to fulfil the reserve due.\nThe approximation will be always made rounding up."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode Adjustment = new SystemBalanceTypeCode() {
@@ -1005,10 +1005,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "PRAV"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ProgressiveAverage"</li>
 	 * <li>
@@ -1016,6 +1012,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Average of the daily balances on the account used to fulfil the reserve requirements calculated from the beginning of the maintenance period."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode ProgressiveAverage = new SystemBalanceTypeCode() {
@@ -1037,10 +1037,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "DBIT"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Debit"</li>
 	 * <li>
@@ -1048,6 +1044,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance representing the sum of all debit entries booked to an account."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode Debit = new SystemBalanceTypeCode() {
@@ -1070,10 +1070,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "THRE"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Threshold"</li>
 	 * <li>
@@ -1081,6 +1077,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance representing the amount that will be destined for investment. Difference between available balance and threshold for investment limit."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode Threshold = new SystemBalanceTypeCode() {
@@ -1103,10 +1103,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "NOTE"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Noted"</li>
 	 * <li>
@@ -1114,6 +1110,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance representing the amount that a financial institution has set aside for a specific reason and which is therefore not available."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode Noted = new SystemBalanceTypeCode() {
@@ -1135,16 +1135,16 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "SELF"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Self"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Balance of the account identified (as opposed to Master Balance)."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode Self = new SystemBalanceTypeCode() {
@@ -1167,10 +1167,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "MSTR"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Master"</li>
 	 * <li>
@@ -1178,6 +1174,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance of the identified account plus the balance of all of its subaccounts."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode Master = new SystemBalanceTypeCode() {
@@ -1201,10 +1201,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "FSET"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ForecastSettlement"</li>
 	 * <li>
@@ -1212,6 +1208,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance representing the forecast of total of all cash legs for trades that are ready to settle via a a central securities depository. Amounts shown are still subject to processing of the securities settlement."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode ForecastSettlement = new SystemBalanceTypeCode() {
@@ -1244,10 +1244,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "BLOC"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BlockedTrades"</li>
 	 * <li>
@@ -1255,6 +1251,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance representing the projected total of all cash legs for trades settling via a central securities depository that have been matched but blocked in order to not settle. These blocked trades are included in the calculation for settlement (for example to avoid overdrafts).\nUsage rule: Blocking can be done by account owner or its counterparties. Usually this is done to chain transactions or to prioritise other trades. Blocked trades have an indicator that prevents the transactions from settling. Once matched, they can settle whenever the freeze is lifted. In this case they will move to FSET. Lifting the freeze can happen anytime during the day and the transaction will be settling in the next settlement cycle which can be the same day if the (international) central securities depository's operates several settlements cycles per day."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode BlockedTrades = new SystemBalanceTypeCode() {
@@ -1279,10 +1279,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "OTHB"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OtherBlockedTrades"</li>
 	 * <li>
@@ -1290,6 +1286,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance representing the projected total of all cash legs for trades settling via a central securities depository that have been matched but blocked in order to not settle. These blocked transactions are not included in the calculation for settlement."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode OtherBlockedTrades = new SystemBalanceTypeCode() {
@@ -1313,10 +1313,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "CUST"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Custody"</li>
 	 * <li>
@@ -1324,6 +1320,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance representing the projected total of all asset servicing transactions such as dividends, income corporate actions equivalents, tax returns, etc."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode Custody = new SystemBalanceTypeCode() {
@@ -1346,10 +1346,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "FORC"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CashForecast"</li>
 	 * <li>
@@ -1357,6 +1353,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance representing the total of all balance types representing transactions to settle, blocked items and custody transactions."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode CashForecast = new SystemBalanceTypeCode() {
@@ -1380,10 +1380,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "COLC"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DividendsCollection"</li>
 	 * <li>
@@ -1391,6 +1387,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance representing the projected total amount of all payment obligations to the participant (bank), based on their role as main paying agent."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode DividendsCollection = new SystemBalanceTypeCode() {
@@ -1413,10 +1413,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "FUND"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NetFunding"</li>
 	 * <li>
@@ -1424,6 +1420,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance representing the net amount to be funded resulting from all transactions which have an impact on the funding requirement."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode NetFunding = new SystemBalanceTypeCode() {
@@ -1450,10 +1450,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "PIPO"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PayInPayOut"</li>
 	 * <li>
@@ -1461,6 +1457,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance representing the fictive forecast of automated direct debits or payment based on standing arrangements between a central securities depository and the user.\r\n\r\nUsage: Pay-Ins and Pay-Outs can be different based on individual payment instructions or available funds."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode PayInPayOut = new SystemBalanceTypeCode() {
@@ -1483,10 +1483,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "XCHG"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ExchangeForecast"</li>
 	 * <li>
@@ -1494,6 +1490,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance representing the forecast of the total of all cash legs of transactions traded in exchanges."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode ExchangeForecast = new SystemBalanceTypeCode() {
@@ -1517,10 +1517,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "CCPS"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CentralCounterparty"</li>
 	 * <li>
@@ -1528,6 +1524,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance representing the forecast of the total of all cash legs of transactions traded in exchanges that operate a central counterparty functionality."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode CentralCounterparty = new SystemBalanceTypeCode() {
@@ -1550,10 +1550,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "TOHB"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TotalOnHold"</li>
 	 * <li>
@@ -1561,6 +1557,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance representing the total of the payments that were put on hold because the limits have been exceeded."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode TotalOnHold = new SystemBalanceTypeCode() {
@@ -1583,10 +1583,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "COHB"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CreditOnHold"</li>
 	 * <li>
@@ -1594,6 +1590,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance representing the total incoming payments that were put on hold because the credit limit has been exceeded."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode CreditOnHold = new SystemBalanceTypeCode() {
@@ -1616,10 +1616,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "DOHB"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DebitOnHold"</li>
 	 * <li>
@@ -1627,6 +1623,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance representing the total outgoing payments that were put on hold because the debit limit has been exceeded."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode DebitOnHold = new SystemBalanceTypeCode() {
@@ -1649,10 +1649,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "TPBL"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TotalProcessed"</li>
 	 * <li>
@@ -1660,6 +1656,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance representing the total of the payments that have been processed and are waiting for settlement during the day."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode TotalProcessed = new SystemBalanceTypeCode() {
@@ -1682,10 +1682,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "CPBL"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CreditProcessed"</li>
 	 * <li>
@@ -1693,6 +1689,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance representing the total incoming payments that have been processed and are waiting for settlement."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode CreditProcessed = new SystemBalanceTypeCode() {
@@ -1715,10 +1715,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "DPBL"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DebitProcessed"</li>
 	 * <li>
@@ -1726,6 +1722,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance representing the total outgoing payments that have been processed and are waiting for settlement."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode DebitProcessed = new SystemBalanceTypeCode() {
@@ -1748,10 +1748,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "FUTB"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TotalFuture"</li>
 	 * <li>
@@ -1759,6 +1755,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance representing the total of the payments with a processing date in the future."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode TotalFuture = new SystemBalanceTypeCode() {
@@ -1780,10 +1780,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "REJB"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TotalRejected"</li>
 	 * <li>
@@ -1791,6 +1787,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance representing the total of the payments that have been rejected."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode TotalRejected = new SystemBalanceTypeCode() {
@@ -1813,10 +1813,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "OPAV"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OpeningAvailable"</li>
 	 * <li>
@@ -1824,6 +1820,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Opening balance of amount of money that is at the disposal of the account owner on the date specified."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode OpeningAvailable = new SystemBalanceTypeCode() {
@@ -1849,10 +1849,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "ITAV"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InterimAvailable"</li>
 	 * <li>
@@ -1860,6 +1856,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Available balance calculated in the course of the account servicer's business day, at the time specified, and subject to further changes during the business day. The interim balance is calculated on the basis of booked credit and debit items during the calculation time/period specified."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode InterimAvailable = new SystemBalanceTypeCode() {
@@ -1882,10 +1882,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "CLAV"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ClosingAvailable"</li>
 	 * <li>
@@ -1893,6 +1889,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Closing balance of amount of money that is at the disposal of the account owner on the date specified."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode ClosingAvailable = new SystemBalanceTypeCode() {
@@ -1915,10 +1915,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "FWAV"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ForwardAvailable"</li>
 	 * <li>
@@ -1926,6 +1922,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Forward available balance of money that is at the disposal of the account owner on the date specified."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode ForwardAvailable = new SystemBalanceTypeCode() {
@@ -1950,10 +1950,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "CLBD"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ClosingBooked"</li>
 	 * <li>
@@ -1961,6 +1957,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance of the account at the end of the pre-agreed account reporting period. It is the sum of the opening booked balance at the beginning of the period and all entries booked to the account during the pre-agreed account reporting period."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode ClosingBooked = new SystemBalanceTypeCode() {
@@ -1985,10 +1985,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "ITBD"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InterimBooked"</li>
 	 * <li>
@@ -1996,6 +1992,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance calculated in the course of the account servicer's business day, at the time specified, and subject to further changes during the business day. The interim balance is calculated on the basis of booked credit and debit items during the calculation time/period specified."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode InterimBooked = new SystemBalanceTypeCode() {
@@ -2019,10 +2019,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "OPBD"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OpeningBooked"</li>
 	 * <li>
@@ -2030,6 +2026,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Book balance of the account at the beginning of the account reporting period. It always equals the closing book balance from the previous report."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode OpeningBooked = new SystemBalanceTypeCode() {
@@ -2057,10 +2057,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "PRCD"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PreviouslyClosedBooked"</li>
 	 * <li>
@@ -2068,6 +2064,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance of the account at the previously closed account reporting period. The opening booked balance for the new period has to be equal to this balance. \n\nUsage: the previously booked closing balance should equal (inclusive date) the booked closing balance of the date it references and equal the actual booked opening balance of the current date."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode PreviouslyClosedBooked = new SystemBalanceTypeCode() {
@@ -2090,10 +2090,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "IOPA"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InvestmentOpeningAvailable"</li>
 	 * <li>
@@ -2101,6 +2097,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Investment opening balance of amount of money that is at the disposal of the account owner on the date specified."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode InvestmentOpeningAvailable = new SystemBalanceTypeCode() {
@@ -2126,10 +2126,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "IITA"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InvestmentInterimAvailable"</li>
 	 * <li>
@@ -2137,6 +2133,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Investment available balance for calculated in the course of the account servicer's business day, at the time specified, and subject to further changes during the business day. The interim balance is calculated on the basis of booked credit and debit items during the calculation time/period specified."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode InvestmentInterimAvailable = new SystemBalanceTypeCode() {
@@ -2159,10 +2159,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "ICLA"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InvestmentClosingAvailable"</li>
 	 * <li>
@@ -2170,6 +2166,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Investment closing balance of an amount of money that is at the disposal of the account owner on the date specified."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode InvestmentClosingAvailable = new SystemBalanceTypeCode() {
@@ -2192,10 +2192,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "IFWA"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InvestmentForwardAvailable"</li>
 	 * <li>
@@ -2203,6 +2199,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Investment forward available balance of money that is at the disposal of the account owner on the date specified."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode InvestmentForwardAvailable = new SystemBalanceTypeCode() {
@@ -2227,10 +2227,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "ICLB"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InvestmentClosingBooked"</li>
 	 * <li>
@@ -2238,6 +2234,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Investment (mutual funds) balance of the account at the end of the pre-agreed account reporting period. It is the sum of the opening booked balance at the beginning of the period and all entries booked to the account during the pre-agreed account reporting period."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode InvestmentClosingBooked = new SystemBalanceTypeCode() {
@@ -2263,10 +2263,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "IITB"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InvestmentInterimBooked"</li>
 	 * <li>
@@ -2274,6 +2270,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Investment balance calculated in the course of the account servicer's business day, at the time specified, and subject to further changes during the business day. The interim balance is calculated on the basis of booked credit and debit items during the calculation time/period specified."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode InvestmentInterimBooked = new SystemBalanceTypeCode() {
@@ -2299,10 +2299,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "IOPB"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InvestmentOpeningBooked"</li>
 	 * <li>
@@ -2310,6 +2306,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Investment book balance of the account at the beginning of the account reporting period. It always equals the closing book balance from the previous report. \n\n."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode InvestmentOpeningBooked = new SystemBalanceTypeCode() {
@@ -2333,10 +2333,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "IXPC"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InvestmentExpected"</li>
 	 * <li>
@@ -2344,6 +2340,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Investment balance, composed of booked entries and pending items known at the time of calculation, which projects the end of day balance if everything is booked on the account and no other entry is posted."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode InvestmentExpected = new SystemBalanceTypeCode() {
@@ -2366,10 +2366,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "DOPA"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DisbursementOpeningAvailable"</li>
 	 * <li>
@@ -2377,6 +2373,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Disbursement opening balance of amount of money that is at the disposal of the account owner on the date specified."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode DisbursementOpeningAvailable = new SystemBalanceTypeCode() {
@@ -2402,10 +2402,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "DITA"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DisbursementInterimAvailable"</li>
 	 * <li>
@@ -2413,6 +2409,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Disbursement available balance calculated in the course of the account servicer's business day, at the time specified, and subject to further changes during the business day. The interim balance is calculated on the basis of booked credit and debit items during the calculation time/period specified."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode DisbursementInterimAvailable = new SystemBalanceTypeCode() {
@@ -2435,10 +2435,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "DCLA"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DisbursementClosingAvailable"</li>
 	 * <li>
@@ -2446,6 +2442,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Disbursement closing balance of amount of money that is at the disposal of the account owner on the date specified."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode DisbursementClosingAvailable = new SystemBalanceTypeCode() {
@@ -2468,10 +2468,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "DFWA"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DisbursementForwardAvailable"</li>
 	 * <li>
@@ -2479,6 +2475,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Disbursement forward available balance of money that is at the disposal of the account owner on the date specified."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode DisbursementForwardAvailable = new SystemBalanceTypeCode() {
@@ -2503,10 +2503,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "DCLB"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DisbursementClosingBooked"</li>
 	 * <li>
@@ -2514,6 +2510,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Disbursement balance of the account at the end of the pre-agreed account reporting period. It is the sum of the opening booked balance at the beginning of the period and all entries booked to the account during the pre-agreed account reporting period."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode DisbursementClosingBooked = new SystemBalanceTypeCode() {
@@ -2539,10 +2539,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "DITB"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DisbursementInterimBooked"</li>
 	 * <li>
@@ -2550,6 +2546,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Disbursement balance calculated in the course of the account servicer's business day, at the time specified, and subject to further changes during the business day. The interim balance is calculated on the basis of booked credit and debit items during the calculation time/period specified."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode DisbursementInterimBooked = new SystemBalanceTypeCode() {
@@ -2573,10 +2573,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "DOPB"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DisbursementOpeningBooked"</li>
 	 * <li>
@@ -2584,6 +2580,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Disbursement book balance of the account at the beginning of the account reporting period. It always equals the closing book balance from the previous report."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode DisbursementOpeningBooked = new SystemBalanceTypeCode() {
@@ -2607,10 +2607,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "DXPC"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DisbursementExpected"</li>
 	 * <li>
@@ -2618,6 +2614,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Disbursement balance, composed of booked entries and pending items known at the time of calculation, which projects the end of day balance if everything is booked on the account and no other entry is posted."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode DisbursementExpected = new SystemBalanceTypeCode() {
@@ -2640,10 +2640,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "COPA"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CollectionOpeningAvailable"</li>
 	 * <li>
@@ -2651,6 +2647,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Collection opening balance of amount of money that is at the disposal of the account owner on the date specified."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode CollectionOpeningAvailable = new SystemBalanceTypeCode() {
@@ -2676,10 +2676,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "CITA"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CollectionInterimAvailable"</li>
 	 * <li>
@@ -2687,6 +2683,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Collection available balance calculated in the course of the account servicer's business day, at the time specified, and subject to further changes during the business day. The interim balance is calculated on the basis of booked credit and debit items during the calculation time/period specified."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode CollectionInterimAvailable = new SystemBalanceTypeCode() {
@@ -2709,10 +2709,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "CCLA"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CollectionClosingAvailable"</li>
 	 * <li>
@@ -2720,6 +2716,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Collection closing balance of amount of money that is at the disposal of the account owner on the date specified."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode CollectionClosingAvailable = new SystemBalanceTypeCode() {
@@ -2742,10 +2742,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "CFWA"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CollectionForwardAvailable"</li>
 	 * <li>
@@ -2753,6 +2749,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Collection forward available balance of money that is at the disposal of the account owner on the date specified."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode CollectionForwardAvailable = new SystemBalanceTypeCode() {
@@ -2777,10 +2777,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "CCLB"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CollectionClosingBooked"</li>
 	 * <li>
@@ -2788,6 +2784,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Collection balance of the account at the end of the pre-agreed account reporting period. It is the sum of the opening booked balance at the beginning of the period and all entries booked to the account during the pre-agreed account reporting period."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode CollectionClosingBooked = new SystemBalanceTypeCode() {
@@ -2813,10 +2813,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "CITB"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CollectionInterimBooked"</li>
 	 * <li>
@@ -2824,6 +2820,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Collection balance calculated in the course of the account servicer's business day, at the time specified, and subject to further changes during the business day. The interim balance is calculated on the basis of booked credit and debit items during the calculation time/period specified."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode CollectionInterimBooked = new SystemBalanceTypeCode() {
@@ -2847,10 +2847,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "COPB"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CollectionOpeningBooked"</li>
 	 * <li>
@@ -2858,6 +2854,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Collection book balance of the account at the beginning of the account reporting period. It always equals the closing book balance from the previous report."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode CollectionOpeningBooked = new SystemBalanceTypeCode() {
@@ -2881,10 +2881,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "CXPC"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CollectionExpected"</li>
 	 * <li>
@@ -2892,6 +2888,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Collection balance, composed of booked entries and pending items known at the time of calculation, which projects the end of day balance if everything is booked on the account and no other entry is posted."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode CollectionExpected = new SystemBalanceTypeCode() {
@@ -2915,10 +2915,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "FCOL"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FirmCollateralisation"</li>
 	 * <li>
@@ -2926,6 +2922,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance representing the forecast of the cash-equivalent resulting from evaluation of existing holdings at central securities depositary that are qualified to serve as collateral."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode FirmCollateralisation = new SystemBalanceTypeCode() {
@@ -2949,10 +2949,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "FCOU"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UsedAmountsFirmCollateralisation"</li>
 	 * <li>
@@ -2960,6 +2956,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance representing the cash equivalent resulting from evaluation of existing holdings at CSD that are qualified to serve as collateral and have been used as collateral."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode UsedAmountsFirmCollateralisation = new SystemBalanceTypeCode() {
@@ -2983,10 +2983,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "SCOL"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SelfCollateralisation"</li>
 	 * <li>
@@ -2994,6 +2990,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance representing the forecast of the cash-equivalent resulting from evaluation of the net incoming balance of securities qualified to serve as collateral for which settlement instructions are held at."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode SelfCollateralisation = new SystemBalanceTypeCode() {
@@ -3017,10 +3017,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "SCOU"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UsedAmountsSelfCollateralisation"</li>
 	 * <li>
@@ -3028,6 +3024,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance representing the cash-equivalent resulting from evaluation of incoming securities, qualified to serve as collateral and actually used as collateral, which have been settled during the settlement process."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode UsedAmountsSelfCollateralisation = new SystemBalanceTypeCode() {
@@ -3051,10 +3051,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "CUSA"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CustodyActual"</li>
 	 * <li>
@@ -3062,6 +3058,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance representing the actual total of all asset servicing transactions such as dividends, income corporate actions equivalents, tax returns, redemptions, etc."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode CustodyActual = new SystemBalanceTypeCode() {
@@ -3084,10 +3084,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "XCHC"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CCPGuaranteedForecasting"</li>
 	 * <li>
@@ -3095,6 +3091,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance representing the forecast of the total of all cash legs of transactions in exchanges, going through CCP functions."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode CCPGuaranteedForecasting = new SystemBalanceTypeCode() {
@@ -3118,10 +3118,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "XCHN"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NonCCPGuaranteedForecasting"</li>
 	 * <li>
@@ -3129,6 +3125,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance representing the forecast of the total of all cash legs of transactions traded in exchanges not going through central counter party (CCP) functions."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode NonCCPGuaranteedForecasting = new SystemBalanceTypeCode() {
@@ -3151,10 +3151,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "DSET"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DefinitiveSettledSecurities"</li>
 	 * <li>
@@ -3162,6 +3158,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance representing the cash equivalent of all settled securities transactions."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode DefinitiveSettledSecurities = new SystemBalanceTypeCode() {
@@ -3184,10 +3184,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "LACK"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LackOfHoldingsTransactions"</li>
 	 * <li>
@@ -3195,6 +3191,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance representing the cash equivalent of transactions with a lack of holdings."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode LackOfHoldingsTransactions = new SystemBalanceTypeCode() {
@@ -3217,10 +3217,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "NSET"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NonSettledSecurities"</li>
 	 * <li>
@@ -3228,6 +3224,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance representing the cash equivalent of all non-settled securities transactions."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode NonSettledSecurities = new SystemBalanceTypeCode() {
@@ -3251,10 +3251,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "OTCC"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CCPGuaranteedOTCTransactions"</li>
 	 * <li>
@@ -3262,6 +3258,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance representing the Forecast of the total of all cash-legs of transactions 'over the counter' (OTC), going through central counter party (CCP) functions."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode CCPGuaranteedOTCTransactions = new SystemBalanceTypeCode() {
@@ -3284,10 +3284,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "OTCG"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ForecastOTCTransactions"</li>
 	 * <li>
@@ -3295,6 +3291,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance representing the forecast of the total of all cash legs of transactions traded 'over the counter' (OTC)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode ForecastOTCTransactions = new SystemBalanceTypeCode() {
@@ -3318,10 +3318,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "OTCN"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NonCCPGuaranteedOTCTransactions"</li>
 	 * <li>
@@ -3329,6 +3325,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance representing the forecast of the total of all cash legs of transactions traded 'over the counter' (OTC) not going through central counter party (CCP) functions."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode NonCCPGuaranteedOTCTransactions = new SystemBalanceTypeCode() {
@@ -3350,10 +3350,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "SAPD"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SAPDirectDebitAmount"</li>
 	 * <li>
@@ -3361,6 +3357,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance represents the settlement account processor direct debit amount."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode SAPDirectDebitAmount = new SystemBalanceTypeCode() {
@@ -3382,10 +3382,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "SAPC"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SAPDirectCreditAmount"</li>
 	 * <li>
@@ -3393,6 +3389,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance represents the settlement account processor direct credit amount."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode SAPDirectCreditAmount = new SystemBalanceTypeCode() {
@@ -3415,10 +3415,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "REPD"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CMUPRepoDebit"</li>
 	 * <li>
@@ -3426,6 +3422,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance represents the total of the central moneymarkets unit processor repo debits."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode CMUPRepoDebit = new SystemBalanceTypeCode() {
@@ -3448,10 +3448,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "REPC"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CMUPRepoCredit"</li>
 	 * <li>
@@ -3459,6 +3455,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance represents the total of the central moneymarkets unit processor repo credits."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode CMUPRepoCredit = new SystemBalanceTypeCode() {
@@ -3481,10 +3481,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "BSCD"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BulkSettlementCMUPDebit"</li>
 	 * <li>
@@ -3492,6 +3488,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance represents the total of the bulk settlement and central moneymarkets unit processor debit."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode BulkSettlementCMUPDebit = new SystemBalanceTypeCode() {
@@ -3514,10 +3514,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "BSCC"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BulkSettlementCMUPCredit"</li>
 	 * <li>
@@ -3525,6 +3521,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance represents the total of the bulk settlement and central moneymarkets unit processor credit."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode BulkSettlementCMUPCredit = new SystemBalanceTypeCode() {
@@ -3546,16 +3546,16 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "SAPP"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SAPQueueAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Balance represents the settlement account processor queue amount."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode SAPQueueAmount = new SystemBalanceTypeCode() {
@@ -3577,15 +3577,15 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "IRLT"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IntradayRepoLimit"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Balance represents the intraday repo limit."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode IntradayRepoLimit = new SystemBalanceTypeCode() {
@@ -3607,15 +3607,15 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "IRDR"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IntradayRepoDrawings"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Balance represents the intraday repo drawings."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode IntradayRepoDrawings = new SystemBalanceTypeCode() {
@@ -3637,15 +3637,15 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "DWRD"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DiscountWindowRepoDrawings"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Balance represents the discount window repo drawings."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode DiscountWindowRepoDrawings = new SystemBalanceTypeCode() {
@@ -3668,10 +3668,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "ADWR"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AvailableDMVForDiscountWindowRepo"</li>
 	 * <li>
@@ -3679,6 +3675,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance represents the available discounted market value for discount window repo."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode AvailableDMVForDiscountWindowRepo = new SystemBalanceTypeCode() {
@@ -3701,10 +3701,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "AIDR"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AvailableDMVForIntradayRepo"</li>
 	 * <li>
@@ -3712,6 +3708,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance represents the available discounted market value for intraday repo."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode AvailableDMVForIntradayRepo = new SystemBalanceTypeCode() {
@@ -3733,15 +3733,15 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "ELEC"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Elected"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Balance of instructed position."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode Elected = new SystemBalanceTypeCode() {
@@ -3764,10 +3764,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "RDIS"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReservedForDistribution"</li>
 	 * <li>
@@ -3775,6 +3771,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance of financial instruments that are reserved for the distribution of the proceeds."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode ReservedForDistribution = new SystemBalanceTypeCode() {
@@ -3797,10 +3797,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "RREM"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReservedForRemoval"</li>
 	 * <li>
@@ -3808,6 +3804,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance of securities which are reserved temporarily in the SPA account before they will effectively be exchanged."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode ReservedForRemoval = new SystemBalanceTypeCode() {
@@ -3835,10 +3835,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "REST"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Restricted"</li>
 	 * <li>
@@ -3846,6 +3842,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Balance of cash that may only be used under certain conditions.\n\nBalance type is used to block securities/cash in the client account for example, when related to specific corporate actions, the holding is under the direct control of the system paying agent, who is the only one who can transfer securities out of this balance type.\nAlso known as the \"escrow balance\" or \"sequestered balance\"."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode Restricted = new SystemBalanceTypeCode() {
@@ -3868,10 +3868,6 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "TENT"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TotalEntitled"</li>
 	 * <li>
@@ -3879,6 +3875,10 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * definition} =
 	 * "Total quantity of financial instruments entitled to the account owner based on the terms of the corporate action event.\n."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode TotalEntitled = new SystemBalanceTypeCode() {
@@ -3900,15 +3900,15 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "UNEL"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Unelected"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Balance of uninstructed position."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode Unelected = new SystemBalanceTypeCode() {
@@ -3930,15 +3930,15 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * SystemBalanceTypeCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "INFO"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Information"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Balance for informational purposes."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final SystemBalanceTypeCode Information = new SystemBalanceTypeCode() {

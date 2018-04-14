@@ -38,10 +38,6 @@ public class ConstraintPriceCorrectionRepeatRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.reda.PriceReportCorrectionV02
 	 * PriceReportCorrectionV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PriceCorrectionRepeatRule"</li>
 	 * <li>
@@ -49,6 +45,10 @@ public class ConstraintPriceCorrectionRepeatRule {
 	 * definition} =
 	 * "All information that was sent in a Price Report message should be repeated in the Price Report Correction message. Only price information that has been corrected should be quoted in CorrectedPriceDetails."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PriceReportCorrectionV02> for_reda_PriceReportCorrectionV02 = new MMConstraint<PriceReportCorrectionV02>() {
@@ -72,10 +72,6 @@ public class ConstraintPriceCorrectionRepeatRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.reda.PriceReportCorrectionV03
 	 * PriceReportCorrectionV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PriceCorrectionRepeatRule"</li>
 	 * <li>
@@ -83,6 +79,10 @@ public class ConstraintPriceCorrectionRepeatRule {
 	 * definition} =
 	 * "All information that was sent in a Price Report message should be repeated in the Price Report Correction message. Only price information that has been corrected should be quoted in CorrectedPriceDetails."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PriceReportCorrectionV03> for_reda_PriceReportCorrectionV03 = new MMConstraint<PriceReportCorrectionV03>() {

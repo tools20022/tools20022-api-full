@@ -369,16 +369,16 @@ import java.util.Objects;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CashProceedsDefinition"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Definition of the cash proceeds for a corporate action in generic terms; that is, before applying it to specific securities holding. An example would be the definition of a dividend payment where all the information will be given in general on a per share basis."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class CashProceedsDefinition extends ProceedsDefinition {
@@ -495,10 +495,6 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition
 	 * CashProceedsDefinition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CashIncentiveRate"</li>
 	 * <li>
@@ -506,6 +502,10 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 * definition} =
 	 * "Cash premium made available if the securities holder consents or participates to an event, e.g. consent fees."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CashProceedsDefinition, PercentageRate> mmCashIncentiveRate = new MMBusinessAttribute<CashProceedsDefinition, PercentageRate>() {
@@ -658,15 +658,15 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition
 	 * CashProceedsDefinition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ContractualPaymentIndicator"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates exceptions to contractual payment service."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CashProceedsDefinition, PaymentCode> mmContractualPaymentIndicator = new MMBusinessAttribute<CashProceedsDefinition, PaymentCode>() {
@@ -705,6 +705,11 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} =
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification
+	 * GenericIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentificationForCashProceedsIncome
@@ -712,11 +717,6 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification
-	 * GenericIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -866,10 +866,6 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition
 	 * CashProceedsDefinition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IncomeType"</li>
 	 * <li>
@@ -877,6 +873,10 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 * definition} =
 	 * "Specifies the type of income.\r\nThe lists of income type codes to be used, are available on the SMPG website at www.smpg.info."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<CashProceedsDefinition, GenericIdentification> mmIncomeType = new MMBusinessAssociationEnd<CashProceedsDefinition, GenericIdentification>() {
@@ -1062,10 +1062,6 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition
 	 * CashProceedsDefinition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IndemnityAmount"</li>
 	 * <li>
@@ -1073,6 +1069,10 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 * definition} =
 	 * "(Unique to France) Amount due to a buyer of securities dealt prior to ex date which may be subject to different rate of taxation."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CashProceedsDefinition, CurrencyAndAmount> mmIndemnityAmount = new MMBusinessAttribute<CashProceedsDefinition, CurrencyAndAmount>() {
@@ -1187,10 +1187,6 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition
 	 * CashProceedsDefinition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CashIncentiveAmount"</li>
 	 * <li>
@@ -1198,6 +1194,10 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 * definition} =
 	 * "Rate of the cash premium made available if the securities holder consents or participates to an event, e.g. consent fees."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CashProceedsDefinition, ActiveCurrencyAndAmount> mmCashIncentiveAmount = new MMBusinessAttribute<CashProceedsDefinition, ActiveCurrencyAndAmount>() {
@@ -1335,10 +1335,6 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition
 	 * CashProceedsDefinition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PrincipalOrCorpus"</li>
 	 * <li>
@@ -1346,6 +1342,10 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 * definition} =
 	 * "Amount of money representing a distribution of a bond's principal, eg, repayment of outstanding debt."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CashProceedsDefinition, CurrencyAndAmount> mmPrincipalOrCorpus = new MMBusinessAttribute<CashProceedsDefinition, CurrencyAndAmount>() {
@@ -1486,10 +1486,6 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition
 	 * CashProceedsDefinition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RedemptionPremiumAmount"</li>
 	 * <li>
@@ -1497,6 +1493,10 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 * definition} =
 	 * "Amount of money (not interest) in addition to the principal at the redemption of a bond."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CashProceedsDefinition, CurrencyAndAmount> mmRedemptionPremiumAmount = new MMBusinessAttribute<CashProceedsDefinition, CurrencyAndAmount>() {
@@ -1676,10 +1676,6 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition
 	 * CashProceedsDefinition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IncomePortion"</li>
 	 * <li>
@@ -1687,6 +1683,10 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 * definition} =
 	 * "Amount relating to the underlying security for which income is distributed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CashProceedsDefinition, CurrencyAndAmount> mmIncomePortion = new MMBusinessAttribute<CashProceedsDefinition, CurrencyAndAmount>() {
@@ -1727,6 +1727,9 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.Interest Interest}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.Interest#mmRelatedCashProceedsDefinition
@@ -1734,9 +1737,6 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.Interest Interest}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1792,15 +1792,15 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition
 	 * CashProceedsDefinition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Interest"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Interest paid as the proceeds of a CA event."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<CashProceedsDefinition, List<Interest>> mmInterest = new MMBusinessAssociationEnd<CashProceedsDefinition, List<Interest>>() {
@@ -1845,15 +1845,15 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition
 	 * CashProceedsDefinition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Amount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Cash amount which is posted."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CashProceedsDefinition, CurrencyAndAmount> mmAmount = new MMBusinessAttribute<CashProceedsDefinition, CurrencyAndAmount>() {
@@ -1885,6 +1885,9 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.Dividend Dividend}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.Dividend#mmCashProceeds
@@ -1893,17 +1896,10 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.Dividend Dividend}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition
 	 * CashProceedsDefinition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Dividend"</li>
 	 * <li>
@@ -1911,6 +1907,10 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 * definition} =
 	 * "Distribution of earnings to shareholders, paid for in cash, stock, scrip issue or, rarely, in kind, eg, company products or property. The dividend amount is decided by the board of directors."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<CashProceedsDefinition, List<Dividend>> mmDividend = new MMBusinessAssociationEnd<CashProceedsDefinition, List<Dividend>>() {
@@ -1951,15 +1951,15 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition
 	 * CashProceedsDefinition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PaymentCurrency"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Currency for the payment of the cash proceeds."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CashProceedsDefinition, CurrencyCode> mmPaymentCurrency = new MMBusinessAttribute<CashProceedsDefinition, CurrencyCode>() {
@@ -2011,16 +2011,16 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition
 	 * CashProceedsDefinition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "StatusCashAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Amount of cash subscribed that has been assigned the status indicated."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CashProceedsDefinition, CurrencyAndAmount> mmStatusCashAmount = new MMBusinessAttribute<CashProceedsDefinition, CurrencyAndAmount>() {

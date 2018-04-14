@@ -362,14 +362,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "OrganisationIdentification"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Unique and unambiguous way to identify an organisation."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class OrganisationIdentification extends PartyIdentificationInformation {
@@ -661,10 +661,6 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification
 	 * OrganisationIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BICFI"</li>
 	 * <li>
@@ -672,6 +668,10 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * definition} =
 	 * "Code allocated to a financial institution by the ISO 9362 Registration Authority as described in ISO 9362 \"Banking - Banking telecommunication messages - Business identifier code (BIC)\"."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<OrganisationIdentification, BICFIIdentifier> mmBICFI = new MMBusinessAttribute<OrganisationIdentification, BICFIIdentifier>() {
@@ -1411,10 +1411,6 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification
 	 * OrganisationIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AnyBIC"</li>
 	 * <li>
@@ -1422,6 +1418,10 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * definition} =
 	 * "Code allocated to a financial or non-financial institution by the ISO 9362 Registration Authority, as described in ISO 9362 \"Banking - Banking telecommunication messages - Business identifier code (BIC)\"."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<OrganisationIdentification, AnyBICIdentifier> mmAnyBIC = new MMBusinessAttribute<OrganisationIdentification, AnyBICIdentifier>() {
@@ -1499,6 +1499,10 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.OrganisationName
+	 * OrganisationName}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.OrganisationName#mmOrganisation
@@ -1506,10 +1510,6 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.OrganisationName
-	 * OrganisationName}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1535,10 +1535,6 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification
 	 * OrganisationIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OrganisationName"</li>
 	 * <li>
@@ -1546,6 +1542,10 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * definition} =
 	 * "Name by which an organisation is known and which is usually used to identify that organisation. It is derived from the association between PartyIdentificationInformation and PartyName."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<OrganisationIdentification, List<OrganisationName>> mmOrganisationName = new MMBusinessAssociationEnd<OrganisationIdentification, List<OrganisationName>>() {
@@ -1579,6 +1579,10 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.Organisation
+	 * Organisation}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
@@ -1587,23 +1591,19 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.Organisation
-	 * Organisation}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification
 	 * OrganisationIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Organisation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Organisation which is identified"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<OrganisationIdentification, Optional<Organisation>> mmOrganisation = new MMBusinessAssociationEnd<OrganisationIdentification, Optional<Organisation>>() {
@@ -1637,6 +1637,11 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} =
+	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
+	 * CashClearingSystemMember}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember#mmOrganisationIdentification
@@ -1644,11 +1649,6 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} =
-	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
-	 * CashClearingSystemMember}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1712,10 +1712,6 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification
 	 * OrganisationIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ClearingSystemMemberIdentificationType"</li>
 	 * <li>
@@ -1723,6 +1719,10 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * definition} =
 	 * "Unique and unambiguous identifier of a clearing system member, assigned by the system or system administrator."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<OrganisationIdentification, List<CashClearingSystemMember>> mmClearingSystemMemberIdentificationType = new MMBusinessAssociationEnd<OrganisationIdentification, List<CashClearingSystemMember>>() {
@@ -1797,10 +1797,6 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification
 	 * OrganisationIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BICNonFI"</li>
 	 * <li>
@@ -1808,6 +1804,10 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * definition} =
 	 * "Code allocated to a non-financial institution by the ISO 9362 Registration Authority as described in ISO 9362 \"Banking - Banking telecommunication messages - Business identifier code (BIC)\"."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<OrganisationIdentification, BICNonFIIdentifier> mmBICNonFI = new MMBusinessAttribute<OrganisationIdentification, BICNonFIIdentifier>() {
@@ -1861,10 +1861,6 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification
 	 * OrganisationIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EANGLN"</li>
 	 * <li>
@@ -1872,6 +1868,10 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * definition} =
 	 * "Global Location Number. A non-significant reference number used to identify legal entities, functional entities, or physical entities according to the European Association for Numbering (EAN) numbering scheme rules. The number is used to retrieve detailed information that is linked to it."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<OrganisationIdentification, EANGLNIdentifier> mmEANGLN = new MMBusinessAttribute<OrganisationIdentification, EANGLNIdentifier>() {
@@ -1924,10 +1924,6 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification
 	 * OrganisationIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CHIPSUniversalIdentifier"</li>
 	 * <li>
@@ -1935,6 +1931,10 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * definition} =
 	 * "(United States) Clearing House Interbank Payments System (CHIPS) Universal Identification (UID). Identifies entities that own accounts at CHIPS participating financial institutions, through which CHIPS payments are effected. The CHIPS UID is assigned by the New York Clearing House."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<OrganisationIdentification, com.tools20022.repository.datatype.CHIPSUniversalIdentifier> mmCHIPSUniversalIdentifier = new MMBusinessAttribute<OrganisationIdentification, com.tools20022.repository.datatype.CHIPSUniversalIdentifier>() {
@@ -1987,10 +1987,6 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification
 	 * OrganisationIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DUNS"</li>
 	 * <li>
@@ -1998,6 +1994,10 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * definition} =
 	 * "Data Universal Numbering System. A unique identification number provided by Dun &amp; Bradstreet to identify an organization."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<OrganisationIdentification, DunsIdentifier> mmDUNS = new MMBusinessAttribute<OrganisationIdentification, DunsIdentifier>() {
@@ -2049,10 +2049,6 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification
 	 * OrganisationIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BankPartyIdentification"</li>
 	 * <li>
@@ -2060,6 +2056,10 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * definition} =
 	 * "Unique and unambiguous assignment made by a specific bank to identify a relationship as defined between the bank and its client."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<OrganisationIdentification, Max35Text> mmBankPartyIdentification = new MMBusinessAttribute<OrganisationIdentification, Max35Text>() {
@@ -2215,10 +2215,6 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification
 	 * OrganisationIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MIC"</li>
 	 * <li>
@@ -2226,6 +2222,10 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * definition} =
 	 * "Market Identifier Code. Identification of a financial market, as stipulated in the norm ISO 10383 \"Codes for exchanges and market identifications\"."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<OrganisationIdentification, MICIdentifier> mmMIC = new MMBusinessAttribute<OrganisationIdentification, MICIdentifier>() {

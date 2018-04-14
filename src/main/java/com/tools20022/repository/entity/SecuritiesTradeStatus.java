@@ -689,14 +689,14 @@ import java.util.Objects;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "SecuritiesTradeStatus"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Status of a securities trade."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class SecuritiesTradeStatus extends Status {
@@ -1109,15 +1109,15 @@ public class SecuritiesTradeStatus extends Status {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus
 	 * SecuritiesTradeStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MatchingStatus"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Status of matching of a trade."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTradeStatus, MatchingStatusCode> mmMatchingStatus = new MMBusinessAttribute<SecuritiesTradeStatus, MatchingStatusCode>() {
@@ -1356,15 +1356,15 @@ public class SecuritiesTradeStatus extends Status {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus
 	 * SecuritiesTradeStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AffirmationStatus"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Status of affirmation of a trade."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTradeStatus, AffirmationStatusCode> mmAffirmationStatus = new MMBusinessAttribute<SecuritiesTradeStatus, AffirmationStatusCode>() {
@@ -1409,6 +1409,11 @@ public class SecuritiesTradeStatus extends Status {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason
+	 * SecuritiesTradeStatusReason}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason#mmSecuritiesTradeStatus
@@ -1416,11 +1421,6 @@ public class SecuritiesTradeStatus extends Status {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason
-	 * SecuritiesTradeStatusReason}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -1659,10 +1659,6 @@ public class SecuritiesTradeStatus extends Status {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus
 	 * SecuritiesTradeStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Reason"</li>
 	 * <li>
@@ -1670,6 +1666,10 @@ public class SecuritiesTradeStatus extends Status {
 	 * definition} =
 	 * "Specifies the reasons for the status. It is derived from the relationship between Status and Status Reason."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesTradeStatus, List<SecuritiesTradeStatusReason>> mmReason = new MMBusinessAssociationEnd<SecuritiesTradeStatus, List<SecuritiesTradeStatusReason>>() {
@@ -1719,6 +1719,10 @@ public class SecuritiesTradeStatus extends Status {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesTrade
+	 * SecuritiesTrade}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#mmSecuritiesTradeStatus
@@ -1727,23 +1731,19 @@ public class SecuritiesTradeStatus extends Status {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesTrade
-	 * SecuritiesTrade}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus
 	 * SecuritiesTradeStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SecuritiesTrade"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the trade which has a specific status."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesTradeStatus, List<SecuritiesTrade>> mmSecuritiesTrade = new MMBusinessAssociationEnd<SecuritiesTradeStatus, List<SecuritiesTrade>>() {
@@ -1799,15 +1799,15 @@ public class SecuritiesTradeStatus extends Status {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus
 	 * SecuritiesTradeStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TransactionStatus"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Status of an investment fund transaction."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTradeStatus, TransactionStatusCode> mmTransactionStatus = new MMBusinessAttribute<SecuritiesTradeStatus, TransactionStatusCode>() {
@@ -1866,16 +1866,16 @@ public class SecuritiesTradeStatus extends Status {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus
 	 * SecuritiesTradeStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReplacementProcessingStatus"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Provides the processing status of the replacement request."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTradeStatus, ReplacementProcessingStatusCode> mmReplacementProcessingStatus = new MMBusinessAttribute<SecuritiesTradeStatus, ReplacementProcessingStatusCode>() {
@@ -1934,15 +1934,15 @@ public class SecuritiesTradeStatus extends Status {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus
 	 * SecuritiesTradeStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CancellationStatus"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Status of the cancellation of a trade."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTradeStatus, CancellationStatusCode> mmCancellationStatus = new MMBusinessAttribute<SecuritiesTradeStatus, CancellationStatusCode>() {
@@ -1993,16 +1993,16 @@ public class SecuritiesTradeStatus extends Status {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus
 	 * SecuritiesTradeStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CancellationRight"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Cancellation right of an investor with respect to an order."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTradeStatus, CancellationRightCode> mmCancellationRight = new MMBusinessAttribute<SecuritiesTradeStatus, CancellationRightCode>() {
@@ -2070,10 +2070,6 @@ public class SecuritiesTradeStatus extends Status {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus
 	 * SecuritiesTradeStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TransferStatus"</li>
 	 * <li>
@@ -2081,6 +2077,10 @@ public class SecuritiesTradeStatus extends Status {
 	 * definition} =
 	 * "Status of the transfer is accepted, sent to next party, matched, already executed, or settled."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTradeStatus, TransferStatusCode> mmTransferStatus = new MMBusinessAttribute<SecuritiesTradeStatus, TransferStatusCode>() {
@@ -2206,15 +2206,15 @@ public class SecuritiesTradeStatus extends Status {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus
 	 * SecuritiesTradeStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AllegedStatus"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Provides the status of an allegement."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTradeStatus, AllegementStatusCode> mmAllegedStatus = new MMBusinessAttribute<SecuritiesTradeStatus, AllegementStatusCode>() {
@@ -2307,10 +2307,6 @@ public class SecuritiesTradeStatus extends Status {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus
 	 * SecuritiesTradeStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CollateralAllocationStatus"</li>
 	 * <li>
@@ -2318,6 +2314,10 @@ public class SecuritiesTradeStatus extends Status {
 	 * definition} =
 	 * "Provides the status of allocation of collateral to cover the instruction."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTradeStatus, AllocationStatusCode> mmCollateralAllocationStatus = new MMBusinessAttribute<SecuritiesTradeStatus, AllocationStatusCode>() {
@@ -2408,10 +2408,6 @@ public class SecuritiesTradeStatus extends Status {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus
 	 * SecuritiesTradeStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RepoCallRequestStatus"</li>
 	 * <li>
@@ -2419,6 +2415,10 @@ public class SecuritiesTradeStatus extends Status {
 	 * definition} =
 	 * "Specifies additional information about the status of the repurchase agreement call processed instruction."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTradeStatus, RepoCallRequestStatusCode> mmRepoCallRequestStatus = new MMBusinessAttribute<SecuritiesTradeStatus, RepoCallRequestStatusCode>() {
@@ -2497,10 +2497,6 @@ public class SecuritiesTradeStatus extends Status {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus
 	 * SecuritiesTradeStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SettlementConditionModificationStatus"</li>
 	 * <li>
@@ -2508,6 +2504,10 @@ public class SecuritiesTradeStatus extends Status {
 	 * definition} =
 	 * "Provides the status of the securities settlement condition modification request."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTradeStatus, SettlementConditionModificationStatusStatusCode> mmSettlementConditionModificationStatus = new MMBusinessAttribute<SecuritiesTradeStatus, SettlementConditionModificationStatusStatusCode>() {
@@ -2551,15 +2551,15 @@ public class SecuritiesTradeStatus extends Status {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus
 	 * SecuritiesTradeStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MatchingProcess"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the matching status of a trade."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTradeStatus, MatchingProcessCode> mmMatchingProcess = new MMBusinessAttribute<SecuritiesTradeStatus, MatchingProcessCode>() {
@@ -2591,6 +2591,10 @@ public class SecuritiesTradeStatus extends Status {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesTransfer
+	 * SecuritiesTransfer}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmStatus
@@ -2599,23 +2603,19 @@ public class SecuritiesTradeStatus extends Status {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesTransfer
-	 * SecuritiesTransfer}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus
 	 * SecuritiesTradeStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RelatedSecuritiesTransfer"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Transfer operation for which a status is provided"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<SecuritiesTradeStatus, SecuritiesTransfer> mmRelatedSecuritiesTransfer = new MMBusinessAssociationEnd<SecuritiesTradeStatus, SecuritiesTransfer>() {
@@ -2658,10 +2658,6 @@ public class SecuritiesTradeStatus extends Status {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus
 	 * SecuritiesTradeStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradeConfirmationStatus"</li>
 	 * <li>
@@ -2669,6 +2665,10 @@ public class SecuritiesTradeStatus extends Status {
 	 * definition} =
 	 * "Specifies whether the contract was electronically confirmed, non-electronically confirmed or remains unconfirmed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SecuritiesTradeStatus, TradeConfirmationTypeCode> mmTradeConfirmationStatus = new MMBusinessAttribute<SecuritiesTradeStatus, TradeConfirmationTypeCode>() {

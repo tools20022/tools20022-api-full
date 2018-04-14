@@ -38,10 +38,6 @@ public class ConstraintRequestRejectedRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeCaptureReportV01
 	 * ForeignExchangeTradeCaptureReportV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RequestRejectedRule"</li>
 	 * <li>
@@ -49,6 +45,10 @@ public class ConstraintRequestRejectedRule {
 	 * definition} =
 	 * "If Request Rejected is \"true\" or \"1\" (Yes), then Query Reject Reason must be present.\r\nIf Request Rejected is \"false\" or \"0\" (No), then Total Number Trades and Last Report Requested must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ForeignExchangeTradeCaptureReportV01> for_fxtr_ForeignExchangeTradeCaptureReportV01 = new MMConstraint<ForeignExchangeTradeCaptureReportV01>() {

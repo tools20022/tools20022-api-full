@@ -39,10 +39,6 @@ public class ConstraintExtendedPartyRole2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountParties2
 	 * AccountParties2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ExtendedPartyRole2Rule"</li>
 	 * <li>
@@ -50,6 +46,10 @@ public class ConstraintExtendedPartyRole2Rule {
 	 * definition} =
 	 * "In any occurrence of one or more of the message elements in the list (Administrator, PrimaryOwner, Trustee, CustodianForMinor,Nominee, SecondaryOwner, Beneficiary, PowerOfAttorney, LegalGuardian, SuccessorOnDeath), the ExtendedPartyRole may not be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountParties2> forAccountParties2 = new MMConstraint<AccountParties2>() {
@@ -73,10 +73,6 @@ public class ConstraintExtendedPartyRole2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountParties3
 	 * AccountParties3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ExtendedPartyRole2Rule"</li>
 	 * <li>
@@ -84,6 +80,10 @@ public class ConstraintExtendedPartyRole2Rule {
 	 * definition} =
 	 * "In any occurrence of one or more of the message elements in the list (Administrator, PrimaryOwner, Trustee, CustodianForMinor,Nominee, SecondaryOwner, Beneficiary, PowerOfAttorney, LegalGuardian, SuccessorOnDeath), the ExtendedPartyRole may not be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountParties3> forAccountParties3 = new MMConstraint<AccountParties3>() {

@@ -80,16 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "RelatedCustodianMessageDetailsSD1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Provides selected corporate action events message details extracted from the related custodian messages received."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -117,13 +117,6 @@ public class RelatedCustodianMessageDetailsSD1 {
 	 * RelatedCustodianMessageDetailsSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RcvdEvtTp"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = DTCCSynonym: Received CAEV Value</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReceivedEventType"</li>
 	 * <li>
@@ -131,6 +124,13 @@ public class RelatedCustodianMessageDetailsSD1 {
 	 * definition} =
 	 * "Reference the CAEV value from the received custodian message. Applicable to custodian service only."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Received CAEV Value</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<RelatedCustodianMessageDetailsSD1, Max4AlphaNumericText> mmReceivedEventType = new MMMessageAttribute<RelatedCustodianMessageDetailsSD1, Max4AlphaNumericText>() {
@@ -176,13 +176,6 @@ public class RelatedCustodianMessageDetailsSD1 {
 	 * RelatedCustodianMessageDetailsSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RcvdMndtryVlntryEvtTp"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = DTCCSynonym: Received CAMV Value</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReceivedMandatoryVoluntaryEventType"</li>
 	 * <li>
@@ -190,6 +183,13 @@ public class RelatedCustodianMessageDetailsSD1 {
 	 * definition} =
 	 * "Reference the CAMV value from the received custodian message. Applicable to custodian service only."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Received CAMV Value</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<RelatedCustodianMessageDetailsSD1, Max4AlphaNumericText> mmReceivedMandatoryVoluntaryEventType = new MMMessageAttribute<RelatedCustodianMessageDetailsSD1, Max4AlphaNumericText>() {
@@ -235,13 +235,6 @@ public class RelatedCustodianMessageDetailsSD1 {
 	 * RelatedCustodianMessageDetailsSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RcvdCorpActnEvtId"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = DTCCSynonym: Received Corp Number</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReceivedCorporateActionEventIdentification"</li>
 	 * <li>
@@ -249,6 +242,13 @@ public class RelatedCustodianMessageDetailsSD1 {
 	 * definition} =
 	 * "Reference the CORP value from the received custodian message. Applicable to custodian service only."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Received Corp Number</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<RelatedCustodianMessageDetailsSD1, RestrictedFINXMax16Text> mmReceivedCorporateActionEventIdentification = new MMMessageAttribute<RelatedCustodianMessageDetailsSD1, RestrictedFINXMax16Text>() {
@@ -293,13 +293,6 @@ public class RelatedCustodianMessageDetailsSD1 {
 	 * RelatedCustodianMessageDetailsSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RcvdDt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = DTCCSynonym: Received Date</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReceivedDate"</li>
 	 * <li>
@@ -307,6 +300,13 @@ public class RelatedCustodianMessageDetailsSD1 {
 	 * definition} =
 	 * "Rate that the ISO message was received from the custodian. Applicable to custodian service only."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Received Date</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<RelatedCustodianMessageDetailsSD1, ISODate> mmReceivedDate = new MMMessageAttribute<RelatedCustodianMessageDetailsSD1, ISODate>() {
@@ -351,13 +351,6 @@ public class RelatedCustodianMessageDetailsSD1 {
 	 * RelatedCustodianMessageDetailsSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RcvdTm"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = DTCCSynonym: Received Time</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReceivedTime"</li>
 	 * <li>
@@ -365,6 +358,13 @@ public class RelatedCustodianMessageDetailsSD1 {
 	 * definition} =
 	 * "Time of day that the ISO message was received from the custodian. Applicable to custodian service only."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Received Time</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<RelatedCustodianMessageDetailsSD1, Optional<ISOTime>> mmReceivedTime = new MMMessageAttribute<RelatedCustodianMessageDetailsSD1, Optional<ISOTime>>() {
@@ -410,13 +410,6 @@ public class RelatedCustodianMessageDetailsSD1 {
 	 * RelatedCustodianMessageDetailsSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "InbndISOMT"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = DTCCSynonym: Inbound ISO Message Type</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InboundISOMessageType"</li>
 	 * <li>
@@ -424,6 +417,13 @@ public class RelatedCustodianMessageDetailsSD1 {
 	 * definition} =
 	 * "Reference of the ISO15022 MT message type received from the custodian message. Applicable to custodian service only."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Inbound ISO Message Type</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<RelatedCustodianMessageDetailsSD1, Exact3NumericText> mmInboundISOMessageType = new MMMessageAttribute<RelatedCustodianMessageDetailsSD1, Exact3NumericText>() {
@@ -469,13 +469,6 @@ public class RelatedCustodianMessageDetailsSD1 {
 	 * RelatedCustodianMessageDetailsSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "InbndISOMsgRcvrBIC"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = DTCCSynonym: Inbound ISO Message Receiver BIC</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InboundISOMessageReceiverBIC"</li>
 	 * <li>
@@ -483,6 +476,13 @@ public class RelatedCustodianMessageDetailsSD1 {
 	 * definition} =
 	 * "BIC Code of the recipient of the custodian record on a received message. Applicable to custodian service only."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Inbound ISO Message Receiver BIC</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<RelatedCustodianMessageDetailsSD1, AnyBICIdentifier> mmInboundISOMessageReceiverBIC = new MMMessageAttribute<RelatedCustodianMessageDetailsSD1, AnyBICIdentifier>() {
@@ -528,13 +528,6 @@ public class RelatedCustodianMessageDetailsSD1 {
 	 * RelatedCustodianMessageDetailsSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RcvdRltdRef"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = DTCCSynonym: Received Related Reference</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReceivedRelatedReference"</li>
 	 * <li>
@@ -542,6 +535,13 @@ public class RelatedCustodianMessageDetailsSD1 {
 	 * definition} =
 	 * "Sender related reference from the received custodian message. Applicable to custodian service only."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Received Related Reference</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<RelatedCustodianMessageDetailsSD1, RestrictedFINXMax16Text> mmReceivedRelatedReference = new MMMessageAttribute<RelatedCustodianMessageDetailsSD1, RestrictedFINXMax16Text>() {
@@ -587,13 +587,6 @@ public class RelatedCustodianMessageDetailsSD1 {
 	 * RelatedCustodianMessageDetailsSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RcvdSndrMsgRef"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = DTCCSynonym: Received SEME</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReceivedSenderMessageReference"</li>
 	 * <li>
@@ -601,6 +594,13 @@ public class RelatedCustodianMessageDetailsSD1 {
 	 * definition} =
 	 * "Sender SEME from received custodian message. Applicable to custodian service only."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Received SEME</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<RelatedCustodianMessageDetailsSD1, RestrictedFINXMax16Text> mmReceivedSenderMessageReference = new MMMessageAttribute<RelatedCustodianMessageDetailsSD1, RestrictedFINXMax16Text>() {
@@ -646,13 +646,6 @@ public class RelatedCustodianMessageDetailsSD1 {
 	 * RelatedCustodianMessageDetailsSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "InbndISOMsgSndrBIC"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
-	 * semanticMarkup} = DTCCSynonym: Inbound ISO Message Sender BIC</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InboundISOMessageSenderBIC"</li>
 	 * <li>
@@ -660,6 +653,13 @@ public class RelatedCustodianMessageDetailsSD1 {
 	 * definition} =
 	 * "BIC Code of the sender of the custodian record on a received message. Applicable to custodian service only."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Inbound ISO Message Sender BIC</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<RelatedCustodianMessageDetailsSD1, AnyBICIdentifier> mmInboundISOMessageSenderBIC = new MMMessageAttribute<RelatedCustodianMessageDetailsSD1, AnyBICIdentifier>() {

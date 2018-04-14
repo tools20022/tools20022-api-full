@@ -36,10 +36,6 @@ public class ConstraintAmountSignRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PriceValueChange1
 	 * PriceValueChange1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AmountSignRule"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintAmountSignRule {
 	 * definition} =
 	 * "If Amount is present, then AmountSign is optional. If Amount is not present, then AmountSign is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PriceValueChange1> forPriceValueChange1 = new MMConstraint<PriceValueChange1>() {

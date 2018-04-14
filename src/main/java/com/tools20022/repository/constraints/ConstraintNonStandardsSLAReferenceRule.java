@@ -36,10 +36,6 @@ public class ConstraintNonStandardsSLAReferenceRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TotalFeesAndTaxes40
 	 * TotalFeesAndTaxes40}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NonStandardsSLAReferenceRule"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintNonStandardsSLAReferenceRule {
 	 * definition} =
 	 * "For each value of IndividualFee/Type, NonStandardSLAReference may only be present once."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TotalFeesAndTaxes40> forTotalFeesAndTaxes40 = new MMConstraint<TotalFeesAndTaxes40>() {

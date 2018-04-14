@@ -102,14 +102,14 @@ import java.util.Objects;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CashDistribution"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Distribution of cash pay-out."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class CashDistribution extends Distribution {
@@ -122,6 +122,10 @@ public class CashDistribution extends Distribution {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.CurrencyExchange
+	 * CurrencyExchange}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmCurrencyExchangeForCashDistribution
@@ -130,18 +134,10 @@ public class CashDistribution extends Distribution {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.CurrencyExchange
-	 * CurrencyExchange}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashDistribution
 	 * CashDistribution}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DistributionCurrencyExchangeInformation"</li>
 	 * <li>
@@ -149,6 +145,10 @@ public class CashDistribution extends Distribution {
 	 * definition} =
 	 * "Detailed information about the currency exchange in a distribution event."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<CashDistribution, List<CurrencyExchange>> mmDistributionCurrencyExchangeInformation = new MMBusinessAssociationEnd<CashDistribution, List<CurrencyExchange>>() {
@@ -181,6 +181,11 @@ public class CashDistribution extends Distribution {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesAndCashDistribution
+	 * SecuritiesAndCashDistribution}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesAndCashDistribution#mmCashDistribution
@@ -189,25 +194,20 @@ public class CashDistribution extends Distribution {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesAndCashDistribution
-	 * SecuritiesAndCashDistribution}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashDistribution
 	 * CashDistribution}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SecuritiesAndCashDistribution"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Distribution for which the cash distribution elements are provided."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<CashDistribution, com.tools20022.repository.entity.SecuritiesAndCashDistribution> mmSecuritiesAndCashDistribution = new MMBusinessAssociationEnd<CashDistribution, com.tools20022.repository.entity.SecuritiesAndCashDistribution>() {
@@ -249,10 +249,6 @@ public class CashDistribution extends Distribution {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashDistribution
 	 * CashDistribution}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AmortisedRate"</li>
 	 * <li>
@@ -260,6 +256,10 @@ public class CashDistribution extends Distribution {
 	 * definition} =
 	 * "Rate that will be applicable as of the next factor date and defines the outstanding principal of the factored security."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CashDistribution, BaseOneRate> mmAmortisedRate = new MMBusinessAttribute<CashDistribution, BaseOneRate>() {
@@ -300,10 +300,6 @@ public class CashDistribution extends Distribution {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashDistribution
 	 * CashDistribution}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Rate"</li>
 	 * <li>
@@ -311,6 +307,10 @@ public class CashDistribution extends Distribution {
 	 * definition} =
 	 * "Amount of cash, expressed as a percentage, disbursed per financial instrument."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CashDistribution, PercentageRate> mmRate = new MMBusinessAttribute<CashDistribution, PercentageRate>() {
@@ -351,16 +351,16 @@ public class CashDistribution extends Distribution {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashDistribution
 	 * CashDistribution}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CashIndemnityRate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Ratio of compensation for damage/loss versus value of insured entity"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CashDistribution, PercentageRate> mmCashIndemnityRate = new MMBusinessAttribute<CashDistribution, PercentageRate>() {
@@ -401,10 +401,6 @@ public class CashDistribution extends Distribution {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashDistribution
 	 * CashDistribution}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DividendReinvestmentIndicator"</li>
 	 * <li>
@@ -412,6 +408,10 @@ public class CashDistribution extends Distribution {
 	 * definition} =
 	 * "Indicates whether a cash dividend can be rolled over into shares of the issuing company."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CashDistribution, YesNoIndicator> mmDividendReinvestmentIndicator = new MMBusinessAttribute<CashDistribution, YesNoIndicator>() {
@@ -452,10 +452,6 @@ public class CashDistribution extends Distribution {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashDistribution
 	 * CashDistribution}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InterestAmount"</li>
 	 * <li>
@@ -463,6 +459,10 @@ public class CashDistribution extends Distribution {
 	 * definition} =
 	 * "Amount of interest paid to the principal amount of the financial instrument for a specific period of time."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CashDistribution, CurrencyAndAmount> mmInterestAmount = new MMBusinessAttribute<CashDistribution, CurrencyAndAmount>() {
@@ -503,10 +503,6 @@ public class CashDistribution extends Distribution {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashDistribution
 	 * CashDistribution}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InterestRate"</li>
 	 * <li>
@@ -514,6 +510,10 @@ public class CashDistribution extends Distribution {
 	 * definition} =
 	 * "Ratio of the amount of interest paid to the principal amount of the financial instrument for a specific period of time."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CashDistribution, PercentageRate> mmInterestRate = new MMBusinessAttribute<CashDistribution, PercentageRate>() {
@@ -554,10 +554,6 @@ public class CashDistribution extends Distribution {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashDistribution
 	 * CashDistribution}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LoyaltyPremiumIndicator"</li>
 	 * <li>
@@ -565,6 +561,10 @@ public class CashDistribution extends Distribution {
 	 * definition} =
 	 * "Indicates whether dividends, in addition to regular dividends, are payable to loyal (time, size, amount) investors."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CashDistribution, YesNoIndicator> mmLoyaltyPremiumIndicator = new MMBusinessAttribute<CashDistribution, YesNoIndicator>() {
@@ -605,10 +605,6 @@ public class CashDistribution extends Distribution {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashDistribution
 	 * CashDistribution}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PaymentType"</li>
 	 * <li>
@@ -616,6 +612,10 @@ public class CashDistribution extends Distribution {
 	 * definition} =
 	 * "Provides information about the whether the payment will be before or after tax."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CashDistribution, PaymentTypeCode> mmPaymentType = new MMBusinessAttribute<CashDistribution, PaymentTypeCode>() {
@@ -655,10 +655,6 @@ public class CashDistribution extends Distribution {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashDistribution
 	 * CashDistribution}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SelectionDate"</li>
 	 * <li>
@@ -666,6 +662,10 @@ public class CashDistribution extends Distribution {
 	 * definition} =
 	 * "Date/time at which securities are selected for redemption prior to maturity."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CashDistribution, ISODateTime> mmSelectionDate = new MMBusinessAttribute<CashDistribution, ISODateTime>() {
@@ -706,10 +706,6 @@ public class CashDistribution extends Distribution {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashDistribution
 	 * CashDistribution}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CashDistributionRate"</li>
 	 * <li>
@@ -717,6 +713,10 @@ public class CashDistribution extends Distribution {
 	 * definition} =
 	 * "Amount, expressed as a percentage, of cash disbursed per financial instrument."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CashDistribution, PercentageRate> mmCashDistributionRate = new MMBusinessAttribute<CashDistribution, PercentageRate>() {
@@ -757,15 +757,15 @@ public class CashDistribution extends Distribution {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CashDistribution
 	 * CashDistribution}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CashDistributionAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount of cash disbursed per financial instrument."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<CashDistribution, CurrencyAndAmount> mmCashDistributionAmount = new MMBusinessAttribute<CashDistribution, CurrencyAndAmount>() {

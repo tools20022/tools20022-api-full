@@ -37,10 +37,6 @@ public class ConstraintEligibleCollateralValueRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.BalanceAmounts3
 	 * BalanceAmounts3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EligibleCollateralValueRule"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintEligibleCollateralValueRule {
 	 * definition} =
 	 * "EligibleCollateralValue is only to be used in (I)CSD-participant communication or if bilaterally agreed between the sender and receiver."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<BalanceAmounts3> forBalanceAmounts3 = new MMConstraint<BalanceAmounts3>() {
@@ -71,10 +71,6 @@ public class ConstraintEligibleCollateralValueRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.BalanceAmounts4
 	 * BalanceAmounts4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EligibleCollateralValueRule"</li>
 	 * <li>
@@ -82,6 +78,10 @@ public class ConstraintEligibleCollateralValueRule {
 	 * definition} =
 	 * "EligibleCollateralValue is only to be used in (I)CSD-participant communication or if bilaterally agreed between the sender and receiver."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<BalanceAmounts4> forBalanceAmounts4 = new MMConstraint<BalanceAmounts4>() {

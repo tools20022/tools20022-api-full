@@ -36,10 +36,6 @@ public class ConstraintReferenceElementRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference10
 	 * MessageAndBusinessReference10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReferenceElementRule"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintReferenceElementRule {
 	 * definition} =
 	 * "One of the elements (Reference, RelatedReference, OrderReference) must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<MessageAndBusinessReference10> forMessageAndBusinessReference10 = new MMConstraint<MessageAndBusinessReference10>() {

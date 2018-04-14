@@ -88,16 +88,16 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "SettlementAccount1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Deposit account used by the central counterparty to make payments to and from its clearing members."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -129,15 +129,15 @@ public class SettlementAccount1 {
 	 * SettlementAccount1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Id"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Identification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identification of the settlement account."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<SettlementAccount1, GenericIdentification165> mmIdentification = new MMMessageAssociationEnd<SettlementAccount1, GenericIdentification165>() {
@@ -187,10 +187,6 @@ public class SettlementAccount1 {
 	 * SettlementAccount1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "EndOfDayInitlMrgnClld"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EndOfDayInitialMarginCalled"</li>
 	 * <li>
@@ -198,6 +194,10 @@ public class SettlementAccount1 {
 	 * definition} =
 	 * "Total value of initial margin to be called or returned to clearing member the morning following end of day. Indicates whether the clearing member has an obligation to deliver cash to the CCP (true) or receive cash from the CCP (false)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<SettlementAccount1, AmountAndDirection86> mmEndOfDayInitialMarginCalled = new MMMessageAssociationEnd<SettlementAccount1, AmountAndDirection86>() {
@@ -247,10 +247,6 @@ public class SettlementAccount1 {
 	 * SettlementAccount1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "EndOfDayVartnMrgnClld"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EndOfDayVariationMarginCalled"</li>
 	 * <li>
@@ -258,6 +254,10 @@ public class SettlementAccount1 {
 	 * definition} =
 	 * "Total cash receivable (or payable) in the relevant currency based on changes in the mark-to-market of a clearing member’s positions, including liabilities (or credits) relating to option premiums, upfront fees or cash calls to cover other mark-to-market exposures where such exposures create a cash payable / receivable from the member. Indicates whether the clearing member has an obligation to deliver cash to the CCP (true) or receive cash from the CCP (false).\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<SettlementAccount1, AmountAndDirection86> mmEndOfDayVariationMarginCalled = new MMMessageAssociationEnd<SettlementAccount1, AmountAndDirection86>() {
@@ -307,10 +307,6 @@ public class SettlementAccount1 {
 	 * SettlementAccount1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "EndOfDayDfltFndClld"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EndOfDayDefaultFundCalled"</li>
 	 * <li>
@@ -318,6 +314,10 @@ public class SettlementAccount1 {
 	 * definition} =
 	 * "Total net cash receivable (payable) in the relevant currency that will be called to cover default fund requirements. DF receipts from clearing members are positive, payments to members are negative. Indicates whether the clearing member has an obligation to deliver cash to the CCP (true) or receive cash from the CCP (false)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<SettlementAccount1, AmountAndDirection86> mmEndOfDayDefaultFundCalled = new MMMessageAssociationEnd<SettlementAccount1, AmountAndDirection86>() {
@@ -367,10 +367,6 @@ public class SettlementAccount1 {
 	 * SettlementAccount1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "EndOfDaySttlmClld"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EndOfDaySettlementCalled"</li>
 	 * <li>
@@ -378,6 +374,10 @@ public class SettlementAccount1 {
 	 * definition} =
 	 * "Total cash receivable (or payable) in the relevant currency arising from settlement or delivery obligations of a Clearing Member positions where such obligations arise in the payment system of the CCP. Indicates whether the clearing member has an obligation to deliver cash to the CCP (true) or receive cash from the CCP (false)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<SettlementAccount1, AmountAndDirection86> mmEndOfDaySettlementCalled = new MMMessageAssociationEnd<SettlementAccount1, AmountAndDirection86>() {
@@ -427,10 +427,6 @@ public class SettlementAccount1 {
 	 * SettlementAccount1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "EndOfDayOthrClld"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EndOfDayOtherCalled"</li>
 	 * <li>
@@ -438,6 +434,10 @@ public class SettlementAccount1 {
 	 * definition} =
 	 * "Other cash receivable (payables) in the relevant currency that will be called from or paid to the Clearing Member by the CCP. Such obligations may include exchange/clearing fees, and interest on margin interest on mark-to-market, coupon payments (including such payments called and settled by a securities settlement system). Indicates whether the clearing member has an obligation to deliver cash to the CCP (true) or receive cash from the CCP (false)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<SettlementAccount1, AmountAndDirection86> mmEndOfDayOtherCalled = new MMMessageAssociationEnd<SettlementAccount1, AmountAndDirection86>() {
@@ -487,10 +487,6 @@ public class SettlementAccount1 {
 	 * SettlementAccount1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "EndOfDayLqdtyClld"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EndOfDayLiquidityCalled"</li>
 	 * <li>
@@ -498,6 +494,10 @@ public class SettlementAccount1 {
 	 * definition} =
 	 * "Net cash receivables (payable) that will be called/paid by the CCP to the clearing member in the relevant currency. If the amount represents a credit for the clearing member, the net cash amount due to be delivered on the reporting date and/or returnable on demand by the Clearing Member. Indicates whether the clearing member has an obligation to deliver cash to the CCP (true) or receive cash from the CCP (false)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<SettlementAccount1, AmountAndDirection86> mmEndOfDayLiquidityCalled = new MMMessageAssociationEnd<SettlementAccount1, AmountAndDirection86>() {
@@ -549,15 +549,15 @@ public class SettlementAccount1 {
 	 * SettlementAccount1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Ccy"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Currency"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Currency of the settlement account."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<SettlementAccount1, ActiveCurrencyCode> mmCurrency = new MMMessageAttribute<SettlementAccount1, ActiveCurrencyCode>() {

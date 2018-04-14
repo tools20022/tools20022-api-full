@@ -68,8 +68,8 @@ import javax.xml.bind.annotation.XmlType;
  * {@linkplain com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV01#mmCase
  * FIToFIPaymentCancellationRequestV01.mmCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV03#mmCase
- * RequestToModifyPaymentV03.mmCase}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV03_replaced#mmCase
+ * RequestToModifyPaymentV03_replaced.mmCase}</li>
  * <li>{@linkplain com.tools20022.repository.area.camt.UnableToApplyV03#mmCase
  * UnableToApplyV03.mmCase}</li>
  * <li>
@@ -117,14 +117,14 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "Case2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Set of elements used to identify a case."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -154,15 +154,15 @@ public class Case2 {
 	 * Case2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Id"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Identification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Uniquely identifies the case."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<Case2, Max35Text> mmIdentification = new MMMessageAttribute<Case2, Max35Text>() {
@@ -210,15 +210,15 @@ public class Case2 {
 	 * Case2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Cretr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Creator"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Party that created the investigation case."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<Case2, Party7Choice> mmCreator = new MMMessageAssociationEnd<Case2, Party7Choice>() {
@@ -264,10 +264,6 @@ public class Case2 {
 	 * Case2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ReopCaseIndctn"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReopenCaseIndication"</li>
 	 * <li>
@@ -275,6 +271,10 @@ public class Case2 {
 	 * definition} =
 	 * "Indicates whether or not the case was previously closed and is now re-opened."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<Case2, Optional<YesNoIndicator>> mmReopenCaseIndication = new MMMessageAttribute<Case2, Optional<YesNoIndicator>>() {
@@ -305,8 +305,8 @@ public class Case2 {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Case2.mmIdentification, com.tools20022.repository.msg.Case2.mmCreator, com.tools20022.repository.msg.Case2.mmReopenCaseIndication);
-				messageBuildingBlock_lazy = () -> Arrays.asList(CustomerPaymentCancellationRequestV01.mmCase, FIToFIPaymentCancellationRequestV01.mmCase, RequestToModifyPaymentV03.mmCase, UnableToApplyV03.mmCase, ClaimNonReceiptV03.mmCase,
-						AdditionalPaymentInformationV03.mmCase, ResolutionOfInvestigationV03.mmResolvedCase, NotificationOfCaseAssignmentV03.mmCase, RejectInvestigationV03.mmCase, CancelCaseAssignmentV02.mmCase,
+				messageBuildingBlock_lazy = () -> Arrays.asList(CustomerPaymentCancellationRequestV01.mmCase, FIToFIPaymentCancellationRequestV01.mmCase, RequestToModifyPaymentV03_replaced.mmCase, UnableToApplyV03.mmCase,
+						ClaimNonReceiptV03.mmCase, AdditionalPaymentInformationV03.mmCase, ResolutionOfInvestigationV03.mmResolvedCase, NotificationOfCaseAssignmentV03.mmCase, RejectInvestigationV03.mmCase, CancelCaseAssignmentV02.mmCase,
 						RequestForDuplicateV03.mmCase, DuplicateV03.mmCase, ProprietaryFormatInvestigationV02.mmCase, DebitAuthorisationResponseV02.mmCase, DebitAuthorisationRequestV03.mmCase, CaseStatusReportRequestV02.mmCase,
 						CaseStatusReportV03.mmCase);
 				trace_lazy = () -> InvestigationCase.mmObject();

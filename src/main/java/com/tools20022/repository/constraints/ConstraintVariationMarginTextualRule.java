@@ -37,10 +37,6 @@ public class ConstraintVariationMarginTextualRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Margin4 Margin4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "VariationMarginTextualRule"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintVariationMarginTextualRule {
 	 * definition} =
 	 * "If the margin amount calculation is to be shown in more details (with for example, the MarkToMarketNetted or MarkToMarketGross amounts), then it is recommended to use the element variation margin that is present at a higher level in the message."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Margin4> forMargin4 = new MMConstraint<Margin4>() {

@@ -172,14 +172,14 @@ import java.util.Objects;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "SubscriptionExecution"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Execution of a subscription order."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class SubscriptionExecution extends InvestmentFundOrderExecution {
@@ -212,15 +212,15 @@ public class SubscriptionExecution extends InvestmentFundOrderExecution {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SubscriptionExecution
 	 * SubscriptionExecution}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EquityComponent"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount subscribed into equity (not including dividends)."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SubscriptionExecution, CurrencyAndAmount> mmEquityComponent = new MMBusinessAttribute<SubscriptionExecution, CurrencyAndAmount>() {
@@ -273,15 +273,15 @@ public class SubscriptionExecution extends InvestmentFundOrderExecution {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SubscriptionExecution
 	 * SubscriptionExecution}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CashComponent"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount subscribed into cash."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SubscriptionExecution, CurrencyAndAmount> mmCashComponent = new MMBusinessAttribute<SubscriptionExecution, CurrencyAndAmount>() {
@@ -358,10 +358,6 @@ public class SubscriptionExecution extends InvestmentFundOrderExecution {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SubscriptionExecution
 	 * SubscriptionExecution}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InvestedNetAmount"</li>
 	 * <li>
@@ -369,6 +365,10 @@ public class SubscriptionExecution extends InvestmentFundOrderExecution {
 	 * definition} =
 	 * "Net amount of money invested in a specific financial instrument by an investor, expressed in the currency requested by the investor."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SubscriptionExecution, CurrencyAndAmount> mmInvestedNetAmount = new MMBusinessAttribute<SubscriptionExecution, CurrencyAndAmount>() {
@@ -437,16 +437,16 @@ public class SubscriptionExecution extends InvestmentFundOrderExecution {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SubscriptionExecution
 	 * SubscriptionExecution}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Refund"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Return of cash that has been overpaid for a subscription."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SubscriptionExecution, CurrencyAndAmount> mmRefund = new MMBusinessAttribute<SubscriptionExecution, CurrencyAndAmount>() {
@@ -515,10 +515,6 @@ public class SubscriptionExecution extends InvestmentFundOrderExecution {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SubscriptionExecution
 	 * SubscriptionExecution}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SubscriptionInterest"</li>
 	 * <li>
@@ -526,6 +522,10 @@ public class SubscriptionExecution extends InvestmentFundOrderExecution {
 	 * definition} =
 	 * "Interest received when a subscription amount is paid in advance and then invested by the fund."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<SubscriptionExecution, CurrencyAndAmount> mmSubscriptionInterest = new MMBusinessAttribute<SubscriptionExecution, CurrencyAndAmount>() {

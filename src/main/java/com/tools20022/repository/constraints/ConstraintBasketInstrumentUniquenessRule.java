@@ -36,10 +36,6 @@ public class ConstraintBasketInstrumentUniquenessRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument53
 	 * FinancialInstrument53}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BasketInstrumentUniquenessRule"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintBasketInstrumentUniquenessRule {
 	 * definition} =
 	 * "Where an underlying instrument basket is populated, all ISINs or LEIs must be unique."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrument53> forFinancialInstrument53 = new MMConstraint<FinancialInstrument53>() {

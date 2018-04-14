@@ -37,10 +37,6 @@ public class ConstraintDetailedReportParameterRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FundCashForecastParameters2
 	 * FundCashForecastParameters2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DetailedReportParameterRule"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintDetailedReportParameterRule {
 	 * definition} =
 	 * "If CashForecastType contains CF01 or CF03, then DetailedReportParameter is not allowed. If CashForecastType contains CF02 or CF04, then DetailedReportParameter may be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FundCashForecastParameters2> forFundCashForecastParameters2 = new MMConstraint<FundCashForecastParameters2>() {

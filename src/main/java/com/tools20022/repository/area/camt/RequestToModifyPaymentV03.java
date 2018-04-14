@@ -22,24 +22,27 @@ import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.CashManagementArchive;
-import com.tools20022.repository.choice.UnderlyingTransaction1Choice;
-import com.tools20022.repository.msg.Case2;
-import com.tools20022.repository.msg.CaseAssignment2;
-import com.tools20022.repository.msg.RequestedModification2;
+import com.tools20022.repository.choice.UnderlyingTransaction2Choice;
+import com.tools20022.repository.msg.Case3;
+import com.tools20022.repository.msg.CaseAssignment3;
+import com.tools20022.repository.msg.RequestedModification5;
+import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.ISOArchive;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
  * <b>Scope</b><br>
- * The Request To Modify Payment message is sent by a case creator/case assigner
- * to a case assignee.<br>
+ * The RequestToModifyPayment message is sent by a case creator/case assigner to
+ * a case assignee.<br>
  * This message is used to request the modification of characteristics of an
  * original payment instruction.<br>
  * <b>Usage</b><br>
- * The Request To Modify Payment message must be answered with a:<br>
+ * The RequestToModifyPayment message must be answered with a:<br>
  * - Resolution Of Investigation message with a positive final outcome when the
  * case assignee can perform the requested modification<br>
  * - Resolution Of Investigation message with a negative final outcome when the
@@ -89,10 +92,39 @@ import javax.xml.bind.annotation.*;
  * - a Request To Cancel Payment message sent to a subsequent case assignee<br>
  * The Request To Modify Payment message can be sent to correct characteristics
  * of an original payment instruction following receipt of an Unable To Apply
- * message. In this scenario, the case identification will remain the same.
+ * message. In this scenario, the case identification will remain the same.<br>
+ * The RequestToModifyPayment message has the following main characteristics:<br>
+ * The case creator assigns a unique case identification. This information will
+ * be passed unchanged to all subsequent case assignee(s).<br>
+ * Lowering the amount of an original payment instruction for which cover is
+ * provided by a separate instruction will systematically mean the modification
+ * of the whole transaction, including the cover. The case assignee performing
+ * the amount modification must initiate the return of funds in excess to the
+ * case creator.<br>
+ * The modification of the agent's or agents' information on an original payment
+ * instruction for which cover is provided by a separate instruction will
+ * systematically mean the whole transaction is modified, i.e., the cover is
+ * executed through the agent(s) mentioned in the Request To Modify Payment
+ * message. The cover payment must not be modified separately.<br>
+ * The modification of a payment instruction can be initiated by either the
+ * debtor or any subsequent agent in the payment processing chain.<br>
+ * The case creator provides the information to be modified in line with
+ * agreements made with the case assignee. If the case assignee needs in turn to
+ * assign the case to a subsequent case assignee, the requested modification(s)
+ * must be in line with the agreement made with the next case assignee and a
+ * Notification Of Case Assignment message must be sent to the case assigner.
+ * Otherwise, the request to modify payment case must be rejected (by means of a
+ * negative Resolution Of Investigation message).
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code camt.087.001.03}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.CashManagementArchive
+ * CashManagementArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -109,6 +141,9 @@ import javax.xml.bind.annotation.*;
  * <li>
  * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV03#mmModification
  * RequestToModifyPaymentV03.mmModification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV03#mmSupplementaryData
+ * RequestToModifyPaymentV03.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
@@ -121,40 +156,37 @@ import javax.xml.bind.annotation.*;
  * rootElement} = "Document"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
  * xmlTag} = "ReqToModfyPmt"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.CashManagementArchive
- * CashManagementArchive}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code camt.007.002.03}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "RequestToModifyPaymentV03"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Scope\r\nThe Request To Modify Payment message is sent by a case creator/case assigner to a case assignee.\r\nThis message is used to request the modification of characteristics of an original payment instruction.\r\nUsage\r\nThe Request To Modify Payment message must be answered with a:\r\n- Resolution Of Investigation message with a positive final outcome when the case assignee can perform the requested modification\r\n- Resolution Of Investigation message with a negative final outcome when the case assignee may perform the requested modification but fails to do so (too late, irrevocable instruction, one requested element cannot be modified.)\r\n- Reject Case Assignment message when the case assignee is unable or not authorised to perform the requested modification\r\n- Notification Of Case Assignment message to indicate whether the case assignee will take on the case himself or reassign the case to a subsequent party in the payment processing chain.\r\nThe Request To Modify Payment message covers one and only one original instruction at a time. If several original payment instructions need to be modified, then multiple Request To Modify Payment messages must be sent.\r\nThe Request To Modify Payment message can be sent to request the modification of one or several elements of the original payment instruction. If many elements need to be modified, it is recommended to cancel the original payment instruction and initiate a new one.\r\nThe Request To Modify Payment must be processed on an all or nothing basis. If one of the elements to be modified cannot be altered, the assignment must be rejected in full by means of a negative Resolution Of Investigation message. (See section on Resolution Of Investigation for more details.)\r\nThe Request To Modify Payment message must never be sent to request the modification of the currency of the original payment instruction. If the currency is wrong, use Request To Cancel Payment message to cancel it and issue and a new payment instruction.\r\nThe Request To Modify Payment message may be forwarded to subsequent case assignee(s).\r\nWhen a Request To Modify Payment message is used to decrease the amount of the original payment instruction, the modification will trigger a return of funds from the case assignee to the case creator. The assignee may indicate, within the Resolution Of Investigation message, the amount to be returned, the date it is or will be returned and the channel through which the return will be done.\r\nThe Request To Modify Payment message must never be sent to request the increase of the amount of the original payment instruction. To increase the amount in a payment, the debtor can do one of the following:\r\n- Cancel the first payment using a Request To Cancel Payment message and make a new payment with a higher and correct amount.\r\n- Simply send a second payment with the supplementary amount.\r\nDepending on the requested modification(s) and the processing stage of the original payment instruction, the processing of a request to modify payment case may end with one of the following:\r\n- an Additional Payment Information message sent to the creditor of the original payment instruction\r\n- a Debit Authorisation Request message sent to the creditor of the original payment instruction\r\n- a Request To Cancel Payment message sent to a subsequent case assignee\r\nThe Request To Modify Payment message can be sent to correct characteristics of an original payment instruction following receipt of an Unable To Apply message. In this scenario, the case identification will remain the same."
+ * "Scope\r\nThe RequestToModifyPayment message is sent by a case creator/case assigner to a case assignee.\r\nThis message is used to request the modification of characteristics of an original payment instruction.\r\nUsage\r\nThe RequestToModifyPayment message must be answered with a:\r\n- Resolution Of Investigation message with a positive final outcome when the case assignee can perform the requested modification\r\n- Resolution Of Investigation message with a negative final outcome when the case assignee may perform the requested modification but fails to do so (too late, irrevocable instruction, one requested element cannot be modified.)\r\n- Reject Case Assignment message when the case assignee is unable or not authorised to perform the requested modification\r\n- Notification Of Case Assignment message to indicate whether the case assignee will take on the case himself or reassign the case to a subsequent party in the payment processing chain.\r\nThe Request To Modify Payment message covers one and only one original instruction at a time. If several original payment instructions need to be modified, then multiple Request To Modify Payment messages must be sent.\r\nThe Request To Modify Payment message can be sent to request the modification of one or several elements of the original payment instruction. If many elements need to be modified, it is recommended to cancel the original payment instruction and initiate a new one.\r\nThe Request To Modify Payment must be processed on an all or nothing basis. If one of the elements to be modified cannot be altered, the assignment must be rejected in full by means of a negative Resolution Of Investigation message. (See section on Resolution Of Investigation for more details.)\r\nThe Request To Modify Payment message must never be sent to request the modification of the currency of the original payment instruction. If the currency is wrong, use Request To Cancel Payment message to cancel it and issue and a new payment instruction.\r\nThe Request To Modify Payment message may be forwarded to subsequent case assignee(s).\r\nWhen a Request To Modify Payment message is used to decrease the amount of the original payment instruction, the modification will trigger a return of funds from the case assignee to the case creator. The assignee may indicate, within the Resolution Of Investigation message, the amount to be returned, the date it is or will be returned and the channel through which the return will be done.\r\nThe Request To Modify Payment message must never be sent to request the increase of the amount of the original payment instruction. To increase the amount in a payment, the debtor can do one of the following:\r\n- Cancel the first payment using a Request To Cancel Payment message and make a new payment with a higher and correct amount.\r\n- Simply send a second payment with the supplementary amount.\r\nDepending on the requested modification(s) and the processing stage of the original payment instruction, the processing of a request to modify payment case may end with one of the following:\r\n- an Additional Payment Information message sent to the creditor of the original payment instruction\r\n- a Debit Authorisation Request message sent to the creditor of the original payment instruction\r\n- a Request To Cancel Payment message sent to a subsequent case assignee\r\nThe Request To Modify Payment message can be sent to correct characteristics of an original payment instruction following receipt of an Unable To Apply message. In this scenario, the case identification will remain the same.\r\nThe RequestToModifyPayment message has the following main characteristics:\r\nThe case creator assigns a unique case identification. This information will be passed unchanged to all subsequent case assignee(s).\r\nLowering the amount of an original payment instruction for which cover is provided by a separate instruction will systematically mean the modification of the whole transaction, including the cover. The case assignee performing the amount modification must initiate the return of funds in excess to the case creator.\r\nThe modification of the agent's or agents' information on an original payment instruction for which cover is provided by a separate instruction will systematically mean the whole transaction is modified, i.e., the cover is executed through the agent(s) mentioned in the Request To Modify Payment message. The cover payment must not be modified separately.\r\nThe modification of a payment instruction can be initiated by either the debtor or any subsequent agent in the payment processing chain.\r\nThe case creator provides the information to be modified in line with agreements made with the case assignee. If the case assignee needs in turn to assign the case to a subsequent case assignee, the requested modification(s) must be in line with the agreement made with the next case assignee and a Notification Of Case Assignment message must be sent to the case assigner. Otherwise, the request to modify payment case must be rejected (by means of a negative Resolution Of Investigation message)."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
  * nextVersions} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV01
- * RequestToModifyPaymentV01}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV04
+ * RequestToModifyPaymentV04}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+ * previousVersion} =
+ * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV02
+ * RequestToModifyPaymentV02}</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
-@XmlType(name = "RequestToModifyPaymentV03", propOrder = {"assignment", "case_", "underlying", "modification"})
+@XmlType(name = "RequestToModifyPaymentV03", propOrder = {"assignment", "case_", "underlying", "modification", "supplementaryData"})
 public class RequestToModifyPaymentV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "Assgnmt", required = true)
-	protected CaseAssignment2 assignment;
+	protected CaseAssignment3 assignment;
 	/**
 	 * 
 	 <p>
@@ -162,14 +194,10 @@ public class RequestToModifyPaymentV03 {
 	 * <ul>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageBuildingBlock#getComplexType
-	 * complexType} = {@linkplain com.tools20022.repository.msg.CaseAssignment2
-	 * CaseAssignment2}</li>
+	 * complexType} = {@linkplain com.tools20022.repository.msg.CaseAssignment3
+	 * CaseAssignment3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Assgnmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Assignment"</li>
 	 * <li>
@@ -177,31 +205,50 @@ public class RequestToModifyPaymentV03 {
 	 * definition} =
 	 * "Identifies the assignment of an investigation case from an assigner to an assignee.\nUsage: The Assigner must be the sender of this confirmation and the Assignee must be the receiver."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV04#mmAssignment
+	 * RequestToModifyPaymentV04.mmAssignment}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV02#mmAssignment
+	 * RequestToModifyPaymentV02.mmAssignment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock<RequestToModifyPaymentV03, CaseAssignment2> mmAssignment = new MMMessageBuildingBlock<RequestToModifyPaymentV03, CaseAssignment2>() {
+	public static final MMMessageBuildingBlock<RequestToModifyPaymentV03, CaseAssignment3> mmAssignment = new MMMessageBuildingBlock<RequestToModifyPaymentV03, CaseAssignment3>() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assignment";
 			definition = "Identifies the assignment of an investigation case from an assigner to an assignee.\nUsage: The Assigner must be the sender of this confirmation and the Assignee must be the receiver.";
+			nextVersions_lazy = () -> Arrays.asList(RequestToModifyPaymentV04.mmAssignment);
+			previousVersion_lazy = () -> RequestToModifyPaymentV02.mmAssignment;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> CaseAssignment2.mmObject();
+			complexType_lazy = () -> CaseAssignment3.mmObject();
 		}
 
 		@Override
-		public CaseAssignment2 getValue(RequestToModifyPaymentV03 obj) {
+		public CaseAssignment3 getValue(RequestToModifyPaymentV03 obj) {
 			return obj.getAssignment();
 		}
 
 		@Override
-		public void setValue(RequestToModifyPaymentV03 obj, CaseAssignment2 value) {
+		public void setValue(RequestToModifyPaymentV03 obj, CaseAssignment3 value) {
 			obj.setAssignment(value);
 		}
 	};
 	@XmlElement(name = "Case", required = true)
-	protected Case2 case_;
+	protected Case3 case_;
 	/**
 	 * 
 	 <p>
@@ -209,43 +256,58 @@ public class RequestToModifyPaymentV03 {
 	 * <ul>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageBuildingBlock#getComplexType
-	 * complexType} = {@linkplain com.tools20022.repository.msg.Case2 Case2}</li>
+	 * complexType} = {@linkplain com.tools20022.repository.msg.Case3 Case3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Case"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Case"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identifies the investigation case."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV04#mmCase
+	 * RequestToModifyPaymentV04.mmCase}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV02#mmCase
+	 * RequestToModifyPaymentV02.mmCase}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock<RequestToModifyPaymentV03, Case2> mmCase = new MMMessageBuildingBlock<RequestToModifyPaymentV03, Case2>() {
+	public static final MMMessageBuildingBlock<RequestToModifyPaymentV03, Case3> mmCase = new MMMessageBuildingBlock<RequestToModifyPaymentV03, Case3>() {
 		{
 			xmlTag = "Case";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Case";
 			definition = "Identifies the investigation case.";
+			nextVersions_lazy = () -> Arrays.asList(RequestToModifyPaymentV04.mmCase);
+			previousVersion_lazy = () -> RequestToModifyPaymentV02.mmCase;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> Case2.mmObject();
+			complexType_lazy = () -> Case3.mmObject();
 		}
 
 		@Override
-		public Case2 getValue(RequestToModifyPaymentV03 obj) {
+		public Case3 getValue(RequestToModifyPaymentV03 obj) {
 			return obj.getCase();
 		}
 
 		@Override
-		public void setValue(RequestToModifyPaymentV03 obj, Case2 value) {
+		public void setValue(RequestToModifyPaymentV03 obj, Case3 value) {
 			obj.setCase(value);
 		}
 	};
 	@XmlElement(name = "Undrlyg", required = true)
-	protected UnderlyingTransaction1Choice underlying;
+	protected UnderlyingTransaction2Choice underlying;
 	/**
 	 * 
 	 <p>
@@ -254,44 +316,59 @@ public class RequestToModifyPaymentV03 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageBuildingBlock#getComplexType
 	 * complexType} =
-	 * {@linkplain com.tools20022.repository.choice.UnderlyingTransaction1Choice
-	 * UnderlyingTransaction1Choice}</li>
+	 * {@linkplain com.tools20022.repository.choice.UnderlyingTransaction2Choice
+	 * UnderlyingTransaction2Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Undrlyg"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Underlying"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identifies the payment transaction to be modified."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV04#mmUnderlying
+	 * RequestToModifyPaymentV04.mmUnderlying}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV02#mmUnderlying
+	 * RequestToModifyPaymentV02.mmUnderlying}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock<RequestToModifyPaymentV03, UnderlyingTransaction1Choice> mmUnderlying = new MMMessageBuildingBlock<RequestToModifyPaymentV03, UnderlyingTransaction1Choice>() {
+	public static final MMMessageBuildingBlock<RequestToModifyPaymentV03, UnderlyingTransaction2Choice> mmUnderlying = new MMMessageBuildingBlock<RequestToModifyPaymentV03, UnderlyingTransaction2Choice>() {
 		{
 			xmlTag = "Undrlyg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Underlying";
 			definition = "Identifies the payment transaction to be modified.";
+			nextVersions_lazy = () -> Arrays.asList(RequestToModifyPaymentV04.mmUnderlying);
+			previousVersion_lazy = () -> RequestToModifyPaymentV02.mmUnderlying;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> UnderlyingTransaction1Choice.mmObject();
+			complexType_lazy = () -> UnderlyingTransaction2Choice.mmObject();
 		}
 
 		@Override
-		public UnderlyingTransaction1Choice getValue(RequestToModifyPaymentV03 obj) {
+		public UnderlyingTransaction2Choice getValue(RequestToModifyPaymentV03 obj) {
 			return obj.getUnderlying();
 		}
 
 		@Override
-		public void setValue(RequestToModifyPaymentV03 obj, UnderlyingTransaction1Choice value) {
+		public void setValue(RequestToModifyPaymentV03 obj, UnderlyingTransaction2Choice value) {
 			obj.setUnderlying(value);
 		}
 	};
 	@XmlElement(name = "Mod", required = true)
-	protected RequestedModification2 modification;
+	protected RequestedModification5 modification;
 	/**
 	 * 
 	 <p>
@@ -300,40 +377,117 @@ public class RequestToModifyPaymentV03 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageBuildingBlock#getComplexType
 	 * complexType} =
-	 * {@linkplain com.tools20022.repository.msg.RequestedModification2
-	 * RequestedModification2}</li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification5
+	 * RequestedModification5}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Mod"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Modification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identifies the list of modifications requested."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV04#mmModification
+	 * RequestToModifyPaymentV04.mmModification}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV02#mmModification
+	 * RequestToModifyPaymentV02.mmModification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock<RequestToModifyPaymentV03, RequestedModification2> mmModification = new MMMessageBuildingBlock<RequestToModifyPaymentV03, RequestedModification2>() {
+	public static final MMMessageBuildingBlock<RequestToModifyPaymentV03, RequestedModification5> mmModification = new MMMessageBuildingBlock<RequestToModifyPaymentV03, RequestedModification5>() {
 		{
 			xmlTag = "Mod";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Modification";
 			definition = "Identifies the list of modifications requested.";
+			nextVersions_lazy = () -> Arrays.asList(RequestToModifyPaymentV04.mmModification);
+			previousVersion_lazy = () -> RequestToModifyPaymentV02.mmModification;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> RequestedModification2.mmObject();
+			complexType_lazy = () -> RequestedModification5.mmObject();
 		}
 
 		@Override
-		public RequestedModification2 getValue(RequestToModifyPaymentV03 obj) {
+		public RequestedModification5 getValue(RequestToModifyPaymentV03 obj) {
 			return obj.getModification();
 		}
 
 		@Override
-		public void setValue(RequestToModifyPaymentV03 obj, RequestedModification2 value) {
+		public void setValue(RequestToModifyPaymentV03 obj, RequestedModification5 value) {
 			obj.setModification(value);
+		}
+	};
+	@XmlElement(name = "SplmtryData")
+	protected List<SupplementaryData1> supplementaryData;
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageBuildingBlock#getComplexType
+	 * complexType} =
+	 * {@linkplain com.tools20022.repository.msg.SupplementaryData1
+	 * SupplementaryData1}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
+	 * xmlTag} = "SplmtryData"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SupplementaryData"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Additional information that cannot be captured in the structured elements and/or any other specific block."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV04#mmSupplementaryData
+	 * RequestToModifyPaymentV04.mmSupplementaryData}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV02#mmSupplementaryData
+	 * RequestToModifyPaymentV02.mmSupplementaryData}</li>
+	 * </ul>
+	 */
+	public static final MMMessageBuildingBlock<RequestToModifyPaymentV03, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<RequestToModifyPaymentV03, List<SupplementaryData1>>() {
+		{
+			xmlTag = "SplmtryData";
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SupplementaryData";
+			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
+			nextVersions_lazy = () -> Arrays.asList(RequestToModifyPaymentV04.mmSupplementaryData);
+			previousVersion_lazy = () -> RequestToModifyPaymentV02.mmSupplementaryData;
+			minOccurs = 0;
+			complexType_lazy = () -> SupplementaryData1.mmObject();
+		}
+
+		@Override
+		public List<SupplementaryData1> getValue(RequestToModifyPaymentV03 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(RequestToModifyPaymentV03 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -342,20 +496,22 @@ public class RequestToModifyPaymentV03 {
 			{
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RequestToModifyPaymentV03";
-				definition = "Scope\r\nThe Request To Modify Payment message is sent by a case creator/case assigner to a case assignee.\r\nThis message is used to request the modification of characteristics of an original payment instruction.\r\nUsage\r\nThe Request To Modify Payment message must be answered with a:\r\n- Resolution Of Investigation message with a positive final outcome when the case assignee can perform the requested modification\r\n- Resolution Of Investigation message with a negative final outcome when the case assignee may perform the requested modification but fails to do so (too late, irrevocable instruction, one requested element cannot be modified.)\r\n- Reject Case Assignment message when the case assignee is unable or not authorised to perform the requested modification\r\n- Notification Of Case Assignment message to indicate whether the case assignee will take on the case himself or reassign the case to a subsequent party in the payment processing chain.\r\nThe Request To Modify Payment message covers one and only one original instruction at a time. If several original payment instructions need to be modified, then multiple Request To Modify Payment messages must be sent.\r\nThe Request To Modify Payment message can be sent to request the modification of one or several elements of the original payment instruction. If many elements need to be modified, it is recommended to cancel the original payment instruction and initiate a new one.\r\nThe Request To Modify Payment must be processed on an all or nothing basis. If one of the elements to be modified cannot be altered, the assignment must be rejected in full by means of a negative Resolution Of Investigation message. (See section on Resolution Of Investigation for more details.)\r\nThe Request To Modify Payment message must never be sent to request the modification of the currency of the original payment instruction. If the currency is wrong, use Request To Cancel Payment message to cancel it and issue and a new payment instruction.\r\nThe Request To Modify Payment message may be forwarded to subsequent case assignee(s).\r\nWhen a Request To Modify Payment message is used to decrease the amount of the original payment instruction, the modification will trigger a return of funds from the case assignee to the case creator. The assignee may indicate, within the Resolution Of Investigation message, the amount to be returned, the date it is or will be returned and the channel through which the return will be done.\r\nThe Request To Modify Payment message must never be sent to request the increase of the amount of the original payment instruction. To increase the amount in a payment, the debtor can do one of the following:\r\n- Cancel the first payment using a Request To Cancel Payment message and make a new payment with a higher and correct amount.\r\n- Simply send a second payment with the supplementary amount.\r\nDepending on the requested modification(s) and the processing stage of the original payment instruction, the processing of a request to modify payment case may end with one of the following:\r\n- an Additional Payment Information message sent to the creditor of the original payment instruction\r\n- a Debit Authorisation Request message sent to the creditor of the original payment instruction\r\n- a Request To Cancel Payment message sent to a subsequent case assignee\r\nThe Request To Modify Payment message can be sent to correct characteristics of an original payment instruction following receipt of an Unable To Apply message. In this scenario, the case identification will remain the same.";
-				nextVersions_lazy = () -> Arrays.asList(RequestToModifyPaymentV01.mmObject());
+				definition = "Scope\r\nThe RequestToModifyPayment message is sent by a case creator/case assigner to a case assignee.\r\nThis message is used to request the modification of characteristics of an original payment instruction.\r\nUsage\r\nThe RequestToModifyPayment message must be answered with a:\r\n- Resolution Of Investigation message with a positive final outcome when the case assignee can perform the requested modification\r\n- Resolution Of Investigation message with a negative final outcome when the case assignee may perform the requested modification but fails to do so (too late, irrevocable instruction, one requested element cannot be modified.)\r\n- Reject Case Assignment message when the case assignee is unable or not authorised to perform the requested modification\r\n- Notification Of Case Assignment message to indicate whether the case assignee will take on the case himself or reassign the case to a subsequent party in the payment processing chain.\r\nThe Request To Modify Payment message covers one and only one original instruction at a time. If several original payment instructions need to be modified, then multiple Request To Modify Payment messages must be sent.\r\nThe Request To Modify Payment message can be sent to request the modification of one or several elements of the original payment instruction. If many elements need to be modified, it is recommended to cancel the original payment instruction and initiate a new one.\r\nThe Request To Modify Payment must be processed on an all or nothing basis. If one of the elements to be modified cannot be altered, the assignment must be rejected in full by means of a negative Resolution Of Investigation message. (See section on Resolution Of Investigation for more details.)\r\nThe Request To Modify Payment message must never be sent to request the modification of the currency of the original payment instruction. If the currency is wrong, use Request To Cancel Payment message to cancel it and issue and a new payment instruction.\r\nThe Request To Modify Payment message may be forwarded to subsequent case assignee(s).\r\nWhen a Request To Modify Payment message is used to decrease the amount of the original payment instruction, the modification will trigger a return of funds from the case assignee to the case creator. The assignee may indicate, within the Resolution Of Investigation message, the amount to be returned, the date it is or will be returned and the channel through which the return will be done.\r\nThe Request To Modify Payment message must never be sent to request the increase of the amount of the original payment instruction. To increase the amount in a payment, the debtor can do one of the following:\r\n- Cancel the first payment using a Request To Cancel Payment message and make a new payment with a higher and correct amount.\r\n- Simply send a second payment with the supplementary amount.\r\nDepending on the requested modification(s) and the processing stage of the original payment instruction, the processing of a request to modify payment case may end with one of the following:\r\n- an Additional Payment Information message sent to the creditor of the original payment instruction\r\n- a Debit Authorisation Request message sent to the creditor of the original payment instruction\r\n- a Request To Cancel Payment message sent to a subsequent case assignee\r\nThe Request To Modify Payment message can be sent to correct characteristics of an original payment instruction following receipt of an Unable To Apply message. In this scenario, the case identification will remain the same.\r\nThe RequestToModifyPayment message has the following main characteristics:\r\nThe case creator assigns a unique case identification. This information will be passed unchanged to all subsequent case assignee(s).\r\nLowering the amount of an original payment instruction for which cover is provided by a separate instruction will systematically mean the modification of the whole transaction, including the cover. The case assignee performing the amount modification must initiate the return of funds in excess to the case creator.\r\nThe modification of the agent's or agents' information on an original payment instruction for which cover is provided by a separate instruction will systematically mean the whole transaction is modified, i.e., the cover is executed through the agent(s) mentioned in the Request To Modify Payment message. The cover payment must not be modified separately.\r\nThe modification of a payment instruction can be initiated by either the debtor or any subsequent agent in the payment processing chain.\r\nThe case creator provides the information to be modified in line with agreements made with the case assignee. If the case assignee needs in turn to assign the case to a subsequent case assignee, the requested modification(s) must be in line with the agreement made with the next case assignee and a Notification Of Case Assignment message must be sent to the case assigner. Otherwise, the request to modify payment case must be rejected (by means of a negative Resolution Of Investigation message).";
+				nextVersions_lazy = () -> Arrays.asList(RequestToModifyPaymentV04.mmObject());
+				previousVersion_lazy = () -> RequestToModifyPaymentV02.mmObject();
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "ReqToModfyPmt";
 				businessArea_lazy = () -> CashManagementArchive.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.RequestToModifyPaymentV03.mmAssignment, com.tools20022.repository.area.camt.RequestToModifyPaymentV03.mmCase,
-						com.tools20022.repository.area.camt.RequestToModifyPaymentV03.mmUnderlying, com.tools20022.repository.area.camt.RequestToModifyPaymentV03.mmModification);
+						com.tools20022.repository.area.camt.RequestToModifyPaymentV03.mmUnderlying, com.tools20022.repository.area.camt.RequestToModifyPaymentV03.mmModification,
+						com.tools20022.repository.area.camt.RequestToModifyPaymentV03.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "camt";
-						messageFunctionality = "007";
+						messageFunctionality = "087";
 						version = "03";
-						flavour = "002";
+						flavour = "001";
 					}
 				};
 			}
@@ -368,43 +524,52 @@ public class RequestToModifyPaymentV03 {
 		return mmObject_lazy.get();
 	}
 
-	public CaseAssignment2 getAssignment() {
+	public CaseAssignment3 getAssignment() {
 		return assignment;
 	}
 
-	public RequestToModifyPaymentV03 setAssignment(CaseAssignment2 assignment) {
+	public RequestToModifyPaymentV03 setAssignment(CaseAssignment3 assignment) {
 		this.assignment = Objects.requireNonNull(assignment);
 		return this;
 	}
 
-	public Case2 getCase() {
+	public Case3 getCase() {
 		return case_;
 	}
 
-	public RequestToModifyPaymentV03 setCase(Case2 case_) {
+	public RequestToModifyPaymentV03 setCase(Case3 case_) {
 		this.case_ = Objects.requireNonNull(case_);
 		return this;
 	}
 
-	public UnderlyingTransaction1Choice getUnderlying() {
+	public UnderlyingTransaction2Choice getUnderlying() {
 		return underlying;
 	}
 
-	public RequestToModifyPaymentV03 setUnderlying(UnderlyingTransaction1Choice underlying) {
+	public RequestToModifyPaymentV03 setUnderlying(UnderlyingTransaction2Choice underlying) {
 		this.underlying = Objects.requireNonNull(underlying);
 		return this;
 	}
 
-	public RequestedModification2 getModification() {
+	public RequestedModification5 getModification() {
 		return modification;
 	}
 
-	public RequestToModifyPaymentV03 setModification(RequestedModification2 modification) {
+	public RequestToModifyPaymentV03 setModification(RequestedModification5 modification) {
 		this.modification = Objects.requireNonNull(modification);
 		return this;
 	}
 
-	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:camt.007.002.03")
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
+	}
+
+	public RequestToModifyPaymentV03 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
+	}
+
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:camt.087.001.03")
 	static public class Document {
 		@XmlElement(name = "ReqToModfyPmt", required = true)
 		public RequestToModifyPaymentV03 messageBody;

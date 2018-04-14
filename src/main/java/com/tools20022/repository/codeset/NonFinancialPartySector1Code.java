@@ -110,15 +110,15 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "NonFinancialPartySector1Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Specifies the sector of a party with non financial activities."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -133,12 +133,12 @@ public class NonFinancialPartySector1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.NonFinancialPartySector1Code
 	 * NonFinancialPartySector1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "WaterSupplySewerageWasteManagementAndRemediation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "WaterSupplySewerageWasteManagementAndRemediation"</li>
 	 * </ul>
 	 */
 	public static final NonFinancialPartySector1Code WaterSupplySewerageWasteManagementAndRemediation = new NonFinancialPartySector1Code() {
@@ -157,12 +157,12 @@ public class NonFinancialPartySector1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.NonFinancialPartySector1Code
 	 * NonFinancialPartySector1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "MiningAndQuarrying"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "MiningAndQuarrying"</li>
 	 * </ul>
 	 */
 	public static final NonFinancialPartySector1Code MiningAndQuarrying = new NonFinancialPartySector1Code() {
@@ -181,12 +181,12 @@ public class NonFinancialPartySector1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.NonFinancialPartySector1Code
 	 * NonFinancialPartySector1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Manufacturing"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Manufacturing"</li>
 	 * </ul>
 	 */
 	public static final NonFinancialPartySector1Code Manufacturing = new NonFinancialPartySector1Code() {
@@ -205,12 +205,12 @@ public class NonFinancialPartySector1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.NonFinancialPartySector1Code
 	 * NonFinancialPartySector1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ElectricityGasSteamAndAirConditioningSupply"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ElectricityGasSteamAndAirConditioningSupply"</li>
 	 * </ul>
 	 */
 	public static final NonFinancialPartySector1Code ElectricityGasSteamAndAirConditioningSupply = new NonFinancialPartySector1Code() {
@@ -229,12 +229,12 @@ public class NonFinancialPartySector1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.NonFinancialPartySector1Code
 	 * NonFinancialPartySector1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Construction"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Construction"</li>
 	 * </ul>
 	 */
 	public static final NonFinancialPartySector1Code Construction = new NonFinancialPartySector1Code() {
@@ -253,12 +253,12 @@ public class NonFinancialPartySector1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.NonFinancialPartySector1Code
 	 * NonFinancialPartySector1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AgricultureForestryAndFishing"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AgricultureForestryAndFishing"</li>
 	 * </ul>
 	 */
 	public static final NonFinancialPartySector1Code AgricultureForestryAndFishing = new NonFinancialPartySector1Code() {
@@ -277,12 +277,12 @@ public class NonFinancialPartySector1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.NonFinancialPartySector1Code
 	 * NonFinancialPartySector1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AccomodationAndFood"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AccomodationAndFood"</li>
 	 * </ul>
 	 */
 	public static final NonFinancialPartySector1Code AccomodationAndFood = new NonFinancialPartySector1Code() {
@@ -301,12 +301,12 @@ public class NonFinancialPartySector1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.NonFinancialPartySector1Code
 	 * NonFinancialPartySector1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Education"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "Education"</li>
 	 * </ul>
 	 */
 	public static final NonFinancialPartySector1Code Education = new NonFinancialPartySector1Code() {
@@ -325,12 +325,12 @@ public class NonFinancialPartySector1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.NonFinancialPartySector1Code
 	 * NonFinancialPartySector1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ArtsEntertainmentAndRecreation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ArtsEntertainmentAndRecreation"</li>
 	 * </ul>
 	 */
 	public static final NonFinancialPartySector1Code ArtsEntertainmentAndRecreation = new NonFinancialPartySector1Code() {
@@ -349,12 +349,12 @@ public class NonFinancialPartySector1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.NonFinancialPartySector1Code
 	 * NonFinancialPartySector1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "FinancialAndInsuranceActivity"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "FinancialAndInsuranceActivity"</li>
 	 * </ul>
 	 */
 	public static final NonFinancialPartySector1Code FinancialAndInsuranceActivity = new NonFinancialPartySector1Code() {
@@ -373,12 +373,12 @@ public class NonFinancialPartySector1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.NonFinancialPartySector1Code
 	 * NonFinancialPartySector1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "HumanHealthAndSocialWorkActivity"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "HumanHealthAndSocialWorkActivity"</li>
 	 * </ul>
 	 */
 	public static final NonFinancialPartySector1Code HumanHealthAndSocialWorkActivity = new NonFinancialPartySector1Code() {
@@ -397,12 +397,12 @@ public class NonFinancialPartySector1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.NonFinancialPartySector1Code
 	 * NonFinancialPartySector1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InformationAndCommunication"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "InformationAndCommunication"</li>
 	 * </ul>
 	 */
 	public static final NonFinancialPartySector1Code InformationAndCommunication = new NonFinancialPartySector1Code() {
@@ -421,12 +421,12 @@ public class NonFinancialPartySector1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.NonFinancialPartySector1Code
 	 * NonFinancialPartySector1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "MotorVehiclesAndMotorcycles"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "MotorVehiclesAndMotorcycles"</li>
 	 * </ul>
 	 */
 	public static final NonFinancialPartySector1Code MotorVehiclesAndMotorcycles = new NonFinancialPartySector1Code() {
@@ -445,12 +445,12 @@ public class NonFinancialPartySector1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.NonFinancialPartySector1Code
 	 * NonFinancialPartySector1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OtherServiceActivity"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "OtherServiceActivity"</li>
 	 * </ul>
 	 */
 	public static final NonFinancialPartySector1Code OtherServiceActivity = new NonFinancialPartySector1Code() {
@@ -469,12 +469,12 @@ public class NonFinancialPartySector1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.NonFinancialPartySector1Code
 	 * NonFinancialPartySector1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ProfessionalScientificAndTechnicalActivity"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ProfessionalScientificAndTechnicalActivity"</li>
 	 * </ul>
 	 */
 	public static final NonFinancialPartySector1Code ProfessionalScientificAndTechnicalActivity = new NonFinancialPartySector1Code() {
@@ -493,12 +493,12 @@ public class NonFinancialPartySector1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.NonFinancialPartySector1Code
 	 * NonFinancialPartySector1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PublicAdministrationAndDefence"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PublicAdministrationAndDefence"</li>
 	 * </ul>
 	 */
 	public static final NonFinancialPartySector1Code PublicAdministrationAndDefence = new NonFinancialPartySector1Code() {
@@ -517,12 +517,12 @@ public class NonFinancialPartySector1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.NonFinancialPartySector1Code
 	 * NonFinancialPartySector1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RealEstateActivity"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "RealEstateActivity"</li>
 	 * </ul>
 	 */
 	public static final NonFinancialPartySector1Code RealEstateActivity = new NonFinancialPartySector1Code() {
@@ -541,12 +541,12 @@ public class NonFinancialPartySector1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.NonFinancialPartySector1Code
 	 * NonFinancialPartySector1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TransportationAndStorage"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "TransportationAndStorage"</li>
 	 * </ul>
 	 */
 	public static final NonFinancialPartySector1Code TransportationAndStorage = new NonFinancialPartySector1Code() {
@@ -565,12 +565,12 @@ public class NonFinancialPartySector1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.NonFinancialPartySector1Code
 	 * NonFinancialPartySector1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AdministrativeAndSupportServiceActivity"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AdministrativeAndSupportServiceActivity"</li>
 	 * </ul>
 	 */
 	public static final NonFinancialPartySector1Code AdministrativeAndSupportServiceActivity = new NonFinancialPartySector1Code() {
@@ -589,12 +589,12 @@ public class NonFinancialPartySector1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.NonFinancialPartySector1Code
 	 * NonFinancialPartySector1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ActivityOfHouseholdsAsEmployer"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ActivityOfHouseholdsAsEmployer"</li>
 	 * </ul>
 	 */
 	public static final NonFinancialPartySector1Code ActivityOfHouseholdsAsEmployer = new NonFinancialPartySector1Code() {
@@ -613,12 +613,12 @@ public class NonFinancialPartySector1Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.NonFinancialPartySector1Code
 	 * NonFinancialPartySector1Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ActivityOfExtraterritorialOrganisationAndBody"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ActivityOfExtraterritorialOrganisationAndBody"</li>
 	 * </ul>
 	 */
 	public static final NonFinancialPartySector1Code ActivityOfExtraterritorialOrganisationAndBody = new NonFinancialPartySector1Code() {

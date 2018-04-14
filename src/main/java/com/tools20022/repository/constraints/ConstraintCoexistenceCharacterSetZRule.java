@@ -37,10 +37,6 @@ public class ConstraintCoexistenceCharacterSetZRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.UpdatedURLlnformation
 	 * UpdatedURLlnformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceCharacterSetZRule"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintCoexistenceCharacterSetZRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, characters used in URLAdress must correspond to character set Z, that is, a-z A-Z / - ? : ( ) . , ‘ += ! “ % &amp; * &lt; &gt; ; @ #  {  CR LF."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<UpdatedURLlnformation> forUpdatedURLlnformation = new MMConstraint<UpdatedURLlnformation>() {
@@ -71,10 +71,6 @@ public class ConstraintCoexistenceCharacterSetZRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation7
 	 * UpdatedAdditionalInformation7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceCharacterSetZRule"</li>
 	 * <li>
@@ -82,6 +78,10 @@ public class ConstraintCoexistenceCharacterSetZRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, characters used in AdditionalInformation must correspond to character set Z, that is, a-z A-Z / - ? : ( ) . , ‘ += ! “ % &amp; * &lt; &gt; ; @ #  {  CR LF."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<UpdatedAdditionalInformation7> forUpdatedAdditionalInformation7 = new MMConstraint<UpdatedAdditionalInformation7>() {
@@ -105,10 +105,6 @@ public class ConstraintCoexistenceCharacterSetZRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation4
 	 * UpdatedAdditionalInformation4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceCharacterSetZRule"</li>
 	 * <li>
@@ -116,6 +112,10 @@ public class ConstraintCoexistenceCharacterSetZRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, characters used in AdditionalInformation must correspond to character set Z, that is, a-z A-Z / - ? : ( ) . , ‘ += ! “ % &amp; * &lt; &gt; ; @ #  {  CR LF. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<UpdatedAdditionalInformation4> forUpdatedAdditionalInformation4 = new MMConstraint<UpdatedAdditionalInformation4>() {
@@ -139,10 +139,6 @@ public class ConstraintCoexistenceCharacterSetZRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation2
 	 * UpdatedAdditionalInformation2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceCharacterSetZRule"</li>
 	 * <li>
@@ -150,6 +146,10 @@ public class ConstraintCoexistenceCharacterSetZRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, characters used in AdditionalInformation must correspond to character set Z, that is, a-z A-Z / - ? : ( ) . , ‘ += ! “ % &amp; * &lt; &gt; ; @ #  {  CR LF."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<UpdatedAdditionalInformation2> forUpdatedAdditionalInformation2 = new MMConstraint<UpdatedAdditionalInformation2>() {
@@ -173,10 +173,6 @@ public class ConstraintCoexistenceCharacterSetZRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.UpdatedURLlnformation1
 	 * UpdatedURLlnformation1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CoexistenceCharacterSetZRule"</li>
 	 * <li>
@@ -184,6 +180,10 @@ public class ConstraintCoexistenceCharacterSetZRule {
 	 * definition} =
 	 * "During ISO 15022 – 20022 coexistence, characters used in URLAdress must correspond to character set Z, that is, a-z A-Z / - ? : ( ) . , ‘ += ! “ % &amp; * &lt; &gt; ; @ #  {  CR LF. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<UpdatedURLlnformation1> forUpdatedURLlnformation1 = new MMConstraint<UpdatedURLlnformation1>() {

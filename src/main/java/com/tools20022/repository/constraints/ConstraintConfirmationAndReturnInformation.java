@@ -36,10 +36,6 @@ public class ConstraintConfirmationAndReturnInformation {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.InvestigationStatus
 	 * InvestigationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ConfirmationAndReturnInformation"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintConfirmationAndReturnInformation {
 	 * definition} =
 	 * "If the InvestigationStatus is NOT a Confirmation with value MODI or CNCL, then ReturnInformation is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<InvestigationStatus> forInvestigationStatus = new MMConstraint<InvestigationStatus>() {

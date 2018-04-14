@@ -38,10 +38,6 @@ public class ConstraintGroupAndTransactionStatus2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.pain.PaymentStatusReportV02
 	 * PaymentStatusReportV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GroupAndTransactionStatus2Rule"</li>
 	 * <li>
@@ -49,6 +45,10 @@ public class ConstraintGroupAndTransactionStatus2Rule {
 	 * definition} =
 	 * "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to PDNG, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<com.tools20022.repository.area.pain.PaymentStatusReportV02> for_pain_PaymentStatusReportV02 = new MMConstraint<com.tools20022.repository.area.pain.PaymentStatusReportV02>() {
@@ -72,10 +72,6 @@ public class ConstraintGroupAndTransactionStatus2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV04
 	 * CreditorPaymentActivationRequestStatusReportV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GroupAndTransactionStatus2Rule"</li>
 	 * <li>
@@ -83,6 +79,10 @@ public class ConstraintGroupAndTransactionStatus2Rule {
 	 * definition} =
 	 * "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to PDNG, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -123,10 +123,6 @@ public class ConstraintGroupAndTransactionStatus2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV06
 	 * CreditorPaymentActivationRequestStatusReportV06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GroupAndTransactionStatus2Rule"</li>
 	 * <li>
@@ -134,6 +130,10 @@ public class ConstraintGroupAndTransactionStatus2Rule {
 	 * definition} =
 	 * "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to PDNG, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -164,10 +164,6 @@ public class ConstraintGroupAndTransactionStatus2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV03
 	 * CreditorPaymentActivationRequestStatusReportV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GroupAndTransactionStatus2Rule"</li>
 	 * <li>
@@ -175,6 +171,10 @@ public class ConstraintGroupAndTransactionStatus2Rule {
 	 * definition} =
 	 * "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to PDNG, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -208,10 +208,6 @@ public class ConstraintGroupAndTransactionStatus2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV02
 	 * CreditorPaymentActivationRequestStatusReportV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GroupAndTransactionStatus2Rule"</li>
 	 * <li>
@@ -219,6 +215,10 @@ public class ConstraintGroupAndTransactionStatus2Rule {
 	 * definition} =
 	 * "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to PDNG, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CreditorPaymentActivationRequestStatusReportV02> for_pain_CreditorPaymentActivationRequestStatusReportV02 = new MMConstraint<CreditorPaymentActivationRequestStatusReportV02>() {
@@ -242,10 +242,6 @@ public class ConstraintGroupAndTransactionStatus2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV05
 	 * CreditorPaymentActivationRequestStatusReportV05}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GroupAndTransactionStatus2Rule"</li>
 	 * <li>
@@ -253,6 +249,10 @@ public class ConstraintGroupAndTransactionStatus2Rule {
 	 * definition} =
 	 * "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to PDNG, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -293,10 +293,6 @@ public class ConstraintGroupAndTransactionStatus2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.pacs.PaymentStatusReportV02
 	 * PaymentStatusReportV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GroupAndTransactionStatus2Rule"</li>
 	 * <li>
@@ -304,6 +300,10 @@ public class ConstraintGroupAndTransactionStatus2Rule {
 	 * definition} =
 	 * "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to PDNG, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT.\n."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<com.tools20022.repository.area.pacs.PaymentStatusReportV02> for_pacs_PaymentStatusReportV02 = new MMConstraint<com.tools20022.repository.area.pacs.PaymentStatusReportV02>() {
@@ -327,10 +327,6 @@ public class ConstraintGroupAndTransactionStatus2Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV01
 	 * CreditorPaymentActivationRequestStatusReportV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GroupAndTransactionStatus2Rule"</li>
 	 * <li>
@@ -338,6 +334,10 @@ public class ConstraintGroupAndTransactionStatus2Rule {
 	 * definition} =
 	 * "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to PDNG, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CreditorPaymentActivationRequestStatusReportV01> for_pain_CreditorPaymentActivationRequestStatusReportV01 = new MMConstraint<CreditorPaymentActivationRequestStatusReportV01>() {

@@ -39,10 +39,6 @@ public class ConstraintInvestmentAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV04
 	 * AccountOpeningInstructionV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InvestmentAccountIdentificationRule"</li>
 	 * <li>
@@ -50,6 +46,10 @@ public class ConstraintInvestmentAccountIdentificationRule {
 	 * definition} =
 	 * "If InstructionDetails/OpeningType is SUPA, then InvestmentAccount/Identification must be present and must contain the identification of the main account to which the supplementary account is related."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -90,10 +90,6 @@ public class ConstraintInvestmentAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV02
 	 * AccountOpeningInstructionV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InvestmentAccountIdentificationRule"</li>
 	 * <li>
@@ -101,6 +97,10 @@ public class ConstraintInvestmentAccountIdentificationRule {
 	 * definition} =
 	 * "If InstructionDetails/OpeningType is SUPA, then InvestmentAccount/Identification must be present and must contain the identification of the main account to which the supplementary account is related."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountOpeningInstructionV02> for_acmt_AccountOpeningInstructionV02 = new MMConstraint<AccountOpeningInstructionV02>() {
@@ -124,10 +124,6 @@ public class ConstraintInvestmentAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV07
 	 * AccountOpeningInstructionV07}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InvestmentAccountIdentificationRule"</li>
 	 * <li>
@@ -135,6 +131,10 @@ public class ConstraintInvestmentAccountIdentificationRule {
 	 * definition} =
 	 * "If InstructionDetails/OpeningType/Code is SUPA (SupplementaryAccountOpening), then InvestmentAccount/Identification must be present and must contain the identification of the main account to which the supplementary account is related."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -165,10 +165,6 @@ public class ConstraintInvestmentAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV03
 	 * AccountOpeningInstructionV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InvestmentAccountIdentificationRule"</li>
 	 * <li>
@@ -176,6 +172,10 @@ public class ConstraintInvestmentAccountIdentificationRule {
 	 * definition} =
 	 * "If InstructionDetails/OpeningType is SUPA, then InvestmentAccount/Identification must be present and must contain the identification of the main account to which the supplementary account is related."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -209,10 +209,6 @@ public class ConstraintInvestmentAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV05
 	 * AccountOpeningInstructionV05}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InvestmentAccountIdentificationRule"</li>
 	 * <li>
@@ -220,6 +216,10 @@ public class ConstraintInvestmentAccountIdentificationRule {
 	 * definition} =
 	 * "If InstructionDetails/OpeningType is SUPA, then InvestmentAccount/Identification must be present and must contain the identification of the main account to which the supplementary account is related."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -260,10 +260,6 @@ public class ConstraintInvestmentAccountIdentificationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV06
 	 * AccountOpeningInstructionV06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InvestmentAccountIdentificationRule"</li>
 	 * <li>
@@ -271,6 +267,10 @@ public class ConstraintInvestmentAccountIdentificationRule {
 	 * definition} =
 	 * "If InstructionDetails/OpeningType is SUPA, then InvestmentAccount/Identification must be present and must contain the identification of the main account to which the supplementary account is related."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>

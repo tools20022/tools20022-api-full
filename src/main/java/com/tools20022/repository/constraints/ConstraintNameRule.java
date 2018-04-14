@@ -36,10 +36,6 @@ public class ConstraintNameRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument18
 	 * FinancialInstrument18}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NameRule"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintNameRule {
 	 * definition} =
 	 * "If the ISINIdentifier contradicts the Name, the ISIN Identifier is used as the identification of the instrument and the name is ignored."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FinancialInstrument18> forFinancialInstrument18 = new MMConstraint<FinancialInstrument18>() {

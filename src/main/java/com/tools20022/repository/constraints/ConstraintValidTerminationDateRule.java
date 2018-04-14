@@ -36,10 +36,6 @@ public class ConstraintValidTerminationDateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.TradingVenueAttributes1
 	 * TradingVenueAttributes1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ValidTerminationDateRule"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintValidTerminationDateRule {
 	 * definition} =
 	 * "TerminationDate cannot be a date earlier than FirstTradeDate, RequestForAdmissionDate or AdmissionApprovalDate."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<TradingVenueAttributes1> forTradingVenueAttributes1 = new MMConstraint<TradingVenueAttributes1>() {

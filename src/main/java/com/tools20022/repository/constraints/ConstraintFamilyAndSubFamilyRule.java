@@ -37,10 +37,6 @@ public class ConstraintFamilyAndSubFamilyRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.BankTransactionCodeStructure4
 	 * BankTransactionCodeStructure4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FamilyAndSubFamilyRule"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintFamilyAndSubFamilyRule {
 	 * definition} =
 	 * "If a specific (non-generic) Family code is not present, then a specific (non-generic) SubFamily code is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<BankTransactionCodeStructure4> forBankTransactionCodeStructure4 = new MMConstraint<BankTransactionCodeStructure4>() {
@@ -71,10 +71,6 @@ public class ConstraintFamilyAndSubFamilyRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.BankTransactionCodeStructure1
 	 * BankTransactionCodeStructure1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FamilyAndSubFamilyRule"</li>
 	 * <li>
@@ -82,6 +78,10 @@ public class ConstraintFamilyAndSubFamilyRule {
 	 * definition} =
 	 * "A specific (non-generic) SubFamily code may only be provided if a specific (non-generic) Family code is present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<BankTransactionCodeStructure1> forBankTransactionCodeStructure1 = new MMConstraint<BankTransactionCodeStructure1>() {

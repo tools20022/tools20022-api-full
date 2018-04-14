@@ -147,14 +147,14 @@ import java.util.Objects;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "RedemptionExecution"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Execution of a redemption order."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class RedemptionExecution extends InvestmentFundOrderExecution {
@@ -211,10 +211,6 @@ public class RedemptionExecution extends InvestmentFundOrderExecution {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.RedemptionExecution
 	 * RedemptionExecution}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RedeemedNetAmount"</li>
 	 * <li>
@@ -222,6 +218,10 @@ public class RedemptionExecution extends InvestmentFundOrderExecution {
 	 * definition} =
 	 * "Net amount of money paid to the investor as a result of the redemption."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<RedemptionExecution, CurrencyAndAmount> mmRedeemedNetAmount = new MMBusinessAttribute<RedemptionExecution, CurrencyAndAmount>() {
@@ -284,10 +284,6 @@ public class RedemptionExecution extends InvestmentFundOrderExecution {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.RedemptionExecution
 	 * RedemptionExecution}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PartialRedemptionWithholdingAmount"</li>
 	 * <li>
@@ -295,6 +291,10 @@ public class RedemptionExecution extends InvestmentFundOrderExecution {
 	 * definition} =
 	 * "Amount retained by the Fund and paid out later at a time decided by the Fund."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<RedemptionExecution, CurrencyAndAmount> mmPartialRedemptionWithholdingAmount = new MMBusinessAttribute<RedemptionExecution, CurrencyAndAmount>() {
@@ -336,16 +336,16 @@ public class RedemptionExecution extends InvestmentFundOrderExecution {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.RedemptionExecution
 	 * RedemptionExecution}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SettlementDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Date on which the amount of money for the redemption is paid."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<RedemptionExecution, ISODate> mmSettlementDate = new MMBusinessAttribute<RedemptionExecution, ISODate>() {

@@ -37,10 +37,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PendingStatusReason2
 	 * PendingStatusReason2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -80,10 +80,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RejectedStatusReason16
 	 * RejectedStatusReason16}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -91,6 +87,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RejectedStatusReason16> forRejectedStatusReason16 = new MMConstraint<RejectedStatusReason16>() {
@@ -114,10 +114,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AcceptedStatusReason2
 	 * AcceptedStatusReason2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -125,6 +121,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AcceptedStatusReason2> forAcceptedStatusReason2 = new MMConstraint<AcceptedStatusReason2>() {
@@ -148,10 +148,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PendingCancellationStatusReason1
 	 * PendingCancellationStatusReason1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -159,6 +155,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PendingCancellationStatusReason1> forPendingCancellationStatusReason1 = new MMConstraint<PendingCancellationStatusReason1>() {
@@ -182,10 +182,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionReversalReason4
 	 * CorporateActionReversalReason4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -193,6 +189,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionReversalReason4> forCorporateActionReversalReason4 = new MMConstraint<CorporateActionReversalReason4>() {
@@ -216,10 +216,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CancelledStatusReason10
 	 * CancelledStatusReason10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -227,6 +223,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CancelledStatusReason10> forCancelledStatusReason10 = new MMConstraint<CancelledStatusReason10>() {
@@ -250,10 +250,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AcceptedStatusReason5
 	 * AcceptedStatusReason5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -261,6 +257,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AcceptedStatusReason5> forAcceptedStatusReason5 = new MMConstraint<AcceptedStatusReason5>() {
@@ -284,10 +284,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionReversalReason1
 	 * CorporateActionReversalReason1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -295,6 +291,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -328,10 +328,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PendingCancellationStatusReason5
 	 * PendingCancellationStatusReason5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -339,6 +335,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -379,10 +379,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PendingCancellationStatusReason3
 	 * PendingCancellationStatusReason3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -390,6 +386,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -423,10 +423,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PendingStatusReason12
 	 * PendingStatusReason12}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -434,6 +430,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PendingStatusReason12> forPendingStatusReason12 = new MMConstraint<PendingStatusReason12>() {
@@ -457,10 +457,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PendingStatusReason8
 	 * PendingStatusReason8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -468,6 +464,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PendingStatusReason8> forPendingStatusReason8 = new MMConstraint<PendingStatusReason8>() {
@@ -491,10 +491,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CancelledStatusReason14
 	 * CancelledStatusReason14}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -502,6 +498,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CancelledStatusReason14> forCancelledStatusReason14 = new MMConstraint<CancelledStatusReason14>() {
@@ -525,10 +525,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PendingStatusReason9
 	 * PendingStatusReason9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -536,6 +532,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -565,10 +565,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RejectedStatusReason9
 	 * RejectedStatusReason9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -576,6 +572,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RejectedStatusReason9> forRejectedStatusReason9 = new MMConstraint<RejectedStatusReason9>() {
@@ -599,10 +599,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AcceptedStatusReason10
 	 * AcceptedStatusReason10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -610,6 +606,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AcceptedStatusReason10> forAcceptedStatusReason10 = new MMConstraint<AcceptedStatusReason10>() {
@@ -633,10 +633,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PendingStatusReason11
 	 * PendingStatusReason11}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -644,6 +640,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PendingStatusReason11> forPendingStatusReason11 = new MMConstraint<PendingStatusReason11>() {
@@ -667,10 +667,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CancelledStatusReason5
 	 * CancelledStatusReason5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -678,6 +674,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CancelledStatusReason5> forCancelledStatusReason5 = new MMConstraint<CancelledStatusReason5>() {
@@ -701,10 +701,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RejectedStatusReason22
 	 * RejectedStatusReason22}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -712,6 +708,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RejectedStatusReason22> forRejectedStatusReason22 = new MMConstraint<RejectedStatusReason22>() {
@@ -735,10 +735,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PendingCancellationStatusReason8
 	 * PendingCancellationStatusReason8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -746,6 +742,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PendingCancellationStatusReason8> forPendingCancellationStatusReason8 = new MMConstraint<PendingCancellationStatusReason8>() {
@@ -769,10 +769,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PendingStatusReason3
 	 * PendingStatusReason3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -780,6 +776,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PendingStatusReason3> forPendingStatusReason3 = new MMConstraint<PendingStatusReason3>() {
@@ -803,10 +803,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CancelledStatusReason7
 	 * CancelledStatusReason7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -814,6 +810,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CancelledStatusReason7> forCancelledStatusReason7 = new MMConstraint<CancelledStatusReason7>() {
@@ -837,10 +837,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CancelledStatusReason11
 	 * CancelledStatusReason11}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -848,6 +844,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -877,10 +877,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PendingStatusReason13
 	 * PendingStatusReason13}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -888,6 +884,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -917,10 +917,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CancelledStatusReason4
 	 * CancelledStatusReason4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -928,6 +924,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -960,10 +960,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RejectedStatusReason13
 	 * RejectedStatusReason13}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -971,6 +967,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1009,10 +1009,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PendingStatusReason5
 	 * PendingStatusReason5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -1020,6 +1016,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1058,10 +1058,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CancelledStatusReason9
 	 * CancelledStatusReason9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -1069,6 +1065,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CancelledStatusReason9> forCancelledStatusReason9 = new MMConstraint<CancelledStatusReason9>() {
@@ -1092,10 +1092,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CancelledStatusReason8
 	 * CancelledStatusReason8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -1103,6 +1099,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1141,10 +1141,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RejectedStatusReason19
 	 * RejectedStatusReason19}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -1152,6 +1148,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RejectedStatusReason19> forRejectedStatusReason19 = new MMConstraint<RejectedStatusReason19>() {
@@ -1175,10 +1175,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PendingCancellationStatusReason4
 	 * PendingCancellationStatusReason4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -1186,6 +1182,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PendingCancellationStatusReason4> forPendingCancellationStatusReason4 = new MMConstraint<PendingCancellationStatusReason4>() {
@@ -1209,10 +1209,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RejectedStatusReason11
 	 * RejectedStatusReason11}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -1220,6 +1216,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RejectedStatusReason11> forRejectedStatusReason11 = new MMConstraint<RejectedStatusReason11>() {
@@ -1243,10 +1243,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PendingStatusReason15
 	 * PendingStatusReason15}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -1254,6 +1250,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PendingStatusReason15> forPendingStatusReason15 = new MMConstraint<PendingStatusReason15>() {
@@ -1277,10 +1277,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ProprietaryReason2
 	 * ProprietaryReason2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -1288,6 +1284,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ProprietaryReason2> forProprietaryReason2 = new MMConstraint<ProprietaryReason2>() {
@@ -1311,10 +1311,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RejectedStatusReason21
 	 * RejectedStatusReason21}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -1322,6 +1318,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1351,10 +1351,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RejectedStatusReason15
 	 * RejectedStatusReason15}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -1362,6 +1358,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RejectedStatusReason15> forRejectedStatusReason15 = new MMConstraint<RejectedStatusReason15>() {
@@ -1385,10 +1385,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CancelledStatusReason12
 	 * CancelledStatusReason12}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -1396,6 +1392,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1425,10 +1425,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AcceptedStatusReason9
 	 * AcceptedStatusReason9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -1436,6 +1432,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1465,10 +1465,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RejectedStatusReason10
 	 * RejectedStatusReason10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -1476,6 +1472,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1514,10 +1514,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PendingStatusReason4
 	 * PendingStatusReason4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -1525,6 +1521,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PendingStatusReason4> forPendingStatusReason4 = new MMConstraint<PendingStatusReason4>() {
@@ -1548,10 +1548,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PendingCancellationStatusReason7
 	 * PendingCancellationStatusReason7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -1559,6 +1555,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1589,10 +1589,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RejectedStatusReason18
 	 * RejectedStatusReason18}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -1600,6 +1596,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1629,10 +1629,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ProprietaryReason5
 	 * ProprietaryReason5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -1640,6 +1636,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ProprietaryReason5> forProprietaryReason5 = new MMConstraint<ProprietaryReason5>() {
@@ -1663,10 +1663,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RejectedStatusReason17
 	 * RejectedStatusReason17}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -1674,6 +1670,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1712,10 +1712,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PendingStatusReason6
 	 * PendingStatusReason6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -1723,6 +1719,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PendingStatusReason6> forPendingStatusReason6 = new MMConstraint<PendingStatusReason6>() {
@@ -1746,10 +1746,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.StatusAndReason10
 	 * StatusAndReason10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -1757,6 +1753,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<StatusAndReason10> forStatusAndReason10 = new MMConstraint<StatusAndReason10>() {
@@ -1780,10 +1780,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AcceptedStatusReason1
 	 * AcceptedStatusReason1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -1791,6 +1787,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1827,10 +1827,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RejectedStatusReason20
 	 * RejectedStatusReason20}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -1838,6 +1834,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RejectedStatusReason20> forRejectedStatusReason20 = new MMConstraint<RejectedStatusReason20>() {
@@ -1861,10 +1861,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ProprietaryReason4
 	 * ProprietaryReason4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -1872,6 +1868,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1901,10 +1901,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CancelledStatusReason13
 	 * CancelledStatusReason13}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -1912,6 +1908,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CancelledStatusReason13> forCancelledStatusReason13 = new MMConstraint<CancelledStatusReason13>() {
@@ -1935,10 +1935,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PendingCancellationStatusReason2
 	 * PendingCancellationStatusReason2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -1946,6 +1942,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PendingCancellationStatusReason2> forPendingCancellationStatusReason2 = new MMConstraint<PendingCancellationStatusReason2>() {
@@ -1969,10 +1969,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PendingStatusReason1
 	 * PendingStatusReason1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -1980,6 +1976,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -2012,10 +2012,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PendingCancellationStatusReason6
 	 * PendingCancellationStatusReason6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -2023,6 +2019,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PendingCancellationStatusReason6> forPendingCancellationStatusReason6 = new MMConstraint<PendingCancellationStatusReason6>() {
@@ -2046,10 +2046,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CancelledStatusReason6
 	 * CancelledStatusReason6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -2057,6 +2053,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -2089,10 +2089,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PendingStatusReason10
 	 * PendingStatusReason10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -2100,6 +2096,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -2138,10 +2138,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AcceptedStatusReason3
 	 * AcceptedStatusReason3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -2149,6 +2145,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -2187,10 +2187,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RejectedStatusReason8
 	 * RejectedStatusReason8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -2198,6 +2194,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -2234,10 +2234,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RejectedStatusReason14
 	 * RejectedStatusReason14}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -2245,6 +2241,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -2283,10 +2283,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionReversalReason3
 	 * CorporateActionReversalReason3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -2294,6 +2290,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2324,10 +2324,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PendingStatusReason7
 	 * PendingStatusReason7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -2335,6 +2331,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -2373,10 +2373,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ProprietaryReason1
 	 * ProprietaryReason1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -2384,6 +2380,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -2416,10 +2416,6 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionReversalReason2
 	 * CorporateActionReversalReason2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AdditionalReasonInforrmationRule"</li>
 	 * <li>
@@ -2427,6 +2423,10 @@ public class ConstraintAdditionalReasonInforrmationRule {
 	 * definition} =
 	 * "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorporateActionReversalReason2> forCorporateActionReversalReason2 = new MMConstraint<CorporateActionReversalReason2>() {

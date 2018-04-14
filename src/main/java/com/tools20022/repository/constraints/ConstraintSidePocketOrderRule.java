@@ -39,10 +39,6 @@ public class ConstraintSidePocketOrderRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution7
 	 * SubscriptionExecution7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SidePocketOrderRule"</li>
 	 * <li>
@@ -50,6 +46,10 @@ public class ConstraintSidePocketOrderRule {
 	 * definition} =
 	 * "If HedgeFundOrderType is SPOR in any occurrence of HedgeFundOrderType, then SidePocketDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubscriptionExecution7> forSubscriptionExecution7 = new MMConstraint<SubscriptionExecution7>() {
@@ -73,10 +73,6 @@ public class ConstraintSidePocketOrderRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder9
 	 * RedemptionOrder9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SidePocketOrderRule"</li>
 	 * <li>
@@ -84,6 +80,10 @@ public class ConstraintSidePocketOrderRule {
 	 * definition} =
 	 * "If HedgeFundOrderType is SPOR in any occurrence of HedgeFundOrderType, then SidePocketDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RedemptionOrder9> forRedemptionOrder9 = new MMConstraint<RedemptionOrder9>() {
@@ -107,10 +107,6 @@ public class ConstraintSidePocketOrderRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder9
 	 * SubscriptionOrder9}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SidePocketOrderRule"</li>
 	 * <li>
@@ -118,6 +114,10 @@ public class ConstraintSidePocketOrderRule {
 	 * definition} =
 	 * "If HedgeFundOrderType is SPOR in any occurrence of HedgeFundOrderType, then SidePocketDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubscriptionOrder9> forSubscriptionOrder9 = new MMConstraint<SubscriptionOrder9>() {
@@ -141,10 +141,6 @@ public class ConstraintSidePocketOrderRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution10
 	 * RedemptionExecution10}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SidePocketOrderRule"</li>
 	 * <li>
@@ -152,6 +148,10 @@ public class ConstraintSidePocketOrderRule {
 	 * definition} =
 	 * "If HedgeFundOrderType is SPOR in any occurrence of HedgeFundOrderType, then SidePocketDetails is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RedemptionExecution10> forRedemptionExecution10 = new MMConstraint<RedemptionExecution10>() {

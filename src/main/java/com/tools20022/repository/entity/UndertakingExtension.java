@@ -88,15 +88,15 @@ import java.util.Objects;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "UndertakingExtension"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Specifies information related to the extension of an undertaking."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class UndertakingExtension {
@@ -109,6 +109,10 @@ public class UndertakingExtension {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.Undertaking
+	 * Undertaking}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.Undertaking#mmUndertakingExtension
@@ -117,23 +121,19 @@ public class UndertakingExtension {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.Undertaking
-	 * Undertaking}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.UndertakingExtension
 	 * UndertakingExtension}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Undertaking"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Undertaking for which extension parameters are provided."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<UndertakingExtension, Undertaking> mmUndertaking = new MMBusinessAssociationEnd<UndertakingExtension, Undertaking>() {
@@ -182,10 +182,6 @@ public class UndertakingExtension {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.UndertakingExtension
 	 * UndertakingExtension}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AutoExtensionPeriod"</li>
 	 * <li>
@@ -193,6 +189,10 @@ public class UndertakingExtension {
 	 * definition} =
 	 * "Requirement for a clause covering an automatic extension of the validity expiry date."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<UndertakingExtension, Max35Text> mmAutoExtensionPeriod = new MMBusinessAttribute<UndertakingExtension, Max35Text>() {
@@ -241,10 +241,6 @@ public class UndertakingExtension {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.UndertakingExtension
 	 * UndertakingExtension}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AutoExtensionFinalExpiryDate"</li>
 	 * <li>
@@ -252,6 +248,10 @@ public class UndertakingExtension {
 	 * definition} =
 	 * "Date after which the undertaking will no longer be subject to automatic extension."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<UndertakingExtension, ISODate> mmAutoExtensionFinalExpiryDate = new MMBusinessAttribute<UndertakingExtension, ISODate>() {
@@ -300,10 +300,6 @@ public class UndertakingExtension {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.UndertakingExtension
 	 * UndertakingExtension}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NonExtensionNoticePeriod"</li>
 	 * <li>
@@ -311,6 +307,10 @@ public class UndertakingExtension {
 	 * definition} =
 	 * "Minimum number of days of advance notification that must be given to indicate the undertaking  will no longer be extended. "
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<UndertakingExtension, Number> mmNonExtensionNoticePeriod = new MMBusinessAttribute<UndertakingExtension, Number>() {
@@ -352,15 +352,15 @@ public class UndertakingExtension {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.UndertakingExtension
 	 * UndertakingExtension}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NonExtensionIndicator"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates whether the undertaking can be extended."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<UndertakingExtension, YesNoIndicator> mmNonExtensionIndicator = new MMBusinessAttribute<UndertakingExtension, YesNoIndicator>() {
@@ -400,10 +400,6 @@ public class UndertakingExtension {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.UndertakingExtension
 	 * UndertakingExtension}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AutoExtensionNotificationPeriod"</li>
 	 * <li>
@@ -411,6 +407,10 @@ public class UndertakingExtension {
 	 * definition} =
 	 * "Minimum number of days of advance notification given to indicate the undertaking will no longer be automatically extended. "
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<UndertakingExtension, Number> mmAutoExtensionNotificationPeriod = new MMBusinessAttribute<UndertakingExtension, Number>() {
@@ -451,10 +451,6 @@ public class UndertakingExtension {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.UndertakingExtension
 	 * UndertakingExtension}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NotificationRecipientType"</li>
 	 * <li>
@@ -462,6 +458,10 @@ public class UndertakingExtension {
 	 * definition} =
 	 * "Type of party to whom the notice of non-extension is intended to be delivered, such as the applicant or beneficiary."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<UndertakingExtension, ExternalTypeOfPartyCode> mmNotificationRecipientType = new MMBusinessAttribute<UndertakingExtension, ExternalTypeOfPartyCode>() {

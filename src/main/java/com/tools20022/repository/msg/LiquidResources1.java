@@ -70,16 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "LiquidResources1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Resources of a legal entity or other financial construct that are available to meet cash obligations."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -105,10 +105,6 @@ public class LiquidResources1 {
 	 * LiquidResources1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CntrlBkMnyAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CentralBankMoneyAmount"</li>
 	 * <li>
@@ -116,6 +112,10 @@ public class LiquidResources1 {
 	 * definition} =
 	 * "Value of cash held at central banks. That is, the balance held overnight on day T‐1, and flows for the remainder of the horizon. Indicates if the balance or flows were positive (true) or negative (false)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<LiquidResources1, AmountAndDirection6> mmCentralBankMoneyAmount = new MMMessageAssociationEnd<LiquidResources1, AmountAndDirection6>() {
@@ -159,15 +159,15 @@ public class LiquidResources1 {
 	 * LiquidResources1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "UscrdAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnsecuredAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Liquid resources held unsecured at a commercial bank."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<LiquidResources1, UnsecuredAmount1> mmUnsecuredAmount = new MMMessageAssociationEnd<LiquidResources1, UnsecuredAmount1>() {
@@ -211,10 +211,6 @@ public class LiquidResources1 {
 	 * LiquidResources1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DueAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DueAmount"</li>
 	 * <li>
@@ -222,6 +218,10 @@ public class LiquidResources1 {
 	 * definition} =
 	 * "Value of incoming cash flows (for example from maturing investments or reverse repos, or overnight margin calls against non-defaulting members). Indicates if the balance or flows were positive (true) or negative (false)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<LiquidResources1, AmountAndDirection6> mmDueAmount = new MMMessageAssociationEnd<LiquidResources1, AmountAndDirection6>() {
@@ -266,10 +266,6 @@ public class LiquidResources1 {
 	 * LiquidResources1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RpAgrmtAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RepurchaseAgreementAmount"</li>
 	 * <li>
@@ -277,6 +273,10 @@ public class LiquidResources1 {
 	 * definition} =
 	 * "Agreement between two parties to sell a financial instrument or set of financial instruments and repurchase at an agreed later date."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<LiquidResources1, RepurchaseAgreementAmount1> mmRepurchaseAgreementAmount = new MMMessageAssociationEnd<LiquidResources1, RepurchaseAgreementAmount1>() {
@@ -321,10 +321,6 @@ public class LiquidResources1 {
 	 * LiquidResources1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CCPInvstmtInstrmAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CCPInvestmentInstrumentAmount"</li>
 	 * <li>
@@ -332,6 +328,10 @@ public class LiquidResources1 {
 	 * definition} =
 	 * "Current market value (post-haircut) of flows of marketable financial instruments that are held by the CCP as investment instruments."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<LiquidResources1, InvestmentInstrumentAmount1> mmCCPInvestmentInstrumentAmount = new MMMessageAssociationEnd<LiquidResources1, InvestmentInstrumentAmount1>() {
@@ -376,10 +376,6 @@ public class LiquidResources1 {
 	 * LiquidResources1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OthrFinInvstmtsAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OtherFinancialInvestmentsAmount"</li>
 	 * <li>
@@ -387,6 +383,10 @@ public class LiquidResources1 {
 	 * definition} =
 	 * "Current market value (post-haircut) of flows of marketable financial instruments that are readily available to the CCP. Indicates if the balance or flows were positive (true) or negative (false)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<LiquidResources1, InvestmentInstrumentAmount1> mmOtherFinancialInvestmentsAmount = new MMMessageAssociationEnd<LiquidResources1, InvestmentInstrumentAmount1>() {
@@ -431,10 +431,6 @@ public class LiquidResources1 {
 	 * LiquidResources1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DfltrsNonCshCollAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DefaultersNonCashCollateralAmount"</li>
 	 * <li>
@@ -442,6 +438,10 @@ public class LiquidResources1 {
 	 * definition} =
 	 * "Current market value (post-haircut) of flows of marketable financial instruments that are readily available to the CCP placed with the CCP by the defaulting clearing member."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<LiquidResources1, InvestmentInstrumentAmount1> mmDefaultersNonCashCollateralAmount = new MMMessageAssociationEnd<LiquidResources1, InvestmentInstrumentAmount1>() {
@@ -486,10 +486,6 @@ public class LiquidResources1 {
 	 * LiquidResources1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OthrLqdtyFcltyAmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OtherLiquidityFacilityAmount"</li>
 	 * <li>
@@ -497,6 +493,10 @@ public class LiquidResources1 {
 	 * definition} =
 	 * "Total value of any flows of credit lines, repo lines or equivalents with counterparties other than the two defaulting members."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<LiquidResources1, OtherLiquidityFacilityAmount1> mmOtherLiquidityFacilityAmount = new MMMessageAssociationEnd<LiquidResources1, OtherLiquidityFacilityAmount1>() {

@@ -63,10 +63,6 @@ public class ConstraintAddressRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountParties16
 	 * AccountParties16}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AddressRule"</li>
 	 * <li>
@@ -74,6 +70,10 @@ public class ConstraintAddressRule {
 	 * definition} =
 	 * "If ModificationScopeIndication is INSE (InsertNewDataSet), then one of the following must be present:\r\nPrincipalAccountParty/./Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nCustodianForMinor/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nSecondaryOwner/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nBeneficiary/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nPowerOfAttorney/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nLegalGuardian/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nSuccessorOnDeath/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nAdministrator/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nOtherParty/OtherPartyDetails/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nGranter/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nSettlor/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nSeniorManagingOfficial/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nProtector/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -103,10 +103,6 @@ public class ConstraintAddressRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountParties8
 	 * AccountParties8}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AddressRule"</li>
 	 * <li>
@@ -114,6 +110,10 @@ public class ConstraintAddressRule {
 	 * definition} =
 	 * "If ModificationScopeIndication is INSE, then one of the following must be present:\r\nPrincipalAccountParty/PrimaryOwner/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/PrimaryOwner/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/Trustee/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/Trustee/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/CustodianForMinor/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/CustodianForMinor/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/Nominee/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/Nominee/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/JointOwner/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/JointOwner/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nSecondaryOwner/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nSecondaryOwner/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nBeneficiary/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nBeneficiary/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPowerOfAttorney/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPowerOfAttorney/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nLegalGuardian/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nLegalGuardian/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nSuccessorOnDeath/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nSuccessorOnDeath/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nAdminstrator/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nAdminstrator/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nGranter/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nGranter/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nSettler/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nSettler/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nOtherParty/OtherPartyDetails/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nOtherParty/OtherPartyDetails/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -152,10 +152,6 @@ public class ConstraintAddressRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountParties11
 	 * AccountParties11}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AddressRule"</li>
 	 * <li>
@@ -163,6 +159,10 @@ public class ConstraintAddressRule {
 	 * definition} =
 	 * "If ModificationScopeIndication is INSE, then one of the following must be present:\r\nPrincipalAccountParty/PrimaryOwner/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/PrimaryOwner/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/Trustee/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/Trustee/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/CustodianForMinor/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/CustodianForMinor/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/Nominee/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/Nominee/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/JointOwner/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/JointOwner/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nSecondaryOwner/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nSecondaryOwner/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nBeneficiary/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nBeneficiary/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPowerOfAttorney/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPowerOfAttorney/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nLegalGuardian/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nLegalGuardian/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nSuccessorOnDeath/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nSuccessorOnDeath/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nAdministrator/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nAdministrator/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nGranter/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nGranter/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nSettlor/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nSettlor/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nOtherParty/OtherPartyDetails/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nOtherParty/OtherPartyDetails/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -201,10 +201,6 @@ public class ConstraintAddressRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountParties7
 	 * AccountParties7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AddressRule"</li>
 	 * <li>
@@ -212,6 +208,10 @@ public class ConstraintAddressRule {
 	 * definition} =
 	 * "If ModificationScopeIndication is INSE, then at least one occurrence of Organisation/ModifiedAddress or IndividualPerson/ModifiedAddress must be present with Organisation/ModifiedAddress/ModificationScopeIndication being INSE or IndividualPerson/ModifiedAddres/ModificationScopeIndication being INSE respectively."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -244,10 +244,6 @@ public class ConstraintAddressRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountParties14
 	 * AccountParties14}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AddressRule"</li>
 	 * <li>
@@ -255,6 +251,10 @@ public class ConstraintAddressRule {
 	 * definition} =
 	 * "If ModificationScopeIndication is INSE, then one of the following must be present:\r\nPrincipalAccountParty/PrimaryOwner/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/PrimaryOwner/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/Trustee/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/Trustee/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/CustodianForMinor/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/CustodianForMinor/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/Nominee/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/Nominee/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/JointOwner/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/JointOwner/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nSecondaryOwner/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nSecondaryOwner/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nBeneficiary/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nBeneficiary/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPowerOfAttorney/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPowerOfAttorney/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nLegalGuardian/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nLegalGuardian/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nSuccessorOnDeath/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nSuccessorOnDeath/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nAdministrator/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nAdministrator/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nGranter/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nGranter/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nSettlor/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nSettlor/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nOtherParty/OtherPartyDetails/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nOtherParty/OtherPartyDetails/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -293,10 +293,6 @@ public class ConstraintAddressRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountParties4
 	 * AccountParties4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AddressRule"</li>
 	 * <li>
@@ -304,6 +300,10 @@ public class ConstraintAddressRule {
 	 * definition} =
 	 * "If ModificationScopeIndication is INSE, then at least one occurrence of Organisation/ModifiedAddress or IndividualPerson/ModifiedAddress must be present with Organisation/ModifiedAddress/ModificationScopeIndication being INSE or IndividualPerson/ModifiedAddres/ModificationScopeIndication being INSE respectively."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountParties4> forAccountParties4 = new MMConstraint<AccountParties4>() {
@@ -327,10 +327,6 @@ public class ConstraintAddressRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.AccountParties3
 	 * AccountParties3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AddressRule"</li>
 	 * <li>
@@ -338,6 +334,10 @@ public class ConstraintAddressRule {
 	 * definition} =
 	 * "If ModificationScopeIndication is INSE, then at least one occurrence of Organisation/ModifiedAddress or IndividualPerson/ModifiedAddress must be present with Organisation/ModifiedAddress/ModificationScopeIndication being INSE or IndividualPerson/ModifiedAddres/ModificationScopeIndication being INSE respectively."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountParties3> forAccountParties3 = new MMConstraint<AccountParties3>() {

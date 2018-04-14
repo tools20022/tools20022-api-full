@@ -36,10 +36,6 @@ public class ConstraintMandatory1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.tsin.InvoiceFinancingRequestV01
 	 * InvoiceFinancingRequestV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Mandatory1Rule"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintMandatory1Rule {
 	 * definition} =
 	 * "If financing requester is not the same physical person of the supplier, then InvoiceRequestInformation/Supplier must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<InvoiceFinancingRequestV01> for_tsin_InvoiceFinancingRequestV01 = new MMConstraint<InvoiceFinancingRequestV01>() {

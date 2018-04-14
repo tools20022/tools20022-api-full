@@ -38,10 +38,6 @@ public class ConstraintValidDerivativeExpiryDateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesReferenceDataReport5
 	 * SecuritiesReferenceDataReport5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ValidDerivativeExpiryDateRule"</li>
 	 * <li>
@@ -49,6 +45,10 @@ public class ConstraintValidDerivativeExpiryDateRule {
 	 * definition} =
 	 * "DerivativesInstrumentAttributes/ExpiryDate cannot be a date earlier than TradingVenueRelatedAttributes/FirstTradeDate, TradingVenueRelatedAttributes/RequestForAdmissionDate or TradingVenueRelatedAttributes/AdmissionApprovalDate."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesReferenceDataReport5> forSecuritiesReferenceDataReport5 = new MMConstraint<SecuritiesReferenceDataReport5>() {

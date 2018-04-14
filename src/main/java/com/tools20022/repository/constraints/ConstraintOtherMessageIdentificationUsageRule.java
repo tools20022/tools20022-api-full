@@ -38,10 +38,6 @@ public class ConstraintOtherMessageIdentificationUsageRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.References9Choice
 	 * References9Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OtherMessageIdentificationUsageRule"</li>
 	 * <li>
@@ -49,6 +45,10 @@ public class ConstraintOtherMessageIdentificationUsageRule {
 	 * definition} =
 	 * "If OtherMessageIdentification is used, then the message to be cancelled must not be one that can be identified using of the message identification available in the choice list."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<References9Choice> forReferences9Choice = new MMConstraint<References9Choice>() {
@@ -72,10 +72,6 @@ public class ConstraintOtherMessageIdentificationUsageRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.References53Choice
 	 * References53Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OtherMessageIdentificationUsageRule"</li>
 	 * <li>
@@ -83,6 +79,10 @@ public class ConstraintOtherMessageIdentificationUsageRule {
 	 * definition} =
 	 * "If OtherMessageIdentification is used, then the message to be cancelled must not be one that can be identified using of the message identification available in the choice list."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<References53Choice> forReferences53Choice = new MMConstraint<References53Choice>() {
@@ -106,10 +106,6 @@ public class ConstraintOtherMessageIdentificationUsageRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.References29Choice
 	 * References29Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OtherMessageIdentificationUsageRule"</li>
 	 * <li>
@@ -117,6 +113,10 @@ public class ConstraintOtherMessageIdentificationUsageRule {
 	 * definition} =
 	 * "If OtherMessageIdentification is used, then the message to be cancelled must not be one that can be identified using of the message identification available in the choice list."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<References29Choice> forReferences29Choice = new MMConstraint<References29Choice>() {
@@ -140,10 +140,6 @@ public class ConstraintOtherMessageIdentificationUsageRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.References20Choice
 	 * References20Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OtherMessageIdentificationUsageRule"</li>
 	 * <li>
@@ -151,6 +147,10 @@ public class ConstraintOtherMessageIdentificationUsageRule {
 	 * definition} =
 	 * "If OtherMessageIdentification is used, then the message to be cancelled must not be one that can be identified using of the message identification available in the choice list."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<References20Choice> forReferences20Choice = new MMConstraint<References20Choice>() {
@@ -174,10 +174,6 @@ public class ConstraintOtherMessageIdentificationUsageRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.References38Choice
 	 * References38Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OtherMessageIdentificationUsageRule"</li>
 	 * <li>
@@ -185,6 +181,10 @@ public class ConstraintOtherMessageIdentificationUsageRule {
 	 * definition} =
 	 * "If OtherMessageIdentification is used, then the message to be cancelled must not be one that can be identified using of the message identification available in the choice list."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<References38Choice> forReferences38Choice = new MMConstraint<References38Choice>() {
@@ -208,10 +208,6 @@ public class ConstraintOtherMessageIdentificationUsageRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.References43Choice
 	 * References43Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OtherMessageIdentificationUsageRule"</li>
 	 * <li>
@@ -219,6 +215,10 @@ public class ConstraintOtherMessageIdentificationUsageRule {
 	 * definition} =
 	 * "If OtherMessageIdentification is used, then the message to be cancelled must not be one that can be identified using of the message identification available in the choice list."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -248,10 +248,6 @@ public class ConstraintOtherMessageIdentificationUsageRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.References18Choice
 	 * References18Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OtherMessageIdentificationUsageRule"</li>
 	 * <li>
@@ -259,6 +255,10 @@ public class ConstraintOtherMessageIdentificationUsageRule {
 	 * definition} =
 	 * "If OtherMessageIdentification is used, then the message to be cancelled must not be one that can be identified using of the message identification available in the choice list."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<References18Choice> forReferences18Choice = new MMConstraint<References18Choice>() {
@@ -282,10 +282,6 @@ public class ConstraintOtherMessageIdentificationUsageRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.References37Choice
 	 * References37Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OtherMessageIdentificationUsageRule"</li>
 	 * <li>
@@ -293,6 +289,10 @@ public class ConstraintOtherMessageIdentificationUsageRule {
 	 * definition} =
 	 * "If OtherMessageIdentification is used, then the message to be cancelled must not be one that can be identified using of the message identification available in the choice list."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -325,10 +325,6 @@ public class ConstraintOtherMessageIdentificationUsageRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.choice.References3Choice
 	 * References3Choice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OtherMessageIdentificationUsageRule"</li>
 	 * <li>
@@ -336,6 +332,10 @@ public class ConstraintOtherMessageIdentificationUsageRule {
 	 * definition} =
 	 * "If OtherMessageIdentification is used, then the message to be cancelled must not be one that can be identified using of the message identification available in the choice list."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<References3Choice> forReferences3Choice = new MMConstraint<References3Choice>() {

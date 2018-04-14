@@ -101,6 +101,10 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "InvestigationExecutionConfirmation3Code"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} = "Specifies the result of an investigation."</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -111,10 +115,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
- * "InvestigationExecutionConfirmation3Code"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Specifies the result of an investigation."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -129,12 +129,12 @@ public class InvestigationExecutionConfirmation3Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation3Code
 	 * InvestigationExecutionConfirmation3Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CancelledAsPerRequest"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CancelledAsPerRequest"</li>
 	 * </ul>
 	 */
 	public static final InvestigationExecutionConfirmation3Code CancelledAsPerRequest = new InvestigationExecutionConfirmation3Code() {
@@ -153,12 +153,12 @@ public class InvestigationExecutionConfirmation3Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation3Code
 	 * InvestigationExecutionConfirmation3Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ModifiedAsPerRequest"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ModifiedAsPerRequest"</li>
 	 * </ul>
 	 */
 	public static final InvestigationExecutionConfirmation3Code ModifiedAsPerRequest = new InvestigationExecutionConfirmation3Code() {
@@ -177,12 +177,12 @@ public class InvestigationExecutionConfirmation3Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation3Code
 	 * InvestigationExecutionConfirmation3Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PaymentInitiated"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PaymentInitiated"</li>
 	 * </ul>
 	 */
 	public static final InvestigationExecutionConfirmation3Code PaymentInitiated = new InvestigationExecutionConfirmation3Code() {
@@ -201,12 +201,12 @@ public class InvestigationExecutionConfirmation3Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation3Code
 	 * InvestigationExecutionConfirmation3Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CoverInitiated"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CoverInitiated"</li>
 	 * </ul>
 	 */
 	public static final InvestigationExecutionConfirmation3Code CoverInitiated = new InvestigationExecutionConfirmation3Code() {
@@ -225,12 +225,12 @@ public class InvestigationExecutionConfirmation3Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation3Code
 	 * InvestigationExecutionConfirmation3Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CoverModified"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CoverModified"</li>
 	 * </ul>
 	 */
 	public static final InvestigationExecutionConfirmation3Code CoverModified = new InvestigationExecutionConfirmation3Code() {
@@ -249,12 +249,12 @@ public class InvestigationExecutionConfirmation3Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation3Code
 	 * InvestigationExecutionConfirmation3Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AdditionalInformationSent"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AdditionalInformationSent"</li>
 	 * </ul>
 	 */
 	public static final InvestigationExecutionConfirmation3Code AdditionalInformationSent = new InvestigationExecutionConfirmation3Code() {
@@ -273,12 +273,12 @@ public class InvestigationExecutionConfirmation3Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation3Code
 	 * InvestigationExecutionConfirmation3Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ConfirmationOfPayment"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ConfirmationOfPayment"</li>
 	 * </ul>
 	 */
 	public static final InvestigationExecutionConfirmation3Code ConfirmationOfPayment = new InvestigationExecutionConfirmation3Code() {
@@ -297,12 +297,12 @@ public class InvestigationExecutionConfirmation3Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation3Code
 	 * InvestigationExecutionConfirmation3Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CancellationWillFollow"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CancellationWillFollow"</li>
 	 * </ul>
 	 */
 	public static final InvestigationExecutionConfirmation3Code CancellationWillFollow = new InvestigationExecutionConfirmation3Code() {
@@ -321,12 +321,12 @@ public class InvestigationExecutionConfirmation3Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation3Code
 	 * InvestigationExecutionConfirmation3Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ModificationWillFollow"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ModificationWillFollow"</li>
 	 * </ul>
 	 */
 	public static final InvestigationExecutionConfirmation3Code ModificationWillFollow = new InvestigationExecutionConfirmation3Code() {
@@ -345,12 +345,12 @@ public class InvestigationExecutionConfirmation3Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation3Code
 	 * InvestigationExecutionConfirmation3Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "UnableToApplyWillFollow"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "UnableToApplyWillFollow"</li>
 	 * </ul>
 	 */
 	public static final InvestigationExecutionConfirmation3Code UnableToApplyWillFollow = new InvestigationExecutionConfirmation3Code() {
@@ -369,12 +369,12 @@ public class InvestigationExecutionConfirmation3Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation3Code
 	 * InvestigationExecutionConfirmation3Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PartiallyExecutedCancellationRequest"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PartiallyExecutedCancellationRequest"</li>
 	 * </ul>
 	 */
 	public static final InvestigationExecutionConfirmation3Code PartiallyExecutedCancellationRequest = new InvestigationExecutionConfirmation3Code() {
@@ -393,12 +393,12 @@ public class InvestigationExecutionConfirmation3Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation3Code
 	 * InvestigationExecutionConfirmation3Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PendingCancellationRequest"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PendingCancellationRequest"</li>
 	 * </ul>
 	 */
 	public static final InvestigationExecutionConfirmation3Code PendingCancellationRequest = new InvestigationExecutionConfirmation3Code() {
@@ -417,12 +417,12 @@ public class InvestigationExecutionConfirmation3Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation3Code
 	 * InvestigationExecutionConfirmation3Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RejectedCancellationRequest"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "RejectedCancellationRequest"</li>
 	 * </ul>
 	 */
 	public static final InvestigationExecutionConfirmation3Code RejectedCancellationRequest = new InvestigationExecutionConfirmation3Code() {
@@ -441,12 +441,12 @@ public class InvestigationExecutionConfirmation3Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation3Code
 	 * InvestigationExecutionConfirmation3Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "StatementEntryCorrect"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "StatementEntryCorrect"</li>
 	 * </ul>
 	 */
 	public static final InvestigationExecutionConfirmation3Code StatementEntryCorrect = new InvestigationExecutionConfirmation3Code() {
@@ -465,12 +465,12 @@ public class InvestigationExecutionConfirmation3Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation3Code
 	 * InvestigationExecutionConfirmation3Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "StatementEntryIncorrect"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "StatementEntryIncorrect"</li>
 	 * </ul>
 	 */
 	public static final InvestigationExecutionConfirmation3Code StatementEntryIncorrect = new InvestigationExecutionConfirmation3Code() {
@@ -489,12 +489,12 @@ public class InvestigationExecutionConfirmation3Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation3Code
 	 * InvestigationExecutionConfirmation3Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ChargesDetailsProvided"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ChargesDetailsProvided"</li>
 	 * </ul>
 	 */
 	public static final InvestigationExecutionConfirmation3Code ChargesDetailsProvided = new InvestigationExecutionConfirmation3Code() {
@@ -513,12 +513,12 @@ public class InvestigationExecutionConfirmation3Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation3Code
 	 * InvestigationExecutionConfirmation3Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PurposeDetailsProvided"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PurposeDetailsProvided"</li>
 	 * </ul>
 	 */
 	public static final InvestigationExecutionConfirmation3Code PurposeDetailsProvided = new InvestigationExecutionConfirmation3Code() {
@@ -537,12 +537,12 @@ public class InvestigationExecutionConfirmation3Code extends MMCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation3Code
 	 * InvestigationExecutionConfirmation3Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InstructionIsDuplicate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "InstructionIsDuplicate"</li>
 	 * </ul>
 	 */
 	public static final InvestigationExecutionConfirmation3Code InstructionIsDuplicate = new InvestigationExecutionConfirmation3Code() {

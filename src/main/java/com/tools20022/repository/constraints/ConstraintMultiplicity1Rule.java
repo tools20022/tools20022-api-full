@@ -37,10 +37,6 @@ public class ConstraintMultiplicity1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.tsin.InvoiceFinancingRequestStatusV01
 	 * InvoiceFinancingRequestStatusV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Multiplicity1Rule"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintMultiplicity1Rule {
 	 * definition} =
 	 * "The status message must contain one occurrence of the InvoiceFinancingDetails block for every single invoice request present into the original bulk invoice financing request message."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<InvoiceFinancingRequestStatusV01> for_tsin_InvoiceFinancingRequestStatusV01 = new MMConstraint<InvoiceFinancingRequestStatusV01>() {

@@ -37,10 +37,6 @@ public class ConstraintInvestorUsageRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.OtherParties18 OtherParties18}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InvestorUsageRule"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintInvestorUsageRule {
 	 * definition} =
 	 * "When investor is used with a country code, the country code specifies the nationality of the investor, for the settlement of certain securities (i.e. airlines, defence manufacturers) under the EU legislation."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<OtherParties18> forOtherParties18 = new MMConstraint<OtherParties18>() {
@@ -70,10 +70,6 @@ public class ConstraintInvestorUsageRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.OtherParties1 OtherParties1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InvestorUsageRule"</li>
 	 * <li>
@@ -81,6 +77,10 @@ public class ConstraintInvestorUsageRule {
 	 * definition} =
 	 * "When investor is used with a country code, the country code specifies the nationality of the investor, for the settlement of certain securities (i.e. airlines, defence manufacturers) under the EU legislation."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<OtherParties1> forOtherParties1 = new MMConstraint<OtherParties1>() {

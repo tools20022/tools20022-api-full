@@ -38,10 +38,6 @@ public class ConstraintTransferValueDateRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Transactions4 Transactions4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TransferValueDateRule"</li>
 	 * <li>
@@ -49,6 +45,10 @@ public class ConstraintTransferValueDateRule {
 	 * definition} =
 	 * "If PaymentCommonInformation/TransferValueDate is present, then TransactionReport/Transaction/Payment/TransferValueDate is not allowed.\nIf PaymentCommonInformation/TransferValueDate is not present, then TransactionReport/Transaction/Payment/TransferValueDate is optional."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Transactions4> forTransactions4 = new MMConstraint<Transactions4>() {
@@ -75,10 +75,6 @@ public class ConstraintTransferValueDateRule {
 	 * expression} =
 	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/TransactionReport[*]/TransactionOrError/Transaction/Payment/RequestedExecutionDate&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/PaymentCommonInformation/RequestedExecutionDate&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TransferValueDateRule"</li>
 	 * <li>
@@ -86,6 +82,10 @@ public class ConstraintTransferValueDateRule {
 	 * definition} =
 	 * "If PaymentCommonInformation/RequestedExecutionDate is present, then TransactionReport/Transaction/Payment/RequestedExecutionDate is not allowed.\r\nIf PaymentCommonInformation/RequestedExecutionDate is not present, then TransactionReport/Transaction/Payment/RequestedExecutionDate is optional.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -122,10 +122,6 @@ public class ConstraintTransferValueDateRule {
 	 * expression} =
 	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/TransactionReport[*]/TransactionOrError/Transaction/Payment/RequestedExecutionDate&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/PaymentCommonInformation/RequestedExecutionDate&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TransferValueDateRule"</li>
 	 * <li>
@@ -133,6 +129,10 @@ public class ConstraintTransferValueDateRule {
 	 * definition} =
 	 * "If PaymentCommonInformation/RequestedExecutionDate is present, then TransactionReport/Transaction/Payment/RequestedExecutionDate is not allowed.\r\nIf PaymentCommonInformation/RequestedExecutionDate is not present, then TransactionReport/Transaction/Payment/RequestedExecutionDate is optional.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -171,10 +171,6 @@ public class ConstraintTransferValueDateRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Transactions3 Transactions3}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TransferValueDateRule"</li>
 	 * <li>
@@ -182,6 +178,10 @@ public class ConstraintTransferValueDateRule {
 	 * definition} =
 	 * "If PaymentCommonInformation/TransferValueDate is present, then TransactionReport/Transaction/Payment/TransferValueDate is not allowed.\nIf PaymentCommonInformation/TransferValueDate is not present, then TransactionReport/Transaction/Payment/TransferValueDate is optional."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Transactions3> forTransactions3 = new MMConstraint<Transactions3>() {
@@ -208,10 +208,6 @@ public class ConstraintTransferValueDateRule {
 	 * expression} =
 	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/TransactionReport[*]/TransactionOrError/Transaction/Payment/RequestedExecutionDate&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/PaymentCommonInformation/RequestedExecutionDate&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TransferValueDateRule"</li>
 	 * <li>
@@ -219,6 +215,10 @@ public class ConstraintTransferValueDateRule {
 	 * definition} =
 	 * "If PaymentCommonInformation/RequestedExecutionDate is present, then TransactionReport/Transaction/Payment/RequestedExecutionDate is not allowed.\r\nIf PaymentCommonInformation/RequestedExecutionDate is not present, then TransactionReport/Transaction/Payment/RequestedExecutionDate is optional.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -248,10 +248,6 @@ public class ConstraintTransferValueDateRule {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.Transactions2 Transactions2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TransferValueDateRule"</li>
 	 * <li>
@@ -259,6 +255,10 @@ public class ConstraintTransferValueDateRule {
 	 * definition} =
 	 * "If PaymentCommonInformation/TransferValueDate is present, then TransactionReport/Transaction/Payment/TransferValueDate is not allowed.\nIf PaymentCommonInformation/TransferValueDate is not present, then TransactionReport/Transaction/Payment/TransferValueDate is optional.\n."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Transactions2> forTransactions2 = new MMConstraint<Transactions2>() {

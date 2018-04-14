@@ -37,10 +37,6 @@ public class ConstraintParameterRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.BreakdownByUserDefinedParameter2
 	 * BreakdownByUserDefinedParameter2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ParameterRule"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintParameterRule {
 	 * definition} =
 	 * "At least one element in the list (Party, Country, Currency, UserDefined) must be present. More than one element in the list (Party, Country, Currency, UserDefined) may be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<BreakdownByUserDefinedParameter2> forBreakdownByUserDefinedParameter2 = new MMConstraint<BreakdownByUserDefinedParameter2>() {

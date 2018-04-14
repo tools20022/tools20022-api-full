@@ -113,14 +113,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "VotingCondition"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Specifies the different voting types, channels and premium."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 public class VotingCondition {
@@ -162,15 +162,15 @@ public class VotingCondition {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.VotingCondition
 	 * VotingCondition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SecuritiesQuantityRequiredToVote"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Number of holdings required for a vote."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<VotingCondition, DecimalNumber> mmSecuritiesQuantityRequiredToVote = new MMBusinessAttribute<VotingCondition, DecimalNumber>() {
@@ -233,10 +233,6 @@ public class VotingCondition {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.VotingCondition
 	 * VotingCondition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PartialVoteAllowed"</li>
 	 * <li>
@@ -244,6 +240,10 @@ public class VotingCondition {
 	 * definition} =
 	 * "Specifies whether it is allowed to only vote on a part of the entire entitled holding, leaving part of the position un-voted."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<VotingCondition, YesNoIndicator> mmPartialVoteAllowed = new MMBusinessAttribute<VotingCondition, YesNoIndicator>() {
@@ -305,10 +305,6 @@ public class VotingCondition {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.VotingCondition
 	 * VotingCondition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SplitVoteAllowed"</li>
 	 * <li>
@@ -316,6 +312,10 @@ public class VotingCondition {
 	 * definition} =
 	 * "Indicates that the option to give a split instruction, for example, a split voting instruction on a meeting, is allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<VotingCondition, YesNoIndicator> mmSplitVoteAllowed = new MMBusinessAttribute<VotingCondition, YesNoIndicator>() {
@@ -348,6 +348,10 @@ public class VotingCondition {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.ContactPoint
+	 * ContactPoint}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.ContactPoint#mmContactPointForVote
@@ -355,10 +359,6 @@ public class VotingCondition {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.ContactPoint
-	 * ContactPoint}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -390,10 +390,6 @@ public class VotingCondition {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.VotingCondition
 	 * VotingCondition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "VoteLocation"</li>
 	 * <li>
@@ -401,6 +397,10 @@ public class VotingCondition {
 	 * definition} =
 	 * "Electronic address, e-mail or website where a voting ballot can be obtained and/or where a security holder can vote."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<VotingCondition, List<ContactPoint>> mmVoteLocation = new MMBusinessAssociationEnd<VotingCondition, List<ContactPoint>>() {
@@ -464,10 +464,6 @@ public class VotingCondition {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.VotingCondition
 	 * VotingCondition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BeneficialOwnerDisclosure"</li>
 	 * <li>
@@ -475,6 +471,10 @@ public class VotingCondition {
 	 * definition} =
 	 * "Indicates whether beneficiary details (eg name and address) must be supplied in order to take part to a meeting."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<VotingCondition, YesNoIndicator> mmBeneficialOwnerDisclosure = new MMBusinessAttribute<VotingCondition, YesNoIndicator>() {
@@ -540,10 +540,6 @@ public class VotingCondition {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.VotingCondition
 	 * VotingCondition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IncentivePremium"</li>
 	 * <li>
@@ -551,6 +547,10 @@ public class VotingCondition {
 	 * definition} =
 	 * "Cash premium made available if the securities holder consents or participates to an event."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<VotingCondition, IncentivePremium> mmIncentivePremium = new MMBusinessAttribute<VotingCondition, IncentivePremium>() {
@@ -613,15 +613,15 @@ public class VotingCondition {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.VotingCondition
 	 * VotingCondition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "VoteInstructionType"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identifies the possible types of voting instructions."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<VotingCondition, VoteInstructionCode> mmVoteInstructionType = new MMBusinessAttribute<VotingCondition, VoteInstructionCode>() {
@@ -675,10 +675,6 @@ public class VotingCondition {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.VotingCondition
 	 * VotingCondition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "StandingVotingInstruction"</li>
 	 * <li>
@@ -686,6 +682,10 @@ public class VotingCondition {
 	 * definition} =
 	 * "Indicates whether standing instructions have been defined or not. In this case, the intermediary should cast the votes according to these instructions."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<VotingCondition, YesNoIndicator> mmStandingVotingInstruction = new MMBusinessAttribute<VotingCondition, YesNoIndicator>() {
@@ -727,10 +727,6 @@ public class VotingCondition {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.VotingCondition
 	 * VotingCondition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "VotingPremiumAmount"</li>
 	 * <li>
@@ -738,6 +734,10 @@ public class VotingCondition {
 	 * definition} =
 	 * "Amount of additional weight applied to the votes of long term shareholders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<VotingCondition, CurrencyAndAmount> mmVotingPremiumAmount = new MMBusinessAttribute<VotingCondition, CurrencyAndAmount>() {
@@ -778,10 +778,6 @@ public class VotingCondition {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.VotingCondition
 	 * VotingCondition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "VotingPremiumRate"</li>
 	 * <li>
@@ -789,6 +785,10 @@ public class VotingCondition {
 	 * definition} =
 	 * "Rate of additional weight applied to the votes of long term shareholders."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<VotingCondition, PercentageRate> mmVotingPremiumRate = new MMBusinessAttribute<VotingCondition, PercentageRate>() {
@@ -820,6 +820,9 @@ public class VotingCondition {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.entity.Meeting Meeting}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
 	 * {@linkplain com.tools20022.repository.entity.Meeting#mmVotingCondition
@@ -828,22 +831,19 @@ public class VotingCondition {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.entity.Meeting Meeting}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.VotingCondition
 	 * VotingCondition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Meeting"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Meeting for which voting conditions are specified."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd<VotingCondition, Optional<Meeting>> mmMeeting = new MMBusinessAssociationEnd<VotingCondition, Optional<Meeting>>() {
@@ -894,10 +894,6 @@ public class VotingCondition {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.VotingCondition
 	 * VotingCondition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PreviousInstructionInvalidity"</li>
 	 * <li>
@@ -905,6 +901,10 @@ public class VotingCondition {
 	 * definition} =
 	 * "Indicates whether the previously sent instructions becomes invalid after a market deadline extension."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute<VotingCondition, YesNoIndicator> mmPreviousInstructionInvalidity = new MMBusinessAttribute<VotingCondition, YesNoIndicator>() {

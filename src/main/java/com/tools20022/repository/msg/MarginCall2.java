@@ -91,16 +91,16 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "MarginCall2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Specifies the calculation and the resulting margin and independent amount needed to cover the risk exposure of one party versus another."
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -130,10 +130,6 @@ public class MarginCall2 {
 	 * {@linkplain com.tools20022.repository.msg.MarginCall2 MarginCall2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CollAcctId"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CollateralAccountIdentification"</li>
 	 * <li>
@@ -141,6 +137,10 @@ public class MarginCall2 {
 	 * definition} =
 	 * "Provides additional information on the collateral account of the party delivering/receiving the collateral."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<MarginCall2, Optional<CollateralAccount2>> mmCollateralAccountIdentification = new MMMessageAssociationEnd<MarginCall2, Optional<CollateralAccount2>>() {
@@ -188,10 +188,6 @@ public class MarginCall2 {
 	 * {@linkplain com.tools20022.repository.msg.MarginCall2 MarginCall2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MrgnCallRslt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MarginCallResult"</li>
 	 * <li>
@@ -199,6 +195,10 @@ public class MarginCall2 {
 	 * definition} =
 	 * "Summation of the call amounts per margin type. It is provided for the purposes of carrying forward for future messages that are used to compare the margin call results to determine whether a call is agreed or full/partially disputed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<MarginCall2, MarginCallResult3> mmMarginCallResult = new MMMessageAssociationEnd<MarginCall2, MarginCallResult3>() {
@@ -246,10 +246,6 @@ public class MarginCall2 {
 	 * {@linkplain com.tools20022.repository.msg.MarginCall2 MarginCall2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MrgnDtlDueToA"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MarginDetailDueToA"</li>
 	 * <li>
@@ -257,6 +253,10 @@ public class MarginCall2 {
 	 * definition} =
 	 * "Provides details about the margin calculation that would be due to party A."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<MarginCall2, Optional<MarginCall1>> mmMarginDetailDueToA = new MMMessageAssociationEnd<MarginCall2, Optional<MarginCall1>>() {
@@ -304,10 +304,6 @@ public class MarginCall2 {
 	 * {@linkplain com.tools20022.repository.msg.MarginCall2 MarginCall2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MrgnDtlDueToB"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MarginDetailDueToB"</li>
 	 * <li>
@@ -315,6 +311,10 @@ public class MarginCall2 {
 	 * definition} =
 	 * "Provides details about the margin calculation that would be due to party B."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<MarginCall2, Optional<MarginCall1>> mmMarginDetailDueToB = new MMMessageAssociationEnd<MarginCall2, Optional<MarginCall1>>() {
@@ -364,10 +364,6 @@ public class MarginCall2 {
 	 * {@linkplain com.tools20022.repository.msg.MarginCall2 MarginCall2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RqrmntDtlsDueToA"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RequirementDetailsDueToA"</li>
 	 * <li>
@@ -375,6 +371,10 @@ public class MarginCall2 {
 	 * definition} =
 	 * "Amount of expected margin that will be either delivered to party A by party B or recalled to party A from party B."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<MarginCall2, Optional<MarginRequirement1Choice>> mmRequirementDetailsDueToA = new MMMessageAssociationEnd<MarginCall2, Optional<MarginRequirement1Choice>>() {
@@ -424,10 +424,6 @@ public class MarginCall2 {
 	 * {@linkplain com.tools20022.repository.msg.MarginCall2 MarginCall2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RqrmntDtlsDueToB"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RequirementDetailsDueToB"</li>
 	 * <li>
@@ -435,6 +431,10 @@ public class MarginCall2 {
 	 * definition} =
 	 * "Amount of expected margin that will be either delivered to party B by party A or recalled to party B from party A."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<MarginCall2, Optional<MarginRequirement1Choice>> mmRequirementDetailsDueToB = new MMMessageAssociationEnd<MarginCall2, Optional<MarginRequirement1Choice>>() {
@@ -484,10 +484,6 @@ public class MarginCall2 {
 	 * {@linkplain com.tools20022.repository.msg.MarginCall2 MarginCall2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "XpctdCollDueToA"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ExpectedCollateralDueToA"</li>
 	 * <li>
@@ -495,6 +491,10 @@ public class MarginCall2 {
 	 * definition} =
 	 * "Provides details about the type of collateral that will be either delivered to party A by party B or recalled to party A from party B."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<MarginCall2, Optional<ExpectedCollateral2Choice>> mmExpectedCollateralDueToA = new MMMessageAssociationEnd<MarginCall2, Optional<ExpectedCollateral2Choice>>() {
@@ -544,10 +544,6 @@ public class MarginCall2 {
 	 * {@linkplain com.tools20022.repository.msg.MarginCall2 MarginCall2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "XpctdCollDueToB"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ExpectedCollateralDueToB"</li>
 	 * <li>
@@ -555,6 +551,10 @@ public class MarginCall2 {
 	 * definition} =
 	 * "Provides details about the type of collateral that will be either delivered to party B by party A or recalled to party B from party A."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<MarginCall2, Optional<ExpectedCollateral2Choice>> mmExpectedCollateralDueToB = new MMMessageAssociationEnd<MarginCall2, Optional<ExpectedCollateral2Choice>>() {

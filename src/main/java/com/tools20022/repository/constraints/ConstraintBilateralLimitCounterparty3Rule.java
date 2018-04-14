@@ -41,10 +41,6 @@ public class ConstraintBilateralLimitCounterparty3Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria1
 	 * LimitSearchCriteria1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BilateralLimitCounterparty3Rule"</li>
 	 * <li>
@@ -52,6 +48,10 @@ public class ConstraintBilateralLimitCounterparty3Rule {
 	 * definition} =
 	 * "If at least one occurrence of RiskManagementCurrentLimitType is present and is MULT, then no occurrence of BilateralLimitCounterpartyIdentification is allowed.\nIf no occurrence of RiskManagementCurrentLimitType is MULT, then any occurrence of BilateralLimitCounterpartyIdentification is optional.\nIf RiskManagementCurrentLimitType is not present, then any occurrence of BilateralLimitCounterpartyIdentification is optional."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<LimitSearchCriteria1> forLimitSearchCriteria1 = new MMConstraint<LimitSearchCriteria1>() {
@@ -75,10 +75,6 @@ public class ConstraintBilateralLimitCounterparty3Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria2
 	 * LimitSearchCriteria2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BilateralLimitCounterparty3Rule"</li>
 	 * <li>
@@ -86,6 +82,10 @@ public class ConstraintBilateralLimitCounterparty3Rule {
 	 * definition} =
 	 * "If at least one occurrence of RiskManagementCurrentLimitType is present and is MULT, then no occurrence of BilateralLimitCounterpartyIdentification is allowed.\nIf no occurrence of RiskManagementCurrentLimitType is MULT, then any occurrence of BilateralLimitCounterpartyIdentification is optional.\nIf RiskManagementCurrentLimitType is not present, then any occurrence of BilateralLimitCounterpartyIdentification is optional."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<LimitSearchCriteria2> forLimitSearchCriteria2 = new MMConstraint<LimitSearchCriteria2>() {
@@ -113,10 +113,6 @@ public class ConstraintBilateralLimitCounterparty3Rule {
 	 * expression} =
 	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/BilateralLimitCounterpartyIdentification[1]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/CurrentLimitType[1]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/CurrentLimitType[*]/Code&lt;/leftOperand&gt;&lt;rightOperand&gt;Multilateral&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BilateralLimitCounterparty3Rule"</li>
 	 * <li>
@@ -124,6 +120,10 @@ public class ConstraintBilateralLimitCounterparty3Rule {
 	 * definition} =
 	 * "If at least one occurrence of CurrentLimitType is present and is MULT, then no occurrence of BilateralLimitCounterpartyIdentification is allowed.\r\nIf no occurrence of CurrentLimitType is MULT, then any occurrence of BilateralLimitCounterpartyIdentification is optional.\r\nIf CurrentLimitType is not present, then any occurrence of BilateralLimitCounterpartyIdentification is optional."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -158,10 +158,6 @@ public class ConstraintBilateralLimitCounterparty3Rule {
 	 * expression} =
 	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/BilateralLimitCounterpartyIdentification[1]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/CurrentLimitType[1]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/CurrentLimitType[*]/Code&lt;/leftOperand&gt;&lt;rightOperand&gt;Multilateral&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BilateralLimitCounterparty3Rule"</li>
 	 * <li>
@@ -169,6 +165,10 @@ public class ConstraintBilateralLimitCounterparty3Rule {
 	 * definition} =
 	 * "If at least one occurrence of CurrentLimitType is present and is MULT, then no occurrence of BilateralLimitCounterpartyIdentification is allowed.\r\nIf no occurrence of CurrentLimitType is MULT, then any occurrence of BilateralLimitCounterpartyIdentification is optional.\r\nIf CurrentLimitType is not present, then any occurrence of BilateralLimitCounterpartyIdentification is optional."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -206,10 +206,6 @@ public class ConstraintBilateralLimitCounterparty3Rule {
 	 * expression} =
 	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/BilateralLimitCounterpartyIdentification[1]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/CurrentLimitType[1]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/CurrentLimitType[*]/Code&lt;/leftOperand&gt;&lt;rightOperand&gt;Multilateral&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
 	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BilateralLimitCounterparty3Rule"</li>
 	 * <li>
@@ -217,6 +213,10 @@ public class ConstraintBilateralLimitCounterparty3Rule {
 	 * definition} =
 	 * "If at least one occurrence of CurrentLimitType is present and is MULT, then no occurrence of BilateralLimitCounterpartyIdentification is allowed.\r\nIf no occurrence of CurrentLimitType is MULT, then any occurrence of BilateralLimitCounterpartyIdentification is optional.\r\nIf CurrentLimitType is not present, then any occurrence of BilateralLimitCounterpartyIdentification is optional."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>

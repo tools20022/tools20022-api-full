@@ -85,14 +85,14 @@ import javax.xml.bind.annotation.XmlType;
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
  * GeneratedRepository.dataDict}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "IncomeStatement1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Statement of the financial performance of a legal entity."</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -120,10 +120,6 @@ public class IncomeStatement1 {
 	 * IncomeStatement1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ClrFees"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ClearingFees"</li>
 	 * <li>
@@ -131,6 +127,10 @@ public class IncomeStatement1 {
 	 * definition} =
 	 * "Specifies the clearing fees recorded in month-end management reporting for the financial year-to-date."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<IncomeStatement1, ActiveCurrencyAndAmount> mmClearingFees = new MMMessageAttribute<IncomeStatement1, ActiveCurrencyAndAmount>() {
@@ -175,10 +175,6 @@ public class IncomeStatement1 {
 	 * IncomeStatement1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OthrOprgRvn"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OtherOperatingRevenue"</li>
 	 * <li>
@@ -186,6 +182,10 @@ public class IncomeStatement1 {
 	 * definition} =
 	 * "Other operating revenue recorded in month-end management reporting for the financial year-to-date.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<IncomeStatement1, ActiveCurrencyAndAmount> mmOtherOperatingRevenue = new MMMessageAttribute<IncomeStatement1, ActiveCurrencyAndAmount>() {
@@ -230,10 +230,6 @@ public class IncomeStatement1 {
 	 * IncomeStatement1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OprgExpnss"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OperatingExpenses"</li>
 	 * <li>
@@ -241,6 +237,10 @@ public class IncomeStatement1 {
 	 * definition} =
 	 * "Operating expenses recorded in month-end management reporting for the financial year-to-date.\r\n"
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<IncomeStatement1, ActiveCurrencyAndAmount> mmOperatingExpenses = new MMMessageAttribute<IncomeStatement1, ActiveCurrencyAndAmount>() {
@@ -283,10 +283,6 @@ public class IncomeStatement1 {
 	 * IncomeStatement1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OprgPrftOrLoss"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OperatingProfitOrLoss"</li>
 	 * <li>
@@ -294,6 +290,10 @@ public class IncomeStatement1 {
 	 * definition} =
 	 * "Indicates the operating profit (true) or loss (false) recorded in the month-end management reporting for the financial year-to-date."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<IncomeStatement1, AmountAndDirection6> mmOperatingProfitOrLoss = new MMMessageAssociationEnd<IncomeStatement1, AmountAndDirection6>() {
@@ -339,10 +339,6 @@ public class IncomeStatement1 {
 	 * IncomeStatement1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NetIntrstIncm"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NetInterestIncome"</li>
 	 * <li>
@@ -350,6 +346,10 @@ public class IncomeStatement1 {
 	 * definition} =
 	 * "Net interest income recorded in month-end management reporting for the financial year-to-date."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<IncomeStatement1, ActiveCurrencyAndAmount> mmNetInterestIncome = new MMMessageAttribute<IncomeStatement1, ActiveCurrencyAndAmount>() {
@@ -394,10 +394,6 @@ public class IncomeStatement1 {
 	 * IncomeStatement1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OthrNonOprgRvn"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OtherNonOperatingRevenue"</li>
 	 * <li>
@@ -405,6 +401,10 @@ public class IncomeStatement1 {
 	 * definition} =
 	 * "Other non-operating revenue recorded in month-end management reporting for the financial year-to-date."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<IncomeStatement1, ActiveCurrencyAndAmount> mmOtherNonOperatingRevenue = new MMMessageAttribute<IncomeStatement1, ActiveCurrencyAndAmount>() {
@@ -449,10 +449,6 @@ public class IncomeStatement1 {
 	 * IncomeStatement1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NonOprgExpnss"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NonOperatingExpenses"</li>
 	 * <li>
@@ -460,6 +456,10 @@ public class IncomeStatement1 {
 	 * definition} =
 	 * "Non-operating expenses recorded in month-end management reporting for the financial year-to-date."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute<IncomeStatement1, ActiveCurrencyAndAmount> mmNonOperatingExpenses = new MMMessageAttribute<IncomeStatement1, ActiveCurrencyAndAmount>() {
@@ -502,10 +502,6 @@ public class IncomeStatement1 {
 	 * IncomeStatement1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PreTaxPrftOrLoss"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PreTaxProfitOrLoss"</li>
 	 * <li>
@@ -513,6 +509,10 @@ public class IncomeStatement1 {
 	 * definition} =
 	 * "Indicates the pre-tax profit (true) or loss (false) recorded in month-end management reporting for the financial year-to-date."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<IncomeStatement1, AmountAndDirection6> mmPreTaxProfitOrLoss = new MMMessageAssociationEnd<IncomeStatement1, AmountAndDirection6>() {
@@ -556,10 +556,6 @@ public class IncomeStatement1 {
 	 * IncomeStatement1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PstTaxPrftOrLoss"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PostTaxProfitOrLoss"</li>
 	 * <li>
@@ -567,6 +563,10 @@ public class IncomeStatement1 {
 	 * definition} =
 	 * "Indicates the post-tax profit (true) or loss (false) recorded in month-end management reporting for the financial year-to-date."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd<IncomeStatement1, AmountAndDirection6> mmPostTaxProfitOrLoss = new MMMessageAssociationEnd<IncomeStatement1, AmountAndDirection6>() {

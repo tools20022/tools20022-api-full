@@ -37,10 +37,6 @@ public class ConstraintCurrentYearRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue6
 	 * ISAYearsOfIssue6}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrentYearRule"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintCurrentYearRule {
 	 * definition} =
 	 * "If CurrentYear is not present, then PreviousYears is mandatory. If CurrentYear is present then PreviousYears is optional."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -80,10 +80,6 @@ public class ConstraintCurrentYearRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue1
 	 * ISAYearsOfIssue1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrentYearRule"</li>
 	 * <li>
@@ -91,6 +87,10 @@ public class ConstraintCurrentYearRule {
 	 * definition} =
 	 * "If CurrentYearType or ExtendedCurrentYearType is not present then PreviousYears must be present. If CurrentYearType or ExtendedCurrentYearType is present then PreviousYears may be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ISAYearsOfIssue1> forISAYearsOfIssue1 = new MMConstraint<ISAYearsOfIssue1>() {
@@ -114,10 +114,6 @@ public class ConstraintCurrentYearRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue4
 	 * ISAYearsOfIssue4}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrentYearRule"</li>
 	 * <li>
@@ -125,6 +121,10 @@ public class ConstraintCurrentYearRule {
 	 * definition} =
 	 * "If CurrentYear is not present, then PreviousYears is mandatory. If CurrentYear is present then PreviousYears is optional."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ISAYearsOfIssue4> forISAYearsOfIssue4 = new MMConstraint<ISAYearsOfIssue4>() {
@@ -148,10 +148,6 @@ public class ConstraintCurrentYearRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue7
 	 * ISAYearsOfIssue7}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrentYearRule"</li>
 	 * <li>
@@ -159,6 +155,10 @@ public class ConstraintCurrentYearRule {
 	 * definition} =
 	 * "If CurrentYear is not present, then PreviousYears is mandatory. If CurrentYear is present then PreviousYears is optional."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -188,10 +188,6 @@ public class ConstraintCurrentYearRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue
 	 * ISAYearsOfIssue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrentYearRule"</li>
 	 * <li>
@@ -199,6 +195,10 @@ public class ConstraintCurrentYearRule {
 	 * definition} =
 	 * "If CurrentYear is not present then PreviousYears is mandatory. If CurrentYear is present then PreviousYears is optional."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ISAYearsOfIssue> forISAYearsOfIssue = new MMConstraint<ISAYearsOfIssue>() {
@@ -222,10 +222,6 @@ public class ConstraintCurrentYearRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue5
 	 * ISAYearsOfIssue5}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrentYearRule"</li>
 	 * <li>
@@ -233,6 +229,10 @@ public class ConstraintCurrentYearRule {
 	 * definition} =
 	 * "If CurrentYear is not present, then PreviousYears is mandatory. If CurrentYear is present then PreviousYears is optional."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ISAYearsOfIssue5> forISAYearsOfIssue5 = new MMConstraint<ISAYearsOfIssue5>() {

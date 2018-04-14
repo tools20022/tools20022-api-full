@@ -38,10 +38,6 @@ public class ConstraintInterbankSettlementAmountAndDateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionExtract2
 	 * PaymentInstructionExtract2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InterbankSettlementAmountAndDateRule"</li>
 	 * <li>
@@ -49,6 +45,10 @@ public class ConstraintInterbankSettlementAmountAndDateRule {
 	 * definition} =
 	 * "If InterbankSettlementAmount is present, then InterbankSettlementDate is mandatory.\nIf InterbankSettlementAmount is not present, then InterbankSettlementDate is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PaymentInstructionExtract2> forPaymentInstructionExtract2 = new MMConstraint<PaymentInstructionExtract2>() {
@@ -72,10 +72,6 @@ public class ConstraintInterbankSettlementAmountAndDateRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.CorrectivePaymentInstructionExtract
 	 * CorrectivePaymentInstructionExtract}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InterbankSettlementAmountAndDateRule"</li>
 	 * <li>
@@ -83,6 +79,10 @@ public class ConstraintInterbankSettlementAmountAndDateRule {
 	 * definition} =
 	 * "If InterbankSettlementAmount is present, then InterbankSettlementDate is mandatory.\nIf InterbankSettlementAmount is not present, then InterbankSettlementDate is not allowed."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CorrectivePaymentInstructionExtract> forCorrectivePaymentInstructionExtract = new MMConstraint<CorrectivePaymentInstructionExtract>() {

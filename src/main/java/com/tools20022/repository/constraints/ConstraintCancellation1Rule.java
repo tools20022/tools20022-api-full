@@ -37,10 +37,6 @@ public class ConstraintCancellation1Rule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.tsin.InvoiceFinancingRequestStatusV01
 	 * InvoiceFinancingRequestStatusV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Cancellation1Rule"</li>
 	 * <li>
@@ -48,6 +44,10 @@ public class ConstraintCancellation1Rule {
 	 * definition} =
 	 * "If the status message refers to the business status of cancellation request, then only Status Identification and Original Request Information must be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<InvoiceFinancingRequestStatusV01> for_tsin_InvoiceFinancingRequestStatusV01 = new MMConstraint<InvoiceFinancingRequestStatusV01>() {

@@ -36,10 +36,6 @@ public class ConstraintAccumulationPeriodRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.PerformanceFactors1
 	 * PerformanceFactors1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccumulationPeriodRule"</li>
 	 * <li>
@@ -47,6 +43,10 @@ public class ConstraintAccumulationPeriodRule {
 	 * definition} =
 	 * "AccumulationPeriod must be present if CumulativeCorporateActionFactor is present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PerformanceFactors1> forPerformanceFactors1 = new MMConstraint<PerformanceFactors1>() {

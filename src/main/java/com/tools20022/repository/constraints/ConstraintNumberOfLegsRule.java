@@ -35,10 +35,6 @@ public class ConstraintNumberOfLegsRule {
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1
 	 * IndicationOfInterest1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NumberOfLegsRule"</li>
 	 * <li>
@@ -46,6 +42,10 @@ public class ConstraintNumberOfLegsRule {
 	 * definition} =
 	 * "If IOI Quantity or RelativeSize is present, NumberOfLegs must not be present."
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IndicationOfInterest1> forIndicationOfInterest1 = new MMConstraint<IndicationOfInterest1>() {
